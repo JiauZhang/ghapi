@@ -1,0 +1,723 @@
+[
+    {
+        "id": 1,
+        "title": "Every Attention Matters: An Efficient Hybrid Architecture for Long-Context Reasoning",
+        "author": [
+            "Ling Team",
+            "Bin Han",
+            "Caizhi Tang",
+            "Chen Liang",
+            "Donghao Zhang",
+            "Fan Yuan",
+            "Feng Zhu",
+            "Jie Gao",
+            "Jingyu Hu",
+            "Longfei Li",
+            "Meng Li",
+            "Mingyang Zhang",
+            "Peijie Jiang",
+            "Peng Jiao",
+            "Qian Zhao",
+            "Qingyuan Yang",
+            "Wenbo Shen",
+            "Xinxing Yang",
+            "Yalin Zhang",
+            "Yankun Ren",
+            "Yao Zhao",
+            "Yibo Cao",
+            "Yixuan Sun",
+            "Yue Zhang",
+            "Yuchen Fang",
+            "Zibin Lin",
+            "Zixuan Cheng",
+            "Jun Zhou"
+        ],
+        "pdf": "https://arxiv.org/pdf/2510.19338",
+        "abstract": "In this technical report, we present the Ring-linear model series, specifically including Ring-mini-linear-2.0 and Ring-flash-linear-2.0. Ring-mini-linear-2.0 comprises 16B parameters and 957M activations, while Ring-flash-linear-2.0 contains 104B parameters and 6.1B activations. Both models adopt a hybrid architecture that effectively integrates linear attention and softmax attention, significantly reducing I/O and computational overhead in long-context inference scenarios. Compared to a 32 billion parameter dense model, this series reduces inference cost to 1/10, and compared to the original Ring series, the cost is also reduced by over 50%. Furthermore, through systematic exploration of the ratio between different attention mechanisms in the hybrid architecture, we have identified the currently optimal model structure. Additionally, by leveraging our self-developed high-performance FP8 operator library-linghe, overall training efficiency has been improved by 50%. Benefiting from the high alignment between the training and inference engine operators, the models can undergo long-term, stable, and highly efficient optimization during the reinforcement learning phase, consistently maintaining SOTA performance across multiple challenging complex reasoning benchmarks.",
+        "tags": [
+            "RL"
+        ]
+    },
+    {
+        "id": 2,
+        "title": "BAPO: Stabilizing Off-Policy Reinforcement Learning for LLMs via Balanced Policy Optimization with Adaptive Clipping",
+        "author": [
+            "Zhiheng Xi",
+            "Xin Guo",
+            "Yang Nan",
+            "Enyu Zhou",
+            "Junrui Shen",
+            "Wenxiang Chen",
+            "Jiaqi Liu",
+            "Jixuan Huang",
+            "Zhihao Zhang",
+            "Honglin Guo",
+            "Xun Deng",
+            "Zhikai Lei",
+            "Miao Zheng",
+            "Guoteng Wang",
+            "Shuo Zhang",
+            "Peng Sun",
+            "Rui Zheng",
+            "Hang Yan",
+            "Tao Gui",
+            "Qi Zhang",
+            "Xuanjing Huang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2510.18927",
+        "abstract": "Reinforcement learning (RL) has recently become the core paradigm for aligning and strengthening large language models (LLMs). Yet, applying RL in off-policy settings--where stale data from past policies are used for training--improves sample efficiency, but remains challenging: policy entropy declines sharply, optimization often becomes unstable and may even collapse. Through theoretical and empirical analysis, we identify two key insights: (i) an imbalance in optimization, where negative-advantage samples dominate the policy gradient, suppressing useful behaviors and risking gradient explosions; and (ii) the derived Entropy-Clip Rule, which reveals that the fixed clipping mechanism in PPO-like objectives systematically blocks entropy-increasing updates, thereby driving the policy toward over-exploitation at the expense of exploration. Building on these insights, we propose BAlanced Policy Optimization with Adaptive Clipping (BAPO), a simple yet effective method that dynamically adjusts clipping bounds to adaptively re-balance positive and negative contributions, preserve entropy, and stabilize RL optimization. Across diverse off-policy scenarios--including sample replay and partial rollout--BAPO achieves fast, stable, and data-efficient training. On AIME 2024 and AIME 2025 benchmarks, our 7B BAPO model surpasses open-source counterparts such as SkyWork-OR1-7B, while our 32B BAPO model not only achieves state-of-the-art results among models of the same scale but also outperforms leading proprietary systems like o3-mini and Gemini-2.5-Flash-Thinking.",
+        "tags": [
+            "CLIP",
+            "LLM",
+            "PPO",
+            "RL"
+        ]
+    },
+    {
+        "id": 3,
+        "title": "LoongRL:Reinforcement Learning for Advanced Reasoning over Long Contexts",
+        "author": [
+            "Siyuan Wang",
+            "Gaokai Zhang",
+            "Li Lyna Zhang",
+            "Ning Shang",
+            "Fan Yang",
+            "Dongyao Chen",
+            "Mao Yang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2510.19363",
+        "abstract": "Reasoning over long contexts is essential for large language models. While reinforcement learning (RL) enhances short-context reasoning by inducing \"Aha\" moments in chain-of-thought, the advanced thinking patterns required for long-context reasoning remain largely unexplored, and high-difficulty RL data are scarce. In this paper, we introduce LoongRL, a data-driven RL method for advanced long-context reasoning. Central to LoongRL is KeyChain, a synthesis approach that transforms short multi-hop QA into high-difficulty long-context tasks by inserting UUID chains that hide the true question among large collections of distracting documents. Solving these tasks requires the model to trace the correct chain step-by-step, identify the true question, retrieve relevant facts and reason over them to answer correctly. RL training on KeyChain data induces an emergent plan-retrieve-reason-recheck reasoning pattern that generalizes far beyond training length. Models trained at 16K effectively solve 128K tasks without prohibitive full-length RL rollout costs. On Qwen2.5-7B and 14B, LoongRL substantially improves long-context multi-hop QA accuracy by +23.5% and +21.1% absolute gains. The resulting LoongRL-14B reaches a score of 74.2, rivaling much larger frontier models such as o3-mini (74.5) and DeepSeek-R1 (74.9). It also improves long-context retrieval, passes all 128K needle-in-a-haystack stress tests, and preserves short-context reasoning capabilities.",
+        "tags": [
+            "CoT",
+            "DeepSeek",
+            "LLM",
+            "RL"
+        ]
+    },
+    {
+        "id": 4,
+        "title": "Language Models are Injective and Hence Invertible",
+        "author": [
+            "Giorgos Nikolaou",
+            "Tommaso Mencattini",
+            "Donato Crisostomi",
+            "Andrea Santilli",
+            "Yannis Panagakis",
+            "Emanuele RodolÃ "
+        ],
+        "pdf": "https://arxiv.org/pdf/2510.15511",
+        "abstract": "Transformer components such as non-linear activations and normalization are inherently non-injective, suggesting that different inputs could map to the same output and prevent exact recovery of the input from a model's representations. In this paper, we challenge this view. First, we prove mathematically that transformer language models mapping discrete input sequences to their corresponding sequence of continuous representations are injective and therefore lossless, a property established at initialization and preserved during training. Second, we confirm this result empirically through billions of collision tests on six state-of-the-art language models, and observe no collisions. Third, we operationalize injectivity: we introduce SipIt, the first algorithm that provably and efficiently reconstructs the exact input text from hidden activations, establishing linear-time guarantees and demonstrating exact invertibility in practice. Overall, our work establishes injectivity as a fundamental and exploitable property of language models, with direct implications for transparency, interpretability, and safe deployment.",
+        "tags": [
+            "Transformer"
+        ]
+    },
+    {
+        "id": 5,
+        "title": "Attention Sinks in Diffusion Language Models",
+        "author": [
+            "Maximo Eduardo Rulli",
+            "Simone Petruzzi",
+            "Edoardo Michielon",
+            "Fabrizio Silvestri",
+            "Simone Scardapane",
+            "Alessio Devoto"
+        ],
+        "pdf": "https://arxiv.org/pdf/2510.15731",
+        "abstract": "Masked Diffusion Language Models (DLMs) have recently emerged as a promising alternative to traditional Autoregressive Models (ARMs). DLMs employ transformer encoders with bidirectional attention, enabling parallel token generation while maintaining competitive performance. Although their efficiency and effectiveness have been extensively studied, the internal mechanisms that govern DLMs remain largely unexplored. In this work, we conduct an empirical analysis of DLM attention patterns, focusing on the attention sinking phenomenon, an effect previously observed in various transformer-based architectures. Our findings reveal that DLMs also exhibit attention sinks, but with distinct characteristics. First, unlike in ARMs, the sink positions in DLMs tend to shift throughout the generation process, displaying a dynamic behaviour. Second, while ARMs are highly sensitive to the removal of attention sinks, DLMs remain robust: masking sinks leads to only a minor degradation in performance. These results provide new insights into the inner workings of diffusion-based language models and highlight fundamental differences in how they allocate and utilize attention compared to autoregressive models.",
+        "tags": [
+            "Diffusion",
+            "Transformer"
+        ]
+    },
+    {
+        "id": 6,
+        "title": "GigaBrain-0: A World Model-Powered Vision-Language-Action Model",
+        "author": [
+            "GigaBrain Team",
+            "Angen Ye",
+            "Boyuan Wang",
+            "Chaojun Ni",
+            "Guan Huang",
+            "Guosheng Zhao",
+            "Haoyun Li",
+            "Jie Li",
+            "Jiagang Zhu",
+            "Lv Feng",
+            "Peng Li",
+            "Qiuping Deng",
+            "Runqi Ouyang",
+            "Wenkang Qin",
+            "Xinze Chen",
+            "Xiaofeng Wang",
+            "Yang Wang",
+            "Yifan Li",
+            "Yilong Li",
+            "Yiran Ding",
+            "Yuan Xu",
+            "Yun Ye",
+            "Yukun Zhou",
+            "Zhehao Dong",
+            "Zhenan Wang",
+            "Zhichao Liu",
+            "Zheng Zhu"
+        ],
+        "pdf": "https://arxiv.org/pdf/2510.19430",
+        "abstract": "Training Vision-Language-Action (VLA) models for generalist robots typically requires large-scale real-world robot data, which is expensive and time-consuming to collect. The inefficiency of physical data collection severely limits the scalability, and generalization capacity of current VLA systems. To address this challenge, we introduce GigaBrain-0, a novel VLA foundation model empowered by world model-generated data (e.g., video generation, real2real transfer, human transfer, view transfer, sim2real transfer data). By leveraging world models to generate diverse data at scale, GigaBrain-0 significantly reduces reliance on real robot data while improving cross-task generalization. Our approach further improves policy robustness through RGBD input modeling and embodied Chain-of-Thought (CoT) supervision, enabling the model to reason about spatial geometry, object states, and long-horizon dependencies during task execution. This leads to substantial gains in real-world performance on dexterous, long-horizon, and mobile manipulation tasks. Extensive experiments demonstrate that GigaBrain-0 achieves superior generalization across variations in appearances (e.g., textures, colors), object placements, and camera viewpoints. Additionally, we present GigaBrain-0-Small, an optimized lightweight variant designed to run efficiently on devices such as the NVIDIA Jetson AGX Orin.",
+        "tags": [
+            "CoT",
+            "Robotics",
+            "Video Generation"
+        ]
+    },
+    {
+        "id": 7,
+        "title": "Unified Reinforcement and Imitation Learning for Vision-Language Models",
+        "author": [
+            "Byung-Kwan Lee",
+            "Ryo Hachiuma",
+            "Yong Man Ro",
+            "Yu-Chiang Frank Wang",
+            "Yueh-Hua Wu"
+        ],
+        "pdf": "https://arxiv.org/pdf/2510.19307",
+        "abstract": "Vision-Language Models (VLMs) have achieved remarkable progress, yet their large scale often renders them impractical for resource-constrained environments. This paper introduces Unified Reinforcement and Imitation Learning (RIL), a novel and efficient training algorithm designed to create powerful, lightweight VLMs. RIL distinctively combines the strengths of reinforcement learning with adversarial imitation learning. This enables smaller student VLMs not only to mimic the sophisticated text generation of large teacher models but also to systematically improve their generative capabilities through reinforcement signals. Key to our imitation framework is an LLM-based discriminator that adeptly distinguishes between student and teacher outputs, complemented by guidance from multiple large teacher VLMs to ensure diverse learning. This unified learning strategy, leveraging both reinforcement and imitation, empowers student models to achieve significant performance gains, making them competitive with leading closed-source VLMs. Extensive experiments on diverse vision-language benchmarks demonstrate that RIL significantly narrows the performance gap with state-of-the-art open- and closed-source VLMs and, in several instances, surpasses them.",
+        "tags": [
+            "LLM",
+            "RL",
+            "VLM"
+        ]
+    },
+    {
+        "id": 8,
+        "title": "VideoAgentTrek: Computer Use Pretraining from Unlabeled Videos",
+        "author": [
+            "Dunjie Lu",
+            "Yiheng Xu",
+            "Junli Wang",
+            "Haoyuan Wu",
+            "Xinyuan Wang",
+            "Zekun Wang",
+            "Junlin Yang",
+            "Hongjin Su",
+            "Jixuan Chen",
+            "Junda Chen",
+            "Yuchen Mao",
+            "Jingren Zhou",
+            "Junyang Lin",
+            "Binyuan Hui",
+            "Tao Yu"
+        ],
+        "pdf": "https://arxiv.org/pdf/2510.19488",
+        "abstract": "Training computer-use agents requires massive amounts of GUI interaction data, but manually annotating action trajectories at scale is prohibitively expensive. We present VideoAgentTrek, a scalable pipeline that automatically mines training data from publicly available screen-recorded videos at web scale, eliminating the need for manual annotation. Our approach addresses a key challenge: raw videos contain implicit demonstrations but lack explicit action labels. To solve this, we develop Video2Action, an inverse dynamics module (IDM) with two components: (1) a video grounding model that detects and localizes GUI actions with precise temporal boundaries and context, and (2) an action-content recognizer that extracts structured parameters like click coordinates and typed text with high fidelity. Applied to 39,000 YouTube tutorial videos, our pipeline generates 1.52 million interaction steps automatically. We leverage this data through continued pretraining followed by supervised fine-tuning. On OSWorld-Verified, our approach improves task success rates from 9.3% (SFT-only baseline) to 15.8%, a 70% relative improvement. On AgentNetBench, step accuracy increases from 64.1% to 69.3%. Our results demonstrate that passive internet videos can be transformed into high-quality supervision for computer-use agents, providing a scalable alternative to expensive manual annotation.",
+        "tags": []
+    },
+    {
+        "id": 9,
+        "title": "DaMo: Data Mixing Optimizer in Fine-tuning Multimodal LLMs for Mobile Phone Agents",
+        "author": [
+            "Kai Shi",
+            "Jun Yang",
+            "Ni Yang",
+            "Binqiang Pan",
+            "Qingsong Xie",
+            "Chao Zhang",
+            "Zhenyu Yang",
+            "Tianhuang Su",
+            "Haonan Lu"
+        ],
+        "pdf": "https://arxiv.org/pdf/2510.19336",
+        "abstract": "Mobile Phone Agents (MPAs) have emerged as a promising research direction due to their broad applicability across diverse scenarios. While Multimodal Large Language Models (MLLMs) serve as the foundation for MPAs, their effectiveness in handling multiple mobile phone tasks simultaneously remains limited. Although multitask supervised fine-tuning (SFT) is widely adopted for multitask learning, existing approaches struggle to determine optimal training data compositions for peak performance. To address this challenge, we propose DaMo (Data Mixture Optimizer) - a novel solution employing a trainable network that predicts optimal data mixtures by forecasting downstream task performance for any given dataset ratio. To support comprehensive evaluation, we introduce PhoneAgentBench, the first specialized benchmark to evaluate MLLMs on multimodal mobile phone tasks, comprising 1235 QA pairs spanning diverse real-world industrial mobile application scenarios. Demonstrating strong predictive capability (R^2=0.81) in small-scale pilot experiments, DaMo efficiently extrapolates optimal data mixing configurations. Our results show DaMo achieves a 3.38% performance improvement on PhoneAgentBench compared to alternative methods. Furthermore, extensive experiments across established benchmarks including BFCL-v3, MME-Reasoning, MME-Perception, and OCRBench reveal DaMo's superior generalization, outperforming other approaches by 2.57% in terms of average score. When used solely for MLLM optimization on the BFCL-v3 task, DaMo improves the metrics by 12.47% than other methods. Notably, DaMo maintains robust scalability, preserving its effectiveness when applied to other model architectures. The code and dataset are available at https://github.com/OPPO-Mente-Lab/DaMo.git",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 10,
+        "title": "Pico-Banana-400K: A Large-Scale Dataset for Text-Guided Image Editing",
+        "author": [
+            "Yusu Qian",
+            "Eli Bocek-Rivele",
+            "Liangchen Song",
+            "Jialing Tong",
+            "Yinfei Yang",
+            "Jiasen Lu",
+            "Wenze Hu",
+            "Zhe Gan"
+        ],
+        "pdf": "https://arxiv.org/pdf/2510.19808",
+        "abstract": "Recent advances in multimodal models have demonstrated remarkable text-guided image editing capabilities, with systems like GPT-4o and Nano-Banana setting new benchmarks. However, the research community's progress remains constrained by the absence of large-scale, high-quality, and openly accessible datasets built from real images. We introduce Pico-Banana-400K, a comprehensive 400K-image dataset for instruction-based image editing. Our dataset is constructed by leveraging Nano-Banana to generate diverse edit pairs from real photographs in the OpenImages collection. What distinguishes Pico-Banana-400K from previous synthetic datasets is our systematic approach to quality and diversity. We employ a fine-grained image editing taxonomy to ensure comprehensive coverage of edit types while maintaining precise content preservation and instruction faithfulness through MLLM-based quality scoring and careful curation. Beyond single turn editing, Pico-Banana-400K enables research into complex editing scenarios. The dataset includes three specialized subsets: (1) a 72K-example multi-turn collection for studying sequential editing, reasoning, and planning across consecutive modifications; (2) a 56K-example preference subset for alignment research and reward model training; and (3) paired long-short editing instructions for developing instruction rewriting and summarization capabilities. By providing this large-scale, high-quality, and task-rich resource, Pico-Banana-400K establishes a robust foundation for training and benchmarking the next generation of text-guided image editing models.",
+        "tags": [
+            "GPT",
+            "Image Editing"
+        ]
+    },
+    {
+        "id": 11,
+        "title": "olmOCR 2: Unit Test Rewards for Document OCR",
+        "author": [
+            "Jake Poznanski",
+            "Luca Soldaini",
+            "Kyle Lo"
+        ],
+        "pdf": "https://arxiv.org/pdf/2510.19817",
+        "abstract": "We present olmOCR 2, the latest in our family of powerful OCR systems for converting digitized print documents, like PDFs, into clean, naturally ordered plain text. olmOCR 2 is powered by olmOCR-2-7B-1025, a specialized, 7B vision language model (VLM) trained using reinforcement learning with verifiable rewards (RLVR), where our rewards are a diverse set of binary unit tests. To scale unit test creation, we develop a pipeline for generating synthetic documents with diverse and challenging layouts, known ground-truth HTML source code, and extracted test cases. We show that RL training on these test cases results in state-of-the-art performance on olmOCR-Bench, our English-language OCR benchmark, with the largest improvements in math formula conversion, table parsing, and multi-column layouts compared to previous versions. We release our model, data and code under permissive open licenses.",
+        "tags": [
+            "RL",
+            "VLM"
+        ]
+    },
+    {
+        "id": 12,
+        "title": "Decomposed Attention Fusion in MLLMs for Training-Free Video Reasoning Segmentation",
+        "author": [
+            "Su Ho Han",
+            "Jeongseok Hyun",
+            "Pilhyeon Lee",
+            "Minho Shim",
+            "Dongyoon Wee",
+            "Seon Joo Kim"
+        ],
+        "pdf": "https://arxiv.org/pdf/2510.19592",
+        "abstract": "Multimodal large language models (MLLMs) demonstrate strong video understanding by attending to visual tokens relevant to textual queries. To directly adapt this for localization in a training-free manner, we cast video reasoning segmentation as a video QA task and extract attention maps via rollout mechanism. However, raw attention maps are noisy and poorly aligned with object regions. We propose Decomposed Attention Fusion (DecAF), which refines these maps through two mechanisms: (1) contrastive object-background fusion and (2) complementary video-frame fusion. This method suppresses irrelevant activations and enhances object-focused cues, enabling direct conversion of attention maps into coarse segmentation masks. In addition, we introduce attention-guided SAM2 prompting for obtaining fine-grained masks. Unlike existing methods that jointly train MLLMs with SAM, our method operates entirely without retraining. DecAF outperforms training-free methods and achieves performance comparable to training-based methods on both referring and reasoning VOS benchmarks. The code will be available at https://github.com/HYUNJS/DecAF.",
+        "tags": [
+            "LLM",
+            "SAM",
+            "Segmentation"
+        ]
+    },
+    {
+        "id": 13,
+        "title": "FinSight: Towards Real-World Financial Deep Research",
+        "author": [
+            "Jiajie Jin",
+            "Yuyao Zhang",
+            "Yimeng Xu",
+            "Hongjin Qian",
+            "Yutao Zhu",
+            "Zhicheng Dou"
+        ],
+        "pdf": "https://arxiv.org/pdf/2510.16844",
+        "abstract": "Generating professional financial reports is a labor-intensive and intellectually demanding process that current AI systems struggle to fully automate. To address this challenge, we introduce FinSight (Financial InSight), a novel multi agent framework for producing high-quality, multimodal financial reports. The foundation of FinSight is the Code Agent with Variable Memory (CAVM) architecture, which unifies external data, designed tools, and agents into a programmable variable space, enabling flexible data collection, analysis and report generation through executable code. To ensure professional-grade visualization, we propose an Iterative Vision-Enhanced Mechanism that progressively refines raw visual outputs into polished financial charts. Furthermore, a two stage Writing Framework expands concise Chain-of-Analysis segments into coherent, citation-aware, and multimodal reports, ensuring both analytical depth and structural consistency. Experiments on various company and industry-level tasks demonstrate that FinSight significantly outperforms all baselines, including leading deep research systems in terms of factual accuracy, analytical depth, and presentation quality, demonstrating a clear path toward generating reports that approach human-expert quality.",
+        "tags": []
+    },
+    {
+        "id": 14,
+        "title": "Directional Reasoning Injection for Fine-Tuning MLLMs",
+        "author": [
+            "Chao Huang",
+            "Zeliang Zhang",
+            "Jiang Liu",
+            "Ximeng Sun",
+            "Jialian Wu",
+            "Xiaodong Yu",
+            "Ze Wang",
+            "Chenliang Xu",
+            "Emad Barsoum",
+            "Zicheng Liu"
+        ],
+        "pdf": "https://arxiv.org/pdf/2510.15050",
+        "abstract": "Multimodal large language models (MLLMs) are rapidly advancing, yet their reasoning ability often lags behind that of strong text-only counterparts. Existing methods to bridge this gap rely on supervised fine-tuning over large-scale multimodal reasoning data or reinforcement learning, both of which are resource-intensive. A promising alternative is model merging, which interpolates parameters between reasoning-enhanced LLMs and multimodal variants. However, our analysis shows that naive merging is not always a \"free lunch\": its effectiveness varies drastically across model families, with some (e.g., LLaVA, Idefics) benefiting while others (e.g., Qwen) suffer performance degradation. To address this, we propose Directional Reasoning Injection for Fine-Tuning (DRIFT) MLLMs, a lightweight method that transfers reasoning knowledge in the gradient space, without destabilizing multimodal alignment. DRIFT precomputes a reasoning prior as the parameter-space difference between reasoning and multimodal variants, then uses it to bias gradients during multimodal fine-tuning. This approach preserves the simplicity of standard supervised fine-tuning pipelines while enabling efficient reasoning transfer. Extensive experiments on multimodal reasoning benchmarks, including MathVista and MathVerse, demonstrate that DRIFT consistently improves reasoning performance over naive merging and supervised fine-tuning, while matching or surpassing training-heavy methods at a fraction of the cost.",
+        "tags": [
+            "LLM",
+            "LLaVA",
+            "Qwen",
+            "RL"
+        ]
+    },
+    {
+        "id": 15,
+        "title": "ColorAgent: Building A Robust, Personalized, and Interactive OS Agent",
+        "author": [
+            "Ning Li",
+            "Qiqiang Lin",
+            "Zheng Wu",
+            "Xiaoyun Mo",
+            "Weiming Zhang",
+            "Yin Zhao",
+            "Xiangmou Qu",
+            "Jiamu Zhou",
+            "Jun Wang",
+            "Congmin Zheng",
+            "Yuanyi Song",
+            "Hongjiang Chen",
+            "Heyuan Huang",
+            "Jihong Wang",
+            "Jiaxin Yin",
+            "Jingwei Yu",
+            "Junwei Liao",
+            "Qiuying Peng",
+            "Xingyu Lou",
+            "Jun Wang",
+            "Weiwen Liu",
+            "Zhuosheng Zhang",
+            "Weinan Zhang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2510.19386",
+        "abstract": "With the advancements in hardware, software, and large language model technologies, the interaction between humans and operating systems has evolved from the command-line interface to the rapidly emerging AI agent interactions. Building an operating system (OS) agent capable of executing user instructions and faithfully following user desires is becoming a reality. In this technical report, we present ColorAgent, an OS agent designed to engage in long-horizon, robust interactions with the environment while also enabling personalized and proactive user interaction. To enable long-horizon interactions with the environment, we enhance the model's capabilities through step-wise reinforcement learning and self-evolving training, while also developing a tailored multi-agent framework that ensures generality, consistency, and robustness. In terms of user interaction, we explore personalized user intent recognition and proactive engagement, positioning the OS agent not merely as an automation tool but as a warm, collaborative partner. We evaluate ColorAgent on the AndroidWorld and AndroidLab benchmarks, achieving success rates of 77.2% and 50.7%, respectively, establishing a new state of the art. Nonetheless, we note that current benchmarks are insufficient for a comprehensive evaluation of OS agents and propose further exploring directions in future work, particularly in the areas of evaluation paradigms, agent collaboration, and security. Our code is available at https://github.com/MadeAgents/mobile-use.",
+        "tags": [
+            "RL"
+        ]
+    },
+    {
+        "id": 16,
+        "title": "KORE: Enhancing Knowledge Injection for Large Multimodal Models via Knowledge-Oriented Augmentations and Constraints",
+        "author": [
+            "Kailin Jiang",
+            "Hongbo Jiang",
+            "Ning Jiang",
+            "Zhi Gao",
+            "Jinhe Bi",
+            "Yuchen Ren",
+            "Bin Li",
+            "Yuntao Du",
+            "Lei Liu",
+            "Qing Li"
+        ],
+        "pdf": "https://arxiv.org/pdf/2510.19316",
+        "abstract": "Large Multimodal Models encode extensive factual knowledge in their pre-trained weights. However, its knowledge remains static and limited, unable to keep pace with real-world developments, which hinders continuous knowledge acquisition. Effective knowledge injection thus becomes critical, involving two goals: knowledge adaptation (injecting new knowledge) and knowledge retention (preserving old knowledge). Existing methods often struggle to learn new knowledge and suffer from catastrophic forgetting. To address this, we propose KORE, a synergistic method of KnOwledge-oRientEd augmentations and constraints for injecting new knowledge into large multimodal models while preserving old knowledge. Unlike general text or image data augmentation, KORE automatically converts individual knowledge items into structured and comprehensive knowledge to ensure that the model accurately learns new knowledge, enabling accurate adaptation. Meanwhile, KORE stores previous knowledge in the covariance matrix of LMM's linear layer activations and initializes the adapter by projecting the original weights into the matrix's null space, defining a fine-tuning direction that minimizes interference with previous knowledge, enabling powerful retention. Extensive experiments on various LMMs, including LLaVA-v1.5-7B, LLaVA-v1.5-13B, and Qwen2.5-VL-7B, show that KORE achieves superior new knowledge injection performance and effectively mitigates catastrophic forgetting.",
+        "tags": [
+            "LLaVA"
+        ]
+    },
+    {
+        "id": 17,
+        "title": "Are they lovers or friends? Evaluating LLMs' Social Reasoning in English and Korean Dialogues",
+        "author": [
+            "Eunsu Kim",
+            "Junyeong Park",
+            "Juhyun Oh",
+            "Kiwoong Park",
+            "Seyoung Song",
+            "A.Seza Dogruoz",
+            "Najoung Kim",
+            "Alice Oh"
+        ],
+        "pdf": "https://arxiv.org/pdf/2510.19028",
+        "abstract": "As large language models (LLMs) are increasingly used in human-AI interactions, their social reasoning capabilities in interpersonal contexts are critical. We introduce SCRIPTS, a 1k-dialogue dataset in English and Korean, sourced from movie scripts. The task involves evaluating models' social reasoning capability to infer the interpersonal relationships (e.g., friends, sisters, lovers) between speakers in each dialogue. Each dialogue is annotated with probabilistic relational labels (Highly Likely, Less Likely, Unlikely) by native (or equivalent) Korean and English speakers from Korea and the U.S. Evaluating nine models on our task, current proprietary LLMs achieve around 75-80% on the English dataset, whereas their performance on Korean drops to 58-69%. More strikingly, models select Unlikely relationships in 10-25% of their responses. Furthermore, we find that thinking models and chain-of-thought prompting, effective for general reasoning, provide minimal benefits for social reasoning and occasionally amplify social biases. Our findings reveal significant limitations in current LLMs' social reasoning capabilities, highlighting the need for efforts to develop socially-aware language models.",
+        "tags": [
+            "CoT",
+            "LLM"
+        ]
+    },
+    {
+        "id": 18,
+        "title": "OmniNWM: Omniscient Driving Navigation World Models",
+        "author": [
+            "Bohan Li",
+            "Zhuang Ma",
+            "Dalong Du",
+            "Baorui Peng",
+            "Zhujin Liang",
+            "Zhenqiang Liu",
+            "Chao Ma",
+            "Yueming Jin",
+            "Hao Zhao",
+            "Wenjun Zeng",
+            "Xin Jin"
+        ],
+        "pdf": "https://arxiv.org/pdf/2510.18313",
+        "abstract": "Autonomous driving world models are expected to work effectively across three core dimensions: state, action, and reward. Existing models, however, are typically restricted to limited state modalities, short video sequences, imprecise action control, and a lack of reward awareness. In this paper, we introduce OmniNWM, an omniscient panoramic navigation world model that addresses all three dimensions within a unified framework. For state, OmniNWM jointly generates panoramic videos of RGB, semantics, metric depth, and 3D occupancy. A flexible forcing strategy enables high-quality long-horizon auto-regressive generation. For action, we introduce a normalized panoramic Plucker ray-map representation that encodes input trajectories into pixel-level signals, enabling highly precise and generalizable control over panoramic video generation. Regarding reward, we move beyond learning reward functions with external image-based models: instead, we leverage the generated 3D occupancy to directly define rule-based dense rewards for driving compliance and safety. Extensive experiments demonstrate that OmniNWM achieves state-of-the-art performance in video generation, control accuracy, and long-horizon stability, while providing a reliable closed-loop evaluation framework through occupancy-grounded rewards. Project page is available at https://github.com/Arlo0o/OmniNWM.",
+        "tags": [
+            "3D",
+            "Video Generation"
+        ]
+    },
+    {
+        "id": 19,
+        "title": "TheMCPCompany: Creating General-purpose Agents with Task-specific Tools",
+        "author": [
+            "Reza Esfandiarpoor",
+            "Vishwas Suryanarayanan",
+            "Stephen H. Bach",
+            "Vishal Chowdhary",
+            "Anthony Aue"
+        ],
+        "pdf": "https://arxiv.org/pdf/2510.19286",
+        "abstract": "Since the introduction of the Model Context Protocol (MCP), the number of available tools for Large Language Models (LLMs) has increased significantly. These task-specific tool sets offer an alternative to general-purpose tools such as web browsers, while being easier to develop and maintain than GUIs. However, current general-purpose agents predominantly rely on web browsers for interacting with the environment. Here, we introduce TheMCPCompany, a benchmark for evaluating tool-calling agents on tasks that involve interacting with various real-world services. We use the REST APIs of these services to create MCP servers, which include over 18,000 tools. We also provide manually annotated ground-truth tools for each task. In our experiments, we use the ground truth tools to show the potential of tool-calling agents for both improving performance and reducing costs assuming perfect tool retrieval. Next, we explore agent performance using tool retrieval to study the real-world practicality of tool-based agents. While all models with tool retrieval perform similarly or better than browser-based agents, smaller models cannot take full advantage of the available tools through retrieval. On the other hand, GPT-5's performance with tool retrieval is very close to its performance with ground-truth tools. Overall, our work shows that the most advanced reasoning models are effective at discovering tools in simpler environments, but seriously struggle with navigating complex enterprise environments. TheMCPCompany reveals that navigating tens of thousands of tools and combining them in non-trivial ways to solve complex problems is still a challenging task for current models and requires both better reasoning and better retrieval models.",
+        "tags": [
+            "GPT",
+            "LLM"
+        ]
+    },
+    {
+        "id": 20,
+        "title": "Steering Autoregressive Music Generation with Recursive Feature Machines",
+        "author": [
+            "Daniel Zhao",
+            "Daniel Beaglehole",
+            "Taylor Berg-Kirkpatrick",
+            "Julian McAuley",
+            "Zachary Novack"
+        ],
+        "pdf": "https://arxiv.org/pdf/2510.19127",
+        "abstract": "Controllable music generation remains a significant challenge, with existing methods often requiring model retraining or introducing audible artifacts. We introduce MusicRFM, a framework that adapts Recursive Feature Machines (RFMs) to enable fine-grained, interpretable control over frozen, pre-trained music models by directly steering their internal activations. RFMs analyze a model's internal gradients to produce interpretable \"concept directions\", or specific axes in the activation space that correspond to musical attributes like notes or chords. We first train lightweight RFM probes to discover these directions within MusicGen's hidden states; then, during inference, we inject them back into the model to guide the generation process in real-time without per-step optimization. We present advanced mechanisms for this control, including dynamic, time-varying schedules and methods for the simultaneous enforcement of multiple musical properties. Our method successfully navigates the trade-off between control and generation quality: we can increase the accuracy of generating a target musical note from 0.23 to 0.82, while text prompt adherence remains within approximately 0.02 of the unsteered baseline, demonstrating effective control with minimal impact on prompt fidelity. We release code to encourage further exploration on RFMs in the music domain.",
+        "tags": []
+    },
+    {
+        "id": 21,
+        "title": "ProfBench: Multi-Domain Rubrics requiring Professional Knowledge to Answer and Judge",
+        "author": [
+            "Zhilin Wang",
+            "Jaehun Jung",
+            "Ximing Lu",
+            "Shizhe Diao",
+            "Ellie Evans",
+            "Jiaqi Zeng",
+            "Pavlo Molchanov",
+            "Yejin Choi",
+            "Jan Kautz",
+            "Yi Dong"
+        ],
+        "pdf": "https://arxiv.org/pdf/2510.18941",
+        "abstract": "Evaluating progress in large language models (LLMs) is often constrained by the challenge of verifying responses, limiting assessments to tasks like mathematics, programming, and short-form question-answering. However, many real-world applications require evaluating LLMs in processing professional documents, synthesizing information, and generating comprehensive reports in response to user queries. We introduce ProfBench: a set of over 7000 response-criterion pairs as evaluated by human-experts with professional knowledge across Physics PhD, Chemistry PhD, Finance MBA and Consulting MBA. We build robust and affordable LLM-Judges to evaluate ProfBench rubrics, by mitigating self-enhancement bias and reducing the cost of evaluation by 2-3 orders of magnitude, to make it fair and accessible to the broader community. Our findings reveal that ProfBench poses significant challenges even for state-of-the-art LLMs, with top-performing models like GPT-5-high achieving only 65.9\\% overall performance. Furthermore, we identify notable performance disparities between proprietary and open-weight models and provide insights into the role that extended thinking plays in addressing complex, professional-domain tasks. Data: https://huggingface.co/datasets/nvidia/ProfBench and Code: https://github.com/NVlabs/ProfBench",
+        "tags": [
+            "GPT",
+            "LLM"
+        ]
+    },
+    {
+        "id": 22,
+        "title": "NeuroAda: Activating Each Neuron's Potential for Parameter-Efficient Fine-Tuning",
+        "author": [
+            "Zhi Zhang",
+            "Yixian Shen",
+            "Congfeng Cao",
+            "Ekaterina Shutova"
+        ],
+        "pdf": "https://arxiv.org/pdf/2510.18940",
+        "abstract": "Existing parameter-efficient fine-tuning (PEFT) methods primarily fall into two categories: addition-based and selective in-situ adaptation. The former, such as LoRA, introduce additional modules to adapt the model to downstream tasks, offering strong memory efficiency. However, their representational capacity is often limited, making them less suitable for fine-grained adaptation. In contrast, the latter directly fine-tunes a carefully chosen subset of the original model parameters, allowing for more precise and effective adaptation, but at the cost of significantly increased memory consumption. To reconcile this trade-off, we propose NeuroAda, a novel PEFT method that enables fine-grained model finetuning while maintaining high memory efficiency. Our approach first identifies important parameters (i.e., connections within the network) as in selective adaptation, and then introduces bypass connections for these selected parameters. During finetuning, only the bypass connections are updated, leaving the original model parameters frozen. Empirical results on 23+ tasks spanning both natural language generation and understanding demonstrate that NeuroAda achieves state-of-the-art performance with as little as $\\leq \\textbf{0.02}\\%$ trainable parameters, while reducing CUDA memory usage by up to 60%. We release our code here: https://github.com/FightingFighting/NeuroAda.git.",
+        "tags": [
+            "LoRA"
+        ]
+    },
+    {
+        "id": 23,
+        "title": "From Charts to Code: A Hierarchical Benchmark for Multimodal Models",
+        "author": [
+            "Jiahao Tang",
+            "Henry Hengyuan Zhao",
+            "Lijian Wu",
+            "Yifei Tao",
+            "Dongxing Mao",
+            "Yang Wan",
+            "Jingru Tan",
+            "Min Zeng",
+            "Min Li",
+            "Alex Jinpeng Wang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2510.17932",
+        "abstract": "We introduce Chart2Code, a new benchmark for evaluating the chart understanding and code generation capabilities of large multimodal models (LMMs). Chart2Code is explicitly designed from a user-driven perspective, capturing diverse real-world scenarios and progressively increasing task difficulty. It consists of three levels: Level 1 (Chart Reproduction) reproduces charts from a reference figure and user query; Level 2 (Chart Editing) involves complex modifications such as changing chart types or adding elements; and Level 3 (Long-Table to Chart Generation) requires models to transform long, information-dense tables into faithful charts following user instructions. To our knowledge, this is the first hierarchical benchmark that reflects practical chart2code usage while systematically scaling task complexity. In total, Chart2Code contains 2,023 tasks across 22 chart types, paired with multi-level evaluation metrics that assess both code correctness and the visual fidelity of rendered charts. We benchmark 25 state-of-the-art (SoTA) LMMs, including both proprietary and the latest open-source models such as GPT-5, Qwen2.5-VL, InternVL3/3.5, MiMo-VL, and Seed-1.6-VL. Experimental results demonstrate that even the SoTA model GPT-5 averages only 0.57 on code-based evaluation and 0.22 on chart-quality assessment across the editing tasks, underscoring the difficulty of Chart2Code. We anticipate this benchmark will drive advances in multimodal reasoning and foster the development of more robust and general-purpose LMMs. Our code and data are available on Chart2Code.",
+        "tags": [
+            "GPT"
+        ]
+    },
+    {
+        "id": 24,
+        "title": "MINED: Probing and Updating with Multimodal Time-Sensitive Knowledge for Large Multimodal Models",
+        "author": [
+            "Kailin Jiang",
+            "Ning Jiang",
+            "Yuchen Ren",
+            "Yuchen Li",
+            "Yifan Gao",
+            "Jinhe Bi",
+            "Yunpu Ma",
+            "Qingqing Liu",
+            "Xianhao Wang",
+            "Yifan Jia",
+            "Hongbo Jiang",
+            "Yaocong Hu",
+            "Bin Li",
+            "Lei Liu",
+            "Yuntao Du"
+        ],
+        "pdf": "https://arxiv.org/pdf/2510.19457",
+        "abstract": "Large Multimodal Models (LMMs) encode rich factual knowledge via cross-modal pre-training, yet their static representations struggle to maintain an accurate understanding of time-sensitive factual knowledge. Existing benchmarks remain constrained by static designs, inadequately evaluating LMMs' ability to understand time-sensitive knowledge. To address this gap, we propose MINED, a comprehensive benchmark that evaluates temporal awareness along 6 key dimensions and 11 challenging tasks: cognition, awareness, trustworthiness, understanding, reasoning, and robustness. MINED is constructed from Wikipedia by two professional annotators, containing 2,104 time-sensitive knowledge samples spanning six knowledge types. Evaluating 15 widely used LMMs on MINED shows that Gemini-2.5-Pro achieves the highest average CEM score of 63.07, while most open-source LMMs still lack time understanding ability. Meanwhile, LMMs perform best on organization knowledge, whereas their performance is weakest on sport. To address these challenges, we investigate the feasibility of updating time-sensitive knowledge in LMMs through knowledge editing methods and observe that LMMs can effectively update knowledge via knowledge editing methods in single editing scenarios.",
+        "tags": []
+    },
+    {
+        "id": 25,
+        "title": "RIR-Mega: a large-scale simulated room impulse response dataset for machine learning and room acoustics modeling",
+        "author": [
+            "Mandip Goswami"
+        ],
+        "pdf": "https://arxiv.org/pdf/2510.18917",
+        "abstract": "Room impulse responses are a core resource for dereverberation, robust speech recognition, source localization, and room acoustics estimation. We present RIR-Mega, a large collection of simulated RIRs described by a compact, machine friendly metadata schema and distributed with simple tools for validation and reuse. The dataset ships with a Hugging Face Datasets loader, scripts for metadata checks and checksums, and a reference regression baseline that predicts RT60 like targets from waveforms. On a train and validation split of 36,000 and 4,000 examples, a small Random Forest on lightweight time and spectral features reaches a mean absolute error near 0.013 s and a root mean square error near 0.022 s. We host a subset with 1,000 linear array RIRs and 3,000 circular array RIRs on Hugging Face for streaming and quick tests, and preserve the complete 50,000 RIR archive on Zenodo. The dataset and code are public to support reproducible studies.",
+        "tags": []
+    },
+    {
+        "id": 26,
+        "title": "AlphaOPT: Formulating Optimization Programs with Self-Improving LLM Experience Library",
+        "author": [
+            "Minwei Kong",
+            "Ao Qu",
+            "Xiaotong Guo",
+            "Wenbin Ouyang",
+            "Chonghe Jiang",
+            "Han Zheng",
+            "Yining Ma",
+            "Dingyi Zhuang",
+            "Yuhan Tang",
+            "Junyi Li",
+            "Hai Wang",
+            "Cathy Wu",
+            "Jinhua Zhao"
+        ],
+        "pdf": "https://arxiv.org/pdf/2510.18428",
+        "abstract": "Optimization modeling enables critical decisions across industries but remains difficult to automate: informal language must be mapped to precise mathematical formulations and executable solver code. Prior LLM approaches either rely on brittle prompting or costly retraining with limited generalization. We present AlphaOPT, a self-improving experience library that enables an LLM to learn from limited demonstrations (even answers alone, without gold-standard programs) and solver feedback - without annotated reasoning traces or parameter updates. AlphaOPT operates in a continual two-phase cycle: (i) a Library Learning phase that reflects on failed attempts, extracting solver-verified, structured insights as {taxonomy, condition, explanation, example}; and (ii) a Library Evolution phase that diagnoses retrieval misalignments and refines the applicability conditions of stored insights, improving transfer across tasks. This design (1) learns efficiently from limited demonstrations without curated rationales, (2) expands continually without costly retraining by updating the library rather than model weights, and (3) makes knowledge explicit and interpretable for human inspection and intervention. Experiments show that AlphaOPT steadily improves with more data (65% to 72% from 100 to 300 training items) and surpasses the strongest baseline by 7.7% on the out-of-distribution OptiBench dataset when trained only on answers. Code and data are available at: https://github.com/Minw913/AlphaOPT.",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 27,
+        "title": "Learning from the Best, Differently: A Diversity-Driven Rethinking on Data Selection",
+        "author": [
+            "Hongyi He",
+            "Xiao Liu",
+            "Zhenghao Lin",
+            "Mingni Tang",
+            "Yi Cheng",
+            "Jintao Wang",
+            "Wenjie Li",
+            "Peng Cheng",
+            "Yeyun Gong"
+        ],
+        "pdf": "https://arxiv.org/pdf/2510.18909",
+        "abstract": "High-quality pre-training data is crutial for large language models, where quality captures factual reliability and semantic value, and diversity ensures broad coverage and distributional heterogeneity. Existing approaches typically rely on single or multiple-dimensional score-based selection. However, directly selecting top-scored data often degrades performance, and sampling from a broader range is required to recover results. The above non-monotonicity between dataset scores and downstream benchmark results reveals a fundamental bias: score-based methods collapse correlated dimensions, causing top-scored data to appear high-quality while systematically overlooking diversity. We argue that ensuring diversity requires decomposing correlated metrics into orthogonal feature dimensions, from which the top-scored data can be directly selected. Therefore, we proposed the Orthogonal Diversity-Aware Selection (ODiS) algorithm, which preserves both quality and diversity during data selection. First, ODiS evaluates data from multiple dimensions, covering language quality, knowledge quality, and comprehension difficulty. The multi-dimensional scores are then decorrelated via Principal Component Analysis (PCA), yielding orthogonal evaluation dimensions. For each dimension, a Roberta-based scorer is trained to regress the data onto PCA-projected scores, enabling scalable inference on large corpora. Finally, ODiS constructs the training dataset by selecting top-scored data within each orthogonal dimension, thereby ensuring both quality and diversity. Empirical results show that ODiS-selected data exhibit less than 2\\% inter-dimension overlap, confirming orthogonality between dimensions. More importantly, models trained with ODiS-selected data significantly outperform other baselines on downstream benchmarks, highlighting the necessity of orthogonal, diversity-aware data selection for LLMs.",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 28,
+        "title": "When Do Transformers Learn Heuristics for Graph Connectivity?",
+        "author": [
+            "Qilin Ye",
+            "Deqing Fu",
+            "Robin Jia",
+            "Vatsal Sharan"
+        ],
+        "pdf": "https://arxiv.org/pdf/2510.19753",
+        "abstract": "Transformers often fail to learn generalizable algorithms, instead relying on brittle heuristics. Using graph connectivity as a testbed, we explain this phenomenon both theoretically and empirically. We consider a simplified Transformer architecture, the disentangled Transformer, and prove that an $L$-layer model has capacity to solve for graphs with diameters up to exactly $3^L$, implementing an algorithm equivalent to computing powers of the adjacency matrix. We analyze the training-dynamics, and show that the learned strategy hinges on whether most training instances are within this model capacity. Within-capacity graphs (diameter $\\leq 3^L$) drive the learning of a correct algorithmic solution while beyond-capacity graphs drive the learning of a simple heuristic based on node degrees. Finally, we empirically demonstrate that restricting training data within a model's capacity leads to both standard and disentangled transformers learning the exact algorithm rather than the degree-based heuristic.",
+        "tags": [
+            "Transformer"
+        ]
+    },
+    {
+        "id": 29,
+        "title": "See the Text: From Tokenization to Visual Reading",
+        "author": [
+            "Ling Xing",
+            "Alex Jinpeng Wang",
+            "Rui Yan",
+            "Hongyu Qu",
+            "Zechao Li",
+            "Jinhui Tang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2510.18840",
+        "abstract": "People see text. Humans read by recognizing words as visual objects, including their shapes, layouts, and patterns, before connecting them to meaning, which enables us to handle typos, distorted fonts, and various scripts effectively. Modern large language models (LLMs), however, rely on subword tokenization, fragmenting text into pieces from a fixed vocabulary. While effective for high-resource languages, this approach over-segments low-resource languages, yielding long, linguistically meaningless sequences and inflating computation. In this work, we challenge this entrenched paradigm and move toward a vision-centric alternative. Our method, SeeTok, renders text as images (visual-text) and leverages pretrained multimodal LLMs to interpret them, reusing strong OCR and text-vision alignment abilities learned from large-scale multimodal training. Across three different language tasks, SeeTok matches or surpasses subword tokenizers while requiring 4.43 times fewer tokens and reducing FLOPs by 70.5%, with additional gains in cross-lingual generalization, robustness to typographic noise, and linguistic hierarchy. SeeTok signals a shift from symbolic tokenization to human-like visual reading, and takes a step toward more natural and cognitively inspired language models.",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 30,
+        "title": "What Questions Should Robots Be Able to Answer? A Dataset of User Questions for Explainable Robotics",
+        "author": [
+            "Lennart Wachowiak",
+            "Andrew Coles",
+            "Gerard Canal",
+            "Oya Celiktutan"
+        ],
+        "pdf": "https://arxiv.org/pdf/2510.16435",
+        "abstract": "With the growing use of large language models and conversational interfaces in human-robot interaction, robots' ability to answer user questions is more important than ever. We therefore introduce a dataset of 1,893 user questions for household robots, collected from 100 participants and organized into 12 categories and 70 subcategories. Most work in explainable robotics focuses on why-questions. In contrast, our dataset provides a wide variety of questions, from questions about simple execution details to questions about how the robot would act in hypothetical scenarios -- thus giving roboticists valuable insights into what questions their robot needs to be able to answer. To collect the dataset, we created 15 video stimuli and 7 text stimuli, depicting robots performing varied household tasks. We then asked participants on Prolific what questions they would want to ask the robot in each portrayed situation. In the final dataset, the most frequent categories are questions about task execution details (22.5%), the robot's capabilities (12.7%), and performance assessments (11.3%). Although questions about how robots would handle potentially difficult scenarios and ensure correct behavior are less frequent, users rank them as the most important for robots to be able to answer. Moreover, we find that users who identify as novices in robotics ask different questions than more experienced users. Novices are more likely to inquire about simple facts, such as what the robot did or the current state of the environment. As robots enter environments shared with humans and language becomes central to giving instructions and interaction, this dataset provides a valuable foundation for (i) identifying the information robots need to log and expose to conversational interfaces, (ii) benchmarking question-answering modules, and (iii) designing explanation strategies that align with user expectations.",
+        "tags": [
+            "LLM",
+            "Robotics"
+        ]
+    },
+    {
+        "id": 31,
+        "title": "DeLeaker: Dynamic Inference-Time Reweighting For Semantic Leakage Mitigation in Text-to-Image Models",
+        "author": [
+            "Mor Ventura",
+            "Michael Toker",
+            "Or Patashnik",
+            "Yonatan Belinkov",
+            "Roi Reichart"
+        ],
+        "pdf": "https://arxiv.org/pdf/2510.15015",
+        "abstract": "Text-to-Image (T2I) models have advanced rapidly, yet they remain vulnerable to semantic leakage, the unintended transfer of semantically related features between distinct entities. Existing mitigation strategies are often optimization-based or dependent on external inputs. We introduce DeLeaker, a lightweight, optimization-free inference-time approach that mitigates leakage by directly intervening on the model's attention maps. Throughout the diffusion process, DeLeaker dynamically reweights attention maps to suppress excessive cross-entity interactions while strengthening the identity of each entity. To support systematic evaluation, we introduce SLIM (Semantic Leakage in IMages), the first dataset dedicated to semantic leakage, comprising 1,130 human-verified samples spanning diverse scenarios, together with a novel automatic evaluation framework. Experiments demonstrate that DeLeaker consistently outperforms all baselines, even when they are provided with external information, achieving effective leakage mitigation without compromising fidelity or quality. These results underscore the value of attention control and pave the way for more semantically precise T2I models.",
+        "tags": [
+            "Diffusion",
+            "Text-to-Image"
+        ]
+    },
+    {
+        "id": 32,
+        "title": "Machine Text Detectors are Membership Inference Attacks",
+        "author": [
+            "Ryuto Koike",
+            "Liam Dugan",
+            "Masahiro Kaneko",
+            "Chris Callison-Burch",
+            "Naoaki Okazaki"
+        ],
+        "pdf": "https://arxiv.org/pdf/2510.19492",
+        "abstract": "Although membership inference attacks (MIAs) and machine-generated text detection target different goals, identifying training samples and synthetic texts, their methods often exploit similar signals based on a language model's probability distribution. Despite this shared methodological foundation, the two tasks have been independently studied, which may lead to conclusions that overlook stronger methods and valuable insights developed in the other task. In this work, we theoretically and empirically investigate the transferability, i.e., how well a method originally developed for one task performs on the other, between MIAs and machine text detection. For our theoretical contribution, we prove that the metric that achieves the asymptotically highest performance on both tasks is the same. We unify a large proportion of the existing literature in the context of this optimal metric and hypothesize that the accuracy with which a given method approximates this metric is directly correlated with its transferability. Our large-scale empirical experiments, including 7 state-of-the-art MIA methods and 5 state-of-the-art machine text detectors across 13 domains and 10 generators, demonstrate very strong rank correlation (rho > 0.6) in cross-task performance. We notably find that Binoculars, originally designed for machine text detection, achieves state-of-the-art performance on MIA benchmarks as well, demonstrating the practical impact of the transferability. Our findings highlight the need for greater cross-task awareness and collaboration between the two research communities. To facilitate cross-task developments and fair evaluations, we introduce MINT, a unified evaluation suite for MIAs and machine-generated text detection, with implementation of 15 recent methods from both tasks.",
+        "tags": [
+            "Detection"
+        ]
+    },
+    {
+        "id": 33,
+        "title": "Text or Pixels? It Takes Half: On the Token Efficiency of Visual Text Inputs in Multimodal LLMs",
+        "author": [
+            "Yanhong Li",
+            "Zixuan Lan",
+            "Jiawei Zhou"
+        ],
+        "pdf": "https://arxiv.org/pdf/2510.18279",
+        "abstract": "Large language models (LLMs) and their multimodal variants can now process visual inputs, including images of text. This raises an intriguing question: can we compress textual inputs by feeding them as images to reduce token usage while preserving performance? In this paper, we show that visual text representations are a practical and surprisingly effective form of input compression for decoder LLMs. We exploit the idea of rendering long text inputs as a single image and provide it directly to the model. This leads to dramatically reduced number of decoder tokens required, offering a new form of input compression. Through experiments on two distinct benchmarks RULER (long-context retrieval) and CNN/DailyMail (document summarization) we demonstrate that this text-as-image method yields substantial token savings (often nearly half) without degrading task performance.",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 34,
+        "title": "Accelerating Vision Transformers with Adaptive Patch Sizes",
+        "author": [
+            "Rohan Choudhury",
+            "JungEun Kim",
+            "Jinhyung Park",
+            "Eunho Yang",
+            "LÃ¡szlÃ³ A. Jeni",
+            "Kris M. Kitani"
+        ],
+        "pdf": "https://arxiv.org/pdf/2510.18091",
+        "abstract": "Vision Transformers (ViTs) partition input images into uniformly sized patches regardless of their content, resulting in long input sequence lengths for high-resolution images. We present Adaptive Patch Transformers (APT), which addresses this by using multiple different patch sizes within the same image. APT reduces the total number of input tokens by allocating larger patch sizes in more homogeneous areas and smaller patches in more complex ones. APT achieves a drastic speedup in ViT inference and training, increasing throughput by 40% on ViT-L and 50% on ViT-H while maintaining downstream performance, and can be applied to a previously fine-tuned ViT, converging in as little as 1 epoch. It also significantly reduces training and inference time without loss of performance in high-resolution dense visual tasks, achieving up to 30\\% faster training and inference in visual QA, object detection, and semantic segmentation.",
+        "tags": [
+            "Detection",
+            "Segmentation",
+            "ViT"
+        ]
+    },
+    {
+        "id": 35,
+        "title": "SAVANT: Semantic Analysis with Vision-Augmented Anomaly deTection",
+        "author": [
+            "Roberto Brusnicki",
+            "David Pop",
+            "Yuan Gao",
+            "Mattia Piccinini",
+            "Johannes Betz"
+        ],
+        "pdf": "https://arxiv.org/pdf/2510.18034",
+        "abstract": "Autonomous driving systems remain critically vulnerable to the long-tail of rare, out-of-distribution scenarios with semantic anomalies. While Vision Language Models (VLMs) offer promising reasoning capabilities, naive prompting approaches yield unreliable performance and depend on expensive proprietary models, limiting practical deployment. We introduce SAVANT (Semantic Analysis with Vision-Augmented Anomaly deTection), a structured reasoning framework that achieves high accuracy and recall in detecting anomalous driving scenarios from input images through layered scene analysis and a two-phase pipeline: structured scene description extraction followed by multi-modal evaluation. Our approach transforms VLM reasoning from ad-hoc prompting to systematic analysis across four semantic layers: Street, Infrastructure, Movable Objects, and Environment. SAVANT achieves 89.6% recall and 88.0% accuracy on real-world driving scenarios, significantly outperforming unstructured baselines. More importantly, we demonstrate that our structured framework enables a fine-tuned 7B parameter open-source model (Qwen2.5VL) to achieve 90.8% recall and 93.8% accuracy - surpassing all models evaluated while enabling local deployment at near-zero cost. By automatically labeling over 9,640 real-world images with high accuracy, SAVANT addresses the critical data scarcity problem in anomaly detection and provides a practical path toward reliable, accessible semantic monitoring for autonomous systems.",
+        "tags": [
+            "Detection",
+            "VLM"
+        ]
+    }
+]
