@@ -1,0 +1,834 @@
+[
+    {
+        "id": 1,
+        "title": "LightMem: Lightweight and Efficient Memory-Augmented Generation",
+        "author": [
+            "Jizhan Fang",
+            "Xinle Deng",
+            "Haoming Xu",
+            "Ziyan Jiang",
+            "Yuqi Tang",
+            "Ziwen Xu",
+            "Shumin Deng",
+            "Yunzhi Yao",
+            "Mengru Wang",
+            "Shuofei Qiao",
+            "Huajun Chen",
+            "Ningyu Zhang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2510.18866",
+        "abstract": "Despite their remarkable capabilities, Large Language Models (LLMs) struggle to effectively leverage historical interaction information in dynamic and complex environments. Memory systems enable LLMs to move beyond stateless interactions by introducing persistent information storage, retrieval, and utilization mechanisms. However, existing memory systems often introduce substantial time and computational overhead. To this end, we introduce a new memory system called LightMem, which strikes a balance between the performance and efficiency of memory systems. Inspired by the Atkinson-Shiffrin model of human memory, LightMem organizes memory into three complementary stages. First, cognition-inspired sensory memory rapidly filters irrelevant information through lightweight compression and groups information according to their topics. Next, topic-aware short-term memory consolidates these topic-based groups, organizing and summarizing content for more structured access. Finally, long-term memory with sleep-time update employs an offline procedure that decouples consolidation from online inference. Experiments on LongMemEval with GPT and Qwen backbones show that LightMem outperforms strong baselines in accuracy (up to 10.9% gains) while reducing token usage by up to 117x, API calls by up to 159x, and runtime by over 12x. The code is available at https://github.com/zjunlp/LightMem.",
+        "tags": [
+            "GPT",
+            "LLM",
+            "Qwen"
+        ]
+    },
+    {
+        "id": 2,
+        "title": "World-in-World: World Models in a Closed-Loop World",
+        "author": [
+            "Jiahan Zhang",
+            "Muqing Jiang",
+            "Nanru Dai",
+            "Taiming Lu",
+            "Arda Uzunoglu",
+            "Shunchi Zhang",
+            "Yana Wei",
+            "Jiahao Wang",
+            "Vishal M. Patel",
+            "Paul Pu Liang",
+            "Daniel Khashabi",
+            "Cheng Peng",
+            "Rama Chellappa",
+            "Tianmin Shu",
+            "Alan Yuille",
+            "Yilun Du",
+            "Jieneng Chen"
+        ],
+        "pdf": "https://arxiv.org/pdf/2510.18135",
+        "abstract": "Generative world models (WMs) can now simulate worlds with striking visual realism, which naturally raises the question of whether they can endow embodied agents with predictive perception for decision making. Progress on this question has been limited by fragmented evaluation: most existing benchmarks adopt open-loop protocols that emphasize visual quality in isolation, leaving the core issue of embodied utility unresolved, i.e., do WMs actually help agents succeed at embodied tasks? To address this gap, we introduce World-in-World, the first open platform that benchmarks WMs in a closed-loop world that mirrors real agent-environment interactions. World-in-World provides a unified online planning strategy and a standardized action API, enabling heterogeneous WMs for decision making. We curate four closed-loop environments that rigorously evaluate diverse WMs, prioritize task success as the primary metric, and move beyond the common focus on visual quality; we also present the first data scaling law for world models in embodied settings. Our study uncovers three surprises: (1) visual quality alone does not guarantee task success, controllability matters more; (2) scaling post-training with action-observation data is more effective than upgrading the pretrained video generators; and (3) allocating more inference-time compute allows WMs to substantially improve closed-loop performance.",
+        "tags": []
+    },
+    {
+        "id": 3,
+        "title": "Efficient Long-context Language Model Training by Core Attention Disaggregation",
+        "author": [
+            "Yonghao Zhuang",
+            "Junda Chen",
+            "Bo Pang",
+            "Yi Gu",
+            "Yibo Zhu",
+            "Yimin Jiang",
+            "Ion Stoica",
+            "Eric Xing",
+            "Hao Zhang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2510.18121",
+        "abstract": "We present core attention disaggregation (CAD), a technique that improves long-context large language model training by decoupling the core attention computation, softmax(QK^T)V, from the rest of the model and executing it on a separate pool of devices. In existing systems, core attention is colocated with other layers; at long context lengths, its quadratic compute growth compared to the near-linear growth of other components causes load imbalance and stragglers across data and pipeline parallel groups. CAD is enabled by two observations. First, core attention is stateless: it has no trainable parameters and only minimal transient data, so balancing reduces to scheduling compute-bound tasks. Second, it is composable: modern attention kernels retain high efficiency when processing fused batches of token-level shards with arbitrary lengths. CAD partitions core attention into token-level tasks and dispatches them to dedicated attention servers, which dynamically rebatch tasks to equalize compute without sacrificing kernel efficiency. We implement CAD in a system called DistCA, which uses a ping-pong execution scheme to fully overlap communication with computation and in-place execution on attention servers to reduce memory use. On 512 H200 GPUs and context lengths up to 512k tokens, DistCA improves end-to-end training throughput by up to 1.35x, eliminates data and pipeline parallel stragglers, and achieves near-perfect compute and memory balance.",
+        "tags": []
+    },
+    {
+        "id": 4,
+        "title": "UniGenBench++: A Unified Semantic Evaluation Benchmark for Text-to-Image Generation",
+        "author": [
+            "Yibin Wang",
+            "Zhimin Li",
+            "Yuhang Zang",
+            "Jiazi Bu",
+            "Yujie Zhou",
+            "Yi Xin",
+            "Junjun He",
+            "Chunyu Wang",
+            "Qinglin Lu",
+            "Cheng Jin",
+            "Jiaqi Wang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2510.18701",
+        "abstract": "Recent progress in text-to-image (T2I) generation underscores the importance of reliable benchmarks in evaluating how accurately generated images reflect the semantics of their textual prompt. However, (1) existing benchmarks lack the diversity of prompt scenarios and multilingual support, both essential for real-world applicability; (2) they offer only coarse evaluations across primary dimensions, covering a narrow range of sub-dimensions, and fall short in fine-grained sub-dimension assessment. To address these limitations, we introduce UniGenBench++, a unified semantic assessment benchmark for T2I generation. Specifically, it comprises 600 prompts organized hierarchically to ensure both coverage and efficiency: (1) spans across diverse real-world scenarios, i.e., 5 main prompt themes and 20 subthemes; (2) comprehensively probes T2I models' semantic consistency over 10 primary and 27 sub evaluation criteria, with each prompt assessing multiple testpoints. To rigorously assess model robustness to variations in language and prompt length, we provide both English and Chinese versions of each prompt in short and long forms. Leveraging the general world knowledge and fine-grained image understanding capabilities of a closed-source Multi-modal Large Language Model (MLLM), i.e., Gemini-2.5-Pro, an effective pipeline is developed for reliable benchmark construction and streamlined model assessment. Moreover, to further facilitate community use, we train a robust evaluation model that enables offline assessment of T2I model outputs. Through comprehensive benchmarking of both open- and closed-sourced T2I models, we systematically reveal their strengths and weaknesses across various aspects.",
+        "tags": [
+            "Text-to-Image"
+        ]
+    },
+    {
+        "id": 5,
+        "title": "Chem-R: Learning to Reason as a Chemist",
+        "author": [
+            "Weida Wang",
+            "Benteng Chen",
+            "Di Zhang",
+            "Wanhao Liu",
+            "Shuchen Pu",
+            "Ben Gao",
+            "Jin Zeng",
+            "Lei Bai",
+            "Wanli Ouyang",
+            "Xiaoyong Wei",
+            "Tianshu Yu",
+            "Tianfan Fu",
+            "Shuzhou Sun",
+            "Jiatong Li",
+            "Zifu Wang",
+            "Yuqiang Li",
+            "Shufei Zhang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2510.16880",
+        "abstract": "Although large language models (LLMs) have significant potential to advance chemical discovery, current LLMs lack core chemical knowledge, produce unreliable reasoning trajectories, and exhibit suboptimal performance across diverse chemical tasks. To address these challenges, we propose Chem-R, a generalizable Chemical Reasoning model designed to emulate the deliberative processes of chemists. Chem-R is trained through a three-phase framework that progressively builds advanced reasoning capabilities, including: 1) Chemical Foundation Training, which establishes core chemical knowledge. 2) Chemical Reasoning Protocol Distillation, incorporating structured, expert-like reasoning traces to guide systematic and reliable problem solving. 3) Multi-task Group Relative Policy Optimization that optimizes the model for balanced performance across diverse molecular- and reaction-level tasks. This structured pipeline enables Chem-R to achieve state-of-the-art performance on comprehensive benchmarks, surpassing leading large language models, including Gemini-2.5-Pro and DeepSeek-R1, by up to 46% on molecular tasks and 66% on reaction tasks. Meanwhile, Chem-R also consistently outperforms the existing chemical foundation models across both molecular and reaction level tasks. These results highlight Chem-R's robust generalization, interpretability, and potential as a foundation for next-generation AI-driven chemical discovery.",
+        "tags": [
+            "DeepSeek",
+            "LLM"
+        ]
+    },
+    {
+        "id": 6,
+        "title": "MoGA: Mixture-of-Groups Attention for End-to-End Long Video Generation",
+        "author": [
+            "Weinan Jia",
+            "Yuning Lu",
+            "Mengqi Huang",
+            "Hualiang Wang",
+            "Binyuan Huang",
+            "Nan Chen",
+            "Mu Liu",
+            "Jidong Jiang",
+            "Zhendong Mao"
+        ],
+        "pdf": "https://arxiv.org/pdf/2510.18692",
+        "abstract": "Long video generation with Diffusion Transformers (DiTs) is bottlenecked by the quadratic scaling of full attention with sequence length. Since attention is highly redundant, outputs are dominated by a small subset of query-key pairs. Existing sparse methods rely on blockwise coarse estimation, whose accuracy-efficiency trade-offs are constrained by block size. This paper introduces Mixture-of-Groups Attention (MoGA), an efficient sparse attention that uses a lightweight, learnable token router to precisely match tokens without blockwise estimation. Through semantic-aware routing, MoGA enables effective long-range interactions. As a kernel-free method, MoGA integrates seamlessly with modern attention stacks, including FlashAttention and sequence parallelism. Building on MoGA, we develop an efficient long video generation model that end-to-end produces minute-level, multi-shot, 480p videos at 24 fps, with a context length of approximately 580k. Comprehensive experiments on various video generation tasks validate the effectiveness of our approach.",
+        "tags": [
+            "Diffusion",
+            "Video Generation"
+        ]
+    },
+    {
+        "id": 7,
+        "title": "Grasp Any Region: Towards Precise, Contextual Pixel Understanding for Multimodal LLMs",
+        "author": [
+            "Haochen Wang",
+            "Yuhao Wang",
+            "Tao Zhang",
+            "Yikang Zhou",
+            "Yanwei Li",
+            "Jiacong Wang",
+            "Ye Tian",
+            "Jiahao Meng",
+            "Zilong Huang",
+            "Guangcan Mai",
+            "Anran Wang",
+            "Yunhai Tong",
+            "Zhuochen Wang",
+            "Xiangtai Li",
+            "Zhaoxiang Zhang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2510.18876",
+        "abstract": "While Multimodal Large Language Models (MLLMs) excel at holistic understanding, they struggle in capturing the dense world with complex scenes, requiring fine-grained analysis of intricate details and object inter-relationships. Region-level MLLMs have been a promising step. However, previous attempts are generally optimized to understand given regions in isolation, neglecting crucial global contexts. To address this, we introduce Grasp Any Region (GAR) for comprehen- sive region-level visual understanding. Empowered by an effective RoI-aligned feature replay technique, GAR supports (1) precise perception by leveraging necessary global contexts, and (2) modeling interactions between multiple prompts. Together, it then naturally achieves (3) advanced compositional reasoning to answer specific free-form questions about any region, shifting the paradigm from passive description to active dialogue. Moreover, we construct GAR-Bench, which not only provides a more accurate evaluation of single-region comprehension, but also, more importantly, measures interactions and complex reasoning across multiple regions. Extensive experiments have demonstrated that GAR-1B not only maintains the state-of-the-art captioning capabilities, e.g., outperforming DAM-3B +4.5 on DLC-Bench, but also excels at modeling relationships between multiple prompts with advanced comprehension capabilities, even surpassing InternVL3-78B on GAR-Bench-VQA. More importantly, our zero-shot GAR-8B even outperforms in-domain VideoRefer-7B on VideoRefer-BenchQ, indicating its strong capabilities can be easily transferred to videos.",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 8,
+        "title": "IF-VidCap: Can Video Caption Models Follow Instructions?",
+        "author": [
+            "Shihao Li",
+            "Yuanxing Zhang",
+            "Jiangtao Wu",
+            "Zhide Lei",
+            "Yiwen He",
+            "Runzhe Wen",
+            "Chenxi Liao",
+            "Chengkang Jiang",
+            "An Ping",
+            "Shuo Gao",
+            "Suhan Wang",
+            "Zhaozhou Bian",
+            "Zijun Zhou",
+            "Jingyi Xie",
+            "Jiayi Zhou",
+            "Jing Wang",
+            "Yifan Yao",
+            "Weihao Xie",
+            "Yingshui Tan",
+            "Yanghai Wang",
+            "Qianqian Xie",
+            "Zhaoxiang Zhang",
+            "Jiaheng Liu"
+        ],
+        "pdf": "https://arxiv.org/pdf/2510.18726",
+        "abstract": "Although Multimodal Large Language Models (MLLMs) have demonstrated proficiency in video captioning, practical applications require captions that follow specific user instructions rather than generating exhaustive, unconstrained descriptions. Current benchmarks, however, primarily assess descriptive comprehensiveness while largely overlooking instruction-following capabilities. To address this gap, we introduce IF-VidCap, a new benchmark for evaluating controllable video captioning, which contains 1,400 high-quality samples. Distinct from existing video captioning or general instruction-following benchmarks, IF-VidCap incorporates a systematic framework that assesses captions on two dimensions: format correctness and content correctness. Our comprehensive evaluation of over 20 prominent models reveals a nuanced landscape: despite the continued dominance of proprietary models, the performance gap is closing, with top-tier open-source solutions now achieving near-parity. Furthermore, we find that models specialized for dense captioning underperform general-purpose MLLMs on complex instructions, indicating that future work should simultaneously advance both descriptive richness and instruction-following fidelity.",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 9,
+        "title": "Every Step Evolves: Scaling Reinforcement Learning for Trillion-Scale Thinking Model",
+        "author": [
+            "Ling Team",
+            "Anqi Shen",
+            "Baihui Li",
+            "Bin Hu",
+            "Bin Jing",
+            "Cai Chen",
+            "Chao Huang",
+            "Chao Zhang",
+            "Chaokun Yang",
+            "Cheng Lin",
+            "Chengyao Wen",
+            "Congqi Li",
+            "Deng Zhao",
+            "Dingbo Yuan",
+            "Donghai You",
+            "Fagui Mao",
+            "Fanzhuang Meng",
+            "Feng Xu",
+            "Guojie Li",
+            "Guowei Wang",
+            "Hao Dai",
+            "Haonan Zheng",
+            "Hong Liu",
+            "Jia Guo",
+            "Jiaming Liu",
+            "Jian Liu",
+            "Jianhao Fu",
+            "Jiannan Shi",
+            "Jianwen Wang",
+            "Jianxin Lai",
+            "Jin Yang",
+            "Jun Mei",
+            "Jun Zhou",
+            "Junbo Zhao",
+            "Junping Zhao",
+            "Kuan Xu",
+            "Le Su",
+            "Lei Chen",
+            "Li Tang",
+            "Liang Jiang",
+            "Liangcheng Fu",
+            "Lianhao Xu",
+            "Linfeng Shi",
+            "Lisha Liao",
+            "Longfei Zheng",
+            "Meng Li",
+            "Mingchun Chen",
+            "Qi Zuo",
+            "Qiang Cheng",
+            "Qianggang Cao",
+            "Qitao Shi",
+            "Quanrui Guo",
+            "Senlin Zhu",
+            "Shaofei Wang",
+            "Shaomian Zheng",
+            "Shuaicheng Li",
+            "Shuwei Gu",
+            "Siba Chen",
+            "Tao Wu",
+            "Tao Zhang",
+            "Tianyu Zhang",
+            "Tianyu Zhou",
+            "Tiwei Bie",
+            "Tongkai Yang",
+            "Wang Hong",
+            "Wang Ren",
+            "Weihua Chen",
+            "Wenbo Yu",
+            "Wengang Zheng",
+            "Xiangchun Wang",
+            "Xiaodong Yan",
+            "Xiaopei Wan",
+            "Xin Zhao",
+            "Xinyu Kong",
+            "Xinyu Tang",
+            "Xudong Han",
+            "Xudong Wang",
+            "Xuemin Yang",
+            "Xueyu Hu",
+            "Yalin Zhang",
+            "Yan Sun",
+            "Yicheng Shan",
+            "Yilong Wang",
+            "Yingying Xu",
+            "Yongkang Liu",
+            "Yongzhen Guo",
+            "Yuanyuan Wang",
+            "Yuchen Yan",
+            "Yuefan Wang",
+            "Yuhong Guo",
+            "Zehuan Li",
+            "Zhankai Xu",
+            "Zhe Li",
+            "Zhenduo Zhang",
+            "Zhengke Gui",
+            "Zhenxuan Pan",
+            "Zhenyu Huang",
+            "Zhenzhong Lan",
+            "Zhiqiang Ding",
+            "Zhiqiang Zhang",
+            "\n    et al. (4 additional authors not shown)"
+        ],
+        "pdf": "https://arxiv.org/pdf/2510.18855",
+        "abstract": "We present Ring-1T, the first open-source, state-of-the-art thinking model with a trillion-scale parameter. It features 1 trillion total parameters and activates approximately 50 billion per token. Training such models at a trillion-parameter scale introduces unprecedented challenges, including train-inference misalignment, inefficiencies in rollout processing, and bottlenecks in the RL system. To address these, we pioneer three interconnected innovations: (1) IcePop stabilizes RL training via token-level discrepancy masking and clipping, resolving instability from training-inference mismatches; (2) C3PO++ improves resource utilization for long rollouts under a token budget by dynamically partitioning them, thereby obtaining high time efficiency; and (3) ASystem, a high-performance RL framework designed to overcome the systemic bottlenecks that impede trillion-parameter model training. Ring-1T delivers breakthrough results across critical benchmarks: 93.4 on AIME-2025, 86.72 on HMMT-2025, 2088 on CodeForces, and 55.94 on ARC-AGI-v1. Notably, it attains a silver medal-level result on the IMO-2025, underscoring its exceptional reasoning capabilities. By releasing the complete 1T parameter MoE model to the community, we provide the research community with direct access to cutting-edge reasoning capabilities. This contribution marks a significant milestone in democratizing large-scale reasoning intelligence and establishes a new baseline for open-source model performance.",
+        "tags": [
+            "MoE",
+            "RL"
+        ]
+    },
+    {
+        "id": 10,
+        "title": "GAS: Improving Discretization of Diffusion ODEs via Generalized Adversarial Solver",
+        "author": [
+            "Aleksandr Oganov",
+            "Ilya Bykov",
+            "Eva Neudachina",
+            "Mishan Aliev",
+            "Alexander Tolmachev",
+            "Alexander Sidorov",
+            "Aleksandr Zuev",
+            "Andrey Okhotin",
+            "Denis Rakitin",
+            "Aibek Alanov"
+        ],
+        "pdf": "https://arxiv.org/pdf/2510.17699",
+        "abstract": "While diffusion models achieve state-of-the-art generation quality, they still suffer from computationally expensive sampling. Recent works address this issue with gradient-based optimization methods that distill a few-step ODE diffusion solver from the full sampling process, reducing the number of function evaluations from dozens to just a few. However, these approaches often rely on intricate training techniques and do not explicitly focus on preserving fine-grained details. In this paper, we introduce the Generalized Solver: a simple parameterization of the ODE sampler that does not require additional training tricks and improves quality over existing approaches. We further combine the original distillation loss with adversarial training, which mitigates artifacts and enhances detail fidelity. We call the resulting method the Generalized Adversarial Solver and demonstrate its superior performance compared to existing solver training methods under similar resource constraints. Code is available at https://github.com/3145tttt/GAS.",
+        "tags": [
+            "Diffusion",
+            "ODE"
+        ]
+    },
+    {
+        "id": 11,
+        "title": "Towards Faithful and Controllable Personalization via Critique-Post-Edit Reinforcement Learning",
+        "author": [
+            "Chenghao Zhu",
+            "Meiling Tao",
+            "Tiannan Wang",
+            "Dongyi Ding",
+            "Yuchen Eleanor Jiang",
+            "Wangchunshu Zhou"
+        ],
+        "pdf": "https://arxiv.org/pdf/2510.18849",
+        "abstract": "Faithfully personalizing large language models (LLMs) to align with individual user preferences is a critical but challenging task. While supervised fine-tuning (SFT) quickly reaches a performance plateau, standard reinforcement learning from human feedback (RLHF) also struggles with the nuances of personalization. Scalar-based reward models are prone to reward hacking which leads to verbose and superficially personalized responses. To address these limitations, we propose Critique-Post-Edit, a robust reinforcement learning framework that enables more faithful and controllable personalization. Our framework integrates two key components: (1) a Personalized Generative Reward Model (GRM) that provides multi-dimensional scores and textual critiques to resist reward hacking, and (2) a Critique-Post-Edit mechanism where the policy model revises its own outputs based on these critiques for more targeted and efficient learning. Under a rigorous length-controlled evaluation, our method substantially outperforms standard PPO on personalization benchmarks. Personalized Qwen2.5-7B achieves an average 11\\% win-rate improvement, and personalized Qwen2.5-14B model surpasses the performance of GPT-4.1. These results demonstrate a practical path to faithful, efficient, and controllable personalization.",
+        "tags": [
+            "GPT",
+            "LLM",
+            "PPO",
+            "RL",
+            "RLHF"
+        ]
+    },
+    {
+        "id": 12,
+        "title": "Is Multilingual LLM Watermarking Truly Multilingual? A Simple Back-Translation Solution",
+        "author": [
+            "Asim Mohamed",
+            "Martin Gubri"
+        ],
+        "pdf": "https://arxiv.org/pdf/2510.18019",
+        "abstract": "Multilingual watermarking aims to make large language model (LLM) outputs traceable across languages, yet current methods still fall short. Despite claims of cross-lingual robustness, they are evaluated only on high-resource languages. We show that existing multilingual watermarking methods are not truly multilingual: they fail to remain robust under translation attacks in medium- and low-resource languages. We trace this failure to semantic clustering, which fails when the tokenizer vocabulary contains too few full-word tokens for a given language. To address this, we introduce STEAM, a back-translation-based detection method that restores watermark strength lost through translation. STEAM is compatible with any watermarking method, robust across different tokenizers and languages, non-invasive, and easily extendable to new languages. With average gains of +0.19 AUC and +40%p TPR@1% on 17 languages, STEAM provides a simple and robust path toward fairer watermarking across diverse languages.",
+        "tags": [
+            "Detection",
+            "LLM"
+        ]
+    },
+    {
+        "id": 13,
+        "title": "MT-Video-Bench: A Holistic Video Understanding Benchmark for Evaluating Multimodal LLMs in Multi-Turn Dialogues",
+        "author": [
+            "Yaning Pan",
+            "Zekun Wang",
+            "Qianqian Xie",
+            "Yongqian Wen",
+            "Yuanxing Zhang",
+            "Guohui Zhang",
+            "Haoxuan Hu",
+            "Zhiyu Pan",
+            "Yibing Huang",
+            "Zhidong Gan",
+            "Yonghong Lin",
+            "An Ping",
+            "Tianhao Peng",
+            "Jiaheng Liu"
+        ],
+        "pdf": "https://arxiv.org/pdf/2510.17722",
+        "abstract": "The recent development of Multimodal Large Language Models (MLLMs) has significantly advanced AI's ability to understand visual modalities. However, existing evaluation benchmarks remain limited to single-turn question answering, overlooking the complexity of multi-turn dialogues in real-world scenarios. To bridge this gap, we introduce MT-Video-Bench, a holistic video understanding benchmark for evaluating MLLMs in multi-turn dialogues. Specifically, our MT-Video-Bench mainly assesses six core competencies that focus on perceptivity and interactivity, encompassing 987 meticulously curated multi-turn dialogues from diverse domains. These capabilities are rigorously aligned with real-world applications, such as interactive sports analysis and multi-turn video-based intelligent tutoring. With MT-Video-Bench, we extensively evaluate various state-of-the-art open-source and closed-source MLLMs, revealing their significant performance discrepancies and limitations in handling multi-turn video dialogues. The benchmark will be publicly available to foster future research.",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 14,
+        "title": "UltraGen: High-Resolution Video Generation with Hierarchical Attention",
+        "author": [
+            "Teng Hu",
+            "Jiangning Zhang",
+            "Zihan Su",
+            "Ran Yi"
+        ],
+        "pdf": "https://arxiv.org/pdf/2510.18775",
+        "abstract": "Recent advances in video generation have made it possible to produce visually compelling videos, with wide-ranging applications in content creation, entertainment, and virtual reality. However, most existing diffusion transformer based video generation models are limited to low-resolution outputs (<=720P) due to the quadratic computational complexity of the attention mechanism with respect to the output width and height. This computational bottleneck makes native high-resolution video generation (1080P/2K/4K) impractical for both training and inference. To address this challenge, we present UltraGen, a novel video generation framework that enables i) efficient and ii) end-to-end native high-resolution video synthesis. Specifically, UltraGen features a hierarchical dual-branch attention architecture based on global-local attention decomposition, which decouples full attention into a local attention branch for high-fidelity regional content and a global attention branch for overall semantic consistency. We further propose a spatially compressed global modeling strategy to efficiently learn global dependencies, and a hierarchical cross-window local attention mechanism to reduce computational costs while enhancing information flow across different local windows. Extensive experiments demonstrate that UltraGen can effectively scale pre-trained low-resolution video models to 1080P and even 4K resolution for the first time, outperforming existing state-of-the-art methods and super-resolution based two-stage pipelines in both qualitative and quantitative evaluations.",
+        "tags": [
+            "DiT",
+            "Diffusion",
+            "Super Resolution",
+            "Transformer",
+            "Video Generation"
+        ]
+    },
+    {
+        "id": 15,
+        "title": "ssToken: Self-modulated and Semantic-aware Token Selection for LLM Fine-tuning",
+        "author": [
+            "Xiaohan Qin",
+            "Xiaoxing Wang",
+            "Ning Liao",
+            "Cancheng Zhang",
+            "Xiangdong Zhang",
+            "Mingquan Feng",
+            "Jingzhi Wang",
+            "Junchi Yan"
+        ],
+        "pdf": "https://arxiv.org/pdf/2510.18250",
+        "abstract": "Data quality plays a critical role in enhancing supervised fine-tuning (SFT) for large language models (LLMs), and token-level data selection has emerged as a promising direction for its fine-grained nature. Despite their strong empirical performance, existing token-level selection methods share two key limitations: (1) requiring training or accessing an additional reference model, and (2) relying solely on loss information for token selection, which cannot well preserve semantically important tokens that are not favored by loss-based metrics. To address these challenges, we propose ssToken, a Self-modulated and Semantic-aware Token Selection approach. ssToken leverages readily accessible history models to compute the per-token loss difference with the current model, which serves as a self-modulated signal that enables the model to adaptively select tokens along its optimization trajectory, rather than relying on excess loss from an offline-trained reference model as in prior works. We further introduce a semantic-aware, attention-based token importance estimation metric, orthogonal to loss-based selection and providing complementary semantic information for more effective filtering. Extensive experiments across different model families and scales demonstrate that both self-modulated selection and semantic-aware selection alone outperform full-data fine-tuning, while their integration--ssToken--achieves synergistic gains and further surpasses prior token-level selection methods, delivering performance improvements while maintaining training efficiency.",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 16,
+        "title": "MUG-V 10B: High-efficiency Training Pipeline for Large Video Generation Models",
+        "author": [
+            "Yongshun Zhang",
+            "Zhongyi Fan",
+            "Yonghang Zhang",
+            "Zhangzikang Li",
+            "Weifeng Chen",
+            "Zhongwei Feng",
+            "Chaoyue Wang",
+            "Peng Hou",
+            "Anxiang Zeng"
+        ],
+        "pdf": "https://arxiv.org/pdf/2510.17519",
+        "abstract": "In recent years, large-scale generative models for visual content (\\textit{e.g.,} images, videos, and 3D objects/scenes) have made remarkable progress. However, training large-scale video generation models remains particularly challenging and resource-intensive due to cross-modal text-video alignment, the long sequences involved, and the complex spatiotemporal dependencies. To address these challenges, we present a training framework that optimizes four pillars: (i) data processing, (ii) model architecture, (iii) training strategy, and (iv) infrastructure for large-scale video generation models. These optimizations delivered significant efficiency gains and performance improvements across all stages of data preprocessing, video compression, parameter scaling, curriculum-based pretraining, and alignment-focused post-training. Our resulting model, MUG-V 10B, matches recent state-of-the-art video generators overall and, on e-commerce-oriented video generation tasks, surpasses leading open-source baselines in human evaluations. More importantly, we open-source the complete stack, including model weights, Megatron-Core-based large-scale training code, and inference pipelines for video generation and enhancement. To our knowledge, this is the first public release of large-scale video generation training code that exploits Megatron-Core to achieve high training efficiency and near-linear multi-node scaling, details are available in \\href{https://github.com/Shopee-MUG/MUG-V}{our webpage}.",
+        "tags": [
+            "3D",
+            "Video Generation"
+        ]
+    },
+    {
+        "id": 17,
+        "title": "ProCLIP: Progressive Vision-Language Alignment via LLM-based Embedder",
+        "author": [
+            "Xiaoxing Hu",
+            "Kaicheng Yang",
+            "Ziyong Feng",
+            "Qi Ming",
+            "Zonghao Guo",
+            "Xiang An",
+            "Ziyong Feng",
+            "Junchi Yan",
+            "Xue Yang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2510.18795",
+        "abstract": "The original CLIP text encoder is limited by a maximum input length of 77 tokens, which hampers its ability to effectively process long texts and perform fine-grained semantic understanding. In addition, the CLIP text encoder lacks support for multilingual inputs. All these limitations significantly restrict its applicability across a broader range of tasks. Recent studies have attempted to replace the CLIP text encoder with an LLM-based embedder to enhance its ability in processing long texts, multilingual understanding, and fine-grained semantic comprehension. However, because the representation spaces of LLMs and the vision-language space of CLIP are pretrained independently without alignment priors, direct alignment using contrastive learning can disrupt the intrinsic vision-language alignment in the CLIP image encoder, leading to an underutilization of the knowledge acquired during pre-training. To address this challenge, we propose ProCLIP, a curriculum learning-based progressive vision-language alignment framework to effectively align the CLIP image encoder with an LLM-based embedder. Specifically, ProCLIP first distills knowledge from CLIP's text encoder into the LLM-based embedder to leverage CLIP's rich pretrained knowledge while establishing initial alignment between the LLM embedder and CLIP image encoder. Subsequently, ProCLIP further aligns the CLIP image encoder with the LLM-based embedder through image-text contrastive tuning, employing self-distillation regularization to avoid overfitting. To achieve a more effective alignment, instance semantic alignment loss and embedding structure alignment loss are employed during representation inheritance and contrastive tuning. The Code is available at https://github.com/VisionXLab/ProCLIP",
+        "tags": [
+            "CLIP",
+            "LLM"
+        ]
+    },
+    {
+        "id": 18,
+        "title": "DeepSeek-OCR: Contexts Optical Compression",
+        "author": [
+            "Haoran Wei",
+            "Yaofeng Sun",
+            "Yukun Li"
+        ],
+        "pdf": "https://arxiv.org/pdf/2510.18234",
+        "abstract": "We present DeepSeek-OCR as an initial investigation into the feasibility of compressing long contexts via optical 2D mapping. DeepSeek-OCR consists of two components: DeepEncoder and DeepSeek3B-MoE-A570M as the decoder. Specifically, DeepEncoder serves as the core engine, designed to maintain low activations under high-resolution input while achieving high compression ratios to ensure an optimal and manageable number of vision tokens. Experiments show that when the number of text tokens is within 10 times that of vision tokens (i.e., a compression ratio < 10x), the model can achieve decoding (OCR) precision of 97%. Even at a compression ratio of 20x, the OCR accuracy still remains at about 60%. This shows considerable promise for research areas such as historical long-context compression and memory forgetting mechanisms in LLMs. Beyond this, DeepSeek-OCR also demonstrates high practical value. On OmniDocBench, it surpasses GOT-OCR2.0 (256 tokens/page) using only 100 vision tokens, and outperforms MinerU2.0 (6000+ tokens per page on average) while utilizing fewer than 800 vision tokens. In production, DeepSeek-OCR can generate training data for LLMs/VLMs at a scale of 200k+ pages per day (a single A100-40G). Codes and model weights are publicly accessible at http://github.com/deepseek-ai/DeepSeek-OCR.",
+        "tags": [
+            "DeepSeek",
+            "LLM",
+            "MoE",
+            "VLM"
+        ]
+    },
+    {
+        "id": 19,
+        "title": "DSI-Bench: A Benchmark for Dynamic Spatial Intelligence",
+        "author": [
+            "Ziang Zhang",
+            "Zehan Wang",
+            "Guanghao Zhang",
+            "Weilong Dai",
+            "Yan Xia",
+            "Ziang Yan",
+            "Minjie Hong",
+            "Zhou Zhao"
+        ],
+        "pdf": "https://arxiv.org/pdf/2510.18873",
+        "abstract": "Reasoning about dynamic spatial relationships is essential, as both observers and objects often move simultaneously. Although vision-language models (VLMs) and visual expertise models excel in 2D tasks and static scenarios, their ability to fully understand dynamic 3D scenarios remains limited. We introduce Dynamic Spatial Intelligence and propose DSI-Bench, a benchmark with nearly 1,000 dynamic videos and over 1,700 manually annotated questions covering nine decoupled motion patterns of observers and objects. Spatially and temporally symmetric designs reduce biases and enable systematic evaluation of models' reasoning about self-motion and object motion. Our evaluation of 14 VLMs and expert models reveals key limitations: models often conflate observer and object motion, exhibit semantic biases, and fail to accurately infer relative relationships in dynamic scenarios. Our DSI-Bench provides valuable findings and insights about the future development of general and expertise models with dynamic spatial intelligence.",
+        "tags": [
+            "3D",
+            "VLM"
+        ]
+    },
+    {
+        "id": 20,
+        "title": "Think with 3D: Geometric Imagination Grounded Spatial Reasoning from Limited Views",
+        "author": [
+            "Zhangquan Chen",
+            "Manyuan Zhang",
+            "Xinlei Yu",
+            "Xufang Luo",
+            "Mingze Sun",
+            "Zihao Pan",
+            "Yan Feng",
+            "Peng Pei",
+            "Xunliang Cai",
+            "Ruqi Huang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2510.18632",
+        "abstract": "Though recent advances in vision-language models (VLMs) have achieved remarkable progress across a wide range of multimodal tasks, understanding 3D spatial relationships from limited views remains a significant challenge. Previous reasoning methods typically rely on pure text (e.g., topological cognitive maps) or on 2D visual cues. However, their limited representational capacity hinders performance in specific tasks that require 3D spatial imagination. To address this limitation, we propose 3DThinker, a framework that can effectively exploits the rich geometric information embedded within images while reasoning, like humans do. Our framework is the first to enable 3D mentaling during reasoning without any 3D prior input, and it does not rely on explicitly labeled 3D data for training. Specifically, our training consists of two stages. First, we perform supervised training to align the 3D latent generated by VLM while reasoning with that of a 3D foundation model (e.g., VGGT). Then, we optimize the entire reasoning trajectory solely based on outcome signals, thereby refining the underlying 3D mentaling. Extensive experiments across multiple benchmarks show that 3DThinker consistently outperforms strong baselines and offers a new perspective toward unifying 3D representations into multimodal reasoning. Our code will be available at https://github.com/zhangquanchen/3DThinker.",
+        "tags": [
+            "3D",
+            "VLM"
+        ]
+    },
+    {
+        "id": 21,
+        "title": "AlphaQuanter: An End-to-End Tool-Orchestrated Agentic Reinforcement Learning Framework for Stock Trading",
+        "author": [
+            "Zheye Deng",
+            "Jiashu Wang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2510.14264",
+        "abstract": "While Large Language Model (LLM) agents show promise in automated trading, they still face critical limitations. Prominent multi-agent frameworks often suffer from inefficiency, produce inconsistent signals, and lack the end-to-end optimization required to learn a coherent strategy from market feedback. To address this, we introduce AlphaQuanter, a single-agent framework that uses reinforcement learning (RL) to learn a dynamic policy over a transparent, tool-augmented decision workflow, which empowers a single agent to autonomously orchestrate tools and proactively acquire information on demand, establishing a transparent and auditable reasoning process. Extensive experiments demonstrate that AlphaQuanter achieves state-of-the-art performance on key financial metrics. Moreover, its interpretable reasoning reveals sophisticated strategies, offering novel and valuable insights for human traders. Our code for data acquisition and agent training is publicly available at: https://github.com/AlphaQuanter/AlphaQuanter",
+        "tags": [
+            "LLM",
+            "RL"
+        ]
+    },
+    {
+        "id": 22,
+        "title": "Extracting alignment data in open models",
+        "author": [
+            "Federico Barbero",
+            "Xiangming Gu",
+            "Christopher A. Choquette-Choo",
+            "Chawin Sitawarin",
+            "Matthew Jagielski",
+            "Itay Yona",
+            "Petar VeliÄkoviÄ",
+            "Ilia Shumailov",
+            "Jamie Hayes"
+        ],
+        "pdf": "https://arxiv.org/pdf/2510.18554",
+        "abstract": "In this work, we show that it is possible to extract significant amounts of alignment training data from a post-trained model -- useful to steer the model to improve certain capabilities such as long-context reasoning, safety, instruction following, and maths. While the majority of related work on memorisation has focused on measuring success of training data extraction through string matching, we argue that embedding models are better suited for our specific goals. Distances measured through a high quality embedding model can identify semantic similarities between strings that a different metric such as edit distance will struggle to capture. In fact, in our investigation, approximate string matching would have severely undercounted (by a conservative estimate of $10\\times$) the amount of data that can be extracted due to trivial artifacts that deflate the metric. Interestingly, we find that models readily regurgitate training data that was used in post-training phases such as SFT or RL. We show that this data can be then used to train a base model, recovering a meaningful amount of the original performance. We believe our work exposes a possibly overlooked risk towards extracting alignment data. Finally, our work opens up an interesting discussion on the downstream effects of distillation practices: since models seem to be regurgitating aspects of their training set, distillation can therefore be thought of as indirectly training on the model's original dataset.",
+        "tags": [
+            "RL"
+        ]
+    },
+    {
+        "id": 23,
+        "title": "Mono4DGS-HDR: High Dynamic Range 4D Gaussian Splatting from Alternating-exposure Monocular Videos",
+        "author": [
+            "Jinfeng Liu",
+            "Lingtong Kong",
+            "Mi Zhou",
+            "Jinwen Chen",
+            "Dan Xu"
+        ],
+        "pdf": "https://arxiv.org/pdf/2510.18489",
+        "abstract": "We introduce Mono4DGS-HDR, the first system for reconstructing renderable 4D high dynamic range (HDR) scenes from unposed monocular low dynamic range (LDR) videos captured with alternating exposures. To tackle such a challenging problem, we present a unified framework with two-stage optimization approach based on Gaussian Splatting. The first stage learns a video HDR Gaussian representation in orthographic camera coordinate space, eliminating the need for camera poses and enabling robust initial HDR video reconstruction. The second stage transforms video Gaussians into world space and jointly refines the world Gaussians with camera poses. Furthermore, we propose a temporal luminance regularization strategy to enhance the temporal consistency of the HDR appearance. Since our task has not been studied before, we construct a new evaluation benchmark using publicly available datasets for HDR video reconstruction. Extensive experiments demonstrate that Mono4DGS-HDR significantly outperforms alternative solutions adapted from state-of-the-art methods in both rendering quality and speed.",
+        "tags": [
+            "Gaussian Splatting"
+        ]
+    },
+    {
+        "id": 24,
+        "title": "Video Reasoning without Training",
+        "author": [
+            "Deepak Sridhar",
+            "Kartikeya Bhardwaj",
+            "Jeya Pradha Jeyaraj",
+            "Nuno Vasconcelos",
+            "Ankita Nayak",
+            "Harris Teague"
+        ],
+        "pdf": "https://arxiv.org/pdf/2510.17045",
+        "abstract": "Video reasoning using Large Multimodal Models (LMMs) relies on costly reinforcement learning (RL) and verbose chain-of-thought, resulting in substantial computational overhead during both training and inference. Moreover, the mechanisms that control the thinking process in these reasoning models are very limited. In this paper, using entropy of the model's output as a signal, we discover that the high-quality models go through a series of micro-explorations and micro-exploitations which keep the reasoning process grounded (i.e., avoid excessive randomness while the model is exploring or thinking through an answer). We further observe that once this \"thinking\" process is over, more accurate models demonstrate a better convergence by reducing the entropy significantly via a final exploitation phase (i.e., a more certain convergence towards a solution trajectory). We then use these novel, theoretically-grounded insights to tune the model's behavior directly at inference, without using any RL or supervised fine-tuning. Specifically, during inference, our proposed approach called V-Reason (Video-Reason) adapts the value cache of the LMM via a few optimization steps on a small, trainable controller using an entropy-based objective, i.e., no supervision from any dataset or RL is necessary. This tuning improves the model's micro-exploration and exploitation behavior during inference. Our experiments show that our proposed method achieves significant improvements over the base instruction-tuned models across several video reasoning datasets, narrowing the gap with RL-trained models to within 0.6% average accuracy without any training, while offering massive efficiency benefits: output tokens are reduced by 58.6% compared to the RL model.",
+        "tags": [
+            "CoT",
+            "RL"
+        ]
+    },
+    {
+        "id": 25,
+        "title": "PRISMM-Bench: A Benchmark of Peer-Review Grounded Multimodal Inconsistencies",
+        "author": [
+            "Lukas Selch",
+            "Yufang Hou",
+            "M. Jehanzeb Mirza",
+            "Sivan Doveh",
+            "James Glass",
+            "Rogerio Feris",
+            "Wei Lin"
+        ],
+        "pdf": "https://arxiv.org/pdf/2510.16505",
+        "abstract": "Large Multimodal Models (LMMs) are increasingly applied to scientific research, yet it remains unclear whether they can reliably understand and reason over the multimodal complexity of papers. A central challenge lies in detecting and resolving inconsistencies across text, figures, tables, and equations, issues that are often subtle, domain-specific, and ultimately undermine clarity, reproducibility, and trust. Existing benchmarks overlook this issue, either isolating single modalities or relying on synthetic errors that fail to capture real-world complexity. We introduce PRISMM-Bench (Peer-Review-sourced Inconsistency Set for Multimodal Models), the first benchmark grounded in real reviewer-flagged inconsistencies in scientific papers. Through a multi-stage pipeline of review mining, LLM-assisted filtering and human verification, we curate 262 inconsistencies from 242 papers. Based on this set, we design three tasks, namely inconsistency identification, remedy and pair matching, which assess a model's capacity to detect, correct, and reason over inconsistencies across different modalities. Furthermore, to address the notorious problem of choice-only shortcuts in multiple-choice evaluation, where models exploit answer patterns without truly understanding the question, we further introduce structured JSON-based answer representations that minimize linguistic biases by reducing reliance on superficial stylistic cues. We benchmark 21 leading LMMs, including large open-weight models (GLM-4.5V 106B, InternVL3 78B) and proprietary models (Gemini 2.5 Pro, GPT-5 with high reasoning). Results reveal strikingly low performance (26.1-54.2%), underscoring the challenge of multimodal scientific reasoning and motivating progress towards trustworthy scientific assistants.",
+        "tags": [
+            "GLM",
+            "GPT",
+            "LLM"
+        ]
+    },
+    {
+        "id": 26,
+        "title": "Expanding the Action Space of LLMs to Reason Beyond Language",
+        "author": [
+            "Zhongqi Yue",
+            "Weishi Wang",
+            "Yundaichuan Zhan",
+            "Juncheng Li",
+            "Daniel Dahlmeier",
+            "Fredrik D. Johansson"
+        ],
+        "pdf": "https://arxiv.org/pdf/2510.07581",
+        "abstract": "Large Language Models (LLMs) are powerful reasoners in natural language, but their actions are typically confined to outputting vocabulary tokens. As a result, interactions with external environments -- such as symbolic operators or simulators -- must be expressed through text in predefined formats, parsed, and routed to external interfaces. This overloads the model's language with both reasoning and control duties, and requires a hand-crafted parser, external to the LLM. To address this, we decouple environment interactions from language by internalizing them in an Expanded Action space (ExpA), beyond the vocabulary. The model starts reasoning in the default language environment, but may trigger routing actions and switch to an external environment at any time. From there, the model can only invoke environment-specific actions, receive feedback from the environment, and potentially route back to language as a result. To promote effective exploration of the expanded action space and new environments, we introduce ExpA Reinforcement Learning (EARL) with counterfactual policy optimization. On tasks requiring multi-turn interactions and contingent planning, EARL outperforms strong baselines with vocabulary-constrained actions. It performs robustly across calculator-based multi-task learning and, in the partially observed sorting problem, achieves perfect Sort-4 accuracy while self-discovering an efficient algorithm competitive with classical designs.",
+        "tags": [
+            "LLM",
+            "RL"
+        ]
+    },
+    {
+        "id": 27,
+        "title": "Any-Depth Alignment: Unlocking Innate Safety Alignment of LLMs to Any-Depth",
+        "author": [
+            "Jiawei Zhang",
+            "Andrew Estornell",
+            "David D. Baek",
+            "Bo Li",
+            "Xiaojun Xu"
+        ],
+        "pdf": "https://arxiv.org/pdf/2510.18081",
+        "abstract": "Large Language Models (LLMs) exhibit strong but shallow alignment: they directly refuse harmful queries when a refusal is expected at the very start of an assistant turn, yet this protection collapses once a harmful continuation is underway (either through the adversarial attacks or via harmful assistant-prefill attacks). This raises a fundamental question: Can the innate shallow alignment in LLMs be unlocked to ensure safety at arbitrary generation depths? To achieve this goal, we propose Any-Depth Alignment (ADA), an effective inference-time defense with negligible overhead. ADA is built based on our observation that alignment is concentrated in the assistant header tokens through repeated use in shallow-refusal training, and these tokens possess the model's strong alignment priors. By reintroducing these tokens mid-stream, ADA induces the model to reassess harmfulness and recover refusals at any point in generation. Across diverse open-source model families (Llama, Gemma, Mistral, Qwen, DeepSeek, and gpt-oss), ADA achieves robust safety performance without requiring any changes to the base model's parameters. It secures a near-100% refusal rate against challenging adversarial prefill attacks ranging from dozens to thousands of tokens. Furthermore, ADA reduces the average success rate of prominent adversarial prompt attacks (such as GCG, AutoDAN, PAIR, and TAP) to below 3%. This is all accomplished while preserving utility on benign tasks with minimal over-refusal. ADA maintains this resilience even after the base model undergoes subsequent instruction tuning (benign or adversarial).",
+        "tags": [
+            "DeepSeek",
+            "GPT",
+            "LLM",
+            "LLaMA",
+            "Qwen"
+        ]
+    },
+    {
+        "id": 28,
+        "title": "Unleashing Scientific Reasoning for Bio-experimental Protocol Generation via Structured Component-based Reward Mechanism",
+        "author": [
+            "Haoran Sun",
+            "Yankai Jiang",
+            "Zhenyu Tang",
+            "Yaning Pan",
+            "Shuang Gu",
+            "Zekai Lin",
+            "Lilong Wang",
+            "Wenjie Lou",
+            "Lei Liu",
+            "Lei Bai",
+            "Xiaosong Wang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2510.15600",
+        "abstract": "The foundation of reproducible science lies in protocols that are precise, logically ordered, and executable. The autonomous generation of these protocols through natural language queries could greatly improve the efficiency of the reproduction process. However, current leading large language models (LLMs) often generate incomplete or inconsistent protocols, limiting their utility. To address this limitation, we first introduce SciRecipe, a large-scale dataset of over 12K structured protocols spanning 27 biological subfields and encompassing both comprehension and problem-solving tasks. To further improve protocol generation, we propose the \"Sketch-and-Fill\" paradigm, which separates analysis, structuring, and expression to ensure each step is explicit and verifiable. Complementing this, the structured component-based reward mechanism evaluates step granularity, action order, and semantic fidelity, aligning model optimization with experimental reliability. Building on these components, we develop Thoth, trained through a staged Knowledge-to-Action process that progresses from knowledge acquisition to operational reasoning and ultimately to robust, executable protocol generation. Across multiple benchmarks, Thoth consistently surpasses both proprietary and open-source LLMs, achieving significant improvements in step alignment, logical sequencing, and semantic accuracy. Our approach paves the way for reliable scientific assistants that bridge knowledge with experimental execution. All data, code, and models will be released publicly.",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 29,
+        "title": "Pruning Overparameterized Multi-Task Networks for Degraded Web Image Restoration",
+        "author": [
+            "Thomas Katraouras",
+            "Dimitrios Rafailidis"
+        ],
+        "pdf": "https://arxiv.org/pdf/2510.14463",
+        "abstract": "Image quality is a critical factor in delivering visually appealing content on web platforms. However, images often suffer from degradation due to lossy operations applied by online social networks (OSNs), negatively affecting user experience. Image restoration is the process of recovering a clean high-quality image from a given degraded input. Recently, multi-task (all-in-one) image restoration models have gained significant attention, due to their ability to simultaneously handle different types of image degradations. However, these models often come with an excessively high number of trainable parameters, making them computationally inefficient. In this paper, we propose a strategy for compressing multi-task image restoration models. We aim to discover highly sparse subnetworks within overparameterized deep models that can match or even surpass the performance of their dense counterparts. The proposed model, namely MIR-L, utilizes an iterative pruning strategy that removes low-magnitude weights across multiple rounds, while resetting the remaining weights to their original initialization. This iterative process is important for the multi-task image restoration model's optimization, effectively uncovering \"winning tickets\" that maintain or exceed state-of-the-art performance at high sparsity levels. Experimental evaluation on benchmark datasets for the deraining, dehazing, and denoising tasks shows that MIR-L retains only 10% of the trainable parameters while maintaining high image restoration performance. Our code, datasets and pre-trained models are made publicly available at https://github.com/Thomkat/MIR-L.",
+        "tags": []
+    },
+    {
+        "id": 30,
+        "title": "When \"Correct\" Is Not Safe: Can We Trust Functionally Correct Patches Generated by Code Agents?",
+        "author": [
+            "Yibo Peng",
+            "James Song",
+            "Lei Li",
+            "Xinyu Yang",
+            "Mihai Christodorescu",
+            "Ravi Mangal",
+            "Corina Pasareanu",
+            "Haizhong Zheng",
+            "Beidi Chen"
+        ],
+        "pdf": "https://arxiv.org/pdf/2510.17862",
+        "abstract": "Code agents are increasingly trusted to autonomously fix bugs on platforms such as GitHub, yet their security evaluation focuses almost exclusively on functional correctness. In this paper, we reveal a novel type of threat to real-world code agents: Functionally Correct yet Vulnerable (FCV) patches, which pass all test cases but contain vulnerable code. With our proposed FCV-Attack, which can be deliberately crafted by malicious attackers or implicitly introduced by benign developers, we show that SOTA LLMs (e.g., ChatGPT and Claude) and agent scaffolds (e.g., SWE-agent and OpenHands) are all vulnerable to this FCV threat; across 12 agent-model combinations on SWE-Bench, the attack only requires black-box access and a single query to the code agent to perform the attack. For example, for CWE-538 (information exposure vulnerability), the FCV-Attack attains an attack success rate of $40.7\\%$ on GPT-5 Mini + OpenHands. Our results reveal an important security threat overlooked by current evaluation paradigms and urge the development of security-aware defenses for code agents.",
+        "tags": [
+            "GPT",
+            "LLM"
+        ]
+    },
+    {
+        "id": 31,
+        "title": "Planned Diffusion",
+        "author": [
+            "Daniel Israel",
+            "Tian Jin",
+            "Ellie Cheng",
+            "Guy Van den Broeck",
+            "Aditya Grover",
+            "Suvinay Subramanian",
+            "Michael Carbin"
+        ],
+        "pdf": "https://arxiv.org/pdf/2510.18087",
+        "abstract": "A central challenge in large language model inference is the trade-off between generation speed and output quality. Autoregressive models produce high-quality text but generate tokens sequentially. Diffusion models can generate tokens in parallel but often need many iterations to match the same quality. We propose planned diffusion, a hybrid method that combines the strengths of both paradigms. Planned diffusion works in two stages: first, the model creates a short autoregressive plan that breaks the output into smaller, independent spans. Second, the model generates these spans simultaneously using diffusion. This approach expands the speed-quality Pareto frontier and provides a practical path to faster, high-quality text generation. On AlpacaEval, a suite of 805 instruction-following prompts, planned diffusion achieves Pareto-optimal trade-off between quality and latency, achieving 1.27x to 1.81x speedup over autoregressive generation with only 0.87\\% to 5.4\\% drop in win rate, respectively. Our sensitivity analysis shows that the planning mechanism of planned diffusion is minimal and reliable, and simple runtime knobs exist to provide flexible control of the quality-latency trade-off.",
+        "tags": [
+            "Diffusion"
+        ]
+    },
+    {
+        "id": 32,
+        "title": "Unimedvl: Unifying Medical Multimodal Understanding And Generation Through Observation-Knowledge-Analysis",
+        "author": [
+            "Junzhi Ning",
+            "Wei Li",
+            "Cheng Tang",
+            "Jiashi Lin",
+            "Chenglong Ma",
+            "Chaoyang Zhang",
+            "Jiyao Liu",
+            "Ying Chen",
+            "Shujian Gao",
+            "Lihao Liu",
+            "Yuandong Pu",
+            "Huihui Xu",
+            "Chenhui Gou",
+            "Ziyan Huang",
+            "Yi Xin",
+            "Qi Qin",
+            "Zhongying Deng",
+            "Diping Song",
+            "Bin Fu",
+            "Guang Yang",
+            "Yuanfeng Ji",
+            "Tianbin Li",
+            "Yanzhou Su",
+            "Jin Ye",
+            "Shixiang Tang",
+            "Ming Hu",
+            "Junjun He"
+        ],
+        "pdf": "https://arxiv.org/pdf/2510.15710",
+        "abstract": "Medical diagnostic applications require models that can process multimodal medical inputs (images, patient histories, lab results) and generate diverse outputs including both textual reports and visual content (annotations, segmentation masks, and images). Despite this need, existing medical AI systems disrupt this unified process: medical image understanding models interpret images but cannot generate visual outputs, while medical image generation models synthesize images but cannot provide textual explanations. This leads to gaps in data representation, feature integration, and task-level multimodal capabilities. To this end, we propose a multi-level framework that draws inspiration from diagnostic workflows through the Observation-Knowledge-Analysis (OKA) paradigm. Specifically, at the observation level, we construct UniMed-5M, a dataset comprising over 5.6M samples that reformat diverse unimodal data into multimodal pairs for foundational observation. At the knowledge level, we propose Progressive Curriculum Learning that systematically introduces medical multimodal knowledge. At the analysis level, we introduce UniMedVL, the first medical unified multimodal model for the simultaneous analysis of image understanding and generation tasks within a single architecture. UniMedVL achieves superior performance on five medical image understanding benchmarks, while matching specialized models in generation quality across eight medical imaging modalities. Crucially, our unified architecture enables bidirectional knowledge sharing: generation tasks enhance visual understanding features, demonstrating that integrating traditionally separate capabilities within a single medical framework unlocks improvements across diverse medical vision-language tasks. Code is available at https://github.com/uni-medical/UniMedVL.",
+        "tags": [
+            "Segmentation"
+        ]
+    },
+    {
+        "id": 33,
+        "title": "Predicting the Unpredictable: Reproducible BiLSTM Forecasting of Incident Counts in the Global Terrorism Database (GTD)",
+        "author": [
+            "Oluwasegun Adegoke"
+        ],
+        "pdf": "https://arxiv.org/pdf/2510.15136",
+        "abstract": "We study short-horizon forecasting of weekly terrorism incident counts using the Global Terrorism Database (GTD, 1970--2016). We build a reproducible pipeline with fixed time-based splits and evaluate a Bidirectional LSTM (BiLSTM) against strong classical anchors (seasonal-naive, linear/ARIMA) and a deep LSTM-Attention baseline. On the held-out test set, the BiLSTM attains RMSE 6.38, outperforming LSTM-Attention (9.19; +30.6\\%) and a linear lag-regression baseline (+35.4\\% RMSE gain), with parallel improvements in MAE and MAPE. Ablations varying temporal memory, training-history length, spatial grain, lookback size, and feature groups show that models trained on long historical data generalize best; a moderate lookback (20--30 weeks) provides strong context; and bidirectional encoding is critical for capturing both build-up and aftermath patterns within the window. Feature-group analysis indicates that short-horizon structure (lagged counts and rolling statistics) contributes most, with geographic and casualty features adding incremental lift. We release code, configs, and compact result tables, and provide a data/ethics statement documenting GTD licensing and research-only use. Overall, the study offers a transparent, baseline-beating reference for GTD incident forecasting.",
+        "tags": []
+    },
+    {
+        "id": 34,
+        "title": "Static Sandboxes Are Inadequate: Modeling Societal Complexity Requires Open-Ended Co-Evolution in LLM-Based Multi-Agent Simulations",
+        "author": [
+            "Jinkun Chen",
+            "Sher Badshah",
+            "Xuemin Yu",
+            "Sijia Han"
+        ],
+        "pdf": "https://arxiv.org/pdf/2510.13982",
+        "abstract": "What if artificial agents could not just communicate, but also evolve, adapt, and reshape their worlds in ways we cannot fully predict? With llm now powering multi-agent systems and social simulations, we are witnessing new possibilities for modeling open-ended, ever-changing environments. Yet, most current simulations remain constrained within static sandboxes, characterized by predefined tasks, limited dynamics, and rigid evaluation criteria. These limitations prevent them from capturing the complexity of real-world societies. In this paper, we argue that static, task-specific benchmarks are fundamentally inadequate and must be rethought. We critically review emerging architectures that blend llm with multi-agent dynamics, highlight key hurdles such as balancing stability and diversity, evaluating unexpected behaviors, and scaling to greater complexity, and introduce a fresh taxonomy for this rapidly evolving field. Finally, we present a research roadmap centered on open-endedness, continuous co-evolution, and the development of resilient, socially aligned AI ecosystems. We call on the community to move beyond static paradigms and help shape the next generation of adaptive, socially-aware multi-agent simulations.",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 35,
+        "title": "EvoSyn: Generalizable Evolutionary Data Synthesis for Verifiable Learning",
+        "author": [
+            "He Du",
+            "Bowen Li",
+            "Aijun Yang",
+            "Siyang He",
+            "Qipeng Guo",
+            "Dacheng Tao"
+        ],
+        "pdf": "https://arxiv.org/pdf/2510.17928",
+        "abstract": "Reliable verifiable data has become a key driver of capability gains in modern language models, enabling stable reinforcement learning with verifiable rewards and effective distillation that transfers competence across math, coding, and agentic tasks. Yet constructing generalizable synthetic verifiable data remains difficult due to hallucination-prone generation, and weak or trivial verification artifacts that fail to separate strong from weak solutions. Existing approaches often rely on task-specific heuristics or post-hoc filters that do not transfer across domains and lack a principled, universal evaluator of verifiability. In this work, we introduce an evolutionary, task-agnostic, strategy-guided, executably-checkable data synthesis framework that, from minimal seed supervision, jointly synthesizes problems, diverse candidate solutions, and verification artifacts, and iteratively discovers strategies via a consistency-based evaluator that enforces agreement between human-annotated and strategy-induced checks. This pipeline upgrades filtering into principled synthesis: it reliably assembles coherent, verifiable training instances and generalizes without domain-specific rules. Our experiments demonstrate the effectiveness of the proposed approach under both RLVR and model distillation training paradigms. The results show that training with our synthesized data yields significant improvements on both the LiveCodeBench and AgentBench-OS tasks, highlighting the robust generalization of our framework.",
+        "tags": [
+            "RL"
+        ]
+    },
+    {
+        "id": 36,
+        "title": "PokeeResearch: Effective Deep Research via Reinforcement Learning from AI Feedback and Robust Reasoning Scaffold",
+        "author": [
+            "Yi Wan",
+            "Jiuqi Wang",
+            "Liam Li",
+            "Jinsong Liu",
+            "Ruihao Zhu",
+            "Zheqing Zhu"
+        ],
+        "pdf": "https://arxiv.org/pdf/2510.15862",
+        "abstract": "Tool-augmented large language models (LLMs) are emerging as deep research agents, systems that decompose complex queries, retrieve external evidence, and synthesize grounded responses. Yet current agents remain limited by shallow retrieval, weak alignment metrics, and brittle tool-use behavior. We introduce PokeeResearch-7B, a 7B-parameter deep research agent built under a unified reinforcement learning framework for robustness, alignment, and scalability. PokeeResearch-7B is trained by an annotation-free Reinforcement Learning from AI Feedback (RLAIF) framework to optimize policies using LLM-based reward signals that capture factual accuracy, citation faithfulness, and instruction adherence. A chain-of-thought-driven multi-call reasoning scaffold further enhances robustness through self-verification and adaptive recovery from tool failures. Among 10 popular deep research benchmarks, PokeeResearch-7B achieves state-of-the-art performance among 7B-scale deep research agents. This highlights that careful reinforcement learning and reasoning design can produce efficient, resilient, and research-grade AI agents. The model and inference code is open-sourced under Apache 2.0 license at https://github.com/Pokee-AI/PokeeResearchOSS.",
+        "tags": [
+            "CoT",
+            "LLM",
+            "RL"
+        ]
+    }
+]

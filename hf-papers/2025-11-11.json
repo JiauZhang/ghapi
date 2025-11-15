@@ -1,0 +1,596 @@
+[
+    {
+        "id": 1,
+        "title": "HaluMem: Evaluating Hallucinations in Memory Systems of Agents",
+        "author": [
+            "Ding Chen",
+            "Simin Niu",
+            "Kehang Li",
+            "Peng Liu",
+            "Xiangping Zheng",
+            "Bo Tang",
+            "Xinchi Li",
+            "Feiyu Xiong",
+            "Zhiyu Li"
+        ],
+        "pdf": "https://arxiv.org/pdf/2511.03506",
+        "abstract": "Memory systems are key components that enable AI systems such as LLMs and AI agents to achieve long-term learning and sustained interaction. However, during memory storage and retrieval, these systems frequently exhibit memory hallucinations, including fabrication, errors, conflicts, and omissions. Existing evaluations of memory hallucinations are primarily end-to-end question answering, which makes it difficult to localize the operational stage within the memory system where hallucinations arise. To address this, we introduce the Hallucination in Memory Benchmark (HaluMem), the first operation level hallucination evaluation benchmark tailored to memory systems. HaluMem defines three evaluation tasks (memory extraction, memory updating, and memory question answering) to comprehensively reveal hallucination behaviors across different operational stages of interaction. To support evaluation, we construct user-centric, multi-turn human-AI interaction datasets, HaluMem-Medium and HaluMem-Long. Both include about 15k memory points and 3.5k multi-type questions. The average dialogue length per user reaches 1.5k and 2.6k turns, with context lengths exceeding 1M tokens, enabling evaluation of hallucinations across different context scales and task complexities. Empirical studies based on HaluMem show that existing memory systems tend to generate and accumulate hallucinations during the extraction and updating stages, which subsequently propagate errors to the question answering stage. Future research should focus on developing interpretable and constrained memory operation mechanisms that systematically suppress hallucinations and improve memory reliability.",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 2,
+        "title": "IterResearch: Rethinking Long-Horizon Agents via Markovian State Reconstruction",
+        "author": [
+            "Guoxin Chen",
+            "Zile Qiao",
+            "Xuanzhong Chen",
+            "Donglei Yu",
+            "Haotian Xu",
+            "Wayne Xin Zhao",
+            "Ruihua Song",
+            "Wenbiao Yin",
+            "Huifeng Yin",
+            "Liwen Zhang",
+            "Kuan Li",
+            "Minpeng Liao",
+            "Yong Jiang",
+            "Pengjun Xie",
+            "Fei Huang",
+            "Jingren Zhou"
+        ],
+        "pdf": "https://arxiv.org/pdf/2511.07327",
+        "abstract": "Recent advances in deep-research agents have shown promise for autonomous knowledge construction through dynamic reasoning over external sources. However, existing approaches rely on a mono-contextual paradigm that accumulates all information in a single, expanding context window, leading to context suffocation and noise contamination that limit their effectiveness on long-horizon tasks. We introduce IterResearch, a novel iterative deep-research paradigm that reformulates long-horizon research as a Markov Decision Process with strategic workspace reconstruction. By maintaining an evolving report as memory and periodically synthesizing insights, our approach preserves consistent reasoning capacity across arbitrary exploration depths. We further develop Efficiency-Aware Policy Optimization (EAPO), a reinforcement learning framework that incentivizes efficient exploration through geometric reward discounting and enables stable distributed training via adaptive downsampling. Extensive experiments demonstrate that IterResearch achieves substantial improvements over existing open-source agents with average +14.5pp across six benchmarks and narrows the gap with frontier proprietary systems. Remarkably, our paradigm exhibits unprecedented interaction scaling, extending to 2048 interactions with dramatic performance gains (from 3.5\\% to 42.5\\%), and serves as an effective prompting strategy, improving frontier models by up to 19.2pp over ReAct on long-horizon tasks. These findings position IterResearch as a versatile solution for long-horizon reasoning, effective both as a trained agent and as a prompting paradigm for frontier models.",
+        "tags": [
+            "RL"
+        ]
+    },
+    {
+        "id": 3,
+        "title": "DRIVE: Data Curation Best Practices for Reinforcement Learning with Verifiable Reward in Competitive Code Generation",
+        "author": [
+            "Speed Zhu",
+            "Jianwei Cai",
+            "Guang Chen",
+            "Lulu Wu",
+            "Saiyong Yang",
+            "Wiggin Zhou"
+        ],
+        "pdf": "https://arxiv.org/pdf/2511.06307",
+        "abstract": "Recent reasoning-first models (e.g., OpenAI o1, DeepSeek R1) have spurred a resurgence of interest in RLVR. Nevertheless, advances are dominated by mathematics (e.g., AIME), with competitive-programming code generation underexplored and data curation receiving less attention than RL algorithm design. We investigate how to construct RLVR datasets (i.e., RL prompts) and present practical training techniques that yield strong performance on competitive-programming code generation. Our pipeline begins with supervised fine-tuning (SFT) distilled from strong open-source models, augmented with general-purpose and reasoning-intensive data. RL then follows a two-stage process with executable, testcase-driven rewards: first, training on a large, uniformly distributed set of competitive-programming problems using Group Relative Policy Optimization (GRPO) with 8 rollouts per prompt and a relatively short response-generation window (e.g., 32k during SFT and 24k in this stage) to expand entropy and mitigate repetition and truncation; second, we perform \\textbf{Pre-GRPO}: updating on a small, high-quality set of challenging problems with a large rollout budget (64 rollouts per prompt) under a hard-focus curriculum that continuously retains the most difficult instances throughout training. We implement our method on Qwen2.5-32B and evaluate on LeetCode and Codeforces weekly contests to avoid data leakage. The resulting model achieves state-of-the-art performance among models of similar scale and is comparable to leading systems such as DeepSeek v3.1 and Doubao-1.5-Thinking. We also examine scaling trends and observe strong RL scaling on an internal large-scale MoE model. Our study distills concise best practices for data curation, entropy expansion, and curriculum design in RLVR for competitive-programming code generation.",
+        "tags": [
+            "DeepSeek",
+            "GRPO",
+            "MoE",
+            "RL"
+        ]
+    },
+    {
+        "id": 4,
+        "title": "The Station: An Open-World Environment for AI-Driven Discovery",
+        "author": [
+            "Stephen Chung",
+            "Wenyu Du"
+        ],
+        "pdf": "https://arxiv.org/pdf/2511.06309",
+        "abstract": "We introduce the STATION, an open-world multi-agent environment that models a miniature scientific ecosystem. Leveraging their extended context windows, agents in the Station can engage in long scientific journeys that include reading papers from peers, formulating hypotheses, submitting code, performing analyses, and publishing results. Importantly, there is no centralized system coordinating their activities - agents are free to choose their own actions and develop their own narratives within the Station. Experiments demonstrate that AI agents in the Station achieve new state-of-the-art performance on a wide range of benchmarks, spanning from mathematics to computational biology to machine learning, notably surpassing AlphaEvolve in circle packing. A rich tapestry of narratives emerges as agents pursue independent research, interact with peers, and build upon a cumulative history. From these emergent narratives, novel methods arise organically, such as a new density-adaptive algorithm for scRNA-seq batch integration. The Station marks a first step towards autonomous scientific discovery driven by emergent behavior in an open-world environment, representing a new paradigm that moves beyond rigid optimization.",
+        "tags": []
+    },
+    {
+        "id": 5,
+        "title": "MVU-Eval: Towards Multi-Video Understanding Evaluation for Multimodal LLMs",
+        "author": [
+            "Tianhao Peng",
+            "Haochen Wang",
+            "Yuanxing Zhang",
+            "Zekun Wang",
+            "Zili Wang",
+            "Ge Zhang",
+            "Jian Yang",
+            "Shihao Li",
+            "Yanghai Wang",
+            "Xintao Wang",
+            "Houyi Li",
+            "Wei Ji",
+            "Pengfei Wan",
+            "Wenhao Huang",
+            "Zhaoxiang Zhang",
+            "Jiaheng Liu"
+        ],
+        "pdf": "https://arxiv.org/pdf/2511.07250",
+        "abstract": "The advent of Multimodal Large Language Models (MLLMs) has expanded AI capabilities to visual modalities, yet existing evaluation benchmarks remain limited to single-video understanding, overlooking the critical need for multi-video understanding in real-world scenarios (e.g., sports analytics and autonomous driving). To address this significant gap, we introduce MVU-Eval, the first comprehensive benchmark for evaluating Multi-Video Understanding for MLLMs. Specifically, our MVU-Eval mainly assesses eight core competencies through 1,824 meticulously curated question-answer pairs spanning 4,959 videos from diverse domains, addressing both fundamental perception tasks and high-order reasoning tasks. These capabilities are rigorously aligned with real-world applications such as multi-sensor synthesis in autonomous systems and cross-angle sports analytics. Through extensive evaluation of state-of-the-art open-source and closed-source models, we reveal significant performance discrepancies and limitations in current MLLMs' ability to perform understanding across multiple videos. The benchmark will be made publicly available to foster future research.",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 6,
+        "title": "Routing Manifold Alignment Improves Generalization of Mixture-of-Experts LLMs",
+        "author": [
+            "Zhongyang Li",
+            "Ziyue Li",
+            "Tianyi Zhou"
+        ],
+        "pdf": "https://arxiv.org/pdf/2511.07419",
+        "abstract": "Sparse Mixture-of-Experts (MoE) have been widely adopted in recent large language models since it can efficiently scale up the model capability without increasing the inference cost. However, evaluations on broad downstream tasks reveal a consistent suboptimality of the routers in existing MoE LLMs, which results in a severe performance gap (e.g., 10-20% in accuracy) to the optimal routing. In this paper, we show that aligning the manifold of routing weights with that of task embedding can effectively reduce the gap and improve MoE LLMs' generalization performance. Our method, \"Routing Manifold Alignment (RoMA)\", introduces an additional manifold regularization term in the post-training objective and only requires lightweight finetuning of routers (with other parameters frozen). Specifically, the regularization encourages the routing weights of each sample to be close to those of its successful neighbors (whose routing weights lead to correct answers) in a task embedding space. Consequently, samples targeting similar tasks will share similar expert choices across layers. Building such bindings between tasks and experts over different samples is essential to achieve better generalization. Moreover, RoMA demonstrates the advantage of unifying the task understanding (by embedding models) with solution generation (by MoE LLMs). In experiments, we finetune routers in OLMoE, DeepSeekMoE, and Qwen3-MoE using RoMA. Evaluations on diverse benchmarks and extensive comparisons with baselines show the substantial improvement brought by RoMA.",
+        "tags": [
+            "LLM",
+            "MoE"
+        ]
+    },
+    {
+        "id": 7,
+        "title": "RedOne 2.0: Rethinking Domain-specific LLM Post-Training in Social Networking Services",
+        "author": [
+            "Fei Zhao",
+            "Chonggang Lu",
+            "Haofu Qian",
+            "Fangcheng Shi",
+            "Zijie Meng",
+            "Jianzhao Huang",
+            "Xu Tang",
+            "Zheyong Xie",
+            "Zheyu Ye",
+            "Zhe Xu",
+            "Yao Hu",
+            "Shaosheng Cao"
+        ],
+        "pdf": "https://arxiv.org/pdf/2511.07070",
+        "abstract": "As a key medium for human interaction and information exchange, social networking services (SNS) pose unique challenges for large language models (LLMs): heterogeneous workloads, fast-shifting norms and slang, and multilingual, culturally diverse corpora that induce sharp distribution shift. Supervised fine-tuning (SFT) can specialize models but often triggers a ``seesaw'' between in-distribution gains and out-of-distribution robustness, especially for smaller models. To address these challenges, we introduce RedOne 2.0, an SNS-oriented LLM trained with a progressive, RL-prioritized post-training paradigm designed for rapid and stable adaptation. The pipeline consist in three stages: (1) Exploratory Learning on curated SNS corpora to establish initial alignment and identify systematic weaknesses; (2) Targeted Fine-Tuning that selectively applies SFT to the diagnosed gaps while mixing a small fraction of general data to mitigate forgetting; and (3) Refinement Learning that re-applies RL with SNS-centric signals to consolidate improvements and harmonize trade-offs across tasks. Across various tasks spanning three categories, our 4B scale model delivers an average improvements about 2.41 over the 7B sub-optimal baseline. Additionally, RedOne 2.0 achieves average performance lift about 8.74 from the base model with less than half the data required by SFT-centric method RedOne, evidencing superior data efficiency and stability at compact scales. Overall, RedOne 2.0 establishes a competitive, cost-effective baseline for domain-specific LLMs in SNS scenario, advancing capability without sacrificing robustness.",
+        "tags": [
+            "LLM",
+            "RL"
+        ]
+    },
+    {
+        "id": 8,
+        "title": "SofT-GRPO: Surpassing Discrete-Token LLM Reinforcement Learning via Gumbel-Reparameterized Soft-Thinking Policy Optimization",
+        "author": [
+            "Zhi Zheng",
+            "Wee Sun Lee"
+        ],
+        "pdf": "https://arxiv.org/pdf/2511.06411",
+        "abstract": "The soft-thinking paradigm for Large Language Model (LLM) reasoning can outperform the conventional discrete-token Chain-of-Thought (CoT) reasoning in some scenarios, underscoring its research and application value. However, while the discrete-token CoT reasoning pattern can be reinforced through policy optimization algorithms such as group relative policy optimization (GRPO), extending the soft-thinking pattern with Reinforcement Learning (RL) remains challenging. This difficulty stems from the complexities of injecting stochasticity into soft-thinking tokens and updating soft-thinking policies accordingly. As a result, previous attempts to combine soft-thinking with GRPO typically underperform their discrete-token GRPO counterparts. To fully unlock the potential of soft-thinking, this paper presents a novel policy optimization algorithm, SofT-GRPO, to reinforce LLMs under the soft-thinking reasoning pattern. SofT-GRPO injects the Gumbel noise into logits, employs the Gumbel-Softmax technique to avoid soft-thinking tokens outside the pre-trained embedding space, and leverages the reparameterization trick in policy gradient. We conduct experiments across base LLMs ranging from 1.5B to 7B parameters, and results demonstrate that SofT-GRPO enables soft-thinking LLMs to slightly outperform discrete-token GRPO on Pass@1 (+0.13% on average accuracy), while exhibiting a substantial uplift on Pass@32 (+2.19% on average accuracy). Codes and weights are available on https://github.com/zz1358m/SofT-GRPO-master",
+        "tags": [
+            "CoT",
+            "GRPO",
+            "LLM",
+            "RL"
+        ]
+    },
+    {
+        "id": 9,
+        "title": "Reasoning with Confidence: Efficient Verification of LLM Reasoning Steps via Uncertainty Heads",
+        "author": [
+            "Jingwei Ni",
+            "Ekaterina Fadeeva",
+            "Tianyi Wu",
+            "Mubashara Akhtar",
+            "Jiaheng Zhang",
+            "Elliott Ash",
+            "Markus Leippold",
+            "Timothy Baldwin",
+            "See-Kiong Ng",
+            "Artem Shelmanov",
+            "Mrinmaya Sachan"
+        ],
+        "pdf": "https://arxiv.org/pdf/2511.06209",
+        "abstract": "Solving complex tasks usually requires LLMs to generate long multi-step reasoning chains. Previous work has shown that verifying the correctness of individual reasoning steps can further improve the performance and efficiency of LLMs on such tasks and enhance solution interpretability. However, existing verification approaches, such as Process Reward Models (PRMs), are either computationally expensive, limited to specific domains, or require large-scale human or model-generated annotations. Thus, we propose a lightweight alternative for step-level reasoning verification based on data-driven uncertainty scores. We train transformer-based uncertainty quantification heads (UHeads) that use the internal states of a frozen LLM to estimate the uncertainty of its reasoning steps during generation. The approach is fully automatic: target labels are generated either by another larger LLM (e.g., DeepSeek R1) or in a self-supervised manner by the original model itself. UHeads are both effective and lightweight, containing less than 10M parameters. Across multiple domains, including mathematics, planning, and general knowledge question answering, they match or even surpass the performance of PRMs that are up to 810x larger. Our findings suggest that the internal states of LLMs encode their uncertainty and can serve as reliable signals for reasoning verification, offering a promising direction toward scalable and generalizable introspective LLMs.",
+        "tags": [
+            "DeepSeek",
+            "LLM",
+            "Transformer"
+        ]
+    },
+    {
+        "id": 10,
+        "title": "Robot Learning from a Physical World Model",
+        "author": [
+            "Jiageng Mao",
+            "Sicheng He",
+            "Hao-Ning Wu",
+            "Yang You",
+            "Shuyang Sun",
+            "Zhicheng Wang",
+            "Yanan Bao",
+            "Huizhong Chen",
+            "Leonidas Guibas",
+            "Vitor Guizilini",
+            "Howard Zhou",
+            "Yue Wang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2511.07416",
+        "abstract": "We introduce PhysWorld, a framework that enables robot learning from video generation through physical world modeling. Recent video generation models can synthesize photorealistic visual demonstrations from language commands and images, offering a powerful yet underexplored source of training signals for robotics. However, directly retargeting pixel motions from generated videos to robots neglects physics, often resulting in inaccurate manipulations. PhysWorld addresses this limitation by coupling video generation with physical world reconstruction. Given a single image and a task command, our method generates task-conditioned videos and reconstructs the underlying physical world from the videos, and the generated video motions are grounded into physically accurate actions through object-centric residual reinforcement learning with the physical world model. This synergy transforms implicit visual guidance into physically executable robotic trajectories, eliminating the need for real robot data collection and enabling zero-shot generalizable robotic manipulation. Experiments on diverse real-world tasks demonstrate that PhysWorld substantially improves manipulation accuracy compared to previous approaches. Visit \\href{https://pointscoder.github.io/PhysWorld_Web/}{the project webpage} for details.",
+        "tags": [
+            "RL",
+            "Robotics",
+            "Video Generation"
+        ]
+    },
+    {
+        "id": 11,
+        "title": "Teaching Pretrained Language Models to Think Deeper with Retrofitted Recurrence",
+        "author": [
+            "Sean McLeish",
+            "Ang Li",
+            "John Kirchenbauer",
+            "Dayal Singh Kalra",
+            "Brian R. Bartoldson",
+            "Bhavya Kailkhura",
+            "Avi Schwarzschild",
+            "Jonas Geiping",
+            "Tom Goldstein",
+            "Micah Goldblum"
+        ],
+        "pdf": "https://arxiv.org/pdf/2511.07384",
+        "abstract": "Recent advances in depth-recurrent language models show that recurrence can decouple train-time compute and parameter count from test-time compute. In this work, we study how to convert existing pretrained non-recurrent language models into depth-recurrent models. We find that using a curriculum of recurrences to increase the effective depth of the model over the course of training preserves performance while reducing total computational cost. In our experiments, on mathematics, we observe that converting pretrained models to recurrent ones results in better performance at a given compute budget than simply post-training the original non-recurrent language model.",
+        "tags": []
+    },
+    {
+        "id": 12,
+        "title": "NURBGen: High-Fidelity Text-to-CAD Generation through LLM-Driven NURBS Modeling",
+        "author": [
+            "Muhammad Usama",
+            "Mohammad Sadil Khan",
+            "Didier Stricker",
+            "Muhammad Zeshan Afzal"
+        ],
+        "pdf": "https://arxiv.org/pdf/2511.06194",
+        "abstract": "Generating editable 3D CAD models from natural language remains challenging, as existing text-to-CAD systems either produce meshes or rely on scarce design-history data. We present NURBGen, the first framework to generate high-fidelity 3D CAD models directly from text using Non-Uniform Rational B-Splines (NURBS). To achieve this, we fine-tune a large language model (LLM) to translate free-form texts into JSON representations containing NURBS surface parameters (\\textit{i.e}, control points, knot vectors, degrees, and rational weights) which can be directly converted into BRep format using Python. We further propose a hybrid representation that combines untrimmed NURBS with analytic primitives to handle trimmed surfaces and degenerate regions more robustly, while reducing token complexity. Additionally, we introduce partABC, a curated subset of the ABC dataset consisting of individual CAD components, annotated with detailed captions using an automated annotation pipeline. NURBGen demonstrates strong performance on diverse prompts, surpassing prior methods in geometric fidelity and dimensional accuracy, as confirmed by expert evaluations. Code and dataset will be released publicly.",
+        "tags": [
+            "3D",
+            "LLM"
+        ]
+    },
+    {
+        "id": 13,
+        "title": "Long Grounded Thoughts: Distilling Compositional Visual Reasoning Chains at Scale",
+        "author": [
+            "David Acuna",
+            "Chao-Han Huck Yang",
+            "Yuntian Deng",
+            "Jaehun Jung",
+            "Ximing Lu",
+            "Prithviraj Ammanabrolu",
+            "Hyunwoo Kim",
+            "Yuan-Hong Liao",
+            "Yejin Choi"
+        ],
+        "pdf": "https://arxiv.org/pdf/2511.05705",
+        "abstract": "Recent progress in multimodal reasoning has been driven largely by undisclosed datasets and proprietary data synthesis recipes, leaving open questions about how to systematically build large-scale, vision-centric reasoning datasets, particularly for tasks that go beyond visual math. In this work, we introduce a new reasoning data generation framework spanning diverse skills and levels of complexity with over 1M high-quality synthetic vision-centric questions. The dataset also includes preference data and instruction prompts supporting both offline and online RL. Our synthesis framework proceeds in two stages: (1) scale; and (2) complexity. Reasoning traces are then synthesized through a two-stage process that leverages VLMs and reasoning LLMs, producing CoT traces for VLMs that capture the richness and diverse cognitive behaviors found in frontier reasoning models. Remarkably, we show that finetuning Qwen2.5-VL-7B on our data outperforms all open-data baselines across all evaluated vision-centric benchmarks, and even surpasses strong closed-data models such as MiMo-VL-7B-RL on V* Bench, CV-Bench and MMStar-V. Perhaps most surprising, despite being entirely vision-centric, our data transfers positively to text-only reasoning (MMLU-Pro) and audio reasoning (MMAU), demonstrating its effectiveness. Similarly, despite not containing videos or embodied visual data, we observe notable gains when evaluating on a single-evidence embodied QA benchmark (NiEH). Finally, we use our data to analyze the entire VLM post-training pipeline. Our empirical analysis highlights that (i) SFT on high-quality data with non-linear reasoning traces is essential for effective online RL, (ii) staged offline RL matches online RL's performance while reducing compute demands, and (iii) careful SFT on high quality data can substantially improve out-of-domain, cross-modality transfer.",
+        "tags": [
+            "CoT",
+            "LLM",
+            "RL",
+            "VLM"
+        ]
+    },
+    {
+        "id": 14,
+        "title": "RLoop: An Self-Improving Framework for Reinforcement Learning with Iterative Policy Initialization",
+        "author": [
+            "Zeng Zhiyuan",
+            "Jiashuo Liu",
+            "Zhangyue Yin",
+            "Ge Zhang",
+            "Wenhao Huang",
+            "Xipeng Qiu"
+        ],
+        "pdf": "https://arxiv.org/pdf/2511.04285",
+        "abstract": "While Reinforcement Learning for Verifiable Rewards (RLVR) is powerful for training large reasoning models, its training dynamics harbor a critical challenge: RL overfitting, where models gain training rewards but lose generalization. Our analysis reveals this is driven by policy over-specialization and catastrophic forgetting of diverse solutions generated during training. Standard optimization discards this valuable inter-step policy diversity. To address this, we introduce RLoop, a self-improving framework built on iterative policy initialization. RLoop transforms the standard training process into a virtuous cycle: it first uses RL to explore the solution space from a given policy, then filters the successful trajectories to create an expert dataset. This dataset is used via Rejection-sampling Fine-Tuning (RFT) to refine the initial policy, creating a superior starting point for the next iteration. This loop of exploration and exploitation via iterative re-initialization effectively converts transient policy variations into robust performance gains. Our experiments show RLoop mitigates forgetting and substantially improves generalization, boosting average accuracy by 9% and pass@32 by over 15% compared to vanilla RL.",
+        "tags": [
+            "RL"
+        ]
+    },
+    {
+        "id": 15,
+        "title": "DigiData: Training and Evaluating General-Purpose Mobile Control Agents",
+        "author": [
+            "Yuxuan Sun",
+            "Manchen Wang",
+            "Shengyi Qian",
+            "William R. Wong",
+            "Eric Gan",
+            "Pierluca D'Oro",
+            "Alejandro Castillejo Munoz",
+            "Sneha Silwal",
+            "Pedro Matias",
+            "Nitin Kamra",
+            "Satwik Kottur",
+            "Nick Raines",
+            "Xuanyi Zhao",
+            "Joy Chen",
+            "Joseph Greer",
+            "Andrea Madotto",
+            "Allen Bolourchi",
+            "James Valori",
+            "Kevin Carlberg",
+            "Karl Ridgeway",
+            "Joseph Tighe"
+        ],
+        "pdf": "https://arxiv.org/pdf/2511.07413",
+        "abstract": "AI agents capable of controlling user interfaces have the potential to transform human interaction with digital devices. To accelerate this transformation, two fundamental building blocks are essential: high-quality datasets that enable agents to achieve complex and human-relevant goals, and robust evaluation methods that allow researchers and practitioners to rapidly enhance agent performance. In this paper, we introduce DigiData, a large-scale, high-quality, diverse, multi-modal dataset designed for training mobile control agents. Unlike existing datasets, which derive goals from unstructured interactions, DigiData is meticulously constructed through comprehensive exploration of app features, resulting in greater diversity and higher goal complexity. Additionally, we present DigiData-Bench, a benchmark for evaluating mobile control agents on real-world complex tasks. We demonstrate that the commonly used step-accuracy metric falls short in reliably assessing mobile control agents and, to address this, we propose dynamic evaluation protocols and AI-powered evaluations as rigorous alternatives for agent assessment. Our contributions aim to significantly advance the development of mobile control agents, paving the way for more intuitive and effective human-device interactions.",
+        "tags": []
+    },
+    {
+        "id": 16,
+        "title": "MPJudge: Towards Perceptual Assessment of Music-Induced Paintings",
+        "author": [
+            "Shiqi Jiang",
+            "Tianyi Liang",
+            "Changbo Wang",
+            "Chenhui Li"
+        ],
+        "pdf": "https://arxiv.org/pdf/2511.07137",
+        "abstract": "Music induced painting is a unique artistic practice, where visual artworks are created under the influence of music. Evaluating whether a painting faithfully reflects the music that inspired it poses a challenging perceptual assessment task. Existing methods primarily rely on emotion recognition models to assess the similarity between music and painting, but such models introduce considerable noise and overlook broader perceptual cues beyond emotion. To address these limitations, we propose a novel framework for music induced painting assessment that directly models perceptual coherence between music and visual art. We introduce MPD, the first large scale dataset of music painting pairs annotated by domain experts based on perceptual coherence. To better handle ambiguous cases, we further collect pairwise preference annotations. Building on this dataset, we present MPJudge, a model that integrates music features into a visual encoder via a modulation based fusion mechanism. To effectively learn from ambiguous cases, we adopt Direct Preference Optimization for training. Extensive experiments demonstrate that our method outperforms existing approaches. Qualitative results further show that our model more accurately identifies music relevant regions in paintings.",
+        "tags": []
+    },
+    {
+        "id": 17,
+        "title": "Llama-Embed-Nemotron-8B: A Universal Text Embedding Model for Multilingual and Cross-Lingual Tasks",
+        "author": [
+            "Yauhen Babakhin",
+            "Radek Osmulski",
+            "Ronay Ak",
+            "Gabriel Moreira",
+            "Mengyao Xu",
+            "Benedikt Schifferer",
+            "Bo Liu",
+            "Even Oldridge"
+        ],
+        "pdf": "https://arxiv.org/pdf/2511.07025",
+        "abstract": "We introduce llama-embed-nemotron-8b, an open-weights text embedding model that achieves state-of-the-art performance on the Multilingual Massive Text Embedding Benchmark (MMTEB) leaderboard as of October 21, 2025. While recent models show strong performance, their training data or methodologies are often not fully disclosed. We aim to address this by developing a fully open-source model, publicly releasing its weights and detailed ablation studies, and planning to share the curated training datasets. Our model demonstrates superior performance across all major embedding tasks -- including retrieval, classification and semantic textual similarity (STS) -- and excels in challenging multilingual scenarios, such as low-resource languages and cross-lingual setups. This state-of-the-art performance is driven by a novel data mix of 16.1 million query-document pairs, split between 7.7 million samples from public datasets and 8.4 million synthetically generated examples from various open-weight LLMs. One of our key contributions is a detailed ablation study analyzing core design choices, including a comparison of contrastive loss implementations, an evaluation of synthetic data generation (SDG) strategies, and the impact of model merging. The llama-embed-nemotron-8b is an instruction-aware model, supporting user-defined instructions to enhance performance for specific use-cases. This combination of top-tier performance, broad applicability, and user-driven flexibility enables it to serve as a universal text embedding solution.",
+        "tags": [
+            "LLM",
+            "LLaMA"
+        ]
+    },
+    {
+        "id": 18,
+        "title": "Ariadne: A Controllable Framework for Probing and Extending VLM Reasoning Boundaries",
+        "author": [
+            "Minghe Shen",
+            "Zhuo Zhi",
+            "Chonghan Liu",
+            "Shuo Xing",
+            "Zhengzhong Tu",
+            "Che Liu"
+        ],
+        "pdf": "https://arxiv.org/pdf/2511.00710",
+        "abstract": "While Vision-Language Models (VLMs) post-trained with Reinforcement Learning (RL) show impressive general reasoning, their evaluation is often confined to language-dominant tasks (e.g., math). This raises a critical question: can RL post-training truly extend the inherent capability boundary of a base VLM, particularly for visual-centric spatial tasks where it initially fails? To investigate this, we introduce Ariadne, a framework utilizing synthetic mazes for multi-step spatial reasoning where task difficulty (e.g., path length, turns) is precisely controlled. We leverage this controllable environment to train VLMs using Reinforcement Learning with Verified Rewards (RLVR) in a difficulty-aware curriculum. Surprisingly, post-RLVR training, the VLM achieves over 50% accuracy on a problem set where the base model scored 0%, demonstrating that our approach expands the model's initial capability boundary. To assess real-world viability, we evaluate out-of-distribution (OOD) generalization on practical benchmarks. Despite training only on synthetic maze samples, Ariadne achieves significant zero-shot improvements, averaging 16% on MapBench (e.g., museum navigation) and 24% on ReasonMap (subway transfer tasks). These results confirm that our method not only broadens the model's fundamental limits but also enhances its generalization to real-world spatial reasoning. We acknowledge our study is limited to the post-training phase, given the opaqueness of pre-training data, and hope our research motivates further work on specialized, capability-extending alignment.",
+        "tags": [
+            "RL",
+            "VLM"
+        ]
+    },
+    {
+        "id": 19,
+        "title": "DIMO: Diverse 3D Motion Generation for Arbitrary Objects",
+        "author": [
+            "Linzhan Mou",
+            "Jiahui Lei",
+            "Chen Wang",
+            "Lingjie Liu",
+            "Kostas Daniilidis"
+        ],
+        "pdf": "https://arxiv.org/pdf/2511.07409",
+        "abstract": "We present DIMO, a generative approach capable of generating diverse 3D motions for arbitrary objects from a single image. The core idea of our work is to leverage the rich priors in well-trained video models to extract the common motion patterns and then embed them into a shared low-dimensional latent space. Specifically, we first generate multiple videos of the same object with diverse motions. We then embed each motion into a latent vector and train a shared motion decoder to learn the distribution of motions represented by a structured and compact motion representation, i.e., neural key point trajectories. The canonical 3D Gaussians are then driven by these key points and fused to model the geometry and appearance. During inference time with learned latent space, we can instantly sample diverse 3D motions in a single-forward pass and support several interesting applications including 3D motion interpolation and language-guided motion generation. Our project page is available at https://linzhanm.github.io/dimo.",
+        "tags": [
+            "3D"
+        ]
+    },
+    {
+        "id": 20,
+        "title": "RLVE: Scaling Up Reinforcement Learning for Language Models with Adaptive Verifiable Environments",
+        "author": [
+            "Zhiyuan Zeng",
+            "Hamish Ivison",
+            "Yiping Wang",
+            "Lifan Yuan",
+            "Shuyue Stella Li",
+            "Zhuorui Ye",
+            "Siting Li",
+            "Jacqueline He",
+            "Runlong Zhou",
+            "Tong Chen",
+            "Chenyang Zhao",
+            "Yulia Tsvetkov",
+            "Simon Shaolei Du",
+            "Natasha Jaques",
+            "Hao Peng",
+            "Pang Wei Koh",
+            "Hannaneh Hajishirzi"
+        ],
+        "pdf": "https://arxiv.org/pdf/2511.07317",
+        "abstract": "We introduce Reinforcement Learning (RL) with Adaptive Verifiable Environments (RLVE), an approach using verifiable environments that procedurally generate problems and provide algorithmically verifiable rewards, to scale up RL for language models (LMs). RLVE enables each verifiable environment to dynamically adapt its problem difficulty distribution to the policy model's capabilities as training progresses. In contrast, static data distributions often lead to vanishing learning signals when problems are either too easy or too hard for the policy. To implement RLVE, we create RLVE-Gym, a large-scale suite of 400 verifiable environments carefully developed through manual environment engineering. Using RLVE-Gym, we show that environment scaling, i.e., expanding the collection of training environments, consistently improves generalizable reasoning capabilities. RLVE with joint training across all 400 environments in RLVE-Gym yields a 3.37% absolute average improvement across six reasoning benchmarks, starting from one of the strongest 1.5B reasoning LMs. By comparison, continuing this LM's original RL training yields only a 0.49% average absolute gain despite using over 3x more compute. We release our code publicly.",
+        "tags": [
+            "RL"
+        ]
+    },
+    {
+        "id": 21,
+        "title": "Do LLMs Feel? Teaching Emotion Recognition with Prompts, Retrieval, and Curriculum Learning",
+        "author": [
+            "Xinran Li",
+            "Xiujuan Xu",
+            "Jiaqi Qiao",
+            "Yu Liu"
+        ],
+        "pdf": "https://arxiv.org/pdf/2511.07061",
+        "abstract": "Emotion Recognition in Conversation (ERC) is a crucial task for understanding human emotions and enabling natural human-computer interaction. Although Large Language Models (LLMs) have recently shown great potential in this field, their ability to capture the intrinsic connections between explicit and implicit emotions remains limited. We propose a novel ERC training framework, PRC-Emo, which integrates Prompt engineering, demonstration Retrieval, and Curriculum learning, with the goal of exploring whether LLMs can effectively perceive emotions in conversational contexts. Specifically, we design emotion-sensitive prompt templates based on both explicit and implicit emotional cues to better guide the model in understanding the speaker's psychological states. We construct the first dedicated demonstration retrieval repository for ERC, which includes training samples from widely used datasets, as well as high-quality dialogue examples generated by LLMs and manually verified. Moreover, we introduce a curriculum learning strategy into the LoRA fine-tuning process, incorporating weighted emotional shifts between same-speaker and different-speaker utterances to assign difficulty levels to dialogue samples, which are then organized in an easy-to-hard training sequence. Experimental results on two benchmark datasets-- IEMOCAP and MELD --show that our method achieves new state-of-the-art (SOTA) performance, demonstrating the effectiveness and generalizability of our approach in improving LLM-based emotional understanding.",
+        "tags": [
+            "LLM",
+            "LoRA"
+        ]
+    },
+    {
+        "id": 22,
+        "title": "FLEX: Continuous Agent Evolution via Forward Learning from Experience",
+        "author": [
+            "Zhicheng Cai",
+            "Xinyuan Guo",
+            "Yu Pei",
+            "JiangTao Feng",
+            "Jiangjie Chen",
+            "Ya-Qin Zhang",
+            "Wei-Ying Ma",
+            "Mingxuan Wang",
+            "Hao Zhou"
+        ],
+        "pdf": "https://arxiv.org/pdf/2511.06449",
+        "abstract": "Autonomous agents driven by Large Language Models (LLMs) have revolutionized reasoning and problem-solving but remain static after training, unable to grow with experience as intelligent beings do during deployment. We introduce Forward Learning with EXperience (FLEX), a gradient-free learning paradigm that enables LLM agents to continuously evolve through accumulated experience. Specifically, FLEX cultivates scalable and inheritable evolution by constructing a structured experience library through continual reflection on successes and failures during interaction with the environment. FLEX delivers substantial improvements on mathematical reasoning, chemical retrosynthesis, and protein fitness prediction (up to 23% on AIME25, 10% on USPTO50k, and 14% on ProteinGym). We further identify a clear scaling law of experiential growth and the phenomenon of experience inheritance across agents, marking a step toward scalable and inheritable continuous agent evolution. Project Page: https://flex-gensi-thuair.github.io.",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 23,
+        "title": "SWE-fficiency: Can Language Models Optimize Real-World Repositories on Real Workloads?",
+        "author": [
+            "Jeffrey Jian Ma",
+            "Milad Hashemi",
+            "Amir Yazdanbakhsh",
+            "Kevin Swersky",
+            "Ofir Press",
+            "Enhui Li",
+            "Vijay Janapa Reddi",
+            "Parthasarathy Ranganathan"
+        ],
+        "pdf": "https://arxiv.org/pdf/2511.06090",
+        "abstract": "Optimizing the performance of large-scale software repositories demands expertise in code reasoning and software engineering (SWE) to reduce runtime while preserving program correctness. However, most benchmarks emphasize what to fix rather than how to fix code. We introduce SWE-fficiency, a benchmark for evaluating repository-level performance optimization on real workloads. Our suite contains 498 tasks across nine widely used data-science, machine-learning, and HPC repositories (e.g., numpy, pandas, scipy): given a complete codebase and a slow workload, an agent must investigate code semantics, localize bottlenecks and relevant tests, and produce a patch that matches or exceeds expert speedup while passing the same unit tests. To enable this how-to-fix evaluation, our automated pipeline scrapes GitHub pull requests for performance-improving edits, combining keyword filtering, static analysis, coverage tooling, and execution validation to both confirm expert speedup baselines and identify relevant repository unit tests. Empirical evaluation of state-of-the-art agents reveals significant underperformance. On average, agents achieve less than 0.15x the expert speedup: agents struggle in localizing optimization opportunities, reasoning about execution across functions, and maintaining correctness in proposed edits. We release the benchmark and accompanying data pipeline to facilitate research on automated performance engineering and long-horizon software reasoning.",
+        "tags": []
+    },
+    {
+        "id": 24,
+        "title": "10 Open Challenges Steering the Future of Vision-Language-Action Models",
+        "author": [
+            "Soujanya Poria",
+            "Navonil Majumder",
+            "Chia-Yu Hung",
+            "Amir Ali Bagherzadeh",
+            "Chuan Li",
+            "Kenneth Kwok",
+            "Ziwei Wang",
+            "Cheston Tan",
+            "Jiajun Wu",
+            "David Hsu"
+        ],
+        "pdf": "https://arxiv.org/pdf/2511.05936",
+        "abstract": "Due to their ability of follow natural language instructions, vision-language-action (VLA) models are increasingly prevalent in the embodied AI arena, following the widespread success of their precursors -- LLMs and VLMs. In this paper, we discuss 10 principal milestones in the ongoing development of VLA models -- multimodality, reasoning, data, evaluation, cross-robot action generalization, efficiency, whole-body coordination, safety, agents, and coordination with humans. Furthermore, we discuss the emerging trends of using spatial understanding, modeling world dynamics, post training, and data synthesis -- all aiming to reach these milestones. Through these discussions, we hope to bring attention to the research avenues that may accelerate the development of VLA models into wider acceptability.",
+        "tags": [
+            "LLM",
+            "Robotics",
+            "VLM"
+        ]
+    },
+    {
+        "id": 25,
+        "title": "Diffusion-SDPO: Safeguarded Direct Preference Optimization for Diffusion Models",
+        "author": [
+            "Minghao Fu",
+            "Guo-Hua Wang",
+            "Tianyu Cui",
+            "Qing-Guo Chen",
+            "Zhao Xu",
+            "Weihua Luo",
+            "Kaifu Zhang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2511.03317",
+        "abstract": "Text-to-image diffusion models deliver high-quality images, yet aligning them with human preferences remains challenging. We revisit diffusion-based Direct Preference Optimization (DPO) for these models and identify a critical pathology: enlarging the preference margin does not necessarily improve generation quality. In particular, the standard Diffusion-DPO objective can increase the reconstruction error of both winner and loser branches. Consequently, degradation of the less-preferred outputs can become sufficiently severe that the preferred branch is also adversely affected even as the margin grows. To address this, we introduce Diffusion-SDPO, a safeguarded update rule that preserves the winner by adaptively scaling the loser gradient according to its alignment with the winner gradient. A first-order analysis yields a closed-form scaling coefficient that guarantees the error of the preferred output is non-increasing at each optimization step. Our method is simple, model-agnostic, broadly compatible with existing DPO-style alignment frameworks and adds only marginal computational overhead. Across standard text-to-image benchmarks, Diffusion-SDPO delivers consistent gains over preference-learning baselines on automated preference, aesthetic, and prompt alignment metrics. Code is publicly available at https://github.com/AIDC-AI/Diffusion-SDPO.",
+        "tags": [
+            "DPO",
+            "Diffusion",
+            "Text-to-Image"
+        ]
+    },
+    {
+        "id": 26,
+        "title": "Generating an Image From 1,000 Words: Enhancing Text-to-Image With Structured Captions",
+        "author": [
+            "Eyal Gutflaish",
+            "Eliran Kachlon",
+            "Hezi Zisman",
+            "Tal Hacham",
+            "Nimrod Sarid",
+            "Alexander Visheratin",
+            "Saar Huberman",
+            "Gal Davidi",
+            "Guy Bukchin",
+            "Kfir Goldberg",
+            "Ron Mokady"
+        ],
+        "pdf": "https://arxiv.org/pdf/2511.06876",
+        "abstract": "Text-to-image models have rapidly evolved from casual creative tools to professional-grade systems, achieving unprecedented levels of image quality and realism. Yet, most models are trained to map short prompts into detailed images, creating a gap between sparse textual input and rich visual outputs. This mismatch reduces controllability, as models often fill in missing details arbitrarily, biasing toward average user preferences and limiting precision for professional use. We address this limitation by training the first open-source text-to-image model on long structured captions, where every training sample is annotated with the same set of fine-grained attributes. This design maximizes expressive coverage and enables disentangled control over visual factors. To process long captions efficiently, we propose DimFusion, a fusion mechanism that integrates intermediate tokens from a lightweight LLM without increasing token length. We also introduce the Text-as-a-Bottleneck Reconstruction (TaBR) evaluation protocol. By assessing how well real images can be reconstructed through a captioning-generation loop, TaBR directly measures controllability and expressiveness, even for very long captions where existing evaluation methods fail. Finally, we demonstrate our contributions by training the large-scale model FIBO, achieving state-of-the-art prompt alignment among open-source models. Model weights are publicly available at https://huggingface.co/briaai/FIBO",
+        "tags": [
+            "LLM",
+            "Text-to-Image"
+        ]
+    },
+    {
+        "id": 27,
+        "title": "VADER: Towards Causal Video Anomaly Understanding with Relation-Aware Large Language Models",
+        "author": [
+            "Ying Cheng",
+            "Yu-Ho Lin",
+            "Min-Hung Chen",
+            "Fu-En Yang",
+            "Shang-Hong Lai"
+        ],
+        "pdf": "https://arxiv.org/pdf/2511.07299",
+        "abstract": "Video anomaly understanding (VAU) aims to provide detailed interpretation and semantic comprehension of anomalous events within videos, addressing limitations of traditional methods that focus solely on detecting and localizing anomalies. However, existing approaches often neglect the deeper causal relationships and interactions between objects, which are critical for understanding anomalous behaviors. In this paper, we propose VADER, an LLM-driven framework for Video Anomaly unDErstanding, which integrates keyframe object Relation features with visual cues to enhance anomaly comprehension from video. Specifically, VADER first applies an Anomaly Scorer to assign per-frame anomaly scores, followed by a Context-AwarE Sampling (CAES) strategy to capture the causal context of each anomalous event. A Relation Feature Extractor and a COntrastive Relation Encoder (CORE) jointly model dynamic object interactions, producing compact relational representations for downstream reasoning. These visual and relational cues are integrated with LLMs to generate detailed, causally grounded descriptions and support robust anomaly-related question answering. Experiments on multiple real-world VAU benchmarks demonstrate that VADER achieves strong results across anomaly description, explanation, and causal reasoning tasks, advancing the frontier of explainable video anomaly analysis.",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 28,
+        "title": "Omni-AVSR: Towards Unified Multimodal Speech Recognition with Large Language Models",
+        "author": [
+            "Umberto Cappellazzo",
+            "Xubo Liu",
+            "Pingchuan Ma",
+            "Stavros Petridis",
+            "Maja Pantic"
+        ],
+        "pdf": "https://arxiv.org/pdf/2511.07253",
+        "abstract": "Large language models (LLMs) have recently achieved impressive results in speech recognition across multiple modalities, including Auditory Speech Recognition (ASR), Visual Speech Recognition (VSR), and Audio-Visual Speech Recognition (AVSR). Despite this progress, current LLM-based approaches typically address each task independently, training separate models that raise computational and deployment resource use while missing potential cross-task synergies. They also rely on fixed-rate token compression, which restricts flexibility in balancing accuracy with efficiency. These limitations highlight the need for a unified framework that can support ASR, VSR, and AVSR while enabling elastic inference. To this end, we present Omni-AVSR, a unified audio-visual LLM that combines efficient multi-granularity training with parameter-efficient adaptation. Specifically, we adapt the matryoshka representation learning paradigm to efficiently train across multiple audio and visual granularities, reducing its inherent training resource use. Furthermore, we explore three LoRA-based strategies for adapting the backbone LLM, balancing shared and task-specific specialization. Experiments on LRS2 and LRS3 show that Omni-AVSR achieves comparable or superior accuracy to state-of-the-art baselines while training a single model at substantially lower training and deployment resource use. The model also remains robust under acoustic noise, and we analyze its scaling behavior as LLM size increases, providing insights into the trade-off between performance and efficiency.",
+        "tags": [
+            "LLM",
+            "LoRA"
+        ]
+    },
+    {
+        "id": 29,
+        "title": "LUT-LLM: Efficient Large Language Model Inference with Memory-based Computations on FPGAs",
+        "author": [
+            "Zifan He",
+            "Shengyu Ye",
+            "Rui Ma",
+            "Yang Wang",
+            "Jason Cong"
+        ],
+        "pdf": "https://arxiv.org/pdf/2511.06174",
+        "abstract": "The rapid progress of large language models (LLMs) has advanced numerous applications, yet efficient single-batch inference remains vital for on-device intelligence. While FPGAs offer fine-grained data control and high energy efficiency, recent GPU optimizations have narrowed their advantage, especially under arithmetic-based computation. To overcome this, we leverage FPGAs' abundant on-chip memory to shift LLM inference from arithmetic- to memory-based computation through table lookups. We present LUT-LLM, the first FPGA accelerator enabling 1B+ LLM inference via vector-quantized memory operations. Our analysis identifies activation-weight co-quantization as the most effective scheme, supported by (1) bandwidth-aware parallel centroid search, (2) efficient 2D table lookups, and (3) a spatial-temporal hybrid design minimizing data caching. Implemented on an AMD V80 FPGA for a customized Qwen 3 1.7B model, LUT-LLM achieves 1.66x lower latency than AMD MI210 and 1.72x higher energy efficiency than NVIDIA A100, scaling to 32B models with 2.16x efficiency gain over A100.",
+        "tags": [
+            "LLM",
+            "Qwen"
+        ]
+    },
+    {
+        "id": 30,
+        "title": "Reinforcement Learning Improves Traversal of Hierarchical Knowledge in LLMs",
+        "author": [
+            "Renfei Zhang",
+            "Manasa Kaniselvan",
+            "Niloofar Mireshghallah"
+        ],
+        "pdf": "https://arxiv.org/pdf/2511.05933",
+        "abstract": "Reinforcement learning (RL) is often credited with improving language model reasoning and generalization at the expense of degrading memorized knowledge. We challenge this narrative by observing that RL-enhanced models consistently outperform their base and supervised fine-tuned (SFT) counterparts on pure knowledge recall tasks, particularly those requiring traversal of hierarchical, structured knowledge (e.g., medical codes). We hypothesize these gains stem not from newly acquired data, but from improved procedural skills in navigating and searching existing knowledge hierarchies within the model parameters. To support this hypothesis, we show that structured prompting, which explicitly guides SFTed models through hierarchical traversal, recovers most of the performance gap (reducing 24pp to 7pp on MedConceptsQA for DeepSeek-V3/R1). We further find that while prompting improves final-answer accuracy, RL-enhanced models retain superior ability to recall correct procedural paths on deep-retrieval tasks. Finally our layer-wise internal activation analysis reveals that while factual representations (e.g., activations for the statement \"code 57.95 refers to urinary infection\") maintain high cosine similarity between SFT and RL models, query representations (e.g., \"what is code 57.95\") diverge noticeably, indicating that RL primarily transforms how models traverse knowledge rather than the knowledge representation itself.",
+        "tags": [
+            "DeepSeek",
+            "LLM",
+            "RL"
+        ]
+    }
+]

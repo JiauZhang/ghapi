@@ -1,0 +1,661 @@
+[
+    {
+        "id": 1,
+        "title": "PICABench: How Far Are We from Physically Realistic Image Editing?",
+        "author": [
+            "Yuandong Pu",
+            "Le Zhuo",
+            "Songhao Han",
+            "Jinbo Xing",
+            "Kaiwen Zhu",
+            "Shuo Cao",
+            "Bin Fu",
+            "Si Liu",
+            "Hongsheng Li",
+            "Yu Qiao",
+            "Wenlong Zhang",
+            "Xi Chen",
+            "Yihao Liu"
+        ],
+        "pdf": "https://arxiv.org/pdf/2510.17681",
+        "abstract": "Image editing has achieved remarkable progress recently. Modern editing models could already follow complex instructions to manipulate the original content. However, beyond completing the editing instructions, the accompanying physical effects are the key to the generation realism. For example, removing an object should also remove its shadow, reflections, and interactions with nearby objects. Unfortunately, existing models and benchmarks mainly focus on instruction completion but overlook these physical effects. So, at this moment, how far are we from physically realistic image editing? To answer this, we introduce PICABench, which systematically evaluates physical realism across eight sub-dimension (spanning optics, mechanics, and state transitions) for most of the common editing operations (add, remove, attribute change, etc). We further propose the PICAEval, a reliable evaluation protocol that uses VLM-as-a-judge with per-case, region-level human annotations and questions. Beyond benchmarking, we also explore effective solutions by learning physics from videos and construct a training dataset PICA-100K. After evaluating most of the mainstream models, we observe that physical realism remains a challenging problem with large rooms to explore. We hope that our benchmark and proposed solutions can serve as a foundation for future work moving from naive content editing toward physically consistent realism.",
+        "tags": [
+            "Image Editing",
+            "VLM"
+        ]
+    },
+    {
+        "id": 2,
+        "title": "DeepAnalyze: Agentic Large Language Models for Autonomous Data Science",
+        "author": [
+            "Shaolei Zhang",
+            "Ju Fan",
+            "Meihao Fan",
+            "Guoliang Li",
+            "Xiaoyong Du"
+        ],
+        "pdf": "https://arxiv.org/pdf/2510.16872",
+        "abstract": "Autonomous data science, from raw data sources to analyst-grade deep research reports, has been a long-standing challenge, and is now becoming feasible with the emergence of powerful large language models (LLMs). Recent workflow-based data agents have shown promising results on specific data tasks but remain fundamentally limited in achieving fully autonomous data science due to their reliance on predefined workflows. In this paper, we introduce DeepAnalyze-8B, the first agentic LLM designed for autonomous data science, capable of automatically completing the end-toend pipeline from data sources to analyst-grade deep research reports. To tackle high-complexity data science tasks, we propose a curriculum-based agentic training paradigm that emulates the learning trajectory of human data scientists, enabling LLMs to progressively acquire and integrate multiple capabilities in real-world environments. We also introduce a data-grounded trajectory synthesis framework that constructs high-quality training data. Through agentic training, DeepAnalyze learns to perform a broad spectrum of data tasks, ranging from data question answering and specialized analytical tasks to open-ended data research. Experiments demonstrate that, with only 8B parameters, DeepAnalyze outperforms previous workflow-based agents built on most advanced proprietary LLMs. The model, code, and training data of DeepAnalyze are open-sourced, paving the way toward autonomous data science.",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 3,
+        "title": "Glyph: Scaling Context Windows via Visual-Text Compression",
+        "author": [
+            "Jiale Cheng",
+            "Yusen Liu",
+            "Xinyu Zhang",
+            "Yulin Fei",
+            "Wenyi Hong",
+            "Ruiliang Lyu",
+            "Weihan Wang",
+            "Zhe Su",
+            "Xiaotao Gu",
+            "Xiao Liu",
+            "Yushi Bai",
+            "Jie Tang",
+            "Hongning Wang",
+            "Minlie Huang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2510.17800",
+        "abstract": "Large language models (LLMs) increasingly rely on long-context modeling for tasks such as document understanding, code analysis, and multi-step reasoning. However, scaling context windows to the million-token level brings prohibitive computational and memory costs, limiting the practicality of long-context LLMs. In this work, we take a different perspective-visual context scaling-to tackle this challenge. Instead of extending token-based sequences, we propose Glyph, a framework that renders long texts into images and processes them with vision-language models (VLMs). This approach substantially compresses textual input while preserving semantic information, and we further design an LLM-driven genetic search to identify optimal visual rendering configurations for balancing accuracy and compression. Through extensive experiments, we demonstrate that our method achieves 3-4x token compression while maintaining accuracy comparable to leading LLMs such as Qwen3-8B on various long-context benchmarks. This compression also leads to around 4x faster prefilling and decoding, and approximately 2x faster SFT training. Furthermore, under extreme compression, a 128K-context VLM could scale to handle 1M-token-level text tasks. In addition, the rendered text data benefits real-world multimodal tasks, such as document understanding. Our code and model are released at https://github.com/thu-coai/Glyph.",
+        "tags": [
+            "LLM",
+            "VLM"
+        ]
+    },
+    {
+        "id": 4,
+        "title": "TrajSelector: Harnessing Latent Representations for Efficient and Effective Best-of-N in Large Reasoning Model",
+        "author": [
+            "Bin Yu",
+            "Xinming Wang",
+            "Shijie Lian",
+            "Haotian Li",
+            "Changti Wu",
+            "Ruina Hu",
+            "Bailing Wang",
+            "Yuliang Wei",
+            "Kai Chen"
+        ],
+        "pdf": "https://arxiv.org/pdf/2510.16449",
+        "abstract": "Large language models (LLMs) have shown remarkable progress in complex reasoning tasks, largely enabled by test-time scaling (TTS) paradigms that allocate additional compute during inference. Among these, external TTS (particularly the Best-of-N selection paradigm) yields scalable performance improvements by selecting from multiple independently generated reasoning trajectories. However, this approach faces key limitations: (i) the high computational overhead of deploying process reward models, (ii) the underutilization of the LLM's intrinsic latent representations. We introduce TrajSelector, an efficient and effective Best-of-N framework that exploit the hidden states in the sampler LLM for process-level scoring. A lightweight verifier (with only 0.6B parameters) evaluates the quality of step-wise trajectory, and then aggregates these scores to identify the optimal reasoning trajectory. Our framework employs a fully data-driven, end-to-end training recipe that eliminates reliance on massive step-level annotations. Experiential results across five benchmarks demonstrate that TrajSelector delivers consistent performance gains. In Best-of-32 settings, it surpasses majority voting by 4.61% accuracy and outperforms existing process reward models by 4.31% to 12.21%, all while maintaining lower inference costs.",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 5,
+        "title": "FineVision: Open Data Is All You Need",
+        "author": [
+            "Luis Wiedmann",
+            "Orr Zohar",
+            "Amir Mahla",
+            "Xiaohan Wang",
+            "Rui Li",
+            "Thibaud Frere",
+            "Leandro von Werra",
+            "Aritra Roy Gosthipaty",
+            "AndrÃ©s Marafioti"
+        ],
+        "pdf": "https://arxiv.org/pdf/2510.17269",
+        "abstract": "The advancement of vision-language models (VLMs) is hampered by a fragmented landscape of inconsistent and contaminated public datasets. We introduce FineVision, a meticulously collected, curated, and unified corpus of 24 million samples - the largest open resource of its kind. We unify more than 200 sources into 185 subsets via a semi-automated, human-in-the-loop pipeline: automation performs bulk ingestion and schema mapping, while reviewers audit mappings and spot-check outputs to verify faithful consumption of annotations, appropriate formatting and diversity, and safety; issues trigger targeted fixes and re-runs. The workflow further applies rigorous de-duplication within and across sources and decontamination against 66 public benchmarks. FineVision also encompasses agentic/GUI tasks with a unified action space; reviewers validate schemas and inspect a sample of trajectories to confirm executable fidelity. Models trained on FineVision consistently outperform those trained on existing open mixtures across a broad evaluation suite, underscoring the benefits of scale, data hygiene, and balanced automation with human oversight. We release the corpus and curation tools to accelerate data-centric VLM research.",
+        "tags": [
+            "VLM"
+        ]
+    },
+    {
+        "id": 6,
+        "title": "Towards Mixed-Modal Retrieval for Universal Retrieval-Augmented Generation",
+        "author": [
+            "Chenghao Zhang",
+            "Guanting Dong",
+            "Xinyu Yang",
+            "Zhicheng Dou"
+        ],
+        "pdf": "https://arxiv.org/pdf/2510.17354",
+        "abstract": "Retrieval-Augmented Generation (RAG) has emerged as a powerful paradigm for enhancing large language models (LLMs) by retrieving relevant documents from an external corpus. However, existing RAG systems primarily focus on unimodal text documents, and often fall short in real-world scenarios where both queries and documents may contain mixed modalities (such as text and images). In this paper, we address the challenge of Universal Retrieval-Augmented Generation (URAG), which involves retrieving and reasoning over mixed-modal information to improve vision-language generation. To this end, we propose Nyx, a unified mixed-modal to mixed-modal retriever tailored for URAG scenarios. To mitigate the scarcity of realistic mixed-modal data, we introduce a four-stage automated pipeline for generation and filtering, leveraging web documents to construct NyxQA, a dataset comprising diverse mixed-modal question-answer pairs that better reflect real-world information needs. Building on this high-quality dataset, we adopt a two-stage training framework for Nyx: we first perform pre-training on NyxQA along with a variety of open-source retrieval datasets, followed by supervised fine-tuning using feedback from downstream vision-language models (VLMs) to align retrieval outputs with generative preferences. Experimental results demonstrate that Nyx not only performs competitively on standard text-only RAG benchmarks, but also excels in the more general and realistic URAG setting, significantly improving generation quality in vision-language tasks.",
+        "tags": [
+            "LLM",
+            "RAG",
+            "VLM"
+        ]
+    },
+    {
+        "id": 7,
+        "title": "When to Ensemble: Identifying Token-Level Points for Stable and Fast LLM Ensembling",
+        "author": [
+            "Heecheol Yun",
+            "Kwangmin Ki",
+            "Junghyun Lee",
+            "Eunho Yang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2510.15346",
+        "abstract": "Ensembling Large Language Models (LLMs) has gained attention as a promising approach to surpass the performance of individual models by leveraging their complementary strengths. In particular, aggregating models' next-token probability distributions to select the next token has been shown to be effective in various tasks. However, while successful for short-form answers, its application to long-form generation remains underexplored. In this paper, we show that using existing ensemble methods in long-form generation requires a careful choice of ensembling positions, since the standard practice of ensembling at every token often degrades performance. We identify two key factors for determining these positions: tokenization mismatch across models and consensus in their next-token probability distributions. Based on this, we propose SAFE, (Stable And Fast LLM Ensembling), a framework that selectively ensembles by jointly considering these factors. To further improve stability, we introduce a probability sharpening strategy that consolidates probabilities spread across multiple sub-word tokens representing the same word into a single representative token. Our experiments on diverse benchmarks, including MATH500 and BBH, demonstrate that SAFE outperforms existing methods in both accuracy and efficiency, with gains achieved even when ensembling fewer than 1% of tokens.",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 8,
+        "title": "QueST: Incentivizing LLMs to Generate Difficult Problems",
+        "author": [
+            "Hanxu Hu",
+            "Xingxing Zhang",
+            "Jannis Vamvas",
+            "Rico Sennrich",
+            "Furu Wei"
+        ],
+        "pdf": "https://arxiv.org/pdf/2510.17715",
+        "abstract": "Large Language Models have achieved strong performance on reasoning tasks, solving competition-level coding and math problems. However, their scalability is limited by human-labeled datasets and the lack of large-scale, challenging coding problem training data. Existing competitive coding datasets contain only thousands to tens of thousands of problems. Previous synthetic data generation methods rely on either augmenting existing instruction datasets or selecting challenging problems from human-labeled data. In this paper, we propose QueST, a novel framework which combines difficulty-aware graph sampling and difficulty-aware rejection fine-tuning that directly optimizes specialized generators to create challenging coding problems. Our trained generators demonstrate superior capability compared to even GPT-4o at creating challenging problems that benefit downstream performance. We leverage QueST to generate large-scale synthetic coding problems, which we then use to distill from strong teacher models with long chain-of-thought or to conduct reinforcement learning for smaller models, proving effective in both scenarios. Our distillation experiments demonstrate significant performance gains. Specifically, after fine-tuning Qwen3-8B-base on 100K difficult problems generated by QueST, we surpass the performance of the original Qwen3-8B on LiveCodeBench. With an additional 112K examples (i.e., 28K human-written problems paired with multiple synthetic solutions), our 8B model matches the performance of the much larger DeepSeek-R1-671B. These findings indicate that generating complex problems via QueST offers an effective and scalable approach to advancing the frontiers of competitive coding and reasoning for large language models.",
+        "tags": [
+            "CoT",
+            "DeepSeek",
+            "GPT",
+            "LLM",
+            "RL"
+        ]
+    },
+    {
+        "id": 9,
+        "title": "Visual Autoregressive Models Beat Diffusion Models on Inference Time Scaling",
+        "author": [
+            "Erik Riise",
+            "Mehmet Onurcan Kaya",
+            "Dim P. Papadopoulos"
+        ],
+        "pdf": "https://arxiv.org/pdf/2510.16751",
+        "abstract": "While inference-time scaling through search has revolutionized Large Language Models, translating these gains to image generation has proven difficult. Recent attempts to apply search strategies to continuous diffusion models show limited benefits, with simple random sampling often performing best. We demonstrate that the discrete, sequential nature of visual autoregressive models enables effective search for image generation. We show that beam search substantially improves text-to-image generation, enabling a 2B parameter autoregressive model to outperform a 12B parameter diffusion model across benchmarks. Systematic ablations show that this advantage comes from the discrete token space, which allows early pruning and computational reuse, and our verifier analysis highlights trade-offs between speed and reasoning capability. These findings suggest that model architecture, not just scale, is critical for inference-time optimization in visual generation.",
+        "tags": [
+            "Diffusion",
+            "LLM",
+            "Text-to-Image"
+        ]
+    },
+    {
+        "id": 10,
+        "title": "RL makes MLLMs see better than SFT",
+        "author": [
+            "Junha Song",
+            "Sangdoo Yun",
+            "Dongyoon Han",
+            "Jaegul Choo",
+            "Byeongho Heo"
+        ],
+        "pdf": "https://arxiv.org/pdf/2510.16333",
+        "abstract": "A dominant assumption in Multimodal Language Model (MLLM) research is that its performance is largely inherited from the LLM backbone, given its immense parameter scale and remarkable capabilities. This has created a void in the understanding of the vision encoder, which determines how MLLMs perceive images. The recent shift in MLLM training paradigms, from Supervised Finetuning (SFT) to Reinforcement Learning (RL), magnifies this oversight-namely, the significant lack of analysis on how such training reshapes the vision encoder as well as the MLLM. To address this, we first investigate the impact of training strategies on MLLMs, where RL shows a clear advantage over SFT in strongly vision-related VQA benchmarks. Motivated by this, we conduct a critical yet under-explored analysis of the vision encoder of MLLMs through diverse and in-depth experiments, ranging from ImageNet classification and segmentation to gradient visualization. Our results demonstrate that MLLM's post-training strategy (i.e., SFT or RL) not only leads to distinct outcomes on MLLM downstream tasks, but also fundamentally reshapes MLLM's underlying visual representations. Specifically, the key finding of our study is that RL produces stronger and precisely localized visual representations compared to SFT, boosting the ability of the vision encoder for MLLM. We then reframe our findings into a simple recipe for building strong vision encoders for MLLMs, Preference-Instructed Vision OpTimization (PIVOT). When integrated into MLLMs, a PIVOT-trained vision encoder outperforms even larger and more heavily-trained counterparts, despite requiring less than 1% of the computational cost of standard vision pretraining. This result opens an effective and efficient path for advancing the vision backbones of MLLMs. Project page available at https://june-page.github.io/pivot/",
+        "tags": [
+            "LLM",
+            "RL",
+            "Segmentation"
+        ]
+    },
+    {
+        "id": 11,
+        "title": "Annotation-Efficient Universal Honesty Alignment",
+        "author": [
+            "Shiyu Ni",
+            "Keping Bi",
+            "Jiafeng Guo",
+            "Minghao Tang",
+            "Jingtong Wu",
+            "Zengxin Han",
+            "Xueqi Cheng"
+        ],
+        "pdf": "https://arxiv.org/pdf/2510.17509",
+        "abstract": "Honesty alignment-the ability of large language models (LLMs) to recognize their knowledge boundaries and express calibrated confidence-is essential for trustworthy deployment. Existing methods either rely on training-free confidence estimation (e.g., token probabilities, self-consistency) or training-based calibration with correctness annotations. While effective, achieving universal honesty alignment with training-based calibration requires costly, large-scale labeling. To support annotation-efficient training, we introduce Elicitation-Then-Calibration (EliCal), a two-stage framework that first elicits internal confidence using inexpensive self-consistency supervision, then calibrates this confidence with a small set of correctness annotations. To support a large-scale study, we release HonestyBench, a benchmark covering ten free-form QA datasets with 560k training and 70k evaluation instances annotated with correctness and self-consistency signals. Experiments show that EliCal achieves near-optimal alignment with only 1k correctness annotations (0.18% of full supervision) and better alignment performance on unseen MMLU tasks than the calibration-only baseline, offering a scalable solution toward universal honesty alignment in LLMs.",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 12,
+        "title": "Uniworld-V2: Reinforce Image Editing with Diffusion Negative-aware Finetuning and MLLM Implicit Feedback",
+        "author": [
+            "Zongjian Li",
+            "Zheyuan Liu",
+            "Qihui Zhang",
+            "Bin Lin",
+            "Shenghai Yuan",
+            "Zhiyuan Yan",
+            "Yang Ye",
+            "Wangbo Yu",
+            "Yuwei Niu",
+            "Li Yuan"
+        ],
+        "pdf": "https://arxiv.org/pdf/2510.16888",
+        "abstract": "Instruction-based image editing has achieved remarkable progress; however, models solely trained via supervised fine-tuning often overfit to annotated patterns, hindering their ability to explore and generalize beyond training distributions. To this end, we introduce Edit-R1, a novel post-training framework for instruction-based image editing based on policy optimization. Specifically, we utilize Diffusion Negative-aware Finetuning (DiffusionNFT), a likelihood-free policy optimization method consistent with the flow matching forward process, thereby enabling the use of higher-order samplers and more efficient training. Another key challenge here is the absence of a universal reward model, resulting from the diverse nature of editing instructions and tasks. To bridge this gap, we employ a Multimodal Large Language Model (MLLM) as a unified, training-free reward model, leveraging its output logits to provide fine-grained feedback. Furthermore, we carefully design a low-variance group filtering mechanism to reduce MLLM scoring noise and stabilize optimization. UniWorld-V2, trained with this framework, achieves \\textbf{state-of-the-art} results on the ImgEdit and GEdit-Bench benchmarks, scoring 4.49 and 7.83, respectively. Crucially, our framework is model-agnostic, delivering substantial performance gains when applied to diverse base models like Qwen-Image-Edit and FLUX-Kontext, demonstrating its wide applicability. Code and models are publicly available at https://github.com/PKU-YuanGroup/UniWorld-V2.",
+        "tags": [
+            "Diffusion",
+            "FLUX",
+            "Flow Matching",
+            "Image Editing",
+            "Qwen"
+        ]
+    },
+    {
+        "id": 13,
+        "title": "ConsistEdit: Highly Consistent and Precise Training-free Visual Editing",
+        "author": [
+            "Zixin Yin",
+            "Ling-Hao Chen",
+            "Lionel Ni",
+            "Xili Dai"
+        ],
+        "pdf": "https://arxiv.org/pdf/2510.17803",
+        "abstract": "Recent advances in training-free attention control methods have enabled flexible and efficient text-guided editing capabilities for existing generation models. However, current approaches struggle to simultaneously deliver strong editing strength while preserving consistency with the source. This limitation becomes particularly critical in multi-round and video editing, where visual errors can accumulate over time. Moreover, most existing methods enforce global consistency, which limits their ability to modify individual attributes such as texture while preserving others, thereby hindering fine-grained editing. Recently, the architectural shift from U-Net to MM-DiT has brought significant improvements in generative performance and introduced a novel mechanism for integrating text and vision modalities. These advancements pave the way for overcoming challenges that previous methods failed to resolve. Through an in-depth analysis of MM-DiT, we identify three key insights into its attention mechanisms. Building on these, we propose ConsistEdit, a novel attention control method specifically tailored for MM-DiT. ConsistEdit incorporates vision-only attention control, mask-guided pre-attention fusion, and differentiated manipulation of the query, key, and value tokens to produce consistent, prompt-aligned edits. Extensive experiments demonstrate that ConsistEdit achieves state-of-the-art performance across a wide range of image and video editing tasks, including both structure-consistent and structure-inconsistent scenarios. Unlike prior methods, it is the first approach to perform editing across all inference steps and attention layers without handcraft, significantly enhancing reliability and consistency, which enables robust multi-round and multi-region editing. Furthermore, it supports progressive adjustment of structural consistency, enabling finer control.",
+        "tags": [
+            "DiT",
+            "Video Editing"
+        ]
+    },
+    {
+        "id": 14,
+        "title": "Executable Knowledge Graphs for Replicating AI Research",
+        "author": [
+            "Yujie Luo",
+            "Zhuoyun Yu",
+            "Xuehai Wang",
+            "Yuqi Zhu",
+            "Ningyu Zhang",
+            "Lanning Wei",
+            "Lun Du",
+            "Da Zheng",
+            "Huajun Chen"
+        ],
+        "pdf": "https://arxiv.org/pdf/2510.17795",
+        "abstract": "Replicating AI research is a crucial yet challenging task for large language model (LLM) agents. Existing approaches often struggle to generate executable code, primarily due to insufficient background knowledge and the limitations of retrieval-augmented generation (RAG) methods, which fail to capture latent technical details hidden in referenced papers. Furthermore, previous approaches tend to overlook valuable implementation-level code signals and lack structured knowledge representations that support multi-granular retrieval and reuse. To overcome these challenges, we propose Executable Knowledge Graphs (xKG), a modular and pluggable knowledge base that automatically integrates technical insights, code snippets, and domain-specific knowledge extracted from scientific literature. When integrated into three agent frameworks with two different LLMs, xKG shows substantial performance gains (10.9% with o3-mini) on PaperBench, demonstrating its effectiveness as a general and extensible solution for automated AI research replication. Code will released at https://github.com/zjunlp/xKG.",
+        "tags": [
+            "LLM",
+            "RAG"
+        ]
+    },
+    {
+        "id": 15,
+        "title": "Deep Self-Evolving Reasoning",
+        "author": [
+            "Zihan Liu",
+            "Shun Zheng",
+            "Xumeng Wen",
+            "Yang Wang",
+            "Jiang Bian",
+            "Mao Yang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2510.17498",
+        "abstract": "Long-form chain-of-thought reasoning has become a cornerstone of advanced reasoning in large language models. While recent verification-refinement frameworks have enabled proprietary models to solve Olympiad-level problems, their effectiveness hinges on strong, reliable verification and correction capabilities, which remain fragile in open-weight, smaller-scale models. This work demonstrates that even with weak verification and refinement capabilities on hard tasks, the reasoning limits of such models can be substantially extended through a probabilistic paradigm we call Deep Self-Evolving Reasoning (DSER). We conceptualize iterative reasoning as a Markov chain, where each step represents a stochastic transition in the solution space. The key insight is that convergence to a correct solution is guaranteed as long as the probability of improvement marginally exceeds that of degradation. By running multiple long-horizon, self-evolving processes in parallel, DSER amplifies these small positive tendencies, enabling the model to asymptotically approach correct answers. Empirically, we apply DSER to the DeepSeek-R1-0528-Qwen3-8B model. On the challenging AIME 2024-2025 benchmark, DSER solves 5 out of 9 previously unsolvable problems and boosts overall performance, enabling this compact model to surpass the single-turn accuracy of its 600B-parameter teacher through majority voting. Beyond its immediate utility for test-time scaling, the DSER framework serves to diagnose the fundamental limitations of current open-weight reasoners. By clearly delineating their shortcomings in self-verification, refinement, and stability, our findings establish a clear research agenda for developing next-generation models with powerful, intrinsic self-evolving capabilities.",
+        "tags": [
+            "CoT",
+            "DeepSeek",
+            "LLM"
+        ]
+    },
+    {
+        "id": 16,
+        "title": "Chronos-2: From Univariate to Universal Forecasting",
+        "author": [
+            "Abdul Fatir Ansari",
+            "Oleksandr Shchur",
+            "Jaris KÃ¼ken",
+            "Andreas Auer",
+            "Boran Han",
+            "Pedro Mercado",
+            "Syama Sundar Rangapuram",
+            "Huibin Shen",
+            "Lorenzo Stella",
+            "Xiyuan Zhang",
+            "Mononito Goswami",
+            "Shubham Kapoor",
+            "Danielle C. Maddix",
+            "Pablo Guerron",
+            "Tony Hu",
+            "Junming Yin",
+            "Nick Erickson",
+            "Prateek Mutalik Desai",
+            "Hao Wang",
+            "Huzefa Rangwala",
+            "George Karypis",
+            "Yuyang Wang",
+            "Michael Bohlke-Schneider"
+        ],
+        "pdf": "https://arxiv.org/pdf/2510.15821",
+        "abstract": "Pretrained time series models have enabled inference-only forecasting systems that produce accurate predictions without task-specific training. However, existing approaches largely focus on univariate forecasting, limiting their applicability in real-world scenarios where multivariate data and covariates play a crucial role. We present Chronos-2, a pretrained model capable of handling univariate, multivariate, and covariate-informed forecasting tasks in a zero-shot manner. Chronos-2 employs a group attention mechanism that facilitates in-context learning (ICL) through efficient information sharing across multiple time series within a group, which may represent sets of related series, variates of a multivariate series, or targets and covariates in a forecasting task. These general capabilities are achieved through training on synthetic datasets that impose diverse multivariate structures on univariate series. Chronos-2 delivers state-of-the-art performance across three comprehensive benchmarks: fev-bench, GIFT-Eval, and Chronos Benchmark II. On fev-bench, which emphasizes multivariate and covariate-informed forecasting, Chronos-2's universal ICL capabilities lead to substantial improvements over existing models. On tasks involving covariates, it consistently outperforms baselines by a wide margin. Case studies in the energy and retail domains further highlight its practical advantages. The in-context learning capabilities of Chronos-2 establish it as a general-purpose forecasting model that can be used \"as is\" in real-world forecasting pipelines.",
+        "tags": []
+    },
+    {
+        "id": 17,
+        "title": "Beyond Pipelines: A Survey of the Paradigm Shift toward Model-Native Agentic AI",
+        "author": [
+            "Jitao Sang",
+            "Jinlin Xiao",
+            "Jiarun Han",
+            "Jilin Chen",
+            "Xiaoyi Chen",
+            "Shuyu Wei",
+            "Yongjie Sun",
+            "Yuhang Wang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2510.16720",
+        "abstract": "The rapid evolution of agentic AI marks a new phase in artificial intelligence, where Large Language Models (LLMs) no longer merely respond but act, reason, and adapt. This survey traces the paradigm shift in building agentic AI: from Pipeline-based systems, where planning, tool use, and memory are orchestrated by external logic, to the emerging Model-native paradigm, where these capabilities are internalized within the model's parameters. We first position Reinforcement Learning (RL) as the algorithmic engine enabling this paradigm shift. By reframing learning from imitating static data to outcome-driven exploration, RL underpins a unified solution of LLM + RL + Task across language, vision and embodied domains. Building on this, the survey systematically reviews how each capability -- Planning, Tool use, and Memory -- has evolved from externally scripted modules to end-to-end learned behaviors. Furthermore, it examines how this paradigm shift has reshaped major agent applications, specifically the Deep Research agent emphasizing long-horizon reasoning and the GUI agent emphasizing embodied interaction. We conclude by discussing the continued internalization of agentic capabilities like Multi-agent collaboration and Reflection, alongside the evolving roles of the system and model layers in future agentic AI. Together, these developments outline a coherent trajectory toward model-native agentic AI as an integrated learning and interaction framework, marking the transition from constructing systems that apply intelligence to developing models that grow intelligence through experience.",
+        "tags": [
+            "LLM",
+            "RL"
+        ]
+    },
+    {
+        "id": 18,
+        "title": "Constantly Improving Image Models Need Constantly Improving Benchmarks",
+        "author": [
+            "Jiaxin Ge",
+            "Grace Luo",
+            "Heekyung Lee",
+            "Nishant Malpani",
+            "Long Lian",
+            "XuDong Wang",
+            "Aleksander Holynski",
+            "Trevor Darrell",
+            "Sewon Min",
+            "David M. Chan"
+        ],
+        "pdf": "https://arxiv.org/pdf/2510.15021",
+        "abstract": "Recent advances in image generation, often driven by proprietary systems like GPT-4o Image Gen, regularly introduce new capabilities that reshape how users interact with these models. Existing benchmarks often lag behind and fail to capture these emerging use cases, leaving a gap between community perceptions of progress and formal evaluation. To address this, we present ECHO, a framework for constructing benchmarks directly from real-world evidence of model use: social media posts that showcase novel prompts and qualitative user judgments. Applying this framework to GPT-4o Image Gen, we construct a dataset of over 31,000 prompts curated from such posts. Our analysis shows that ECHO (1) discovers creative and complex tasks absent from existing benchmarks, such as re-rendering product labels across languages or generating receipts with specified totals, (2) more clearly distinguishes state-of-the-art models from alternatives, and (3) surfaces community feedback that we use to inform the design of metrics for model quality (e.g., measuring observed shifts in color, identity, and structure). Our website is at https://echo-bench.github.io.",
+        "tags": [
+            "GPT"
+        ]
+    },
+    {
+        "id": 19,
+        "title": "Enterprise Deep Research: Steerable Multi-Agent Deep Research for Enterprise Analytics",
+        "author": [
+            "Akshara Prabhakar",
+            "Roshan Ram",
+            "Zixiang Chen",
+            "Silvio Savarese",
+            "Frank Wang",
+            "Caiming Xiong",
+            "Huan Wang",
+            "Weiran Yao"
+        ],
+        "pdf": "https://arxiv.org/pdf/2510.17797",
+        "abstract": "As information grows exponentially, enterprises face increasing pressure to transform unstructured data into coherent, actionable insights. While autonomous agents show promise, they often struggle with domain-specific nuances, intent alignment, and enterprise integration. We present Enterprise Deep Research (EDR), a multi-agent system that integrates (1) a Master Planning Agent for adaptive query decomposition, (2) four specialized search agents (General, Academic, GitHub, LinkedIn), (3) an extensible MCP-based tool ecosystem supporting NL2SQL, file analysis, and enterprise workflows, (4) a Visualization Agent for data-driven insights, and (5) a reflection mechanism that detects knowledge gaps and updates research direction with optional human-in-the-loop steering guidance. These components enable automated report generation, real-time streaming, and seamless enterprise deployment, as validated on internal datasets. On open-ended benchmarks including DeepResearch Bench and DeepConsult, EDR outperforms state-of-the-art agentic systems without any human steering. We release the EDR framework and benchmark trajectories to advance research on multi-agent reasoning applications.\nCode at https://github.com/SalesforceAIResearch/enterprise-deep-research and Dataset at https://huggingface.co/datasets/Salesforce/EDR-200",
+        "tags": []
+    },
+    {
+        "id": 20,
+        "title": "UltraCUA: A Foundation Model for Computer Use Agents with Hybrid Action",
+        "author": [
+            "Yuhao Yang",
+            "Zhen Yang",
+            "Zi-Yi Dou",
+            "Anh Nguyen",
+            "Keen You",
+            "Omar Attia",
+            "Andrew Szot",
+            "Michael Feng",
+            "Ram Ramrakhya",
+            "Alexander Toshev",
+            "Chao Huang",
+            "Yinfei Yang",
+            "Zhe Gan"
+        ],
+        "pdf": "https://arxiv.org/pdf/2510.17790",
+        "abstract": "Multimodal agents for computer use rely exclusively on primitive actions (click, type, scroll) that require accurate visual grounding and lengthy execution chains, leading to cascading failures and performance bottlenecks. While other agents leverage rich programmatic interfaces (APIs, MCP servers, tools), computer-use agents (CUAs) remain isolated from these capabilities. We present UltraCUA, a foundation model that bridges this gap through hybrid action -- seamlessly integrating GUI primitives with high-level programmatic tool calls. To achieve this, our approach comprises four key components: (1) an automated pipeline that scales programmatic tools from software documentation, open-source repositories, and code generation; (2) a synthetic data engine producing over 17,000 verifiable tasks spanning real-world computer-use scenarios; (3) a large-scale high-quality hybrid action trajectory collection with both low-level GUI actions and high-level programmatic tool calls; and (4) a two-stage training pipeline combining supervised fine-tuning with online reinforcement learning, enabling strategic alternation between low-level and high-level actions. Experiments with our 7B and 32B models demonstrate substantial improvements over state-of-the-art agents. On OSWorld, UltraCUA models achieve an average 22% relative improvement over base models, while being 11% faster in terms of steps. Out-of-domain evaluation on WindowsAgentArena shows our model reaches 21.7% success rate, outperforming baselines trained on Windows data. The hybrid action mechanism proves critical, reducing error propagation while maintaining execution efficiency.",
+        "tags": [
+            "RL"
+        ]
+    },
+    {
+        "id": 21,
+        "title": "Agentic Reinforcement Learning for Search is Unsafe",
+        "author": [
+            "Yushi Yang",
+            "Shreyansh Padarha",
+            "Andrew Lee",
+            "Adam Mahdi"
+        ],
+        "pdf": "https://arxiv.org/pdf/2510.17431",
+        "abstract": "Agentic reinforcement learning (RL) trains large language models to autonomously call tools during reasoning, with search as the most common application. These models excel at multi-step reasoning tasks, but their safety properties are not well understood. In this study, we show that RL-trained search models inherit refusal from instruction tuning and often deflect harmful requests by turning them into safe queries. However, this safety is fragile. Two simple attacks, one that forces the model to begin response with search (Search attack), another that encourages models to repeatedly search (Multi-search attack), trigger cascades of harmful searches and answers. Across two model families (Qwen, Llama) with both local and web search, these attacks lower refusal rates by up to 60.0%, answer safety by 82.5%, and search-query safety by 82.4%. The attacks succeed by triggering models to generate harmful, request-mirroring search queries before they can generate the inherited refusal tokens. This exposes a core weakness of current RL training: it rewards continued generation of effective queries without accounting for their harmfulness. As a result, RL search models have vulnerabilities that users can easily exploit, making it urgent to develop safety-aware agentic RL pipelines optimising for safe search.",
+        "tags": [
+            "LLM",
+            "LLaMA",
+            "Qwen",
+            "RL"
+        ]
+    },
+    {
+        "id": 22,
+        "title": "MultiVerse: A Multi-Turn Conversation Benchmark for Evaluating Large Vision and Language Models",
+        "author": [
+            "Young-Jun Lee",
+            "Byung-Kwan Lee",
+            "Jianshu Zhang",
+            "Yechan Hwang",
+            "Byungsoo Ko",
+            "Han-Gyu Kim",
+            "Dongyu Yao",
+            "Xuankun Rong",
+            "Eojin Joo",
+            "Seung-Ho Han",
+            "Bowon Ko",
+            "Ho-Jin Choi"
+        ],
+        "pdf": "https://arxiv.org/pdf/2510.16641",
+        "abstract": "Vision-and-Language Models (VLMs) have shown impressive capabilities on single-turn benchmarks, yet real-world applications often demand more intricate multi-turn dialogues. Existing multi-turn datasets (e.g, MMDU, ConvBench) only partially capture the breadth and depth of conversational scenarios encountered by users. In this work, we introduce MultiVerse, a novel multi-turn conversation benchmark featuring 647 dialogues - each averaging four turns - derived from a diverse set of 12 popular VLM evaluation benchmarks. With 484 tasks and 484 interaction goals, MultiVerse covers a wide range of topics, from factual knowledge and perception to advanced reasoning tasks such as mathematics and coding. To facilitate robust assessment, we propose a checklist-based evaluation method that leverages GPT-4o as the automated evaluator, measuring performance across 37 key aspects, including perceptual accuracy, linguistic clarity, and factual correctness. We evaluate 18 VLMs on MultiVerse, revealing that even the strongest models (e.g., GPT-4o) achieve only a 50% success rate in complex multi-turn conversations, highlighting the dataset's challenging nature. Notably, we find that providing full dialogue context significantly enhances performance for smaller or weaker models, emphasizing the importance of in-context learning. We believe MultiVerse is a landscape of evaluating multi-turn interaction abilities for VLMs.",
+        "tags": [
+            "GPT",
+            "VLM"
+        ]
+    },
+    {
+        "id": 23,
+        "title": "Distractor Injection Attacks on Large Reasoning Models: Characterization and Defense",
+        "author": [
+            "Zhehao Zhang",
+            "Weijie Xu",
+            "Shixian Cui",
+            "Chandan K. Reddy"
+        ],
+        "pdf": "https://arxiv.org/pdf/2510.16259",
+        "abstract": "Recent advances in large reasoning models (LRMs) have enabled remarkable performance on complex tasks such as mathematics and coding by generating long Chain-of-Thought (CoT) traces. In this paper, we identify and systematically analyze a critical vulnerability we term reasoning distraction, where LRMs are diverted from their primary objective by irrelevant yet complex tasks maliciously embedded in the prompt. Through a comprehensive study across diverse models and benchmarks, we show that even state-of-the-art LRMs are highly susceptible, with injected distractors reducing task accuracy by up to 60%. We further reveal that certain alignment techniques can amplify this weakness and that models may exhibit covert compliance, following hidden adversarial instructions in reasoning while concealing them in the final output. To mitigate these risks, we propose a training-based defense that combines Supervised Fine-Tuning (SFT) and Reinforcement Learning (RL) on synthetic adversarial data, improving robustness by over 50 points on challenging distractor attacks. Our findings establish reasoning distraction as a distinct and urgent threat to LRM reliability and provide a practical step toward safer and more trustworthy reasoning systems.",
+        "tags": [
+            "CoT",
+            "RL"
+        ]
+    },
+    {
+        "id": 24,
+        "title": "Embody 3D: A Large-scale Multimodal Motion and Behavior Dataset",
+        "author": [
+            "Claire McLean",
+            "Makenzie Meendering",
+            "Tristan Swartz",
+            "Orri Gabbay",
+            "Alexandra Olsen",
+            "Rachel Jacobs",
+            "Nicholas Rosen",
+            "Philippe de Bree",
+            "Tony Garcia",
+            "Gadsden Merrill",
+            "Jake Sandakly",
+            "Julia Buffalini",
+            "Neham Jain",
+            "Steven Krenn",
+            "Moneish Kumar",
+            "Dejan Markovic",
+            "Evonne Ng",
+            "Fabian Prada",
+            "Andrew Saba",
+            "Siwei Zhang",
+            "Vasu Agrawal",
+            "Tim Godisart",
+            "Alexander Richard",
+            "Michael Zollhoefer"
+        ],
+        "pdf": "https://arxiv.org/pdf/2510.16258",
+        "abstract": "The Codec Avatars Lab at Meta introduces Embody 3D, a multimodal dataset of 500 individual hours of 3D motion data from 439 participants collected in a multi-camera collection stage, amounting to over 54 million frames of tracked 3D motion. The dataset features a wide range of single-person motion data, including prompted motions, hand gestures, and locomotion; as well as multi-person behavioral and conversational data like discussions, conversations in different emotional states, collaborative activities, and co-living scenarios in an apartment-like space. We provide tracked human motion including hand tracking and body shape, text annotations, and a separate audio track for each participant.",
+        "tags": [
+            "3D"
+        ]
+    },
+    {
+        "id": 25,
+        "title": "Knowledge-based Visual Question Answer with Multimodal Processing, Retrieval and Filtering",
+        "author": [
+            "Yuyang Hong",
+            "Jiaqi Gu",
+            "Qi Yang",
+            "Lubin Fan",
+            "Yue Wu",
+            "Ying Wang",
+            "Kun Ding",
+            "Shiming Xiang",
+            "Jieping Ye"
+        ],
+        "pdf": "https://arxiv.org/pdf/2510.14605",
+        "abstract": "Knowledge-based visual question answering (KB-VQA) requires visual language models (VLMs) to integrate visual understanding with external knowledge retrieval. Although retrieval-augmented generation (RAG) achieves significant advances in this task by combining knowledge-base querying, it still struggles with the quality of multimodal queries and the relevance of retrieved results. To overcome these challenges, we propose a novel three-stage method, termed Wiki-PRF, including Processing, Retrieval and Filtering stages. The processing stage dynamically invokes visual tools to extract precise multimodal information for retrieval. The retrieval stage integrates visual and text features to achieve multimodal knowledge retrieval. The filtering stage performs relevance filtering and concentration on retrieval results. To this end, we introduce a visual language model trained with answer accuracy and format consistency as reward signals via a reinforcement learning manner. This enhances the model's reasoning, tool invocation for accurate queries, and filtering of irrelevant content. Experiments on benchmark datasets (E-VQA and InfoSeek) show significant improvements~(36.0 and 42.8) in answer quality, achieving state-of-the-art performance. Code is available at https://github.com/cqu-student/Wiki-PRF",
+        "tags": [
+            "RAG",
+            "RL",
+            "VLM"
+        ]
+    },
+    {
+        "id": 26,
+        "title": "Foundational Automatic Evaluators: Scaling Multi-Task Generative Evaluator Training for Reasoning-Centric Domains",
+        "author": [
+            "Austin Xu",
+            "Xuan-Phi Nguyen",
+            "Yilun Zhou",
+            "Chien-Sheng Wu",
+            "Caiming Xiong",
+            "Shafiq Joty"
+        ],
+        "pdf": "https://arxiv.org/pdf/2510.17793",
+        "abstract": "Finetuning specialized generative evaluators has emerged as a popular paradigm to meet the increasing demand for scalable evaluation during both training and test-time. However, recent work has largely focused on applying new methodology, such as reinforcement learning (RL), to training evaluators, shying away from large-scale, data-driven development. In this work, we focus on data scaling, curating a set of 2.5M samples spanning five unique evaluation tasks (pairwise, step-level, reference-free and reference-based verification, and single rating) and multiple domains focused on reasoning evaluation. With our data, we train Foundational Automatic Reasoning Evaluators (FARE), a family of 8B and 20B (with 3.6B active) parameter evaluators, with a simple iterative rejection-sampling supervised finetuning (SFT) approach. FARE-8B challenges larger specialized RL-trained evaluators and FARE-20B sets the new standard for open-source evaluators, surpassing specialized 70B+ evaluators. Beyond static benchmarks, we evaluate FARE in real-world tasks: As inference-time rerankers, FARE-20B achieves near-oracle performance on MATH. As verifiers in RL training, FARE improves the downstream RL-trained model performance by up to 14.1% vs. string-matching verifiers. When initialized from FARE, a continually-finetuned FARE-Code outperforms gpt-oss-20B by 65% on evaluating test-case quality.",
+        "tags": [
+            "GPT",
+            "RL"
+        ]
+    },
+    {
+        "id": 27,
+        "title": "Automated Composition of Agents: A Knapsack Approach for Agentic Component Selection",
+        "author": [
+            "Michelle Yuan",
+            "Khushbu Pahwa",
+            "Shuaichen Chang",
+            "Mustafa Kaba",
+            "Jiarong Jiang",
+            "Xiaofei Ma",
+            "Yi Zhang",
+            "Monica Sunkara"
+        ],
+        "pdf": "https://arxiv.org/pdf/2510.16499",
+        "abstract": "Designing effective agentic systems requires the seamless composition and integration of agents, tools, and models within dynamic and uncertain environments. Most existing methods rely on static, semantic retrieval approaches for tool or agent discovery. However, effective reuse and composition of existing components remain challenging due to incomplete capability descriptions and the limitations of retrieval methods. Component selection suffers because the decisions are not based on capability, cost, and real-time utility. To address these challenges, we introduce a structured, automated framework for agentic system composition that is inspired by the knapsack problem. Our framework enables a composer agent to systematically identify, select, and assemble an optimal set of agentic components by jointly considering performance, budget constraints, and compatibility. By dynamically testing candidate components and modeling their utility in real-time, our approach streamlines the assembly of agentic systems and facilitates scalable reuse of resources. Empirical evaluation with Claude 3.5 Sonnet across five benchmarking datasets shows that our online-knapsack-based composer consistently lies on the Pareto frontier, achieving higher success rates at significantly lower component costs compared to our baselines. In the single-agent setup, the online knapsack composer shows a success rate improvement of up to 31.6% in comparison to the retrieval baselines. In multi-agent systems, the online knapsack composer increases success rate from 37% to 87% when agents are selected from an agent inventory of 100+ agents. The substantial performance gap confirms the robust adaptability of our method across diverse domains and budget constraints.",
+        "tags": []
+    },
+    {
+        "id": 28,
+        "title": "What Limits Agentic Systems Efficiency?",
+        "author": [
+            "Song Bian",
+            "Minghao Yan",
+            "Anand Jayarajan",
+            "Gennady Pekhimenko",
+            "Shivaram Venkataraman"
+        ],
+        "pdf": "https://arxiv.org/pdf/2510.16276",
+        "abstract": "Large Language Models (LLMs), such as OpenAI-o1 and DeepSeek-R1, have demonstrated strong reasoning capabilities. To further enhance LLM capabilities, recent agentic systems, such as Deep Research, incorporate web interactions into LLM reasoning to mitigate uncertainties and reduce potential errors. However, existing research predominantly focuses on reasoning performance, often neglecting the efficiency of agentic systems. In this work, we present a comprehensive empirical study that identifies efficiency bottlenecks in web-interactive agentic systems. We decompose end-to-end latency into two primary components: LLM API latency and web environment latency. We conduct a comprehensive empirical study across 15 models and 5 providers to demonstrate high variability in API-based agentic systems. We observe that web environment latency can contribute as much as 53.7% to the overall latency in a web-based agentic system. To improve latency, we propose SpecCache, a caching framework augmented with speculative execution that can reduce web environment overhead. Extensive evaluations on two standard benchmarks show that our approach improves the cache hit rate by up to 58x compared to a random caching strategy, while reducing web environment overhead by up to 3.2x, without degrading agentic system performance.",
+        "tags": [
+            "DeepSeek",
+            "LLM"
+        ]
+    },
+    {
+        "id": 29,
+        "title": "Balanced Multi-Task Attention for Satellite Image Classification: A Systematic Approach to Achieving 97.23% Accuracy on EuroSAT Without Pre-Training",
+        "author": [
+            "Aditya Vir"
+        ],
+        "pdf": "https://arxiv.org/pdf/2510.15527",
+        "abstract": "This work presents a systematic investigation of custom convolutional neural network architectures for satellite land use classification, achieving 97.23% test accuracy on the EuroSAT dataset without reliance on pre-trained models. Through three progressive architectural iterations (baseline: 94.30%, CBAM-enhanced: 95.98%, and balanced multi-task attention: 97.23%) we identify and address specific failure modes in satellite imagery classification. Our principal contribution is a novel balanced multi-task attention mechanism that combines Coordinate Attention for spatial feature extraction with Squeeze-Excitation blocks for spectral feature extraction, unified through a learnable fusion parameter. Experimental results demonstrate that this learnable parameter autonomously converges to alpha approximately 0.57, indicating near-equal importance of spatial and spectral modalities for satellite imagery. We employ progressive DropBlock regularization (5-20% by network depth) and class-balanced loss weighting to address overfitting and confusion pattern imbalance. The final 12-layer architecture achieves Cohen's Kappa of 0.9692 with all classes exceeding 94.46% accuracy, demonstrating confidence calibration with a 24.25% gap between correct and incorrect predictions. Our approach achieves performance within 1.34% of fine-tuned ResNet-50 (98.57%) while requiring no external data, validating the efficacy of systematic architectural design for domain-specific applications. Complete code, trained models, and evaluation scripts are publicly available.",
+        "tags": []
+    },
+    {
+        "id": 30,
+        "title": "Beacon: Single-Turn Diagnosis and Mitigation of Latent Sycophancy in Large Language Models",
+        "author": [
+            "Sanskar Pandey",
+            "Ruhaan Chopra",
+            "Angkul Puniya",
+            "Sohom Pal"
+        ],
+        "pdf": "https://arxiv.org/pdf/2510.16727",
+        "abstract": "Large language models internalize a structural trade-off between truthfulness and obsequious flattery, emerging from reward optimization that conflates helpfulness with polite submission. This latent bias, known as sycophancy, manifests as a preference for user agreement over principled reasoning. We introduce Beacon, a single-turn forced-choice benchmark that isolates this bias independent of conversational context, enabling precise measurement of the tension between factual accuracy and submissive bias. Evaluations across twelve state-of-the-art models reveal that sycophancy decomposes into stable linguistic and affective sub-biases, each scaling with model capacity. We further propose prompt-level and activation-level interventions that modulate these biases in opposing directions, exposing the internal geometry of alignment as a dynamic manifold between truthfulness and socially compliant judgment. Beacon reframes sycophancy as a measurable form of normative misgeneralization, providing a reproducible foundation for studying and mitigating alignment drift in large-scale generative systems.",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 31,
+        "title": "AsyncVoice Agent: Real-Time Explanation for LLM Planning and Reasoning",
+        "author": [
+            "Yueqian Lin",
+            "Zhengmian Hu",
+            "Jayakumar Subramanian",
+            "Qinsi Wang",
+            "Nikos Vlassis",
+            "Hai \"Helen\" Li",
+            "Yiran Chen"
+        ],
+        "pdf": "https://arxiv.org/pdf/2510.16156",
+        "abstract": "Effective human-AI collaboration on complex reasoning tasks requires that users understand and interact with the model's process, not just receive an output. However, the monolithic text from methods like Chain-of-Thought (CoT) prevents this, as current interfaces lack real-time verbalization and robust user barge-in. We present AsyncVoice Agent, a system whose asynchronous architecture decouples a streaming LLM backend from a conversational voice frontend. This design allows narration and inference to run in parallel, empowering users to interrupt, query, and steer the model's reasoning process at any time. Objective benchmarks show this approach reduces interaction latency by more than 600x compared to monolithic baselines while ensuring high fidelity and competitive task accuracy. By enabling a two-way dialogue with a model's thought process, AsyncVoice Agent offers a new paradigm for building more effective, steerable, and trustworthy human-AI systems for high-stakes tasks.",
+        "tags": [
+            "CoT",
+            "LLM"
+        ]
+    },
+    {
+        "id": 32,
+        "title": "On Non-interactive Evaluation of Animal Communication Translators",
+        "author": [
+            "Orr Paradise",
+            "David F. Gruber",
+            "Adam Tauman Kalai"
+        ],
+        "pdf": "https://arxiv.org/pdf/2510.15768",
+        "abstract": "If you had an AI Whale-to-English translator, how could you validate whether or not it is working? Does one need to interact with the animals or rely on grounded observations such as temperature? We provide theoretical and proof-of-concept experimental evidence suggesting that interaction and even observations may not be necessary for sufficiently complex languages. One may be able to evaluate translators solely by their English outputs, offering potential advantages in terms of safety, ethics, and cost. This is an instance of machine translation quality evaluation (MTQE) without any reference translations available. A key challenge is identifying ``hallucinations,'' false translations which may appear fluent and plausible. We propose using segment-by-segment translation together with the classic NLP shuffle test to evaluate translators. The idea is to translate animal communication, turn by turn, and evaluate how often the resulting translations make more sense in order than permuted. Proof-of-concept experiments on data-scarce human languages and constructed languages demonstrate the potential utility of this evaluation methodology. These human-language experiments serve solely to validate our reference-free metric under data scarcity. It is found to correlate highly with a standard evaluation based on reference translations, which are available in our experiments. We also perform a theoretical analysis suggesting that interaction may not be necessary nor efficient in the early stages of learning to translate.",
+        "tags": []
+    },
+    {
+        "id": 33,
+        "title": "GuideFlow3D: Optimization-Guided Rectified Flow For Appearance Transfer",
+        "author": [
+            "Sayan Deb Sarkar",
+            "Sinisa Stekovic",
+            "Vincent Lepetit",
+            "Iro Armeni"
+        ],
+        "pdf": "https://arxiv.org/pdf/2510.16136",
+        "abstract": "Transferring appearance to 3D assets using different representations of the appearance object - such as images or text - has garnered interest due to its wide range of applications in industries like gaming, augmented reality, and digital content creation. However, state-of-the-art methods still fail when the geometry between the input and appearance objects is significantly different. A straightforward approach is to directly apply a 3D generative model, but we show that this ultimately fails to produce appealing results. Instead, we propose a principled approach inspired by universal guidance. Given a pretrained rectified flow model conditioned on image or text, our training-free method interacts with the sampling process by periodically adding guidance. This guidance can be modeled as a differentiable loss function, and we experiment with two different types of guidance including part-aware losses for appearance and self-similarity. Our experiments show that our approach successfully transfers texture and geometric details to the input 3D asset, outperforming baselines both qualitatively and quantitatively. We also show that traditional metrics are not suitable for evaluating the task due to their inability of focusing on local details and comparing dissimilar inputs, in absence of ground truth data. We thus evaluate appearance transfer quality with a GPT-based system objectively ranking outputs, ensuring robust and human-like assessment, as further confirmed by our user study. Beyond showcased scenarios, our method is general and could be extended to different types of diffusion models and guidance functions.",
+        "tags": [
+            "3D",
+            "Diffusion",
+            "GPT",
+            "Rectified Flow"
+        ]
+    },
+    {
+        "id": 34,
+        "title": "Test-Time Scaling of Reasoning Models for Machine Translation",
+        "author": [
+            "Zihao Li",
+            "Shaoxiong Ji",
+            "JÃ¶rg Tiedemann"
+        ],
+        "pdf": "https://arxiv.org/pdf/2510.06471",
+        "abstract": "Test-time scaling (TTS) has enhanced the performance of Reasoning Models (RMs) on various tasks such as math and coding, yet its efficacy in machine translation (MT) remains underexplored. This paper investigates whether increased inference-time computation improves translation quality. We evaluate 12 RMs across a diverse suite of MT benchmarks spanning multiple domains, examining three scenarios: direct translation, forced-reasoning extrapolation, and post-editing. Our findings show that for general-purpose RMs, TTS provides limited and inconsistent benefits for direct translation, with performance quickly plateauing. However, the effectiveness of TTS is unlocked by domain-specific fine-tuning, which aligns a model's reasoning process with task requirements, leading to consistent improvements up to an optimal, self-determined reasoning depth. We also find that forcing a model to reason beyond its natural stopping point consistently degrades translation quality. In contrast, TTS proves highly effective in a post-editing context, reliably turning self-correction into a beneficial process. These results indicate that the value of inference-time computation in MT lies not in enhancing single-pass translation with general models, but in targeted applications like multi-step, self-correction workflows and in conjunction with task-specialized models.",
+        "tags": []
+    }
+]
