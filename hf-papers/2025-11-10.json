@@ -1,0 +1,189 @@
+[
+    {
+        "id": 1,
+        "title": "Too Good to be Bad: On the Failure of LLMs to Role-Play Villains",
+        "author": [
+            "Zihao Yi",
+            "Qingxuan Jiang",
+            "Ruotian Ma",
+            "Xingyu Chen",
+            "Qu Yang",
+            "Mengru Wang",
+            "Fanghua Ye",
+            "Ying Shen",
+            "Zhaopeng Tu",
+            "Xiaolong Li",
+            "Linus"
+        ],
+        "pdf": "https://arxiv.org/pdf/2511.04962",
+        "abstract": "Large Language Models (LLMs) are increasingly tasked with creative generation, including the simulation of fictional characters. However, their ability to portray non-prosocial, antagonistic personas remains largely unexamined. We hypothesize that the safety alignment of modern LLMs creates a fundamental conflict with the task of authentically role-playing morally ambiguous or villainous characters. To investigate this, we introduce the Moral RolePlay benchmark, a new dataset featuring a four-level moral alignment scale and a balanced test set for rigorous evaluation. We task state-of-the-art LLMs with role-playing characters from moral paragons to pure villains. Our large-scale evaluation reveals a consistent, monotonic decline in role-playing fidelity as character morality decreases. We find that models struggle most with traits directly antithetical to safety principles, such as ``Deceitful'' and ``Manipulative'', often substituting nuanced malevolence with superficial aggression. Furthermore, we demonstrate that general chatbot proficiency is a poor predictor of villain role-playing ability, with highly safety-aligned models performing particularly poorly. Our work provides the first systematic evidence of this critical limitation, highlighting a key tension between model safety and creative fidelity. Our benchmark and findings pave the way for developing more nuanced, context-aware alignment methods.",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 2,
+        "title": "DeepEyesV2: Toward Agentic Multimodal Model",
+        "author": [
+            "Jack Hong",
+            "Chenxiao Zhao",
+            "ChengLin Zhu",
+            "Weiheng Lu",
+            "Guohai Xu",
+            "Xing Yu"
+        ],
+        "pdf": "https://arxiv.org/pdf/2511.05271",
+        "abstract": "Agentic multimodal models should not only comprehend text and images, but also actively invoke external tools, such as code execution environments and web search, and integrate these operations into reasoning. In this work, we introduce DeepEyesV2 and explore how to build an agentic multimodal model from the perspectives of data construction, training methods, and model evaluation. We observe that direct reinforcement learning alone fails to induce robust tool-use behavior. This phenomenon motivates a two-stage training pipeline: a cold-start stage to establish tool-use patterns, and reinforcement learning stage to further refine tool invocation. We curate a diverse, moderately challenging training dataset, specifically including examples where tool use is beneficial. We further introduce RealX-Bench, a comprehensive benchmark designed to evaluate real-world multimodal reasoning, which inherently requires the integration of multiple capabilities, including perception, search, and reasoning. We evaluate DeepEyesV2 on RealX-Bench and other representative benchmarks, demonstrating its effectiveness across real-world understanding, mathematical reasoning, and search-intensive tasks. Moreover, DeepEyesV2 exhibits task-adaptive tool invocation, tending to use image operations for perception tasks and numerical computations for reasoning tasks. Reinforcement learning further enables complex tool combinations and allows model to selectively invoke tools based on context. We hope our study can provide guidance for community in developing agentic multimodal models.",
+        "tags": [
+            "RL"
+        ]
+    },
+    {
+        "id": 3,
+        "title": "Visual Spatial Tuning",
+        "author": [
+            "Rui Yang",
+            "Ziyu Zhu",
+            "Yanwei Li",
+            "Jingjia Huang",
+            "Shen Yan",
+            "Siyuan Zhou",
+            "Zhe Liu",
+            "Xiangtai Li",
+            "Shuangye Li",
+            "Wenqian Wang",
+            "Yi Lin",
+            "Hengshuang Zhao"
+        ],
+        "pdf": "https://arxiv.org/pdf/2511.05491",
+        "abstract": "Capturing spatial relationships from visual inputs is a cornerstone of human-like general intelligence. Several previous studies have tried to enhance the spatial awareness of Vision-Language Models (VLMs) by adding extra expert encoders, which brings extra overhead and usually harms general capabilities. To enhance the spatial ability in general architectures, we introduce Visual Spatial Tuning (VST), a comprehensive framework to cultivate VLMs with human-like visuospatial abilities, from spatial perception to reasoning. We first attempt to enhance spatial perception in VLMs by constructing a large-scale dataset termed VST-P, which comprises 4.1 million samples spanning 19 skills across single views, multiple images, and videos. Then, we present VST-R, a curated dataset with 135K samples that instruct models to reason in space. In particular, we adopt a progressive training pipeline: supervised fine-tuning to build foundational spatial knowledge, followed by reinforcement learning to further improve spatial reasoning abilities. Without the side-effect to general capabilities, the proposed VST consistently achieves state-of-the-art results on several spatial benchmarks, including $34.8\\%$ on MMSI-Bench and $61.2\\%$ on VSIBench. It turns out that the Vision-Language-Action models can be significantly enhanced with the proposed spatial tuning paradigm, paving the way for more physically grounded AI.",
+        "tags": [
+            "RL",
+            "VLM"
+        ]
+    },
+    {
+        "id": 4,
+        "title": "VeriCoT: Neuro-symbolic Chain-of-Thought Validation via Logical Consistency Checks",
+        "author": [
+            "Yu Feng",
+            "Nathaniel Weir",
+            "Kaj Bostrom",
+            "Sam Bayless",
+            "Darion Cassel",
+            "Sapana Chaudhary",
+            "Benjamin Kiesl-Reiter",
+            "Huzefa Rangwala"
+        ],
+        "pdf": "https://arxiv.org/pdf/2511.04662",
+        "abstract": "LLMs can perform multi-step reasoning through Chain-of-Thought (CoT), but they cannot reliably verify their own logic. Even when they reach correct answers, the underlying reasoning may be flawed, undermining trust in high-stakes scenarios. To mitigate this issue, we introduce VeriCoT, a neuro-symbolic method that extracts and verifies formal logical arguments from CoT reasoning. VeriCoT formalizes each CoT reasoning step into first-order logic and identifies premises that ground the argument in source context, commonsense knowledge, or prior reasoning steps. The symbolic representation enables automated solvers to verify logical validity while the NL premises allow humans and systems to identify ungrounded or fallacious reasoning steps. Experiments on the ProofWriter, LegalBench, and BioASQ datasets show VeriCoT effectively identifies flawed reasoning, and serves as a strong predictor of final answer correctness. We also leverage VeriCoT's verification signal for (1) inference-time self-reflection, (2) supervised fine-tuning (SFT) on VeriCoT-distilled datasets and (3) preference fine-tuning (PFT) with direct preference optimization (DPO) using verification-based pairwise rewards, further improving reasoning validity and accuracy.",
+        "tags": [
+            "CoT",
+            "DPO",
+            "LLM"
+        ]
+    },
+    {
+        "id": 5,
+        "title": "Dense Motion Captioning",
+        "author": [
+            "Shiyao Xu",
+            "Benedetta Liberatori",
+            "GÃ¼l Varol",
+            "Paolo Rota"
+        ],
+        "pdf": "https://arxiv.org/pdf/2511.05369",
+        "abstract": "Recent advances in 3D human motion and language integration have primarily focused on text-to-motion generation, leaving the task of motion understanding relatively unexplored. We introduce Dense Motion Captioning, a novel task that aims to temporally localize and caption actions within 3D human motion sequences. Current datasets fall short in providing detailed temporal annotations and predominantly consist of short sequences featuring few actions. To overcome these limitations, we present the Complex Motion Dataset (CompMo), the first large-scale dataset featuring richly annotated, complex motion sequences with precise temporal boundaries. Built through a carefully designed data generation pipeline, CompMo includes 60,000 motion sequences, each composed of multiple actions ranging from at least two to ten, accurately annotated with their temporal extents. We further present DEMO, a model that integrates a large language model with a simple motion adapter, trained to generate dense, temporally grounded captions. Our experiments show that DEMO substantially outperforms existing methods on CompMo as well as on adapted benchmarks, establishing a robust baseline for future research in 3D motion understanding and captioning.",
+        "tags": [
+            "3D"
+        ]
+    },
+    {
+        "id": 6,
+        "title": "Towards Mitigating Hallucinations in Large Vision-Language Models by Refining Textual Embeddings",
+        "author": [
+            "Aakriti Agrawal",
+            "Gouthaman KV",
+            "Rohith Aralikatti",
+            "Gauri Jagatap",
+            "Jiaxin Yuan",
+            "Vijay Kamarshi",
+            "Andrea Fanelli",
+            "Furong Huang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2511.05017",
+        "abstract": "In this work, we identify an inherent bias in prevailing LVLM architectures toward the language modality, largely resulting from the common practice of simply appending visual embeddings to the input text sequence. To address this, we propose a simple yet effective method that refines textual embeddings by integrating average-pooled visual features. Our approach demonstrably improves visual grounding and significantly reduces hallucinations on established benchmarks. While average pooling offers a straightforward, robust, and efficient means of incorporating visual information, we believe that more sophisticated fusion methods could further enhance visual grounding and cross-modal alignment. Given that the primary focus of this work is to highlight the modality imbalance and its impact on hallucinations -- and to show that refining textual embeddings with visual information mitigates this issue -- we leave exploration of advanced fusion strategies for future work.",
+        "tags": [
+            "VLM"
+        ]
+    },
+    {
+        "id": 7,
+        "title": "Real-Time Reasoning Agents in Evolving Environments",
+        "author": [
+            "Yule Wen",
+            "Yixin Ye",
+            "Yanzhe Zhang",
+            "Diyi Yang",
+            "Hao Zhu"
+        ],
+        "pdf": "https://arxiv.org/pdf/2511.04898",
+        "abstract": "Agents in the real world must make not only logical but also timely judgments. This requires continuous awareness of the dynamic environment: hazards emerge, opportunities arise, and other agents act, while the agent's reasoning is still unfolding. Despite advances in language model reasoning, existing approaches fail to account for this dynamic nature. We introduce real-time reasoning as a new problem formulation for agents in evolving environments and build Real-Time Reasoning Gym to demonstrate it. We study two paradigms for deploying language models in agents: (1) reactive agents, which employ language models with bounded reasoning computation for rapid responses, and (2) planning agents, which allow extended reasoning computation for complex problems. Our experiments show that even state-of-the-art models struggle with making logical and timely judgments in either paradigm. To address this limitation, we propose AgileThinker, which simultaneously engages both reasoning paradigms. AgileThinker consistently outperforms agents engaging only one reasoning paradigm as the task difficulty and time pressure rise, effectively balancing reasoning depth and response latency. Our work establishes real-time reasoning as a critical testbed for developing practical agents and provides a foundation for research in temporally constrained AI systems, highlighting a path toward real-time capable agents.",
+        "tags": []
+    },
+    {
+        "id": 8,
+        "title": "Jailbreaking in the Haystack",
+        "author": [
+            "Rishi Rajesh Shah",
+            "Chen Henry Wu",
+            "Shashwat Saxena",
+            "Ziqian Zhong",
+            "Alexander Robey",
+            "Aditi Raghunathan"
+        ],
+        "pdf": "https://arxiv.org/pdf/2511.04707",
+        "abstract": "Recent advances in long-context language models (LMs) have enabled million-token inputs, expanding their capabilities across complex tasks like computer-use agents. Yet, the safety implications of these extended contexts remain unclear. To bridge this gap, we introduce NINJA (short for Needle-in-haystack jailbreak attack), a method that jailbreaks aligned LMs by appending benign, model-generated content to harmful user goals. Critical to our method is the observation that the position of harmful goals play an important role in safety. Experiments on standard safety benchmark, HarmBench, show that NINJA significantly increases attack success rates across state-of-the-art open and proprietary models, including LLaMA, Qwen, Mistral, and Gemini. Unlike prior jailbreaking methods, our approach is low-resource, transferable, and less detectable. Moreover, we show that NINJA is compute-optimal -- under a fixed compute budget, increasing context length can outperform increasing the number of trials in best-of-N jailbreak. These findings reveal that even benign long contexts -- when crafted with careful goal positioning -- introduce fundamental vulnerabilities in modern LMs.",
+        "tags": [
+            "LLaMA",
+            "Qwen"
+        ]
+    },
+    {
+        "id": 9,
+        "title": "HAFixAgent: History-Aware Automated Program Repair Agent",
+        "author": [
+            "Yu Shi",
+            "Hao Li",
+            "Bram Adams",
+            "Ahmed E. Hassan"
+        ],
+        "pdf": "https://arxiv.org/pdf/2511.01047",
+        "abstract": "Automated program repair (APR) has recently shifted toward large language models and agent-based systems, yet most systems rely on local snapshot context, overlooking repository history. Prior work shows that repository history helps repair single-line bugs, since the last commit touching the buggy line is often the bug-introducing one. In this paper, we investigate whether repository history can also improve agentic APR systems at scale, especially for complex multi-hunk bugs. We present HAFixAgent, a History-Aware Bug-Fixing Agent that injects blame-derived repository heuristics into its repair loop. A preliminary study of all 854 real-world bugs from Defects4J motivates our design, showing that bug-relevant history is both widely available and highly concentrated. Empirical comparison of HAFixAgent with two state-of-the-art baselines shows: (1) Effectiveness: HAFixAgent significantly improves over the agent-based baseline (by 212.3%) and the multi-hunk baseline (by 29.9%). (2) Efficiency: history does not significantly increase agent steps and keeps token costs comparable, with notably lower median costs for complex multi-file-multi-hunk bugs. (3) Practicality: combining different historical heuristics repairs more bugs, offering a clear cost-benefit trade-off. HAFixAgent offers a practical recipe for history-aware agentic APR: ground the agent in version control history, prioritize diff-based historical context, and integrate complementary heuristics when needed.",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 10,
+        "title": "CritiCal: Can Critique Help LLM Uncertainty or Confidence Calibration?",
+        "author": [
+            "Qing Zong",
+            "Jiayu Liu",
+            "Tianshi Zheng",
+            "Chunyang Li",
+            "Baixuan Xu",
+            "Haochen Shi",
+            "Weiqi Wang",
+            "Zhaowei Wang",
+            "Chunkit Chan",
+            "Yangqiu Song"
+        ],
+        "pdf": "https://arxiv.org/pdf/2510.24505",
+        "abstract": "Accurate confidence calibration in Large Language Models (LLMs) is critical for safe use in high-stakes domains, where clear verbalized confidence enhances user trust. Traditional methods that mimic reference confidence expressions often fail to capture the reasoning needed for accurate confidence assessment. We propose natural language critiques as a solution, ideally suited for confidence calibration, as precise gold confidence labels are hard to obtain and often require multiple generations. This paper studies how natural language critiques can enhance verbalized confidence, addressing: (1) What to critique: uncertainty (question-focused) or confidence (answer-specific)? Analysis shows confidence suits multiple-choice tasks, while uncertainty excels in open-ended scenarios. (2) How to critique: self-critique or critique calibration training? We propose Self-Critique, enabling LLMs to critique and optimize their confidence beyond mere accuracy, and CritiCal, a novel Critique Calibration training method that leverages natural language critiques to improve confidence calibration, moving beyond direct numerical optimization. Experiments show that CritiCal significantly outperforms Self-Critique and other competitive baselines, even surpassing its teacher model, GPT-4o, in complex reasoning tasks. CritiCal also shows robust generalization in out-of-distribution settings, advancing LLM's reliability.",
+        "tags": [
+            "GPT",
+            "LLM"
+        ]
+    }
+]
