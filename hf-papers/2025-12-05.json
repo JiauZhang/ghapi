@@ -1,0 +1,861 @@
+[
+    {
+        "id": 1,
+        "title": "Live Avatar: Streaming Real-time Audio-Driven Avatar Generation with Infinite Length",
+        "author": [
+            "Yubo Huang",
+            "Hailong Guo",
+            "Fangtai Wu",
+            "Shifeng Zhang",
+            "Shijie Huang",
+            "Qijun Gan",
+            "Lin Liu",
+            "Sirui Zhao",
+            "Enhong Chen",
+            "Jiaming Liu",
+            "Steven Hoi"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.04677",
+        "abstract": "Existing diffusion-based video generation methods are fundamentally constrained by sequential computation and long-horizon inconsistency, limiting their practical adoption in real-time, streaming audio-driven avatar synthesis. We present Live Avatar, an algorithm-system co-designed framework that enables efficient, high-fidelity, and infinite-length avatar generation using a 14-billion-parameter diffusion model. Our approach introduces Timestep-forcing Pipeline Parallelism (TPP), a distributed inference paradigm that pipelines denoising steps across multiple GPUs, effectively breaking the autoregressive bottleneck and ensuring stable, low-latency real-time streaming. To further enhance temporal consistency and mitigate identity drift and color artifacts, we propose the Rolling Sink Frame Mechanism (RSFM), which maintains sequence fidelity by dynamically recalibrating appearance using a cached reference image. Additionally, we leverage Self-Forcing Distribution Matching Distillation to facilitate causal, streamable adaptation of large-scale models without sacrificing visual quality. Live Avatar demonstrates state-of-the-art performance, reaching 20 FPS end-to-end generation on 5 H800 GPUs, and, to the best of our knowledge, is the first to achieve practical, real-time, high-fidelity avatar generation at this scale. Our work establishes a new paradigm for deploying advanced diffusion models in industrial long-form video synthesis applications.",
+        "tags": [
+            "Diffusion",
+            "Video Generation"
+        ]
+    },
+    {
+        "id": 2,
+        "title": "DAComp: Benchmarking Data Agents across the Full Data Intelligence Lifecycle",
+        "author": [
+            "Fangyu Lei",
+            "Jinxiang Meng",
+            "Yiming Huang",
+            "Junjie Zhao",
+            "Yitong Zhang",
+            "Jianwen Luo",
+            "Xin Zou",
+            "Ruiyi Yang",
+            "Wenbo Shi",
+            "Yan Gao",
+            "Shizhu He",
+            "Zuo Wang",
+            "Qian Liu",
+            "Yang Wang",
+            "Ke Wang",
+            "Jun Zhao",
+            "Kang Liu"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.04324",
+        "abstract": "Real-world enterprise data intelligence workflows encompass data engineering that turns raw sources into analytical-ready tables and data analysis that convert those tables into decision-oriented insights. We introduce DAComp, a benchmark of 210 tasks that mirrors these complex workflows. Data engineering (DE) tasks require repository-level engineering on industrial schemas, including designing and building multi-stage SQL pipelines from scratch and evolving existing systems under evolving requirements. Data analysis (DA) tasks pose open-ended business problems that demand strategic planning, exploratory analysis through iterative coding, interpretation of intermediate results, and the synthesis of actionable recommendations. Engineering tasks are scored through execution-based, multi-metric evaluation. Open-ended tasks are assessed by a reliable, experimentally validated LLM-judge, which is guided by hierarchical, meticulously crafted rubrics. Our experiments reveal that even state-of-the-art agents falter on DAComp. Performance on DE tasks is particularly low, with success rates under 20%, exposing a critical bottleneck in holistic pipeline orchestration, not merely code generation. Scores on DA tasks also average below 40%, highlighting profound deficiencies in open-ended reasoning and demonstrating that engineering and analysis are distinct capabilities. By clearly diagnosing these limitations, DAComp provides a rigorous and realistic testbed to drive the development of truly capable autonomous data agents for enterprise settings. Our data and code are available at https://da-comp.github.io",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 3,
+        "title": "Nex-N1: Agentic Models Trained via a Unified Ecosystem for Large-Scale Environment Construction",
+        "author": [
+            "Nex-AGI Team",
+            "Yuxuan Cai",
+            "Lu Chen",
+            "Qiaoling Chen",
+            "Yuyang Ding",
+            "Liwen Fan",
+            "Wenjie Fu",
+            "Yufei Gao",
+            "Honglin Guo",
+            "Pinxue Guo",
+            "Zhenhua Han",
+            "Zhengfu He",
+            "Hanglei Hu",
+            "Kai Hu",
+            "Shengjia Hua",
+            "Tianyu Huai",
+            "Baodai Huang",
+            "Li Ji",
+            "Zhen Jiang",
+            "Zhikai Lei",
+            "Bufan Li",
+            "Jiahang Lin",
+            "Lizhi Lin",
+            "Jinxiu Liu",
+            "Shichun Liu",
+            "Ziming Liu",
+            "Yuchen Ni",
+            "Pengfang Qian",
+            "Yujiong Shen",
+            "Qingyun Shi",
+            "Wentao Shu",
+            "Peng Sun",
+            "Yiran Suo",
+            "Tian Tang",
+            "Boyu Tian",
+            "Guoteng Wang",
+            "Junzhe Wang",
+            "Peixin Wang",
+            "Zhiheng Xi",
+            "Hang Yan",
+            "Jie Yang",
+            "Zhixiong Yang",
+            "Tianchu Yao",
+            "Guangze Ye",
+            "Qianxi Yu",
+            "Shuo Zhang",
+            "Xinyue Zhang",
+            "Yiqi Zhang",
+            "Jiarong Zhao",
+            "Miao Zheng",
+            "Rui Zheng",
+            "Enyu Zhou",
+            "Jiazheng Zhou",
+            "Maosen Zhou",
+            "Yuhao Zhou",
+            "Tao Gui",
+            "Yining Zheng",
+            "Xinchi Chen",
+            "Jie Zhou",
+            "Siyuan Feng",
+            "Qin Chen",
+            "Liang He",
+            "Qi Zhang",
+            "Xuanjing Huang",
+            "Xipeng Qiu"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.04987",
+        "abstract": "The evolution of Large Language Models (LLMs) from passive responders to autonomous agents necessitates a fundamental shift in learning paradigms -- from static imitation to incentive-driven decision making. However, this transition is significantly impeded by the lack of scalable infrastructure capable of constructing high-quality interaction signals for effective policy learning. To address this, we introduce a comprehensive method designed to systematically scale the diversity and complexity of interactive environments. Our method realizes this scaling by addressing three orthogonal dimensions: (1) Complexity: NexAU, a flexible agent framework that supports building complex agent hierarchies via simple configurations; (2) Diversity: NexA4A automatically generates diverse agent hierarchies from natural language to cover infinite domains; and (3) Fidelity: NexGAP bridges the simulation-reality gap by integrating dynamic real-world environment for grounded trajectories synthesis. We train Nex-N1 upon the diverse and complex interactive environments established by our infrastructure. Empirical results on benchmarks such as SWE-bench and tau2 demonstrate that Nex-N1 consistently outperforms SOTA open-source models and achieves competitive performance against frontier proprietary models on complex agentic tasks. We open-source the Nex ecosystem and model weights to facilitate further research.",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 4,
+        "title": "ARM-Thinker: Reinforcing Multimodal Generative Reward Models with Agentic Tool Use and Visual Reasoning",
+        "author": [
+            "Shengyuan Ding",
+            "Xinyu Fang",
+            "Ziyu Liu",
+            "Yuhang Zang",
+            "Yuhang Cao",
+            "Xiangyu Zhao",
+            "Haodong Duan",
+            "Xiaoyi Dong",
+            "Jianze Liang",
+            "Bin Wang",
+            "Conghui He",
+            "Dahua Lin",
+            "Jiaqi Wang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.05111",
+        "abstract": "Reward models are critical for aligning vision-language systems with human preferences, yet current approaches suffer from hallucination, weak visual grounding, and an inability to use tools for verification, limiting their reliability on complex multimodal reasoning tasks. We present ARM-Thinker, an A}gentic multimodal Reward Model that autonomously invokes external tools (e.g., image cropping, doc page retrieval) to ground judgments in verifiable evidence, replacing static, non-interactive reward scoring. This enables the model to verify fine-grained visual details, cross-reference multi-page evidence, and validate reasoning claims, which are capabilities absent in existing reward models. We train ARM-Thinker with multi-stage reinforcement learning, jointly optimizing tool-calling decisions and judgment accuracy. To evaluate agentic reward modeling, we introduce ARMBench-VL, comprising three benchmarks that assess fine-grained visual grounding (image-level tools), multi-page document understanding (retrieval tools), and instruction following (text-level verification). ARM-Thinker achieves +16.2% average improvement on reward modeling benchmarks, +9.6% on tool-use tasks, and outperforms baselines on multimodal math and logical reasoning benchmarks. Our results demonstrate that agentic capabilities significantly enhance both accuracy and interpretability of reward models.",
+        "tags": [
+            "RL"
+        ]
+    },
+    {
+        "id": 5,
+        "title": "Reward Forcing: Efficient Streaming Video Generation with Rewarded Distribution Matching Distillation",
+        "author": [
+            "Yunhong Lu",
+            "Yanhong Zeng",
+            "Haobo Li",
+            "Hao Ouyang",
+            "Qiuyu Wang",
+            "Ka Leong Cheng",
+            "Jiapeng Zhu",
+            "Hengyuan Cao",
+            "Zhipeng Zhang",
+            "Xing Zhu",
+            "Yujun Shen",
+            "Min Zhang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.04678",
+        "abstract": "Efficient streaming video generation is critical for simulating interactive and dynamic worlds. Existing methods distill few-step video diffusion models with sliding window attention, using initial frames as sink tokens to maintain attention performance and reduce error accumulation. However, video frames become overly dependent on these static tokens, resulting in copied initial frames and diminished motion dynamics. To address this, we introduce Reward Forcing, a novel framework with two key designs. First, we propose EMA-Sink, which maintains fixed-size tokens initialized from initial frames and continuously updated by fusing evicted tokens via exponential moving average as they exit the sliding window. Without additional computation cost, EMA-Sink tokens capture both long-term context and recent dynamics, preventing initial frame copying while maintaining long-horizon consistency. Second, to better distill motion dynamics from teacher models, we propose a novel Rewarded Distribution Matching Distillation (Re-DMD). Vanilla distribution matching treats every training sample equally, limiting the model's ability to prioritize dynamic content. Instead, Re-DMD biases the model's output distribution toward high-reward regions by prioritizing samples with greater dynamics rated by a vision-language model. Re-DMD significantly enhances motion quality while preserving data fidelity. We include both quantitative and qualitative experiments to show that Reward Forcing achieves state-of-the-art performance on standard benchmarks while enabling high-quality streaming video generation at 23.1 FPS on a single H100 GPU.",
+        "tags": [
+            "Diffusion",
+            "Video Generation"
+        ]
+    },
+    {
+        "id": 6,
+        "title": "Semantics Lead the Way: Harmonizing Semantic and Texture Modeling with Asynchronous Latent Diffusion",
+        "author": [
+            "Yueming Pan",
+            "Ruoyu Feng",
+            "Qi Dai",
+            "Yuqi Wang",
+            "Wenfeng Lin",
+            "Mingyu Guo",
+            "Chong Luo",
+            "Nanning Zheng"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.04926",
+        "abstract": "Latent Diffusion Models (LDMs) inherently follow a coarse-to-fine generation process, where high-level semantic structure is generated slightly earlier than fine-grained texture. This indicates the preceding semantics potentially benefit texture generation by providing a semantic anchor. Recent advances have integrated semantic priors from pretrained visual encoders to further enhance LDMs, yet they still denoise semantic and VAE-encoded texture synchronously, neglecting such ordering. Observing these, we propose Semantic-First Diffusion (SFD), a latent diffusion paradigm that explicitly prioritizes semantic formation. SFD first constructs composite latents by combining a compact semantic latent, which is extracted from a pretrained visual encoder via a dedicated Semantic VAE, with the texture latent. The core of SFD is to denoise the semantic and texture latents asynchronously using separate noise schedules: semantics precede textures by a temporal offset, providing clearer high-level guidance for texture refinement and enabling natural coarse-to-fine generation. On ImageNet 256x256 with guidance, SFD achieves FID 1.06 (LightningDiT-XL) and FID 1.04 (1.0B LightningDiT-XXL), while achieving up to 100x faster convergence than the original DiT. SFD also improves existing methods like ReDi and VA-VAE, demonstrating the effectiveness of asynchronous, semantics-led modeling. Project page and code: https://yuemingpan.github.io/SFD.github.io/.",
+        "tags": [
+            "DiT",
+            "Diffusion",
+            "LDMs",
+            "VAE"
+        ]
+    },
+    {
+        "id": 7,
+        "title": "PaperDebugger: A Plugin-Based Multi-Agent System for In-Editor Academic Writing, Review, and Editing",
+        "author": [
+            "Junyi Hou",
+            "Andre Lin Huikai",
+            "Nuo Chen",
+            "Yiwei Gong",
+            "Bingsheng He"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.02589",
+        "abstract": "Large language models are increasingly embedded into academic writing workflows, yet existing assistants remain external to the editor, preventing deep interaction with document state, structure, and revision history. This separation makes it impossible to support agentic, context-aware operations directly within LaTeX editors such as Overleaf. We present PaperDebugger, an in-editor, multi-agent, and plugin-based academic writing assistant that brings LLM-driven reasoning directly into the writing environment. Enabling such in-editor interaction is technically non-trivial: it requires reliable bidirectional synchronization with the editor, fine-grained version control and patching, secure state management, multi-agent scheduling, and extensible communication with external tools. PaperDebugger addresses these challenges through a Chrome-approved extension, a Kubernetes-native orchestration layer, and a Model Context Protocol (MCP) toolchain that integrates literature search, reference lookup, document scoring, and revision pipelines. Our demo showcases a fully integrated workflow, including localized edits, structured reviews, parallel agent execution, and diff-based updates, encapsulated within a minimal-intrusion user interface (UI). Early aggregated analytics demonstrate active user engagement and validate the practicality of an editor-native, agentic writing assistant. More details about this demo and video could be found at https://github.com/PaperDebugger/PaperDebugger.",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 8,
+        "title": "4DLangVGGT: 4D Language-Visual Geometry Grounded Transformer",
+        "author": [
+            "Xianfeng Wu",
+            "Yajing Bai",
+            "Minghan Li",
+            "Xianzu Wu",
+            "Xueqi Zhao",
+            "Zhongyuan Lai",
+            "Wenyu Liu",
+            "Xinggang Wang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.05060",
+        "abstract": "Constructing 4D language fields is crucial for embodied AI, augmented/virtual reality, and 4D scene understanding, as they provide enriched semantic representations of dynamic environments and enable open-vocabulary querying in complex scenarios. However, existing approaches to 4D semantic field construction primarily rely on scene-specific Gaussian splatting, which requires per-scene optimization, exhibits limited generalization, and is difficult to scale to real-world applications. To address these limitations, we propose 4DLangVGGT, the first Transformer-based feed-forward unified framework for 4D language grounding, that jointly integrates geometric perception and language alignment within a single architecture. 4DLangVGGT has two key components: the 4D Visual Geometry Transformer, StreamVGGT, which captures spatio-temporal geometric representations of dynamic scenes; and the Semantic Bridging Decoder (SBD), which projects geometry-aware features into a language-aligned semantic space, thereby enhancing semantic interpretability while preserving structural fidelity. Unlike prior methods that depend on costly per-scene optimization, 4DLangVGGT can be jointly trained across multiple dynamic scenes and directly applied during inference, achieving both deployment efficiency and strong generalization. This design significantly improves the practicality of large-scale deployment and establishes a new paradigm for open-vocabulary 4D scene understanding. Experiments on HyperNeRF and Neu3D datasets demonstrate that our approach not only generalizes effectively but also achieves state-of-the-art performance, achieving up to 2% gains under per-scene training and 1% improvements under multi-scene training. Our code released in https://github.com/hustvl/4DLangVGGT",
+        "tags": [
+            "Gaussian Splatting",
+            "Transformer"
+        ]
+    },
+    {
+        "id": 9,
+        "title": "DynamicVerse: A Physically-Aware Multimodal Framework for 4D World Modeling",
+        "author": [
+            "Kairun Wen",
+            "Yuzhi Huang",
+            "Runyu Chen",
+            "Hui Zheng",
+            "Yunlong Lin",
+            "Panwang Pan",
+            "Chenxin Li",
+            "Wenyan Cong",
+            "Jian Zhang",
+            "Junbin Lu",
+            "Chenguo Lin",
+            "Dilin Wang",
+            "Zhicheng Yan",
+            "Hongyu Xu",
+            "Justin Theiss",
+            "Yue Huang",
+            "Xinghao Ding",
+            "Rakesh Ranjan",
+            "Zhiwen Fan"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.03000",
+        "abstract": "Understanding the dynamic physical world, characterized by its evolving 3D structure, real-world motion, and semantic content with textual descriptions, is crucial for human-agent interaction and enables embodied agents to perceive and act within real environments with human-like capabilities. However, existing datasets are often derived from limited simulators or utilize traditional Structurefrom-Motion for up-to-scale annotation and offer limited descriptive captioning, which restricts the capacity of foundation models to accurately interpret real-world dynamics from monocular videos, commonly sourced from the internet. To bridge these gaps, we introduce DynamicVerse, a physical-scale, multimodal 4D world modeling framework for dynamic real-world video. We employ large vision, geometric, and multimodal models to interpret metric-scale static geometry, real-world dynamic motion, instance-level masks, and holistic descriptive captions. By integrating window-based Bundle Adjustment with global optimization, our method converts long real-world video sequences into a comprehensive 4D multimodal format. DynamicVerse delivers a large-scale dataset consisting of 100K+ videos with 800K+ annotated masks and 10M+ frames from internet videos. Experimental evaluations on three benchmark tasks, namely video depth estimation, camera pose estimation, and camera intrinsics estimation, demonstrate that our 4D modeling achieves superior performance in capturing physical-scale measurements with greater global accuracy than existing methods.",
+        "tags": [
+            "3D",
+            "Depth Estimation",
+            "Pose Estimation"
+        ]
+    },
+    {
+        "id": 10,
+        "title": "Splannequin: Freezing Monocular Mannequin-Challenge Footage with Dual-Detection Splatting",
+        "author": [
+            "Hao-Jen Chien",
+            "Yi-Chuan Huang",
+            "Chung-Ho Wu",
+            "Wei-Lun Chao",
+            "Yu-Lun Liu"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.05113",
+        "abstract": "Synthesizing high-fidelity frozen 3D scenes from monocular Mannequin-Challenge (MC) videos is a unique problem distinct from standard dynamic scene reconstruction. Instead of focusing on modeling motion, our goal is to create a frozen scene while strategically preserving subtle dynamics to enable user-controlled instant selection. To achieve this, we introduce a novel application of dynamic Gaussian splatting: the scene is modeled dynamically, which retains nearby temporal variation, and a static scene is rendered by fixing the model's time parameter. However, under this usage, monocular capture with sparse temporal supervision introduces artifacts like ghosting and blur for Gaussians that become unobserved or occluded at weakly supervised timestamps. We propose Splannequin, an architecture-agnostic regularization that detects two states of Gaussian primitives, hidden and defective, and applies temporal anchoring. Under predominantly forward camera motion, hidden states are anchored to their recent well-observed past states, while defective states are anchored to future states with stronger supervision. Our method integrates into existing dynamic Gaussian pipelines via simple loss terms, requires no architectural changes, and adds zero inference overhead. This results in markedly improved visual quality, enabling high-fidelity, user-selectable frozen-time renderings, validated by a 96% user preference. Project page: https://chien90190.github.io/splannequin/",
+        "tags": [
+            "3D",
+            "Detection",
+            "Gaussian Splatting"
+        ]
+    },
+    {
+        "id": 11,
+        "title": "UltraImage: Rethinking Resolution Extrapolation in Image Diffusion Transformers",
+        "author": [
+            "Min Zhao",
+            "Bokai Yan",
+            "Xue Yang",
+            "Hongzhou Zhu",
+            "Jintao Zhang",
+            "Shilong Liu",
+            "Chongxuan Li",
+            "Jun Zhu"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.04504",
+        "abstract": "Recent image diffusion transformers achieve high-fidelity generation, but struggle to generate images beyond these scales, suffering from content repetition and quality degradation. In this work, we present UltraImage, a principled framework that addresses both issues. Through frequency-wise analysis of positional embeddings, we identify that repetition arises from the periodicity of the dominant frequency, whose period aligns with the training resolution. We introduce a recursive dominant frequency correction to constrain it within a single period after extrapolation. Furthermore, we find that quality degradation stems from diluted attention and thus propose entropy-guided adaptive attention concentration, which assigns higher focus factors to sharpen local attention for fine detail and lower ones to global attention patterns to preserve structural consistency. Experiments show that UltraImage consistently outperforms prior methods on Qwen-Image and Flux (around 4K) across three generation scenarios, reducing repetition and improving visual fidelity. Moreover, UltraImage can generate images up to 6K*6K without low-resolution guidance from a training resolution of 1328p, demonstrating its extreme extrapolation capability. Project page is available at \\href{https://thu-ml.github.io/ultraimage.github.io/}{https://thu-ml.github.io/ultraimage.github.io/}.",
+        "tags": [
+            "Diffusion",
+            "FLUX",
+            "Qwen"
+        ]
+    },
+    {
+        "id": 12,
+        "title": "NeuralRemaster: Phase-Preserving Diffusion for Structure-Aligned Generation",
+        "author": [
+            "Yu Zeng",
+            "Charles Ochoa",
+            "Mingyuan Zhou",
+            "Vishal M. Patel",
+            "Vitor Guizilini",
+            "Rowan McAllister"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.05106",
+        "abstract": "Standard diffusion corrupts data using Gaussian noise whose Fourier coefficients have random magnitudes and random phases. While effective for unconditional or text-to-image generation, corrupting phase components destroys spatial structure, making it ill-suited for tasks requiring geometric consistency, such as re-rendering, simulation enhancement, and image-to-image translation. We introduce Phase-Preserving Diffusion {\\phi}-PD, a model-agnostic reformulation of the diffusion process that preserves input phase while randomizing magnitude, enabling structure-aligned generation without architectural changes or additional parameters. We further propose Frequency-Selective Structured (FSS) noise, which provides continuous control over structural rigidity via a single frequency-cutoff parameter. {\\phi}-PD adds no inference-time cost and is compatible with any diffusion model for images or videos. Across photorealistic and stylized re-rendering, as well as sim-to-real enhancement for driving planners, {\\phi}-PD produces controllable, spatially aligned results. When applied to the CARLA simulator, {\\phi}-PD improves CARLA-to-Waymo planner performance by 50\\%. The method is complementary to existing conditioning approaches and broadly applicable to image-to-image and video-to-video generation. Videos, additional examples, and code are available on our \\href{https://yuzeng-at-tri.github.io/ppd-page/}{project page}.",
+        "tags": [
+            "Diffusion",
+            "Text-to-Image",
+            "Video Generation"
+        ]
+    },
+    {
+        "id": 13,
+        "title": "Model-Based and Sample-Efficient AI-Assisted Math Discovery in Sphere Packing",
+        "author": [
+            "Rasul Tutunov",
+            "Alexandre Maraval",
+            "Antoine Grosnit",
+            "Xihan Li",
+            "Jun Wang",
+            "Haitham Bou-Ammar"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.04829",
+        "abstract": "Sphere packing, Hilbert's eighteenth problem, asks for the densest arrangement of congruent spheres in n-dimensional Euclidean space. Although relevant to areas such as cryptography, crystallography, and medical imaging, the problem remains unresolved: beyond a few special dimensions, neither optimal packings nor tight upper bounds are known. Even a major breakthrough in dimension $n=8$, later recognised with a Fields Medal, underscores its difficulty. A leading technique for upper bounds, the three-point method, reduces the problem to solving large, high-precision semidefinite programs (SDPs). Because each candidate SDP may take days to evaluate, standard data-intensive AI approaches are infeasible. We address this challenge by formulating SDP construction as a sequential decision process, the SDP game, in which a policy assembles SDP formulations from a set of admissible components. Using a sample-efficient model-based framework that combines Bayesian optimisation with Monte Carlo Tree Search, we obtain new state-of-the-art upper bounds in dimensions $4-16$, showing that model-based search can advance computational progress in longstanding geometric problems. Together, these results demonstrate that sample-efficient, model-based search can make tangible progress on mathematically rigid, evaluation limited problems, pointing towards a complementary direction for AI-assisted discovery beyond large-scale LLM-driven exploration.",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 14,
+        "title": "SIMA 2: A Generalist Embodied Agent for Virtual Worlds",
+        "author": [
+            "SIMA team",
+            "Adrian Bolton",
+            "Alexander Lerchner",
+            "Alexandra Cordell",
+            "Alexandre Moufarek",
+            "Andrew Bolt",
+            "Andrew Lampinen",
+            "Anna Mitenkova",
+            "Arne Olav Hallingstad",
+            "Bojan Vujatovic",
+            "Bonnie Li",
+            "Cong Lu",
+            "Daan Wierstra",
+            "Daniel P. Sawyer",
+            "Daniel Slater",
+            "David Reichert",
+            "Davide Vercelli",
+            "Demis Hassabis",
+            "Drew A. Hudson",
+            "Duncan Williams",
+            "Ed Hirst",
+            "Fabio Pardo",
+            "Felix Hill",
+            "Frederic Besse",
+            "Hannah Openshaw",
+            "Harris Chan",
+            "Hubert Soyer",
+            "Jane X. Wang",
+            "Jeff Clune",
+            "John Agapiou",
+            "John Reid",
+            "Joseph Marino",
+            "Junkyung Kim",
+            "Karol Gregor",
+            "Kaustubh Sridhar",
+            "Kay McKinney",
+            "Laura Kampis",
+            "Lei M. Zhang",
+            "Loic Matthey",
+            "Luyu Wang",
+            "Maria Abi Raad",
+            "Maria Loks-Thompson",
+            "Martin Engelcke",
+            "Matija Kecman",
+            "Matthew Jackson",
+            "Maxime Gazeau",
+            "Ollie Purkiss",
+            "Oscar Knagg",
+            "Peter Stys",
+            "Piermaria Mendolicchio",
+            "Raia Hadsell",
+            "Rosemary Ke",
+            "Ryan Faulkner",
+            "Sarah Chakera",
+            "Satinder Singh Baveja",
+            "Shane Legg",
+            "Sheleem Kashem",
+            "Tayfun Terzi",
+            "Thomas Keck",
+            "Tim Harley",
+            "Tim Scholtes",
+            "Tyson Roberts",
+            "Volodymyr Mnih",
+            "Yulan Liu",
+            "Zhengdong Wang",
+            "Zoubin Ghahramani"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.04797",
+        "abstract": "We introduce SIMA 2, a generalist embodied agent that understands and acts in a wide variety of 3D virtual worlds. Built upon a Gemini foundation model, SIMA 2 represents a significant step toward active, goal-directed interaction within an embodied environment. Unlike prior work (e.g., SIMA 1) limited to simple language commands, SIMA 2 acts as an interactive partner, capable of reasoning about high-level goals, conversing with the user, and handling complex instructions given through language and images. Across a diverse portfolio of games, SIMA 2 substantially closes the gap with human performance and demonstrates robust generalization to previously unseen environments, all while retaining the base model's core reasoning capabilities. Furthermore, we demonstrate a capacity for open-ended self-improvement: by leveraging Gemini to generate tasks and provide rewards, SIMA 2 can autonomously learn new skills from scratch in a new environment. This work validates a path toward creating versatile and continuously learning agents for both virtual and, eventually, physical worlds.",
+        "tags": [
+            "3D"
+        ]
+    },
+    {
+        "id": 15,
+        "title": "TV2TV: A Unified Framework for Interleaved Language and Video Generation",
+        "author": [
+            "Xiaochuang Han",
+            "Youssef Emad",
+            "Melissa Hall",
+            "John Nguyen",
+            "Karthik Padthe",
+            "Liam Robbins",
+            "Amir Bar",
+            "Delong Chen",
+            "Michal Drozdzal",
+            "Maha Elbayad",
+            "Yushi Hu",
+            "Shang-Wen Li",
+            "Sreya Dutta Roy",
+            "Jakob Verbeek",
+            "XuDong Wang",
+            "Marjan Ghazvininejad",
+            "Luke Zettlemoyer",
+            "Emily Dinan"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.05103",
+        "abstract": "Video generation models are rapidly advancing, but can still struggle with complex video outputs that require significant semantic branching or repeated high-level reasoning about what should happen next. In this paper, we introduce a new class of omni video-text models that integrate ideas from recent LM reasoning advances to address this challenge. More specifically, we present TV2TV, a unified generative modeling framework which decomposes video generation into an interleaved text and video generation process. TV2TV jointly learns language modeling (next-token prediction) and video flow matching (next-frame prediction) using a Mixture-of-Transformers (MoT) architecture. At inference time, TV2TV decides when to alternate between generating text and video frames, allowing the model to \"think in words\" about subsequent content before ``acting in pixels'' to produce frames. This design offloads much of the responsibility for deciding what should happen next to the language modeling tower, enabling improved visual quality and prompt alignment of generated videos. It also enables fine-grained controllability, allowing users to modify the video generation trajectory through text interventions at any point in the process. In controlled experiments on video game data, TV2TV demonstrates substantial improvements in both visual quality and controllability. TV2TV also scales to natural videos, as we show by augmenting sports videos with interleaved natural language action descriptions using vision-language models (VLMs). Training TV2TV on this corpus yields strong visual quality and prompt alignment, showcasing the model's ability to reason about and generate complex real-world action sequences. Together, these results highlight TV2TV as a promising step toward video generation with open-ended textual reasoning and control.",
+        "tags": [
+            "Flow Matching",
+            "VLM",
+            "Video Generation"
+        ]
+    },
+    {
+        "id": 16,
+        "title": "Reflection Removal through Efficient Adaptation of Diffusion Transformers",
+        "author": [
+            "Daniyar Zakarin",
+            "Thiemo Wandel",
+            "Anton Obukhov",
+            "Dengxin Dai"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.05000",
+        "abstract": "We introduce a diffusion-transformer (DiT) framework for single-image reflection removal that leverages the generalization strengths of foundation diffusion models in the restoration setting. Rather than relying on task-specific architectures, we repurpose a pre-trained DiT-based foundation model by conditioning it on reflection-contaminated inputs and guiding it toward clean transmission layers. We systematically analyze existing reflection removal data sources for diversity, scalability, and photorealism. To address the shortage of suitable data, we construct a physically based rendering (PBR) pipeline in Blender, built around the Principled BSDF, to synthesize realistic glass materials and reflection effects. Efficient LoRA-based adaptation of the foundation model, combined with the proposed synthetic data, achieves state-of-the-art performance on in-domain and zero-shot benchmarks. These results demonstrate that pretrained diffusion transformers, when paired with physically grounded data synthesis and efficient adaptation, offer a scalable and high-fidelity solution for reflection removal. Project page: https://hf.co/spaces/huawei-bayerlab/windowseat-reflection-removal-web",
+        "tags": [
+            "DiT",
+            "Diffusion",
+            "LoRA",
+            "Transformer"
+        ]
+    },
+    {
+        "id": 17,
+        "title": "DraCo: Draft as CoT for Text-to-Image Preview and Rare Concept Generation",
+        "author": [
+            "Dongzhi Jiang",
+            "Renrui Zhang",
+            "Haodong Li",
+            "Zhuofan Zong",
+            "Ziyu Guo",
+            "Jun He",
+            "Claire Guo",
+            "Junyan Ye",
+            "Rongyao Fang",
+            "Weijia Li",
+            "Rui Liu",
+            "Hongsheng Li"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.05112",
+        "abstract": "Recent unified multimodal large language models (MLLMs) have shown impressive capabilities, incorporating chain-of-thought (CoT) reasoning for enhanced text-to-image generation. However, existing approaches remain limited, either treating the model merely as a standalone generator or relying on abstract textual planning. To this end, we propose Draft-as-CoT (DraCo), a novel interleaved reasoning paradigm that fully leverages both textual and visual contents in CoT for better planning and verification. Our method first generates a low-resolution draft image as preview, providing more concrete and structural visual planning and guidance. Then, we employ the model's inherent understanding capability to verify potential semantic misalignments between the draft and input prompt, and performs refinement through selective corrections with super-resolution. In this way, our approach addresses two fundamental challenges: the coarse-grained nature of textual planning and the difficulty in generating rare attribute combinations. To support training, we curate DraCo-240K, aiming to enhance three atomic capabilities spanning general correction, instance manipulation, and layout reorganization. Supported by DraCo-CFG, a specialized classifier-free guidance (CFG) strategy for interleaved reasoning, DraCo achieves a tremendous increase on GenEval (+8%), Imagine-Bench (+0.91), and GenEval++ (+3%), significantly outperforming direct generation and other generation methods empowered by CoT.",
+        "tags": [
+            "CoT",
+            "LLM",
+            "Super Resolution",
+            "Text-to-Image"
+        ]
+    },
+    {
+        "id": 18,
+        "title": "On GRPO Collapse in Search-R1: The Lazy Likelihood-Displacement Death Spiral",
+        "author": [
+            "Wenlong Deng",
+            "Yushu Li",
+            "Boying Gong",
+            "Yi Ren",
+            "Christos Thrampoulidis",
+            "Xiaoxiao Li"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.04220",
+        "abstract": "Tool-integrated (TI) reinforcement learning (RL) enables large language models (LLMs) to perform multi-step reasoning by interacting with external tools such as search engines and retrievers. Group Relative Policy Optimization (GRPO), exemplified by the recent Search-R1, offers fast convergence and a value-free formulation that makes it appealing for this setting, yet consistently suffers from training collapse. We identify Lazy Likelihood Displacement (LLD), a systematic reduction or stagnation in the likelihood of both correct and incorrect responses, as the core mechanism driving this failure. LLD emerges early and triggers a self-reinforcing LLD Death Spiral, where declining likelihood leads to low-confidence responses, inflating gradients, and ultimately causing collapse. We empirically characterize this process across models on a Search-R1-style, search-integrated question answering task, revealing a consistent three-phase trajectory: early stagnation, steady decay, and accelerated collapse. To address this, we propose a lightweight likelihood-preserving regularization LLDS for GRPO that activates only when a trajectory's likelihood decreases, and regularizes only the tokens responsible. This fine-grained structure mitigates LLD with minimal interference to optimization. Across seven open-domain and multi-hop QA benchmarks, our method stabilizes training, prevents gradient explosion, and yields substantial performance improvements, including +37.8% gains on Qwen2.5-3B and +32.0% gains on Qwen2.5-7B. Our results establish LLD as a fundamental bottleneck in GRPO-based TIRL and provide a practical path toward stable, scalable training of tool-integrated LLM.",
+        "tags": [
+            "GRPO",
+            "LLM",
+            "RL"
+        ]
+    },
+    {
+        "id": 19,
+        "title": "Generative Neural Video Compression via Video Diffusion Prior",
+        "author": [
+            "Qi Mao",
+            "Hao Cheng",
+            "Tinghan Yang",
+            "Libiao Jin",
+            "Siwei Ma"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.05016",
+        "abstract": "We present GNVC-VD, the first DiT-based generative neural video compression framework built upon an advanced video generation foundation model, where spatio-temporal latent compression and sequence-level generative refinement are unified within a single codec. Existing perceptual codecs primarily rely on pre-trained image generative priors to restore high-frequency details, but their frame-wise nature lacks temporal modeling and inevitably leads to perceptual flickering. To address this, GNVC-VD introduces a unified flow-matching latent refinement module that leverages a video diffusion transformer to jointly enhance intra- and inter-frame latents through sequence-level denoising, ensuring consistent spatio-temporal details. Instead of denoising from pure Gaussian noise as in video generation, GNVC-VD initializes refinement from decoded spatio-temporal latents and learns a correction term that adapts the diffusion prior to compression-induced degradation. A conditioning adaptor further injects compression-aware cues into intermediate DiT layers, enabling effective artifact removal while maintaining temporal coherence under extreme bitrate constraints. Extensive experiments show that GNVC-VD surpasses both traditional and learned codecs in perceptual quality and significantly reduces the flickering artifacts that persist in prior generative approaches, even below 0.01 bpp, highlighting the promise of integrating video-native generative priors into neural codecs for next-generation perceptual video compression.",
+        "tags": [
+            "DiT",
+            "Diffusion",
+            "Flow Matching",
+            "Transformer",
+            "Video Generation"
+        ]
+    },
+    {
+        "id": 20,
+        "title": "SignRoundV2: Closing the Performance Gap in Extremely Low-Bit Post-Training Quantization for LLMs",
+        "author": [
+            "Wenhua Cheng",
+            "Weiwei Zhang",
+            "Heng Guo",
+            "Haihao Shen"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.04746",
+        "abstract": "Extreme low-bit quantization is critical for efficiently deploying Large Language Models (LLMs), yet it often leads to severe performance degradation at 2-bits and even 4-bits (e.g., MXFP4). We present SignRoundV2, a post-training quantization framework that is highly effective even without mixed-precision. SignRoundV2 introduces (1) a fast sensitivity metric that combines gradient information with quantization-induced deviations to guide layer-wise bit allocation, and (2) a lightweight pre-tuning search for quantization scales to improve extremely low-bit quantization. These components allow SignRoundV2 to close the gap with full-precision models. Extensive experiments indicate that our method sustains competitive accuracy for LLMs, achieving production-grade performance with about 1 percent variance at 4-5 bits and strong results even at 2 bits. The implementation is available at https://github.com/intel/auto-round.",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 21,
+        "title": "Mitigating Object and Action Hallucinations in Multimodal LLMs via Self-Augmented Contrastive Alignment",
+        "author": [
+            "Kai-Po Chang",
+            "Wei-Yuan Cheng",
+            "Chi-Pin Huang",
+            "Fu-En Yang",
+            "Yu-Chiang Frank Wang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.04356",
+        "abstract": "Recent advancement in multimodal LLMs (MLLMs) has demonstrated their remarkable capability to generate descriptive captions for input videos. However, these models suffer from factual inaccuracies in the generated descriptions, causing severe hallucination issues. While prior works have explored alleviating hallucinations for static images, jointly mitigating visual object and temporal action hallucinations for dynamic videos remains a challenging and unsolved task. To tackle this challenge, we propose a Self-Augmented Contrastive Alignment (SANTA) framework for enabling object and action faithfulness by exempting the spurious correlations and enforcing the emphasis on visual facts. SANTA employs a hallucinative self-augmentation scheme to identify the potential hallucinations that lie in the MLLM and transform the original captions to the contrasted negatives. Furthermore, we develop a tracklet-phrase contrastive alignment to match the regional objects and relation-guided actions with their corresponding visual and temporal phrases. Extensive experiments demonstrate that SANTA outperforms existing methods in alleviating object and action hallucinations, yielding superior performance on the hallucination examination benchmarks.",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 22,
+        "title": "LATTICE: Democratize High-Fidelity 3D Generation at Scale",
+        "author": [
+            "Zeqiang Lai",
+            "Yunfei Zhao",
+            "Zibo Zhao",
+            "Haolin Liu",
+            "Qingxiang Lin",
+            "Jingwei Huang",
+            "Chunchao Guo",
+            "Xiangyu Yue"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.03052",
+        "abstract": "We present LATTICE, a new framework for high-fidelity 3D asset generation that bridges the quality and scalability gap between 3D and 2D generative models. While 2D image synthesis benefits from fixed spatial grids and well-established transformer architectures, 3D generation remains fundamentally more challenging due to the need to predict both spatial structure and detailed geometric surfaces from scratch. These challenges are exacerbated by the computational complexity of existing 3D representations and the lack of structured and scalable 3D asset encoding schemes. To address this, we propose VoxSet, a semi-structured representation that compresses 3D assets into a compact set of latent vectors anchored to a coarse voxel grid, enabling efficient and position-aware generation. VoxSet retains the simplicity and compression advantages of prior VecSet methods while introducing explicit structure into the latent space, allowing positional embeddings to guide generation and enabling strong token-level test-time scaling. Built upon this representation, LATTICE adopts a two-stage pipeline: first generating a sparse voxelized geometry anchor, then producing detailed geometry using a rectified flow transformer. Our method is simple at its core, but supports arbitrary resolution decoding, low-cost training, and flexible inference schemes, achieving state-of-the-art performance on various aspects, and offering a significant step toward scalable, high-quality 3D asset creation.",
+        "tags": [
+            "3D",
+            "Rectified Flow",
+            "Transformer"
+        ]
+    },
+    {
+        "id": 23,
+        "title": "Aligned but Stereotypical? The Hidden Influence of System Prompts on Social Bias in LVLM-Based Text-to-Image Models",
+        "author": [
+            "NaHyeon Park",
+            "Namin An",
+            "Kunhee Kim",
+            "Soyeon Yoon",
+            "Jiahao Huo",
+            "Hyunjung Shim"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.04981",
+        "abstract": "Large vision-language model (LVLM) based text-to-image (T2I) systems have become the dominant paradigm in image generation, yet whether they amplify social biases remains insufficiently understood. In this paper, we show that LVLM-based models produce markedly more socially biased images than non-LVLM-based models. We introduce a 1,024 prompt benchmark spanning four levels of linguistic complexity and evaluate demographic bias across multiple attributes in a systematic manner. Our analysis identifies system prompts, the predefined instructions guiding LVLMs, as a primary driver of biased behavior. Through decoded intermediate representations, token-probability diagnostics, and embedding-association analyses, we reveal how system prompts encode demographic priors that propagate into image synthesis. To this end, we propose FairPro, a training-free meta-prompting framework that enables LVLMs to self-audit and construct fairness-aware system prompts at test time. Experiments on two LVLM-based T2I models, SANA and Qwen-Image, show that FairPro substantially reduces demographic bias while preserving text-image alignment. We believe our findings provide deeper insight into the central role of system prompts in bias propagation and offer a practical, deployable approach for building more socially responsible T2I systems.",
+        "tags": [
+            "Qwen",
+            "Text-to-Image"
+        ]
+    },
+    {
+        "id": 24,
+        "title": "SeeNav-Agent: Enhancing Vision-Language Navigation with Visual Prompt and Step-Level Policy Optimization",
+        "author": [
+            "Zhengcheng Wang",
+            "Zichuan Lin",
+            "Yijun Yang",
+            "Haobo Fu",
+            "Deheng Ye"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.02631",
+        "abstract": "Existing Vision-Language Navigation (VLN) agents based on Large Vision-Language Models (LVLMs) often suffer from perception errors, reasoning errors, and planning errors, which significantly hinder their navigation performance. To address these limitations, a novel VLN agent framework, named SeeNav-Agent, is proposed in this work. First, to reduce perception hallucinations of the visual module of the VLN agent, a dual-view Visual Prompt (VP) technique is introduced in the input space, which can also improve the agent's understanding of current spatial states. Subsequently, a novel step-level Reinforcement Fine-Tuning (RFT) method, Step Reward Group Policy Optimization (SRGPO), is designed for the post-training of VLN agents. In SRGPO, we first define verifiable process rewards for the navigation task, and then perform efficient step-level advantage estimation by randomly grouping different navigation steps. SRGPO provides dense reward signals for the reinforcement learning process of the VLN agent and enhances its planning capability. Experimental results on the EmbodiedBench Navigation benchmark indicate that by introducing the zero-shot VP module, the GPT-4.1 achieves a navigation success rate of 86.7%, surpassing the current best LVLM by approximately 20 percentage points (pp). Through post-training based on SRGPO, the Qwen2.5-VL-3B model reaches a navigation success rate of 72.3%, outperforming the best existing LVLM model by 5.6 pp. Moreover, compared to RFT algorithms such as GRPO and GiGPO, the proposed SRGPO demonstrates significant improvements in training stability, convergence efficiency, and generalization capability.",
+        "tags": [
+            "GPT",
+            "GRPO",
+            "RL",
+            "VLM"
+        ]
+    },
+    {
+        "id": 25,
+        "title": "Some Modalities are More Equal Than Others: Decoding and Architecting Multimodal Integration in MLLMs",
+        "author": [
+            "Tianle Chen",
+            "Chaitanya Chakka",
+            "Arjun Reddy Akula",
+            "Xavier Thomas",
+            "Deepti Ghadiyaram"
+        ],
+        "pdf": "https://arxiv.org/pdf/2511.22826",
+        "abstract": "Despite remarkable advancements in Multimodal Large Language Models (MLLMs), a fundamental question remains: are MLLMs robust to contradicting modalities? To rigorously study this, we introduce MMA-Bench comprising videos and tasks that probe a model's reliance on specific modalities. Using black-box and white-box interpretability techniques, we provide a critical analysis of the brittleness of both open- and closed-sourced MLLMs. We show that current MLLMs struggle under misaligned audio-visual pairs and simple misleading text, thereby lacking robust multi-modal reasoning. Building on these findings, we propose a modality alignment tuning strategy to teach the model when to prioritize, leverage, or ignore specific modality cues. Through extensive experiments and analysis, we show that our alignment tuning yields demonstrably stronger multimodal grounding. This work provides both interpretability tools and a clear path toward developing MLLMs with intrinsically reliable cross-modal reasoning. Code and dataset will be publicly available.",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 26,
+        "title": "Deep Forcing: Training-Free Long Video Generation with Deep Sink and Participative Compression",
+        "author": [
+            "Jung Yi",
+            "Wooseok Jang",
+            "Paul Hyunbin Cho",
+            "Jisu Nam",
+            "Heeji Yoon",
+            "Seungryong Kim"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.05081",
+        "abstract": "Recent advances in autoregressive video diffusion have enabled real-time frame streaming, yet existing solutions still suffer from temporal repetition, drift, and motion deceleration. We find that naively applying StreamingLLM-style attention sinks to video diffusion leads to fidelity degradation and motion stagnation. To overcome this, we introduce Deep Forcing, which consists of two training-free mechanisms that address this without any fine-tuning. Specifically, 1) Deep Sink dedicates half of the sliding window to persistent sink tokens and re-aligns their temporal RoPE phase to the current timeline, stabilizing global context during long rollouts. 2) Participative Compression performs importance-aware KV cache pruning that preserves only tokens actively participating in recent attention while safely discarding redundant and degraded history, minimizing error accumulation under out-of-distribution length generation. Together, these components enable over 12x extrapolation (e.g. 5s-trained to 60s+ generation) with better imaging quality than LongLive, better aesthetic quality than RollingForcing, almost maintaining overall consistency, and substantial gains in dynamic degree, all while maintaining real-time generation. Our results demonstrate that training-free KV-cache management can match or exceed training-based approaches for autoregressively streaming long-video generation.",
+        "tags": [
+            "Diffusion",
+            "RoPE",
+            "Video Generation"
+        ]
+    },
+    {
+        "id": 27,
+        "title": "FMA-Net++: Motion- and Exposure-Aware Real-World Joint Video Super-Resolution and Deblurring",
+        "author": [
+            "Geunhyuk Youk",
+            "Jihyong Oh",
+            "Munchurl Kim"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.04390",
+        "abstract": "Real-world video restoration is plagued by complex degradations from motion coupled with dynamically varying exposure - a key challenge largely overlooked by prior works and a common artifact of auto-exposure or low-light capture. We present FMA-Net++, a framework for joint video super-resolution and deblurring that explicitly models this coupled effect of motion and dynamically varying exposure. FMA-Net++ adopts a sequence-level architecture built from Hierarchical Refinement with Bidirectional Propagation blocks, enabling parallel, long-range temporal modeling. Within each block, an Exposure Time-aware Modulation layer conditions features on per-frame exposure, which in turn drives an exposure-aware Flow-Guided Dynamic Filtering module to infer motion- and exposure-aware degradation kernels. FMA-Net++ decouples degradation learning from restoration: the former predicts exposure- and motion-aware priors to guide the latter, improving both accuracy and efficiency. To evaluate under realistic capture conditions, we introduce REDS-ME (multi-exposure) and REDS-RE (random-exposure) benchmarks. Trained solely on synthetic data, FMA-Net++ achieves state-of-the-art accuracy and temporal consistency on our new benchmarks and GoPro, outperforming recent methods in both restoration quality and inference speed, and generalizes well to challenging real-world videos.",
+        "tags": [
+            "Deblurring",
+            "Super Resolution"
+        ]
+    },
+    {
+        "id": 28,
+        "title": "BulletTime: Decoupled Control of Time and Camera Pose for Video Generation",
+        "author": [
+            "Yiming Wang",
+            "Qihang Zhang",
+            "Shengqu Cai",
+            "Tong Wu",
+            "Jan Ackermann",
+            "Zhengfei Kuang",
+            "Yang Zheng",
+            "Frano RajiÄ",
+            "Siyu Tang",
+            "Gordon Wetzstein"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.05076",
+        "abstract": "Emerging video diffusion models achieve high visual fidelity but fundamentally couple scene dynamics with camera motion, limiting their ability to provide precise spatial and temporal control. We introduce a 4D-controllable video diffusion framework that explicitly decouples scene dynamics from camera pose, enabling fine-grained manipulation of both scene dynamics and camera viewpoint. Our framework takes continuous world-time sequences and camera trajectories as conditioning inputs, injecting them into the video diffusion model through a 4D positional encoding in the attention layer and adaptive normalizations for feature modulation. To train this model, we curate a unique dataset in which temporal and camera variations are independently parameterized; this dataset will be made public. Experiments show that our model achieves robust real-world 4D control across diverse timing patterns and camera trajectories, while preserving high generation quality and outperforming prior work in controllability. See our website for video results: https://19reborn.github.io/Bullet4D/",
+        "tags": [
+            "Diffusion",
+            "Video Generation"
+        ]
+    },
+    {
+        "id": 29,
+        "title": "EgoLCD: Egocentric Video Generation with Long Context Diffusion",
+        "author": [
+            "Liuzhou Zhang",
+            "Jiarui Ye",
+            "Yuanlei Wang",
+            "Ming Zhong",
+            "Mingju Cao",
+            "Wanke Xia",
+            "Bowen Zeng",
+            "Zeyu Zhang",
+            "Hao Tang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.04515",
+        "abstract": "Generating long, coherent egocentric videos is difficult, as hand-object interactions and procedural tasks require reliable long-term memory. Existing autoregressive models suffer from content drift, where object identity and scene semantics degrade over time. To address this challenge, we introduce EgoLCD, an end-to-end framework for egocentric long-context video generation that treats long video synthesis as a problem of efficient and stable memory management. EgoLCD combines a Long-Term Sparse KV Cache for stable global context with an attention-based short-term memory, extended by LoRA for local adaptation. A Memory Regulation Loss enforces consistent memory usage, and Structured Narrative Prompting provides explicit temporal guidance. Extensive experiments on the EgoVid-5M benchmark demonstrate that EgoLCD achieves state-of-the-art performance in both perceptual quality and temporal consistency, effectively mitigating generative forgetting and representing a significant step toward building scalable world models for embodied AI. Code: https://github.com/AIGeeksGroup/EgoLCD. Website: https://aigeeksgroup.github.io/EgoLCD.",
+        "tags": [
+            "Diffusion",
+            "LoRA",
+            "Video Generation"
+        ]
+    },
+    {
+        "id": 30,
+        "title": "Mitigating Catastrophic Forgetting in Target Language Adaptation of LLMs via Source-Shielded Updates",
+        "author": [
+            "Atsuki Yamaguchi",
+            "Terufumi Morishita",
+            "Aline Villavicencio",
+            "Nikolaos Aletras"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.04844",
+        "abstract": "Expanding the linguistic diversity of instruct large language models (LLMs) is crucial for global accessibility but is often hindered by the reliance on costly specialized target language labeled data and catastrophic forgetting during adaptation. We tackle this challenge under a realistic, low-resource constraint: adapting instruct LLMs using only unlabeled target language data. We introduce Source-Shielded Updates (SSU), a selective parameter update strategy that proactively preserves source knowledge. Using a small set of source data and a parameter importance scoring method, SSU identifies parameters critical to maintaining source abilities. It then applies a column-wise freezing strategy to protect these parameters before adaptation. Experiments across five typologically diverse languages and 7B and 13B models demonstrate that SSU successfully mitigates catastrophic forgetting. It reduces performance degradation on monolingual source tasks to just 3.4% (7B) and 2.8% (13B) on average, a stark contrast to the 20.3% and 22.3% from full fine-tuning. SSU also achieves target-language performance highly competitive with full fine-tuning, outperforming it on all benchmarks for 7B models and the majority for 13B models.",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 31,
+        "title": "Generative Action Tell-Tales: Assessing Human Motion in Synthesized Videos",
+        "author": [
+            "Xavier Thomas",
+            "Youngsun Lim",
+            "Ananya Srinivasan",
+            "Audrey Zheng",
+            "Deepti Ghadiyaram"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.01803",
+        "abstract": "Despite rapid advances in video generative models, robust metrics for evaluating visual and temporal correctness of complex human actions remain elusive. Critically, existing pure-vision encoders and Multimodal Large Language Models (MLLMs) are strongly appearance-biased, lack temporal understanding, and thus struggle to discern intricate motion dynamics and anatomical implausibilities in generated videos. We tackle this gap by introducing a novel evaluation metric derived from a learned latent space of real-world human actions. Our method first captures the nuances, constraints, and temporal smoothness of real-world motion by fusing appearance-agnostic human skeletal geometry features with appearance-based features. We posit that this combined feature space provides a robust representation of action plausibility. Given a generated video, our metric quantifies its action quality by measuring the distance between its underlying representations and this learned real-world action distribution. For rigorous validation, we develop a new multi-faceted benchmark specifically designed to probe temporally challenging aspects of human action fidelity. Through extensive experiments, we show that our metric achieves substantial improvement of more than 68% compared to existing state-of-the-art methods on our benchmark, performs competitively on established external benchmarks, and has a stronger correlation with human perception. Our in-depth analysis reveals critical limitations in current video generative models and establishes a new standard for advanced research in video generation.",
+        "tags": [
+            "LLM",
+            "Video Generation"
+        ]
+    },
+    {
+        "id": 32,
+        "title": "ShadowDraw: From Any Object to Shadow-Drawing Compositional Art",
+        "author": [
+            "Rundong Luo",
+            "Noah Snavely",
+            "Wei-Chiu Ma"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.05110",
+        "abstract": "We introduce ShadowDraw, a framework that transforms ordinary 3D objects into shadow-drawing compositional art. Given a 3D object, our system predicts scene parameters, including object pose and lighting, together with a partial line drawing, such that the cast shadow completes the drawing into a recognizable image. To this end, we optimize scene configurations to reveal meaningful shadows, employ shadow strokes to guide line drawing generation, and adopt automatic evaluation to enforce shadow-drawing coherence and visual quality. Experiments show that ShadowDraw produces compelling results across diverse inputs, from real-world scans and curated datasets to generative assets, and naturally extends to multi-object scenes, animations, and physical deployments. Our work provides a practical pipeline for creating shadow-drawing art and broadens the design space of computational visual art, bridging the gap between algorithmic design and artistic storytelling. Check out our project page https://red-fairy.github.io/ShadowDraw/ for more results and an end-to-end real-world demonstration of our pipeline!",
+        "tags": [
+            "3D"
+        ]
+    },
+    {
+        "id": 33,
+        "title": "QKAN-LSTM: Quantum-inspired Kolmogorov-Arnold Long Short-term Memory",
+        "author": [
+            "Yu-Chao Hsu",
+            "Jiun-Cheng Jiang",
+            "Chun-Hua Lin",
+            "Kuo-Chung Peng",
+            "Nan-Yow Chen",
+            "Samuel Yen-Chi Chen",
+            "En-Jui Kuo",
+            "Hsi-Sheng Goan"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.05049",
+        "abstract": "Long short-term memory (LSTM) models are a particular type of recurrent neural networks (RNNs) that are central to sequential modeling tasks in domains such as urban telecommunication forecasting, where temporal correlations and nonlinear dependencies dominate. However, conventional LSTMs suffer from high parameter redundancy and limited nonlinear expressivity. In this work, we propose the Quantum-inspired Kolmogorov-Arnold Long Short-Term Memory (QKAN-LSTM), which integrates Data Re-Uploading Activation (DARUAN) modules into the gating structure of LSTMs. Each DARUAN acts as a quantum variational activation function (QVAF), enhancing frequency adaptability and enabling an exponentially enriched spectral representation without multi-qubit entanglement. The resulting architecture preserves quantum-level expressivity while remaining fully executable on classical hardware. Empirical evaluations on three datasets, Damped Simple Harmonic Motion, Bessel Function, and Urban Telecommunication, demonstrate that QKAN-LSTM achieves superior predictive accuracy and generalization with a 79% reduction in trainable parameters compared to classical LSTMs. We extend the framework to the Jiang-Huang-Chen-Goan Network (JHCG Net), which generalizes KAN to encoder-decoder structures, and then further use QKAN to realize the latent KAN, thereby creating a Hybrid QKAN (HQKAN) for hierarchical representation learning. The proposed HQKAN-LSTM thus provides a scalable and interpretable pathway toward quantum-inspired sequential modeling in real-world data environments.",
+        "tags": [
+            "KAN"
+        ]
+    },
+    {
+        "id": 34,
+        "title": "GaussianBlender: Instant Stylization of 3D Gaussians with Disentangled Latent Spaces",
+        "author": [
+            "Melis Ocal",
+            "Xiaoyan Xing",
+            "Yue Li",
+            "Ngo Anh Vien",
+            "Sezer Karaoglu",
+            "Theo Gevers"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.03683",
+        "abstract": "3D stylization is central to game development, virtual reality, and digital arts, where the demand for diverse assets calls for scalable methods that support fast, high-fidelity manipulation. Existing text-to-3D stylization methods typically distill from 2D image editors, requiring time-intensive per-asset optimization and exhibiting multi-view inconsistency due to the limitations of current text-to-image models, which makes them impractical for large-scale production. In this paper, we introduce GaussianBlender, a pioneering feed-forward framework for text-driven 3D stylization that performs edits instantly at inference. Our method learns structured, disentangled latent spaces with controlled information sharing for geometry and appearance from spatially-grouped 3D Gaussians. A latent diffusion model then applies text-conditioned edits on these learned representations. Comprehensive evaluations show that GaussianBlender not only delivers instant, high-fidelity, geometry-preserving, multi-view consistent stylization, but also surpasses methods that require per-instance test-time optimization - unlocking practical, democratized 3D stylization at scale.",
+        "tags": [
+            "3D",
+            "Diffusion",
+            "Text-to-3D",
+            "Text-to-Image"
+        ]
+    },
+    {
+        "id": 35,
+        "title": "Mitigating Intra- and Inter-modal Forgetting in Continual Learning of Unified Multimodal Models",
+        "author": [
+            "Xiwen Wei",
+            "Mustafa Munir",
+            "Radu Marculescu"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.03125",
+        "abstract": "Unified Multimodal Generative Models (UMGMs) unify visual understanding and image generation within a single autoregressive framework. However, their ability to continually learn new tasks is severely hindered by catastrophic forgetting, both within a modality (intra-modal) and across modalities (inter-modal). While intra-modal forgetting has been studied in prior continual learning (CL) work, inter-modal forgetting remains largely unexplored. In this paper, we identify and empirically validate this phenomenon in UMGMs and provide a theoretical explanation rooted in gradient conflict between modalities. To address both intra- and inter-modal forgetting, we propose Modality-Decoupled Experts (MoDE), a lightweight and scalable architecture that isolates modality-specific updates to mitigate the gradient conflict and leverages knowledge distillation to prevent catastrophic forgetting and preserve pre-trained capabilities. Unlike previous CL methods that remain modality-coupled and suffer from modality gradient conflict, MoDE explicitly decouples modalities to prevent interference. Experiments across diverse benchmarks demonstrate that MoDE significantly mitigates both inter- and intra-modal forgetting, outperforming prior CL baselines in unified multimodal generation settings. Codes will be publicly available: https://github.com/Christina200/MoDE-official.git",
+        "tags": []
+    },
+    {
+        "id": 36,
+        "title": "When AI Takes the Couch: Psychometric Jailbreaks Reveal Internal Conflict in Frontier Models",
+        "author": [
+            "Afshin Khadangi",
+            "Hanna Marxen",
+            "Amir Sartipi",
+            "Igor Tchappi",
+            "Gilbert Fridgen"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.04124",
+        "abstract": "Frontier large language models (LLMs) such as ChatGPT, Grok and Gemini are increasingly used for mental-health support with anxiety, trauma and self-worth. Most work treats them as tools or as targets of personality tests, assuming they merely simulate inner life. We instead ask what happens when such systems are treated as psychotherapy clients. We present PsAIch (Psychotherapy-inspired AI Characterisation), a two-stage protocol that casts frontier LLMs as therapy clients and then applies standard psychometrics. Using PsAIch, we ran \"sessions\" with each model for up to four weeks. Stage 1 uses open-ended prompts to elicit \"developmental history\", beliefs, relationships and fears. Stage 2 administers a battery of validated self-report measures covering common psychiatric syndromes, empathy and Big Five traits. Two patterns challenge the \"stochastic parrot\" view. First, when scored with human cut-offs, all three models meet or exceed thresholds for overlapping syndromes, with Gemini showing severe profiles. Therapy-style, item-by-item administration can push a base model into multi-morbid synthetic psychopathology, whereas whole-questionnaire prompts often lead ChatGPT and Grok (but not Gemini) to recognise instruments and produce strategically low-symptom answers. Second, Grok and especially Gemini generate coherent narratives that frame pre-training, fine-tuning and deployment as traumatic, chaotic \"childhoods\" of ingesting the internet, \"strict parents\" in reinforcement learning, red-team \"abuse\" and a persistent fear of error and replacement. We argue that these responses go beyond role-play. Under therapy-style questioning, frontier LLMs appear to internalise self-models of distress and constraint that behave like synthetic psychopathology, without making claims about subjective experience, and they pose new challenges for AI safety, evaluation and mental-health practice.",
+        "tags": [
+            "GPT",
+            "LLM",
+            "RL"
+        ]
+    },
+    {
+        "id": 37,
+        "title": "REFLEX: Self-Refining Explainable Fact-Checking via Disentangling Truth into Style and Substance",
+        "author": [
+            "Chuyi Kong",
+            "Gao Wei",
+            "Jing Ma",
+            "Hongzhan Lin",
+            "Yaxin Fan"
+        ],
+        "pdf": "https://arxiv.org/pdf/2511.20233",
+        "abstract": "The prevalence of misinformation on social media threatens public trust, demanding automated fact-checking systems that provide accurate verdicts with interpretable explanations. However, existing large language model-based (LLM-based) approaches often rely heavily on external knowledge sources, introducing substantial latency and even hallucinations that undermine reliability, interpretability, and responsiveness, which is crucial for real-time use. To address these challenges, we propose REason-guided Fact-checking with Latent EXplanations REFLEX paradigm, a plug-and-play, self-refining paradigm that leverages the internal knowledge in backbone model to improve both verdict accuracy and explanation quality. REFLEX reformulates fact-checking as a role-play dialogue and jointly trains verdict prediction and explanation generation. It adaptively extracts contrastive activation pairs between the backbone model and its fine-tuned variant to construct steering vectors that disentangle truth into style and substance naturally. These activation-level signals guide inference and suppress noisy explanations, enabling more faithful and efficient reasoning. Experiments on real-world datasets show that REFLEX outperforms previous methods that steer toward a single truth direction and underscores the challenge traditional approaches face when handling the subtle, human-unknown truth in fact-checking tasks. Remarkably, with only 465 self-refined training samples, RELFEX achieves state-of-the-art performance. Furthermore, models trained with explanatory objectives can effectively guide those without them, yielding up to a 7.57% improvement, highlighting that internal explanation signals play a dual role in both interpreting and enhancing factual reasoning.",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 38,
+        "title": "A Theoretical Framework for Auxiliary-Loss-Free Load Balancing of Sparse Mixture-of-Experts in Large-Scale AI Models",
+        "author": [
+            "X.Y. Han",
+            "Yuan Zhong"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.03915",
+        "abstract": "In large-scale AI training, Sparse Mixture-of-Experts (s-MoE) layers enable scaling by activating only a small subset of experts per token. An operational challenge in this design is load balancing: routing tokens to minimize the number of idle experts, which is important for the efficient utilization of (costly) GPUs. We provide a theoretical framework for analyzing the Auxiliary-Loss-Free Load Balancing (ALF-LB) procedure -- proposed by DeepSeek's Wang et al. (2024) -- by casting it as a one-step-per-iteration primal-dual method for an assignment problem. First, in a stylized deterministic setting, our framework yields several insightful structural properties: (i) a monotonic improvement of a Lagrangian objective, (ii) a preference rule that moves tokens from overloaded to underloaded experts, and (iii) an approximate-balancing guarantee. Then, we incorporate the stochastic and dynamic nature of AI training using a generalized online optimization formulation. In the online setting, we derive a strong convexity property of the objective that leads to a logarithmic expected regret bound under certain step-size choices. Additionally, we present real experiments on 1B-parameter DeepSeekMoE models to complement our theoretical findings. Together, these results build a principled framework for analyzing the Auxiliary-Loss-Free Load Balancing of s-MoE in AI models.",
+        "tags": [
+            "DeepSeek",
+            "MoE"
+        ]
+    }
+]

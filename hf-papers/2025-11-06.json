@@ -1,0 +1,226 @@
+[
+    {
+        "id": 1,
+        "title": "Diffusion Language Models are Super Data Learners",
+        "author": [
+            "Jinjie Ni",
+            "Qian Liu",
+            "Longxu Dou",
+            "Chao Du",
+            "Zili Wang",
+            "Hang Yan",
+            "Tianyu Pang",
+            "Michael Qizhe Shieh"
+        ],
+        "pdf": "https://arxiv.org/pdf/2511.03276",
+        "abstract": "Under strictly controlled pre-training settings, we observe a Crossover: when unique data is limited, diffusion language models (DLMs) consistently surpass autoregressive (AR) models by training for more epochs. The crossover shifts later with more or higher-quality data, earlier with larger models, and persists across dense and sparse architectures. We attribute the gains to three compounding factors: (1) any-order modeling, (2) super-dense compute from iterative bidirectional denoising, and (3) built-in Monte Carlo augmentation; input or parameter noise improves AR under data constraint but cannot close the gap. At scale, a 1.7B DLM trained with a ~1.5T-token compute budget on 10B unique Python tokens overtakes an AR coder trained with strictly matched settings. In addition, a 1B-parameter DLM achieves > 56% accuracy on HellaSwag and > 33% on MMLU using only 1B tokens, without any special tricks, just by repeating standard pre-training data. We also show that rising validation cross-entropy does not imply degraded downstream performance in this regime.",
+        "tags": [
+            "Diffusion"
+        ]
+    },
+    {
+        "id": 2,
+        "title": "UniAVGen: Unified Audio and Video Generation with Asymmetric Cross-Modal Interactions",
+        "author": [
+            "Guozhen Zhang",
+            "Zixiang Zhou",
+            "Teng Hu",
+            "Ziqiao Peng",
+            "Youliang Zhang",
+            "Yi Chen",
+            "Yuan Zhou",
+            "Qinglin Lu",
+            "Limin Wang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2511.03334",
+        "abstract": "Due to the lack of effective cross-modal modeling, existing open-source audio-video generation methods often exhibit compromised lip synchronization and insufficient semantic consistency. To mitigate these drawbacks, we propose UniAVGen, a unified framework for joint audio and video generation. UniAVGen is anchored in a dual-branch joint synthesis architecture, incorporating two parallel Diffusion Transformers (DiTs) to build a cohesive cross-modal latent space. At its heart lies an Asymmetric Cross-Modal Interaction mechanism, which enables bidirectional, temporally aligned cross-attention, thus ensuring precise spatiotemporal synchronization and semantic consistency. Furthermore, this cross-modal interaction is augmented by a Face-Aware Modulation module, which dynamically prioritizes salient regions in the interaction process. To enhance generative fidelity during inference, we additionally introduce Modality-Aware Classifier-Free Guidance, a novel strategy that explicitly amplifies cross-modal correlation signals. Notably, UniAVGen's robust joint synthesis design enables seamless unification of pivotal audio-video tasks within a single model, such as joint audio-video generation and continuation, video-to-audio dubbing, and audio-driven video synthesis. Comprehensive experiments validate that, with far fewer training samples (1.3M vs. 30.1M), UniAVGen delivers overall advantages in audio-video synchronization, timbre consistency, and emotion consistency.",
+        "tags": [
+            "Diffusion",
+            "Video Generation"
+        ]
+    },
+    {
+        "id": 3,
+        "title": "LEGO-Eval: Towards Fine-Grained Evaluation on Synthesizing 3D Embodied Environments with Tool Augmentation",
+        "author": [
+            "Gyeom Hwangbo",
+            "Hyungjoo Chae",
+            "Minseok Kang",
+            "Hyeonjong Ju",
+            "Soohyun Oh",
+            "Jinyoung Yeo"
+        ],
+        "pdf": "https://arxiv.org/pdf/2511.03001",
+        "abstract": "Despite recent progress in using Large Language Models (LLMs) for automatically generating 3D scenes, generated scenes often lack realistic spatial layouts and object attributes found in real-world environments. As this problem stems from insufficiently detailed, coarse-grained instructions, advancing 3D scene synthesis guided by more detailed, fine-grained instructions that reflect real-world environments becomes crucial. Without such realistic scenes, training embodied agents in unrealistic environments can lead them to learn priors that diverge significantly from real-world physics and semantics, degrading their performance when deployed. Thus, verifying the alignment between the fine-grained instruction and the generated scene is essential for effective learning. However, current evaluation methods, such as CLIPScore and vision-language models (VLMs), often fail to reliably assess such alignment. This shortcoming arises primarily from their shallow understanding of 3D scenes, which often leads to improperly grounded scene components. To address this, we introduce LEGO-Eval, an evaluation framework equipped with diverse tools designed to explicitly ground scene components, enabling more accurate alignment assessments. We also present LEGO-Bench, a benchmark of detailed instructions that specify complex layouts and attributes of real-world environments. Experiments demonstrate that LEGO-Eval outperforms VLM-as-a-judge by 0.41 F1 score in assessing scene-instruction alignment. Benchmarking with LEGO-Bench reveals significant limitations in current generation methods. Across all evaluated approaches, success rates reached at most 10% in generating scenes that fully align with fine-grained instructions.",
+        "tags": [
+            "3D",
+            "LLM",
+            "VLM"
+        ]
+    },
+    {
+        "id": 4,
+        "title": "Orion-MSP: Multi-Scale Sparse Attention for Tabular In-Context Learning",
+        "author": [
+            "Mohamed Bouadi",
+            "Pratinav Seth",
+            "Aditya Tanna",
+            "Vinay Kumar Sankarapu"
+        ],
+        "pdf": "https://arxiv.org/pdf/2511.02818",
+        "abstract": "Tabular data remain the predominant format for real-world applications. Yet, developing effective neural models for tabular data remains challenging due to heterogeneous feature types and complex interactions occurring at multiple scales. Recent advances in tabular in-context learning (ICL), such as TabPFN and TabICL, have achieved state-of-the-art performance comparable to gradient-boosted trees (GBTs) without task-specific fine-tuning. However, current architectures exhibit key limitations: (1) single-scale feature processing that overlooks hierarchical dependencies, (2) dense attention with quadratic scaling in table width, and (3) strictly sequential component processing that prevents iterative representation refinement and cross-component communication. To address these challenges, we introduce Orion-MSP, a tabular ICL architecture featuring three key innovations: (1) multi-scale processing to capture hierarchical feature interactions; (2) block-sparse attention combining windowed, global, and random patterns for scalable efficiency and long-range connectivity; and (3) a Perceiver-style memory enabling safe bidirectional information flow across components. Across diverse benchmarks, Orion-MSP matches or surpasses state-of-the-art performance while scaling effectively to high-dimensional tables, establishing a new standard for efficient tabular in-context learning. The model is publicly available at https://github.com/Lexsi-Labs/Orion-MSP .",
+        "tags": []
+    },
+    {
+        "id": 5,
+        "title": "TabTune: A Unified Library for Inference and Fine-Tuning Tabular Foundation Models",
+        "author": [
+            "Aditya Tanna",
+            "Pratinav Seth",
+            "Mohamed Bouadi",
+            "Utsav Avaiya",
+            "Vinay Kumar Sankarapu"
+        ],
+        "pdf": "https://arxiv.org/pdf/2511.02802",
+        "abstract": "Tabular foundation models represent a growing paradigm in structured data learning, extending the benefits of large-scale pretraining to tabular domains. However, their adoption remains limited due to heterogeneous preprocessing pipelines, fragmented APIs, inconsistent fine-tuning procedures, and the absence of standardized evaluation for deployment-oriented metrics such as calibration and fairness. We present TabTune, a unified library that standardizes the complete workflow for tabular foundation models through a single interface. TabTune provides consistent access to seven state-of-the-art models supporting multiple adaptation strategies, including zero-shot inference, meta-learning, supervised fine-tuning (SFT), and parameter-efficient fine-tuning (PEFT). The framework automates model-aware preprocessing, manages architectural heterogeneity internally, and integrates evaluation modules for performance, calibration, and fairness. Designed for extensibility and reproducibility, TabTune enables consistent benchmarking of adaptation strategies of tabular foundation models.",
+        "tags": []
+    },
+    {
+        "id": 6,
+        "title": "Kinematify: Open-Vocabulary Synthesis of High-DoF Articulated Objects",
+        "author": [
+            "Jiawei Wang",
+            "Dingyou Wang",
+            "Jiaming Hu",
+            "Qixuan Zhang",
+            "Jingyi Yu",
+            "Lan Xu"
+        ],
+        "pdf": "https://arxiv.org/pdf/2511.01294",
+        "abstract": "A deep understanding of kinematic structures and movable components is essential for enabling robots to manipulate objects and model their own articulated forms. Such understanding is captured through articulated objects, which are essential for tasks such as physical simulation, motion planning, and policy learning. However, creating these models, particularly for objects with high degrees of freedom (DoF), remains a significant challenge. Existing methods typically rely on motion sequences or strong assumptions from hand-curated datasets, which hinders scalability. In this paper, we introduce Kinematify, an automated framework that synthesizes articulated objects directly from arbitrary RGB images or textual descriptions. Our method addresses two core challenges: (i) inferring kinematic topologies for high-DoF objects and (ii) estimating joint parameters from static geometry. To achieve this, we combine MCTS search for structural inference with geometry-driven optimization for joint reasoning, producing physically consistent and functionally valid descriptions. We evaluate Kinematify on diverse inputs from both synthetic and real-world environments, demonstrating improvements in registration and kinematic topology accuracy over prior work.",
+        "tags": []
+    },
+    {
+        "id": 7,
+        "title": "MME-CC: A Challenging Multi-Modal Evaluation Benchmark of Cognitive Capacity",
+        "author": [
+            "Kaiyuan Zhang",
+            "Chenghao Yang",
+            "Zhoufutu Wen",
+            "Sihang Yuan",
+            "Qiuyue Wang",
+            "Chaoyi Huang",
+            "Guosheng Zhu",
+            "He Wang",
+            "Huawenyu Lu",
+            "Jianing Wen",
+            "Jianpeng Jiao",
+            "Lishu Luo",
+            "Longxiang Liu",
+            "Sijin Wu",
+            "Xiaolei Zhu",
+            "Xuanliang Zhang",
+            "Ge Zhang",
+            "Yi Lin",
+            "Guang Shi",
+            "Chaoyou Fu",
+            "Wenhao Huang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2511.03146",
+        "abstract": "As reasoning models scale rapidly, the essential role of multimodality in human cognition has come into sharp relief, driving a growing need to probe vision-centric cognitive behaviors. Yet, existing multimodal benchmarks either overemphasize textual reasoning or fall short of systematically capturing vision-centric cognitive behaviors, leaving the cognitive capacity of MLLMs insufficiently assessed. To address this limitation, we introduce MME-CC (Multi-Modal Evaluation benchmark of Cognitive Capacity), a vision-grounded benchmark that organizes 11 representative reasoning tasks into three fundamental categories of visual information: spatial, geometric, and knowledge-based reasoning, and provides fine-grained analyses of MLLMs' cognitive capacity across these dimensions. Based on MME-CC, we conduct extensive experiments over 16 representative MLLMs. Our study reveals that closed-source models currently lead overall (e.g., 42.66 for Gemini-2.5-Pro vs. 30.45 for GLM-4.5V), while spatial and geometric reasoning remain broadly weak (less than or equal to 30%). We further identify common error patterns, including orientation mistakes, fragile cross-view identity persistence, and poor adherence to counterfactual instructions, and observe that Chain-of-Thought typically follows a three-stage process (extract -> reason -> verify) with heavy reliance on visual extraction. We hope this work catalyzes a shift toward treating the cognitive capacity of MLLMs as central to both evaluation and model design.",
+        "tags": [
+            "CoT",
+            "GLM"
+        ]
+    },
+    {
+        "id": 8,
+        "title": "LiveTradeBench: Seeking Real-World Alpha with Large Language Models",
+        "author": [
+            "Haofei Yu",
+            "Fenghai Li",
+            "Jiaxuan You"
+        ],
+        "pdf": "https://arxiv.org/pdf/2511.03628",
+        "abstract": "Large language models (LLMs) achieve strong performance across benchmarks--from knowledge quizzes and math reasoning to web-agent tasks--but these tests occur in static settings, lacking real dynamics and uncertainty. Consequently, they evaluate isolated reasoning or problem-solving rather than decision-making under uncertainty. To address this, we introduce LiveTradeBench, a live trading environment for evaluating LLM agents in realistic and evolving markets. LiveTradeBench follows three design principles: (i) Live data streaming of market prices and news, eliminating dependence on offline backtesting and preventing information leakage while capturing real-time uncertainty; (ii) a portfolio-management abstraction that extends control from single-asset actions to multi-asset allocation, integrating risk management and cross-asset reasoning; and (iii) multi-market evaluation across structurally distinct environments--U.S. stocks and Polymarket prediction markets--differing in volatility, liquidity, and information flow. At each step, an agent observes prices, news, and its portfolio, then outputs percentage allocations that balance risk and return. Using LiveTradeBench, we run 50-day live evaluations of 21 LLMs across families. Results show that (1) high LMArena scores do not imply superior trading outcomes; (2) models display distinct portfolio styles reflecting risk appetite and reasoning dynamics; and (3) some LLMs effectively leverage live signals to adapt decisions. These findings expose a gap between static evaluation and real-world competence, motivating benchmarks that test sequential decision making and consistency under live uncertainty.",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 9,
+        "title": "CostBench: Evaluating Multi-Turn Cost-Optimal Planning and Adaptation in Dynamic Environments for LLM Tool-Use Agents",
+        "author": [
+            "Jiayu Liu",
+            "Cheng Qian",
+            "Zhaochen Su",
+            "Qing Zong",
+            "Shijue Huang",
+            "Bingxiang He",
+            "Yi R. Fung"
+        ],
+        "pdf": "https://arxiv.org/pdf/2511.02734",
+        "abstract": "Current evaluations of Large Language Model (LLM) agents primarily emphasize task completion, often overlooking resource efficiency and adaptability. This neglects a crucial capability: agents' ability to devise and adjust cost-optimal plans in response to changing environments. To bridge this gap, we introduce CostBench, a scalable, cost-centric benchmark designed to evaluate agents' economic reasoning and replanning abilities. Situated in the travel-planning domain, CostBench comprises tasks solvable via multiple sequences of atomic and composite tools with diverse, customizable costs. It also supports four types of dynamic blocking events, such as tool failures and cost changes, to simulate real-world unpredictability and necessitate agents to adapt in real time. Evaluating leading open-sourced and proprietary models on CostBench reveals a substantial gap in cost-aware planning: agents frequently fail to identify cost-optimal solutions in static settings, with even GPT-5 achieving less than 75% exact match rate on the hardest tasks, and performance further dropping by around 40% under dynamic conditions. By diagnosing these weaknesses, CostBench lays the groundwork for developing future agents that are both economically rational and robust.",
+        "tags": [
+            "GPT",
+            "LLM"
+        ]
+    },
+    {
+        "id": 10,
+        "title": "The Sequential Edge: Inverse-Entropy Voting Beats Parallel Self-Consistency at Matched Compute",
+        "author": [
+            "Aman Sharma",
+            "Paras Chopra"
+        ],
+        "pdf": "https://arxiv.org/pdf/2511.02309",
+        "abstract": "We revisit test-time scaling for language model reasoning and ask a fundamental question: at equal token budget and compute, is it better to run multiple independent chains in parallel, or to run fewer chains that iteratively refine through sequential steps? Through comprehensive evaluation across 5 state-of-the-art open source models and 3 challenging reasoning benchmarks, we find that sequential scaling where chains explicitly build upon previous attempts consistently outperforms the dominant parallel self-consistency paradigm in 95.6% of configurations with gains in accuracy upto 46.7%. Further, we introduce inverse-entropy weighted voting, a novel training-free method to further boost the accuracy of sequential scaling. By weighing answers in proportion to the inverse entropy of their reasoning chains, we increase our success rate over parallel majority and establish it as the optimal test-time scaling strategy. Our findings fundamentally challenge the parallel reasoning orthodoxy that has dominated test-time scaling since Wang et al.'s self-consistency decoding (Wang et al., 2022), positioning sequential refinement as the robust default for modern LLM reasoning and necessitating a paradigm shift in how we approach inference-time optimization.",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 11,
+        "title": "Jr. AI Scientist and Its Risk Report: Autonomous Scientific Exploration from a Baseline Paper",
+        "author": [
+            "Atsuyuki Miyai",
+            "Mashiro Toyooka",
+            "Takashi Otonari",
+            "Zaiying Zhao",
+            "Kiyoharu Aizawa"
+        ],
+        "pdf": "https://arxiv.org/pdf/2511.04583",
+        "abstract": "Understanding the current capabilities and risks of AI Scientist systems is essential for ensuring trustworthy and sustainable AI-driven scientific progress while preserving the integrity of the academic ecosystem. To this end, we develop Jr. AI Scientist, a state-of-the-art autonomous AI scientist system that mimics the core research workflow of a novice student researcher: Given the baseline paper from the human mentor, it analyzes its limitations, formulates novel hypotheses for improvement, validates them through rigorous experimentation, and writes a paper with the results. Unlike previous approaches that assume full automation or operate on small-scale code, Jr. AI Scientist follows a well-defined research workflow and leverages modern coding agents to handle complex, multi-file implementations, leading to scientifically valuable contributions. For evaluation, we conducted automated assessments using AI Reviewers, author-led evaluations, and submissions to Agents4Science, a venue dedicated to AI-driven scientific contributions. The findings demonstrate that Jr. AI Scientist generates papers receiving higher review scores than existing fully automated systems. Nevertheless, we identify important limitations from both the author evaluation and the Agents4Science reviews, indicating the potential risks of directly applying current AI Scientist systems and key challenges for future research. Finally, we comprehensively report various risks identified during development. We hope these insights will deepen understanding of current progress and risks in AI Scientist development.",
+        "tags": []
+    },
+    {
+        "id": 12,
+        "title": "Grounded Misunderstandings in Asymmetric Dialogue: A Perspectivist Annotation Scheme for MapTask",
+        "author": [
+            "Nan Li",
+            "Albert Gatt",
+            "Massimo Poesio"
+        ],
+        "pdf": "https://arxiv.org/pdf/2511.03718",
+        "abstract": "Collaborative dialogue relies on participants incrementally establishing common ground, yet in asymmetric settings they may believe they agree while referring to different entities. We introduce a perspectivist annotation scheme for the HCRC MapTask corpus (Anderson et al., 1991) that separately captures speaker and addressee grounded interpretations for each reference expression, enabling us to trace how understanding emerges, diverges, and repairs over time. Using a scheme-constrained LLM annotation pipeline, we obtain 13k annotated reference expressions with reliability estimates and analyze the resulting understanding states. The results show that full misunderstandings are rare once lexical variants are unified, but multiplicity discrepancies systematically induce divergences, revealing how apparent grounding can mask referential misalignment. Our framework provides both a resource and an analytic lens for studying grounded misunderstanding and for evaluating (V)LLMs' capacity to model perspective-dependent grounding in collaborative dialogue.",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 13,
+        "title": "Let Multimodal Embedders Learn When to Augment Query via Adaptive Query Augmentation",
+        "author": [
+            "Wongyu Kim",
+            "Hochang Lee",
+            "Sanghak Lee",
+            "Yoonsung Kim",
+            "Jaehyun Park"
+        ],
+        "pdf": "https://arxiv.org/pdf/2511.02358",
+        "abstract": "Query augmentation makes queries more meaningful by appending further information to the queries to find relevant documents. Current studies have proposed Large Language Model (LLM)-based embedders, which learn representation for embedding and generation for query augmentation in a multi-task manner by leveraging the generative capabilities of LLM. During inference, these jointly trained embedders have conducted query augmentation followed by embedding, showing effective results. However, augmenting every query leads to substantial embedding latency and query augmentation can be detrimental to performance for some queries. Also, previous methods have not been explored in multimodal environments. To tackle these problems, we propose M-Solomon, a universal multimodal embedder that can adaptively determine when to augment queries. Our approach first divides the queries of the training datasets into two groups at the dataset level. One includes queries that require augmentation and the other includes queries that do not. Then, we introduces a synthesis process that generates appropriate augmentations for queries that require them by leveraging a powerful Multimodal LLM (MLLM). Next, we present adaptive query augmentation. Through this step, M-Solomon can conduct query augmentation only when necessary by learning to generate synthetic augmentations with the prefix /augment for queries that demand them and to generate the simple string /embed for others. Experimental results showed that M-Solomon not only surpassed the baseline without augmentation by a large margin but also outperformed the baseline that always used augmentation, providing much faster embedding latency.",
+        "tags": [
+            "LLM"
+        ]
+    }
+]

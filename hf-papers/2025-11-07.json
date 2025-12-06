@@ -1,0 +1,426 @@
+[
+    {
+        "id": 1,
+        "title": "Thinking with Video: Video Generation as a Promising Multimodal Reasoning Paradigm",
+        "author": [
+            "Jingqi Tong",
+            "Yurong Mou",
+            "Hangcheng Li",
+            "Mingzhe Li",
+            "Yongzhuo Yang",
+            "Ming Zhang",
+            "Qiguang Chen",
+            "Tianyi Liang",
+            "Xiaomeng Hu",
+            "Yining Zheng",
+            "Xinchi Chen",
+            "Jun Zhao",
+            "Xuanjing Huang",
+            "Xipeng Qiu"
+        ],
+        "pdf": "https://arxiv.org/pdf/2511.04570",
+        "abstract": "\"Thinking with Text\" and \"Thinking with Images\" paradigm significantly improve the reasoning ability of large language models (LLMs) and Vision Language Models (VLMs). However, these paradigms have inherent limitations. (1) Images capture only single moments and fail to represent dynamic processes or continuous changes, and (2) The separation of text and vision as distinct modalities, hindering unified multimodal understanding and generation. To overcome these limitations, we introduce \"Thinking with Video\", a new paradigm that leverages video generation models, such as Sora-2, to bridge visual and textual reasoning in a unified temporal framework. To support this exploration, we developed the Video Thinking Benchmark (VideoThinkBench). VideoThinkBench encompasses two task categories: (1) vision-centric tasks (e.g., Eyeballing Puzzles), and (2) text-centric tasks (e.g., subsets of GSM8K, MMMU). Our evaluation establishes Sora-2 as a capable reasoner. On vision-centric tasks, Sora-2 is generally comparable to state-of-the-art (SOTA) VLMs, and even surpasses VLMs on several tasks, such as Eyeballing Games. On text-centric tasks, Sora-2 achieves 92% accuracy on MATH, and 75.53% accuracy on MMMU. Furthermore, we systematically analyse the source of these abilities. We also find that self-consistency and in-context learning can improve Sora-2's performance. In summary, our findings demonstrate that the video generation model is the potential unified multimodal understanding and generation model, positions \"thinking with video\" as a unified multimodal reasoning paradigm.",
+        "tags": [
+            "LLM",
+            "Sora",
+            "VLM",
+            "Video Generation"
+        ]
+    },
+    {
+        "id": 2,
+        "title": "V-Thinker: Interactive Thinking with Images",
+        "author": [
+            "Runqi Qiao",
+            "Qiuna Tan",
+            "Minghan Yang",
+            "Guanting Dong",
+            "Peiqing Yang",
+            "Shiqiang Lang",
+            "Enhui Wan",
+            "Xiaowan Wang",
+            "Yida Xu",
+            "Lan Yang",
+            "Chong Sun",
+            "Chen Li",
+            "Honggang Zhang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2511.04460",
+        "abstract": "Empowering Large Multimodal Models (LMMs) to deeply integrate image interaction with long-horizon reasoning capabilities remains a long-standing challenge in this field. Recent advances in vision-centric reasoning explore a promising \"Thinking with Images\" paradigm for LMMs, marking a shift from image-assisted reasoning to image-interactive thinking. While this milestone enables models to focus on fine-grained image regions, progress remains constrained by limited visual tool spaces and task-specific workflow designs. To bridge this gap, we present V-Thinker, a general-purpose multimodal reasoning assistant that enables interactive, vision-centric thinking through end-to-end reinforcement learning. V-Thinker comprises two key components: (1) a Data Evolution Flywheel that automatically synthesizes, evolves, and verifies interactive reasoning datasets across three dimensions-diversity, quality, and difficulty; and (2) a Visual Progressive Training Curriculum that first aligns perception via point-level supervision, then integrates interactive reasoning through a two-stage reinforcement learning framework. Furthermore, we introduce VTBench, an expert-verified benchmark targeting vision-centric interactive reasoning tasks. Extensive experiments demonstrate that V-Thinker consistently outperforms strong LMM-based baselines in both general and interactive reasoning scenarios, providing valuable insights for advancing image-interactive reasoning applications.",
+        "tags": [
+            "RL"
+        ]
+    },
+    {
+        "id": 3,
+        "title": "Scaling Agent Learning via Experience Synthesis",
+        "author": [
+            "Zhaorun Chen",
+            "Zhuokai Zhao",
+            "Kai Zhang",
+            "Bo Liu",
+            "Qi Qi",
+            "Yifan Wu",
+            "Tarun Kalluri",
+            "Sara Cao",
+            "Yuanhao Xiong",
+            "Haibo Tong",
+            "Huaxiu Yao",
+            "Hengduo Li",
+            "Jiacheng Zhu",
+            "Xian Li",
+            "Dawn Song",
+            "Bo Li",
+            "Jason Weston",
+            "Dat Huynh"
+        ],
+        "pdf": "https://arxiv.org/pdf/2511.03773",
+        "abstract": "While reinforcement learning (RL) can empower large language model (LLM) agents by enabling self-improvement through interaction, its practical adoption remains challenging due to costly rollouts, limited task diversity, unreliable reward signals, and infrastructure complexity, all of which obstruct the collection of scalable experience data. To address these challenges, we introduce DreamGym, the first unified framework designed to synthesize diverse experiences with scalability in mind to enable effective online RL training for autonomous agents. Rather than relying on expensive real-environment rollouts, DreamGym distills environment dynamics into a reasoning-based experience model that derives consistent state transitions and feedback signals through step-by-step reasoning, enabling scalable agent rollout collection for RL. To improve the stability and quality of transitions, DreamGym leverages an experience replay buffer initialized with offline real-world data and continuously enriched with fresh interactions to actively support agent training. To improve knowledge acquisition, DreamGym adaptively generates new tasks that challenge the current agent policy, enabling more effective online curriculum learning. Experiments across diverse environments and agent backbones demonstrate that DreamGym substantially improves RL training, both in fully synthetic settings and in sim-to-real transfer scenarios. On non-RL-ready tasks like WebArena, DreamGym outperforms all baselines by over 30%. And in RL-ready but costly settings, it matches GRPO and PPO performance using only synthetic interactions. When transferring a policy trained purely on synthetic experiences to real-environment RL, DreamGym yields significant additional performance gains while requiring far fewer real-world interactions, providing a scalable warm-start strategy for general-purpose RL.",
+        "tags": [
+            "GRPO",
+            "LLM",
+            "PPO",
+            "RL"
+        ]
+    },
+    {
+        "id": 4,
+        "title": "Cambrian-S: Towards Spatial Supersensing in Video",
+        "author": [
+            "Shusheng Yang",
+            "Jihan Yang",
+            "Pinzhi Huang",
+            "Ellis Brown",
+            "Zihao Yang",
+            "Yue Yu",
+            "Shengbang Tong",
+            "Zihan Zheng",
+            "Yifan Xu",
+            "Muhan Wang",
+            "Daohan Lu",
+            "Rob Fergus",
+            "Yann LeCun",
+            "Li Fei-Fei",
+            "Saining Xie"
+        ],
+        "pdf": "https://arxiv.org/pdf/2511.04670",
+        "abstract": "We argue that progress in true multimodal intelligence calls for a shift from reactive, task-driven systems and brute-force long context towards a broader paradigm of supersensing. We frame spatial supersensing as four stages beyond linguistic-only understanding: semantic perception (naming what is seen), streaming event cognition (maintaining memory across continuous experiences), implicit 3D spatial cognition (inferring the world behind pixels), and predictive world modeling (creating internal models that filter and organize information). Current benchmarks largely test only the early stages, offering narrow coverage of spatial cognition and rarely challenging models in ways that require true world modeling. To drive progress in spatial supersensing, we present VSI-SUPER, a two-part benchmark: VSR (long-horizon visual spatial recall) and VSC (continual visual spatial counting). These tasks require arbitrarily long video inputs yet are resistant to brute-force context expansion. We then test data scaling limits by curating VSI-590K and training Cambrian-S, achieving +30% absolute improvement on VSI-Bench without sacrificing general capabilities. Yet performance on VSI-SUPER remains limited, indicating that scale alone is insufficient for spatial supersensing. We propose predictive sensing as a path forward, presenting a proof-of-concept in which a self-supervised next-latent-frame predictor leverages surprise (prediction error) to drive memory and event segmentation. On VSI-SUPER, this approach substantially outperforms leading proprietary baselines, showing that spatial supersensing requires models that not only see but also anticipate, select, and organize experience.",
+        "tags": [
+            "3D",
+            "Segmentation"
+        ]
+    },
+    {
+        "id": 5,
+        "title": "NVIDIA Nemotron Nano V2 VL",
+        "author": [
+            "NVIDIA",
+            "Amala Sanjay Deshmukh",
+            "Kateryna Chumachenko",
+            "Tuomas Rintamaki",
+            "Matthieu Le",
+            "Tyler Poon",
+            "Danial Mohseni Taheri",
+            "Ilia Karmanov",
+            "Guilin Liu",
+            "Jarno Seppanen",
+            "Guo Chen",
+            "Karan Sapra",
+            "Zhiding Yu",
+            "Adi Renduchintala",
+            "Charles Wang",
+            "Peter Jin",
+            "Arushi Goel",
+            "Mike Ranzinger",
+            "Lukas Voegtle",
+            "Philipp Fischer",
+            "Timo Roman",
+            "Wei Ping",
+            "Boxin Wang",
+            "Zhuolin Yang",
+            "Nayeon Lee",
+            "Shaokun Zhang",
+            "Fuxiao Liu",
+            "Zhiqi Li",
+            "Di Zhang",
+            "Greg Heinrich",
+            "Hongxu Yin",
+            "Song Han",
+            "Pavlo Molchanov",
+            "Parth Mannan",
+            "Yao Xu",
+            "Jane Polak Scowcroft",
+            "Tom Balough",
+            "Subhashree Radhakrishnan",
+            "Paris Zhang",
+            "Sean Cha",
+            "Ratnesh Kumar",
+            "Zaid Pervaiz Bhat",
+            "Jian Zhang",
+            "Darragh Hanley",
+            "Pritam Biswas",
+            "Jesse Oliver",
+            "Kevin Vasques",
+            "Roger Waleffe",
+            "Duncan Riach",
+            "Oluwatobi Olabiyi",
+            "Ameya Sunil Mahabaleshwarkar",
+            "Bilal Kartal",
+            "Pritam Gundecha",
+            "Khanh Nguyen",
+            "Alexandre Milesi",
+            "Eugene Khvedchenia",
+            "Ran Zilberstein",
+            "Ofri Masad",
+            "Natan Bagrov",
+            "Nave Assaf",
+            "Tomer Asida",
+            "Daniel Afrimi",
+            "Amit Zuker",
+            "Netanel Haber",
+            "Zhiyu Cheng",
+            "Jingyu Xin",
+            "Di Wu",
+            "Nik Spirin",
+            "Maryam Moosaei",
+            "Roman Ageev",
+            "Vanshil Atul Shah",
+            "Yuting Wu",
+            "Daniel Korzekwa",
+            "Unnikrishnan Kizhakkemadam Sreekumar",
+            "Wanli Jiang",
+            "Padmavathy Subramanian",
+            "Alejandra Rico",
+            "Sandip Bhaskar",
+            "Saeid Motiian",
+            "Kedi Wu",
+            "Annie Surla",
+            "Chia-Chih Chen",
+            "Hayden Wolff",
+            "Matthew Feinberg",
+            "Melissa Corpuz",
+            "Marek Wawrzos",
+            "Eileen Long",
+            "Aastha Jhunjhunwala",
+            "Paul Hendricks",
+            "Farzan Memarian",
+            "Benika Hall",
+            "Xin-Yu Wang",
+            "David Mosallanezhad",
+            "Soumye Singhal",
+            "Luis Vega",
+            "Katherine Cheung",
+            "Krzysztof Pawelec",
+            "Michael Evans",
+            "Katherine Luna",
+            "Jie Lou",
+            "\n    et al. (23 additional authors not shown)"
+        ],
+        "pdf": "https://arxiv.org/pdf/2511.03929",
+        "abstract": "We introduce Nemotron Nano V2 VL, the latest model of the Nemotron vision-language series designed for strong real-world document understanding, long video comprehension, and reasoning tasks. Nemotron Nano V2 VL delivers significant improvements over our previous model, Llama-3.1-Nemotron-Nano-VL-8B, across all vision and text domains through major enhancements in model architecture, datasets, and training recipes. Nemotron Nano V2 VL builds on Nemotron Nano V2, a hybrid Mamba-Transformer LLM, and innovative token reduction techniques to achieve higher inference throughput in long document and video scenarios. We are releasing model checkpoints in BF16, FP8, and FP4 formats and sharing large parts of our datasets, recipes and training code.",
+        "tags": [
+            "LLM",
+            "LLaMA",
+            "Mamba",
+            "Transformer"
+        ]
+    },
+    {
+        "id": 6,
+        "title": "GUI-360: A Comprehensive Dataset and Benchmark for Computer-Using Agents",
+        "author": [
+            "Jian Mu",
+            "Chaoyun Zhang",
+            "Chiming Ni",
+            "Lu Wang",
+            "Bo Qiao",
+            "Kartik Mathur",
+            "Qianhui Wu",
+            "Yuhang Xie",
+            "Xiaojun Ma",
+            "Mengyu Zhou",
+            "Si Qin",
+            "Liqun Li",
+            "Yu Kang",
+            "Minghua Ma",
+            "Qingwei Lin",
+            "Saravan Rajmohan",
+            "Dongmei Zhang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2511.04307",
+        "abstract": "We introduce GUI-360$^\\circ$, a large-scale, comprehensive dataset and benchmark suite designed to advance computer-using agents (CUAs). CUAs present unique challenges and is constrained by three persistent gaps: a scarcity of real-world CUA tasks, the lack of automated collection-and-annotation pipelines for multi-modal trajectories, and the absence of a unified benchmark that jointly evaluates GUI grounding, screen parsing, and action prediction.\nGUI-360$^\\circ$ addresses these gaps with an LLM-augmented, largely automated pipeline for query sourcing, environment-template construction, task instantiation, batched execution, and LLM-driven quality filtering. The released corpus contains over 1.2M executed action steps across thousands of trajectories in popular Windows office applications, and includes full-resolution screenshots, accessibility metadata when available, instantiated goals, intermediate reasoning traces, and both successful and failed action trajectories. The dataset supports three canonical tasks, GUI grounding, screen parsing, and action prediction, and a hybrid GUI+API action space that reflects modern agent designs. Benchmarking state-of-the-art vision--language models on GUI-360$^\\circ$ reveals substantial out-of-the-box shortcomings in grounding and action prediction; supervised fine-tuning and reinforcement learning yield significant gains but do not close the gap to human-level reliability. We release GUI-360$^\\circ$ and accompanying code to facilitate reproducible research and accelerate progress on robust desktop CUAs.\nThe full dataset has been made public on https://huggingface.co/datasets/vyokky/GUI-360.",
+        "tags": [
+            "LLM",
+            "RL",
+            "VLM"
+        ]
+    },
+    {
+        "id": 7,
+        "title": "Contamination Detection for VLMs using Multi-Modal Semantic Perturbation",
+        "author": [
+            "Jaden Park",
+            "Mu Cai",
+            "Feng Yao",
+            "Jingbo Shang",
+            "Soochahn Lee",
+            "Yong Jae Lee"
+        ],
+        "pdf": "https://arxiv.org/pdf/2511.03774",
+        "abstract": "Recent advances in Vision-Language Models (VLMs) have achieved state-of-the-art performance on numerous benchmark tasks. However, the use of internet-scale, often proprietary, pretraining corpora raises a critical concern for both practitioners and users: inflated performance due to test-set leakage. While prior works have proposed mitigation strategies such as decontamination of pretraining data and benchmark redesign for LLMs, the complementary direction of developing detection methods for contaminated VLMs remains underexplored. To address this gap, we deliberately contaminate open-source VLMs on popular benchmarks and show that existing detection approaches either fail outright or exhibit inconsistent behavior. We then propose a novel simple yet effective detection method based on multi-modal semantic perturbation, demonstrating that contaminated models fail to generalize under controlled perturbations. Finally, we validate our approach across multiple realistic contamination strategies, confirming its robustness and effectiveness. The code and perturbed dataset will be released publicly.",
+        "tags": [
+            "Detection",
+            "LLM",
+            "VLM"
+        ]
+    },
+    {
+        "id": 8,
+        "title": "The Strong Lottery Ticket Hypothesis for Multi-Head Attention Mechanisms",
+        "author": [
+            "Hikari Otsuka",
+            "Daiki Chijiwa",
+            "Yasuyuki Okoshi",
+            "Daichi Fujiki",
+            "Susumu Takeuchi",
+            "Masato Motomura"
+        ],
+        "pdf": "https://arxiv.org/pdf/2511.04217",
+        "abstract": "The strong lottery ticket hypothesis (SLTH) conjectures that high-performing subnetworks, called strong lottery tickets (SLTs), are hidden in randomly initialized neural networks. Although recent theoretical studies have established the SLTH across various neural architectures, the SLTH for transformer architectures still lacks theoretical understanding. In particular, the current theory of the SLTH does not yet account for the multi-head attention (MHA) mechanism, a core component of transformers. To address this gap, we introduce a theoretical analysis of the existence of SLTs within MHAs. We prove that, if a randomly initialized MHA of $H$ heads and input dimension $d$ has the hidden dimension $O(d\\log(Hd^{3/2}))$ for the key and value, it contains an SLT that approximates an arbitrary MHA with the same input dimension with high probability. Furthermore, by leveraging this theory for MHAs, we extend the SLTH to transformers without normalization layers. We empirically validate our theoretical findings, demonstrating that the approximation error between the SLT within a source model (MHA and transformer) and an approximate target counterpart decreases exponentially by increasing the hidden dimension of the source model.",
+        "tags": [
+            "Transformer"
+        ]
+    },
+    {
+        "id": 9,
+        "title": "Benchmark Designers Should \"Train on the Test Set\" to Expose Exploitable Non-Visual Shortcuts",
+        "author": [
+            "Ellis Brown",
+            "Jihan Yang",
+            "Shusheng Yang",
+            "Rob Fergus",
+            "Saining Xie"
+        ],
+        "pdf": "https://arxiv.org/pdf/2511.04655",
+        "abstract": "Robust benchmarks are crucial for evaluating Multimodal Large Language Models (MLLMs). Yet we find that models can ace many multimodal benchmarks without strong visual understanding, instead exploiting biases, linguistic priors, and superficial patterns. This is especially problematic for vision-centric benchmarks that are meant to require visual inputs. We adopt a diagnostic principle for benchmark design: if a benchmark can be gamed, it will be. Designers should therefore try to ``game'' their own benchmarks first, using diagnostic and debiasing procedures to systematically identify and mitigate non-visual biases. Effective diagnosis requires directly ``training on the test set'' -- probing the released test set for its intrinsic, exploitable patterns.\nWe operationalize this standard with two components. First, we diagnose benchmark susceptibility using a ``Test-set Stress-Test'' (TsT) methodology. Our primary diagnostic tool involves fine-tuning a powerful Large Language Model via $k$-fold cross-validation on exclusively the non-visual, textual inputs of the test set to reveal shortcut performance and assign each sample a bias score $s(x)$. We complement this with a lightweight Random Forest-based diagnostic operating on hand-crafted features for fast, interpretable auditing. Second, we debias benchmarks by filtering high-bias samples using an ``Iterative Bias Pruning'' (IBP) procedure. Applying this framework to four benchmarks -- VSI-Bench, CV-Bench, MMMU, and VideoMME -- we uncover pervasive non-visual biases. As a case study, we apply our full framework to create VSI-Bench-Debiased, demonstrating reduced non-visual solvability and a wider vision-blind performance gap than the original.",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 10,
+        "title": "SIMS-V: Simulated Instruction-Tuning for Spatial Video Understanding",
+        "author": [
+            "Ellis Brown",
+            "Arijit Ray",
+            "Ranjay Krishna",
+            "Ross Girshick",
+            "Rob Fergus",
+            "Saining Xie"
+        ],
+        "pdf": "https://arxiv.org/pdf/2511.04668",
+        "abstract": "Despite impressive high-level video comprehension, multimodal language models struggle with spatial reasoning across time and space. While current spatial training approaches rely on real-world video data, obtaining diverse footage with precise spatial annotations remains a bottleneck. To alleviate this bottleneck, we present SIMS-V -- a systematic data-generation framework that leverages the privileged information of 3D simulators to create spatially-rich video training data for multimodal language models. Using this framework, we investigate which properties of simulated data drive effective real-world transfer through systematic ablations of question types, mixes, and scales. We identify a minimal set of three question categories (metric measurement, perspective-dependent reasoning, and temporal tracking) that prove most effective for developing transferable spatial intelligence, outperforming comprehensive coverage despite using fewer question types. These insights enable highly efficient training: our 7B-parameter video LLM fine-tuned on just 25K simulated examples outperforms the larger 72B baseline and achieves competitive performance with proprietary models on rigorous real-world spatial reasoning benchmarks. Our approach demonstrates robust generalization, maintaining performance on general video understanding while showing substantial improvements on embodied and real-world spatial tasks.",
+        "tags": [
+            "3D",
+            "LLM"
+        ]
+    },
+    {
+        "id": 11,
+        "title": "Learning Vision-Driven Reactive Soccer Skills for Humanoid Robots",
+        "author": [
+            "Yushi Wang",
+            "Changsheng Luo",
+            "Penghui Chen",
+            "Jianran Liu",
+            "Weijian Sun",
+            "Tong Guo",
+            "Kechang Yang",
+            "Biao Hu",
+            "Yangang Zhang",
+            "Mingguo Zhao"
+        ],
+        "pdf": "https://arxiv.org/pdf/2511.03996",
+        "abstract": "Humanoid soccer poses a representative challenge for embodied intelligence, requiring robots to operate within a tightly coupled perception-action loop. However, existing systems typically rely on decoupled modules, resulting in delayed responses and incoherent behaviors in dynamic environments, while real-world perceptual limitations further exacerbate these issues. In this work, we present a unified reinforcement learning-based controller that enables humanoid robots to acquire reactive soccer skills through the direct integration of visual perception and motion control. Our approach extends Adversarial Motion Priors to perceptual settings in real-world dynamic environments, bridging motion imitation and visually grounded dynamic control. We introduce an encoder-decoder architecture combined with a virtual perception system that models real-world visual characteristics, allowing the policy to recover privileged states from imperfect observations and establish active coordination between perception and action. The resulting controller demonstrates strong reactivity, consistently executing coherent and robust soccer behaviors across various scenarios, including real RoboCup matches.",
+        "tags": [
+            "RL"
+        ]
+    },
+    {
+        "id": 12,
+        "title": "How to Evaluate Speech Translation with Source-Aware Neural MT Metrics",
+        "author": [
+            "Mauro Cettolo",
+            "Marco Gaido",
+            "Matteo Negri",
+            "Sara Papi",
+            "Luisa Bentivogli"
+        ],
+        "pdf": "https://arxiv.org/pdf/2511.03295",
+        "abstract": "Automatic evaluation of speech-to-text translation (ST) systems is typically performed by comparing translation hypotheses with one or more reference translations. While effective to some extent, this approach inherits the limitation of reference-based evaluation that ignores valuable information from the source input. In machine translation (MT), recent progress has shown that neural metrics incorporating the source text achieve stronger correlation with human judgments. Extending this idea to ST, however, is not trivial because the source is audio rather than text, and reliable transcripts or alignments between source and references are often unavailable. In this work, we conduct the first systematic study of source-aware metrics for ST, with a particular focus on real-world operating conditions where source transcripts are not available. We explore two complementary strategies for generating textual proxies of the input audio, automatic speech recognition (ASR) transcripts, and back-translations of the reference translation, and introduce a novel two-step cross-lingual re-segmentation algorithm to address the alignment mismatch between synthetic sources and reference translations. Our experiments, carried out on two ST benchmarks covering 79 language pairs and six ST systems with diverse architectures and performance levels, show that ASR transcripts constitute a more reliable synthetic source than back-translations when word error rate is below 20%, while back-translations always represent a computationally cheaper but still effective alternative. Furthermore, our cross-lingual re-segmentation algorithm enables robust use of source-aware MT metrics in ST evaluation, paving the way toward more accurate and principled evaluation methodologies for speech translation.",
+        "tags": [
+            "Segmentation"
+        ]
+    },
+    {
+        "id": 13,
+        "title": "RDMA Point-to-Point Communication for LLM Systems",
+        "author": [
+            "Nandor Licker",
+            "Kevin Hu",
+            "Vladimir Zaytsev",
+            "Lequn Chen"
+        ],
+        "pdf": "https://arxiv.org/pdf/2510.27656",
+        "abstract": "Emerging Large Language Model (LLM) system patterns, such as disaggregated inference, Mixture-of-Experts (MoE) routing, and asynchronous reinforcement fine-tuning, require flexible point-to-point communication beyond simple collectives. Existing implementations are locked to specific Network Interface Controllers (NICs), hindering integration into inference engines and portability across hardware providers. We present TransferEngine, which bridges the functionality of common NICs to expose a uniform interface. TransferEngine exposes one-sided WriteImm operations with a ImmCounter primitive for completion notification, without ordering assumptions of network transport, transparently managing multiple NICs per GPU. We demonstrate peak throughput of 400 Gbps on both NVIDIA ConnectX-7 and AWS Elastic Fabric Adapter (EFA). We showcase TransferEngine through three production systems: (1) KvCache transfer for disaggregated inference with dynamic scaling, (2) RL weight updates achieving 1.3 seconds for trillion-parameter models, and (3) MoE dispatch/combine implementation exceeding DeepEP decode latency on ConnectX-7, with the first viable latencies on EFA. We demonstrate that our portable point-to-point communication complements collectives while avoiding lock-in.",
+        "tags": [
+            "LLM",
+            "MoE",
+            "RL"
+        ]
+    },
+    {
+        "id": 14,
+        "title": "SAIL-RL: Guiding MLLMs in When and How to Think via Dual-Reward RL Tuning",
+        "author": [
+            "Fangxun Shu",
+            "Yongjie Ye",
+            "Yue Liao",
+            "Zijian Kang",
+            "Weijie Yin",
+            "Jiacong Wang",
+            "Xiao Liang",
+            "Shuicheng Yan",
+            "Chao Feng"
+        ],
+        "pdf": "https://arxiv.org/pdf/2511.02280",
+        "abstract": "We introduce SAIL-RL, a reinforcement learning (RL) post-training framework that enhances the reasoning capabilities of multimodal large language models (MLLMs) by teaching them when and how to think. Existing approaches are limited by outcome-only supervision, which rewards correct answers without ensuring sound reasoning, and by uniform thinking strategies, which often lead to overthinking on simple tasks and underthinking on complex ones. SAIL-RL addresses these challenges with a dual reward system: the Thinking Reward, which evaluates reasoning quality through factual grounding, logical coherence, and answer consistency, and the Judging Reward, which adaptively determines whether deep reasoning or direct answering is appropriate. Experiments on the state-of-the-art SAIL-VL2 show that SAIL-RL improves reasoning and multimodal understanding benchmarks at both 4B and 8B scales, achieving competitive performance against commercial closed-source models such as GPT-4o, and substantially reduces hallucinations, establishing it as a principled framework for building more reliable and adaptive MLLMs. The code will be available at https://github.com/BytedanceDouyinContent/SAIL-RL.",
+        "tags": [
+            "GPT",
+            "LLM",
+            "RL"
+        ]
+    },
+    {
+        "id": 15,
+        "title": "EVTAR: End-to-End Try on with Additional Unpaired Visual Reference",
+        "author": [
+            "Liuzhuozheng Li",
+            "Yue Gong",
+            "Shanyuan Liu",
+            "Bo Cheng",
+            "Yuhang Ma",
+            "Liebucha Wu",
+            "Dengyang Jiang",
+            "Zanyi Wang",
+            "Dawei Leng",
+            "Yuhui Yin"
+        ],
+        "pdf": "https://arxiv.org/pdf/2511.00956",
+        "abstract": "We propose EVTAR, an End-to-End Virtual Try-on model with Additional Reference, that directly fits the target garment onto the person image while incorporating reference images to enhance try-on accuracy. Most existing virtual try-on approaches rely on complex inputs such as agnostic person images, human pose, densepose, or body keypoints, making them labor-intensive and impractical for real-world applications. In contrast, EVTAR adopts a two-stage training strategy, enabling simple inference with only the source image and the target garment inputs. Our model generates try-on results without masks, densepose, or segmentation maps. Moreover, EVTAR leverages additional reference images of different individuals wearing the same clothes to preserve garment texture and fine-grained details better. This mechanism is analogous to how humans consider reference models when choosing outfits, thereby simulating a more realistic and high-quality dressing effect. We enrich the training data with supplementary references and unpaired person images to support these capabilities. We evaluate EVTAR on two widely used benchmarks and diverse tasks, and the results consistently validate the effectiveness of our approach.",
+        "tags": [
+            "Segmentation",
+            "Virtual Try-On"
+        ]
+    }
+]
