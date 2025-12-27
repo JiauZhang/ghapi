@@ -1,0 +1,380 @@
+[
+    {
+        "id": 1,
+        "title": "VIDEOP2R: Video Understanding from Perception to Reasoning",
+        "author": [
+            "Yifan Jiang",
+            "Yueying Wang",
+            "Rui Zhao",
+            "Toufiq Parag",
+            "Zhimin Chen",
+            "Zhenyu Liao",
+            "Jayakrishnan Unnikrishnan"
+        ],
+        "pdf": "https://arxiv.org/pdf/2511.11113",
+        "abstract": "Reinforcement fine-tuning (RFT), a two-stage framework consisting of supervised fine-tuning (SFT) and reinforcement learning (RL) has shown promising results on improving reasoning ability of large language models (LLMs). Yet extending RFT to large video language models (LVLMs) remains challenging. We propose VideoP2R, a novel process-aware video RFT framework that enhances video reasoning by modeling perception and reasoning as distinct processes. In the SFT stage, we develop a three-step pipeline to generate VideoP2R-CoT-162K, a high-quality, process-aware chain-of-thought (CoT) dataset for perception and reasoning. In the RL stage, we introduce a novel process-aware group relative policy optimization (PA-GRPO) algorithm that supplies separate rewards for perception and reasoning. Extensive experiments show that VideoP2R achieves state-of-the-art (SotA) performance on six out of seven video reasoning and understanding benchmarks. Ablation studies further confirm the effectiveness of our process-aware modeling and PA-GRPO and demonstrate that model's perception output is information-sufficient for downstream reasoning.",
+        "tags": [
+            "CoT",
+            "GRPO",
+            "LLM",
+            "RL"
+        ]
+    },
+    {
+        "id": 2,
+        "title": "Think-at-Hard: Selective Latent Iterations to Improve Reasoning Language Models",
+        "author": [
+            "Tianyu Fu",
+            "Yichen You",
+            "Zekai Chen",
+            "Guohao Dai",
+            "Huazhong Yang",
+            "Yu Wang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2511.08577",
+        "abstract": "Improving reasoning capabilities of Large Language Models (LLMs), especially under parameter constraints, is crucial for real-world applications. Prior work proposes recurrent transformers, which allocate a fixed number of extra iterations per token to improve generation quality. After the first, standard forward pass, instead of verbalization, last-layer hidden states are fed back as inputs for additional iterations to refine token predictions. Yet we identify a latent overthinking phenomenon: easy token predictions that are already correct after the first pass are sometimes revised into errors in additional iterations. To address this, we propose Think-at-Hard (TaH), a dynamic latent thinking method that iterates deeper only at hard tokens. It employs a lightweight neural decider to trigger latent iterations only at tokens that are likely incorrect after the standard forward pass. During latent iterations, Low-Rank Adaptation (LoRA) modules shift the LLM objective from general next-token prediction to focused hard-token refinement. We further introduce a duo-causal attention mechanism that extends attention from the token sequence dimension to an additional iteration depth dimension. This enables cross-iteration information flow while maintaining full sequential parallelism. Experiments show that TaH boosts LLM reasoning performance across five challenging benchmarks while maintaining the same parameter count. Compared with baselines that iterate twice for all output tokens, TaH delivers 8.1-11.3% accuracy gains while exempting 94% of tokens from the second iteration. Against strong single-iteration Qwen3 models finetuned with the same data, it also delivers 4.0-5.0% accuracy gains. When allowing less than 3% additional parameters from LoRA and the iteration decider, the gains increase to 8.5-12.6% and 5.3-5.4%, respectively. Our code is available at https://github.com/thu-nics/TaH.",
+        "tags": [
+            "LLM",
+            "LoRA"
+        ]
+    },
+    {
+        "id": 3,
+        "title": "AraLingBench A Human-Annotated Benchmark for Evaluating Arabic Linguistic Capabilities of Large Language Models",
+        "author": [
+            "Mohammad Zbib",
+            "Hasan Abed Al Kader Hammoud",
+            "Sina Mukalled",
+            "Nadine Rizk",
+            "Fatima Karnib",
+            "Issam Lakkis",
+            "Ammar Mohanna",
+            "Bernard Ghanem"
+        ],
+        "pdf": "https://arxiv.org/pdf/2511.14295",
+        "abstract": "We present AraLingBench: a fully human annotated benchmark for evaluating the Arabic linguistic competence of large language models (LLMs). The benchmark spans five core categories: grammar, morphology, spelling, reading comprehension, and syntax, through 150 expert-designed multiple choice questions that directly assess structural language understanding. Evaluating 35 Arabic and bilingual LLMs reveals that current models demonstrate strong surface level proficiency but struggle with deeper grammatical and syntactic reasoning. AraLingBench highlights a persistent gap between high scores on knowledge-based benchmarks and true linguistic mastery, showing that many models succeed through memorization or pattern recognition rather than authentic comprehension. By isolating and measuring fundamental linguistic skills, AraLingBench provides a diagnostic framework for developing Arabic LLMs. The full evaluation code is publicly available on GitHub.",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 4,
+        "title": "A Style is Worth One Code: Unlocking Code-to-Style Image Generation with Discrete Style Space",
+        "author": [
+            "Huijie Liu",
+            "Shuhao Cui",
+            "Haoxiang Cao",
+            "Shuai Ma",
+            "Kai Wu",
+            "Guoliang Kang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2511.10555",
+        "abstract": "Innovative visual stylization is a cornerstone of artistic creation, yet generating novel and consistent visual styles remains a significant challenge. Existing generative approaches typically rely on lengthy textual prompts, reference images, or parameter-efficient fine-tuning to guide style-aware image generation, but often struggle with style consistency, limited creativity, and complex style representations. In this paper, we affirm that a style is worth one numerical code by introducing the novel task, code-to-style image generation, which produces images with novel, consistent visual styles conditioned solely on a numerical style code. To date, this field has only been primarily explored by the industry (e.g., Midjourney), with no open-source research from the academic community. To fill this gap, we propose CoTyle, the first open-source method for this task. Specifically, we first train a discrete style codebook from a collection of images to extract style embeddings. These embeddings serve as conditions for a text-to-image diffusion model (T2I-DM) to generate stylistic images. Subsequently, we train an autoregressive style generator on the discrete style embeddings to model their distribution, allowing the synthesis of novel style embeddings. During inference, a numerical style code is mapped to a unique style embedding by the style generator, and this embedding guides the T2I-DM to generate images in the corresponding style. Unlike existing methods, our method offers unparalleled simplicity and diversity, unlocking a vast space of reproducible styles from minimal input. Extensive experiments validate that CoTyle effectively turns a numerical code into a style controller, demonstrating a style is worth one code.",
+        "tags": [
+            "Diffusion",
+            "Text-to-Image"
+        ]
+    },
+    {
+        "id": 5,
+        "title": "Can World Simulators Reason? Gen-ViRe: A Generative Visual Reasoning Benchmark",
+        "author": [
+            "Xinxin Liu",
+            "Zhaopan Xu",
+            "Kai Wang",
+            "Yong Jae Lee",
+            "Yuzhang Shang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2511.13853",
+        "abstract": "While Chain-of-Thought (CoT) prompting enables sophisticated symbolic reasoning in LLMs, it remains confined to discrete text and cannot simulate the continuous, physics-governed dynamics of the real world. Recent video generation models have emerged as potential world simulators through Chain-of-Frames (CoF) reasoning -- materializing thought as frame-by-frame visual sequences, with each frame representing a physically-grounded reasoning step. Despite compelling demonstrations, a challenge persists: existing benchmarks, focusing on fidelity or alignment, do not assess CoF reasoning and thus cannot measure core cognitive abilities in multi-step planning, algorithmic logic, or abstract pattern extrapolation. This evaluation void prevents systematic understanding of model capabilities and principled guidance for improvement. We introduce Gen-ViRe (Generative Visual Reasoning Benchmark), a framework grounded in cognitive science and real-world AI applications, which decomposes CoF reasoning into six cognitive dimensions -- from perceptual logic to abstract planning -- and 24 subtasks. Through multi-source data curation, minimal prompting protocols, and hybrid VLM-assisted evaluation with detailed criteria, Gen-ViRe delivers the first quantitative assessment of video models as reasoners. Our experiments on SOTA systems reveal substantial discrepancies between impressive visual quality and actual reasoning depth, establishing baselines and diagnostic tools to advance genuine world simulators.",
+        "tags": [
+            "CoT",
+            "LLM",
+            "VLM",
+            "Video Generation"
+        ]
+    },
+    {
+        "id": 6,
+        "title": "MVI-Bench: A Comprehensive Benchmark for Evaluating Robustness to Misleading Visual Inputs in LVLMs",
+        "author": [
+            "Huiyi Chen",
+            "Jiawei Peng",
+            "Dehai Min",
+            "Changchang Sun",
+            "Kaijie Chen",
+            "Yan Yan",
+            "Xu Yang",
+            "Lu Cheng"
+        ],
+        "pdf": "https://arxiv.org/pdf/2511.14159",
+        "abstract": "Evaluating the robustness of Large Vision-Language Models (LVLMs) is essential for their continued development and responsible deployment in real-world applications. However, existing robustness benchmarks typically focus on hallucination or misleading textual inputs, while largely overlooking the equally critical challenge posed by misleading visual inputs in assessing visual understanding. To fill this important gap, we introduce MVI-Bench, the first comprehensive benchmark specially designed for evaluating how Misleading Visual Inputs undermine the robustness of LVLMs. Grounded in fundamental visual primitives, the design of MVI-Bench centers on three hierarchical levels of misleading visual inputs: Visual Concept, Visual Attribute, and Visual Relationship. Using this taxonomy, we curate six representative categories and compile 1,248 expertly annotated VQA instances. To facilitate fine-grained robustness evaluation, we further introduce MVI-Sensitivity, a novel metric that characterizes LVLM robustness at a granular level. Empirical results across 18 state-of-the-art LVLMs uncover pronounced vulnerabilities to misleading visual inputs, and our in-depth analyses on MVI-Bench provide actionable insights that can guide the development of more reliable and robust LVLMs. The benchmark and codebase can be accessed at https://github.com/chenyil6/MVI-Bench.",
+        "tags": [
+            "VLM"
+        ]
+    },
+    {
+        "id": 7,
+        "title": "REVISOR: Beyond Textual Reflection, Towards Multimodal Introspective Reasoning in Long-Form Video Understanding",
+        "author": [
+            "Jiaze Li",
+            "Hao Yin",
+            "Wenhui Tan",
+            "Jingyang Chen",
+            "Boshen Xu",
+            "Yuxun Qu",
+            "Yijing Chen",
+            "Jianzhong Ju",
+            "Zhenbo Luo",
+            "Jian Luan"
+        ],
+        "pdf": "https://arxiv.org/pdf/2511.13026",
+        "abstract": "Self-reflection mechanisms that rely on purely text-based rethinking processes perform well in most multimodal tasks. However, when directly applied to long-form video understanding scenarios, they exhibit clear limitations. The fundamental reasons for this lie in two points: (1)long-form video understanding involves richer and more dynamic visual input, meaning rethinking only the text information is insufficient and necessitates a further rethinking process specifically targeting visual information; (2) purely text-based reflection mechanisms lack cross-modal interaction capabilities, preventing them from fully integrating visual information during reflection. Motivated by these insights, we propose REVISOR (REflective VIsual Segment Oriented Reasoning), a novel framework for tool-augmented multimodal reflection. REVISOR enables MLLMs to collaboratively construct introspective reflection processes across textual and visual modalities, significantly enhancing their reasoning capability for long-form video understanding. To ensure that REVISOR can learn to accurately review video segments highly relevant to the question during reinforcement learning, we designed the Dual Attribution Decoupled Reward (DADR) mechanism. Integrated into the GRPO training strategy, this mechanism enforces causal alignment between the model's reasoning and the selected video evidence. Notably, the REVISOR framework significantly enhances long-form video understanding capability of MLLMs without requiring supplementary supervised fine-tuning or external models, achieving impressive results on four benchmarks including VideoMME, LongVideoBench, MLVU, and LVBench.",
+        "tags": [
+            "GRPO",
+            "RL"
+        ]
+    },
+    {
+        "id": 8,
+        "title": "OmniZip: Audio-Guided Dynamic Token Compression for Fast Omnimodal Large Language Models",
+        "author": [
+            "Keda Tao",
+            "Kele Shao",
+            "Bohan Yu",
+            "Weiqiang Wang",
+            "Jian liu",
+            "Huan Wang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2511.14582",
+        "abstract": "Omnimodal large language models (OmniLLMs) have attracted increasing research attention of late towards unified audio-video understanding, wherein processing audio-video token sequences creates a significant computational bottleneck, however. Existing token compression methods have yet to accommodate this emerging need of jointly compressing multimodal tokens. To bridge this gap, we present OmniZip, a training-free, audio-guided audio-visual token-compression framework that optimizes multimodal token representation and accelerates inference. Specifically, OmniZip first identifies salient audio tokens, then computes an audio retention score for each time group to capture information density, thereby dynamically guiding video token pruning and preserving cues from audio anchors enhanced by cross-modal similarity. For each time window, OmniZip compresses the video tokens using an interleaved spatio-temporal scheme. Extensive empirical results demonstrate the merits of OmniZip - it achieves 3.42X inference speedup and 1.4X memory reduction over other top-performing counterparts, while maintaining performance with no training.",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 9,
+        "title": "ATLAS: A High-Difficulty, Multidisciplinary Benchmark for Frontier Scientific Reasoning",
+        "author": [
+            "Hongwei Liu",
+            "Junnan Liu",
+            "Shudong Liu",
+            "Haodong Duan",
+            "Yuqiang Li",
+            "Mao Su",
+            "Xiaohong Liu",
+            "Guangtao Zhai",
+            "Xinyu Fang",
+            "Qianhong Ma",
+            "Taolin Zhang",
+            "Zihan Ma",
+            "Yufeng Zhao",
+            "Peiheng Zhou",
+            "Linchen Xiao",
+            "Wenlong Zhang",
+            "Shijie Zhou",
+            "Xingjian Ma",
+            "Siqi Sun",
+            "Jiaye Ge",
+            "Meng Li",
+            "Yuhong Liu",
+            "Jianxin Dong",
+            "Jiaying Li",
+            "Hui Wu",
+            "Hanwen Liang",
+            "Jintai Lin",
+            "Yanting Wang",
+            "Jie Dong",
+            "Tong Zhu",
+            "Tianfan Fu",
+            "Conghui He",
+            "Qi Zhang",
+            "Songyang Zhang",
+            "Lei Bai",
+            "Kai Chen"
+        ],
+        "pdf": "https://arxiv.org/pdf/2511.14366",
+        "abstract": "The rapid advancement of Large Language Models (LLMs) has led to performance saturation on many established benchmarks, questioning their ability to distinguish frontier models. Concurrently, existing high-difficulty benchmarks often suffer from narrow disciplinary focus, oversimplified answer formats, and vulnerability to data contamination, creating a fidelity gap with real-world scientific inquiry. To address these challenges, we introduce ATLAS (AGI-Oriented Testbed for Logical Application in Science), a large-scale, high-difficulty, and cross-disciplinary evaluation suite composed of approximately 800 original problems. Developed by domain experts (PhD-level and above), ATLAS spans seven core scientific fields: mathematics, physics, chemistry, biology, computer science, earth science, and materials science. Its key features include: (1) High Originality and Contamination Resistance, with all questions newly created or substantially adapted to prevent test data leakage; (2) Cross-Disciplinary Focus, designed to assess models' ability to integrate knowledge and reason across scientific domains; (3) High-Fidelity Answers, prioritizing complex, open-ended answers involving multi-step reasoning and LaTeX-formatted expressions over simple multiple-choice questions; and (4) Rigorous Quality Control, employing a multi-stage process of expert peer review and adversarial testing to ensure question difficulty, scientific value, and correctness. We also propose a robust evaluation paradigm using a panel of LLM judges for automated, nuanced assessment of complex answers. Preliminary results on leading models demonstrate ATLAS's effectiveness in differentiating their advanced scientific reasoning capabilities. We plan to develop ATLAS into a long-term, open, community-driven platform to provide a reliable \"ruler\" for progress toward Artificial General Intelligence.",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 10,
+        "title": "Large Language Models Meet Extreme Multi-label Classification: Scaling and Multi-modal Framework",
+        "author": [
+            "Diego Ortego",
+            "Marlon RodrÃ­guez",
+            "Mario Almagro",
+            "Kunal Dahiya",
+            "David JimÃ©nez",
+            "Juan C. SanMiguel"
+        ],
+        "pdf": "https://arxiv.org/pdf/2511.13189",
+        "abstract": "Foundation models have revolutionized artificial intelligence across numerous domains, yet their transformative potential remains largely untapped in Extreme Multi-label Classification (XMC). Queries in XMC are associated with relevant labels from extremely large label spaces, where it is critical to strike a balance between efficiency and performance. Therefore, many recent approaches efficiently pose XMC as a maximum inner product search between embeddings learned from small encoder-only transformer architectures. In this paper, we address two important aspects in XMC: how to effectively harness larger decoder-only models, and how to exploit visual information while maintaining computational efficiency. We demonstrate that both play a critical role in XMC separately and can be combined for improved performance. We show that a few billion-size decoder can deliver substantial improvements while keeping computational overhead manageable. Furthermore, our Vision-enhanced eXtreme Multi-label Learning framework (ViXML) efficiently integrates foundation vision models by pooling a single embedding per image. This limits computational growth while unlocking multi-modal capabilities. Remarkably, ViXML with small encoders outperforms text-only decoder in most cases, showing that an image is worth billions of parameters. Finally, we present an extension of existing text-only datasets to exploit visual metadata and make them available for future benchmarking. Comprehensive experiments across four public text-only datasets and their corresponding image enhanced versions validate our proposals' effectiveness, surpassing previous state-of-the-art by up to +8.21\\% in P@1 on the largest dataset. ViXML's code is available at https://github.com/DiegoOrtego/vixml.",
+        "tags": [
+            "LLM",
+            "Transformer"
+        ]
+    },
+    {
+        "id": 11,
+        "title": "Agent-R1: Training Powerful LLM Agents with End-to-End Reinforcement Learning",
+        "author": [
+            "Mingyue Cheng",
+            "Jie Ouyang",
+            "Shuo Yu",
+            "Ruiran Yan",
+            "Yucong Luo",
+            "Zirui Liu",
+            "Daoyu Wang",
+            "Qi Liu",
+            "Enhong Chen"
+        ],
+        "pdf": "https://arxiv.org/pdf/2511.14460",
+        "abstract": "Large Language Models (LLMs) are increasingly being explored for building Agents capable of active environmental interaction (e.g., via tool use) to solve complex problems. Reinforcement Learning (RL) is considered a key technology with significant potential for training such Agents; however, the effective application of RL to LLM Agents is still in its nascent stages and faces considerable challenges. Currently, this emerging field lacks in-depth exploration into RL approaches specifically tailored for the LLM Agent context, alongside a scarcity of flexible and easily extensible training frameworks designed for this purpose. To help advance this area, this paper first revisits and clarifies Reinforcement Learning methodologies for LLM Agents by systematically extending the Markov Decision Process (MDP) framework to comprehensively define the key components of an LLM Agent. Secondly, we introduce Agent-R1, a modular, flexible, and user-friendly training framework for RL-based LLM Agents, designed for straightforward adaptation across diverse task scenarios and interactive environments. We conducted experiments on Multihop QA benchmark tasks, providing initial validation for the effectiveness of our proposed methods and framework.",
+        "tags": [
+            "LLM",
+            "RL"
+        ]
+    },
+    {
+        "id": 12,
+        "title": "Orion: A Unified Visual Agent for Multimodal Perception, Advanced Visual Reasoning and Execution",
+        "author": [
+            "N Dinesh Reddy",
+            "Sudeep Pillai"
+        ],
+        "pdf": "https://arxiv.org/pdf/2511.14210",
+        "abstract": "We introduce Orion, a visual agent framework that can take in any modality and generate any modality. Using an agentic framework with multiple tool-calling capabilities, Orion is designed for visual AI tasks and achieves state-of-the-art results. Unlike traditional vision-language models that produce descriptive outputs, Orion orchestrates a suite of specialized computer vision tools, including object detection, keypoint localization, panoptic segmentation, Optical Character Recognition, and geometric analysis, to execute complex multi-step visual workflows. The system achieves competitive performance on MMMU, MMBench, DocVQA, and MMLongBench while extending monolithic vision-language models to production-grade visual intelligence. By combining neural perception with symbolic execution, Orion enables autonomous visual reasoning, marking a transition from passive visual understanding to active, tool-driven visual intelligence.",
+        "tags": [
+            "Detection",
+            "Segmentation",
+            "VLM"
+        ]
+    },
+    {
+        "id": 13,
+        "title": "Î¦eat: Physically-Grounded Feature Representation",
+        "author": [
+            "Giuseppe Vecchio",
+            "Adrien Kaiser",
+            "Rouffet Romain",
+            "Rosalie Martin",
+            "Elena Garces",
+            "Tamy Boubekeur"
+        ],
+        "pdf": "https://arxiv.org/pdf/2511.11270",
+        "abstract": "Foundation models have emerged as effective backbones for many vision tasks. However, current self-supervised features entangle high-level semantics with low-level physical factors, such as geometry and illumination, hindering their use in tasks requiring explicit physical reasoning. In this paper, we introduce $\\Phi$eat, a novel physically-grounded visual backbone that encourages a representation sensitive to material identity, including reflectance cues and geometric mesostructure. Our key idea is to employ a pretraining strategy that contrasts spatial crops and physical augmentations of the same material under varying shapes and lighting conditions. While similar data have been used in high-end supervised tasks such as intrinsic decomposition or material estimation, we demonstrate that a pure self-supervised training strategy, without explicit labels, already provides a strong prior for tasks requiring robust features invariant to external physical factors. We evaluate the learned representations through feature similarity analysis and material selection, showing that $\\Phi$eat captures physically-grounded structure beyond semantic grouping. These findings highlight the promise of unsupervised physical feature learning as a foundation for physics-aware perception in vision and graphics. These findings highlight the promise of unsupervised physical feature learning as a foundation for physics-aware perception in vision and graphics.",
+        "tags": []
+    },
+    {
+        "id": 14,
+        "title": "Mitigating Label Length Bias in Large Language Models",
+        "author": [
+            "Mario Sanz-Guerrero",
+            "Katharina von der Wense"
+        ],
+        "pdf": "https://arxiv.org/pdf/2511.14385",
+        "abstract": "Large language models (LLMs) are powerful zero- and few-shot learners. However, when predicting over a set of candidate options, LLMs suffer from label biases, and existing calibration methods overlook biases arising from multi-token class labels. We tackle an issue we call label length bias, where labels of different lengths are treated inconsistently, even after standard length normalization. To mitigate it, we propose normalized contextual calibration (NCC), an effective method that normalizes and calibrates predictions at the full-label level. NCC achieves statistically significant improvements over prior approaches across multiple datasets and models, with gains of up to 10% F1. Moreover, NCC extends bias mitigation to broader tasks such as multiple-choice question answering. Our analysis shows that, when combined with in-context learning, NCC is less sensitive to few-shot example selection, requires fewer examples for competitive performance, and produces more reliable confidence estimates. These findings highlight the importance of mitigating full-label biases to improve the performance and robustness of LLM-based methods, particularly in real-world applications where class labels naturally consist of multiple tokens.",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 15,
+        "title": "Agent READMEs: An Empirical Study of Context Files for Agentic Coding",
+        "author": [
+            "Worawalan Chatlatanagulchai",
+            "Hao Li",
+            "Yutaro Kashiwa",
+            "Brittany Reid",
+            "Kundjanasith Thonglek",
+            "Pattara Leelaprute",
+            "Arnon Rungsawang",
+            "Bundit Manaskasemsak",
+            "Bram Adams",
+            "Ahmed E. Hassan",
+            "Hajimu Iida"
+        ],
+        "pdf": "https://arxiv.org/pdf/2511.12884",
+        "abstract": "Agentic coding tools receive goals written in natural language as input, break them down into specific tasks, and write or execute the actual code with minimal human intervention. Central to this process are agent context files (\"READMEs for agents\") that provide persistent, project-level instructions. In this paper, we conduct the first large-scale empirical study of 2,303 agent context files from 1,925 repositories to characterize their structure, maintenance, and content. We find that these files are not static documentation but complex, difficult-to-read artifacts that evolve like configuration code, maintained through frequent, small additions. Our content analysis of 16 instruction types shows that developers prioritize functional context, such as build and run commands (62.3%), implementation details (69.9%), and architecture (67.7%). We also identify a significant gap: non-functional requirements like security (14.5%) and performance (14.5%) are rarely specified. These findings indicate that while developers use context files to make agents functional, they provide few guardrails to ensure that agent-written code is secure or performant, highlighting the need for improved tooling and practices.",
+        "tags": []
+    },
+    {
+        "id": 16,
+        "title": "A Brain Wave Encodes a Thousand Tokens: Modeling Inter-Cortical Neural Interactions for Effective EEG-based Emotion Recognition",
+        "author": [
+            "Nilay Kumar",
+            "Priyansh Bhandari",
+            "G. Maragatham"
+        ],
+        "pdf": "https://arxiv.org/pdf/2511.13954",
+        "abstract": "Human emotions are difficult to convey through words and are often abstracted in the process; however, electroencephalogram (EEG) signals can offer a more direct lens into emotional brain activity. Recent studies show that deep learning models can process these signals to perform emotion recognition with high accuracy. However, many existing approaches overlook the dynamic interplay between distinct brain regions, which can be crucial to understanding how emotions unfold and evolve over time, potentially aiding in more accurate emotion recognition. To address this, we propose RBTransformer, a Transformer-based neural network architecture that models inter-cortical neural dynamics of the brain in latent space to better capture structured neural interactions for effective EEG-based emotion recognition. First, the EEG signals are converted into Band Differential Entropy (BDE) tokens, which are then passed through Electrode Identity embeddings to retain spatial provenance. These tokens are processed through successive inter-cortical multi-head attention blocks that construct an electrode x electrode attention matrix, allowing the model to learn the inter-cortical neural dependencies. The resulting features are then passed through a classification head to obtain the final prediction. We conducted extensive experiments, specifically under subject-dependent settings, on the SEED, DEAP, and DREAMER datasets, over all three dimensions, Valence, Arousal, and Dominance (for DEAP and DREAMER), under both binary and multi-class classification settings. The results demonstrate that the proposed RBTransformer outperforms all previous state-of-the-art methods across all three datasets, over all three dimensions under both classification settings. The source code is available at: https://github.com/nnilayy/RBTransformer.",
+        "tags": [
+            "Transformer"
+        ]
+    },
+    {
+        "id": 17,
+        "title": "Proactive Hearing Assistants that Isolate Egocentric Conversations",
+        "author": [
+            "Guilin Hu",
+            "Malek Itani",
+            "Tuochao Chen",
+            "Shyamnath Gollakota"
+        ],
+        "pdf": "https://arxiv.org/pdf/2511.11473",
+        "abstract": "We introduce proactive hearing assistants that automatically identify and separate the wearer's conversation partners, without requiring explicit prompts. Our system operates on egocentric binaural audio and uses the wearer's self-speech as an anchor, leveraging turn-taking behavior and dialogue dynamics to infer conversational partners and suppress others. To enable real-time, on-device operation, we propose a dual-model architecture: a lightweight streaming model runs every 12.5 ms for low-latency extraction of the conversation partners, while a slower model runs less frequently to capture longer-range conversational dynamics. Results on real-world 2- and 3-speaker conversation test sets, collected with binaural egocentric hardware from 11 participants totaling 6.8 hours, show generalization in identifying and isolating conversational partners in multi-conversation settings. Our work marks a step toward hearing assistants that adapt proactively to conversational dynamics and engagement. More information can be found on our website: https://proactivehearing.cs.washington.edu/",
+        "tags": []
+    },
+    {
+        "id": 18,
+        "title": "Error-Driven Scene Editing for 3D Grounding in Large Language Models",
+        "author": [
+            "Yue Zhang",
+            "Zun Wang",
+            "Han Lin",
+            "Jialu Li",
+            "Jianing Yang",
+            "Yonatan Bitton",
+            "Idan Szpektor",
+            "Mohit Bansal"
+        ],
+        "pdf": "https://arxiv.org/pdf/2511.14086",
+        "abstract": "Despite recent progress in 3D-LLMs, they remain limited in accurately grounding language to visual and spatial elements in 3D environments. This limitation stems in part from training data that focuses on language reasoning rather than spatial understanding due to scarce 3D resources, leaving inherent grounding biases unresolved. To address this, we propose 3D scene editing as a key mechanism to generate precise visual counterfactuals that mitigate these biases through fine-grained spatial manipulation, without requiring costly scene reconstruction or large-scale 3D data collection. Furthermore, to make these edits targeted and directly address the specific weaknesses of the model, we introduce DEER-3D, an error-driven framework following a structured \"Decompose, Diagnostic Evaluation, Edit, and Re-train\" workflow, rather than broadly or randomly augmenting data as in conventional approaches. Specifically, upon identifying a grounding failure of the 3D-LLM, our framework first diagnoses the exact predicate-level error (e.g., attribute or spatial relation). It then executes minimal, predicate-aligned 3D scene edits, such as recoloring or repositioning, to produce targeted counterfactual supervision for iterative model fine-tuning, significantly enhancing grounding accuracy. We evaluate our editing pipeline across multiple benchmarks for 3D grounding and scene understanding tasks, consistently demonstrating improvements across all evaluated datasets through iterative refinement. DEER-3D underscores the effectiveness of targeted, error-driven scene editing in bridging linguistic reasoning capabilities with spatial grounding in 3D LLMs.",
+        "tags": [
+            "3D",
+            "LLM"
+        ]
+    },
+    {
+        "id": 19,
+        "title": "LLM-Powered Fully Automated Chaos Engineering: Towards Enabling Anyone to Build Resilient Software Systems at Low Cost",
+        "author": [
+            "Daisuke Kikuta",
+            "Hiroki Ikeuchi",
+            "Kengo Tajiri"
+        ],
+        "pdf": "https://arxiv.org/pdf/2511.07865",
+        "abstract": "Chaos Engineering (CE) is an engineering technique aimed at improving the resilience of distributed systems. It involves intentionally injecting faults into a system to test its resilience, uncover weaknesses, and address them before they cause failures in production. Recent CE tools automate the execution of predefined CE experiments. However, planning such experiments and improving the system based on the experimental results still remain manual. These processes are labor-intensive and require multi-domain expertise. To address these challenges and enable anyone to build resilient systems at low cost, this paper proposes ChaosEater, a system that automates the entire CE cycle with Large Language Models (LLMs). It predefines an agentic workflow according to a systematic CE cycle and assigns subdivided processes within the workflow to LLMs. ChaosEater targets CE for software systems built on Kubernetes. Therefore, the LLMs in ChaosEater complete CE cycles through software engineering tasks, including requirement definition, code generation, testing, and debugging. We evaluate ChaosEater through case studies on small- and large-scale Kubernetes systems. The results demonstrate that it consistently completes reasonable CE cycles with significantly low time and monetary costs. Its cycles are also qualitatively validated by human engineers and LLMs.",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 20,
+        "title": "TopoPerception: A Shortcut-Free Evaluation of Global Visual Perception in Large Vision-Language Models",
+        "author": [
+            "Wenhao Zhou",
+            "Hao Zheng",
+            "Rong Zhao"
+        ],
+        "pdf": "https://arxiv.org/pdf/2511.11831",
+        "abstract": "Large Vision-Language Models (LVLMs) typically align visual features from an encoder with a pre-trained Large Language Model (LLM). However, this makes the visual perception module a bottleneck, which constrains the overall capabilities of LVLMs. Conventional evaluation benchmarks, while rich in visual semantics, often contain unavoidable local shortcuts that can lead to an overestimation of models' perceptual abilities. Here, we introduce TopoPerception, a benchmark that leverages topological properties to rigorously evaluate the global visual perception capabilities of LVLMs across various granularities. Since topology depends on the global structure of an image and is invariant to local features, TopoPerception enables a shortcut-free assessment of global perception, fundamentally distinguishing it from semantically rich tasks. We evaluate state-of-the-art models on TopoPerception and find that even at the coarsest perceptual granularity, all models perform no better than random chance, indicating a profound inability to perceive global visual features. Notably, a consistent trend emerge within model families: more powerful models with stronger reasoning capabilities exhibit lower accuracy. This suggests that merely scaling up models is insufficient to address this deficit and may even exacerbate it. Progress may require new training paradigms or architectures. TopoPerception not only exposes a critical bottleneck in current LVLMs but also offers a lens and direction for improving their global visual perception. The data and code are publicly available at: https://github.com/Wenhao-Zhou/TopoPerception.",
+        "tags": [
+            "LLM",
+            "VLM"
+        ]
+    }
+]
