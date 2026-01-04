@@ -1,0 +1,291 @@
+[
+    {
+        "id": 1,
+        "title": "InsertAnywhere: Bridging 4D Scene Geometry and Diffusion Models for Realistic Video Object Insertion",
+        "author": [
+            "Hoiyeong Jin",
+            "Hyojin Jang",
+            "Jeongho Kim",
+            "Junha Hyung",
+            "Kinam Kim",
+            "Dongjin Kim",
+            "Huijin Choi",
+            "Hyeonji Kim",
+            "Jaegul Choo"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.17504",
+        "abstract": "Recent advances in diffusion-based video generation have opened new possibilities for controllable video editing, yet realistic video object insertion (VOI) remains challenging due to limited 4D scene understanding and inadequate handling of occlusion and lighting effects. We present InsertAnywhere, a new VOI framework that achieves geometrically consistent object placement and appearance-faithful video synthesis. Our method begins with a 4D aware mask generation module that reconstructs the scene geometry and propagates user specified object placement across frames while maintaining temporal coherence and occlusion consistency. Building upon this spatial foundation, we extend a diffusion based video generation model to jointly synthesize the inserted object and its surrounding local variations such as illumination and shading. To enable supervised training, we introduce ROSE++, an illumination aware synthetic dataset constructed by transforming the ROSE object removal dataset into triplets of object removed video, object present video, and a VLM generated reference image. Through extensive experiments, we demonstrate that our framework produces geometrically plausible and visually coherent object insertions across diverse real world scenarios, significantly outperforming existing research and commercial models.",
+        "tags": [
+            "Diffusion",
+            "VLM",
+            "Video Editing",
+            "Video Generation"
+        ]
+    },
+    {
+        "id": 2,
+        "title": "Mindscape-Aware Retrieval Augmented Generation for Improved Long Context Understanding",
+        "author": [
+            "Yuqing Li",
+            "Jiangnan Li",
+            "Zheng Lin",
+            "Ziyan Zhou",
+            "Junjie Wu",
+            "Weiping Wang",
+            "Jie Zhou",
+            "Mo Yu"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.17220",
+        "abstract": "Humans understand long and complex texts by relying on a holistic semantic representation of the content. This global view helps organize prior knowledge, interpret new information, and integrate evidence dispersed across a document, as revealed by the Mindscape-Aware Capability of humans in psychology. Current Retrieval-Augmented Generation (RAG) systems lack such guidance and therefore struggle with long-context tasks. In this paper, we propose Mindscape-Aware RAG (MiA-RAG), the first approach that equips LLM-based RAG systems with explicit global context awareness. MiA-RAG builds a mindscape through hierarchical summarization and conditions both retrieval and generation on this global semantic representation. This enables the retriever to form enriched query embeddings and the generator to reason over retrieved evidence within a coherent global context. We evaluate MiA-RAG across diverse long-context and bilingual benchmarks for evidence-based understanding and global sense-making. It consistently surpasses baselines, and further analysis shows that it aligns local details with a coherent global representation, enabling more human-like long-context retrieval and reasoning.",
+        "tags": [
+            "LLM",
+            "RAG"
+        ]
+    },
+    {
+        "id": 3,
+        "title": "MAI-UI Technical Report: Real-World Centric Foundation GUI Agents",
+        "author": [
+            "Hanzhang Zhou",
+            "Xu Zhang",
+            "Panrong Tong",
+            "Jianan Zhang",
+            "Liangyu Chen",
+            "Quyu Kong",
+            "Chenglin Cai",
+            "Chen Liu",
+            "Yue Wang",
+            "Jingren Zhou",
+            "Steven Hoi"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.22047",
+        "abstract": "The development of GUI agents could revolutionize the next generation of human-computer interaction. Motivated by this vision, we present MAI-UI, a family of foundation GUI agents spanning the full spectrum of sizes, including 2B, 8B, 32B, and 235B-A22B variants. We identify four key challenges to realistic deployment: the lack of native agent-user interaction, the limits of UI-only operation, the absence of a practical deployment architecture, and brittleness in dynamic environments. MAI-UI addresses these issues with a unified methodology: a self-evolving data pipeline that expands the navigation data to include user interaction and MCP tool calls, a native device-cloud collaboration system routes execution by task state, and an online RL framework with advanced optimizations to scale parallel environments and context length. MAI-UI establishes new state-of-the-art across GUI grounding and mobile navigation. On grounding benchmarks, it reaches 73.5% on ScreenSpot-Pro, 91.3% on MMBench GUI L2, 70.9% on OSWorld-G, and 49.2% on UI-Vision, surpassing Gemini-3-Pro and Seed1.8 on ScreenSpot-Pro. On mobile GUI navigation, it sets a new SOTA of 76.7% on AndroidWorld, surpassing UI-Tars-2, Gemini-2.5-Pro and Seed1.8. On MobileWorld, MAI-UI obtains 41.7% success rate, significantly outperforming end-to-end GUI models and competitive with Gemini-3-Pro based agentic frameworks. Our online RL experiments show significant gains from scaling parallel environments from 32 to 512 (+5.2 points) and increasing environment step budget from 15 to 50 (+4.3 points). Finally, the native device-cloud collaboration system improves on-device performance by 33%, reduces cloud model calls by over 40%, and preserves user privacy.",
+        "tags": [
+            "RL"
+        ]
+    },
+    {
+        "id": 4,
+        "title": "UniPercept: Towards Unified Perceptual-Level Image Understanding across Aesthetics, Quality, Structure, and Texture",
+        "author": [
+            "Shuo Cao",
+            "Jiayang Li",
+            "Xiaohui Li",
+            "Yuandong Pu",
+            "Kaiwen Zhu",
+            "Yuanting Gao",
+            "Siqi Luo",
+            "Yi Xin",
+            "Qi Qin",
+            "Yu Zhou",
+            "Xiangyu Chen",
+            "Wenlong Zhang",
+            "Bin Fu",
+            "Yu Qiao",
+            "Yihao Liu"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.21675",
+        "abstract": "Multimodal large language models (MLLMs) have achieved remarkable progress in visual understanding tasks such as visual grounding, segmentation, and captioning. However, their ability to perceive perceptual-level image features remains limited. In this work, we present UniPercept-Bench, a unified framework for perceptual-level image understanding across three key domains: Aesthetics, Quality, Structure and Texture. We establish a hierarchical definition system and construct large-scale datasets to evaluate perceptual-level image understanding. Based on this foundation, we develop a strong baseline UniPercept trained via Domain-Adaptive Pre-Training and Task-Aligned RL, enabling robust generalization across both Visual Rating (VR) and Visual Question Answering (VQA) tasks. UniPercept outperforms existing MLLMs on perceptual-level image understanding and can serve as a plug-and-play reward model for text-to-image generation. This work defines Perceptual-Level Image Understanding in the era of MLLMs and, through the introduction of a comprehensive benchmark together with a strong baseline, provides a solid foundation for advancing perceptual-level multimodal image understanding.",
+        "tags": [
+            "LLM",
+            "RL",
+            "Segmentation",
+            "Text-to-Image"
+        ]
+    },
+    {
+        "id": 5,
+        "title": "ProEdit: Inversion-based Editing From Prompts Done Right",
+        "author": [
+            "Zhi Ouyang",
+            "Dian Zheng",
+            "Xiao-Ming Wu",
+            "Jian-Jian Jiang",
+            "Kun-Yu Lin",
+            "Jingke Meng",
+            "Wei-Shi Zheng"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.22118",
+        "abstract": "Inversion-based visual editing provides an effective and training-free way to edit an image or a video based on user instructions. Existing methods typically inject source image information during the sampling process to maintain editing consistency. However, this sampling strategy overly relies on source information, which negatively affects the edits in the target image (e.g., failing to change the subject's atributes like pose, number, or color as instructed). In this work, we propose ProEdit to address this issue both in the attention and the latent aspects. In the attention aspect, we introduce KV-mix, which mixes KV features of the source and the target in the edited region, mitigating the influence of the source image on the editing region while maintaining background consistency. In the latent aspect, we propose Latents-Shift, which perturbs the edited region of the source latent, eliminating the influence of the inverted latent on the sampling. Extensive experiments on several image and video editing benchmarks demonstrate that our method achieves SOTA performance. In addition, our design is plug-and-play, which can be seamlessly integrated into existing inversion and editing methods, such as RF-Solver, FireFlow and UniEdit.",
+        "tags": [
+            "Video Editing"
+        ]
+    },
+    {
+        "id": 6,
+        "title": "TimeBill: Time-Budgeted Inference for Large Language Models",
+        "author": [
+            "Qi Fan",
+            "An Zou",
+            "Yehan Ma"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.21859",
+        "abstract": "Large Language Models (LLMs) are increasingly deployed in time-critical systems, such as robotics, autonomous driving, embodied intelligence, and industrial automation, where generating accurate responses within a given time budget is crucial for decision-making, control, or safety-critical tasks. However, the auto-regressive generation process of LLMs makes it challenging to model and estimate the end-to-end execution time. Furthermore, existing efficient inference methods based on a fixed key-value (KV) cache eviction ratio struggle to adapt to varying tasks with diverse time budgets, where an improper eviction ratio may lead to incomplete inference or a drop in response performance. In this paper, we propose TimeBill, a novel time-budgeted inference framework for LLMs that balances the inference efficiency and response performance. To be more specific, we propose a fine-grained response length predictor (RLP) and an execution time estimator (ETE) to accurately predict the end-to-end execution time of LLMs. Following this, we develop a time-budgeted efficient inference approach that adaptively adjusts the KV cache eviction ratio based on execution time prediction and the given time budget. Finally, through extensive experiments, we demonstrate the advantages of TimeBill in improving task completion rate and maintaining response performance under various overrun strategies.",
+        "tags": [
+            "LLM",
+            "Robotics"
+        ]
+    },
+    {
+        "id": 7,
+        "title": "See Less, See Right: Bi-directional Perceptual Shaping For Multimodal Reasoning",
+        "author": [
+            "Shuoshuo Zhang",
+            "Yizhen Zhang",
+            "Jingjing Fu",
+            "Lei Song",
+            "Jiang Bian",
+            "Yujiu Yang",
+            "Rui Wang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.22120",
+        "abstract": "Large vision-language models (VLMs) often benefit from intermediate visual cues, either injected via external tools or generated as latent visual tokens during reasoning, but these mechanisms still overlook fine-grained visual evidence (e.g., polylines in charts), generalize poorly across domains, and incur high inference-time cost. In this paper, we propose Bi-directional Perceptual Shaping (BiPS), which transforms question-conditioned masked views into bidirectional where-to-look signals that shape perception during training. BiPS first applies a KL-consistency constraint between the original image and an evidence-preserving view that keeps only question-relevant regions, encouraging coarse but complete coverage of supporting pixels. It then applies a KL-separation constraint between the original and an evidence-ablated view where critical pixels are masked so the image no longer supports the original answer, discouraging text-only shortcuts (i.e., answering from text alone) and enforcing fine-grained visual reliance. Across eight benchmarks, BiPS boosts Qwen2.5-VL-7B by 8.2% on average and shows strong out-of-domain generalization to unseen datasets and image types.",
+        "tags": [
+            "VLM"
+        ]
+    },
+    {
+        "id": 8,
+        "title": "Omni-Weather: Unified Multimodal Foundation Model for Weather Generation and Understanding",
+        "author": [
+            "Zhiwang Zhou",
+            "Yuandong Pu",
+            "Xuming He",
+            "Yidi Liu",
+            "Yixin Chen",
+            "Junchao Gong",
+            "Xiang Zhuang",
+            "Wanghan Xu",
+            "Qinglong Cao",
+            "Shixiang Tang",
+            "Yihao Liu",
+            "Wenlong Zhang",
+            "Lei Bai"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.21643",
+        "abstract": "Weather modeling requires both accurate prediction and mechanistic interpretation, yet existing methods treat these goals in isolation, separating generation from understanding. To address this gap, we present Omni-Weather, the first multimodal foundation model that unifies weather generation and understanding within a single architecture. Omni-Weather integrates a radar encoder for weather generation tasks, followed by unified processing using a shared self-attention mechanism. Moreover, we construct a Chain-of-Thought dataset for causal reasoning in weather generation, enabling interpretable outputs and improved perceptual quality. Extensive experiments show Omni-Weather achieves state-of-the-art performance in both weather generation and understanding. Our findings further indicate that generative and understanding tasks in the weather domain can mutually enhance each other. Omni-Weather also demonstrates the feasibility and value of unifying weather generation and understanding.",
+        "tags": [
+            "CoT"
+        ]
+    },
+    {
+        "id": 9,
+        "title": "InSight-o3: Empowering Multimodal Foundation Models with Generalized Visual Search",
+        "author": [
+            "Kaican Li",
+            "Lewei Yao",
+            "Jiannan Wu",
+            "Tiezheng Yu",
+            "Jierun Chen",
+            "Haoli Bai",
+            "Lu Hou",
+            "Lanqing Hong",
+            "Wei Zhang",
+            "Nevin L. Zhang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.18745",
+        "abstract": "The ability for AI agents to \"think with images\" requires a sophisticated blend of reasoning and perception. However, current open multimodal agents still largely fall short on the reasoning aspect crucial for real-world tasks like analyzing documents with dense charts/diagrams and navigating maps. To address this gap, we introduce O3-Bench, a new benchmark designed to evaluate multimodal reasoning with interleaved attention to visual details. O3-Bench features challenging problems that require agents to piece together subtle visual information from distinct image areas through multi-step reasoning. The problems are highly challenging even for frontier systems like OpenAI o3, which only obtains 40.8% accuracy on O3-Bench. To make progress, we propose InSight-o3, a multi-agent framework consisting of a visual reasoning agent (vReasoner) and a visual search agent (vSearcher) for which we introduce the task of generalized visual search -- locating relational, fuzzy, or conceptual regions described in free-form language, beyond just simple objects or figures in natural images. We then present a multimodal LLM purpose-trained for this task via reinforcement learning. As a plug-and-play agent, our vSearcher empowers frontier multimodal models (as vReasoners), significantly improving their performance on a wide range of benchmarks. This marks a concrete step towards powerful o3-like open systems. Our code and dataset can be found at https://github.com/m-Just/InSight-o3 .",
+        "tags": [
+            "LLM",
+            "RL"
+        ]
+    },
+    {
+        "id": 10,
+        "title": "SWE-RM: Execution-free Feedback For Software Engineering Agents",
+        "author": [
+            "KaShun Shum",
+            "Binyuan Hui",
+            "Jiawei Chen",
+            "Lei Zhang",
+            "X. W.",
+            "Jiaxi Yang",
+            "Yuzhen Huang",
+            "Junyang Lin",
+            "Junxian He"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.21919",
+        "abstract": "Execution-based feedback like unit testing is widely used in the development of coding agents through test-time scaling (TTS) and reinforcement learning (RL). This paradigm requires scalable and reliable collection of unit test cases to provide accurate feedback, and the resulting feedback is often sparse and cannot effectively distinguish between trajectories that are both successful or both unsuccessful. In contrast, execution-free feedback from reward models can provide more fine-grained signals without depending on unit test cases. Despite this potential, execution-free feedback for realistic software engineering (SWE) agents remains underexplored. Aiming to develop versatile reward models that are effective across TTS and RL, however, we observe that two verifiers with nearly identical TTS performance can nevertheless yield very different results in RL. Intuitively, TTS primarily reflects the model's ability to select the best trajectory, but this ability does not necessarily generalize to RL. To address this limitation, we identify two additional aspects that are crucial for RL training: classification accuracy and calibration. We then conduct comprehensive controlled experiments to investigate how to train a robust reward model that performs well across these metrics. In particular, we analyze the impact of various factors such as training data scale, policy mixtures, and data source composition. Guided by these investigations, we introduce SWE-RM, an accurate and robust reward model adopting a mixture-of-experts architecture with 30B total parameters and 3B activated during inference. SWE-RM substantially improves SWE agents on both TTS and RL performance. For example, it increases the accuracy of Qwen3-Coder-Flash from 51.6% to 62.0%, and Qwen3-Coder-Max from 67.0% to 74.6% on SWE-Bench Verified using TTS, achieving new state-of-the-art performance among open-source models.",
+        "tags": [
+            "MoE",
+            "RL"
+        ]
+    },
+    {
+        "id": 11,
+        "title": "SVBench: Evaluation of Video Generation Models on Social Reasoning",
+        "author": [
+            "Wenshuo Peng",
+            "Gongxuan Wang",
+            "Tianmeng Yang",
+            "Chuanhao Li",
+            "Xiaojie Xu",
+            "Hui He",
+            "Kaipeng Zhang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.21507",
+        "abstract": "Recent text-to-video generation models exhibit remarkable progress in visual realism, motion fidelity, and text-video alignment, yet they remain fundamentally limited in their ability to generate socially coherent behavior. Unlike humans, who effortlessly infer intentions, beliefs, emotions, and social norms from brief visual cues, current models tend to render literal scenes without capturing the underlying causal or psychological logic. To systematically evaluate this gap, we introduce the first benchmark for social reasoning in video generation. Grounded in findings from developmental and social psychology, our benchmark organizes thirty classic social cognition paradigms into seven core dimensions, including mental-state inference, goal-directed action, joint attention, social coordination, prosocial behavior, social norms, and multi-agent strategy. To operationalize these paradigms, we develop a fully training-free agent-based pipeline that (i) distills the reasoning mechanism of each experiment, (ii) synthesizes diverse video-ready scenarios, (iii) enforces conceptual neutrality and difficulty control through cue-based critique, and (iv) evaluates generated videos using a high-capacity VLM judge across five interpretable dimensions of social reasoning. Using this framework, we conduct the first large-scale study across seven state-of-the-art video generation systems. Our results reveal substantial performance gaps: while modern models excel in surface-level plausibility, they systematically fail in intention recognition, belief reasoning, joint attention, and prosocial inference.",
+        "tags": [
+            "Text-to-Video",
+            "VLM",
+            "Video Generation"
+        ]
+    },
+    {
+        "id": 12,
+        "title": "SlideTailor: Personalized Presentation Slide Generation for Scientific Papers",
+        "author": [
+            "Wenzheng Zeng",
+            "Mingyu Ouyang",
+            "Langyuan Cui",
+            "Hwee Tou Ng"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.20292",
+        "abstract": "Automatic presentation slide generation can greatly streamline content creation. However, since preferences of each user may vary, existing under-specified formulations often lead to suboptimal results that fail to align with individual user needs. We introduce a novel task that conditions paper-to-slides generation on user-specified preferences. We propose a human behavior-inspired agentic framework, SlideTailor, that progressively generates editable slides in a user-aligned manner. Instead of requiring users to write their preferences in detailed textual form, our system only asks for a paper-slides example pair and a visual template - natural and easy-to-provide artifacts that implicitly encode rich user preferences across content and visual style. Despite the implicit and unlabeled nature of these inputs, our framework effectively distills and generalizes the preferences to guide customized slide generation. We also introduce a novel chain-of-speech mechanism to align slide content with planned oral narration. Such a design significantly enhances the quality of generated slides and enables downstream applications like video presentations. To support this new task, we construct a benchmark dataset that captures diverse user preferences, with carefully designed interpretable metrics for robust evaluation. Extensive experiments demonstrate the effectiveness of our framework.",
+        "tags": []
+    },
+    {
+        "id": 13,
+        "title": "A 58-Addition, Rank-23 Scheme for General 3x3 Matrix Multiplication",
+        "author": [
+            "A. I. Perminov"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.21980",
+        "abstract": "This paper presents a new state-of-the-art algorithm for exact $3\\times3$ matrix multiplication over general non-commutative rings, achieving a rank-23 scheme with only 58 scalar additions. This improves the previous best additive complexity of 60 additions without a change of basis. The result was discovered through an automated search combining ternary-restricted flip-graph exploration with greedy intersection reduction for common subexpression elimination. The resulting scheme uses only coefficients from $\\{-1, 0, 1\\}$, ensuring both efficiency and portability across arbitrary fields. The total scalar operation count is reduced from 83 to 81.",
+        "tags": []
+    },
+    {
+        "id": 14,
+        "title": "Rethinking Sample Polarity in Reinforcement Learning with Verifiable Rewards",
+        "author": [
+            "Xinyu Tang",
+            "Yuliang Zhan",
+            "Zhixun Li",
+            "Wayne Xin Zhao",
+            "Zhenduo Zhang",
+            "Zujie Wen",
+            "Zhiqiang Zhang",
+            "Jun Zhou"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.21625",
+        "abstract": "Large reasoning models (LRMs) are typically trained using reinforcement learning with verifiable reward (RLVR) to enhance their reasoning abilities. In this paradigm, policies are updated using both positive and negative self-generated rollouts, which correspond to distinct sample polarities. In this paper, we provide a systematic investigation into how these sample polarities affect RLVR training dynamics and behaviors. We find that positive samples sharpen existing correct reasoning patterns, while negative samples encourage exploration of new reasoning paths. We further explore how adjusting the advantage values of positive and negative samples at both the sample level and the token level affects RLVR training. Based on these insights, we propose an Adaptive and Asymmetric token-level Advantage shaping method for Policy Optimization, namely A3PO, that more precisely allocates advantage signals to key tokens across different polarities. Experiments across five reasoning benchmarks demonstrate the effectiveness of our approach.",
+        "tags": [
+            "RL"
+        ]
+    },
+    {
+        "id": 15,
+        "title": "Masking Teacher and Reinforcing Student for Distilling Vision-Language Models",
+        "author": [
+            "Byung-Kwan Lee",
+            "Yu-Chiang Frank Wang",
+            "Ryo Hachiuma"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.22238",
+        "abstract": "Large-scale vision-language models (VLMs) have recently achieved remarkable multimodal understanding, but their massive size makes them impractical for deployment on mobile or edge devices. This raises the need for compact yet capable VLMs that can efficiently learn from powerful large teachers. However, distilling knowledge from a large teacher to a small student remains challenging due to their large size gap: the student often fails to reproduce the teacher's complex, high-dimensional representations, leading to unstable learning and degraded performance. To address this, we propose Masters (Masking Teacher and Reinforcing Student), a mask-progressive reinforcement learning (RL) distillation framework. Masters first masks non-dominant weights of the teacher to reduce unnecessary complexity, then progressively restores the teacher by gradually increasing its capacity during training. This strategy allows the student to learn richer representations from the teacher in a smooth and stable manner. To further refine knowledge transfer, Masters integrates an offline RL stage with two complementary rewards: an accuracy reward that measures the correctness of the generated responses, and a distillation reward that quantifies the ease of transferring responses from teacher to student. Unlike online think-answer RL paradigms that are computationally expensive and generate lengthy responses, our offline RL leverages pre-generated responses from masked teachers. These provide rich yet efficient guidance, enabling students to achieve strong performance without requiring the think-answer process.",
+        "tags": [
+            "RL",
+            "VLM"
+        ]
+    }
+]
