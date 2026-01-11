@@ -1,0 +1,650 @@
+[
+    {
+        "id": 1,
+        "title": "GDPO: Group reward-Decoupled Normalization Policy Optimization for Multi-reward RL Optimization",
+        "author": [
+            "Shih-Yang Liu",
+            "Xin Dong",
+            "Ximing Lu",
+            "Shizhe Diao",
+            "Peter Belcak",
+            "Mingjie Liu",
+            "Min-Hung Chen",
+            "Hongxu Yin",
+            "Yu-Chiang Frank Wang",
+            "Kwang-Ting Cheng",
+            "Yejin Choi",
+            "Jan Kautz",
+            "Pavlo Molchanov"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.05242",
+        "abstract": "As language models become increasingly capable, users expect them to provide not only accurate responses but also behaviors aligned with diverse human preferences across a variety of scenarios. To achieve this, Reinforcement learning (RL) pipelines have begun incorporating multiple rewards, each capturing a distinct preference, to guide models toward these desired behaviors. However, recent work has defaulted to apply Group Relative Policy Optimization (GRPO) under multi-reward setting without examining its suitability. In this paper, we demonstrate that directly applying GRPO to normalize distinct rollout reward combinations causes them to collapse into identical advantage values, reducing the resolution of the training signal and resulting in suboptimal convergence and, in some cases, early training failure. We then introduce Group reward-Decoupled Normalization Policy Optimization (GDPO), a new policy optimization method to resolve these issues by decoupling the normalization of individual rewards, more faithfully preserving their relative differences and enabling more accurate multi-reward optimization, along with substantially improved training stability. We compare GDPO with GRPO across three tasks: tool calling, math reasoning, and coding reasoning, evaluating both correctness metrics (accuracy, bug ratio) and constraint adherence metrics (format, length). Across all settings, GDPO consistently outperforms GRPO, demonstrating its effectiveness and generalizability for multi-reward reinforcement learning optimization.",
+        "tags": [
+            "GRPO",
+            "RL"
+        ],
+        "index": 131
+    },
+    {
+        "id": 2,
+        "title": "Learnable Multipliers: Freeing the Scale of Language Model Matrix Layers",
+        "author": [
+            "Maksim Velikanov",
+            "Ilyas Chahed",
+            "Jingwei Zuo",
+            "Dhia Eddine Rhaiem",
+            "Younes Belkada",
+            "Hakim Hacid"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.04890",
+        "abstract": "Applying weight decay (WD) to matrix layers is standard practice in large-language-model pretraining. Prior work suggests that stochastic gradient noise induces a Brownian-like expansion of the weight matrices W, whose growth is counteracted by WD, leading to a WD-noise equilibrium with a certain weight norm ||W||. In this work, we view the equilibrium norm as a harmful artifact of the training procedure, and address it by introducing learnable multipliers to learn the optimal scale. First, we attach a learnable scalar multiplier to W and confirm that the WD-noise equilibrium norm is suboptimal: the learned scale adapts to data and improves performance. We then argue that individual row and column norms are similarly constrained, and free their scale by introducing learnable per-row and per-column multipliers. Our method can be viewed as a learnable, more expressive generalization of muP multipliers. It outperforms a well-tuned muP baseline, reduces the computational overhead of multiplier tuning, and surfaces practical questions such as forward-pass symmetries and the width-scaling of the learned multipliers. Finally, we validate learnable multipliers with both Adam and Muon optimizers, where it shows improvement in downstream evaluations matching the improvement of the switching from Adam to Muon.",
+        "tags": [],
+        "index": 36
+    },
+    {
+        "id": 3,
+        "title": "RL-AWB: Deep Reinforcement Learning for Auto White Balance Correction in Low-Light Night-time Scenes",
+        "author": [
+            "Yuan-Kang Lee",
+            "Kuan-Lin Chen",
+            "Chia-Che Chang",
+            "Yu-Lun Liu"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.05249",
+        "abstract": "Nighttime color constancy remains a challenging problem in computational photography due to low-light noise and complex illumination conditions. We present RL-AWB, a novel framework combining statistical methods with deep reinforcement learning for nighttime white balance. Our method begins with a statistical algorithm tailored for nighttime scenes, integrating salient gray pixel detection with novel illumination estimation. Building on this foundation, we develop the first deep reinforcement learning approach for color constancy that leverages the statistical algorithm as its core, mimicking professional AWB tuning experts by dynamically optimizing parameters for each image. To facilitate cross-sensor evaluation, we introduce the first multi-sensor nighttime dataset. Experiment results demonstrate that our method achieves superior generalization capability across low-light and well-illuminated images. Project page: https://ntuneillee.github.io/research/rl-awb/",
+        "tags": [
+            "Detection",
+            "RL"
+        ],
+        "index": 34
+    },
+    {
+        "id": 4,
+        "title": "Token-Level LLM Collaboration via FusionRoute",
+        "author": [
+            "Nuoya Xiong",
+            "Yuhang Zhou",
+            "Hanqing Zeng",
+            "Zhaorun Chen",
+            "Furong Huang",
+            "Shuchao Bi",
+            "Lizhu Zhang",
+            "Zhuokai Zhao"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.05106",
+        "abstract": "Large language models (LLMs) exhibit strengths across diverse domains. However, achieving strong performance across these domains with a single general-purpose model typically requires scaling to sizes that are prohibitively expensive to train and deploy. On the other hand, while smaller domain-specialized models are much more efficient, they struggle to generalize beyond their training distributions. To address this dilemma, we propose FusionRoute, a robust and effective token-level multi-LLM collaboration framework in which a lightweight router simultaneously (i) selects the most suitable expert at each decoding step and (ii) contributes a complementary logit that refines or corrects the selected expert's next-token distribution via logit addition. Unlike existing token-level collaboration methods that rely solely on fixed expert outputs, we provide a theoretical analysis showing that pure expert-only routing is fundamentally limited: unless strong global coverage assumptions hold, it cannot in general realize the optimal decoding policy. By augmenting expert selection with a trainable complementary generator, FusionRoute expands the effective policy class and enables recovery of optimal value functions under mild conditions. Empirically, across both Llama-3 and Gemma-2 families and diverse benchmarks spanning mathematical reasoning, code generation, and instruction following, FusionRoute outperforms both sequence- and token-level collaboration, model merging, and direct fine-tuning, while remaining competitive with domain experts on their respective tasks.",
+        "tags": [
+            "LLM",
+            "LLaMA"
+        ],
+        "index": 29
+    },
+    {
+        "id": 5,
+        "title": "RelayLLM: Efficient Reasoning via Collaborative Decoding",
+        "author": [
+            "Chengsong Huang",
+            "Tong Zheng",
+            "Langlin Huang",
+            "Jinyuan Li",
+            "Haolin Liu",
+            "Jiaxin Huang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.05167",
+        "abstract": "Large Language Models (LLMs) for complex reasoning is often hindered by high computational costs and latency, while resource-efficient Small Language Models (SLMs) typically lack the necessary reasoning capacity. Existing collaborative approaches, such as cascading or routing, operate at a coarse granularity by offloading entire queries to LLMs, resulting in significant computational waste when the SLM is capable of handling the majority of reasoning steps. To address this, we propose RelayLLM, a novel framework for efficient reasoning via token-level collaborative decoding. Unlike routers, RelayLLM empowers the SLM to act as an active controller that dynamically invokes the LLM only for critical tokens via a special command, effectively \"relaying\" the generation process. We introduce a two-stage training framework, including warm-up and Group Relative Policy Optimization (GRPO) to teach the model to balance independence with strategic help-seeking. Empirical results across six benchmarks demonstrate that RelayLLM achieves an average accuracy of 49.52%, effectively bridging the performance gap between the two models. Notably, this is achieved by invoking the LLM for only 1.07% of the total generated tokens, offering a 98.2% cost reduction compared to performance-matched random routers.",
+        "tags": [
+            "GRPO",
+            "LLM"
+        ],
+        "index": 25
+    },
+    {
+        "id": 6,
+        "title": "VideoAuto-R1: Video Auto Reasoning via Thinking Once, Answering Twice",
+        "author": [
+            "Shuming Liu",
+            "Mingchen Zhuge",
+            "Changsheng Zhao",
+            "Jun Chen",
+            "Lemeng Wu",
+            "Zechun Liu",
+            "Chenchen Zhu",
+            "Zhipeng Cai",
+            "Chong Zhou",
+            "Haozhe Liu",
+            "Ernie Chang",
+            "Saksham Suri",
+            "Hongyu Xu",
+            "Qi Qian",
+            "Wei Wen",
+            "Balakrishnan Varadarajan",
+            "Zhuang Liu",
+            "Hu Xu",
+            "Florian Bordes",
+            "Raghuraman Krishnamoorthi",
+            "Bernard Ghanem",
+            "Vikas Chandra",
+            "Yunyang Xiong"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.05175",
+        "abstract": "Chain-of-thought (CoT) reasoning has emerged as a powerful tool for multimodal large language models on video understanding tasks. However, its necessity and advantages over direct answering remain underexplored. In this paper, we first demonstrate that for RL-trained video models, direct answering often matches or even surpasses CoT performance, despite CoT producing step-by-step analyses at a higher computational cost. Motivated by this, we propose VideoAuto-R1, a video understanding framework that adopts a reason-when-necessary strategy. During training, our approach follows a Thinking Once, Answering Twice paradigm: the model first generates an initial answer, then performs reasoning, and finally outputs a reviewed answer. Both answers are supervised via verifiable rewards. During inference, the model uses the confidence score of the initial answer to determine whether to proceed with reasoning. Across video QA and grounding benchmarks, VideoAuto-R1 achieves state-of-the-art accuracy with significantly improved efficiency, reducing the average response length by ~3.3x, e.g., from 149 to just 44 tokens. Moreover, we observe a low rate of thinking-mode activation on perception-oriented tasks, but a higher rate on reasoning-intensive tasks. This suggests that explicit language-based reasoning is generally beneficial but not always necessary.",
+        "tags": [
+            "CoT",
+            "LLM",
+            "RL"
+        ],
+        "index": 23
+    },
+    {
+        "id": 7,
+        "title": "RoboVIP: Multi-View Video Generation with Visual Identity Prompting Augments Robot Manipulation",
+        "author": [
+            "Boyang Wang",
+            "Haoran Zhang",
+            "Shujie Zhang",
+            "Jinkun Hao",
+            "Mingda Jia",
+            "Qi Lv",
+            "Yucheng Mao",
+            "Zhaoyang Lyu",
+            "Jia Zeng",
+            "Xudong Xu",
+            "Jiangmiao Pang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.05241",
+        "abstract": "The diversity, quantity, and quality of manipulation data are critical for training effective robot policies. However, due to hardware and physical setup constraints, collecting large-scale real-world manipulation data remains difficult to scale across diverse environments. Recent work uses text-prompt conditioned image diffusion models to augment manipulation data by altering the backgrounds and tabletop objects in the visual observations. However, these approaches often overlook the practical need for multi-view and temporally coherent observations required by state-of-the-art policy models. Further, text prompts alone cannot reliably specify the scene setup. To provide the diffusion model with explicit visual guidance, we introduce visual identity prompting, which supplies exemplar images as conditioning inputs to guide the generation of the desired scene setup. To this end, we also build a scalable pipeline to curate a visual identity pool from large robotics datasets. Using our augmented manipulation data to train downstream vision-language-action and visuomotor policy models yields consistent performance gains in both simulation and real-robot settings.",
+        "tags": [
+            "Diffusion",
+            "Robotics",
+            "Video Generation"
+        ],
+        "index": 22
+    },
+    {
+        "id": 8,
+        "title": "AT$^2$PO: Agentic Turn-based Policy Optimization via Tree Search",
+        "author": [
+            "Zefang Zong",
+            "Dingwei Chen",
+            "Yang Li",
+            "Qi Yi",
+            "Bo Zhou",
+            "Chengming Li",
+            "Bo Qian",
+            "Peng Chen",
+            "Jie Jiang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.04767",
+        "abstract": "LLM agents have emerged as powerful systems for tackling multi-turn tasks by interleaving internal reasoning and external tool interactions. Agentic Reinforcement Learning has recently drawn significant research attention as a critical post-training paradigm to further refine these capabilities. In this paper, we present AT$^2$PO (Agentic Turn-based Policy Optimization via Tree Search), a unified framework for multi-turn agentic RL that addresses three core challenges: limited exploration diversity, sparse credit assignment, and misaligned policy optimization. AT$^2$PO introduces a turn-level tree structure that jointly enables Entropy-Guided Tree Expansion for strategic exploration and Turn-wise Credit Assignment for fine-grained reward propagation from sparse outcomes. Complementing this, we propose Agentic Turn-based Policy Optimization, a turn-level learning objective that aligns policy updates with the natural decision granularity of agentic interactions. ATPO is orthogonal to tree search and can be readily integrated into any multi-turn RL pipeline. Experiments across seven benchmarks demonstrate consistent improvements over the state-of-the-art baseline by up to 1.84 percentage points in average, with ablation studies validating the effectiveness of each component. Our code is available at https://github.com/zzfoutofspace/ATPO.",
+        "tags": [
+            "LLM",
+            "RL"
+        ],
+        "index": 22
+    },
+    {
+        "id": 9,
+        "title": "Few Tokens Matter: Entropy Guided Attacks on Vision-Language Models",
+        "author": [
+            "Mengqi He",
+            "Xinyu Tian",
+            "Xin Shen",
+            "Jinhong Ni",
+            "Shu Zou",
+            "Zhaoyuan Yang",
+            "Jing Zhang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.21815",
+        "abstract": "Vision-language models (VLMs) achieve remarkable performance but remain vulnerable to adversarial attacks. Entropy, a measure of model uncertainty, is strongly correlated with the reliability of VLM. Prior entropy-based attacks maximize uncertainty at all decoding steps, implicitly assuming that every token contributes equally to generation instability. We show instead that a small fraction (about 20%) of high-entropy tokens, i.e., critical decision points in autoregressive generation, disproportionately governs output trajectories. By concentrating adversarial perturbations on these positions, we achieve semantic degradation comparable to global methods while using substantially smaller budgets. More importantly, across multiple representative VLMs, such selective attacks convert 35-49% of benign outputs into harmful ones, exposing a more critical safety risk. Remarkably, these vulnerable high-entropy forks recur across architecturally diverse VLMs, enabling feasible transferability (17-26% harmful rates on unseen targets). Motivated by these findings, we propose Entropy-bank Guided Adversarial attacks (EGA), which achieves competitive attack success rates (93-95%) alongside high harmful conversion, thereby revealing new weaknesses in current VLM safety mechanisms.",
+        "tags": [
+            "VLM"
+        ],
+        "index": 19
+    },
+    {
+        "id": 10,
+        "title": "VerseCrafter: Dynamic Realistic Video World Model with 4D Geometric Control",
+        "author": [
+            "Sixiao Zheng",
+            "Minghao Yin",
+            "Wenbo Hu",
+            "Xiaoyu Li",
+            "Ying Shan",
+            "Yanwei Fu"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.05138",
+        "abstract": "Video world models aim to simulate dynamic, real-world environments, yet existing methods struggle to provide unified and precise control over camera and multi-object motion, as videos inherently operate dynamics in the projected 2D image plane. To bridge this gap, we introduce VerseCrafter, a 4D-aware video world model that enables explicit and coherent control over both camera and object dynamics within a unified 4D geometric world state. Our approach is centered on a novel 4D Geometric Control representation, which encodes the world state through a static background point cloud and per-object 3D Gaussian trajectories. This representation captures not only an object's path but also its probabilistic 3D occupancy over time, offering a flexible, category-agnostic alternative to rigid bounding boxes or parametric models. These 4D controls are rendered into conditioning signals for a pretrained video diffusion model, enabling the generation of high-fidelity, view-consistent videos that precisely adhere to the specified dynamics. Unfortunately, another major challenge lies in the scarcity of large-scale training data with explicit 4D annotations. We address this by developing an automatic data engine that extracts the required 4D controls from in-the-wild videos, allowing us to train our model on a massive and diverse dataset.",
+        "tags": [
+            "3D",
+            "Diffusion"
+        ],
+        "index": 14
+    },
+    {
+        "id": 11,
+        "title": "Agent-as-a-Judge",
+        "author": [
+            "Runyang You",
+            "Hongru Cai",
+            "Caiqi Zhang",
+            "Qiancheng Xu",
+            "Meng Liu",
+            "Tiezheng Yu",
+            "Yongqi Li",
+            "Wenjie Li"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.05111",
+        "abstract": "LLM-as-a-Judge has revolutionized AI evaluation by leveraging large language models for scalable assessments. However, as evaluands become increasingly complex, specialized, and multi-step, the reliability of LLM-as-a-Judge has become constrained by inherent biases, shallow single-pass reasoning, and the inability to verify assessments against real-world observations. This has catalyzed the transition to Agent-as-a-Judge, where agentic judges employ planning, tool-augmented verification, multi-agent collaboration, and persistent memory to enable more robust, verifiable, and nuanced evaluations. Despite the rapid proliferation of agentic evaluation systems, the field lacks a unified framework to navigate this shifting landscape. To bridge this gap, we present the first comprehensive survey tracing this evolution. Specifically, we identify key dimensions that characterize this paradigm shift and establish a developmental taxonomy. We organize core methodologies and survey applications across general and professional domains. Furthermore, we analyze frontier challenges and identify promising research directions, ultimately providing a clear roadmap for the next generation of agentic evaluation.",
+        "tags": [
+            "LLM"
+        ],
+        "index": 12
+    },
+    {
+        "id": 12,
+        "title": "The Illusion of Specialization: Unveiling the Domain-Invariant \"Standing Committee\" in Mixture-of-Experts Models",
+        "author": [
+            "Yan Wang",
+            "Yitao Xu",
+            "Nanhan Shen",
+            "Jinyan Su",
+            "Jimin Huang",
+            "Zining Zhu"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.03425",
+        "abstract": "Mixture of Experts models are widely assumed to achieve domain specialization through sparse routing. In this work, we question this assumption by introducing COMMITTEEAUDIT, a post hoc framework that analyzes routing behavior at the level of expert groups rather than individual experts. Across three representative models and the MMLU benchmark, we uncover a domain-invariant Standing Committee. This is a compact coalition of routed experts that consistently captures the majority of routing mass across domains, layers, and routing budgets, even when architectures already include shared experts. Qualitative analysis further shows that Standing Committees anchor reasoning structure and syntax, while peripheral experts handle domain-specific knowledge. These findings reveal a strong structural bias toward centralized computation, suggesting that specialization in Mixture of Experts models is far less pervasive than commonly believed. This inherent bias also indicates that current training objectives, such as load-balancing losses that enforce uniform expert utilization, may be working against the model's natural optimization path, thereby limiting training efficiency and performance.",
+        "tags": [
+            "MoE"
+        ],
+        "index": 12
+    },
+    {
+        "id": 13,
+        "title": "CoV: Chain-of-View Prompting for Spatial Reasoning",
+        "author": [
+            "Haoyu Zhao",
+            "Akide Liu",
+            "Zeyu Zhang",
+            "Weijie Wang",
+            "Feng Chen",
+            "Ruihan Zhu",
+            "Gholamreza Haffari",
+            "Bohan Zhuang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.05172",
+        "abstract": "Embodied question answering (EQA) in 3D environments often requires collecting context that is distributed across multiple viewpoints and partially occluded. However, most recent vision--language models (VLMs) are constrained to a fixed and finite set of input views, which limits their ability to acquire question-relevant context at inference time and hinders complex spatial reasoning. We propose Chain-of-View (CoV) prompting, a training-free, test-time reasoning framework that transforms a VLM into an active viewpoint reasoner through a coarse-to-fine exploration process. CoV first employs a View Selection agent to filter redundant frames and identify question-aligned anchor views. It then performs fine-grained view adjustment by interleaving iterative reasoning with discrete camera actions, obtaining new observations from the underlying 3D scene representation until sufficient context is gathered or a step budget is reached.\nWe evaluate CoV on OpenEQA across four mainstream VLMs and obtain an average +11.56\\% improvement in LLM-Match, with a maximum gain of +13.62\\% on Qwen3-VL-Flash. CoV further exhibits test-time scaling: increasing the minimum action budget yields an additional +2.51\\% average improvement, peaking at +3.73\\% on Gemini-2.5-Flash. On ScanQA and SQA3D, CoV delivers strong performance (e.g., 116 CIDEr / 31.9 EM@1 on ScanQA and 51.1 EM@1 on SQA3D). Overall, these results suggest that question-aligned view selection coupled with open-view search is an effective, model-agnostic strategy for improving spatial reasoning in 3D EQA without additional training.",
+        "tags": [
+            "3D",
+            "LLM",
+            "VLM"
+        ],
+        "index": 8
+    },
+    {
+        "id": 14,
+        "title": "DiffCoT: Diffusion-styled Chain-of-Thought Reasoning in LLMs",
+        "author": [
+            "Shidong Cao",
+            "Hongzhan Lin",
+            "Yuxuan Gu",
+            "Ziyang Luo",
+            "Jing Ma"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.03559",
+        "abstract": "Chain-of-Thought (CoT) reasoning improves multi-step mathematical problem solving in large language models but remains vulnerable to exposure bias and error accumulation, as early mistakes propagate irreversibly through autoregressive decoding. In this work, we propose DiffCoT, a diffusion-styled CoT framework that reformulates CoT reasoning as an iterative denoising process. DiffCoT integrates diffusion principles at the reasoning-step level via a sliding-window mechanism, enabling unified generation and retrospective correction of intermediate steps while preserving token-level autoregression. To maintain causal consistency, we further introduce a causal diffusion noise schedule that respects the temporal structure of reasoning chains. Extensive experiments on three multi-step CoT reasoning benchmarks across diverse model backbones demonstrate that DiffCoT consistently outperforms existing CoT preference optimization methods, yielding improved robustness and error-correction capability in CoT reasoning.",
+        "tags": [
+            "CoT",
+            "Diffusion",
+            "LLM"
+        ],
+        "index": 8
+    },
+    {
+        "id": 15,
+        "title": "Plenoptic Video Generation",
+        "author": [
+            "Xiao Fu",
+            "Shitao Tang",
+            "Min Shi",
+            "Xian Liu",
+            "Jinwei Gu",
+            "Ming-Yu Liu",
+            "Dahua Lin",
+            "Chen-Hsuan Lin"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.05239",
+        "abstract": "Camera-controlled generative video re-rendering methods, such as ReCamMaster, have achieved remarkable progress. However, despite their success in single-view setting, these works often struggle to maintain consistency across multi-view scenarios. Ensuring spatio-temporal coherence in hallucinated regions remains challenging due to the inherent stochasticity of generative models. To address it, we introduce PlenopticDreamer, a framework that synchronizes generative hallucinations to maintain spatio-temporal memory. The core idea is to train a multi-in-single-out video-conditioned model in an autoregressive manner, aided by a camera-guided video retrieval strategy that adaptively selects salient videos from previous generations as conditional inputs. In addition, Our training incorporates progressive context-scaling to improve convergence, self-conditioning to enhance robustness against long-range visual degradation caused by error accumulation, and a long-video conditioning mechanism to support extended video generation. Extensive experiments on the Basic and Agibot benchmarks demonstrate that PlenopticDreamer achieves state-of-the-art video re-rendering, delivering superior view synchronization, high-fidelity visuals, accurate camera control, and diverse view transformations (e.g., third-person to third-person, and head-view to gripper-view in robotic manipulation). Project page: https://research.nvidia.com/labs/dir/plenopticdreamer/",
+        "tags": [
+            "Video Generation"
+        ],
+        "index": 7
+    },
+    {
+        "id": 16,
+        "title": "Re-Align: Structured Reasoning-guided Alignment for In-Context Image Generation and Editing",
+        "author": [
+            "Runze He",
+            "Yiji Cheng",
+            "Tiankai Hang",
+            "Zhimin Li",
+            "Yu Xu",
+            "Zijin Yin",
+            "Shiyi Zhang",
+            "Wenxun Dai",
+            "Penghui Du",
+            "Ao Ma",
+            "Chunyu Wang",
+            "Qinglin Lu",
+            "Jizhong Han",
+            "Jiao Dai"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.05124",
+        "abstract": "In-context image generation and editing (ICGE) enables users to specify visual concepts through interleaved image-text prompts, demanding precise understanding and faithful execution of user intent. Although recent unified multimodal models exhibit promising understanding capabilities, these strengths often fail to transfer effectively to image generation. We introduce Re-Align, a unified framework that bridges the gap between understanding and generation through structured reasoning-guided alignment. At its core lies the In-Context Chain-of-Thought (IC-CoT), a structured reasoning paradigm that decouples semantic guidance and reference association, providing clear textual target and mitigating confusion among reference images. Furthermore, Re-Align introduces an effective RL training scheme that leverages a surrogate reward to measure the alignment between structured reasoning text and the generated image, thereby improving the model's overall performance on ICGE tasks. Extensive experiments verify that Re-Align outperforms competitive methods of comparable model scale and resources on both in-context image generation and editing tasks.",
+        "tags": [
+            "CoT",
+            "RL"
+        ],
+        "index": 5
+    },
+    {
+        "id": 17,
+        "title": "One Sample to Rule Them All: Extreme Data Efficiency in RL Scaling",
+        "author": [
+            "Yiyuan Li",
+            "Zhen Huang",
+            "Yanan Wu",
+            "Weixun Wang",
+            "Xuefeng Li",
+            "Yijia Luo",
+            "Wenbo Su",
+            "Bo Zheng",
+            "Pengfei Liu"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.03111",
+        "abstract": "The reasoning ability of large language models (LLMs) can be unleashed with reinforcement learning (RL) (OpenAI, 2024; DeepSeek-AI et al., 2025a; Zeng et al., 2025). The success of existing RL attempts in LLMs usually relies on high-quality samples of thousands or beyond. In this paper, we challenge fundamental assumptions about data requirements in RL for LLMs by demonstrating the remarkable effectiveness of one-shot learning. Specifically, we introduce polymath learning, a framework for designing one training sample that elicits multidisciplinary impact. We present three key findings: (1) A single, strategically selected math reasoning sample can produce significant performance improvements across multiple domains, including physics, chemistry, and biology with RL; (2) The math skills salient to reasoning suggest the characteristics of the optimal polymath sample; and (3) An engineered synthetic sample that integrates multidiscipline elements outperforms training with individual samples that naturally occur. Our approach achieves superior performance to training with larger datasets across various reasoning benchmarks, demonstrating that sample quality and design, rather than quantity, may be the key to unlock enhanced reasoning capabilities in language models. Our results suggest a shift, dubbed as sample engineering, toward precision engineering of training samples rather than simply increasing data volume.",
+        "tags": [
+            "DeepSeek",
+            "LLM",
+            "RL"
+        ],
+        "index": 5
+    },
+    {
+        "id": 18,
+        "title": "DocDancer: Towards Agentic Document-Grounded Information Seeking",
+        "author": [
+            "Qintong Zhang",
+            "Xinjie Lv",
+            "Jialong Wu",
+            "Baixuan Li",
+            "Zhengwei Tao",
+            "Guochen Yan",
+            "Huanyao Zhang",
+            "Bin Wang",
+            "Jiahao Xu",
+            "Haitao Mi",
+            "Wentao Zhang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.05163",
+        "abstract": "Document Question Answering (DocQA) focuses on answering questions grounded in given documents, yet existing DocQA agents lack effective tool utilization and largely rely on closed-source models. In this work, we introduce DocDancer, an end-to-end trained open-source Doc agent. We formulate DocQA as an information-seeking problem and propose a tool-driven agent framework that explicitly models document exploration and comprehension. To enable end-to-end training of such agents, we introduce an Exploration-then-Synthesis data synthesis pipeline that addresses the scarcity of high-quality training data for DocQA. Training on the synthesized data, the trained models on two long-context document understanding benchmarks, MMLongBench-Doc and DocBench, show their effectiveness. Further analysis provides valuable insights for the agentic tool design and synthetic data.",
+        "tags": [],
+        "index": 3
+    },
+    {
+        "id": 19,
+        "title": "Multi-Scale Local Speculative Decoding for Image Generation",
+        "author": [
+            "Elia Peruzzo",
+            "Guillaume SautiÃ¨re",
+            "Amirhossein Habibian"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.05149",
+        "abstract": "Autoregressive (AR) models have achieved remarkable success in image synthesis, yet their sequential nature imposes significant latency constraints. Speculative Decoding offers a promising avenue for acceleration, but existing approaches are limited by token-level ambiguity and lack of spatial awareness. In this work, we introduce Multi-Scale Local Speculative Decoding (MuLo-SD), a novel framework that combines multi-resolution drafting with spatially informed verification to accelerate AR image generation. Our method leverages a low-resolution drafter paired with learned up-samplers to propose candidate image tokens, which are then verified in parallel by a high-resolution target model. Crucially, we incorporate a local rejection and resampling mechanism, enabling efficient correction of draft errors by focusing on spatial neighborhoods rather than raster-scan resampling after the first rejection. We demonstrate that MuLo-SD achieves substantial speedups - up to $\\mathbf{1.7\\times}$ - outperforming strong speculative decoding baselines such as EAGLE-2 and LANTERN in terms of acceleration, while maintaining comparable semantic alignment and perceptual quality. These results are validated using GenEval, DPG-Bench, and FID/HPSv2 on the MS-COCO 5k validation split. Extensive ablations highlight the impact of up-sampling design, probability pooling, and local rejection and resampling with neighborhood expansion. Our approach sets a new state-of-the-art in speculative decoding for image synthesis, bridging the gap between efficiency and fidelity.",
+        "tags": [],
+        "index": 2
+    },
+    {
+        "id": 20,
+        "title": "PyramidalWan: On Making Pretrained Video Model Pyramidal for Efficient Inference",
+        "author": [
+            "Denis Korzhenkov",
+            "Adil Karjauv",
+            "Animesh Karnewar",
+            "Mohsen Ghafoorian",
+            "Amirhossein Habibian"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.04792",
+        "abstract": "Recently proposed pyramidal models decompose the conventional forward and backward diffusion processes into multiple stages operating at varying resolutions. These models handle inputs with higher noise levels at lower resolutions, while less noisy inputs are processed at higher resolutions. This hierarchical approach significantly reduces the computational cost of inference in multi-step denoising models. However, existing open-source pyramidal video models have been trained from scratch and tend to underperform compared to state-of-the-art systems in terms of visual plausibility. In this work, we present a pipeline that converts a pretrained diffusion model into a pyramidal one through low-cost finetuning, achieving this transformation without degradation in quality of output videos. Furthermore, we investigate and compare various strategies for step distillation within pyramidal models, aiming to further enhance the inference efficiency. Our results are available at https://qualcomm-ai-research.github.io/PyramidalWan.",
+        "tags": [
+            "Diffusion"
+        ],
+        "index": 2
+    },
+    {
+        "id": 21,
+        "title": "ProFuse: Efficient Cross-View Context Fusion for Open-Vocabulary 3D Gaussian Splatting",
+        "author": [
+            "Yen-Jen Chiou",
+            "Wei-Tse Cheng",
+            "Yuan-Fu Yang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.04754",
+        "abstract": "We present ProFuse, an efficient context-aware framework for open-vocabulary 3D scene understanding with 3D Gaussian Splatting (3DGS). The pipeline enhances cross-view consistency and intra-mask cohesion within a direct registration setup, adding minimal overhead and requiring no render-supervised fine-tuning. Instead of relying on a pretrained 3DGS scene, we introduce a dense correspondence-guided pre-registration phase that initializes Gaussians with accurate geometry while jointly constructing 3D Context Proposals via cross-view clustering. Each proposal carries a global feature obtained through weighted aggregation of member embeddings, and this feature is fused onto Gaussians during direct registration to maintain per-primitive language coherence across views. With associations established in advance, semantic fusion requires no additional optimization beyond standard reconstruction, and the model retains geometric refinement without densification. ProFuse achieves strong open-vocabulary 3DGS understanding while completing semantic attachment in about five minutes per scene, which is two times faster than SOTA.",
+        "tags": [
+            "3D",
+            "Gaussian Splatting"
+        ],
+        "index": 2
+    },
+    {
+        "id": 22,
+        "title": "Scaling Behavior Cloning Improves Causal Reasoning: An Open Model for Real-Time Video Game Playing",
+        "author": [
+            "Yuguang Yue",
+            "Irakli Salia",
+            "Samuel Hunt",
+            "Chris Green",
+            "Wenzhe Shi",
+            "Jonathan J Hunt"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.04575",
+        "abstract": "Behavior cloning is enjoying a resurgence in popularity as scaling both model and data sizes proves to provide a strong starting point for many tasks of interest. In this work, we introduce an open recipe for training a video game playing foundation model designed for inference in realtime on a consumer GPU. We release all data (8300+ hours of high quality human gameplay), training and inference code, and pretrained checkpoints under an open license. We show that our best model is capable of playing a variety of 3D video games at a level competitive with human play. We use this recipe to systematically examine the scaling laws of behavior cloning to understand how the model's performance and causal reasoning varies with model and data scale. We first show in a simple toy problem that, for some types of causal reasoning, increasing both the amount of training data and the depth of the network results in the model learning a more causal policy. We then systematically study how causality varies with the number of parameters (and depth) and training steps in scaled models of up to 1.2 billion parameters, and we find similar scaling results to what we observe in the toy problem.",
+        "tags": [
+            "3D"
+        ],
+        "index": 2
+    },
+    {
+        "id": 23,
+        "title": "ReHyAt: Recurrent Hybrid Attention for Video Diffusion Transformers",
+        "author": [
+            "Mohsen Ghafoorian",
+            "Amirhossein Habibian"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.04342",
+        "abstract": "Recent advances in video diffusion models have shifted towards transformer-based architectures, achieving state-of-the-art video generation but at the cost of quadratic attention complexity, which severely limits scalability for longer sequences. We introduce ReHyAt, a Recurrent Hybrid Attention mechanism that combines the fidelity of softmax attention with the efficiency of linear attention, enabling chunk-wise recurrent reformulation and constant memory usage. Unlike the concurrent linear-only SANA Video, ReHyAt's hybrid design allows efficient distillation from existing softmax-based models, reducing the training cost by two orders of magnitude to ~160 GPU hours, while being competitive in the quality. Our light-weight distillation and finetuning pipeline provides a recipe that can be applied to future state-of-the-art bidirectional softmax-based models. Experiments on VBench and VBench-2.0, as well as a human preference study, demonstrate that ReHyAt achieves state-of-the-art video quality while reducing attention cost from quadratic to linear, unlocking practical scalability for long-duration and on-device video generation. Project page is available at https://qualcomm-ai-research.github.io/rehyat.",
+        "tags": [
+            "Diffusion",
+            "Transformer",
+            "Video Generation"
+        ],
+        "index": 2
+    },
+    {
+        "id": 24,
+        "title": "Guardians of the Hair: Rescuing Soft Boundaries in Depth, Stereo, and Novel Views",
+        "author": [
+            "Xiang Zhang",
+            "Yang Zhang",
+            "Lukas Mehl",
+            "Markus Gross",
+            "Christopher Schroers"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.03362",
+        "abstract": "Soft boundaries, like thin hairs, are commonly observed in natural and computer-generated imagery, but they remain challenging for 3D vision due to the ambiguous mixing of foreground and background cues. This paper introduces Guardians of the Hair (HairGuard), a framework designed to recover fine-grained soft boundary details in 3D vision tasks. Specifically, we first propose a novel data curation pipeline that leverages image matting datasets for training and design a depth fixer network to automatically identify soft boundary regions. With a gated residual module, the depth fixer refines depth precisely around soft boundaries while maintaining global depth quality, allowing plug-and-play integration with state-of-the-art depth models. For view synthesis, we perform depth-based forward warping to retain high-fidelity textures, followed by a generative scene painter that fills disoccluded regions and eliminates redundant background artifacts within soft boundaries. Finally, a color fuser adaptively combines warped and inpainted results to produce novel views with consistent geometry and fine-grained details. Extensive experiments demonstrate that HairGuard achieves state-of-the-art performance across monocular depth estimation, stereo image/video conversion, and novel view synthesis, with significant improvements in soft boundary regions.",
+        "tags": [
+            "3D",
+            "Depth Estimation",
+            "Matting"
+        ],
+        "index": 2
+    },
+    {
+        "id": 25,
+        "title": "Towards Open-Vocabulary Industrial Defect Understanding with a Large-Scale Multimodal Dataset",
+        "author": [
+            "TsaiChing Ni",
+            "ZhenQi Chen",
+            "YuanFu Yang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.24160",
+        "abstract": "We present IMDD-1M, the first large-scale Industrial Multimodal Defect Dataset comprising 1,000,000 aligned image-text pairs, designed to advance multimodal learning for manufacturing and quality inspection. IMDD-1M contains high-resolution real-world defects spanning over 60 material categories and more than 400 defect types, each accompanied by expert-verified annotations and fine-grained textual descriptions detailing defect location, severity, and contextual attributes. This dataset enables a wide spectrum of applications, including classification, segmentation, retrieval, captioning, and generative modeling. Building upon IMDD-1M, we train a diffusion-based vision-language foundation model from scratch, specifically tailored for industrial scenarios. The model serves as a generalizable foundation that can be efficiently adapted to specialized domains through lightweight fine-tuning. With less than 5% of the task-specific data required by dedicated expert models, it achieves comparable performance, highlighting the potential of data-efficient foundation model adaptation for industrial inspection and generation, paving the way for scalable, domain-adaptive, and knowledge-grounded manufacturing intelligence.",
+        "tags": [
+            "Diffusion",
+            "Segmentation"
+        ],
+        "index": 2
+    },
+    {
+        "id": 26,
+        "title": "Memorization in 3D Shape Generation: An Empirical Study",
+        "author": [
+            "Shu Pu",
+            "Boya Zeng",
+            "Kaichen Zhou",
+            "Mengyu Wang",
+            "Zhuang Liu"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.23628",
+        "abstract": "Generative models are increasingly used in 3D vision to synthesize novel shapes, yet it remains unclear whether their generation relies on memorizing training shapes. Understanding their memorization could help prevent training data leakage and improve the diversity of generated results. In this paper, we design an evaluation framework to quantify memorization in 3D generative models and study the influence of different data and modeling designs on memorization. We first apply our framework to quantify memorization in existing methods. Next, through controlled experiments with a latent vector-set (Vecset) diffusion model, we find that, on the data side, memorization depends on data modality, and increases with data diversity and finer-grained conditioning; on the modeling side, it peaks at a moderate guidance scale and can be mitigated by longer Vecsets and simple rotation augmentation. Together, our framework and analysis provide an empirical understanding of memorization in 3D generative models and suggest simple yet effective strategies to reduce it without degrading generation quality. Our code is available at https://github.com/zlab-princeton/3d_mem.",
+        "tags": [
+            "3D",
+            "Diffusion"
+        ],
+        "index": 2
+    },
+    {
+        "id": 27,
+        "title": "AgentDevel: Reframing Self-Evolving LLM Agents as Release Engineering",
+        "author": [
+            "Di Zhang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.04620",
+        "abstract": "Recent progress in large language model (LLM) agents has largely focused on embedding self-improvement mechanisms inside the agent or searching over many concurrent variants. While these approaches can raise aggregate scores, they often yield unstable and hard-to-audit improvement trajectories, making it difficult to guarantee non-regression or to reason about failures across versions. We reframe agent improvement as \\textbf{release engineering}: agents are treated as shippable artifacts, and improvement is externalized into a regression-aware release pipeline. We introduce \\textbf{AgentDevel}, a release engineering pipeline that iteratively runs the current agent, produces implementation-blind, symptom-level quality signals from execution traces, synthesizes a single release candidate (RC) via executable diagnosis, and promotes it under flip-centered gating. AgentDevel features three core designs: (i) an implementation-blind LLM critic that characterizes failure appearances without accessing agent internals, (ii) script-based executable diagnosis that aggregates dominant symptom patterns and produces auditable engineering specifications, and (iii) flip-centered gating that prioritizes pass to fail regressions and fail to pass fixes as first-class evidence. Unlike population-based search or in-agent self-refinement, AgentDevel maintains a single canonical version line and emphasizes non-regression as a primary objective. Experiments on execution-heavy benchmarks demonstrate that AgentDevel yields stable improvements with significantly fewer regressions while producing reproducible, auditable artifacts. Overall, AgentDevel provides a practical development discipline for building, debugging, and releasing LLM agents as software development.",
+        "tags": [
+            "LLM"
+        ],
+        "index": 1
+    },
+    {
+        "id": 28,
+        "title": "Beyond Binary Preference: Aligning Diffusion Models to Fine-grained Criteria by Decoupling Attributes",
+        "author": [
+            "Chenye Meng",
+            "Zejian Li",
+            "Zhongni Liu",
+            "Yize Li",
+            "Changle Xie",
+            "Kaixin Jia",
+            "Ling Yang",
+            "Huanghuang Deng",
+            "Shiying Ding",
+            "Shengyuan Zhang",
+            "Jiayi Li",
+            "Lingyun Sun"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.04300",
+        "abstract": "Post-training alignment of diffusion models relies on simplified signals, such as scalar rewards or binary preferences. This limits alignment with complex human expertise, which is hierarchical and fine-grained. To address this, we first construct a hierarchical, fine-grained evaluation criteria with domain experts, which decomposes image quality into multiple positive and negative attributes organized in a tree structure. Building on this, we propose a two-stage alignment framework. First, we inject domain knowledge to an auxiliary diffusion model via Supervised Fine-Tuning. Second, we introduce Complex Preference Optimization (CPO) that extends DPO to align the target diffusion to our non-binary, hierarchical criteria. Specifically, we reformulate the alignment problem to simultaneously maximize the probability of positive attributes while minimizing the probability of negative attributes with the auxiliary diffusion. We instantiate our approach in the domain of painting generation and conduct CPO training with an annotated dataset of painting with fine-grained attributes based on our criteria. Extensive experiments demonstrate that CPO significantly enhances generation quality and alignment with expertise, opening new avenues for fine-grained criteria alignment.",
+        "tags": [
+            "DPO",
+            "Diffusion"
+        ],
+        "index": 1
+    },
+    {
+        "id": 29,
+        "title": "Learning User Preferences Through Interaction for Long-Term Collaboration",
+        "author": [
+            "Shuhaib Mehri",
+            "Priyanka Kargupta",
+            "Tal August",
+            "Dilek Hakkani-TÃ¼r"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.02702",
+        "abstract": "As conversational agents accumulate experience collaborating with users, adapting to user preferences is essential for fostering long-term relationships and improving collaboration quality over time. We introduce MultiSessionCollab, a benchmark that evaluates how well agents can learn user preferences and leverage them to improve collaboration quality throughout multiple sessions. To develop agents that succeed in this setting, we present long-term collaborative agents equipped with a memory that persists and refines user preference as interaction experience accumulates. Moreover, we demonstrate that learning signals can be derived from user simulator behavior in MultiSessionCollab to train agents to generate more comprehensive reflections and update their memory more effectively. Extensive experiments show that equipping agents with memory improves long-term collaboration, yielding higher task success rates, more efficient interactions, and reduced user effort. Finally, we conduct a human user study that demonstrates that memory helps improve user experience in real-world settings.",
+        "tags": [],
+        "index": 1
+    },
+    {
+        "id": 30,
+        "title": "Enhancing Object Detection with Privileged Information: A Model-Agnostic Teacher-Student Approach",
+        "author": [
+            "Matthias Bartolo",
+            "Dylan Seychell",
+            "Gabriel Hili",
+            "Matthew Montebello",
+            "Carl James Debono",
+            "Saviour Formosa",
+            "Konstantinos Makantasis"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.02016",
+        "abstract": "This paper investigates the integration of the Learning Using Privileged Information (LUPI) paradigm in object detection to exploit fine-grained, descriptive information available during training but not at inference. We introduce a general, model-agnostic methodology for injecting privileged information-such as bounding box masks, saliency maps, and depth cues-into deep learning-based object detectors through a teacher-student architecture. Experiments are conducted across five state-of-the-art object detection models and multiple public benchmarks, including UAV-based litter detection datasets and Pascal VOC 2012, to assess the impact on accuracy, generalization, and computational efficiency. Our results demonstrate that LUPI-trained students consistently outperform their baseline counterparts, achieving significant boosts in detection accuracy with no increase in inference complexity or model size. Performance improvements are especially marked for medium and large objects, while ablation studies reveal that intermediate weighting of teacher guidance optimally balances learning from privileged and standard inputs. The findings affirm that the LUPI framework provides an effective and practical strategy for advancing object detection systems in both resource-constrained and real-world settings.",
+        "tags": [
+            "Detection"
+        ],
+        "index": 1
+    },
+    {
+        "id": 31,
+        "title": "LEMAS: Large A 150K-Hour Large-scale Extensible Multilingual Audio Suite with Generative Speech Models",
+        "author": [
+            "Zhiyuan Zhao",
+            "Lijian Lin",
+            "Ye Zhu",
+            "Kai Xie",
+            "Yunfei Liu",
+            "Yu Li"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.04233",
+        "abstract": "We present the LEMAS-Dataset, which, to our knowledge, is currently the largest open-source multilingual speech corpus with word-level timestamps. Covering over 150,000 hours across 10 major languages, LEMAS-Dataset is constructed via a efficient data processing pipeline that ensures high-quality data and annotations. To validate the effectiveness of LEMAS-Dataset across diverse generative paradigms, we train two benchmark models with distinct architectures and task specializations on this dataset. LEMAS-TTS, built upon a non-autoregressive flow-matching framework, leverages the dataset's massive scale and linguistic diversity to achieve robust zero-shot multilingual synthesis. Our proposed accent-adversarial training and CTC loss mitigate cross-lingual accent issues, enhancing synthesis stability. Complementarily, LEMAS-Edit employs an autoregressive decoder-only architecture that formulates speech editing as a masked token infilling task. By exploiting precise word-level alignments to construct training masks and adopting adaptive decoding strategies, it achieves seamless, smooth-boundary speech editing with natural transitions. Experimental results demonstrate that models trained on LEMAS-Dataset deliver high-quality synthesis and editing performance, confirming the dataset's quality. We envision that this richly timestamp-annotated, fine-grained multilingual corpus will drive future advances in prompt-based speech generation systems.",
+        "tags": [
+            "Flow Matching"
+        ],
+        "index": 1
+    },
+    {
+        "id": 32,
+        "title": "VERSE: Visual Embedding Reduction and Space Exploration. Clustering-Guided Insights for Training Data Enhancement in Visually-Rich Document Understanding",
+        "author": [
+            "Ignacio de Rodrigo",
+            "Alvaro J. Lopez-Lopez",
+            "Jaime Boal"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.05125",
+        "abstract": "This work introduces VERSE, a methodology for analyzing and improving Vision-Language Models applied to Visually-rich Document Understanding by exploring their visual embedding space. VERSE enables the visualization of latent representations, supporting the assessment of model feasibility. It also facilitates the identification of problematic regions and guides the generation of synthetic data to enhance performance in those clusters. We validate the methodology by training on the synthetic MERIT Dataset and evaluating on its real-world counterpart, MERIT Secret. Results show that VERSE helps uncover the visual features associated with error-prone clusters, and that retraining with samples containing these features substantially boosts F1 performance without degrading generalization. Furthermore, we demonstrate that on-premise models such as Donut and Idefics2, when optimized with VERSE, match or even surpass the performance of SaaS solutions like GPT-4 and Pixtral.",
+        "tags": [
+            "GPT",
+            "VLM"
+        ],
+        "index": 0
+    },
+    {
+        "id": 33,
+        "title": "Safety at One Shot: Patching Fine-Tuned LLMs with A Single Instance",
+        "author": [
+            "Jiawen Zhang",
+            "Lipeng He",
+            "Kejia Chen",
+            "Jian Lou",
+            "Jian Liu",
+            "Xiaohu Yang",
+            "Ruoxi Jia"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.01887",
+        "abstract": "Fine-tuning safety-aligned large language models (LLMs) can substantially compromise their safety. Previous approaches require many safety samples or calibration sets, which not only incur significant computational overhead during realignment but also lead to noticeable degradation in model utility. Contrary to this belief, we show that safety alignment can be fully recovered with only a single safety example, without sacrificing utility and at minimal cost. Remarkably, this recovery is effective regardless of the number of harmful examples used in fine-tuning or the size of the underlying model, and convergence is achieved within just a few epochs. Furthermore, we uncover the low-rank structure of the safety gradient, which explains why such efficient correction is possible. We validate our findings across five safety-aligned LLMs and multiple datasets, demonstrating the generality of our approach.",
+        "tags": [
+            "LLM"
+        ],
+        "index": 0
+    }
+]

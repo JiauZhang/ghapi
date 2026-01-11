@@ -1,0 +1,997 @@
+[
+    {
+        "id": 1,
+        "title": "From Code Foundation Models to Agents and Applications: A Practical Guide to Code Intelligence",
+        "author": [
+            "Jian Yang",
+            "Xianglong Liu",
+            "Weifeng Lv",
+            "Ken Deng",
+            "Shawn Guo",
+            "Lin Jing",
+            "Yizhi Li",
+            "Shark Liu",
+            "Xianzhen Luo",
+            "Yuyu Luo",
+            "Changzai Pan",
+            "Ensheng Shi",
+            "Yingshui Tan",
+            "Renshuai Tao",
+            "Jiajun Wu",
+            "Xianjie Wu",
+            "Zhenhe Wu",
+            "Daoguang Zan",
+            "Chenchen Zhang",
+            "Wei Zhang",
+            "He Zhu",
+            "Terry Yue Zhuo",
+            "Kerui Cao",
+            "Xianfu Cheng",
+            "Jun Dong",
+            "Shengjie Fang",
+            "Zhiwei Fei",
+            "Xiangyuan Guan",
+            "Qipeng Guo",
+            "Zhiguang Han",
+            "Joseph James",
+            "Tianqi Luo",
+            "Renyuan Li",
+            "Yuhang Li",
+            "Yiming Liang",
+            "Congnan Liu",
+            "Jiaheng Liu",
+            "Qian Liu",
+            "Ruitong Liu",
+            "Tyler Loakman",
+            "Xiangxin Meng",
+            "Chuang Peng",
+            "Tianhao Peng",
+            "Jiajun Shi",
+            "Mingjie Tang",
+            "Boyang Wang",
+            "Haowen Wang",
+            "Yunli Wang",
+            "Fanglin Xu",
+            "Zihan Xu",
+            "Fei Yuan",
+            "Ge Zhang",
+            "Jiayi Zhang",
+            "Xinhao Zhang",
+            "Wangchunshu Zhou",
+            "Hualei Zhu",
+            "King Zhu",
+            "Brown Dai",
+            "Aishan Liu",
+            "Zhoujun Li",
+            "Chenghua Lin",
+            "Tianyu Liu",
+            "Chao Peng",
+            "Kai Shen",
+            "Libo Qin",
+            "Shuangyong Song",
+            "Zizheng Zhan",
+            "Jiajun Zhang",
+            "Jie Zhang",
+            "Zhaoxiang Zhang",
+            "Bo Zheng"
+        ],
+        "pdf": "https://arxiv.org/pdf/2511.18538",
+        "abstract": "Large language models (LLMs) have fundamentally transformed automated software development by enabling direct translation of natural language descriptions into functional code, driving commercial adoption through tools like Github Copilot (Microsoft), Cursor (Anysphere), Trae (ByteDance), and Claude Code (Anthropic). While the field has evolved dramatically from rule-based systems to Transformer-based architectures, achieving performance improvements from single-digit to over 95\\% success rates on benchmarks like HumanEval. In this work, we provide a comprehensive synthesis and practical guide (a series of analytic and probing experiments) about code LLMs, systematically examining the complete model life cycle from data curation to post-training through advanced prompting paradigms, code pre-training, supervised fine-tuning, reinforcement learning, and autonomous coding agents. We analyze the code capability of the general LLMs (GPT-4, Claude, LLaMA) and code-specialized LLMs (StarCoder, Code LLaMA, DeepSeek-Coder, and QwenCoder), critically examining the techniques, design decisions, and trade-offs. Further, we articulate the research-practice gap between academic research (e.g., benchmarks and tasks) and real-world deployment (e.g., software-related code tasks), including code correctness, security, contextual awareness of large codebases, and integration with development workflows, and map promising research directions to practical needs. Last, we conduct a series of experiments to provide a comprehensive analysis of code pre-training, supervised fine-tuning, and reinforcement learning, covering scaling law, framework selection, hyperparameter sensitivity, model architectures, and dataset comparisons.",
+        "tags": [
+            "DeepSeek",
+            "GPT",
+            "LLM",
+            "LLaMA",
+            "RL",
+            "Transformer"
+        ]
+    },
+    {
+        "id": 2,
+        "title": "LongVT: Incentivizing \"Thinking with Long Videos\" via Native Tool Calling",
+        "author": [
+            "Zuhao Yang",
+            "Sudong Wang",
+            "Kaichen Zhang",
+            "Keming Wu",
+            "Sicong Leng",
+            "Yifan Zhang",
+            "Chengwei Qin",
+            "Shijian Lu",
+            "Xingxuan Li",
+            "Lidong Bing"
+        ],
+        "pdf": "https://arxiv.org/pdf/2511.20785",
+        "abstract": "Large multimodal models (LMMs) have shown great potential for video reasoning with textual Chain-of-Thought. However, they remain vulnerable to hallucinations, especially when processing long-form videos where evidence is sparse and temporally dispersed. Inspired by how humans comprehend long videos - by first skimming globally and then examining relevant clips for details - we introduce LongVT, an end-to-end agentic framework that enables \"Thinking with Long Videos\" via interleaved Multimodal Chain-of-Tool-Thought. Specifically, we exploit LMMs' inherent temporal grounding ability as a native video cropping tool to zoom in on a specific video clip and resample finer-grained video frames. This global-to-local reasoning loop continues until answers are grounded in retrieved visual evidence. Given the scarcity of fine-grained question-answering (QA) data for the long video reasoning task, we curate and will release a data suite named VideoSIAH to facilitate both training and evaluation. Specifically, our training dataset consists of 247.9K samples for tool-integrated cold-start supervised fine-tuning, 1.6K samples for agentic reinforcement learning, and 15.4K samples for agentic reinforcement fine-tuning, respectively. Our evaluation benchmark consists of 1,280 QA pairs that are carefully curated through a semi-automatic data pipeline with human-in-the-loop validation. With a meticulously designed three-stage training strategy and extensive empirical validation, LongVT consistently outperforms existing strong baselines across four challenging long-video understanding and reasoning benchmarks. Our codes, data, and model checkpoints are publicly available at https://github.com/EvolvingLMMs-Lab/LongVT .",
+        "tags": [
+            "CLIP",
+            "CoT",
+            "RL"
+        ]
+    },
+    {
+        "id": 3,
+        "title": "Envision: Benchmarking Unified Understanding & Generation for Causal World Process Insights",
+        "author": [
+            "Juanxi Tian",
+            "Siyuan Li",
+            "Conghui He",
+            "Lijun Wu",
+            "Cheng Tan"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.01816",
+        "abstract": "Current multimodal models aim to transcend the limitations of single-modality representations by unifying understanding and generation, often using text-to-image (T2I) tasks to calibrate semantic consistency. However, their reliance on static, single-image generation in training and evaluation leads to overfitting to static pattern matching and semantic fusion, while fundamentally hindering their ability to model dynamic processes that unfold over time. To address these constraints, we propose Envision-a causal event progression benchmark for chained text-to-multi-image generation. Grounded in world knowledge and structured by spatiotemporal causality, it reorganizes existing evaluation dimensions and includes 1,000 four-stage prompts spanning six scientific and humanities domains. To transition evaluation from single images to sequential frames and assess whether models truly internalize world knowledge while adhering to causal-temporal constraints, we introduce Envision-Score, a holistic metric integrating multi-dimensional consistency, physicality, and aesthetics. Comprehensive evaluation of 15 models (10 specialized T2I models, 5 unified models) uncovers: specialized T2I models demonstrate proficiency in aesthetic rendering yet lack intrinsic world knowledge. Unified multimodal models bridge this gap, consistently outperforming specialized counterparts in causal narrative coherence. However, even these unified architectures remain subordinate to closed-source models and struggle to overcome the core challenge of spatiotemporal consistency. This demonstrates that a focus on causally-isolated single images impedes multi-frame reasoning and generation, promoting static pattern matching over dynamic world modeling-ultimately limiting world knowledge internalization, generation.",
+        "tags": [
+            "Text-to-Image"
+        ]
+    },
+    {
+        "id": 4,
+        "title": "Stabilizing Reinforcement Learning with LLMs: Formulation and Practices",
+        "author": [
+            "Chujie Zheng",
+            "Kai Dang",
+            "Bowen Yu",
+            "Mingze Li",
+            "Huiqiang Jiang",
+            "Junrong Lin",
+            "Yuqiong Liu",
+            "Hao Lin",
+            "Chencan Wu",
+            "Feng Hu",
+            "An Yang",
+            "Jingren Zhou",
+            "Junyang Lin"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.01374",
+        "abstract": "This paper proposes a novel formulation for reinforcement learning (RL) with large language models, explaining why and under what conditions the true sequence-level reward can be optimized via a surrogate token-level objective in policy gradient methods such as REINFORCE. Specifically, through a first-order approximation, we show that this surrogate becomes increasingly valid only when both the training-inference discrepancy and policy staleness are minimized. This insight provides a principled explanation for the crucial role of several widely adopted techniques in stabilizing RL training, including importance sampling correction, clipping, and particularly Routing Replay for Mixture-of-Experts (MoE) models. Through extensive experiments with a 30B MoE model totaling hundreds of thousands of GPU hours, we show that for on-policy training, the basic policy gradient algorithm with importance sampling correction achieves the highest training stability. When off-policy updates are introduced to accelerate convergence, combining clipping and Routing Replay becomes essential to mitigate the instability caused by policy staleness. Notably, once training is stabilized, prolonged optimization consistently yields comparable final performance regardless of cold-start initialization. We hope that the shared insights and the developed recipes for stable RL training will facilitate future research.",
+        "tags": [
+            "LLM",
+            "MoE",
+            "RL"
+        ]
+    },
+    {
+        "id": 5,
+        "title": "How Far Are We from Genuinely Useful Deep Research Agents?",
+        "author": [
+            "Dingling Zhang",
+            "He Zhu",
+            "Jincheng Ren",
+            "Kangqi Song",
+            "Xinran Zhou",
+            "Boyu Feng",
+            "Shudong Liu",
+            "Jiabin Luo",
+            "Weihao Xie",
+            "Zhaohui Wang",
+            "Tianrui Qin",
+            "King Zhu",
+            "Yuqing Wang",
+            "Qianben Chen",
+            "Yuchen Eleanor Jiang",
+            "Wei Wang",
+            "Jiaheng Liu",
+            "Wangchunshu Zhou"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.01948",
+        "abstract": "Deep Research Agents (DRAs) aim to automatically produce analyst-level reports through iterative information retrieval and synthesis. However, most existing DRAs were validated on question-answering benchmarks, while research on generating comprehensive reports remains overlooked. Worse, current benchmarks for report synthesis suffer from task complexity and subjective metrics -- this fails to reflect user demands and limits the practical utility of generated reports. To address these gaps, we present Fine-grained DEepResearch bench (FINDER), an enhanced benchmark consisting of 100 human-curated research tasks with 419 structured checklist items that standardize report structure, analytical depth, and factual grounding. Based on approximately 1,000 reports produced by mainstream DRAs, we further propose Deep rEsearch Failure Taxonomy (DEFT), the first failure taxonomy for deep research agents. DEFT contains 14 fine-grained failure modes across reasoning, retrieval, and generation, and is built upon grounded theory with human-LLM co-annotating and inter-annotator reliability validation. Our experimental findings reveal that current DRAs struggle not with task comprehension but with evidence integration, verification, and reasoning-resilient planning.",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 6,
+        "title": "What about gravity in video generation? Post-Training Newton's Laws with Verifiable Rewards",
+        "author": [
+            "Minh-Quan Le",
+            "Yuanzhi Zhu",
+            "Vicky Kalogeiton",
+            "Dimitris Samaras"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.00425",
+        "abstract": "Recent video diffusion models can synthesize visually compelling clips, yet often violate basic physical laws-objects float, accelerations drift, and collisions behave inconsistently-revealing a persistent gap between visual realism and physical realism. We propose $\\texttt{NewtonRewards}$, the first physics-grounded post-training framework for video generation based on $\\textit{verifiable rewards}$. Instead of relying on human or VLM feedback, $\\texttt{NewtonRewards}$ extracts $\\textit{measurable proxies}$ from generated videos using frozen utility models: optical flow serves as a proxy for velocity, while high-level appearance features serve as a proxy for mass. These proxies enable explicit enforcement of Newtonian structure through two complementary rewards: a Newtonian kinematic constraint enforcing constant-acceleration dynamics, and a mass conservation reward preventing trivial, degenerate solutions. We evaluate $\\texttt{NewtonRewards}$ on five Newtonian Motion Primitives (free fall, horizontal/parabolic throw, and ramp sliding down/up) using our newly constructed large-scale benchmark, $\\texttt{NewtonBench-60K}$. Across all primitives in visual and physics metrics, $\\texttt{NewtonRewards}$ consistently improves physical plausibility, motion smoothness, and temporal coherence over prior post-training methods. It further maintains strong performance under out-of-distribution shifts in height, speed, and friction. Our results show that physics-grounded verifiable rewards offer a scalable path toward physics-aware video generation.",
+        "tags": [
+            "Diffusion",
+            "VLM",
+            "Video Generation"
+        ]
+    },
+    {
+        "id": 7,
+        "title": "Infinity-RoPE: Action-Controllable Infinite Video Generation Emerges From Autoregressive Self-Rollout",
+        "author": [
+            "Hidir Yesiltepe",
+            "Tuna Han Salih Meral",
+            "Adil Kaan Akan",
+            "Kaan Oktay",
+            "Pinar Yanardag"
+        ],
+        "pdf": "https://arxiv.org/pdf/2511.20649",
+        "abstract": "Current autoregressive video diffusion models are constrained by three core bottlenecks: (i) the finite temporal horizon imposed by the base model's 3D Rotary Positional Embedding (3D-RoPE), (ii) slow prompt responsiveness in maintaining fine-grained action control during long-form rollouts, and (iii) the inability to realize discontinuous cinematic transitions within a single generation stream. We introduce $\\infty$-RoPE, a unified inference-time framework that addresses all three limitations through three interconnected components: Block-Relativistic RoPE, KV Flush, and RoPE Cut. Block-Relativistic RoPE reformulates temporal encoding as a moving local reference frame, where each newly generated latent block is rotated relative to the base model's maximum frame horizon while earlier blocks are rotated backward to preserve relative temporal geometry. This relativistic formulation eliminates fixed temporal positions, enabling continuous video generation far beyond the base positional limits. To obtain fine-grained action control without re-encoding, KV Flush renews the KV cache by retaining only two latent frames, the global sink and the last generated latent frame, thereby ensuring immediate prompt responsiveness. Finally, RoPE Cut introduces controlled discontinuities in temporal RoPE coordinates, enabling multi-cut scene transitions within a single continuous rollout. Together, these components establish $\\infty$-RoPE as a training-free foundation for infinite-horizon, controllable, and cinematic video diffusion. Comprehensive experiments show that $\\infty$-RoPE consistently surpasses previous autoregressive models in overall VBench scores.",
+        "tags": [
+            "3D",
+            "Diffusion",
+            "RoPE",
+            "Video Generation"
+        ]
+    },
+    {
+        "id": 8,
+        "title": "The Consistency Critic: Correcting Inconsistencies in Generated Images via Reference-Guided Attentive Alignment",
+        "author": [
+            "Ziheng Ouyang",
+            "Yiren Song",
+            "Yaoli Liu",
+            "Shihao Zhu",
+            "Qibin Hou",
+            "Ming-Ming Cheng",
+            "Mike Zheng Shou"
+        ],
+        "pdf": "https://arxiv.org/pdf/2511.20614",
+        "abstract": "Previous works have explored various customized generation tasks given a reference image, but they still face limitations in generating consistent fine-grained details. In this paper, our aim is to solve the inconsistency problem of generated images by applying a reference-guided post-editing approach and present our ImageCritic. We first construct a dataset of reference-degraded-target triplets obtained via VLM-based selection and explicit degradation, which effectively simulates the common inaccuracies or inconsistencies observed in existing generation models. Furthermore, building on a thorough examination of the model's attention mechanisms and intrinsic representations, we accordingly devise an attention alignment loss and a detail encoder to precisely rectify inconsistencies. ImageCritic can be integrated into an agent framework to automatically detect inconsistencies and correct them with multi-round and local editing in complex scenarios. Extensive experiments demonstrate that ImageCritic can effectively resolve detail-related issues in various customized generation scenarios, providing significant improvements over existing methods.",
+        "tags": [
+            "VLM"
+        ]
+    },
+    {
+        "id": 9,
+        "title": "TUNA: Taming Unified Visual Representations for Native Unified Multimodal Models",
+        "author": [
+            "Zhiheng Liu",
+            "Weiming Ren",
+            "Haozhe Liu",
+            "Zijian Zhou",
+            "Shoufa Chen",
+            "Haonan Qiu",
+            "Xiaoke Huang",
+            "Zhaochong An",
+            "Fanny Yang",
+            "Aditya Patel",
+            "Viktar Atliha",
+            "Tony Ng",
+            "Xiao Han",
+            "Chuyan Zhu",
+            "Chenyang Zhang",
+            "Ding Liu",
+            "Juan-Manuel Perez-Rua",
+            "Sen He",
+            "JÃ¼rgen Schmidhuber",
+            "Wenhu Chen",
+            "Ping Luo",
+            "Wei Liu",
+            "Tao Xiang",
+            "Jonas Schult",
+            "Yuren Cong"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.02014",
+        "abstract": "Unified multimodal models (UMMs) aim to jointly perform multimodal understanding and generation within a single framework. We present TUNA, a native UMM that builds a unified continuous visual representation by cascading a VAE encoder with a representation encoder. This unified representation space allows end-to-end processing of images and videos for both understanding and generation tasks. Compared to prior UMMs with decoupled representations, TUNA's unified visual space avoids representation format mismatches introduced by separate encoders, outperforming decoupled alternatives in both understanding and generation. Moreover, we observe that stronger pretrained representation encoders consistently yield better performance across all multimodal tasks, highlighting the importance of the representation encoder. Finally, in this unified setting, jointly training on both understanding and generation data allows the two tasks to benefit from each other rather than interfere. Our extensive experiments on multimodal understanding and generation benchmarks show that TUNA achieves state-of-the-art results in image and video understanding, image and video generation, and image editing, demonstrating the effectiveness and scalability of its unified representation design.",
+        "tags": [
+            "Image Editing",
+            "VAE",
+            "Video Generation"
+        ]
+    },
+    {
+        "id": 10,
+        "title": "LFM2 Technical Report",
+        "author": [
+            "Alexander Amini",
+            "Anna Banaszak",
+            "Harold Benoit",
+            "Arthur BÃ¶Ã¶k",
+            "Tarek Dakhran",
+            "Song Duong",
+            "Alfred Eng",
+            "Fernando Fernandes",
+            "Marc HÃ¤rkÃ¶nen",
+            "Anne Harrington",
+            "Ramin Hasani",
+            "Saniya Karwa",
+            "Yuri Khrustalev",
+            "Maxime Labonne",
+            "Mathias Lechner",
+            "Valentine Lechner",
+            "Simon Lee",
+            "Zetian Li",
+            "Noel Loo",
+            "Jacob Marks",
+            "Edoardo Mosca",
+            "Samuel J. Paech",
+            "Paul Pak",
+            "Rom N. Parnichkun",
+            "Alex Quach",
+            "Ryan Rogers",
+            "Daniela Rus",
+            "Nayan Saxena",
+            "Bettina Schlager",
+            "Tim Seyde",
+            "Jimmy T.H. Smith",
+            "Aditya Tadimeti",
+            "Neehal Tumma"
+        ],
+        "pdf": "https://arxiv.org/pdf/2511.23404",
+        "abstract": "We present LFM2, a family of Liquid Foundation Models designed for efficient on-device deployment and strong task capabilities. Using hardware-in-the-loop architecture search under edge latency and memory constraints, we obtain a compact hybrid backbone that combines gated short convolutions with a small number of grouped query attention blocks, delivering up to 2x faster prefill and decode on CPUs compared to similarly sized models. The LFM2 family covers 350M-8.3B parameters, including dense models (350M, 700M, 1.2B, 2.6B) and a mixture-of-experts variant (8.3B total, 1.5B active), all with 32K context length. LFM2's training pipeline includes a tempered, decoupled Top-K knowledge distillation objective that avoids support mismatch; curriculum learning with difficulty-ordered data; and a three-stage post-training recipe of supervised fine-tuning, length-normalized preference optimization, and model merging. Pre-trained on 10-12T tokens, LFM2 models achieve strong results across diverse benchmarks; for example, LFM2-2.6B reaches 79.56% on IFEval and 82.41% on GSM8K. We further build multimodal and retrieval variants: LFM2-VL for vision-language tasks, LFM2-Audio for speech, and LFM2-ColBERT for retrieval. LFM2-VL supports tunable accuracy-latency tradeoffs via token-efficient visual processing, while LFM2-Audio separates audio input and output pathways to enable real-time speech-to-speech interaction competitive with models 3x larger. LFM2-ColBERT provides a low-latency encoder for queries and documents, enabling high-performance retrieval across multiple languages. All models are released with open weights and deployment packages for ExecuTorch, http://llama.cpp, and vLLM, making LFM2 a practical base for edge applications that need fast, memory-efficient inference and strong task capabilities.",
+        "tags": [
+            "LLaMA",
+            "MoE"
+        ]
+    },
+    {
+        "id": 11,
+        "title": "Wikontic: Constructing Wikidata-Aligned, Ontology-Aware Knowledge Graphs with Large Language Models",
+        "author": [
+            "Alla Chepurova",
+            "Aydar Bulatov",
+            "Yuri Kuratov",
+            "Mikhail Burtsev"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.00590",
+        "abstract": "Knowledge graphs (KGs) provide structured, verifiable grounding for large language models (LLMs), but current LLM-based systems commonly use KGs as auxiliary structures for text retrieval, leaving their intrinsic quality underexplored. In this work, we propose Wikontic, a multi-stage pipeline that constructs KGs from open-domain text by extracting candidate triplets with qualifiers, enforcing Wikidata-based type and relation constraints, and normalizing entities to reduce duplication. The resulting KGs are compact, ontology-consistent, and well-connected; on MuSiQue, the correct answer entity appears in 96% of generated triplets. On HotpotQA, our triplets-only setup achieves 76.0 F1, and on MuSiQue 59.8 F1, matching or surpassing several retrieval-augmented generation baselines that still require textual context. In addition, Wikontic attains state-of-the-art information-retention performance on the MINE-1 benchmark (86%), outperforming prior KG construction methods. Wikontic is also efficient at build time: KG construction uses less than 1,000 output tokens, about 3$\\times$ fewer than AriGraph and $<$1/20 of GraphRAG. The proposed pipeline enhances the quality of the generated KG and offers a scalable solution for leveraging structured knowledge in LLMs.",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 12,
+        "title": "Rectifying LLM Thought from Lens of Optimization",
+        "author": [
+            "Junnan Liu",
+            "Hongwei Liu",
+            "Songyang Zhang",
+            "Kai Chen"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.01925",
+        "abstract": "Recent advancements in large language models (LLMs) have been driven by their emergent reasoning capabilities, particularly through long chain-of-thought (CoT) prompting, which enables thorough exploration and deliberation. Despite these advances, long-CoT LLMs often exhibit suboptimal reasoning behaviors, such as overthinking and excessively protracted reasoning chains, which can impair performance. In this paper, we analyze reasoning processes through an optimization lens, framing CoT as a gradient descent procedure where each reasoning step constitutes an update toward problem resolution. Building on this perspective, we introduce RePro (Rectifying Process-level Reward), a novel approach to refine LLM reasoning during post-training. RePro defines a surrogate objective function to assess the optimization process underlying CoT, utilizing a dual scoring mechanism to quantify its intensity and stability. These scores are aggregated into a composite process-level reward, seamlessly integrated into reinforcement learning with verifiable rewards (RLVR) pipelines to optimize LLMs. Extensive experiments across multiple reinforcement learning algorithms and diverse LLMs, evaluated on benchmarks spanning mathematics, science, and coding, demonstrate that RePro consistently enhances reasoning performance and mitigates suboptimal reasoning behaviors.",
+        "tags": [
+            "CoT",
+            "LLM",
+            "RL"
+        ]
+    },
+    {
+        "id": 13,
+        "title": "Flash-DMD: Towards High-Fidelity Few-Step Image Generation with Efficient Distillation and Joint Reinforcement Learning",
+        "author": [
+            "Guanjie Chen",
+            "Shirui Huang",
+            "Kai Liu",
+            "Jianchen Zhu",
+            "Xiaoye Qu",
+            "Peng Chen",
+            "Yu Cheng",
+            "Yifu Sun"
+        ],
+        "pdf": "https://arxiv.org/pdf/2511.20549",
+        "abstract": "Diffusion Models have emerged as a leading class of generative models, yet their iterative sampling process remains computationally expensive. Timestep distillation is a promising technique to accelerate generation, but it often requires extensive training and leads to image quality degradation. Furthermore, fine-tuning these distilled models for specific objectives, such as aesthetic appeal or user preference, using Reinforcement Learning (RL) is notoriously unstable and easily falls into reward hacking. In this work, we introduce Flash-DMD, a novel framework that enables fast convergence with distillation and joint RL-based refinement. Specifically, we first propose an efficient timestep-aware distillation strategy that significantly reduces training cost with enhanced realism, outperforming DMD2 with only $2.1\\%$ its training cost. Second, we introduce a joint training scheme where the model is fine-tuned with an RL objective while the timestep distillation training continues simultaneously. We demonstrate that the stable, well-defined loss from the ongoing distillation acts as a powerful regularizer, effectively stabilizing the RL training process and preventing policy collapse. Extensive experiments on score-based and flow matching models show that our proposed Flash-DMD not only converges significantly faster but also achieves state-of-the-art generation quality in the few-step sampling regime, outperforming existing methods in visual quality, human preference, and text-image alignment metrics. Our work presents an effective paradigm for training efficient, high-fidelity, and stable generative models. Codes are coming soon.",
+        "tags": [
+            "Diffusion",
+            "Flow Matching",
+            "RL"
+        ]
+    },
+    {
+        "id": 14,
+        "title": "GR-RL: Going Dexterous and Precise for Long-Horizon Robotic Manipulation",
+        "author": [
+            "Yunfei Li",
+            "Xiao Ma",
+            "Jiafeng Xu",
+            "Yu Cui",
+            "Zhongren Cui",
+            "Zhigang Han",
+            "Liqun Huang",
+            "Tao Kong",
+            "Yuxiao Liu",
+            "Hao Niu",
+            "Wanli Peng",
+            "Jingchao Qiao",
+            "Zeyu Ren",
+            "Haixin Shi",
+            "Zhi Su",
+            "Jiawen Tian",
+            "Yuyang Xiao",
+            "Shenyu Zhang",
+            "Liwei Zheng",
+            "Hang Li",
+            "Yonghui Wu"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.01801",
+        "abstract": "We present GR-RL, a robotic learning framework that turns a generalist vision-language-action (VLA) policy into a highly capable specialist for long-horizon dexterous manipulation. Assuming the optimality of human demonstrations is core to existing VLA policies. However, we claim that in highly dexterous and precise manipulation tasks, human demonstrations are noisy and suboptimal. GR-RL proposes a multi-stage training pipeline that filters, augments, and reinforces the demonstrations by reinforcement learning. First, GR-RL learns a vision-language-conditioned task progress, filters the demonstration trajectories, and only keeps the transitions that contribute positively to the progress. Specifically, we show that by directly applying offline RL with sparse reward, the resulting $Q$-values can be treated as a robust progress function. Next, we introduce morphological symmetry augmentation that greatly improves the generalization and performance of GR-RL. Lastly, to better align the VLA policy with its deployment behaviors for high-precision control, we perform online RL by learning a latent space noise predictor. With this pipeline, GR-RL is, to our knowledge, the first learning-based policy that can autonomously lace up a shoe by threading shoelaces through multiple eyelets with an 83.3% success rate, a task requiring long-horizon reasoning, millimeter-level precision, and compliant soft-body interaction. We hope GR-RL provides a step toward enabling generalist robot foundations models to specialize into reliable real-world experts.",
+        "tags": [
+            "RL",
+            "Robotics"
+        ]
+    },
+    {
+        "id": 15,
+        "title": "VLASH: Real-Time VLAs via Future-State-Aware Asynchronous Inference",
+        "author": [
+            "Jiaming Tang",
+            "Yufei Sun",
+            "Yilong Zhao",
+            "Shang Yang",
+            "Yujun Lin",
+            "Zhuoyang Zhang",
+            "James Hou",
+            "Yao Lu",
+            "Zhijian Liu",
+            "Song Han"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.01031",
+        "abstract": "Vision-Language-Action models (VLAs) are becoming increasingly capable across diverse robotic tasks. However, their real-world deployment remains slow and inefficient: demonstration videos are often sped up by 5-10x to appear smooth, with noticeable action stalls and delayed reactions to environmental changes. Asynchronous inference offers a promising solution to achieve continuous and low-latency control by enabling robots to execute actions and perform inference simultaneously. However, because the robot and environment continue to evolve during inference, a temporal misalignment arises between the prediction and execution intervals. This leads to significant action instability, while existing methods either degrade accuracy or introduce runtime overhead to mitigate it. We propose VLASH, a general asynchronous inference framework for VLAs that delivers smooth, accurate, and fast reaction control without additional overhead or architectural changes. VLASH estimates the future execution-time state by rolling the robot state forward with the previously generated action chunk, thereby bridging the gap between prediction and execution. Experiments show that VLASH achieves up to 2.03x speedup and reduces reaction latency by up to 17.4x compared to synchronous inference while fully preserving the original accuracy. Moreover, it empowers VLAs to handle fast-reaction, high-precision tasks such as playing ping-pong and playing whack-a-mole, where traditional synchronous inference fails. Code is available at https://github.com/mit-han-lab/vlash",
+        "tags": [
+            "Robotics"
+        ]
+    },
+    {
+        "id": 16,
+        "title": "InternVideo-Next: Towards General Video Foundation Models without Video-Text Supervision",
+        "author": [
+            "Chenting Wang",
+            "Yuhan Zhu",
+            "Yicheng Xu",
+            "Jiange Yang",
+            "Ziang Yan",
+            "Yali Wang",
+            "Yi Wang",
+            "Limin Wang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.01342",
+        "abstract": "Large-scale video-text pretraining achieves strong performance but depends on noisy, synthetic captions with limited semantic coverage, often overlooking implicit world knowledge such as object motion, 3D geometry, and physical cues. In contrast, masked video modeling (MVM) directly exploits spatiotemporal structures but trails text-supervised methods on general tasks. We find this gap arises from overlooked architectural issues: pixel-level reconstruction struggles with convergence and its low-level requirement often conflicts with semantics, while latent prediction often encourages shortcut learning. To address these, we disentangle the traditional encoder-decoder design into an Encoder-Predictor-Decoder (EPD) framework, where the predictor acts as a latent world model, and propose InternVideo-Next, a two-stage pretraining scheme that builds a semantically consistent yet detail-preserving latent space for this world model. First, conventional linear decoder in pixel MVM enforces the predictor output latent to be linearly projected to, thus separable in pixel space, causing the conflict with semantic abstraction. Our Stage 1 proposes a conditional diffusion decoder and injects reliable image-level semantic priors to enhance semantics and convergence, thus bridging pixel-level fidelity with high-level semantic abstraction. Stage 2 further learns world knowledge by predicting frozen Stage 1 targets within this space, mitigating shortcut learning. Trained on public, unlabeled videos, InternVideo-Next achieves state-of-the-art results across benchmarks and provides a scalable path toward general video representation learning.",
+        "tags": [
+            "3D",
+            "Diffusion"
+        ]
+    },
+    {
+        "id": 17,
+        "title": "SpeContext: Enabling Efficient Long-context Reasoning with Speculative Context Sparsity in LLMs",
+        "author": [
+            "Jiaming Xu",
+            "Jiayi Pan",
+            "Hanzhen Wang",
+            "Yongkang Zhou",
+            "Jiancai Ye",
+            "Yu Wang",
+            "Guohao Dai"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.00722",
+        "abstract": "In this paper, we point out that the objective of the retrieval algorithms is to align with the LLM, which is similar to the objective of knowledge distillation in LLMs. We analyze the similarity in information focus between the distilled language model(DLM) and the original LLM from the perspective of information theory, and thus propose a novel paradigm that leverages a DLM as the retrieval algorithm. Based on the insight, we present SpeContext, an algorithm and system co-design for long-context reasoning. (1) At the algorithm level, SpeContext proposes lightweight retrieval head based on the head-level attention weights of DLM, achieving > 90% parameters reduction by pruning the redundancy. (2) At the system level, SpeContext designs an asynchronous prefetch dataflow via the elastic loading strategy, effectively overlapping KV cache retrieval with the LLM computation. (3) At the compilation level, SpeContext constructs the theoretical memory model and implements an adaptive memory management system to achieve acceleration by maximizing GPU memory utilization. We deploy and evaluate SpeContext in two resourceconstrained environments, cloud and edge. Extensive experiments show that, compared with the Huggingface framework, SpeContext achieves up to 24.89x throughput improvement in cloud and 10.06x speedup in edge with negligible accuracy loss, pushing the Pareto frontier of accuracy and throughput.",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 18,
+        "title": "Flow Straighter and Faster: Efficient One-Step Generative Modeling via MeanFlow on Rectified Trajectories",
+        "author": [
+            "Xinxi Zhang",
+            "Shiwei Tan",
+            "Quang Nguyen",
+            "Quan Dao",
+            "Ligong Han",
+            "Xiaoxiao He",
+            "Tunyu Zhang",
+            "Alen Mrdovic",
+            "Dimitris Metaxas"
+        ],
+        "pdf": "https://arxiv.org/pdf/2511.23342",
+        "abstract": "Flow-based generative models have recently demonstrated strong performance, yet sampling typically relies on expensive numerical integration of ordinary differential equations (ODEs). Rectified Flow enables one-step sampling by learning nearly straight probability paths, but achieving such straightness requires multiple computationally intensive reflow iterations. MeanFlow achieves one-step generation by directly modeling the average velocity over time; however, when trained on highly curved flows, it suffers from slow convergence and noisy supervision. To address these limitations, we propose Rectified MeanFlow, a framework that models the mean velocity field along the rectified trajectory using only a single reflow step. This eliminates the need for perfectly straightened trajectories while enabling efficient training. Furthermore, we introduce a simple yet effective truncation heuristic that aims to reduce residual curvature and further improve performance. Extensive experiments on ImageNet at 64, 256, and 512 resolutions show that Re-MeanFlow consistently outperforms prior one-step flow distillation and Rectified Flow methods in both sample quality and training efficiency. Code is available at https://github.com/Xinxi-Zhang/Re-MeanFlow.",
+        "tags": [
+            "Rectified Flow"
+        ]
+    },
+    {
+        "id": 19,
+        "title": "Accelerating Streaming Video Large Language Models via Hierarchical Token Compression",
+        "author": [
+            "Yiyu Wang",
+            "Xuyang Liu",
+            "Xiyan Gui",
+            "Xinying Lin",
+            "Boxue Yang",
+            "Chenfei Liao",
+            "Tailai Chen",
+            "Linfeng Zhang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.00891",
+        "abstract": "Streaming Video Large Language Models (VideoLLMs) have demonstrated impressive performance across various video understanding tasks, but they face significant challenges in real-time deployment due to the high computational cost of processing dense visual tokens from continuous video streams. In streaming video scenarios, the primary bottleneck lies in the Vision Transformer (ViT) encoding stage, where redundant processing of temporally similar frames leads to inefficiency. Additionally, inflated token sequences during LLM pre-filling further exacerbate latency and memory overhead. To address these challenges, we propose \\textbf{S}treaming \\textbf{T}oken \\textbf{C}ompression (\\textbf{STC}), a plug-and-play hierarchical framework that seamlessly integrates into existing streaming VideoLLMs, optimizing both ViT encoding and LLM pre-filling stages to accelerate processing. STC introduces two token-level accelerators: \\textbf{STC-Cacher}, which reduces ViT encoding overhead by caching and reusing features from temporally similar frames, and \\textbf{STC-Pruner}, which compresses the visual token sequence before it enters the LLM, preserving only the most salient tokens based on both spatial and temporal relevance. Extensive experiments on four baseline streaming VideoLLMs across five benchmarks demonstrate that STC outperforms other compression methods. Notably, STC retains up to \\textbf{99\\%} of accuracy on the ReKV framework while reducing ViT encoding latency and LLM pre-filling latency by \\textbf{24.5\\%} and \\textbf{45.3\\%}.",
+        "tags": [
+            "LLM",
+            "Transformer",
+            "ViT"
+        ]
+    },
+    {
+        "id": 20,
+        "title": "PromptBridge: Cross-Model Prompt Transfer for Large Language Models",
+        "author": [
+            "Yaxuan Wang",
+            "Quan Liu",
+            "Zhenting Wang",
+            "Zichao Li",
+            "Wei Wei",
+            "Yang Liu",
+            "Yujia Bao"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.01420",
+        "abstract": "Large language models (LLMs) underpin applications in code generation, mathematical reasoning, and agent-based workflows. In practice, systems access LLMs via commercial APIs or open-source deployments, and the model landscape (e.g., GPT, Claude, Llama) evolves rapidly. This rapid evolution forces frequent model switches driven by capability, cost, deployment constraints, and privacy. Yet prompts are highly model-sensitive: reusing a prompt engineered for one model on another often yields substantially worse performance than a prompt optimized for the target model. We term this phenomenon Model Drifting. Through extensive empirical analysis across diverse LLM configurations, we show that model drifting is both common and severe. To address this challenge, we introduce PromptBridge, a training-free framework that preserves prompt effectiveness under model switches, enabling cross-model prompt transfer without costly per-task or per-model re-optimization. PromptBridge requires only a small set of alignment tasks for calibration. It first applies Model-Adaptive Reflective Prompt Evolution (MAP-RPE) to obtain task- and model-specific optimal prompts via iterative reflective refinement and quantitative evaluation. Using the resulting calibrated prompt pairs for the source and target models, PromptBridge learns a cross-model prompt mapping. At test time, i.e., for an unseen task, given a source-model prompt, this mapping directly produces an optimized prompt for the target model. Experiments in single-agent and multi-agent settings show that PromptBridge consistently improves downstream accuracy while reducing migration effort. The code will be available soon.",
+        "tags": [
+            "GPT",
+            "LLM",
+            "LLaMA"
+        ]
+    },
+    {
+        "id": 21,
+        "title": "SCALE: Selective Resource Allocation for Overcoming Performance Bottlenecks in Mathematical Test-time Scaling",
+        "author": [
+            "Yang Xiao",
+            "Chunpu Xu",
+            "Ruifeng Yuan",
+            "Jiashuo Wang",
+            "Wenjie Li",
+            "Pengfei Liu"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.00466",
+        "abstract": "Test-time compute scaling has emerged as a powerful paradigm for enhancing mathematical reasoning in large language models (LLMs) by allocating additional computational resources during inference. However, current methods employ uniform resource distribution across all reasoning sub-problems, creating fundamental bottlenecks where challenging sub-problems receive insufficient attention while routine operations consume disproportionate resources. This uniform allocation creates performance bottlenecks where additional computational resources yield diminishing returns. Inspired by dual-process theory, we propose \\textbf{SCALE} (Selective Resource Allocation), a framework that selectively allocates computational resources based on sub-problem difficulty. SCALE operates through four stages: (1) problem decomposition into sequential reasoning sub-problems, (2) difficulty assessment of each sub-problem to distinguish between routine operations and computationally challenging sub-problems, (3) selective processing mode assignment between System 1 for simple sub-problems and System 2 for complex ones, and (4) sequential execution with context propagation. By concentrating resources on challenging sub-problems while processing routine operations efficiently, SCALE achieves substantial performance improvements with superior resource utilization. Extensive experiments demonstrate that SCALE significantly outperforms uniform scaling baselines, achieving accuracy improvements of up to 13.75 percentage points (57.50% to 71.25% on AIME25) while reducing computational costs by 33%-53%, representing a major advance in test-time scaling that addresses fundamental limitations of current approaches.",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 22,
+        "title": "Where Culture Fades: Revealing the Cultural Gap in Text-to-Image Generation",
+        "author": [
+            "Chuancheng Shi",
+            "Shangze Li",
+            "Shiming Guo",
+            "Simiao Xie",
+            "Wenhua Wu",
+            "Jingtong Dou",
+            "Chao Wu",
+            "Canran Xiao",
+            "Cong Wang",
+            "Zifeng Cheng",
+            "Fei Shen",
+            "Tat-Seng Chua"
+        ],
+        "pdf": "https://arxiv.org/pdf/2511.17282",
+        "abstract": "Multilingual text-to-image (T2I) models have advanced rapidly in terms of visual realism and semantic alignment, and are now widely utilized. Yet outputs vary across cultural contexts: because language carries cultural connotations, images synthesized from multilingual prompts should preserve cross-lingual cultural consistency. We conduct a comprehensive analysis showing that current T2I models often produce culturally neutral or English-biased results under multilingual prompts. Analyses of two representative models indicate that the issue stems not from missing cultural knowledge but from insufficient activation of culture-related representations. We propose a probing method that localizes culture-sensitive signals to a small set of neurons in a few fixed layers. Guided by this finding, we introduce two complementary alignment strategies: (1) inference-time cultural activation that amplifies the identified neurons without backbone fine-tuned; and (2) layer-targeted cultural enhancement that updates only culturally relevant layers. Experiments on our CultureBench demonstrate consistent improvements over strong baselines in cultural consistency while preserving fidelity and diversity.",
+        "tags": [
+            "Text-to-Image"
+        ]
+    },
+    {
+        "id": 23,
+        "title": "Script: Graph-Structured and Query-Conditioned Semantic Token Pruning for Multimodal Large Language Models",
+        "author": [
+            "Zhongyu Yang",
+            "Dannong Xu",
+            "Wei Pang",
+            "Yingfang Yuan"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.01949",
+        "abstract": "The rapid growth of visual tokens in multimodal large language models (MLLMs) leads to excessive memory consumption and inference latency, especially when handling high-resolution images and videos. Token pruning is a technique used to mitigate this issue by removing redundancy, but existing methods often ignore relevance to the user query or suffer from the limitations of attention mechanisms, reducing their adaptability and effectiveness. To address these challenges, we propose Script, a plug-and-play pruning method that requires no retraining and generalizes across diverse MLLMs. Script comprises two modules: a graph-structured pruning module that removes visually redundant tokens, and a query-conditioned semantic pruning module that preserves query-relevant visual information. Together, they enhance performance on multimodal tasks. Experiments on fourteen benchmarks across image and video understanding tasks show that Script consistently achieves higher model efficiency and predictive accuracy compared to existing pruning methods. On LLaVA-NeXT-7B, it achieves up to 6.8x prefill speedup and 10x FLOP reduction, while retaining 96.88% of the original performance.",
+        "tags": [
+            "LLM",
+            "LLaVA"
+        ]
+    },
+    {
+        "id": 24,
+        "title": "Lotus-2: Advancing Geometric Dense Prediction with Powerful Image Generative Model",
+        "author": [
+            "Jing He",
+            "Haodong Li",
+            "Mingzhi Sheng",
+            "Ying-Cong Chen"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.01030",
+        "abstract": "Recovering pixel-wise geometric properties from a single image is fundamentally ill-posed due to appearance ambiguity and non-injective mappings between 2D observations and 3D structures. While discriminative regression models achieve strong performance through large-scale supervision, their success is bounded by the scale, quality and diversity of available data and limited physical reasoning. Recent diffusion models exhibit powerful world priors that encode geometry and semantics learned from massive image-text data, yet directly reusing their stochastic generative formulation is suboptimal for deterministic geometric inference: the former is optimized for diverse and high-fidelity image generation, whereas the latter requires stable and accurate predictions. In this work, we propose Lotus-2, a two-stage deterministic framework for stable, accurate and fine-grained geometric dense prediction, aiming to provide an optimal adaption protocol to fully exploit the pre-trained generative priors. Specifically, in the first stage, the core predictor employs a single-step deterministic formulation with a clean-data objective and a lightweight local continuity module (LCM) to generate globally coherent structures without grid artifacts. In the second stage, the detail sharpener performs a constrained multi-step rectified-flow refinement within the manifold defined by the core predictor, enhancing fine-grained geometry through noise-free deterministic flow matching. Using only 59K training samples, less than 1% of existing large-scale datasets, Lotus-2 establishes new state-of-the-art results in monocular depth estimation and highly competitive surface normal prediction. These results demonstrate that diffusion models can serve as deterministic world priors, enabling high-quality geometric reasoning beyond traditional discriminative and generative paradigms.",
+        "tags": [
+            "3D",
+            "Depth Estimation",
+            "Diffusion",
+            "Flow Matching",
+            "Rectified Flow"
+        ]
+    },
+    {
+        "id": 25,
+        "title": "StreamGaze: Gaze-Guided Temporal Reasoning and Proactive Understanding in Streaming Videos",
+        "author": [
+            "Daeun Lee",
+            "Subhojyoti Mukherjee",
+            "Branislav Kveton",
+            "Ryan A. Rossi",
+            "Viet Dac Lai",
+            "Seunghyun Yoon",
+            "Trung Bui",
+            "Franck Dernoncourt",
+            "Mohit Bansal"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.01707",
+        "abstract": "Streaming video understanding requires models not only to process temporally incoming frames, but also to anticipate user intention for realistic applications like AR glasses. While prior streaming benchmarks evaluate temporal reasoning, none measure whether MLLMs can interpret or leverage human gaze signals within a streaming setting. To fill this gap, we introduce StreamGaze, the first benchmark designed to evaluate how effectively MLLMs use gaze for temporal and proactive reasoning in streaming videos. StreamGaze introduces gaze-guided past, present, and proactive tasks that comprehensively evaluate streaming video understanding. These tasks assess whether models can use real-time gaze to follow shifting attention and infer user intentions from only past and currently observed frames. To build StreamGaze, we develop a gaze-video QA generation pipeline that aligns egocentric videos with raw gaze trajectories via fixation extraction, region-specific visual prompting, and scanpath construction. This pipeline produces spatio-temporally grounded QA pairs that closely reflect human perceptual dynamics. Across all StreamGaze tasks, we observe substantial performance gaps between state-of-the-art MLLMs and human performance, revealing fundamental limitations in gaze-based temporal reasoning, intention modeling, and proactive prediction. We further provide detailed analyses of gaze-prompting strategies, reasoning behaviors, and task-specific failure modes, offering deeper insight into why current MLLMs struggle and what capabilities future models must develop. All data and code will be publicly released to support continued research in gaze-guided streaming video understanding.",
+        "tags": []
+    },
+    {
+        "id": 26,
+        "title": "MultiBanana: A Challenging Benchmark for Multi-Reference Text-to-Image Generation",
+        "author": [
+            "Yuta Oshima",
+            "Daiki Miyake",
+            "Kohsei Matsutani",
+            "Yusuke Iwasawa",
+            "Masahiro Suzuki",
+            "Yutaka Matsuo",
+            "Hiroki Furuta"
+        ],
+        "pdf": "https://arxiv.org/pdf/2511.22989",
+        "abstract": "Recent text-to-image generation models have acquired the ability of multi-reference generation and editing; the ability to inherit the appearance of subjects from multiple reference images and re-render them under new contexts. However, the existing benchmark datasets often focus on the generation with single or a few reference images, which prevents us from measuring the progress on how model performance advances or pointing out their weaknesses, under different multi-reference conditions. In addition, their task definitions are still vague, typically limited to axes such as \"what to edit\" or \"how many references are given\", and therefore fail to capture the intrinsic difficulty of multi-reference settings. To address this gap, we introduce $\\textbf{MultiBanana}$, which is carefully designed to assesses the edge of model capabilities by widely covering multi-reference-specific problems at scale: (1) varying the number of references, (2) domain mismatch among references (e.g., photo vs. anime), (3) scale mismatch between reference and target scenes, (4) references containing rare concepts (e.g., a red banana), and (5) multilingual textual references for rendering. Our analysis among a variety of text-to-image models reveals their superior performances, typical failure modes, and areas for improvement. MultiBanana will be released as an open benchmark to push the boundaries and establish a standardized basis for fair comparison in multi-reference image generation. Our data and code are available at https://github.com/matsuolab/multibanana .",
+        "tags": [
+            "Text-to-Image"
+        ]
+    },
+    {
+        "id": 27,
+        "title": "POLARIS: Projection-Orthogonal Least Squares for Robust and Adaptive Inversion in Diffusion Models",
+        "author": [
+            "Wenshuo Chen",
+            "Haosen Li",
+            "Shaofeng Liang",
+            "Lei Wang",
+            "Haozhe Jia",
+            "Kaishen Yuan",
+            "Jieming Wu",
+            "Bowen Tian",
+            "Yutao Yue"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.00369",
+        "abstract": "The Inversion-Denoising Paradigm, which is based on diffusion models, excels in diverse image editing and restoration tasks. We revisit its mechanism and reveal a critical, overlooked factor in reconstruction degradation: the approximate noise error. This error stems from approximating the noise at step t with the prediction at step t-1, resulting in severe error accumulation throughout the inversion process. We introduce Projection-Orthogonal Least Squares for Robust and Adaptive Inversion (POLARIS), which reformulates inversion from an error-compensation problem into an error-origin problem. Rather than optimizing embeddings or latent codes to offset accumulated drift, POLARIS treats the guidance scale {\\omega} as a step-wise variable and derives a mathematically grounded formula to minimize inversion error at each step. Remarkably, POLARIS improves inversion latent quality with just one line of code. With negligible performance overhead, it substantially mitigates noise approximation errors and consistently improves the accuracy of downstream tasks.",
+        "tags": [
+            "Diffusion",
+            "Image Editing"
+        ]
+    },
+    {
+        "id": 28,
+        "title": "ORION: Teaching Language Models to Reason Efficiently in the Language of Thought",
+        "author": [
+            "Kumar Tanmay",
+            "Kriti Aggarwal",
+            "Paul Pu Liang",
+            "Subhabrata Mukherjee"
+        ],
+        "pdf": "https://arxiv.org/pdf/2511.22891",
+        "abstract": "Large Reasoning Models (LRMs) achieve strong performance in mathematics, code generation, and task planning, but their reliance on long chains of verbose \"thinking\" tokens leads to high latency, redundancy, and incoherent reasoning paths. Inspired by the Language of Thought Hypothesis, which posits that human reasoning operates over a symbolic, compositional mental language called Mentalese, we introduce a framework that trains models to reason in a similarly compact style. Mentalese encodes abstract reasoning as ultra-compressed, structured tokens, enabling models to solve complex problems with far fewer steps. To improve both efficiency and accuracy, we propose SHORTER LENGTH PREFERENCE OPTIMIZATION (SLPO), a reinforcement learning method that rewards concise solutions that stay correct, while still allowing longer reasoning when needed. Applied to Mentalese-aligned models, SLPO yields significantly higher compression rates by enabling concise reasoning that preserves the benefits of detailed thinking without the computational overhead. Across benchmarks including AIME 2024 and 2025, MinervaMath, OlympiadBench, Math500, and AMC, our ORION models produce reasoning traces with 4-16x fewer tokens, achieve up to 5x lower inference latency, and reduce training costs by 7-9x relative to the DeepSeek R1 Distilled model, while maintaining 90-98% of its accuracy. ORION also surpasses Claude and ChatGPT-4o by up to 5% in accuracy while maintaining 2x compression. These results show that Mentalese-style compressed reasoning offers a step toward human-like cognitive efficiency, enabling real-time, cost-effective reasoning without sacrificing accuracy.",
+        "tags": [
+            "DeepSeek",
+            "GPT",
+            "RL"
+        ]
+    },
+    {
+        "id": 29,
+        "title": "Asking like Socrates: Socrates helps VLMs understand remote sensing images",
+        "author": [
+            "Run Shao",
+            "Ziyu Li",
+            "Zhaoyang Zhang",
+            "Linrui Xu",
+            "Xinran He",
+            "Hongyuan Yuan",
+            "Bolei He",
+            "Yongxing Dai",
+            "Yiming Yan",
+            "Yijun Chen",
+            "Wang Guo",
+            "Haifeng Li"
+        ],
+        "pdf": "https://arxiv.org/pdf/2511.22396",
+        "abstract": "Recent multimodal reasoning models, inspired by DeepSeek-R1, have significantly advanced vision-language systems. However, in remote sensing (RS) tasks, we observe widespread pseudo reasoning: models narrate the process of reasoning rather than genuinely reason toward the correct answer based on visual evidence. We attribute this to the Glance Effect, where a single, coarse perception of large-scale RS imagery results in incomplete understanding and reasoning based on linguistic self-consistency instead of visual evidence. To address this, we propose RS-EoT (Remote Sensing Evidence-of-Thought), a language-driven, iterative visual evidence-seeking paradigm. To instill this paradigm, we propose SocraticAgent, a self-play multi-agent system that synthesizes reasoning traces via alternating cycles of reasoning and visual inspection. To enhance and generalize these patterns, we propose a two-stage progressive RL strategy: first, RL on fine-grained Grounding tasks to enhance RS-EoT capabilities, followed by RL on RS VQA to generalize to broader understanding scenarios. Experiments show RS-EoT achieves state-of-the-art performance on multiple RS VQA and grounding benchmarks. Analyses reveal clear iterative cycles of reasoning and evidence seeking, confirming RS-EoT mitigates the Glance Effect and enables genuine evidence-grounded reasoning. Our code, data, and models are available at https://geox-lab.github.io/Asking_like_Socrates",
+        "tags": [
+            "DeepSeek",
+            "RL",
+            "VLM"
+        ]
+    },
+    {
+        "id": 30,
+        "title": "Agentic Policy Optimization via Instruction-Policy Co-Evolution",
+        "author": [
+            "Han Zhou",
+            "Xingchen Wan",
+            "Ivan VuliÄ",
+            "Anna Korhonen"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.01945",
+        "abstract": "Reinforcement Learning with Verifiable Rewards (RLVR) has advanced the reasoning capability of large language models (LLMs), enabling autonomous agents that can conduct effective multi-turn and tool-integrated reasoning. While instructions serve as the primary protocol for defining agents, RLVR typically relies on static and manually designed instructions. However, those instructions may be suboptimal for the base model, and the optimal instruction may change as the agent's policy improves and explores the interaction with the environment. To bridge the gap, we introduce INSPO, a novel Instruction-Policy co-evolution framework that integrates instruction optimization as a dynamic component of the reinforcement learning (RL) loop. INSPO maintains a dynamic population of instruction candidates that are sampled with questions, where reward signals in RL loops are automatically attributed to each instruction, and low performers are periodically pruned. New instructions are generated and verified through an on-policy reflection mechanism, where an LLM-based optimizer analyzes past experience from a replay buffer and evolves more effective strategies given the current policy. We conduct extensive experiments on multi-turn retrieval and reasoning tasks, demonstrating that INSPO substantially outperforms strong baselines relying on static instructions. INSPO discovers innovative instructions that guide the agent toward more strategic reasoning paths, achieving substantial performance gains with only a marginal increase in computational overhead.",
+        "tags": [
+            "LLM",
+            "RL"
+        ]
+    },
+    {
+        "id": 31,
+        "title": "HiconAgent: History Context-aware Policy Optimization for GUI Agents",
+        "author": [
+            "Xurui Zhou",
+            "Gongwei Chen",
+            "Yuquan Xie",
+            "Zaijing Li",
+            "Kaiwen Zhou",
+            "Shuai Wang",
+            "Shuo Yang",
+            "Zhuotao Tian",
+            "Rui Shao"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.01763",
+        "abstract": "Graphical User Interface (GUI) agents require effective use of historical context to perform sequential navigation tasks. While incorporating past actions and observations can improve decision making, naive use of full history leads to excessive computational overhead and distraction from irrelevant information. To address this, we introduce HiconAgent, a GUI agent trained with History Context-aware Policy Optimization (HCPO) for efficient and effective utilization of historical information. HCPO optimizes history usage in both sampling and policy updates through two complementary components: (1) Dynamic Context Sampling (DCS) presents the agent with variable length histories during sampling, enabling adaptive use of the most relevant context; (2) Anchor-guided History Compression (AHC) refines the policy update phase with a dual branch strategy where the compressed branch removes history observations while keeping history actions as information flow anchors. The compressed and uncompressed branches are coupled through a history-enhanced alignment loss to enforce consistent history usage while maintaining efficiency. Experiments on mainstream GUI navigation benchmarks demonstrate strong performance. Despite being smaller, HiconAgent-3B outperforms GUI-R1-7B by +8.46 percent grounding accuracy and +11.32 percent step success rate on GUI-Odyssey, while achieving comparable results on AndroidControl and AITW with up to 2.47x computational speedup and 60 percent FLOPs reduction.",
+        "tags": []
+    },
+    {
+        "id": 32,
+        "title": "Learning Eigenstructures of Unstructured Data Manifolds",
+        "author": [
+            "Roy Velich",
+            "Arkadi Piven",
+            "David BensaÃ¯d",
+            "Daniel Cremers",
+            "Thomas DagÃ¨s",
+            "Ron Kimmel"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.01103",
+        "abstract": "We introduce a novel framework that directly learns a spectral basis for shape and manifold analysis from unstructured data, eliminating the need for traditional operator selection, discretization, and eigensolvers. Grounded in optimal-approximation theory, we train a network to decompose an implicit approximation operator by minimizing the reconstruction error in the learned basis over a chosen distribution of probe functions. For suitable distributions, they can be seen as an approximation of the Laplacian operator and its eigendecomposition, which are fundamental in geometry processing. Furthermore, our method recovers in a unified manner not only the spectral basis, but also the implicit metric's sampling density and the eigenvalues of the underlying operator. Notably, our unsupervised method makes no assumption on the data manifold, such as meshing or manifold dimensionality, allowing it to scale to arbitrary datasets of any dimension. On point clouds lying on surfaces in 3D and high-dimensional image manifolds, our approach yields meaningful spectral bases, that can resemble those of the Laplacian, without explicit construction of an operator. By replacing the traditional operator selection, construction, and eigendecomposition with a learning-based approach, our framework offers a principled, data-driven alternative to conventional pipelines. This opens new possibilities in geometry processing for unstructured data, particularly in high-dimensional spaces.",
+        "tags": [
+            "3D"
+        ]
+    },
+    {
+        "id": 33,
+        "title": "The Art of Scaling Test-Time Compute for Large Language Models",
+        "author": [
+            "Aradhye Agarwal",
+            "Ayan Sengupta",
+            "Tanmoy Chakraborty"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.02008",
+        "abstract": "Test-time scaling (TTS) -- the dynamic allocation of compute during inference -- is a promising direction for improving reasoning in large language models (LLMs). However, a systematic comparison of well-known TTS strategies under identical conditions is missing, and the influence of model type and problem difficulty on performance remains unclear. To address these gaps, we conduct the first large-scale study of TTS, spanning over thirty billion tokens generated using eight open-source LLMs (7B to 235B parameters), across four reasoning datasets. We observe three consistent trends: (1) no single TTS strategy universally dominates; (2) reasoning models exhibit distinct trace-quality patterns across problem difficulty and trace length, forming short-horizon and long-horizon categories; and (3) for a given model type, the optimal TTS performance scales monotonically with compute budget. Based on these insights, we provide a practical recipe for selecting the best TTS strategy, considering problem difficulty, model type, and compute budget, providing a practical guide to effective inference-time scaling.",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 34,
+        "title": "ChronosObserver: Taming 4D World with Hyperspace Diffusion Sampling",
+        "author": [
+            "Qisen Wang",
+            "Yifan Zhao",
+            "Peisen Shen",
+            "Jialu Li",
+            "Jia Li"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.01481",
+        "abstract": "Although prevailing camera-controlled video generation models can produce cinematic results, lifting them directly to the generation of 3D-consistent and high-fidelity time-synchronized multi-view videos remains challenging, which is a pivotal capability for taming 4D worlds. Some works resort to data augmentation or test-time optimization, but these strategies are constrained by limited model generalization and scalability issues. To this end, we propose ChronosObserver, a training-free method including World State Hyperspace to represent the spatiotemporal constraints of a 4D world scene, and Hyperspace Guided Sampling to synchronize the diffusion sampling trajectories of multiple views using the hyperspace. Experimental results demonstrate that our method achieves high-fidelity and 3D-consistent time-synchronized multi-view videos generation without training or fine-tuning for diffusion models.",
+        "tags": [
+            "3D",
+            "Diffusion",
+            "Video Generation"
+        ]
+    },
+    {
+        "id": 35,
+        "title": "Generalist Large Language Models Outperform Clinical Tools on Medical Benchmarks",
+        "author": [
+            "Krithik Vishwanath",
+            "Mrigayu Ghosh",
+            "Anton Alyakin",
+            "Daniel Alexander Alber",
+            "Yindalon Aphinyanaphongs",
+            "Eric Karl Oermann"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.01191",
+        "abstract": "Specialized clinical AI assistants are rapidly entering medical practice, often framed as safer or more reliable than general-purpose large language models (LLMs). Yet, unlike frontier models, these clinical tools are rarely subjected to independent, quantitative evaluation, creating a critical evidence gap despite their growing influence on diagnosis, triage, and guideline interpretation. We assessed two widely deployed clinical AI systems (OpenEvidence and UpToDate Expert AI) against three state-of-the-art generalist LLMs (GPT-5, Gemini 3 Pro, and Claude Sonnet 4.5) using a 1,000-item mini-benchmark combining MedQA (medical knowledge) and HealthBench (clinician-alignment) tasks. Generalist models consistently outperformed clinical tools, with GPT-5 achieving the highest scores, while OpenEvidence and UpToDate demonstrated deficits in completeness, communication quality, context awareness, and systems-based safety reasoning. These findings reveal that tools marketed for clinical decision support may often lag behind frontier LLMs, underscoring the urgent need for transparent, independent evaluation before deployment in patient-facing workflows.",
+        "tags": [
+            "GPT",
+            "LLM"
+        ]
+    },
+    {
+        "id": 36,
+        "title": "Seeing the Wind from a Falling Leaf",
+        "author": [
+            "Zhiyuan Gao",
+            "Jiageng Mao",
+            "Hong-Xing Yu",
+            "Haozhe Lou",
+            "Emily Yue-Ting Jia",
+            "Jernej Barbic",
+            "Jiajun Wu",
+            "Yue Wang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.00762",
+        "abstract": "A longstanding goal in computer vision is to model motions from videos, while the representations behind motions, i.e. the invisible physical interactions that cause objects to deform and move, remain largely unexplored. In this paper, we study how to recover the invisible forces from visual observations, e.g., estimating the wind field by observing a leaf falling to the ground. Our key innovation is an end-to-end differentiable inverse graphics framework, which jointly models object geometry, physical properties, and interactions directly from videos. Through backpropagation, our approach enables the recovery of force representations from object motions. We validate our method on both synthetic and real-world scenarios, and the results demonstrate its ability to infer plausible force fields from videos. Furthermore, we show the potential applications of our approach, including physics-based video generation and editing. We hope our approach sheds light on understanding and modeling the physical process behind pixels, bridging the gap between vision and physics. Please check more video results in our \\href{https://chaoren2357.github.io/seeingthewind/}{project page}.",
+        "tags": [
+            "Video Generation"
+        ]
+    },
+    {
+        "id": 37,
+        "title": "WiseEdit: Benchmarking Cognition- and Creativity-Informed Image Editing",
+        "author": [
+            "Kaihang Pan",
+            "Weile Chen",
+            "Haiyi Qiu",
+            "Qifan Yu",
+            "Wendong Bu",
+            "Zehan Wang",
+            "Yun Zhu",
+            "Juncheng Li",
+            "Siliang Tang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.00387",
+        "abstract": "Recent image editing models boast next-level intelligent capabilities, facilitating cognition- and creativity-informed image editing. Yet, existing benchmarks provide too narrow a scope for evaluation, failing to holistically assess these advanced abilities. To address this, we introduce WiseEdit, a knowledge-intensive benchmark for comprehensive evaluation of cognition- and creativity-informed image editing, featuring deep task depth and broad knowledge breadth. Drawing an analogy to human cognitive creation, WiseEdit decomposes image editing into three cascaded steps, i.e., Awareness, Interpretation, and Imagination, each corresponding to a task that poses a challenge for models to complete at the specific step. It also encompasses complex tasks, where none of the three steps can be finished easily. Furthermore, WiseEdit incorporates three fundamental types of knowledge: Declarative, Procedural, and Metacognitive knowledge. Ultimately, WiseEdit comprises 1,220 test cases, objectively revealing the limitations of SoTA image editing models in knowledge-based cognitive reasoning and creative composition capabilities. The benchmark, evaluation code, and the generated images of each model will be made publicly available soon. Project Page: https://qnancy.github.io/wiseedit_project_page/.",
+        "tags": [
+            "Image Editing"
+        ]
+    },
+    {
+        "id": 38,
+        "title": "OpenREAD: Reinforced Open-Ended Reasoning for End-to-End Autonomous Driving with LLM-as-Critic",
+        "author": [
+            "Songyan Zhang",
+            "Wenhui Huang",
+            "Zhan Chen",
+            "Chua Jiahao Collister",
+            "Qihang Huang",
+            "Chen Lv"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.01830",
+        "abstract": "Recently, two-stage fine-tuning strategies, e.g., acquiring essential driving knowledge through supervised fine-tuning (SFT) and further enhancing decision-making and planning via reinforcement fine-tuning (RFT), have shown strong potential in advancing the knowledge-driven autonomous driving (AD) paradigm. However, the learning nature of SFT still limits the generalization of reasoning, thereby constraining the full potential of driving performance. Meanwhile, current RFT approaches are primarily applied to downstream tasks, since scene understanding is an open-ended problem where corresponding rewards are difficult to quantify. To address these limitations, we propose OpenREAD, an OPEN-ended REasoning reinforced vision-language model (VLM)-based autonomous driving (AD) framework that enables end-to-end RFT across the full spectrum from high-level reasoning to low-level trajectory planning. Specifically, we begin by constructing large-scale Chain-of-Thought (CoT) annotations on open-source driving-related knowledge datasets, and employ the powerful Qwen3 large language model (LLM) as the critic in RFT to quantify reasoning quality for open-ended questions during reward modeling. Extensive experiments confirm that joint end-to-end RFT yields substantial improvements in both upstream and downstream tasks, enabling OpenREAD to achieve state-of-the-art performance on reasoning and planning benchmarks.",
+        "tags": [
+            "CoT",
+            "LLM",
+            "VLM"
+        ]
+    },
+    {
+        "id": 39,
+        "title": "CauSight: Learning to Supersense for Visual Causal Discovery",
+        "author": [
+            "Yize Zhang",
+            "Meiqi Chen",
+            "Sirui Chen",
+            "Bo Peng",
+            "Yanxi Zhang",
+            "Tianyu Li",
+            "Chaochao Lu"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.01827",
+        "abstract": "Causal thinking enables humans to understand not just what is seen, but why it happens. To replicate this capability in modern AI systems, we introduce the task of visual causal discovery. It requires models to infer cause-and-effect relations among visual entities across diverse scenarios instead of merely perceiving their presence. To this end, we first construct the Visual Causal Graph dataset (VCG-32K), a large-scale collection of over 32,000 images annotated with entity-level causal graphs, and further develop CauSight, a novel vision-language model to perform visual causal discovery through causally aware reasoning. Our training recipe integrates three components: (1) training data curation from VCG-32K, (2) Tree-of-Causal-Thought (ToCT) for synthesizing reasoning trajectories, and (3) reinforcement learning with a designed causal reward to refine the reasoning policy. Experiments show that CauSight outperforms GPT-4.1 on visual causal discovery, achieving over a threefold performance boost (21% absolute gain). Our code, model, and dataset are fully open-sourced at project page: https://github.com/OpenCausaLab/CauSight.",
+        "tags": [
+            "GPT",
+            "RL"
+        ]
+    },
+    {
+        "id": 40,
+        "title": "DreamingComics: A Story Visualization Pipeline via Subject and Layout Customized Generation using Video Models",
+        "author": [
+            "Patrick Kwon",
+            "Chen Chen"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.01686",
+        "abstract": "Current story visualization methods tend to position subjects solely by text and face challenges in maintaining artistic consistency. To address these limitations, we introduce DreamingComics, a layout-aware story visualization framework. We build upon a pretrained video diffusion-transformer (DiT) model, leveraging its spatiotemporal priors to enhance identity and style consistency. For layout-based position control, we propose RegionalRoPE, a region-aware positional encoding scheme that re-indexes embeddings based on the target layout. Additionally, we introduce a masked condition loss to further constrain each subject's visual features to their designated region. To infer layouts from natural language scripts, we integrate an LLM-based layout generator trained to produce comic-style layouts, enabling flexible and controllable layout conditioning. We present a comprehensive evaluation of our approach, showing a 29.2% increase in character consistency and a 36.2% increase in style similarity compared to previous methods, while displaying high spatial accuracy. Our project page is available at https://yj7082126.github.io/dreamingcomics/",
+        "tags": [
+            "DiT",
+            "Diffusion",
+            "LLM",
+            "Transformer"
+        ]
+    },
+    {
+        "id": 41,
+        "title": "IndicParam: Benchmark to evaluate LLMs on low-resource Indic Languages",
+        "author": [
+            "Ayush Maheshwari",
+            "Kaushal Sharma",
+            "Vivek Patel",
+            "Aditya Maheshwari"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.00333",
+        "abstract": "While large language models excel on high-resource multilingual tasks, low- and extremely low-resource Indic languages remain severely under-evaluated. We present IndicParam, a human-curated benchmark of over 13,000 multiple-choice questions covering 11 such languages (Nepali, Gujarati, Marathi, Odia as low-resource; Dogri, Maithili, Rajasthani, Sanskrit, Bodo, Santali, Konkani as extremely low-resource) plus Sanskrit-English code-mixed set. We evaluated 19 LLMs, both proprietary and open-weights, which reveals that even the top-performing GPT-5 reaches only 45.0% average accuracy, followed by DeepSeek-3.2 (43.1) and Claude-4.5 (42.7). We additionally label each question as knowledge-oriented or purely linguistic to discriminate factual recall from grammatical proficiency. Further, we assess the ability of LLMs to handle diverse question formats-such as list-based matching, assertion-reason pairs, and sequence ordering-alongside conventional multiple-choice questions. IndicParam provides insights into limitations of cross-lingual transfer and establishes a challenging benchmark for Indic languages. The dataset is available at https://huggingface.co/datasets/bharatgenai/IndicParam. Scripts to run benchmark are present at https://github.com/ayushbits/IndicParam.",
+        "tags": [
+            "DeepSeek",
+            "GPT",
+            "LLM"
+        ]
+    },
+    {
+        "id": 42,
+        "title": "A Hierarchical Framework for Humanoid Locomotion with Supernumerary Limbs",
+        "author": [
+            "Bowen Zhi"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.00077",
+        "abstract": "The integration of Supernumerary Limbs (SLs) on humanoid robots poses a significant stability challenge due to the dynamic perturbations they introduce. This thesis addresses this issue by designing a novel hierarchical control architecture to improve humanoid locomotion stability with SLs. The core of this framework is a decoupled strategy that combines learning-based locomotion with model-based balancing. The low-level component consists of a walking gait for a Unitree H1 humanoid through imitation learning and curriculum learning. The high-level component actively utilizes the SLs for dynamic balancing. The effectiveness of the system is evaluated in a physics-based simulation under three conditions: baseline gait for an unladen humanoid (baseline walking), walking with a static SL payload (static payload), and walking with the active dynamic balancing controller (dynamic balancing). Our evaluation shows that the dynamic balancing controller improves stability. Compared to the static payload condition, the balancing strategy yields a gait pattern closer to the baseline and decreases the Dynamic Time Warping (DTW) distance of the CoM trajectory by 47\\%. The balancing controller also improves the re-stabilization within gait cycles and achieves a more coordinated anti-phase pattern of Ground Reaction Forces (GRF). The results demonstrate that a decoupled, hierarchical design can effectively mitigate the internal dynamic disturbances arising from the mass and movement of the SLs, enabling stable locomotion for humanoids equipped with functional limbs. Code and videos are available here: https://github.com/heyzbw/HuSLs.",
+        "tags": []
+    },
+    {
+        "id": 43,
+        "title": "Generative Video Motion Editing with 3D Point Tracks",
+        "author": [
+            "Yao-Chih Lee",
+            "Zhoutong Zhang",
+            "Jiahui Huang",
+            "Jui-Hsien Wang",
+            "Joon-Young Lee",
+            "Jia-Bin Huang",
+            "Eli Shechtman",
+            "Zhengqi Li"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.02015",
+        "abstract": "Camera and object motions are central to a video's narrative. However, precisely editing these captured motions remains a significant challenge, especially under complex object movements. Current motion-controlled image-to-video (I2V) approaches often lack full-scene context for consistent video editing, while video-to-video (V2V) methods provide viewpoint changes or basic object translation, but offer limited control over fine-grained object motion. We present a track-conditioned V2V framework that enables joint editing of camera and object motion. We achieve this by conditioning a video generation model on a source video and paired 3D point tracks representing source and target motions. These 3D tracks establish sparse correspondences that transfer rich context from the source video to new motions while preserving spatiotemporal coherence. Crucially, compared to 2D tracks, 3D tracks provide explicit depth cues, allowing the model to resolve depth order and handle occlusions for precise motion editing. Trained in two stages on synthetic and real data, our model supports diverse motion edits, including joint camera/object manipulation, motion transfer, and non-rigid deformation, unlocking new creative potential in video editing.",
+        "tags": [
+            "3D",
+            "Video Editing",
+            "Video Generation"
+        ]
+    },
+    {
+        "id": 44,
+        "title": "MEGConformer: Conformer-Based MEG Decoder for Robust Speech and Phoneme Classification",
+        "author": [
+            "Xabier de Zuazo",
+            "Ibon Saratxaga",
+            "Eva Navas"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.01443",
+        "abstract": "We present Conformer-based decoders for the LibriBrain 2025 PNPL competition, targeting two foundational MEG tasks: Speech Detection and Phoneme Classification. Our approach adapts a compact Conformer to raw 306-channel MEG signals, with a lightweight convolutional projection layer and task-specific heads. For Speech Detection, a MEG-oriented SpecAugment provided a first exploration of MEG-specific augmentation. For Phoneme Classification, we used inverse-square-root class weighting and a dynamic grouping loader to handle 100-sample averaged examples. In addition, a simple instance-level normalization proved critical to mitigate distribution shifts on the holdout split. Using the official Standard track splits and F1-macro for model selection, our best systems achieved 88.9% (Speech) and 65.8% (Phoneme) on the leaderboard, surpassing the competition baselines and ranking within the top-10 in both tasks. For further implementation details, the technical documentation, source code, and checkpoints are available at https://github.com/neural2speech/libribrain-experiments.",
+        "tags": [
+            "Detection"
+        ]
+    },
+    {
+        "id": 45,
+        "title": "Doppler-Enhanced Deep Learning: Improving Thyroid Nodule Segmentation with YOLOv5 Instance Segmentation",
+        "author": [
+            "Mahmoud El Hussieni"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.00639",
+        "abstract": "The increasing prevalence of thyroid cancer globally has led to the development of various computer-aided detection methods. Accurate segmentation of thyroid nodules is a critical first step in the development of AI-assisted clinical decision support systems. This study focuses on instance segmentation of thyroid nodules using YOLOv5 algorithms on ultrasound images. We evaluated multiple YOLOv5 variants (Nano, Small, Medium, Large, and XLarge) across two dataset versions, with and without doppler images. The YOLOv5-Large algorithm achieved the highest performance with a dice score of 91\\% and mAP of 0.87 on the dataset including doppler images. Notably, our results demonstrate that doppler images, typically excluded by physicians, can significantly improve segmentation performance. The YOLOv5-Small model achieved 79\\% dice score when doppler images were excluded, while including them improved performance across all model variants. These findings suggest that instance segmentation with YOLOv5 provides an effective real-time approach for thyroid nodule detection, with potential clinical applications in automated diagnostic systems.",
+        "tags": [
+            "Detection",
+            "Segmentation"
+        ]
+    },
+    {
+        "id": 46,
+        "title": "OmniFusion: Simultaneous Multilingual Multimodal Translations via Modular Fusion",
+        "author": [
+            "Sai Koneru",
+            "Matthias Huck",
+            "Jan Niehues"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.00234",
+        "abstract": "There has been significant progress in open-source text-only translation large language models (LLMs) with better language coverage and quality. However, these models can be only used in cascaded pipelines for speech translation (ST), performing automatic speech recognition first followed by translation. This introduces additional latency, which is particularly critical in simultaneous ST (SimulST), and prevents the model from exploiting multimodal context, such as images, which can aid disambiguation. Pretrained multimodal foundation models (MMFMs) already possess strong perception and reasoning capabilities across multiple modalities, but generally lack the multilingual coverage and specialized translation performance of dedicated translation LLMs. To build an effective multimodal translation system, we propose an end-to-end approach that fuses MMFMs with translation LLMs. We introduce a novel fusion strategy that connects hidden states from multiple layers of a pretrained MMFM to a translation LLM, enabling joint end-to-end training. The resulting model, OmniFusion, built on Omni 2.5-7B as the MMFM and SeedX PPO-7B as the translation LLM, can perform speech-to-text, speech-and-image-to-text, and text-and-image-to-text translation. Experiments demonstrate that OmniFusion effectively leverages both audio and visual inputs, achieves a 1-second latency reduction in SimulST compared to cascaded pipelines and also improves the overall translation quality\\footnote{Code is available at https://github.com/saikoneru/OmniFusion}.",
+        "tags": [
+            "LLM",
+            "PPO"
+        ]
+    },
+    {
+        "id": 47,
+        "title": "Structured Extraction from Business Process Diagrams Using Vision-Language Models",
+        "author": [
+            "Pritam Deka",
+            "Barry Devereux"
+        ],
+        "pdf": "https://arxiv.org/pdf/2511.22448",
+        "abstract": "Business Process Model and Notation (BPMN) is a widely adopted standard for representing complex business workflows. While BPMN diagrams are often exchanged as visual images, existing methods primarily rely on XML representations for computational analysis. In this work, we present a pipeline that leverages Vision-Language Models (VLMs) to extract structured JSON representations of BPMN diagrams directly from images, without requiring source model files or textual annotations. We also incorporate optical character recognition (OCR) for textual enrichment and evaluate the generated element lists against ground truth data derived from the source XML files. Our approach enables robust component extraction in scenarios where original source files are unavailable. We benchmark multiple VLMs and observe performance improvements in several models when OCR is used for text enrichment. In addition, we conducted extensive statistical analyses of OCR-based enrichment methods and prompt ablation studies, providing a clearer understanding of their impact on model performance.",
+        "tags": [
+            "VLM"
+        ]
+    }
+]
