@@ -1,0 +1,456 @@
+[
+    {
+        "id": 1,
+        "title": "DataFlow: An LLM-Driven Framework for Unified Data Preparation and Workflow Automation in the Era of Data-Centric AI",
+        "author": [
+            "Hao Liang",
+            "Xiaochen Ma",
+            "Zhou Liu",
+            "Zhen Hao Wong",
+            "Zhengyang Zhao",
+            "Zimo Meng",
+            "Runming He",
+            "Chengyu Shen",
+            "Qifeng Cai",
+            "Zhaoyang Han",
+            "Meiyi Qiang",
+            "Yalin Feng",
+            "Tianyi Bai",
+            "Zewei Pan",
+            "Ziyi Guo",
+            "Yizhen Jiang",
+            "Jingwen Deng",
+            "Qijie You",
+            "Peichao Lai",
+            "Tianyu Guo",
+            "Chi Hsu Tsai",
+            "Hengyi Feng",
+            "Rui Hu",
+            "Wenkai Yu",
+            "Junbo Niu",
+            "Bohan Zeng",
+            "Ruichuan An",
+            "Lu Ma",
+            "Jihao Huang",
+            "Yaowei Zheng",
+            "Conghui He",
+            "Linpeng Tang",
+            "Bin Cui",
+            "Weinan E",
+            "Wentao Zhang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.16676",
+        "abstract": "The rapidly growing demand for high-quality data in Large Language Models (LLMs) has intensified the need for scalable, reliable, and semantically rich data preparation pipelines. However, current practices remain dominated by ad-hoc scripts and loosely specified workflows, which lack principled abstractions, hinder reproducibility, and offer limited support for model-in-the-loop data generation. To address these challenges, we present DataFlow, a unified and extensible LLM-driven data preparation framework. DataFlow is designed with system-level abstractions that enable modular, reusable, and composable data transformations, and provides a PyTorch-style pipeline construction API for building debuggable and optimizable dataflows. The framework consists of nearly 200 reusable operators and six domain-general pipelines spanning text, mathematical reasoning, code, Text-to-SQL, agentic RAG, and large-scale knowledge extraction. To further improve usability, we introduce DataFlow-Agent, which automatically translates natural-language specifications into executable pipelines via operator synthesis, pipeline planning, and iterative verification. Across six representative use cases, DataFlow consistently improves downstream LLM performance. Our math, code, and text pipelines outperform curated human datasets and specialized synthetic baselines, achieving up to +3\\% execution accuracy in Text-to-SQL over SynSQL, +7\\% average improvements on code benchmarks, and 1--3 point gains on MATH, GSM8K, and AIME. Moreover, a unified 10K-sample dataset produced by DataFlow enables base models to surpass counterparts trained on 1M Infinity-Instruct data. These results demonstrate that DataFlow provides a practical and high-performance substrate for reliable, reproducible, and scalable LLM data preparation, and establishes a system-level foundation for future data-centric AI development.",
+        "tags": [
+            "LLM",
+            "RAG"
+        ]
+    },
+    {
+        "id": 2,
+        "title": "The Prism Hypothesis: Harmonizing Semantic and Pixel Representations via Unified Autoencoding",
+        "author": [
+            "Weichen Fan",
+            "Haiwen Diao",
+            "Quan Wang",
+            "Dahua Lin",
+            "Ziwei Liu"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.19693",
+        "abstract": "Deep representations across modalities are inherently intertwined. In this paper, we systematically analyze the spectral characteristics of various semantic and pixel encoders. Interestingly, our study uncovers a highly inspiring and rarely explored correspondence between an encoder's feature spectrum and its functional role: semantic encoders primarily capture low-frequency components that encode abstract meaning, whereas pixel encoders additionally retain high-frequency information that conveys fine-grained detail. This heuristic finding offers a unifying perspective that ties encoder behavior to its underlying spectral structure. We define it as the Prism Hypothesis, where each data modality can be viewed as a projection of the natural world onto a shared feature spectrum, just like the prism. Building on this insight, we propose Unified Autoencoding (UAE), a model that harmonizes semantic structure and pixel details via an innovative frequency-band modulator, enabling their seamless coexistence. Extensive experiments on ImageNet and MS-COCO benchmarks validate that our UAE effectively unifies semantic abstraction and pixel-level fidelity into a single latent space with state-of-the-art performance.",
+        "tags": []
+    },
+    {
+        "id": 3,
+        "title": "Region-Constraint In-Context Generation for Instructional Video Editing",
+        "author": [
+            "Zhongwei Zhang",
+            "Fuchen Long",
+            "Wei Li",
+            "Zhaofan Qiu",
+            "Wu Liu",
+            "Ting Yao",
+            "Tao Mei"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.17650",
+        "abstract": "The In-context generation paradigm recently has demonstrated strong power in instructional image editing with both data efficiency and synthesis quality. Nevertheless, shaping such in-context learning for instruction-based video editing is not trivial. Without specifying editing regions, the results can suffer from the problem of inaccurate editing regions and the token interference between editing and non-editing areas during denoising. To address these, we present ReCo, a new instructional video editing paradigm that novelly delves into constraint modeling between editing and non-editing regions during in-context generation. Technically, ReCo width-wise concatenates source and target video for joint denoising. To calibrate video diffusion learning, ReCo capitalizes on two regularization terms, i.e., latent and attention regularization, conducting on one-step backward denoised latents and attention maps, respectively. The former increases the latent discrepancy of the editing region between source and target videos while reducing that of non-editing areas, emphasizing the modification on editing area and alleviating outside unexpected content generation. The latter suppresses the attention of tokens in the editing region to the tokens in counterpart of the source video, thereby mitigating their interference during novel object generation in target video. Furthermore, we propose a large-scale, high-quality video editing dataset, i.e., ReCo-Data, comprising 500K instruction-video pairs to benefit model training. Extensive experiments conducted on four major instruction-based video editing tasks demonstrate the superiority of our proposal.",
+        "tags": [
+            "Diffusion",
+            "Image Editing",
+            "Video Editing"
+        ]
+    },
+    {
+        "id": 4,
+        "title": "QuCo-RAG: Quantifying Uncertainty from the Pre-training Corpus for Dynamic Retrieval-Augmented Generation",
+        "author": [
+            "Dehai Min",
+            "Kailin Zhang",
+            "Tongtong Wu",
+            "Lu Cheng"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.19134",
+        "abstract": "Dynamic Retrieval-Augmented Generation adaptively determines when to retrieve during generation to mitigate hallucinations in large language models (LLMs). However, existing methods rely on model-internal signals (e.g., logits, entropy), which are fundamentally unreliable because LLMs are typically ill-calibrated and often exhibit high confidence in erroneous outputs. We propose QuCo-RAG, which shifts from subjective confidence to objective statistics computed from pre-training data. Our method quantifies uncertainty through two stages: (1) before generation, we identify low-frequency entities indicating long-tail knowledge gaps; (2) during generation, we verify entity co-occurrence in the pre-training corpus, where zero co-occurrence often signals hallucination risk. Both stages leverage Infini-gram for millisecond-latency queries over 4 trillion tokens, triggering retrieval when uncertainty is high. Experiments on multi-hop QA benchmarks show QuCo-RAG achieves EM gains of 5--12 points over state-of-the-art baselines with OLMo-2 models, and transfers effectively to models with undisclosed pre-training data (Llama, Qwen, GPT), improving EM by up to 14 points. Domain generalization on biomedical QA further validates the robustness of our paradigm. These results establish corpus-grounded verification as a principled, practically model-agnostic paradigm for dynamic RAG. Our code is publicly available at https://github.com/ZhishanQ/QuCo-RAG.",
+        "tags": [
+            "GPT",
+            "LLM",
+            "LLaMA",
+            "Qwen",
+            "RAG"
+        ]
+    },
+    {
+        "id": 5,
+        "title": "Infinite-Homography as Robust Conditioning for Camera-Controlled Video Generation",
+        "author": [
+            "Min-Jung Kim",
+            "Jeongho Kim",
+            "Hoiyeong Jin",
+            "Junha Hyung",
+            "Jaegul Choo"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.17040",
+        "abstract": "Recent progress in video diffusion models has spurred growing interest in camera-controlled novel-view video generation for dynamic scenes, aiming to provide creators with cinematic camera control capabilities in post-production. A key challenge in camera-controlled video generation is ensuring fidelity to the specified camera pose, while maintaining view consistency and reasoning about occluded geometry from limited observations. To address this, existing methods either train trajectory-conditioned video generation model on trajectory-video pair dataset, or estimate depth from the input video to reproject it along a target trajectory and generate the unprojected regions. Nevertheless, existing methods struggle to generate camera-pose-faithful, high-quality videos for two main reasons: (1) reprojection-based approaches are highly susceptible to errors caused by inaccurate depth estimation; and (2) the limited diversity of camera trajectories in existing datasets restricts learned models. To address these limitations, we present InfCam, a depth-free, camera-controlled video-to-video generation framework with high pose fidelity. The framework integrates two key components: (1) infinite homography warping, which encodes 3D camera rotations directly within the 2D latent space of a video diffusion model. Conditioning on this noise-free rotational information, the residual parallax term is predicted through end-to-end training to achieve high camera-pose fidelity; and (2) a data augmentation pipeline that transforms existing synthetic multiview datasets into sequences with diverse trajectories and focal lengths. Experimental results demonstrate that InfCam outperforms baseline methods in camera-pose accuracy and visual fidelity, generalizing well from synthetic to real-world data. Link to our project page:https://emjay73.github.io/InfCam/",
+        "tags": [
+            "3D",
+            "Depth Estimation",
+            "Diffusion",
+            "Video Generation"
+        ]
+    },
+    {
+        "id": 6,
+        "title": "Can LLMs Estimate Student Struggles? Human-AI Difficulty Alignment with Proficiency Simulation for Item Difficulty Prediction",
+        "author": [
+            "Ming Li",
+            "Han Chen",
+            "Yunze Xiao",
+            "Jian Chen",
+            "Hong Jiao",
+            "Tianyi Zhou"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.18880",
+        "abstract": "Accurate estimation of item (question or task) difficulty is critical for educational assessment but suffers from the cold start problem. While Large Language Models demonstrate superhuman problem-solving capabilities, it remains an open question whether they can perceive the cognitive struggles of human learners. In this work, we present a large-scale empirical analysis of Human-AI Difficulty Alignment for over 20 models across diverse domains such as medical knowledge and mathematical reasoning. Our findings reveal a systematic misalignment where scaling up model size is not reliably helpful; instead of aligning with humans, models converge toward a shared machine consensus. We observe that high performance often impedes accurate difficulty estimation, as models struggle to simulate the capability limitations of students even when being explicitly prompted to adopt specific proficiency levels. Furthermore, we identify a critical lack of introspection, as models fail to predict their own limitations. These results suggest that general problem-solving capability does not imply an understanding of human cognitive struggles, highlighting the challenge of using current models for automated difficulty prediction.",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 7,
+        "title": "WorldWarp: Propagating 3D Geometry with Asynchronous Video Diffusion",
+        "author": [
+            "Hanyang Kong",
+            "Xingyi Yang",
+            "Xiaoxu Zheng",
+            "Xinchao Wang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.19678",
+        "abstract": "Generating long-range, geometrically consistent video presents a fundamental dilemma: while consistency demands strict adherence to 3D geometry in pixel space, state-of-the-art generative models operate most effectively in a camera-conditioned latent space. This disconnect causes current methods to struggle with occluded areas and complex camera trajectories. To bridge this gap, we propose WorldWarp, a framework that couples a 3D structural anchor with a 2D generative refiner. To establish geometric grounding, WorldWarp maintains an online 3D geometric cache built via Gaussian Splatting (3DGS). By explicitly warping historical content into novel views, this cache acts as a structural scaffold, ensuring each new frame respects prior geometry. However, static warping inevitably leaves holes and artifacts due to occlusions. We address this using a Spatio-Temporal Diffusion (ST-Diff) model designed for a \"fill-and-revise\" objective. Our key innovation is a spatio-temporal varying noise schedule: blank regions receive full noise to trigger generation, while warped regions receive partial noise to enable refinement. By dynamically updating the 3D cache at every step, WorldWarp maintains consistency across video chunks. Consequently, it achieves state-of-the-art fidelity by ensuring that 3D logic guides structure while diffusion logic perfects texture. Project page: \\href{https://hyokong.github.io/worldwarp-page/}{https://hyokong.github.io/worldwarp-page/}.",
+        "tags": [
+            "3D",
+            "Diffusion",
+            "Gaussian Splatting"
+        ]
+    },
+    {
+        "id": 8,
+        "title": "LoGoPlanner: Localization Grounded Navigation Policy with Metric-aware Visual Geometry",
+        "author": [
+            "Jiaqi Peng",
+            "Wenzhe Cai",
+            "Yuqiang Yang",
+            "Tai Wang",
+            "Yuan Shen",
+            "Jiangmiao Pang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.19629",
+        "abstract": "Trajectory planning in unstructured environments is a fundamental and challenging capability for mobile robots. Traditional modular pipelines suffer from latency and cascading errors across perception, localization, mapping, and planning modules. Recent end-to-end learning methods map raw visual observations directly to control signals or trajectories, promising greater performance and efficiency in open-world settings. However, most prior end-to-end approaches still rely on separate localization modules that depend on accurate sensor extrinsic calibration for self-state estimation, thereby limiting generalization across embodiments and environments. We introduce LoGoPlanner, a localization-grounded, end-to-end navigation framework that addresses these limitations by: (1) finetuning a long-horizon visual-geometry backbone to ground predictions with absolute metric scale, thereby providing implicit state estimation for accurate localization; (2) reconstructing surrounding scene geometry from historical observations to supply dense, fine-grained environmental awareness for reliable obstacle avoidance; and (3) conditioning the policy on implicit geometry bootstrapped by the aforementioned auxiliary tasks, thereby reducing error http://propagation.We evaluate LoGoPlanner in both simulation and real-world settings, where its fully end-to-end design reduces cumulative error while metric-aware geometry memory enhances planning consistency and obstacle avoidance, leading to more than a 27.3\\% improvement over oracle-localization baselines and strong generalization across embodiments and environments. The code and models have been made publicly available on the \\href{https://steinate.github.io/logoplanner.github.io/}{project page}.",
+        "tags": []
+    },
+    {
+        "id": 9,
+        "title": "UCoder: Unsupervised Code Generation by Internal Probing of Large Language Models",
+        "author": [
+            "Jiajun Wu",
+            "Jian Yang",
+            "Wei Zhang",
+            "Lin Jing",
+            "Yuqing Ma",
+            "Ensheng Shi",
+            "Yuchi Ma",
+            "Zhoujun Li",
+            "Xianglong Liu"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.17385",
+        "abstract": "Large language models (LLMs) have demonstrated remarkable capabilities in code generation tasks. However, their effectiveness heavily relies on supervised training with extensive labeled (e.g., question-answering pairs) or unlabeled datasets (e.g., code snippets), which are often expensive and difficult to obtain at scale. To address this limitation, this paper introduces a method IPC, an unsupervised framework that leverages Internal Probing of LLMs for Code generation without any external corpus, even unlabeled code snippets. We introduce the problem space probing, test understanding probing, solution space probing, and knowledge consolidation and reinforcement to probe the internal knowledge and confidence patterns existing in LLMs. Further, IPC identifies reliable code candidates through self-consistency mechanisms and representation-based quality estimation to train UCoder (coder with unsupervised learning). We validate the proposed approach across multiple code benchmarks, demonstrating that unsupervised methods can achieve competitive performance compared to supervised approaches while significantly reducing the dependency on labeled data and computational resources. Analytic experiments reveal that internal model states contain rich signals about code quality and correctness, and that properly harnessing these signals enables effective unsupervised learning for code generation tasks, opening new directions for training code LLMs in resource-constrained scenarios.",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 10,
+        "title": "GenEnv: Difficulty-Aligned Co-Evolution Between LLM Agents and Environment Simulators",
+        "author": [
+            "Jiacheng Guo",
+            "Ling Yang",
+            "Peter Chen",
+            "Qixin Xiao",
+            "Yinjie Wang",
+            "Xinzhe Juan",
+            "Jiahao Qiu",
+            "Ke Shen",
+            "Mengdi Wang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.19682",
+        "abstract": "Training capable Large Language Model (LLM) agents is critically bottlenecked by the high cost and static nature of real-world interaction data. We address this by introducing GenEnv, a framework that establishes a difficulty-aligned co-evolutionary game between an agent and a scalable, generative environment simulator. Unlike traditional methods that evolve models on static datasets, GenEnv instantiates a dataevolving: the simulator acts as a dynamic curriculum policy, continuously generating tasks specifically tailored to the agent's ``zone of proximal development''. This process is guided by a simple but effective $\\alpha$-Curriculum Reward, which aligns task difficulty with the agent's current capabilities. We evaluate GenEnv on five benchmarks, including API-Bank, ALFWorld, BFCL, Bamboogle, and TravelPlanner. Across these tasks, GenEnv improves agent performance by up to \\textbf{+40.3\\%} over 7B baselines and matches or exceeds the average performance of larger models. Compared to Gemini 2.5 Pro-based offline data augmentation, GenEnv achieves better performance while using 3.3$\\times$ less data. By shifting from static supervision to adaptive simulation, GenEnv provides a data-efficient pathway for scaling agent capabilities.",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 11,
+        "title": "StoryMem: Multi-shot Long Video Storytelling with Memory",
+        "author": [
+            "Kaiwen Zhang",
+            "Liming Jiang",
+            "Angtian Wang",
+            "Jacob Zhiyuan Fang",
+            "Tiancheng Zhi",
+            "Qing Yan",
+            "Hao Kang",
+            "Xin Lu",
+            "Xingang Pan"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.19539",
+        "abstract": "Visual storytelling requires generating multi-shot videos with cinematic quality and long-range consistency. Inspired by human memory, we propose StoryMem, a paradigm that reformulates long-form video storytelling as iterative shot synthesis conditioned on explicit visual memory, transforming pre-trained single-shot video diffusion models into multi-shot storytellers. This is achieved by a novel Memory-to-Video (M2V) design, which maintains a compact and dynamically updated memory bank of keyframes from historical generated shots. The stored memory is then injected into single-shot video diffusion models via latent concatenation and negative RoPE shifts with only LoRA fine-tuning. A semantic keyframe selection strategy, together with aesthetic preference filtering, further ensures informative and stable memory throughout generation. Moreover, the proposed framework naturally accommodates smooth shot transitions and customized story generation applications. To facilitate evaluation, we introduce ST-Bench, a diverse benchmark for multi-shot video storytelling. Extensive experiments demonstrate that StoryMem achieves superior cross-shot consistency over previous methods while preserving high aesthetic quality and prompt adherence, marking a significant step toward coherent minute-long video storytelling.",
+        "tags": [
+            "Diffusion",
+            "LoRA",
+            "RoPE"
+        ]
+    },
+    {
+        "id": 12,
+        "title": "LoPA: Scaling dLLM Inference via Lookahead Parallel Decoding",
+        "author": [
+            "Chenkai Xu",
+            "Yijie Jin",
+            "Jiajun Li",
+            "Yi Tu",
+            "Guoping Long",
+            "Dandan Tu",
+            "Mingcong Song",
+            "Hongjie Si",
+            "Tianqi Hou",
+            "Junchi Yan",
+            "Zhijie Deng"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.16229",
+        "abstract": "Diffusion Large Language Models (dLLMs) have demonstrated significant potential for high-speed inference. However, current confidence-driven decoding strategies are constrained by limited parallelism, typically achieving only 1--3 tokens per forward pass (TPF). In this work, we identify that the degree of parallelism during dLLM inference is highly sensitive to the Token Filling Order (TFO). Then, we introduce Lookahead PArallel Decoding LoPA, a training-free, plug-and-play algorithm, to identify a superior TFO and hence accelerate inference. LoPA concurrently explores distinct candidate TFOs via parallel branches, and selects the one with the highest potential for future parallelism based on branch confidence. We apply LoPA to the state-of-the-art D2F model and observe a substantial enhancement in decoding efficiency. Notably, LoPA increases the TPF of D2F-Dream to 10.1 on the GSM8K while maintaining performance superior to the Dream baseline. Furthermore, to facilitate this unprecedented degree of parallelism, we develop a specialized multi-device inference system featuring Branch Parallelism (BP), which achieves a single-sample throughput of 1073.9 tokens per second under multi-GPU deployment. The code is available at https://github.com/zhijie-group/LoPA.",
+        "tags": [
+            "Diffusion",
+            "LLM"
+        ]
+    },
+    {
+        "id": 13,
+        "title": "MobileWorld: Benchmarking Autonomous Mobile Agents in Agent-User Interactive, and MCP-Augmented Environments",
+        "author": [
+            "Quyu Kong",
+            "Xu Zhang",
+            "Zhenyu Yang",
+            "Nolan Gao",
+            "Chen Liu",
+            "Panrong Tong",
+            "Chenglin Cai",
+            "Hanzhang Zhou",
+            "Jianan Zhang",
+            "Liangyu Chen",
+            "Zhidan Liu",
+            "Steven Hoi",
+            "Yue Wang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.19432",
+        "abstract": "Among existing online mobile-use benchmarks, AndroidWorld has emerged as the dominant benchmark due to its reproducible environment and deterministic evaluation; however, recent agents achieving over 90% success rates indicate its saturation and motivate the need for a more challenging benchmark. In addition, its environment lacks key application categories, such as e-commerce and enterprise communication, and does not reflect realistic mobile-use scenarios characterized by vague user instructions and hybrid tool usage. To bridge this gap, we introduce MobileWorld, a substantially more challenging benchmark designed to better reflect real-world mobile usage, comprising 201 tasks across 20 applications, while maintaining the same level of reproducible evaluation as AndroidWorld. The difficulty of MobileWorld is twofold. First, it emphasizes long-horizon tasks with cross-application interactions: MobileWorld requires nearly twice as many task-completion steps on average (27.8 vs. 14.3) and includes far more multi-application tasks (62.2% vs. 9.5%) compared to AndroidWorld. Second, MobileWorld extends beyond standard GUI manipulation by introducing novel task categories, including agent-user interaction and MCP-augmented tasks. To ensure robust evaluation, we provide snapshot-based container environment and precise functional verifications, including backend database inspection and task callback APIs. We further develop a planner-executor agentic framework with extended action spaces to support user interactions and MCP calls. Our results reveal a sharp performance drop compared to AndroidWorld, with the best agentic framework and end-to-end model achieving 51.7% and 20.9% success rates, respectively. Our analysis shows that current models struggle significantly with user interaction and MCP calls, offering a strategic roadmap toward more robust, next-generation mobile intelligence.",
+        "tags": []
+    },
+    {
+        "id": 14,
+        "title": "Reasoning Palette: Modulating Reasoning via Latent Contextualization for Controllable Exploration for (V)LMs",
+        "author": [
+            "Rujiao Long",
+            "Yang Li",
+            "Xingyao Zhang",
+            "Weixun Wang",
+            "Tianqianjin Lin",
+            "Xi Zhao",
+            "Yuchi Xu",
+            "Wenbo Su",
+            "Junchi Yan",
+            "Bo Zheng"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.17206",
+        "abstract": "Exploration capacity shapes both inference-time performance and reinforcement learning (RL) training for large (vision-) language models, as stochastic sampling often yields redundant reasoning paths with little high-level diversity. This paper proposes Reasoning Palette, a novel latent-modulation framework that endows the model with a stochastic latent variable for strategic contextualization, guiding its internal planning prior to token generation. This latent context is inferred from the mean-pooled embedding of a question-answer pair via a variational autoencoder (VAE), where each sampled latent potentially encodes a distinct reasoning context. During inference, a sampled latent is decoded into learnable token prefixes and prepended to the input prompt, modulating the model's internal reasoning trajectory. In this way, the model performs internal sampling over reasoning strategies prior to output generation, which shapes the style and structure of the entire response sequence. A brief supervised fine-tuning (SFT) warm-up phase allows the model to adapt to this latent conditioning. Within RL optimization, Reasoning Palette facilitates structured exploration by enabling on-demand injection for diverse reasoning modes, significantly enhancing exploration efficiency and sustained learning capability. Experiments across multiple reasoning benchmarks demonstrate that our method enables interpretable and controllable control over the (vision-) language model's strategic behavior, thereby achieving consistent performance gains over standard RL methods.",
+        "tags": [
+            "RL",
+            "VAE",
+            "VLM"
+        ]
+    },
+    {
+        "id": 15,
+        "title": "Is There a Better Source Distribution than Gaussian? Exploring Source Distributions for Image Flow Matching",
+        "author": [
+            "Junho Lee",
+            "Kwanseok Kim",
+            "Joonseok Lee"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.18184",
+        "abstract": "Flow matching has emerged as a powerful generative modeling approach with flexible choices of source distribution. While Gaussian distributions are commonly used, the potential for better alternatives in high-dimensional data generation remains largely unexplored. In this paper, we propose a novel 2D simulation that captures high-dimensional geometric properties in an interpretable 2D setting, enabling us to analyze the learning dynamics of flow matching during training. Based on this analysis, we derive several key insights about flow matching behavior: (1) density approximation can paradoxically degrade performance due to mode discrepancy, (2) directional alignment suffers from path entanglement when overly concentrated, (3) Gaussian's omnidirectional coverage ensures robust learning, and (4) norm misalignment incurs substantial learning costs. Building on these insights, we propose a practical framework that combines norm-aligned training with directionally-pruned sampling. This approach maintains the robust omnidirectional supervision essential for stable flow learning, while eliminating initializations in data-sparse regions during inference. Importantly, our pruning strategy can be applied to any flow matching model trained with a Gaussian source, providing immediate performance gains without the need for retraining. Empirical evaluations demonstrate consistent improvements in both generation quality and sampling efficiency. Our findings provide practical insights and guidelines for source distribution design and introduce a readily applicable technique for improving existing flow matching models. Our code is available at https://github.com/kwanseokk/SourceFM.",
+        "tags": [
+            "Flow Matching"
+        ]
+    },
+    {
+        "id": 16,
+        "title": "Real2Edit2Real: Generating Robotic Demonstrations via a 3D Control Interface",
+        "author": [
+            "Yujie Zhao",
+            "Hongwei Fan",
+            "Di Chen",
+            "Shengcong Chen",
+            "Liliang Chen",
+            "Xiaoqi Li",
+            "Guanghui Ren",
+            "Hao Dong"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.19402",
+        "abstract": "Recent progress in robot learning has been driven by large-scale datasets and powerful visuomotor policy architectures, yet policy robustness remains limited by the substantial cost of collecting diverse demonstrations, particularly for spatial generalization in manipulation tasks. To reduce repetitive data collection, we present Real2Edit2Real, a framework that generates new demonstrations by bridging 3D editability with 2D visual data through a 3D control interface. Our approach first reconstructs scene geometry from multi-view RGB observations with a metric-scale 3D reconstruction model. Based on the reconstructed geometry, we perform depth-reliable 3D editing on point clouds to generate new manipulation trajectories while geometrically correcting the robot poses to recover physically consistent depth, which serves as a reliable condition for synthesizing new demonstrations. Finally, we propose a multi-conditional video generation model guided by depth as the primary control signal, together with action, edge, and ray maps, to synthesize spatially augmented multi-view manipulation videos. Experiments on four real-world manipulation tasks demonstrate that policies trained on data generated from only 1-5 source demonstrations can match or outperform those trained on 50 real-world demonstrations, improving data efficiency by up to 10-50x. Moreover, experimental results on height and texture editing demonstrate the framework's flexibility and extensibility, indicating its potential to serve as a unified data generation framework.",
+        "tags": [
+            "3D",
+            "Robotics",
+            "Video Generation"
+        ]
+    },
+    {
+        "id": 17,
+        "title": "Does It Tie Out? Towards Autonomous Legal Agents in Venture Capital",
+        "author": [
+            "Pierre Colombo",
+            "Malik Boudiaf",
+            "Allyn Sweet",
+            "Michael Desa",
+            "Hongxi Wang",
+            "Kevin Candra",
+            "SymÃ©on del Marmol"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.18658",
+        "abstract": "Before closing venture capital financing rounds, lawyers conduct diligence that includes tying out the capitalization table: verifying that every security (for example, shares, options, warrants) and issuance term (for example, vesting schedules, acceleration triggers, transfer restrictions) is supported by large sets of underlying legal documentation. While LLMs continue to improve on legal benchmarks, specialized legal workflows, such as capitalization tie-out, remain out of reach even for strong agentic systems. The task requires multi-document reasoning, strict evidence traceability, and deterministic outputs that current approaches fail to reliably deliver. We characterize capitalization tie-out as an instance of a real-world benchmark for legal AI, analyze and compare the performance of existing agentic systems, and propose a world model architecture toward tie-out automation-and more broadly as a foundation for applied legal intelligence.",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 18,
+        "title": "CASA: Cross-Attention via Self-Attention for Efficient Vision-Language Fusion",
+        "author": [
+            "Moritz BÃ¶hle",
+            "AmÃ©lie Royer",
+            "Juliette Marrie",
+            "Edouard Grave",
+            "Patrick PÃ©rez"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.19535",
+        "abstract": "Vision-language models (VLMs) are commonly trained by inserting image tokens from a pretrained vision encoder into the textual stream of a language model. This allows text and image information to fully attend to one another within the model, but becomes extremely costly for high-resolution images, long conversations, or streaming videos, both in memory and compute. VLMs leveraging cross-attention are an efficient alternative to token insertion but exhibit a clear performance gap, in particular on tasks involving fine-grained visual details. We find that a key to improving such models is to also enable local text-to-text interaction in the dedicated cross-attention layers. Building on this, we propose CASA, Cross-Attention via Self-Attention, a simple and efficient paradigm which substantially reduces the gap with full token insertion on common image understanding benchmarks, while enjoying the same scalability as cross-attention models when applied to long-context multimodal tasks such as streaming video captioning. For samples and code, please see our project page at https://kyutai.org/casa .",
+        "tags": [
+            "VLM"
+        ]
+    },
+    {
+        "id": 19,
+        "title": "Name That Part: 3D Part Segmentation and Naming",
+        "author": [
+            "Soumava Paul",
+            "Prakhar Kaushik",
+            "Ankit Vaidya",
+            "Anand Bhattad",
+            "Alan Yuille"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.18003",
+        "abstract": "We address semantic 3D part segmentation: decomposing objects into parts with meaningful names. While datasets exist with part annotations, their definitions are inconsistent across datasets, limiting robust training. Previous methods produce unlabeled decompositions or retrieve single parts without complete shape annotations. We propose ALIGN-Parts, which formulates part naming as a direct set alignment task. Our method decomposes shapes into partlets - implicit 3D part representations - matched to part descriptions via bipartite assignment. We combine geometric cues from 3D part fields, appearance from multi-view vision features, and semantic knowledge from language-model-generated affordance descriptions. Text-alignment loss ensures partlets share embedding space with text, enabling a theoretically open-vocabulary matching setup, given sufficient data. Our efficient and novel, one-shot, 3D part segmentation and naming method finds applications in several downstream tasks, including serving as a scalable annotation engine. As our model supports zero-shot matching to arbitrary descriptions and confidence-calibrated predictions for known categories, with human verification, we create a unified ontology that aligns PartNet, 3DCoMPaT++, and Find3D, consisting of 1,794 unique 3D parts. We also show examples from our newly created Tex-Parts dataset. We also introduce 2 novel metrics appropriate for the named 3D part segmentation task.",
+        "tags": [
+            "3D",
+            "Segmentation"
+        ]
+    },
+    {
+        "id": 20,
+        "title": "MatSpray: Fusing 2D Material World Knowledge on 3D Geometry",
+        "author": [
+            "Philipp Langsteiner",
+            "Jan-Niklas Dihlmann",
+            "Hendrik P.A. Lensch"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.18314",
+        "abstract": "Manual modeling of material parameters and 3D geometry is a time consuming yet essential task in the gaming and film industries. While recent advances in 3D reconstruction have enabled accurate approximations of scene geometry and appearance, these methods often fall short in relighting scenarios due to the lack of precise, spatially varying material parameters. At the same time, diffusion models operating on 2D images have shown strong performance in predicting physically based rendering (PBR) properties such as albedo, roughness, and metallicity. However, transferring these 2D material maps onto reconstructed 3D geometry remains a significant challenge. We propose a framework for fusing 2D material data into 3D geometry using a combination of novel learning-based and projection-based approaches. We begin by reconstructing scene geometry via Gaussian Splatting. From the input images, a diffusion model generates 2D maps for albedo, roughness, and metallic parameters. Any existing diffusion model that can convert images or videos to PBR materials can be applied. The predictions are further integrated into the 3D representation either by optimizing an image-based loss or by directly projecting the material parameters onto the Gaussians using Gaussian ray tracing. To enhance fine-scale accuracy and multi-view consistency, we further introduce a light-weight neural refinement step (Neural Merger), which takes ray-traced material features as input and produces detailed adjustments. Our results demonstrate that the proposed methods outperform existing techniques in both quantitative metrics and perceived visual realism. This enables more accurate, relightable, and photorealistic renderings from reconstructed scenes, significantly improving the realism and efficiency of asset creation workflows in content production pipelines.",
+        "tags": [
+            "3D",
+            "Diffusion",
+            "Gaussian Splatting"
+        ]
+    },
+    {
+        "id": 21,
+        "title": "Understanding Syllogistic Reasoning in LLMs from Formal and Natural Language Perspectives",
+        "author": [
+            "Aheli Poddar",
+            "Saptarshi Sahoo",
+            "Sujata Ghosh"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.12620",
+        "abstract": "We study syllogistic reasoning in LLMs from the logical and natural language perspectives. In process, we explore fundamental reasoning capabilities of the LLMs and the direction this research is moving forward. To aid in our studies, we use 14 large language models and investigate their syllogistic reasoning capabilities in terms of symbolic inferences as well as natural language understanding. Even though this reasoning mechanism is not a uniform emergent property across LLMs, the perfect symbolic performances in certain models make us wonder whether LLMs are becoming more and more formal reasoning mechanisms, rather than making explicit the nuances of human reasoning.",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 22,
+        "title": "Over++: Generative Video Compositing for Layer Interaction Effects",
+        "author": [
+            "Luchao Qi",
+            "Jiaye Wu",
+            "Jun Myeong Choi",
+            "Cary Phillips",
+            "Roni Sengupta",
+            "Dan B Goldman"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.19661",
+        "abstract": "In professional video compositing workflows, artists must manually create environmental interactions-such as shadows, reflections, dust, and splashes-between foreground subjects and background layers. Existing video generative models struggle to preserve the input video while adding such effects, and current video inpainting methods either require costly per-frame masks or yield implausible results. We introduce augmented compositing, a new task that synthesizes realistic, semi-transparent environmental effects conditioned on text prompts and input video layers, while preserving the original scene. To address this task, we present Over++, a video effect generation framework that makes no assumptions about camera pose, scene stationarity, or depth supervision. We construct a paired effect dataset tailored for this task and introduce an unpaired augmentation strategy that preserves text-driven editability. Our method also supports optional mask control and keyframe guidance without requiring dense annotations. Despite training on limited data, Over++ produces diverse and realistic environmental effects and outperforms existing baselines in both effect generation and scene preservation.",
+        "tags": [
+            "Inpainting"
+        ]
+    },
+    {
+        "id": 23,
+        "title": "Brain-Grounded Axes for Reading and Steering LLM States",
+        "author": [
+            "Sandro Andric"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.19399",
+        "abstract": "Interpretability methods for large language models (LLMs) typically derive directions from textual supervision, which can lack external grounding. We propose using human brain activity not as a training signal but as a coordinate system for reading and steering LLM states. Using the SMN4Lang MEG dataset, we construct a word-level brain atlas of phase-locking value (PLV) patterns and extract latent axes via ICA. We validate axes with independent lexica and NER-based labels (POS/log-frequency used as sanity checks), then train lightweight adapters that map LLM hidden states to these brain axes without fine-tuning the LLM. Steering along the resulting brain-derived directions yields a robust lexical (frequency-linked) axis in a mid TinyLlama layer, surviving perplexity-matched controls, and a brain-vs-text probe comparison shows larger log-frequency shifts (relative to the text probe) with lower perplexity for the brain axis. A function/content axis (axis 13) shows consistent steering in TinyLlama, Qwen2-0.5B, and GPT-2, with PPL-matched text-level corroboration. Layer-4 effects in TinyLlama are large but inconsistent, so we treat them as secondary (Appendix). Axis structure is stable when the atlas is rebuilt without GPT embedding-change features or with word2vec embeddings (|r|=0.64-0.95 across matched axes), reducing circularity concerns. Exploratory fMRI anchoring suggests potential alignment for embedding change and log frequency, but effects are sensitive to hemodynamic modeling assumptions and are treated as population-level evidence only. These results support a new interface: neurophysiology-grounded axes provide interpretable and controllable handles for LLM behavior.",
+        "tags": [
+            "GPT",
+            "LLM"
+        ]
+    },
+    {
+        "id": 24,
+        "title": "SecureCode v2.0: A Production-Grade Dataset for Training Security-Aware Code Generation Models",
+        "author": [
+            "Scott Thornton"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.18542",
+        "abstract": "AI assistants produce vulnerable code in 45% of security-relevant scenarios, introducing flaws into production systems at scale. Yet existing secure coding datasets fall short. They lack incident grounding, don't provide the scale modern training requires, and miss the operational security context developers need for production deployments. We present SecureCode v2.0, a production-grade dataset of 1,215 security-focused coding examples that passed structural validation and expert security review. Every example ties to actual documented security incidents with CVE references, provides vulnerable and secure implementations, demonstrates concrete attacks, and includes defense-in-depth operational guidance. The dataset covers 11 vulnerability categories (complete OWASP Top 10:2025 plus AI/ML Security Threats) across 11 languages (Python, JavaScript, Java, Go, PHP, C#, TypeScript, Ruby, Rust, Kotlin, and YAML for infrastructure-as-code).\nOur quality assurance framework ensures complete incident grounding. Each example includes SIEM integration strategies, infrastructure hardening recommendations (Docker, AppArmor, WAF configurations), and testing approaches using language-appropriate frameworks. The dataset uses a 4-turn conversational structure mirroring actual developer-AI interactions, escalating from basic implementations to advanced security considerations and defense-in-depth guidance.\nOur contributions: (1) 1,215 rigorously validated examples split into 989 training, 122 validation, and 104 test sets, (2) an automated validation framework ensuring dataset consistency, (3) a 4-turn conversational structure capturing realistic security workflows, (4) comprehensive operational security guidance with SIEM integration strategies, (5) complete language-specific implementation fidelity, and (6) open-source release of data, validation tools, and benchmarking protocols.",
+        "tags": []
+    }
+]

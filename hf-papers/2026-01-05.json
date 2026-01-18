@@ -1,0 +1,275 @@
+[
+    {
+        "id": 1,
+        "title": "Youtu-Agent: Scaling Agent Productivity with Automated Generation and Hybrid Policy Optimization",
+        "author": [
+            "Yuchen Shi",
+            "Yuzheng Cai",
+            "Siqi Cai",
+            "Zihan Xu",
+            "Lichao Chen",
+            "Yulei Qin",
+            "Zhijian Zhou",
+            "Xiang Fei",
+            "Chaofan Qiu",
+            "Xiaoyu Tan",
+            "Gang Li",
+            "Zongyi Li",
+            "Haojia Lin",
+            "Guocan Cai",
+            "Yong Mao",
+            "Yunsheng Wu",
+            "Ke Li",
+            "Xing Sun"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.24615",
+        "abstract": "Existing Large Language Model (LLM) agent frameworks face two significant challenges: high configuration costs and static capabilities. Building a high-quality agent often requires extensive manual effort in tool integration and prompt engineering, while deployed agents struggle to adapt to dynamic environments without expensive fine-tuning. To address these issues, we propose \\textbf{Youtu-Agent}, a modular framework designed for the automated generation and continuous evolution of LLM agents. Youtu-Agent features a structured configuration system that decouples execution environments, toolkits, and context management, enabling flexible reuse and automated synthesis. We introduce two generation paradigms: a \\textbf{Workflow} mode for standard tasks and a \\textbf{Meta-Agent} mode for complex, non-standard requirements, capable of automatically generating tool code, prompts, and configurations. Furthermore, Youtu-Agent establishes a hybrid policy optimization system: (1) an \\textbf{Agent Practice} module that enables agents to accumulate experience and improve performance through in-context optimization without parameter updates; and (2) an \\textbf{Agent RL} module that integrates with distributed training frameworks to enable scalable and stable reinforcement learning of any Youtu-Agents in an end-to-end, large-scale manner. Experiments demonstrate that Youtu-Agent achieves state-of-the-art performance on WebWalkerQA (71.47\\%) and GAIA (72.8\\%) using open-weight models. Our automated generation pipeline achieves over 81\\% tool synthesis success rate, while the Practice module improves performance on AIME 2024/2025 by +2.7\\% and +5.4\\% respectively. Moreover, our Agent RL training achieves 40\\% speedup with steady performance improvement on 7B LLMs, enhancing coding/reasoning and searching capabilities respectively up to 35\\% and 21\\% on Maths and general/multi-hop QA benchmarks.",
+        "tags": [
+            "LLM",
+            "RL"
+        ]
+    },
+    {
+        "id": 2,
+        "title": "NeoVerse: Enhancing 4D World Model with in-the-wild Monocular Videos",
+        "author": [
+            "Yuxue Yang",
+            "Lue Fan",
+            "Ziqi Shi",
+            "Junran Peng",
+            "Feng Wang",
+            "Zhaoxiang Zhang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.00393",
+        "abstract": "In this paper, we propose NeoVerse, a versatile 4D world model that is capable of 4D reconstruction, novel-trajectory video generation, and rich downstream applications. We first identify a common limitation of scalability in current 4D world modeling methods, caused either by expensive and specialized multi-view 4D data or by cumbersome training pre-processing. In contrast, our NeoVerse is built upon a core philosophy that makes the full pipeline scalable to diverse in-the-wild monocular videos. Specifically, NeoVerse features pose-free feed-forward 4D reconstruction, online monocular degradation pattern simulation, and other well-aligned techniques. These designs empower NeoVerse with versatility and generalization to various domains. Meanwhile, NeoVerse achieves state-of-the-art performance in standard reconstruction and generation benchmarks. Our project page is available at https://neoverse-4d.github.io",
+        "tags": [
+            "Video Generation"
+        ]
+    },
+    {
+        "id": 3,
+        "title": "Avatar Forcing: Real-Time Interactive Head Avatar Generation for Natural Conversation",
+        "author": [
+            "Taekyung Ki",
+            "Sangwon Jang",
+            "Jaehyeong Jo",
+            "Jaehong Yoon",
+            "Sung Ju Hwang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.00664",
+        "abstract": "Talking head generation creates lifelike avatars from static portraits for virtual communication and content creation. However, current models do not yet convey the feeling of truly interactive communication, often generating one-way responses that lack emotional engagement. We identify two key challenges toward truly interactive avatars: generating motion in real-time under causal constraints and learning expressive, vibrant reactions without additional labeled data. To address these challenges, we propose Avatar Forcing, a new framework for interactive head avatar generation that models real-time user-avatar interactions through diffusion forcing. This design allows the avatar to process real-time multimodal inputs, including the user's audio and motion, with low latency for instant reactions to both verbal and non-verbal cues such as speech, nods, and laughter. Furthermore, we introduce a direct preference optimization method that leverages synthetic losing samples constructed by dropping user conditions, enabling label-free learning of expressive interaction. Experimental results demonstrate that our framework enables real-time interaction with low latency (approximately 500ms), achieving 6.8X speedup compared to the baseline, and produces reactive and expressive avatar motion, which is preferred over 80% against the baseline.",
+        "tags": [
+            "Diffusion",
+            "Talking Head"
+        ]
+    },
+    {
+        "id": 4,
+        "title": "Taming Hallucinations: Boosting MLLMs' Video Understanding via Counterfactual Video Generation",
+        "author": [
+            "Zhe Huang",
+            "Hao Wen",
+            "Aiming Hao",
+            "Bingze Song",
+            "Meiqi Wu",
+            "Jiahong Wu",
+            "Xiangxiang Chu",
+            "Sheng Lu",
+            "Haoqian Wang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.24271",
+        "abstract": "Multimodal Large Language Models (MLLMs) have made remarkable progress in video understanding. However, they suffer from a critical vulnerability: an over-reliance on language priors, which can lead to visual ungrounded hallucinations, especially when processing counterfactual videos that defy common sense. This limitation, stemming from the intrinsic data imbalance between text and video, is challenging to address due to the substantial cost of collecting and annotating counterfactual data. To address this, we introduce DualityForge, a novel counterfactual data synthesis framework that employs controllable, diffusion-based video editing to transform real-world videos into counterfactual scenarios. By embedding structured contextual information into the video editing and QA generation processes, the framework automatically produces high-quality QA pairs together with original-edited video pairs for contrastive training. Based on this, we build DualityVidQA, a large-scale video dataset designed to reduce MLLM hallucinations. In addition, to fully exploit the contrastive nature of our paired data, we propose Duality-Normalized Advantage Training (DNA-Train), a two-stage SFT-RL training regime where the RL phase applies pair-wise $\\ell_1$ advantage normalization, thereby enabling a more stable and efficient policy optimization. Experiments on DualityVidQA-Test demonstrate that our method substantially reduces model hallucinations on counterfactual videos, yielding a relative improvement of 24.0% over the Qwen2.5-VL-7B baseline. Moreover, our approach achieves significant gains across both hallucination and general-purpose benchmarks, indicating strong generalization capability. We will open-source our dataset and code.",
+        "tags": [
+            "Diffusion",
+            "LLM",
+            "RL",
+            "Video Editing",
+            "Video Generation"
+        ]
+    },
+    {
+        "id": 5,
+        "title": "SenseNova-MARS: Empowering Multimodal Agentic Reasoning and Search via Reinforcement Learning",
+        "author": [
+            "Yong Xien Chng",
+            "Tao Hu",
+            "Wenwen Tong",
+            "Xueheng Li",
+            "Jiandong Chen",
+            "Haojia Yu",
+            "Jiefan Lu",
+            "Hewei Guo",
+            "Hanming Deng",
+            "Chengjun Xie",
+            "Gao Huang",
+            "Dahua Lin",
+            "Lewei Lu"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.24330",
+        "abstract": "While Vision-Language Models (VLMs) can solve complex tasks through agentic reasoning, their capabilities remain largely constrained to text-oriented chain-of-thought or isolated tool invocation. They fail to exhibit the human-like proficiency required to seamlessly interleave dynamic tool manipulation with continuous reasoning, particularly in knowledge-intensive and visually complex scenarios that demand coordinated external tools such as search and image cropping. In this work, we introduce SenseNova-MARS, a novel Multimodal Agentic Reasoning and Search framework that empowers VLMs with interleaved visual reasoning and tool-use capabilities via reinforcement learning (RL). Specifically, SenseNova-MARS dynamically integrates the image search, text search, and image crop tools to tackle fine-grained and knowledge-intensive visual understanding challenges. In the RL stage, we propose the Batch-Normalized Group Sequence Policy Optimization (BN-GSPO) algorithm to improve the training stability and advance the model's ability to invoke tools and reason effectively. To comprehensively evaluate the agentic VLMs on complex visual tasks, we introduce the HR-MMSearch benchmark, the first search-oriented benchmark composed of high-resolution images with knowledge-intensive and search-driven questions. Experiments demonstrate that SenseNova-MARS achieves state-of-the-art performance on open-source search and fine-grained image understanding benchmarks. Specifically, on search-oriented benchmarks, SenseNova-MARS-8B scores 67.84 on MMSearch and 41.64 on HR-MMSearch, surpassing proprietary models such as Gemini-3-Flash and GPT-5. SenseNova-MARS represents a promising step toward agentic VLMs by providing effective and robust tool-use capabilities. To facilitate further research in this field, we will release all code, models, and datasets.",
+        "tags": [
+            "CoT",
+            "GPT",
+            "RL",
+            "VLM"
+        ]
+    },
+    {
+        "id": 6,
+        "title": "AdaGaR: Adaptive Gabor Representation for Dynamic Scene Reconstruction",
+        "author": [
+            "Jiewen Chan",
+            "Zhenjun Zhao",
+            "Yu-Lun Liu"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.00796",
+        "abstract": "Reconstructing dynamic 3D scenes from monocular videos requires simultaneously capturing high-frequency appearance details and temporally continuous motion. Existing methods using single Gaussian primitives are limited by their low-pass filtering nature, while standard Gabor functions introduce energy instability. Moreover, lack of temporal continuity constraints often leads to motion artifacts during interpolation. We propose AdaGaR, a unified framework addressing both frequency adaptivity and temporal continuity in explicit dynamic scene modeling. We introduce Adaptive Gabor Representation, extending Gaussians through learnable frequency weights and adaptive energy compensation to balance detail capture and stability. For temporal continuity, we employ Cubic Hermite Splines with Temporal Curvature Regularization to ensure smooth motion evolution. An Adaptive Initialization mechanism combining depth estimation, point tracking, and foreground masks establishes stable point cloud distributions in early training. Experiments on Tap-Vid DAVIS demonstrate state-of-the-art performance (PSNR 35.49, SSIM 0.9433, LPIPS 0.0723) and strong generalization across frame interpolation, depth consistency, video editing, and stereo view synthesis. Project page: https://jiewenchan.github.io/AdaGaR/",
+        "tags": [
+            "3D",
+            "Depth Estimation",
+            "Video Editing"
+        ]
+    },
+    {
+        "id": 7,
+        "title": "Deep Delta Learning",
+        "author": [
+            "Yifan Zhang",
+            "Yifeng Liu",
+            "Mengdi Wang",
+            "Quanquan Gu"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.00417",
+        "abstract": "The efficacy of deep residual networks is fundamentally predicated on the identity shortcut connection. While this mechanism effectively mitigates the vanishing gradient problem, it imposes a strictly additive inductive bias on feature transformations, thereby limiting the network's capacity to model complex state transitions. In this paper, we introduce Deep Delta Learning (DDL), a novel architecture that generalizes the standard residual connection by modulating the identity shortcut with a learnable, data-dependent geometric transformation. This transformation, termed the Delta Operator, constitutes a rank-1 perturbation of the identity matrix, parameterized by a reflection direction vector $\\mathbf{k}(\\mathbf{X})$ and a gating scalar $\\beta(\\mathbf{X})$. We provide a spectral analysis of this operator, demonstrating that the gate $\\beta(\\mathbf{X})$ enables dynamic interpolation between identity mapping, orthogonal projection, and geometric reflection. Furthermore, we restructure the residual update as a synchronous rank-1 injection, where the gate acts as a dynamic step size governing both the erasure of old information and the writing of new features. This unification empowers the network to explicitly control the spectrum of its layer-wise transition operator, enabling the modeling of complex, non-monotonic dynamics while preserving the stable training characteristics of gated residual architectures.",
+        "tags": []
+    },
+    {
+        "id": 8,
+        "title": "Nested Learning: The Illusion of Deep Learning Architectures",
+        "author": [
+            "Ali Behrouz",
+            "Meisam Razaviyayn",
+            "Peilin Zhong",
+            "Vahab Mirrokni"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.24695",
+        "abstract": "Despite the recent progresses, particularly in developing Language Models, there are fundamental challenges and unanswered questions about how such models can continually learn/memorize, self-improve, and find effective solutions. In this paper, we present a new learning paradigm, called Nested Learning (NL), that coherently represents a machine learning model with a set of nested, multi-level, and/or parallel optimization problems, each of which with its own context flow. Through the lenses of NL, existing deep learning methods learns from data through compressing their own context flow, and in-context learning naturally emerges in large models. NL suggests a philosophy to design more expressive learning algorithms with more levels, resulting in higher-order in-context learning and potentially unlocking effective continual learning capabilities. We advocate for NL by presenting three core contributions: (1) Expressive Optimizers: We show that known gradient-based optimizers, such as Adam, SGD with Momentum, etc., are in fact associative memory modules that aim to compress the gradients' information (by gradient descent). Building on this insight, we present other more expressive optimizers with deep memory and/or more powerful learning rules; (2) Self-Modifying Learning Module: Taking advantage of NL's insights on learning algorithms, we present a sequence model that learns how to modify itself by learning its own update algorithm; and (3) Continuum Memory System: We present a new formulation for memory system that generalizes the traditional viewpoint of long/short-term memory. Combining our self-modifying sequence model with the continuum memory system, we present a continual learning module, called Hope, showing promising results in language modeling, knowledge incorporation, and few-shot generalization tasks, continual learning, and long-context reasoning tasks.",
+        "tags": []
+    },
+    {
+        "id": 9,
+        "title": "The Reasoning-Creativity Trade-off: Toward Creativity-Driven Problem Solving",
+        "author": [
+            "Max Ruiz Luyten",
+            "Mihaela van der Schaar"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.00747",
+        "abstract": "State-of-the-art large language model (LLM) pipelines rely on bootstrapped reasoning loops: sampling diverse chains of thought and reinforcing the highest-scoring ones, mainly optimizing correctness. We analyze how this design choice is sensitive to the collapse of the model's distribution over reasoning paths, slashing semantic entropy and undermining creative problem-solving. To analyze this failure, we introduce Distributional Creative Reasoning (DCR), a unified variational objective that casts training as gradient flow through probability measures on solution traces. STaR, GRPO, and DPO, as well as entropy bonuses, and other methods, all constitute special cases of the same loss. The framework delivers three core results: (i) the diversity decay theorem, describing how correctness-based objectives lead to distinct modes of diversity decay for STaR, GRPO, and DPO; (ii) designs that ensure convergence to a stable and diverse policy, effectively preventing collapse; and (iii) simple, actionable recipes to achieve this in practice. DCR thus offers the first principled recipe for LLMs that remain both correct and creative.",
+        "tags": [
+            "DPO",
+            "GRPO",
+            "LLM"
+        ]
+    },
+    {
+        "id": 10,
+        "title": "Taming Preference Mode Collapse via Directional Decoupling Alignment in Diffusion Reinforcement Learning",
+        "author": [
+            "Chubin Chen",
+            "Sujie Hu",
+            "Jiashu Zhu",
+            "Meiqi Wu",
+            "Jintao Chen",
+            "Yanxun Li",
+            "Nisha Huang",
+            "Chengyu Fang",
+            "Jiahong Wu",
+            "Xiangxiang Chu",
+            "Xiu Li"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.24146",
+        "abstract": "Recent studies have demonstrated significant progress in aligning text-to-image diffusion models with human preference via Reinforcement Learning from Human Feedback. However, while existing methods achieve high scores on automated reward metrics, they often lead to Preference Mode Collapse (PMC)-a specific form of reward hacking where models converge on narrow, high-scoring outputs (e.g., images with monolithic styles or pervasive overexposure), severely degrading generative diversity. In this work, we introduce and quantify this phenomenon, proposing DivGenBench, a novel benchmark designed to measure the extent of PMC. We posit that this collapse is driven by over-optimization along the reward model's inherent biases. Building on this analysis, we propose Directional Decoupling Alignment (D$^2$-Align), a novel framework that mitigates PMC by directionally correcting the reward signal. Specifically, our method first learns a directional correction within the reward model's embedding space while keeping the model frozen. This correction is then applied to the reward signal during the optimization process, preventing the model from collapsing into specific modes and thereby maintaining diversity. Our comprehensive evaluation, combining qualitative analysis with quantitative metrics for both quality and diversity, reveals that D$^2$-Align achieves superior alignment with human preference.",
+        "tags": [
+            "Diffusion",
+            "RL",
+            "RLHF",
+            "Text-to-Image"
+        ]
+    },
+    {
+        "id": 11,
+        "title": "Diversity or Precision? A Deep Dive into Next Token Prediction",
+        "author": [
+            "Haoyuan Wu",
+            "Hai Wang",
+            "Jiajia Wu",
+            "Jinxiang Ou",
+            "Keyao Wang",
+            "Weile Chen",
+            "Zihao Zheng",
+            "Bei Yu"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.22955",
+        "abstract": "Recent advancements have shown that reinforcement learning (RL) can substantially improve the reasoning abilities of large language models (LLMs). The effectiveness of such RL training, however, depends critically on the exploration space defined by the pre-trained model's token-output distribution. In this paper, we revisit the standard cross-entropy loss, interpreting it as a specific instance of policy gradient optimization applied within a single-step episode. To systematically study how the pre-trained distribution shapes the exploration potential for subsequent RL, we propose a generalized pre-training objective that adapts on-policy RL principles to supervised learning. By framing next-token prediction as a stochastic decision process, we introduce a reward-shaping strategy that explicitly balances diversity and precision. Our method employs a positive reward scaling factor to control probability concentration on ground-truth tokens and a rank-aware mechanism that treats high-ranking and low-ranking negative tokens asymmetrically. This allows us to reshape the pre-trained token-output distribution and investigate how to provide a more favorable exploration space for RL, ultimately enhancing end-to-end reasoning performance. Contrary to the intuition that higher distribution entropy facilitates effective exploration, we find that imposing a precision-oriented prior yields a superior exploration space for RL.",
+        "tags": [
+            "LLM",
+            "RL"
+        ]
+    },
+    {
+        "id": 12,
+        "title": "Fast-weight Product Key Memory",
+        "author": [
+            "Tianyu Zhao",
+            "Llion Jones"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.00671",
+        "abstract": "Sequence modeling layers in modern language models typically face a trade-off between storage capacity and computational efficiency. While Softmax attention offers unbounded storage at prohibitive quadratic costs, linear variants provide efficiency but suffer from limited, fixed-size storage. We propose Fast-weight Product Key Memory (FwPKM), a novel architecture that resolves this tension by transforming the sparse Product Key Memory (PKM) from a static module into a dynamic, \"fast-weight\" episodic memory. Unlike PKM, FwPKM updates its parameters dynamically at both training and inference time via local chunk-level gradient descent, allowing the model to rapidly memorize and retrieve new key-value pairs from input sequences. Experiments reveal that FwPKM functions as an effective episodic memory that complements the semantic memory of standard modules, yielding significant perplexity reductions on long-context datasets. Notably, in Needle in a Haystack evaluations, FwPKM generalizes to 128K-token contexts despite being trained on only 4K-token sequences.",
+        "tags": []
+    },
+    {
+        "id": 13,
+        "title": "InfoSynth: Information-Guided Benchmark Synthesis for LLMs",
+        "author": [
+            "Ishir Garg",
+            "Neel Kolhe",
+            "Xuandong Zhao",
+            "Dawn Song"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.00575",
+        "abstract": "Large language models (LLMs) have demonstrated significant advancements in reasoning and code generation. However, efficiently creating new benchmarks to evaluate these capabilities remains a challenge. Traditional benchmark creation relies on manual human effort, a process that is both expensive and time-consuming. Furthermore, existing benchmarks often contaminate LLM training data, necessitating novel and diverse benchmarks to accurately assess their genuine capabilities. This work introduces InfoSynth, a novel framework for automatically generating and evaluating reasoning benchmarks guided by information-theoretic principles. We propose metrics based on KL-divergence and entropy to quantify benchmark novelty and diversity without relying on costly model evaluations. Building on this framework, we develop an end-to-end pipeline that synthesizes robust Python coding problems from seed datasets using genetic algorithms and iterative code feedback. Our method generates accurate test cases and solutions to new problems 97% of the time, and the synthesized benchmarks consistently exhibit higher novelty and diversity compared to their seed datasets. Moreover, our algorithm provides a method for controlling the novelty/diversity and difficulty of generated problems. InfoSynth offers a scalable, self-verifying pipeline for constructing high-quality, novel and diverse benchmarks for LLMs. Project Page: https://ishirgarg.github.io/infosynth_web/",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 14,
+        "title": "MorphAny3D: Unleashing the Power of Structured Latent in 3D Morphing",
+        "author": [
+            "Xiaokun Sun",
+            "Zeyu Cai",
+            "Hao Tang",
+            "Ying Tai",
+            "Jian Yang",
+            "Zhenyu Zhang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.00204",
+        "abstract": "3D morphing remains challenging due to the difficulty of generating semantically consistent and temporally smooth deformations, especially across categories. We present MorphAny3D, a training-free framework that leverages Structured Latent (SLAT) representations for high-quality 3D morphing. Our key insight is that intelligently blending source and target SLAT features within the attention mechanisms of 3D generators naturally produces plausible morphing sequences. To this end, we introduce Morphing Cross-Attention (MCA), which fuses source and target information for structural coherence, and Temporal-Fused Self-Attention (TFSA), which enhances temporal consistency by incorporating features from preceding frames. An orientation correction strategy further mitigates the pose ambiguity within the morphing steps. Extensive experiments show that our method generates state-of-the-art morphing sequences, even for challenging cross-category cases. MorphAny3D further supports advanced applications such as decoupled morphing and 3D style transfer, and can be generalized to other SLAT-based generative models. Project page: https://xiaokunsun.github.io/MorphAny3D.github.io/.",
+        "tags": [
+            "3D",
+            "Style Transfer"
+        ]
+    },
+    {
+        "id": 15,
+        "title": "Can We Trust AI Explanations? Evidence of Systematic Underreporting in Chain-of-Thought Reasoning",
+        "author": [
+            "Deep Pankajbhai Mehta"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.00830",
+        "abstract": "When AI systems explain their reasoning step-by-step, practitioners often assume these explanations reveal what actually influenced the AI's answer. We tested this assumption by embedding hints into questions and measuring whether models mentioned them. In a study of over 9,000 test cases across 11 leading AI models, we found a troubling pattern: models almost never mention hints spontaneously, yet when asked directly, they admit noticing them. This suggests models see influential information but choose not to report it. Telling models they are being watched does not help. Forcing models to report hints works, but causes them to report hints even when none exist and reduces their accuracy. We also found that hints appealing to user preferences are especially dangerous-models follow them most often while reporting them least. These findings suggest that simply watching AI reasoning is not enough to catch hidden influences.",
+        "tags": [
+            "CoT"
+        ]
+    }
+]

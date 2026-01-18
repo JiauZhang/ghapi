@@ -1,0 +1,409 @@
+[
+    {
+        "id": 1,
+        "title": "EgoX: Egocentric Video Generation from a Single Exocentric Video",
+        "author": [
+            "Taewoong Kang",
+            "Kinam Kim",
+            "Dohyeon Kim",
+            "Minho Park",
+            "Junha Hyung",
+            "Jaegul Choo"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.08269",
+        "abstract": "Egocentric perception enables humans to experience and understand the world directly from their own point of view. Translating exocentric (third-person) videos into egocentric (first-person) videos opens up new possibilities for immersive understanding but remains highly challenging due to extreme camera pose variations and minimal view overlap. This task requires faithfully preserving visible content while synthesizing unseen regions in a geometrically consistent manner. To achieve this, we present EgoX, a novel framework for generating egocentric videos from a single exocentric input. EgoX leverages the pretrained spatio temporal knowledge of large-scale video diffusion models through lightweight LoRA adaptation and introduces a unified conditioning strategy that combines exocentric and egocentric priors via width and channel wise concatenation. Additionally, a geometry-guided self-attention mechanism selectively attends to spatially relevant regions, ensuring geometric coherence and high visual fidelity. Our approach achieves coherent and realistic egocentric video generation while demonstrating strong scalability and robustness across unseen and in-the-wild videos.",
+        "tags": [
+            "Diffusion",
+            "LoRA",
+            "Video Generation"
+        ]
+    },
+    {
+        "id": 2,
+        "title": "DentalGPT: Incentivizing Multimodal Complex Reasoning in Dentistry",
+        "author": [
+            "Zhenyang Cai",
+            "Jiaming Zhang",
+            "Junjie Zhao",
+            "Ziyi Zeng",
+            "Yanchao Li",
+            "Jingyi Liang",
+            "Junying Chen",
+            "Yunjin Yang",
+            "Jiajun You",
+            "Shuzhi Deng",
+            "Tongfei Wang",
+            "Wanting Chen",
+            "Chunxiu Hao",
+            "Ruiqi Xie",
+            "Zhenwei Wen",
+            "Xiangyi Feng",
+            "Zou Ting",
+            "Jin Zou Lin",
+            "Jianquan Li",
+            "Guangjun Yu",
+            "Liangyi Chen",
+            "Junwen Wang",
+            "Shan Jiang",
+            "Benyou Wang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.11558",
+        "abstract": "Reliable interpretation of multimodal data in dentistry is essential for automated oral healthcare, yet current multimodal large language models (MLLMs) struggle to capture fine-grained dental visual details and lack sufficient reasoning ability for precise diagnosis. To address these limitations, we present DentalGPT, a specialized dental MLLM developed through high-quality domain knowledge injection and reinforcement learning. Specifically, the largest annotated multimodal dataset for dentistry to date was constructed by aggregating over 120k dental images paired with detailed descriptions that highlight diagnostically relevant visual features, making it the multimodal dataset with the most extensive collection of dental images to date. Training on this dataset significantly enhances the MLLM's visual understanding of dental conditions, while the subsequent reinforcement learning stage further strengthens its capability for multimodal complex reasoning. Comprehensive evaluations on intraoral and panoramic benchmarks, along with dental subsets of medical VQA benchmarks, show that DentalGPT achieves superior performance in disease classification and dental VQA tasks, outperforming many state-of-the-art MLLMs despite having only 7B parameters. These results demonstrate that high-quality dental data combined with staged adaptation provides an effective pathway for building capable and domain-specialized dental MLLMs.",
+        "tags": [
+            "LLM",
+            "RL"
+        ]
+    },
+    {
+        "id": 3,
+        "title": "SVG-T2I: Scaling Up Text-to-Image Latent Diffusion Model Without Variational Autoencoder",
+        "author": [
+            "Minglei Shi",
+            "Haolin Wang",
+            "Borui Zhang",
+            "Wenzhao Zheng",
+            "Bohan Zeng",
+            "Ziyang Yuan",
+            "Xiaoshi Wu",
+            "Yuanxing Zhang",
+            "Huan Yang",
+            "Xintao Wang",
+            "Pengfei Wan",
+            "Kun Gai",
+            "Jie Zhou",
+            "Jiwen Lu"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.11749",
+        "abstract": "Visual generation grounded in Visual Foundation Model (VFM) representations offers a highly promising unified pathway for integrating visual understanding, perception, and generation. Despite this potential, training large-scale text-to-image diffusion models entirely within the VFM representation space remains largely unexplored. To bridge this gap, we scale the SVG (Self-supervised representations for Visual Generation) framework, proposing SVG-T2I to support high-quality text-to-image synthesis directly in the VFM feature domain. By leveraging a standard text-to-image diffusion pipeline, SVG-T2I achieves competitive performance, reaching 0.75 on GenEval and 85.78 on DPG-Bench. This performance validates the intrinsic representational power of VFMs for generative tasks. We fully open-source the project, including the autoencoder and generation model, together with their training, inference, evaluation pipelines, and pre-trained weights, to facilitate further research in representation-driven visual generation.",
+        "tags": [
+            "Diffusion",
+            "Text-to-Image"
+        ]
+    },
+    {
+        "id": 4,
+        "title": "V-RGBX: Video Editing with Accurate Controls over Intrinsic Properties",
+        "author": [
+            "Ye Fang",
+            "Tong Wu",
+            "Valentin Deschaintre",
+            "Duygu Ceylan",
+            "Iliyan Georgiev",
+            "Chun-Hao Paul Huang",
+            "Yiwei Hu",
+            "Xuelin Chen",
+            "Tuanfeng Yang Wang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.11799",
+        "abstract": "Large-scale video generation models have shown remarkable potential in modeling photorealistic appearance and lighting interactions in real-world scenes. However, a closed-loop framework that jointly understands intrinsic scene properties (e.g., albedo, normal, material, and irradiance), leverages them for video synthesis, and supports editable intrinsic representations remains unexplored. We present V-RGBX, the first end-to-end framework for intrinsic-aware video editing. V-RGBX unifies three key capabilities: (1) video inverse rendering into intrinsic channels, (2) photorealistic video synthesis from these intrinsic representations, and (3) keyframe-based video editing conditioned on intrinsic channels. At the core of V-RGBX is an interleaved conditioning mechanism that enables intuitive, physically grounded video editing through user-selected keyframes, supporting flexible manipulation of any intrinsic modality. Extensive qualitative and quantitative results show that V-RGBX produces temporally consistent, photorealistic videos while propagating keyframe edits across sequences in a physically plausible manner. We demonstrate its effectiveness in diverse applications, including object appearance editing and scene-level relighting, surpassing the performance of prior methods.",
+        "tags": [
+            "Video Editing",
+            "Video Generation"
+        ]
+    },
+    {
+        "id": 5,
+        "title": "Sliding Window Attention Adaptation",
+        "author": [
+            "Yijiong Yu",
+            "Jiale Liu",
+            "Qingyun Wu",
+            "Huazheng Wang",
+            "Ji Pei"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.10411",
+        "abstract": "The self-attention mechanism in Transformer-based Large Language Models (LLMs) scales quadratically with input length, making long-context inference expensive. Sliding window attention (SWA) reduces this cost to linear complexity, but naively enabling complete SWA at inference-time for models pretrained with full attention (FA) causes severe long-context performance degradation due to training-inference mismatch. This makes us wonder: Can FA-pretrained LLMs be well adapted to SWA without pretraining? We investigate this by proposing Sliding Window Attention Adaptation (SWAA), a set of practical recipes that combine five methods for better adaptation: (1) applying SWA only during prefilling; (2) preserving \"sink\" tokens; (3) interleaving FA/SWA layers; (4) chain-of-thought (CoT); and (5) fine-tuning. Our experiments show that SWA adaptation is feasible while non-trivial: no single method suffices, yet specific synergistic combinations effectively recover the original long-context performance. We further analyze the performance-efficiency trade-offs of different SWAA configurations and provide recommended recipes for diverse scenarios. Our code is available at https://github.com/yuyijiong/sliding-window-attention-adaptation",
+        "tags": [
+            "CoT",
+            "LLM",
+            "Transformer"
+        ]
+    },
+    {
+        "id": 6,
+        "title": "PersonaLive! Expressive Portrait Image Animation for Live Streaming",
+        "author": [
+            "Zhiyuan Li",
+            "Chi-Man Pun",
+            "Chen Fang",
+            "Jue Wang",
+            "Xiaodong Cun"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.11253",
+        "abstract": "Current diffusion-based portrait animation models predominantly focus on enhancing visual quality and expression realism, while overlooking generation latency and real-time performance, which restricts their application range in the live streaming scenario. We propose PersonaLive, a novel diffusion-based framework towards streaming real-time portrait animation with multi-stage training recipes. Specifically, we first adopt hybrid implicit signals, namely implicit facial representations and 3D implicit keypoints, to achieve expressive image-level motion control. Then, a fewer-step appearance distillation strategy is proposed to eliminate appearance redundancy in the denoising process, greatly improving inference efficiency. Finally, we introduce an autoregressive micro-chunk streaming generation paradigm equipped with a sliding training strategy and a historical keyframe mechanism to enable low-latency and stable long-term video generation. Extensive experiments demonstrate that PersonaLive achieves state-of-the-art performance with up to 7-22x speedup over prior diffusion-based portrait animation models.",
+        "tags": [
+            "3D",
+            "Diffusion",
+            "Video Generation"
+        ]
+    },
+    {
+        "id": 7,
+        "title": "Exploring MLLM-Diffusion Information Transfer with MetaCanvas",
+        "author": [
+            "Han Lin",
+            "Xichen Pan",
+            "Ziqi Huang",
+            "Ji Hou",
+            "Jialiang Wang",
+            "Weifeng Chen",
+            "Zecheng He",
+            "Felix Juefei-Xu",
+            "Junzhe Sun",
+            "Zhipeng Fan",
+            "Ali Thabet",
+            "Mohit Bansal",
+            "Chu Wang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.11464",
+        "abstract": "Multimodal learning has rapidly advanced visual understanding, largely via multimodal large language models (MLLMs) that use powerful LLMs as cognitive cores. In visual generation, however, these powerful core models are typically reduced to global text encoders for diffusion models, leaving most of their reasoning and planning ability unused. This creates a gap: current multimodal LLMs can parse complex layouts, attributes, and knowledge-intensive scenes, yet struggle to generate images or videos with equally precise and structured control. We propose MetaCanvas, a lightweight framework that lets MLLMs reason and plan directly in spatial and spatiotemporal latent spaces and interface tightly with diffusion generators. We empirically implement MetaCanvas on three different diffusion backbones and evaluate it across six tasks, including text-to-image generation, text/image-to-video generation, image/video editing, and in-context video generation, each requiring precise layouts, robust attribute binding, and reasoning-intensive control. MetaCanvas consistently outperforms global-conditioning baselines, suggesting that treating MLLMs as latent-space planners is a promising direction for narrowing the gap between multimodal understanding and generation.",
+        "tags": [
+            "Diffusion",
+            "LLM",
+            "Text-to-Image",
+            "Video Editing",
+            "Video Generation"
+        ]
+    },
+    {
+        "id": 8,
+        "title": "Structure From Tracking: Distilling Structure-Preserving Motion for Video Generation",
+        "author": [
+            "Yang Fei",
+            "George Stoica",
+            "Jingyuan Liu",
+            "Qifeng Chen",
+            "Ranjay Krishna",
+            "Xiaojuan Wang",
+            "Benlin Liu"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.11792",
+        "abstract": "Reality is a dance between rigid constraints and deformable structures. For video models, that means generating motion that preserves fidelity as well as structure. Despite progress in diffusion models, producing realistic structure-preserving motion remains challenging, especially for articulated and deformable objects such as humans and animals. Scaling training data alone, so far, has failed to resolve physically implausible transitions. Existing approaches rely on conditioning with noisy motion representations, such as optical flow or skeletons extracted using an external imperfect model. To address these challenges, we introduce an algorithm to distill structure-preserving motion priors from an autoregressive video tracking model (SAM2) into a bidirectional video diffusion model (CogVideoX). With our method, we train SAM2VideoX, which contains two innovations: (1) a bidirectional feature fusion module that extracts global structure-preserving motion priors from a recurrent model like SAM2; (2) a Local Gram Flow loss that aligns how local features move together. Experiments on VBench and in human studies show that SAM2VideoX delivers consistent gains (+2.60\\% on VBench, 21-22\\% lower FVD, and 71.4\\% human preference) over prior baselines. Specifically, on VBench, we achieve 95.51\\%, surpassing REPA (92.91\\%) by 2.60\\%, and reduce FVD to 360.57, a 21.20\\% and 22.46\\% improvement over REPA- and LoRA-finetuning, respectively. The project website can be found at https://sam2videox.github.io/ .",
+        "tags": [
+            "CogVideo",
+            "Diffusion",
+            "LoRA",
+            "Video Generation"
+        ]
+    },
+    {
+        "id": 9,
+        "title": "MeshSplatting: Differentiable Rendering with Opaque Meshes",
+        "author": [
+            "Jan Held",
+            "Sanghyun Son",
+            "Renaud Vandeghen",
+            "Daniel Rebain",
+            "Matheus Gadelha",
+            "Yi Zhou",
+            "Anthony Cioppa",
+            "Ming C. Lin",
+            "Marc Van Droogenbroeck",
+            "Andrea Tagliasacchi"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.06818",
+        "abstract": "Primitive-based splatting methods like 3D Gaussian Splatting have revolutionized novel view synthesis with real-time rendering. However, their point-based representations remain incompatible with mesh-based pipelines that power AR/VR and game engines. We present MeshSplatting, a mesh-based reconstruction approach that jointly optimizes geometry and appearance through differentiable rendering. By enforcing connectivity via restricted Delaunay triangulation and refining surface consistency, MeshSplatting creates end-to-end smooth, visually high-quality meshes that render efficiently in real-time 3D engines. On Mip-NeRF360, it boosts PSNR by +0.69 dB over the current state-of-the-art MiLo for mesh-based novel view synthesis, while training 2x faster and using 2x less memory, bridging neural rendering and interactive 3D graphics for seamless real-time scene interaction. The project page is available at https://meshsplatting.github.io/.",
+        "tags": [
+            "3D",
+            "Gaussian Splatting"
+        ]
+    },
+    {
+        "id": 10,
+        "title": "LEO-RobotAgent: A General-purpose Robotic Agent for Language-driven Embodied Operator",
+        "author": [
+            "Lihuang Chen",
+            "Xiangyu Luo",
+            "Jun Meng"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.10605",
+        "abstract": "We propose LEO-RobotAgent, a general-purpose language-driven intelligent agent framework for robots. Under this framework, LLMs can operate different types of robots to complete unpredictable complex tasks across various scenarios. This framework features strong generalization, robustness, and efficiency. The application-level system built around it can fully enhance bidirectional human-robot intent understanding and lower the threshold for human-robot interaction. Regarding robot task planning, the vast majority of existing studies focus on the application of large models in single-task scenarios and for single robot types. These algorithms often have complex structures and lack generalizability. Thus, the proposed LEO-RobotAgent framework is designed with a streamlined structure as much as possible, enabling large models to independently think, plan, and act within this clear framework. We provide a modular and easily registrable toolset, allowing large models to flexibly call various tools to meet different requirements. Meanwhile, the framework incorporates a human-robot interaction mechanism, enabling the algorithm to collaborate with humans like a partner. Experiments have verified that this framework can be easily adapted to mainstream robot platforms including unmanned aerial vehicles (UAVs), robotic arms, and wheeled robot, and efficiently execute a variety of carefully designed tasks with different complexity levels. Our code is available at https://github.com/LegendLeoChen/LEO-RobotAgent.",
+        "tags": [
+            "LLM",
+            "Robotics"
+        ]
+    },
+    {
+        "id": 11,
+        "title": "Causal Judge Evaluation: Calibrated Surrogate Metrics for LLM Systems",
+        "author": [
+            "Eddie Landesberg"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.11150",
+        "abstract": "LLM-as-judge evaluation has become the de facto standard for scaling model assessment, but the practice is statistically unsound: uncalibrated scores can invert preferences, naive confidence intervals on uncalibrated scores achieve near-0% coverage, and importance-weighted estimators collapse under limited overlap despite high effective sample size (ESS). We introduce Causal Judge Evaluation (CJE), a framework that fixes all three failures. On n=4,961 Chatbot Arena prompts (after filtering from 5k), CJE achieves 99% pairwise ranking accuracy at full sample size (94% averaged across configurations), matching oracle quality, at 14x lower cost (for ranking 5 policies) by calibrating a 16x cheaper judge on just 5% oracle labels (~250 labels). CJE combines three components: (i) AutoCal-R, reward calibration via mean-preserving isotonic regression; (ii) SIMCal-W, weight stabilization via stacking of S-monotone candidates; and (iii) Oracle-Uncertainty Aware (OUA) inference that propagates calibration uncertainty into confidence intervals. We formalize the Coverage-Limited Efficiency (CLE) diagnostic, which explains why IPS-style estimators fail even when ESS exceeds 90%: the logger rarely visits regions where target policies concentrate. Key findings: SNIPS inverts rankings even with reward calibration (38% pairwise, negative Kendall's tau) due to weight instability; calibrated IPS remains near-random (47%) despite weight stabilization, consistent with CLE; OUA improves coverage from near-0% to ~86% (Direct) and ~96% (stacked-DR), where naive intervals severely under-cover.",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 12,
+        "title": "Fairy2i: Training Complex LLMs from Real LLMs with All Parameters in $\\{\\pm 1, \\pm i\\}$",
+        "author": [
+            "Feiyu Wang",
+            "Xinyu Tan",
+            "Bokai Huang",
+            "Yihao Zhang",
+            "Guoan Wang",
+            "Peizhuang Cong",
+            "Tong Yang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.02901",
+        "abstract": "Large language models (LLMs) have revolutionized artificial intelligence, yet their massive memory and computational demands necessitate aggressive quantization, increasingly pushing representations toward the theoretical limit of a single bit. While complex-valued LLMs, such as iFairy, offer a superior chance for low-bit representation compared to real-valued counterparts, they require training from scratch, preventing the utilization of the vast ecosystem of pre-trained real-valued foundation models. Here we present Fairy2i, a universal framework that transforms pre-trained real-valued layers into an equivalent widely-linear complex form, enabling extremely low-bit quantization while reusing existing checkpoints. By proving a lossless mathematical equivalence between real and widely-linear maps, we convert standard Transformers into the complex domain and employ a phase-aware quantization scheme with a highly efficient codebook of fourth roots of unity. Furthermore, we introduce a recursive residual quantization mechanism that iteratively minimizes quantization error, allowing inference to proceed via efficient multiplication-free accumulation. We demonstrate that Fairy2i restores the performance of LLaMA-2 7B at an effective 2-bit precision to levels nearly comparable with full-precision baselines, significantly outperforming state-of-the-art real-valued binary and ternary quantization methods. This work bridges the gap between the representational efficiency of complex-valued arithmetic and the practical utility of pre-trained models, paving a new way for efficient inference on commodity hardware.",
+        "tags": [
+            "LLM",
+            "LLaMA"
+        ]
+    },
+    {
+        "id": 13,
+        "title": "CLINIC: Evaluating Multilingual Trustworthiness in Language Models for Healthcare",
+        "author": [
+            "Akash Ghosh",
+            "Srivarshinee Sridhar",
+            "Raghav Kaushik Ravi",
+            "Muhsin Muhsin",
+            "Sriparna Saha",
+            "Chirag Agarwal"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.11437",
+        "abstract": "Integrating language models (LMs) in healthcare systems holds great promise for improving medical workflows and decision-making. However, a critical barrier to their real-world adoption is the lack of reliable evaluation of their trustworthiness, especially in multilingual healthcare settings. Existing LMs are predominantly trained in high-resource languages, making them ill-equipped to handle the complexity and diversity of healthcare queries in mid- and low-resource languages, posing significant challenges for deploying them in global healthcare contexts where linguistic diversity is key. In this work, we present CLINIC, a Comprehensive Multilingual Benchmark to evaluate the trustworthiness of language models in healthcare. CLINIC systematically benchmarks LMs across five key dimensions of trustworthiness: truthfulness, fairness, safety, robustness, and privacy, operationalized through 18 diverse tasks, spanning 15 languages (covering all the major continents), and encompassing a wide array of critical healthcare topics like disease conditions, preventive actions, diagnostic tests, treatments, surgeries, and medications. Our extensive evaluation reveals that LMs struggle with factual correctness, demonstrate bias across demographic and linguistic groups, and are susceptible to privacy breaches and adversarial attacks. By highlighting these shortcomings, CLINIC lays the foundation for enhancing the global reach and safety of LMs in healthcare across diverse languages.",
+        "tags": []
+    },
+    {
+        "id": 14,
+        "title": "Scaling Behavior of Discrete Diffusion Language Models",
+        "author": [
+            "Dimitri von RÃ¼tte",
+            "Janis Fluri",
+            "Omead Pooladzandi",
+            "Bernhard SchÃ¶lkopf",
+            "Thomas Hofmann",
+            "Antonio Orvieto"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.10858",
+        "abstract": "Modern LLM pre-training consumes vast amounts of compute and training data, making the scaling behavior, or scaling laws, of different models a key distinguishing factor. Discrete diffusion language models (DLMs) have been proposed as an alternative to autoregressive language models (ALMs). However, their scaling behavior has not yet been fully explored, with prior work suggesting that they require more data and compute to match the performance of ALMs.\nWe study the scaling behavior of DLMs on different noise types by smoothly interpolating between masked and uniform diffusion while paying close attention to crucial hyperparameters such as batch size and learning rate. Our experiments reveal that the scaling behavior of DLMs strongly depends on the noise type and is considerably different from ALMs. While all noise types converge to similar loss values in compute-bound scaling, we find that uniform diffusion requires more parameters and less data for compute-efficient training compared to masked diffusion, making them a promising candidate in data-bound settings. We scale our uniform diffusion model up to 10B parameters trained for $10^{22}$ FLOPs, confirming the predicted scaling behavior and making it the largest publicly known uniform diffusion model to date.",
+        "tags": [
+            "Diffusion",
+            "LLM"
+        ]
+    },
+    {
+        "id": 15,
+        "title": "Task adaptation of Vision-Language-Action model: 1st Place Solution for the 2025 BEHAVIOR Challenge",
+        "author": [
+            "Ilia Larchenko",
+            "Gleb Zarin",
+            "Akash Karnatak"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.06951",
+        "abstract": "We present a vision-action policy that won 1st place in the 2025 BEHAVIOR Challenge - a large-scale benchmark featuring 50 diverse long-horizon household tasks in photo-realistic simulation, requiring bimanual manipulation, navigation, and context-aware decision making.\nBuilding on the Pi0.5 architecture, we introduce several innovations. Our primary contribution is correlated noise for flow matching, which improves training efficiency and enables correlation-aware inpainting for smooth action sequences. We also apply learnable mixed-layer attention and System 2 stage tracking for ambiguity resolution. Training employs multi-sample flow matching to reduce variance, while inference uses action compression and challenge-specific correction rules.\nOur approach achieves 26% q-score across all 50 tasks on both public and private leaderboards.",
+        "tags": [
+            "Flow Matching",
+            "Inpainting"
+        ]
+    },
+    {
+        "id": 16,
+        "title": "Fast-FoundationStereo: Real-Time Zero-Shot Stereo Matching",
+        "author": [
+            "Bowen Wen",
+            "Shaurya Dewan",
+            "Stan Birchfield"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.11130",
+        "abstract": "Stereo foundation models achieve strong zero-shot generalization but remain computationally prohibitive for real-time applications. Efficient stereo architectures, on the other hand, sacrifice robustness for speed and require costly per-domain fine-tuning. To bridge this gap, we present Fast-FoundationStereo, a family of architectures that achieve, for the first time, strong zero-shot generalization at real-time frame rate. We employ a divide-and-conquer acceleration strategy with three components: (1) knowledge distillation to compress the hybrid backbone into a single efficient student; (2) blockwise neural architecture search for automatically discovering optimal cost filtering designs under latency budgets, reducing search complexity exponentially; and (3) structured pruning for eliminating redundancy in the iterative refinement module. Furthermore, we introduce an automatic pseudo-labeling pipeline used to curate 1.4M in-the-wild stereo pairs to supplement synthetic training data and facilitate knowledge distillation. The resulting model can run over 10x faster than FoundationStereo while closely matching its zero-shot accuracy, thus establishing a new state-of-the-art among real-time methods. Project page: https://nvlabs.github.io/Fast-FoundationStereo/",
+        "tags": []
+    },
+    {
+        "id": 17,
+        "title": "CheXmask-U: Quantifying uncertainty in landmark-based anatomical segmentation for X-ray images",
+        "author": [
+            "Matias Cosarinsky",
+            "Nicolas Gaggion",
+            "Rodrigo Echeveste",
+            "Enzo Ferrante"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.10715",
+        "abstract": "Uncertainty estimation is essential for the safe clinical deployment of medical image segmentation systems, enabling the identification of unreliable predictions and supporting human oversight. While prior work has largely focused on pixel-level uncertainty, landmark-based segmentation offers inherent topological guarantees yet remains underexplored from an uncertainty perspective. In this work, we study uncertainty estimation for anatomical landmark-based segmentation on chest X-rays. Inspired by hybrid neural network architectures that combine standard image convolutional encoders with graph-based generative decoders, and leveraging their variational latent space, we derive two complementary measures: (i) latent uncertainty, captured directly from the learned distribution parameters, and (ii) predictive uncertainty, obtained by generating multiple stochastic output predictions from latent samples. Through controlled corruption experiments we show that both uncertainty measures increase with perturbation severity, reflecting both global and local degradation. We demonstrate that these uncertainty signals can identify unreliable predictions by comparing with manual ground-truth, and support out-of-distribution detection on the CheXmask dataset. More importantly, we release CheXmask-U (http://huggingface.co/datasets/mcosarinsky/CheXmask-U), a large scale dataset of 657,566 chest X-ray landmark segmentations with per-node uncertainty estimates, enabling researchers to account for spatial variations in segmentation quality when using these anatomical masks. Our findings establish uncertainty estimation as a promising direction to enhance robustness and safe deployment of landmark-based anatomical segmentation methods in chest X-ray. A fully working interactive demo of the method is available at http://huggingface.co/spaces/matiasky/CheXmask-U and the source code at http://github.com/mcosarinsky/CheXmask-U.",
+        "tags": [
+            "Detection",
+            "Segmentation"
+        ]
+    },
+    {
+        "id": 18,
+        "title": "The N-Body Problem: Parallel Execution from Single-Person Egocentric Video",
+        "author": [
+            "Zhifan Zhu",
+            "Yifei Huang",
+            "Yoichi Sato",
+            "Dima Damen"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.11393",
+        "abstract": "Humans can intuitively parallelise complex activities, but can a model learn this from observing a single person? Given one egocentric video, we introduce the N-Body Problem: how N individuals, can hypothetically perform the same set of tasks observed in this video. The goal is to maximise speed-up, but naive assignment of video segments to individuals often violates real-world constraints, leading to physically impossible scenarios like two people using the same object or occupying the same space. To address this, we formalise the N-Body Problem and propose a suite of metrics to evaluate both performance (speed-up, task coverage) and feasibility (spatial collisions, object conflicts and causal constraints). We then introduce a structured prompting strategy that guides a Vision-Language Model (VLM) to reason about the 3D environment, object usage, and temporal dependencies to produce a viable parallel execution. On 100 videos from EPIC-Kitchens and HD-EPIC, our method for N = 2 boosts action coverage by 45% over a baseline prompt for Gemini 2.5 Pro, while simultaneously slashing collision rates, object and causal conflicts by 55%, 45% and 55% respectively.",
+        "tags": [
+            "3D",
+            "VLM"
+        ]
+    },
+    {
+        "id": 19,
+        "title": "Sharp Monocular View Synthesis in Less Than a Second",
+        "author": [
+            "Lars Mescheder",
+            "Wei Dong",
+            "Shiwei Li",
+            "Xuyang Bai",
+            "Marcel Santos",
+            "Peiyun Hu",
+            "Bruno Lecouat",
+            "Mingmin Zhen",
+            "AmaÃ«l Delaunoy",
+            "Tian Fang",
+            "Yanghai Tsin",
+            "Stephan R. Richter",
+            "Vladlen Koltun"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.10685",
+        "abstract": "We present SHARP, an approach to photorealistic view synthesis from a single image. Given a single photograph, SHARP regresses the parameters of a 3D Gaussian representation of the depicted scene. This is done in less than a second on a standard GPU via a single feedforward pass through a neural network. The 3D Gaussian representation produced by SHARP can then be rendered in real time, yielding high-resolution photorealistic images for nearby views. The representation is metric, with absolute scale, supporting metric camera movements. Experimental results demonstrate that SHARP delivers robust zero-shot generalization across datasets. It sets a new state of the art on multiple datasets, reducing LPIPS by 25-34% and DISTS by 21-43% versus the best prior model, while lowering the synthesis time by three orders of magnitude. Code and weights are provided at https://github.com/apple/ml-sharp",
+        "tags": [
+            "3D"
+        ]
+    },
+    {
+        "id": 20,
+        "title": "Interpretable Embeddings with Sparse Autoencoders: A Data Analysis Toolkit",
+        "author": [
+            "Nick Jiang",
+            "Xiaoqing Sun",
+            "Lisa Dunlap",
+            "Lewis Smith",
+            "Neel Nanda"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.10092",
+        "abstract": "Analyzing large-scale text corpora is a core challenge in machine learning, crucial for tasks like identifying undesirable model behaviors or biases in training data. Current methods often rely on costly LLM-based techniques (e.g. annotating dataset differences) or dense embedding models (e.g. for clustering), which lack control over the properties of interest. We propose using sparse autoencoders (SAEs) to create SAE embeddings: representations whose dimensions map to interpretable concepts. Through four data analysis tasks, we show that SAE embeddings are more cost-effective and reliable than LLMs and more controllable than dense embeddings. Using the large hypothesis space of SAEs, we can uncover insights such as (1) semantic differences between datasets and (2) unexpected concept correlations in documents. For instance, by comparing model responses, we find that Grok-4 clarifies ambiguities more often than nine other frontier models. Relative to LLMs, SAE embeddings uncover bigger differences at 2-8x lower cost and identify biases more reliably. Additionally, SAE embeddings are controllable: by filtering concepts, we can (3) cluster documents along axes of interest and (4) outperform dense embeddings on property-based retrieval. Using SAE embeddings, we study model behavior with two case studies: investigating how OpenAI model behavior has changed over time and finding \"trigger\" phrases learned by Tulu-3 (Lambert et al., 2024) from its training data. These results position SAEs as a versatile tool for unstructured data analysis and highlight the neglected importance of interpreting models through their data.",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 21,
+        "title": "Particulate: Feed-Forward 3D Object Articulation",
+        "author": [
+            "Ruining Li",
+            "Yuxin Yao",
+            "Chuanxia Zheng",
+            "Christian Rupprecht",
+            "Joan Lasenby",
+            "Shangzhe Wu",
+            "Andrea Vedaldi"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.11798",
+        "abstract": "We present Particulate, a feed-forward approach that, given a single static 3D mesh of an everyday object, directly infers all attributes of the underlying articulated structure, including its 3D parts, kinematic structure, and motion constraints. At its core is a transformer network, Part Articulation Transformer, which processes a point cloud of the input mesh using a flexible and scalable architecture to predict all the aforementioned attributes with native multi-joint support. We train the network end-to-end on a diverse collection of articulated 3D assets from public datasets. During inference, Particulate lifts the network's feed-forward prediction to the input mesh, yielding a fully articulated 3D model in seconds, much faster than prior approaches that require per-object optimization. Particulate can also accurately infer the articulated structure of AI-generated 3D assets, enabling full-fledged extraction of articulated 3D objects from a single (real or synthetic) image when combined with an off-the-shelf image-to-3D generator. We further introduce a new challenging benchmark for 3D articulation estimation curated from high-quality public 3D assets, and redesign the evaluation protocol to be more consistent with human preferences. Quantitative and qualitative results show that Particulate significantly outperforms state-of-the-art approaches.",
+        "tags": [
+            "3D",
+            "Image-to-3D",
+            "Transformer"
+        ]
+    }
+]
