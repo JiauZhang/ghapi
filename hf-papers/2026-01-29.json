@@ -1,0 +1,266 @@
+[
+    {
+        "id": 1,
+        "index": 85,
+        "title": "Harder Is Better: Boosting Mathematical Reasoning via Difficulty-Aware GRPO and Multi-Aspect Question Reformulation",
+        "author": [
+            "Yanqi Dai",
+            "Yuxiang Ji",
+            "Xiao Zhang",
+            "Yong Wang",
+            "Xiangxiang Chu",
+            "Zhiwu Lu"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.20614",
+        "abstract": "Reinforcement Learning with Verifiable Rewards (RLVR) offers a robust mechanism for enhancing mathematical reasoning in large models. However, we identify a systematic lack of emphasis on more challenging questions in existing methods from both algorithmic and data perspectives, despite their importance for refining underdeveloped capabilities. Algorithmically, widely used Group Relative Policy Optimization (GRPO) suffers from an implicit imbalance where the magnitude of policy updates is lower for harder questions. Data-wise, augmentation approaches primarily rephrase questions to enhance diversity without systematically increasing intrinsic difficulty. To address these issues, we propose a two-dual MathForge framework to improve mathematical reasoning by targeting harder questions from both perspectives, which comprises a Difficulty-Aware Group Policy Optimization (DGPO) algorithm and a Multi-Aspect Question Reformulation (MQR) strategy. Specifically, DGPO first rectifies the implicit imbalance in GRPO via difficulty-balanced group advantage estimation, and further prioritizes harder questions by difficulty-aware question-level weighting. Meanwhile, MQR reformulates questions across multiple aspects to increase difficulty while maintaining the original gold answer. Overall, MathForge forms a synergistic loop: MQR expands the data frontier, and DGPO effectively learns from the augmented data. Extensive experiments show that MathForge significantly outperforms existing methods on various mathematical reasoning tasks. The code and augmented data are all available at https://github.com/AMAP-ML/MathForge.",
+        "tags": [
+            "GRPO",
+            "RL"
+        ]
+    },
+    {
+        "id": 2,
+        "index": 49,
+        "title": "Advancing Open-source World Models",
+        "author": [
+            "Robbyant Team",
+            "Zelin Gao",
+            "Qiuyu Wang",
+            "Yanhong Zeng",
+            "Jiapeng Zhu",
+            "Ka Leong Cheng",
+            "Yixuan Li",
+            "Hanlin Wang",
+            "Yinghao Xu",
+            "Shuailei Ma",
+            "Yihang Chen",
+            "Jie Liu",
+            "Yansong Cheng",
+            "Yao Yao",
+            "Jiayi Zhu",
+            "Yihao Meng",
+            "Kecheng Zheng",
+            "Qingyan Bai",
+            "Jingye Chen",
+            "Zehong Shen",
+            "Yue Yu",
+            "Xing Zhu",
+            "Yujun Shen",
+            "Hao Ouyang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.20540",
+        "abstract": "We present LingBot-World, an open-sourced world simulator stemming from video generation. Positioned as a top-tier world model, LingBot-World offers the following features. (1) It maintains high fidelity and robust dynamics in a broad spectrum of environments, including realism, scientific contexts, cartoon styles, and beyond. (2) It enables a minute-level horizon while preserving contextual consistency over time, which is also known as \"long-term memory\". (3) It supports real-time interactivity, achieving a latency of under 1 second when producing 16 frames per second. We provide public access to the code and model in an effort to narrow the divide between open-source and closed-source technologies. We believe our release will empower the community with practical applications across areas like content creation, gaming, and robot learning.",
+        "tags": [
+            "Robotics",
+            "Video Generation"
+        ]
+    },
+    {
+        "id": 3,
+        "index": 11,
+        "title": "DeepSeek-OCR 2: Visual Causal Flow",
+        "author": [
+            "Haoran Wei",
+            "Yaofeng Sun",
+            "Yukun Li"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.20552",
+        "abstract": "We present DeepSeek-OCR 2 to investigate the feasibility of a novel encoder-DeepEncoder V2-capable of dynamically reordering visual tokens upon image semantics. Conventional vision-language models (VLMs) invariably process visual tokens in a rigid raster-scan order (top-left to bottom-right) with fixed positional encoding when fed into LLMs. However, this contradicts human visual perception, which follows flexible yet semantically coherent scanning patterns driven by inherent logical structures. Particularly for images with complex layouts, human vision exhibits causally-informed sequential processing. Inspired by this cognitive mechanism, DeepEncoder V2 is designed to endow the encoder with causal reasoning capabilities, enabling it to intelligently reorder visual tokens prior to LLM-based content interpretation. This work explores a novel paradigm: whether 2D image understanding can be effectively achieved through two-cascaded 1D causal reasoning structures, thereby offering a new architectural approach with the potential to achieve genuine 2D reasoning. Codes and model weights are publicly accessible at http://github.com/deepseek-ai/DeepSeek-OCR-2.",
+        "tags": [
+            "DeepSeek",
+            "LLM",
+            "VLM"
+        ]
+    },
+    {
+        "id": 4,
+        "index": 9,
+        "title": "Spark: Strategic Policy-Aware Exploration via Dynamic Branching for Long-Horizon Agentic Learning",
+        "author": [
+            "Jinyang Wu",
+            "Shuo Yang",
+            "Changpeng Yang",
+            "Yuhao Shen",
+            "Shuai Zhang",
+            "Zhengqi Wen",
+            "Jianhua Tao"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.20209",
+        "abstract": "Reinforcement learning has empowered large language models to act as intelligent agents, yet training them for long-horizon tasks remains challenging due to the scarcity of high-quality trajectories, especially under limited resources. Existing methods typically scale up rollout sizes and indiscriminately allocate computational resources among intermediate steps. Such attempts inherently waste substantial computation budget on trivial steps while failing to guarantee sample quality. To address this, we propose \\textbf{Spark} (\\textbf{S}trategic \\textbf{P}olicy-\\textbf{A}ware explo\\textbf{R}ation via \\textbf{K}ey-state dynamic branching), a novel framework that selectively branches at critical decision states for resource-efficient exploration. Our key insight is to activate adaptive branching exploration at critical decision points to probe promising trajectories, thereby achieving precise resource allocation that prioritizes sampling quality over blind coverage. This design leverages the agent's intrinsic decision-making signals to reduce dependence on human priors, enabling the agent to autonomously expand exploration and achieve stronger generalization. Experiments across diverse tasks (e.g., embodied planning), demonstrate that \\textsc{Spark} achieves superior success rates with significantly fewer training samples, exhibiting robust generalization even in unseen scenarios.",
+        "tags": [
+            "LLM",
+            "RL"
+        ]
+    },
+    {
+        "id": 5,
+        "index": 5,
+        "title": "Innovator-VL: A Multimodal Large Language Model for Scientific Discovery",
+        "author": [
+            "Zichen Wen",
+            "Boxue Yang",
+            "Shuang Chen",
+            "Yaojie Zhang",
+            "Yuhang Han",
+            "Junlong Ke",
+            "Cong Wang",
+            "Yicheng Fu",
+            "Jiawang Zhao",
+            "Jiangchao Yao",
+            "Xi Fang",
+            "Zhen Wang",
+            "Henxing Cai",
+            "Lin Yao",
+            "Zhifeng Gao",
+            "Yanhui Hong",
+            "Nang Yuan",
+            "Yixuan Li",
+            "Guojiang Zhao",
+            "Haoyi Tao",
+            "Nan Wang",
+            "Han Lyu",
+            "Guolin Ke",
+            "Ning Liao",
+            "Xiaoxing Wang",
+            "Kai Chen",
+            "Zhiyu Li",
+            "Feiyu Xiong",
+            "Sihan Hu",
+            "Kun Chen",
+            "Yanfeng Wang",
+            "Weinan E",
+            "Linfeng Zhang",
+            "Linfeng Zhang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.19325",
+        "abstract": "We present Innovator-VL, a scientific multimodal large language model designed to advance understanding and reasoning across diverse scientific domains while maintaining excellent performance on general vision tasks. Contrary to the trend of relying on massive domain-specific pretraining and opaque pipelines, our work demonstrates that principled training design and transparent methodology can yield strong scientific intelligence with substantially reduced data requirements. (i) First, we provide a fully transparent, end-to-end reproducible training pipeline, covering data collection, cleaning, preprocessing, supervised fine-tuning, reinforcement learning, and evaluation, along with detailed optimization recipes. This facilitates systematic extension by the community. (ii) Second, Innovator-VL exhibits remarkable data efficiency, achieving competitive performance on various scientific tasks using fewer than five million curated samples without large-scale pretraining. These results highlight that effective reasoning can be achieved through principled data selection rather than indiscriminate scaling. (iii) Third, Innovator-VL demonstrates strong generalization, achieving competitive performance on general vision, multimodal reasoning, and scientific benchmarks. This indicates that scientific alignment can be integrated into a unified model without compromising general-purpose capabilities. Our practices suggest that efficient, reproducible, and high-performing scientific multimodal models can be built even without large-scale data, providing a practical foundation for future research.",
+        "tags": [
+            "RL"
+        ]
+    },
+    {
+        "id": 6,
+        "index": 4,
+        "title": "Linear representations in language models can change dramatically over a conversation",
+        "author": [
+            "Andrew Kyle Lampinen",
+            "Yuxuan Li",
+            "Eghbal Hosseini",
+            "Sangnie Bhardwaj",
+            "Murray Shanahan"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.20834",
+        "abstract": "Language model representations often contain linear directions that correspond to high-level concepts. Here, we study the dynamics of these representations: how representations evolve along these dimensions within the context of (simulated) conversations. We find that linear representations can change dramatically over a conversation; for example, information that is represented as factual at the beginning of a conversation can be represented as non-factual at the end and vice versa. These changes are content-dependent; while representations of conversation-relevant information may change, generic information is generally preserved. These changes are robust even for dimensions that disentangle factuality from more superficial response patterns, and occur across different model families and layers of the model. These representation changes do not require on-policy conversations; even replaying a conversation script written by an entirely different model can produce similar changes. However, adaptation is much weaker from simply having a sci-fi story in context that is framed more explicitly as such. We also show that steering along a representational direction can have dramatically different effects at different points in a conversation. These results are consistent with the idea that representations may evolve in response to the model playing a particular role that is cued by a conversation. Our findings may pose challenges for interpretability and steering -- in particular, they imply that it may be misleading to use static interpretations of features or directions, or probes that assume a particular range of features consistently corresponds to a particular ground-truth value. However, these types of representational dynamics also point to exciting new research directions for understanding how models adapt to context.",
+        "tags": []
+    },
+    {
+        "id": 7,
+        "index": 3,
+        "title": "SERA: Soft-Verified Efficient Repository Agents",
+        "author": [
+            "Ethan Shen",
+            "Danny Tormoen",
+            "Saurabh Shah",
+            "Ali Farhadi",
+            "Tim Dettmers"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.20789",
+        "abstract": "Open-weight coding agents should hold a fundamental advantage over closed-source systems: they can be specialized to private codebases, encoding repository-specific information directly in their weights. Yet the cost and complexity of training has kept this advantage theoretical. We show it is now practical. We present Soft-Verified Efficient Repository Agents (SERA), an efficient method for training coding agents that enables the rapid and cheap creation of agents specialized to private codebases. Using only supervised finetuning (SFT), SERA achieves state-of-the-art results among fully open-source (open data, method, code) models while matching the performance of frontier open-weight models like Devstral-Small-2. Creating SERA models is 26x cheaper than reinforcement learning and 57x cheaper than previous synthetic data methods to reach equivalent performance. Our method, Soft Verified Generation (SVG), generates thousands of trajectories from a single code repository. Combined with cost-efficiency, this enables specialization to private codebases. Beyond repository specialization, we apply SVG to a larger corpus of codebases, generating over 200,000 synthetic trajectories. We use this dataset to provide detailed analysis of scaling laws, ablations, and confounding factors for training coding agents. Overall, we believe our work will greatly accelerate research on open coding agents and showcase the advantage of open-source models that can specialize to private codebases. We release SERA as the first model in Ai2's Open Coding Agents series, along with all our code, data, and Claude Code integration to support the research community.",
+        "tags": [
+            "RL"
+        ]
+    },
+    {
+        "id": 8,
+        "index": 1,
+        "title": "GDCNet: Generative Discrepancy Comparison Network for Multimodal Sarcasm Detection",
+        "author": [
+            "Shuguang Zhang",
+            "Junhong Lian",
+            "Guoxin Yu",
+            "Baoxun Xu",
+            "Xiang Ao"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.20618",
+        "abstract": "Multimodal sarcasm detection (MSD) aims to identify sarcasm within image-text pairs by modeling semantic incongruities across modalities. Existing methods often exploit cross-modal embedding misalignment to detect inconsistency but struggle when visual and textual content are loosely related or semantically indirect. While recent approaches leverage large language models (LLMs) to generate sarcastic cues, the inherent diversity and subjectivity of these generations often introduce noise. To address these limitations, we propose the Generative Discrepancy Comparison Network (GDCNet). This framework captures cross-modal conflicts by utilizing descriptive, factually grounded image captions generated by Multimodal LLMs (MLLMs) as stable semantic anchors. Specifically, GDCNet computes semantic and sentiment discrepancies between the generated objective description and the original text, alongside measuring visual-textual fidelity. These discrepancy features are then fused with visual and textual representations via a gated module to adaptively balance modality contributions. Extensive experiments on MSD benchmarks demonstrate GDCNet's superior accuracy and robustness, establishing a new state-of-the-art on the MMSD2.0 benchmark.",
+        "tags": [
+            "Detection",
+            "LLM"
+        ]
+    },
+    {
+        "id": 9,
+        "index": 1,
+        "title": "RIR-Mega-Speech: A Reverberant Speech Corpus with Comprehensive Acoustic Metadata and Reproducible Evaluation",
+        "author": [
+            "Mandip Goswami"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.19949",
+        "abstract": "Despite decades of research on reverberant speech, comparing methods remains difficult because most corpora lack per-file acoustic annotations or provide limited documentation for reproduction. We present RIR-Mega-Speech, a corpus of approximately 117.5 hours created by convolving LibriSpeech utterances with roughly 5,000 simulated room impulse responses from the RIR-Mega collection. Every file includes RT60, direct-to-reverberant ratio (DRR), and clarity index ($C_{50}$) computed from the source RIR using clearly defined, reproducible procedures. We also provide scripts to rebuild the dataset and reproduce all evaluation results.\nUsing Whisper small on 1,500 paired utterances, we measure 5.20% WER (95% CI: 4.69--5.78) on clean speech and 7.70% (7.04--8.35) on reverberant versions, corresponding to a paired increase of 2.50 percentage points (2.06--2.98). This represents a 48% relative degradation. WER increases monotonically with RT60 and decreases with DRR, consistent with prior perceptual studies. While the core finding that reverberation harms recognition is well established, we aim to provide the community with a standardized resource where acoustic conditions are transparent and results can be verified independently. The repository includes one-command rebuild instructions for both Windows and Linux environments.",
+        "tags": []
+    },
+    {
+        "id": 10,
+        "index": 0,
+        "title": "SketchDynamics: Exploring Free-Form Sketches for Dynamic Intent Expression in Animation Generation",
+        "author": [
+            "Boyu Li",
+            "Lin-Ping Yuan",
+            "Zeyu Wang",
+            "Hongbo Fu"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.20622",
+        "abstract": "Sketching provides an intuitive way to convey dynamic intent in animation authoring (i.e., how elements change over time and space), making it a natural medium for automatic content creation. Yet existing approaches often constrain sketches to fixed command tokens or predefined visual forms, overlooking their freeform nature and the central role of humans in shaping intention. To address this, we introduce an interaction paradigm where users convey dynamic intent to a vision-language model via free-form sketching, instantiated here in a sketch storyboard to motion graphics workflow. We implement an interface and improve it through a three-stage study with 24 participants. The study shows how sketches convey motion with minimal input, how their inherent ambiguity requires users to be involved for clarification, and how sketches can visually guide video refinement. Our findings reveal the potential of sketch and AI interaction to bridge the gap between intention and outcome, and demonstrate its applicability to 3D animation and video generation.",
+        "tags": [
+            "3D",
+            "Video Generation"
+        ]
+    },
+    {
+        "id": 11,
+        "index": 0,
+        "title": "OmegaUse: Building a General-Purpose GUI Agent for Autonomous Task Execution",
+        "author": [
+            "Le Zhang",
+            "Yixiong Xiao",
+            "Xinjiang Lu",
+            "Jingjia Cao",
+            "Yusai Zhao",
+            "Jingbo Zhou",
+            "Lang An",
+            "Zikan Feng",
+            "Wanxiang Sha",
+            "Yu Shi",
+            "Congxi Xiao",
+            "Jian Xiong",
+            "Yankai Zhang",
+            "Hua Wu",
+            "Haifeng Wang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.20380",
+        "abstract": "Graphical User Interface (GUI) agents show great potential for enabling foundation models to complete real-world tasks, revolutionizing human-computer interaction and improving human productivity. In this report, we present OmegaUse, a general-purpose GUI agent model for autonomous task execution on both mobile and desktop platforms, supporting computer-use and phone-use scenarios. Building an effective GUI agent model relies on two factors: (1) high-quality data and (2) effective training methods. To address these, we introduce a carefully engineered data-construction pipeline and a decoupled training paradigm. For data construction, we leverage rigorously curated open-source datasets and introduce a novel automated synthesis framework that integrates bottom-up autonomous exploration with top-down taxonomy-guided generation to create high-fidelity synthetic data. For training, to better leverage these data, we adopt a two-stage strategy: Supervised Fine-Tuning (SFT) to establish fundamental interaction syntax, followed by Group Relative Policy Optimization (GRPO) to improve spatial grounding and sequential planning. To balance computational efficiency with agentic reasoning capacity, OmegaUse is built on a Mixture-of-Experts (MoE) backbone. To evaluate cross-terminal capabilities in an offline setting, we introduce OS-Nav, a benchmark suite spanning multiple operating systems: ChiM-Nav, targeting Chinese Android mobile environments, and Ubu-Nav, focusing on routine desktop interactions on Ubuntu. Extensive experiments show that OmegaUse is highly competitive across established GUI benchmarks, achieving a state-of-the-art (SOTA) score of 96.3% on ScreenSpot-V2 and a leading 79.1% step success rate on AndroidControl. OmegaUse also performs strongly on OS-Nav, reaching 74.24% step success on ChiM-Nav and 55.9% average success on Ubu-Nav.",
+        "tags": [
+            "GRPO",
+            "MoE"
+        ]
+    },
+    {
+        "id": 12,
+        "index": 0,
+        "title": "SE-DiCoW: Self-Enrolled Diarization-Conditioned Whisper",
+        "author": [
+            "Alexander Polok",
+            "Dominik Klement",
+            "Samuele Cornell",
+            "Matthew Wiesner",
+            "Jan ÄernockÃ½",
+            "Sanjeev Khudanpur",
+            "LukÃ¡Å¡ Burget"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.19194",
+        "abstract": "Speaker-attributed automatic speech recognition (ASR) in multi-speaker environments remains a major challenge. While some approaches achieve strong performance when fine-tuned on specific domains, few systems generalize well across out-of-domain datasets. Our prior work, Diarization-Conditioned Whisper (DiCoW), leverages speaker diarization outputs as conditioning information and, with minimal fine-tuning, demonstrated strong multilingual and multi-domain performance. In this paper, we address a key limitation of DiCoW: ambiguity in Silence-Target-Non-target-Overlap (STNO) masks, where two or more fully overlapping speakers may have nearly identical conditioning despite differing transcriptions. We introduce SE-DiCoW (Self-Enrolled Diarization-Conditioned Whisper), which uses diarization output to locate an enrollment segment anywhere in the conversation where the target speaker is most active. This enrollment segment is used as fixed conditioning via cross-attention at each encoder layer. We further refine DiCoW with improved data segmentation, model initialization, and augmentation. Together, these advances yield substantial gains: SE-DiCoW reduces macro-averaged tcpWER by 52.4% relative to the original DiCoW on the EMMA MT-ASR benchmark.",
+        "tags": [
+            "Segmentation"
+        ]
+    }
+]
