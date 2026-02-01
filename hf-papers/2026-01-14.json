@@ -1,0 +1,587 @@
+[
+    {
+        "id": 1,
+        "index": 59,
+        "title": "MemGovern: Enhancing Code Agents through Learning from Governed Human Experiences",
+        "author": [
+            "Qihao Wang",
+            "Ziming Cheng",
+            "Shuo Zhang",
+            "Fan Liu",
+            "Rui Xu",
+            "Heng Lian",
+            "Kunyi Wang",
+            "Xiaoming Yu",
+            "Jianghao Yin",
+            "Sen Hu",
+            "Yue Hu",
+            "Shaolei Zhang",
+            "Yanbing Liu",
+            "Ronghao Chen",
+            "Huacan Wang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.06789",
+        "abstract": "While autonomous software engineering (SWE) agents are reshaping programming paradigms, they currently suffer from a \"closed-world\" limitation: they attempt to fix bugs from scratch or solely using local context, ignoring the immense historical human experience available on platforms like GitHub. Accessing this open-world experience is hindered by the unstructured and fragmented nature of real-world issue-tracking data. In this paper, we introduce MemGovern, a framework designed to govern and transform raw GitHub data into actionable experiential memory for agents. MemGovern employs experience governance to convert human experience into agent-friendly experience cards and introduces an agentic experience search strategy that enables logic-driven retrieval of human expertise. By producing 135K governed experience cards, MemGovern achieves a significant performance boost, improving resolution rates on the SWE-bench Verified by 4.65%. As a plug-in approach, MemGovern provides a solution for agent-friendly memory infrastructure.",
+        "tags": []
+    },
+    {
+        "id": 2,
+        "index": 50,
+        "title": "Solar Open Technical Report",
+        "author": [
+            "Sungrae Park",
+            "Sanghoon Kim",
+            "Jungho Cho",
+            "Gyoungjin Gim",
+            "Dawoon Jung",
+            "Mikyoung Cha",
+            "Eunhae Choo",
+            "Taekgyu Hong",
+            "Minbyul Jeong",
+            "SeHwan Joo",
+            "Minsoo Khang",
+            "Eunwon Kim",
+            "Minjeong Kim",
+            "Sujeong Kim",
+            "Yunsu Kim",
+            "Hyeonju Lee",
+            "Seunghyun Lee",
+            "Sukyung Lee",
+            "Siyoung Park",
+            "Gyungin Shin",
+            "Inseo Song",
+            "Wonho Song",
+            "Seonghoon Yang",
+            "Seungyoun Yi",
+            "Sanghoon Yoon",
+            "Jeonghyun Ko",
+            "Seyoung Song",
+            "Keunwoo Choi",
+            "Hwalsuk Lee",
+            "Sunghun Kim",
+            "Du-Seong Chang",
+            "Kyunghyun Cho",
+            "Junsuk Choe",
+            "Hwaran Lee",
+            "Jae-Gil Lee",
+            "KyungTae Lim",
+            "Alice Oh"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.07022",
+        "abstract": "We introduce Solar Open, a 102B-parameter bilingual Mixture-of-Experts language model for underserved languages. Solar Open demonstrates a systematic methodology for building competitive LLMs by addressing three interconnected challenges. First, to train effectively despite data scarcity for underserved languages, we synthesize 4.5T tokens of high-quality, domain-specific, and RL-oriented data. Second, we coordinate this data through a progressive curriculum jointly optimizing composition, quality thresholds, and domain coverage across 20 trillion tokens. Third, to enable reasoning capabilities through scalable RL, we apply our proposed framework SnapPO for efficient optimization. Across benchmarks in English and Korean, Solar Open achieves competitive performance, demonstrating the effectiveness of this methodology for underserved language AI development.",
+        "tags": [
+            "LLM",
+            "MoE",
+            "RL"
+        ]
+    },
+    {
+        "id": 3,
+        "index": 46,
+        "title": "KnowMe-Bench: Benchmarking Person Understanding for Lifelong Digital Companions",
+        "author": [
+            "Tingyu Wu",
+            "Zhisheng Chen",
+            "Ziyan Weng",
+            "Shuhe Wang",
+            "Chenglong Li",
+            "Shuo Zhang",
+            "Sen Hu",
+            "Silin Wu",
+            "Qizhen Lan",
+            "Huacan Wang",
+            "Ronghao Chen"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.04745",
+        "abstract": "Existing long-horizon memory benchmarks mostly use multi-turn dialogues or synthetic user histories, which makes retrieval performance an imperfect proxy for person understanding. We present \\BenchName, a publicly releasable benchmark built from long-form autobiographical narratives, where actions, context, and inner thoughts provide dense evidence for inferring stable motivations and decision principles. \\BenchName~reconstructs each narrative into a flashback-aware, time-anchored stream and evaluates models with evidence-linked questions spanning factual recall, subjective state attribution, and principle-level reasoning. Across diverse narrative sources, retrieval-augmented systems mainly improve factual accuracy, while errors persist on temporally grounded explanations and higher-level inferences, highlighting the need for memory mechanisms beyond retrieval. Our data is in \\href{KnowMeBench}{https://github.com/QuantaAlpha/KnowMeBench}.",
+        "tags": []
+    },
+    {
+        "id": 4,
+        "index": 40,
+        "title": "User-Oriented Multi-Turn Dialogue Generation with Tool Use at scale",
+        "author": [
+            "Jungho Cho",
+            "Minbyul Jeong",
+            "Sungrae Park"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.08225",
+        "abstract": "The recent paradigm shift toward large reasoning models (LRMs) as autonomous agents has intensified the demand for sophisticated, multi-turn tool-use capabilities. Yet, existing datasets and data-generation approaches are limited by static, predefined toolsets that cannot scale to the complexity of open-ended human-agent collaboration. To address this, we initially developed a framework for automated task-oriented multi-turn dialogue generation at scale, utilizing an LRM-based simulator to dynamically generate high-value, domain-specific tools to solve specified tasks. However, we observe that a purely task-oriented design often results in \"solely task-solving\" trajectories, where the agent completes the objective with minimal interaction, failing to generate the high turn-count conversations seen in realistic scenarios. To bridge this gap, we shift toward a user-oriented simulation paradigm. By decoupling task generation from a dedicated user simulator that mimics human behavioral rules - such as incremental request-making and turn-by-turn feedback - we facilitate more authentic, extended multi-turn dialogues that reflect the iterative nature of real-world problem solving. Our generation pipeline operates as a versatile, plug-and-play module capable of initiating generation from any state, ensuring high scalability in producing extended tool-use data. Furthermore, by facilitating multiple task completions within a single trajectory, it yields a high-density dataset that reflects the multifaceted demands of real-world human-agent interaction.",
+        "tags": []
+    },
+    {
+        "id": 5,
+        "index": 34,
+        "title": "ShowUI-$Ï$: Flow-based Generative Models as GUI Dexterous Hands",
+        "author": [
+            "Siyuan Hu",
+            "Kevin Qinghong Lin",
+            "Mike Zheng Shou"
+        ],
+        "pdf": "https://arxiv.org/pdf/2512.24965",
+        "abstract": "Building intelligent agents capable of dexterous manipulation is essential for achieving human-like automation in both robotics and digital environments. However, existing GUI agents rely on discrete click predictions (x,y), which prohibits free-form, closed-loop trajectories (e.g. dragging a progress bar) that require continuous, on-the-fly perception and adjustment. In this work, we develop ShowUI-$\\pi$, the first flow-based generative model as GUI dexterous hand, featuring the following designs: (i) Unified Discrete-Continuous Actions, integrating discrete clicks and continuous drags within a shared model, enabling flexible adaptation across diverse interaction modes; (ii) Flow-based Action Generation for drag modeling, which predicts incremental cursor adjustments from continuous visual observations via a lightweight action expert, ensuring smooth and stable trajectories; (iii) Drag Training data and Benchmark, where we manually collect and synthesize 20K drag trajectories across five domains (e.g. PowerPoint, Adobe Premiere Pro), and introduce ScreenDrag, a benchmark with comprehensive online and offline evaluation protocols for assessing GUI agents' drag capabilities. Our experiments show that proprietary GUI agents still struggle on ScreenDrag (e.g. Operator scores 13.27, and the best Gemini-2.5-CUA reaches 22.18). In contrast, ShowUI-$\\pi$ achieves 26.98 with only 450M parameters, underscoring both the difficulty of the task and the effectiveness of our approach. We hope this work advances GUI agents toward human-like dexterous control in digital world. The code is available at https://github.com/showlab/showui-pi.",
+        "tags": [
+            "Robotics"
+        ]
+    },
+    {
+        "id": 6,
+        "index": 31,
+        "title": "MemoBrain: Executive Memory as an Agentic Brain for Reasoning",
+        "author": [
+            "Hongjin Qian",
+            "Zhao Cao",
+            "Zheng Liu"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.08079",
+        "abstract": "Complex reasoning in tool-augmented agent frameworks is inherently long-horizon, causing reasoning traces and transient tool artifacts to accumulate and strain the bounded working context of large language models. Without explicit memory mechanisms, such accumulation disrupts logical continuity and undermines task alignment. This positions memory not as an auxiliary efficiency concern, but as a core component for sustaining coherent, goal-directed reasoning over long horizons.\nWe propose MemoBrain, an executive memory model for tool-augmented agents that constructs a dependency-aware memory over reasoning steps, capturing salient intermediate states and their logical relations. Operating as a co-pilot alongside the reasoning agent, MemoBrain organizes reasoning progress without blocking execution and actively manages the working context. Specifically, it prunes invalid steps, folds completed sub-trajectories, and preserves a compact, high-salience reasoning backbone under a fixed context budget. Together, these mechanisms enable explicit cognitive control over reasoning trajectories rather than passive context accumulation.\nWe evaluate MemoBrain on challenging long-horizon benchmarks, including GAIA, WebWalker, and BrowseComp-Plus, demonstrating consistent improvements over strong baselines.",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 7,
+        "index": 30,
+        "title": "ArenaRL: Scaling RL for Open-Ended Agents via Tournament-based Relative Ranking",
+        "author": [
+            "Qiang Zhang",
+            "Boli Chen",
+            "Fanrui Zhang",
+            "Ruixue Ding",
+            "Shihang Wang",
+            "Qiuchen Wang",
+            "Yinfeng Huang",
+            "Haonan Zhang",
+            "Rongxiang Zhu",
+            "Pengyong Wang",
+            "Ailin Ren",
+            "Xin Li",
+            "Pengjun Xie",
+            "Jiawei Liu",
+            "Ning Guo",
+            "Jingren Zhou",
+            "Zheng-Jun Zha"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.06487",
+        "abstract": "Reinforcement learning has substantially improved the performance of LLM agents on tasks with verifiable outcomes, but it still struggles on open-ended agent tasks with vast solution spaces (e.g., complex travel planning). Due to the absence of objective ground-truth for these tasks, current RL algorithms largely rely on reward models that assign scalar scores to individual responses. We contend that such pointwise scoring suffers from an inherent discrimination collapse: the reward model struggles to distinguish subtle advantages among different trajectories, resulting in scores within a group being compressed into a narrow range. Consequently, the effective reward signal becomes dominated by noise from the reward model, leading to optimization stagnation. To address this, we propose ArenaRL, a reinforcement learning paradigm that shifts from pointwise scalar scoring to intra-group relative ranking. ArenaRL introduces a process-aware pairwise evaluation mechanism, employing multi-level rubrics to assign fine-grained relative scores to trajectories. Additionally, we construct an intra-group adversarial arena and devise a tournament-based ranking scheme to obtain stable advantage signals. Empirical results confirm that the built seeded single-elimination scheme achieves nearly equivalent advantage estimation accuracy to full pairwise comparisons with O(N^2) complexity, while operating with only O(N) complexity, striking an optimal balance between efficiency and precision. Furthermore, to address the lack of full-cycle benchmarks for open-ended agents, we build Open-Travel and Open-DeepResearch, two high-quality benchmarks featuring a comprehensive pipeline covering SFT, RL training, and multi-dimensional evaluation. Extensive experiments show that ArenaRL substantially outperforms standard RL baselines, enabling LLM agents to generate more robust solutions for complex real-world tasks.",
+        "tags": [
+            "LLM",
+            "RL"
+        ]
+    },
+    {
+        "id": 8,
+        "index": 27,
+        "title": "Ministral 3",
+        "author": [
+            "Alexander H. Liu",
+            "Kartik Khandelwal",
+            "Sandeep Subramanian",
+            "Victor Jouault",
+            "Abhinav Rastogi",
+            "Adrien SadÃ©",
+            "Alan Jeffares",
+            "Albert Jiang",
+            "Alexandre Cahill",
+            "Alexandre Gavaudan",
+            "Alexandre Sablayrolles",
+            "AmÃ©lie HÃ©liou",
+            "Amos You",
+            "Andy Ehrenberg",
+            "Andy Lo",
+            "Anton Eliseev",
+            "Antonia Calvi",
+            "Avinash Sooriyarachchi",
+            "Baptiste Bout",
+            "Baptiste RoziÃ¨re",
+            "Baudouin De Monicault",
+            "ClÃ©mence Lanfranchi",
+            "Corentin Barreau",
+            "Cyprien Courtot",
+            "Daniele Grattarola",
+            "Darius Dabert",
+            "Diego de las Casas",
+            "Elliot Chane-Sane",
+            "Faruk Ahmed",
+            "Gabrielle Berrada",
+            "GaÃ«tan Ecrepont",
+            "Gauthier Guinet",
+            "Georgii Novikov",
+            "Guillaume Kunsch",
+            "Guillaume Lample",
+            "Guillaume Martin",
+            "Gunshi Gupta",
+            "Jan Ludziejewski",
+            "Jason Rute",
+            "Joachim Studnia",
+            "Jonas Amar",
+            "JosÃ©phine Delas",
+            "Josselin Somerville Roberts",
+            "Karmesh Yadav",
+            "Khyathi Chandu",
+            "Kush Jain",
+            "Laurence Aitchison",
+            "Laurent Fainsin",
+            "LÃ©onard Blier",
+            "Lingxiao Zhao",
+            "Louis Martin",
+            "Lucile Saulnier",
+            "Luyu Gao",
+            "Maarten Buyl",
+            "Margaret Jennings",
+            "Marie Pellat",
+            "Mark Prins",
+            "Mathieu PoirÃ©e",
+            "Mathilde Guillaumin",
+            "Matthieu Dinot",
+            "Matthieu Futeral",
+            "Maxime Darrin",
+            "Maximilian Augustin",
+            "Mia Chiquier",
+            "Michel Schimpf",
+            "Nathan Grinsztajn",
+            "Neha Gupta",
+            "Nikhil Raghuraman",
+            "Olivier Bousquet",
+            "Olivier Duchenne",
+            "Patricia Wang",
+            "Patrick von Platen",
+            "Paul Jacob",
+            "Paul Wambergue",
+            "Paula Kurylowicz",
+            "Pavankumar Reddy Muddireddy",
+            "PhilomÃ¨ne Chagniot",
+            "Pierre Stock",
+            "Pravesh Agrawal",
+            "Quentin Torroba",
+            "Romain Sauvestre",
+            "Roman Soletskyi",
+            "Rupert Menneer",
+            "Sagar Vaze",
+            "Samuel Barry",
+            "Sanchit Gandhi",
+            "Siddhant Waghjale",
+            "Siddharth Gandhi",
+            "Soham Ghosh",
+            "Srijan Mishra",
+            "Sumukh Aithal",
+            "Szymon Antoniak",
+            "Teven Le Scao",
+            "ThÃ©o Cachet",
+            "Theo Simon Sorg",
+            "Thibaut Lavril",
+            "Thiziri Nait Saada",
+            "Thomas Chabal",
+            "Thomas Foubert",
+            "Thomas Robert",
+            "\n    et al. (20 additional authors not shown)"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.08584",
+        "abstract": "We introduce the Ministral 3 series, a family of parameter-efficient dense language models designed for compute and memory constrained applications, available in three model sizes: 3B, 8B, and 14B parameters. For each model size, we release three variants: a pretrained base model for general-purpose use, an instruction finetuned, and a reasoning model for complex problem-solving. In addition, we present our recipe to derive the Ministral 3 models through Cascade Distillation, an iterative pruning and continued training with distillation technique. Each model comes with image understanding capabilities, all under the Apache 2.0 license.",
+        "tags": []
+    },
+    {
+        "id": 9,
+        "index": 21,
+        "title": "3AM: Segment Anything with Geometric Consistency in Videos",
+        "author": [
+            "Yang-Che Sun",
+            "Cheng Sun",
+            "Chin-Yang Lin",
+            "Fu-En Yang",
+            "Min-Hung Chen",
+            "Yen-Yu Lin",
+            "Yu-Lun Liu"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.08831",
+        "abstract": "Video object segmentation methods like SAM2 achieve strong performance through memory-based architectures but struggle under large viewpoint changes due to reliance on appearance features. Traditional 3D instance segmentation methods address viewpoint consistency but require camera poses, depth maps, and expensive preprocessing. We introduce 3AM, a training-time enhancement that integrates 3D-aware features from MUSt3R into SAM2. Our lightweight Feature Merger fuses multi-level MUSt3R features that encode implicit geometric correspondence. Combined with SAM2's appearance features, the model achieves geometry-consistent recognition grounded in both spatial position and visual similarity. We propose a field-of-view aware sampling strategy ensuring frames observe spatially consistent object regions for reliable 3D correspondence learning. Critically, our method requires only RGB input at inference, with no camera poses or preprocessing. On challenging datasets with wide-baseline motion (ScanNet++, Replica), 3AM substantially outperforms SAM2 and extensions, achieving 90.6% IoU and 71.7% Positive IoU on ScanNet++'s Selected Subset, improving over state-of-the-art VOS methods by +15.9 and +30.4 points. Project page: https://jayisaking.github.io/3AM-Page/",
+        "tags": [
+            "3D",
+            "SAM",
+            "Segmentation"
+        ]
+    },
+    {
+        "id": 10,
+        "index": 21,
+        "title": "The Confidence Dichotomy: Analyzing and Mitigating Miscalibration in Tool-Use Agents",
+        "author": [
+            "Weihao Xuan",
+            "Qingcheng Zeng",
+            "Heli Qi",
+            "Yunze Xiao",
+            "Junjue Wang",
+            "Naoto Yokoya"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.07264",
+        "abstract": "Autonomous agents based on large language models (LLMs) are rapidly evolving to handle multi-turn tasks, but ensuring their trustworthiness remains a critical challenge. A fundamental pillar of this trustworthiness is calibration, which refers to an agent's ability to express confidence that reliably reflects its actual performance. While calibration is well-established for static models, its dynamics in tool-integrated agentic workflows remain underexplored. In this work, we systematically investigate verbalized calibration in tool-use agents, revealing a fundamental confidence dichotomy driven by tool type. Specifically, our pilot study identifies that evidence tools (e.g., web search) systematically induce severe overconfidence due to inherent noise in retrieved information, while verification tools (e.g., code interpreters) can ground reasoning through deterministic feedback and mitigate miscalibration. To robustly improve calibration across tool types, we propose a reinforcement learning (RL) fine-tuning framework that jointly optimizes task accuracy and calibration, supported by a holistic benchmark of reward designs. We demonstrate that our trained agents not only achieve superior calibration but also exhibit robust generalization from local training environments to noisy web settings and to distinct domains such as mathematical reasoning. Our results highlight the necessity of domain-specific calibration strategies for tool-use agents. More broadly, this work establishes a foundation for building self-aware agents that can reliably communicate uncertainty in high-stakes, real-world deployments.",
+        "tags": [
+            "LLM",
+            "RL"
+        ]
+    },
+    {
+        "id": 11,
+        "index": 17,
+        "title": "Parallel Context-of-Experts Decoding for Retrieval Augmented Generation",
+        "author": [
+            "Giulio Corallo",
+            "Paolo Papotti"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.08670",
+        "abstract": "Retrieval Augmented Generation faces a trade-off: concatenating documents in a long prompt enables multi-document reasoning but creates prefill bottlenecks, while encoding document KV caches separately offers speed but breaks cross-document interaction. We propose Parallel Context-of-Experts Decoding (Pced), a training-free framework that shifts evidence aggregation from the attention mechanism to the decoding. Pced treats retrieved documents as isolated \"experts\", synchronizing their predictions via a novel retrieval-aware contrastive decoding rule that weighs expert logits against the model prior. This approach recovers cross-document reasoning capabilities without constructing a shared attention across documents.",
+        "tags": []
+    },
+    {
+        "id": 12,
+        "index": 7,
+        "title": "ViDoRe V3: A Comprehensive Evaluation of Retrieval Augmented Generation in Complex Real-World Scenarios",
+        "author": [
+            "AntÃ³nio Loison",
+            "Quentin MacÃ©",
+            "Antoine Edy",
+            "Victor Xing",
+            "Tom Balough",
+            "Gabriel Moreira",
+            "Bo Liu",
+            "Manuel Faysse",
+            "CÃ©line Hudelot",
+            "Gautier Viaud"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.08620",
+        "abstract": "Retrieval-Augmented Generation (RAG) pipelines must address challenges beyond simple single-document retrieval, such as interpreting visual elements (tables, charts, images), synthesizing information across documents, and providing accurate source grounding. Existing benchmarks fail to capture this complexity, often focusing on textual data, single-document comprehension, or evaluating retrieval and generation in isolation. We introduce ViDoRe v3, a comprehensive multimodal RAG benchmark featuring multi-type queries over visually rich document corpora. It covers 10 datasets across diverse professional domains, comprising ~26,000 document pages paired with 3,099 human-verified queries, each available in 6 languages. Through 12,000 hours of human annotation effort, we provide high-quality annotations for retrieval relevance, bounding box localization, and verified reference answers. Our evaluation of state-of-the-art RAG pipelines reveals that visual retrievers outperform textual ones, late-interaction models and textual reranking substantially improve performance, and hybrid or purely visual contexts enhance answer generation quality. However, current models still struggle with non-textual elements, open-ended queries, and fine-grained visual grounding. To encourage progress in addressing these challenges, the benchmark is released under a commercially permissive license at https://hf.co/vidore.",
+        "tags": [
+            "RAG"
+        ]
+    },
+    {
+        "id": 13,
+        "index": 7,
+        "title": "SnapGen++: Unleashing Diffusion Transformers for Efficient High-Fidelity Image Generation on Edge Devices",
+        "author": [
+            "Dongting Hu",
+            "Aarush Gupta",
+            "Magzhan Gabidolla",
+            "Arpit Sahni",
+            "Huseyin Coskun",
+            "Yanyu Li",
+            "Yerlan Idelbayev",
+            "Ahsan Mahmood",
+            "Aleksei Lebedev",
+            "Dishani Lahiri",
+            "Anujraaj Goyal",
+            "Ju Hu",
+            "Mingming Gong",
+            "Sergey Tulyakov",
+            "Anil Kag"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.08303",
+        "abstract": "Recent advances in diffusion transformers (DiTs) have set new standards in image generation, yet remain impractical for on-device deployment due to their high computational and memory costs. In this work, we present an efficient DiT framework tailored for mobile and edge devices that achieves transformer-level generation quality under strict resource constraints. Our design combines three key components. First, we propose a compact DiT architecture with an adaptive global-local sparse attention mechanism that balances global context modeling and local detail preservation. Second, we propose an elastic training framework that jointly optimizes sub-DiTs of varying capacities within a unified supernetwork, allowing a single model to dynamically adjust for efficient inference across different hardware. Finally, we develop Knowledge-Guided Distribution Matching Distillation, a step-distillation pipeline that integrates the DMD objective with knowledge transfer from few-step teacher models, producing high-fidelity and low-latency generation (e.g., 4-step) suitable for real-time on-device use. Together, these contributions enable scalable, efficient, and high-quality diffusion models for deployment on diverse hardware.",
+        "tags": [
+            "DiT",
+            "Diffusion",
+            "Transformer"
+        ]
+    },
+    {
+        "id": 14,
+        "index": 6,
+        "title": "Motion Attribution for Video Generation",
+        "author": [
+            "Xindi Wu",
+            "Despoina Paschalidou",
+            "Jun Gao",
+            "Antonio Torralba",
+            "Laura Leal-TaixÃ©",
+            "Olga Russakovsky",
+            "Sanja Fidler",
+            "Jonathan Lorraine"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.08828",
+        "abstract": "Despite the rapid progress of video generation models, the role of data in influencing motion is poorly understood. We present Motive (MOTIon attribution for Video gEneration), a motion-centric, gradient-based data attribution framework that scales to modern, large, high-quality video datasets and models. We use this to study which fine-tuning clips improve or degrade temporal dynamics. Motive isolates temporal dynamics from static appearance via motion-weighted loss masks, yielding efficient and scalable motion-specific influence computation. On text-to-video models, Motive identifies clips that strongly affect motion and guides data curation that improves temporal consistency and physical plausibility. With Motive-selected high-influence data, our method improves both motion smoothness and dynamic degree on VBench, achieving a 74.1% human preference win rate compared with the pretrained base model. To our knowledge, this is the first framework to attribute motion rather than visual appearance in video generative models and to use it to curate fine-tuning data.",
+        "tags": [
+            "Text-to-Video",
+            "Video Generation"
+        ]
+    },
+    {
+        "id": 15,
+        "index": 6,
+        "title": "VLingNav: Embodied Navigation with Adaptive Reasoning and Visual-Assisted Linguistic Memory",
+        "author": [
+            "Shaoan Wang",
+            "Yuanfei Luo",
+            "Xingyu Chen",
+            "Aocheng Luo",
+            "Dongyue Li",
+            "Chang Liu",
+            "Sheng Chen",
+            "Yangang Zhang",
+            "Junzhi Yu"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.08665",
+        "abstract": "VLA models have shown promising potential in embodied navigation by unifying perception and planning while inheriting the strong generalization abilities of large VLMs. However, most existing VLA models rely on reactive mappings directly from observations to actions, lacking the explicit reasoning capabilities and persistent memory required for complex, long-horizon navigation tasks. To address these challenges, we propose VLingNav, a VLA model for embodied navigation grounded in linguistic-driven cognition. First, inspired by the dual-process theory of human cognition, we introduce an adaptive chain-of-thought mechanism, which dynamically triggers explicit reasoning only when necessary, enabling the agent to fluidly switch between fast, intuitive execution and slow, deliberate planning. Second, to handle long-horizon spatial dependencies, we develop a visual-assisted linguistic memory module that constructs a persistent, cross-modal semantic memory, enabling the agent to recall past observations to prevent repetitive exploration and infer movement trends for dynamic environments. For the training recipe, we construct Nav-AdaCoT-2.9M, the largest embodied navigation dataset with reasoning annotations to date, enriched with adaptive CoT annotations that induce a reasoning paradigm capable of adjusting both when to think and what to think about. Moreover, we incorporate an online expert-guided reinforcement learning stage, enabling the model to surpass pure imitation learning and to acquire more robust, self-explored navigation behaviors. Extensive experiments demonstrate that VLingNav achieves state-of-the-art performance across a wide range of embodied navigation benchmarks. Notably, VLingNav transfers to real-world robotic platforms in a zero-shot manner, executing various navigation tasks and demonstrating strong cross-domain and cross-task generalization.",
+        "tags": [
+            "CoT",
+            "RL",
+            "VLM"
+        ]
+    },
+    {
+        "id": 16,
+        "index": 5,
+        "title": "End-to-End Video Character Replacement without Structural Guidance",
+        "author": [
+            "Zhengbo Xu",
+            "Jie Ma",
+            "Ziheng Wang",
+            "Zhan Peng",
+            "Jun Liang",
+            "Jing Li"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.08587",
+        "abstract": "Controllable video character replacement with a user-provided identity remains a challenging problem due to the lack of paired video data. Prior works have predominantly relied on a reconstruction-based paradigm that requires per-frame segmentation masks and explicit structural guidance (e.g., skeleton, depth). This reliance, however, severely limits their generalizability in complex scenarios involving occlusions, character-object interactions, unusual poses, or challenging illumination, often leading to visual artifacts and temporal inconsistencies. In this paper, we propose MoCha, a pioneering framework that bypasses these limitations by requiring only a single arbitrary frame mask. To effectively adapt the multi-modal input condition and enhance facial identity, we introduce a condition-aware RoPE and employ an RL-based post-training stage. Furthermore, to overcome the scarcity of qualified paired-training data, we propose a comprehensive data construction pipeline. Specifically, we design three specialized datasets: a high-fidelity rendered dataset built with Unreal Engine 5 (UE5), an expression-driven dataset synthesized by current portrait animation techniques, and an augmented dataset derived from existing video-mask pairs. Extensive experiments demonstrate that our method substantially outperforms existing state-of-the-art approaches. We will release the code to facilitate further research. Please refer to our project page for more details: http://orange-3dv-team.github.io/MoCha",
+        "tags": [
+            "RL",
+            "RoPE",
+            "Segmentation"
+        ]
+    },
+    {
+        "id": 17,
+        "index": 5,
+        "title": "JudgeRLVR: Judge First, Generate Second for Efficient Reasoning",
+        "author": [
+            "Jiangshan Duo",
+            "Hanyu Li",
+            "Hailin Zhang",
+            "Yudong Wang",
+            "Sujian Li",
+            "Liang Zhao"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.08468",
+        "abstract": "Reinforcement Learning with Verifiable Rewards (RLVR) has become a standard paradigm for reasoning in Large Language Models. However, optimizing solely for final-answer correctness often drives models into aimless, verbose exploration, where they rely on exhaustive trial-and-error tactics rather than structured planning to reach solutions. While heuristic constraints like length penalties can reduce verbosity, they often truncate essential reasoning steps, creating a difficult trade-off between efficiency and verification. In this paper, we argue that discriminative capability is a prerequisite for efficient generation: by learning to distinguish valid solutions, a model can internalize a guidance signal that prunes the search space. We propose JudgeRLVR, a two-stage judge-then-generate paradigm. In the first stage, we train the model to judge solution responses with verifiable answers. In the second stage, we fine-tune the same model with vanilla generating RLVR initialized from the judge. Compared to Vanilla RLVR using the same math-domain training data, JudgeRLVR achieves a better quality--efficiency trade-off for Qwen3-30B-A3B: on in-domain math, it delivers about +3.7 points average accuracy gain with -42\\% average generation length; on out-of-domain benchmarks, it delivers about +4.5 points average accuracy improvement, demonstrating enhanced generalization.",
+        "tags": [
+            "LLM",
+            "RL"
+        ]
+    },
+    {
+        "id": 18,
+        "index": 5,
+        "title": "EpiCaR: Knowing What You Don't Know Matters for Better Reasoning in LLMs",
+        "author": [
+            "Jewon Yeom",
+            "Jaewon Sok",
+            "Seonghyeon Park",
+            "Jeongjae Park",
+            "Taesup Kim"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.06786",
+        "abstract": "Improving the reasoning abilities of large language models (LLMs) has largely relied on iterative self-training with model-generated data. While effective at boosting accuracy, existing approaches primarily reinforce successful reasoning paths, incurring a substantial calibration cost: models become overconfident and lose the ability to represent uncertainty. This failure has been characterized as a form of model collapse in alignment, where predictive distributions degenerate toward low-variance point estimates. We address this issue by reframing reasoning training as an epistemic learning problem, in which models must learn not only how to reason, but also when their reasoning should be trusted. We propose epistemically-calibrated reasoning (EpiCaR) as a training objective that jointly optimizes reasoning performance and calibration, and instantiate it within an iterative supervised fine-tuning framework using explicit self-evaluation signals. Experiments on Llama-3 and Qwen-3 families demonstrate that our approach achieves Pareto-superiority over standard baselines in both accuracy and calibration, particularly in models with sufficient reasoning capacity (e.g., 3B+). This framework generalizes effectively to OOD mathematical reasoning (GSM8K) and code generation (MBPP). Ultimately, our approach enables a 3X reduction in inference compute, matching the K=30 performance of STaR with only K=10 samples in capable models.",
+        "tags": [
+            "LLM",
+            "LLaMA",
+            "Qwen"
+        ]
+    },
+    {
+        "id": 19,
+        "index": 4,
+        "title": "UM-Text: A Unified Multimodal Model for Image Understanding",
+        "author": [
+            "Lichen Ma",
+            "Xiaolong Fu",
+            "Gaojing Zhou",
+            "Zipeng Guo",
+            "Ting Zhu",
+            "Yichun Liu",
+            "Yu Shi",
+            "Jason Li",
+            "Junshi Huang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.08321",
+        "abstract": "With the rapid advancement of image generation, visual text editing using natural language instructions has received increasing attention. The main challenge of this task is to fully understand the instruction and reference image, and thus generate visual text that is style-consistent with the image. Previous methods often involve complex steps of specifying the text content and attributes, such as font size, color, and layout, without considering the stylistic consistency with the reference image. To address this, we propose UM-Text, a unified multimodal model for context understanding and visual text editing by natural language instructions. Specifically, we introduce a Visual Language Model (VLM) to process the instruction and reference image, so that the text content and layout can be elaborately designed according to the context information. To generate an accurate and harmonious visual text image, we further propose the UM-Encoder to combine the embeddings of various condition information, where the combination is automatically configured by VLM according to the input instruction. During training, we propose a regional consistency loss to offer more effective supervision for glyph generation on both latent and RGB space, and design a tailored three-stage training strategy to further enhance model performance. In addition, we contribute the UM-DATA-200K, a large-scale visual text image dataset on diverse scenes for model training. Extensive qualitative and quantitative results on multiple public benchmarks demonstrate that our method achieves state-of-the-art performance.",
+        "tags": [
+            "VLM"
+        ]
+    },
+    {
+        "id": 20,
+        "index": 4,
+        "title": "VideoLoom: A Video Large Language Model for Joint Spatial-Temporal Understanding",
+        "author": [
+            "Jiapeng Shi",
+            "Junke Wang",
+            "Zuyao You",
+            "Bo He",
+            "Zuxuan Wu"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.07290",
+        "abstract": "This paper presents VideoLoom, a unified Video Large Language Model (Video LLM) for joint spatial-temporal understanding. To facilitate the development of fine-grained spatial and temporal localization capabilities, we curate LoomData-8.7k, a human-centric video dataset with temporally grounded and spatially localized captions. With this, VideoLoom achieves state-of-the-art or highly competitive performance across a variety of spatial and temporal benchmarks (e.g., 63.1 J&F on ReVOS for referring video object segmentation, and 48.3 R1@0.7 on Charades-STA for temporal grounding). In addition, we introduce LoomBench, a novel benchmark consisting of temporal, spatial, and compositional video-question pairs, enabling a comprehensive evaluation of Video LLMs from diverse aspects. Collectively, these contributions offer a universal and effective suite for joint spatial-temporal video understanding, setting a new standard in multimodal intelligence.",
+        "tags": [
+            "LLM",
+            "Segmentation"
+        ]
+    },
+    {
+        "id": 21,
+        "index": 2,
+        "title": "Aligning Text, Code, and Vision: A Multi-Objective Reinforcement Learning Framework for Text-to-Visualization",
+        "author": [
+            "Mizanur Rahman",
+            "Mohammed Saidul Islam",
+            "Md Tahmid Rahman Laskar",
+            "Shafiq Joty",
+            "Enamul Hoque"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.04582",
+        "abstract": "Text-to-Visualization (Text2Vis) systems translate natural language queries over tabular data into concise answers and executable visualizations. While closed-source LLMs generate functional code, the resulting charts often lack semantic alignment and clarity, qualities that can only be assessed post-execution. Open-source models struggle even more, frequently producing non-executable or visually poor outputs. Although supervised fine-tuning can improve code executability, it fails to enhance overall visualization quality, as traditional SFT loss cannot capture post-execution feedback. To address this gap, we propose RL-Text2Vis, the first reinforcement learning framework for Text2Vis generation. Built on Group Relative Policy Optimization (GRPO), our method uses a novel multi-objective reward that jointly optimizes textual accuracy, code validity, and visualization quality using post-execution feedback. By training Qwen2.5 models (7B and 14B), RL-Text2Vis achieves a 22% relative improvement in chart quality over GPT-4o on the Text2Vis benchmark and boosts code execution success from 78% to 97% relative to its zero-shot baseline. Our models significantly outperform strong zero-shot and supervised baselines and also demonstrate robust generalization to out-of-domain datasets like VIS-Eval and NVBench. These results establish GRPO as an effective strategy for structured, multimodal reasoning in visualization generation. We release our code at https://github.com/vis-nlp/RL-Text2Vis.",
+        "tags": [
+            "GPT",
+            "GRPO",
+            "LLM",
+            "RL"
+        ]
+    },
+    {
+        "id": 22,
+        "index": 1,
+        "title": "GeoMotionGPT: Geometry-Aligned Motion Understanding with Large Language Models",
+        "author": [
+            "Zhankai Ye",
+            "Bofan Li",
+            "Yukai Jin",
+            "Shuoqiu Li",
+            "Wei Wang",
+            "Yanfu Zhang",
+            "Shangqian Gao",
+            "Xin Liu"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.07632",
+        "abstract": "Discrete motion tokenization has recently enabled Large Language Models (LLMs) to serve as versatile backbones for motion understanding and motion-language reasoning. However, existing pipelines typically decouple motion quantization from semantic embedding learning, linking them solely via token IDs. This approach fails to effectively align the intrinsic geometry of the motion space with the embedding space, thereby hindering the LLM's capacity for nuanced motion reasoning. We argue that alignment is most effective when both modalities share a unified geometric basis. Therefore, instead of forcing the LLM to reconstruct the complex geometry among motion tokens from scratch, we present a novel framework that explicitly enforces orthogonality on both the motion codebook and the LLM embedding space, ensuring that their relational structures naturally mirror each other. Specifically, we employ a decoder-only quantizer with Gumbel-Softmax for differentiable training and balanced codebook usage. To bridge the modalities, we use a sparse projection that maps motion codes into the LLM embedding space while preserving orthogonality. Finally, a two-stage orthonormal regularization schedule enforces soft constraints during tokenizer training and LLM fine-tuning to maintain geometric alignment without hindering semantic adaptation. Extensive experiments on HumanML3D demonstrate that our framework achieves a 20% performance improvement over current state-of-the-art methods, validating that a unified geometric basis effectively empowers the LLM for nuanced motion reasoning.",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 23,
+        "index": 1,
+        "title": "Towards Comprehensive Stage-wise Benchmarking of Large Language Models in Fact-Checking",
+        "author": [
+            "Hongzhan Lin",
+            "Zixin Chen",
+            "Zhiqi Shen",
+            "Ziyang Luo",
+            "Zhen Ye",
+            "Jing Ma",
+            "Tat-Seng Chua",
+            "Guandong Xu"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.02669",
+        "abstract": "Large Language Models (LLMs) are increasingly deployed in real-world fact-checking systems, yet existing evaluations focus predominantly on claim verification and overlook the broader fact-checking workflow, including claim extraction and evidence retrieval. This narrow focus prevents current benchmarks from revealing systematic reasoning failures, factual blind spots, and robustness limitations of modern LLMs. To bridge this gap, we present FactArena, a fully automated arena-style evaluation framework that conducts comprehensive, stage-wise benchmarking of LLMs across the complete fact-checking pipeline. FactArena integrates three key components: (i) an LLM-driven fact-checking process that standardizes claim decomposition, evidence retrieval via tool-augmented interactions, and justification-based verdict prediction; (ii) an arena-styled judgment mechanism guided by consolidated reference guidelines to ensure unbiased and consistent pairwise comparisons across heterogeneous judge agents; and (iii) an arena-driven claim-evolution module that adaptively generates more challenging and semantically controlled claims to probe LLMs' factual robustness beyond fixed seed data. Across 16 state-of-the-art LLMs spanning seven model families, FactArena produces stable and interpretable rankings. Our analyses further reveal significant discrepancies between static claim-verification accuracy and end-to-end fact-checking competence, highlighting the necessity of holistic evaluation. The proposed framework offers a scalable and trustworthy paradigm for diagnosing LLMs' factual reasoning, guiding future model development, and advancing the reliable deployment of LLMs in safety-critical fact-checking applications.",
+        "tags": [
+            "LLM"
+        ]
+    }
+]
