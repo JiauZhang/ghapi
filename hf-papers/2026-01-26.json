@@ -1,0 +1,473 @@
+[
+    {
+        "id": 1,
+        "index": 136,
+        "title": "LongCat-Flash-Thinking-2601 Technical Report",
+        "author": [
+            "Meituan LongCat Team",
+            "Anchun Gui",
+            "Bei Li",
+            "Bingyang Tao",
+            "Bole Zhou",
+            "Borun Chen",
+            "Chao Zhang",
+            "Chao Zhang",
+            "Chen Gao",
+            "Chen Zhang",
+            "Chengcheng Han",
+            "Chenhui Yang",
+            "Chuyu Zhang",
+            "Cong Chen",
+            "Cunguang Wang",
+            "Daoru Pan",
+            "Defei Bu",
+            "Dengchang Zhao",
+            "Di Xiu",
+            "Dishan Liu",
+            "Dongyu Ru",
+            "Dunwei Tu",
+            "Fan Wu",
+            "Fengcheng Yuan",
+            "Fengcun Li",
+            "Gang Xu",
+            "Guanyu Wu",
+            "Guoyuan Lin",
+            "Haibin Wang",
+            "Hansi Yang",
+            "Hao Yang",
+            "Haonan Yan",
+            "Haoxiang Ma",
+            "Haoxing Wen",
+            "Hongyan Hao",
+            "Hongyin Tang",
+            "Hongyu Zang",
+            "Hongzhi Ni",
+            "Hui Su",
+            "Jiacheng Zhang",
+            "Jiahong Zhou",
+            "Jiahuan Li",
+            "Jiaming Wang",
+            "Jian Yang",
+            "Jianfei Zhang",
+            "Jianhao Xu",
+            "Jianing Wang",
+            "Jiapeng Zhu",
+            "Jiaqi Sun",
+            "Jiarong Shi",
+            "Jiarui Zhao",
+            "Jingang Wang",
+            "Jinluan Yang",
+            "Jinrui Ding",
+            "Jinwei Xiao",
+            "Jiyuan He",
+            "Juncan Xu",
+            "Kefeng Zhang",
+            "Keheng Wang",
+            "Li Wei",
+            "Lianhui Ma",
+            "Lin Qiu",
+            "Lingbing Kong",
+            "Lingchuan Liu",
+            "Linsen Guo",
+            "Mengshen Zhu",
+            "Mengxia Shen",
+            "Mingyang Zhu",
+            "Peiguang Li",
+            "Peng Pei",
+            "Pengcheng Jia",
+            "Pengtao Zhang",
+            "Peng Zhao",
+            "Qi Gu",
+            "Qiong Huang",
+            "Qiyuan Duan",
+            "Quanchi Weng",
+            "Rongxiang Weng",
+            "Rongzhi Zhang",
+            "Rumei Li",
+            "Shanglin Lei",
+            "Shengnan An",
+            "Shijun Dai",
+            "Shuaikang Liu",
+            "Shuang Zhou",
+            "Shuo Wang",
+            "Songyuan Zhao",
+            "Tao Liang",
+            "Tianhao Hu",
+            "Tianze Chen",
+            "Wei Liu",
+            "Wei Shi",
+            "Wei Wang",
+            "Weifeng Tang",
+            "Wenjie Shi",
+            "Wenlong Zhu",
+            "Wentao Chen",
+            "Wentao Shi",
+            "Xi Su",
+            "Xiangcheng Liu",
+            "\n    et al. (62 additional authors not shown)"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.16725",
+        "abstract": "We introduce LongCat-Flash-Thinking-2601, a 560-billion-parameter open-source Mixture-of-Experts (MoE) reasoning model with superior agentic reasoning capability. LongCat-Flash-Thinking-2601 achieves state-of-the-art performance among open-source models on a wide range of agentic benchmarks, including agentic search, agentic tool use, and tool-integrated reasoning. Beyond benchmark performance, the model demonstrates strong generalization to complex tool interactions and robust behavior under noisy real-world environments. Its advanced capability stems from a unified training framework that combines domain-parallel expert training with subsequent fusion, together with an end-to-end co-design of data construction, environments, algorithms, and infrastructure spanning from pre-training to post-training. In particular, the model's strong generalization capability in complex tool-use are driven by our in-depth exploration of environment scaling and principled task construction. To optimize long-tailed, skewed generation and multi-turn agentic interactions, and to enable stable training across over 10,000 environments spanning more than 20 domains, we systematically extend our asynchronous reinforcement learning framework, DORA, for stable and efficient large-scale multi-environment training. Furthermore, recognizing that real-world tasks are inherently noisy, we conduct a systematic analysis and decomposition of real-world noise patterns, and design targeted training procedures to explicitly incorporate such imperfections into the training process, resulting in improved robustness for real-world applications. To further enhance performance on complex reasoning tasks, we introduce a Heavy Thinking mode that enables effective test-time scaling by jointly expanding reasoning depth and width through intensive parallel thinking.",
+        "tags": [
+            "MoE",
+            "RL"
+        ]
+    },
+    {
+        "id": 2,
+        "index": 62,
+        "title": "SWE-Pruner: Self-Adaptive Context Pruning for Coding Agents",
+        "author": [
+            "Yuhang Wang",
+            "Yuling Shi",
+            "Mo Yang",
+            "Rongrui Zhang",
+            "Shilin He",
+            "Heng Lian",
+            "Yuting Chen",
+            "Siyu Ye",
+            "Kai Cai",
+            "Xiaodong Gu"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.16746",
+        "abstract": "LLM agents have demonstrated remarkable capabilities in software development, but their performance is hampered by long interaction contexts, which incur high API costs and latency. While various context compression approaches such as LongLLMLingua have emerged to tackle this challenge, they typically rely on fixed metrics such as PPL, ignoring the task-specific nature of code understanding. As a result, they frequently disrupt syntactic and logical structure and fail to retain critical implementation details. In this paper, we propose SWE-Pruner, a self-adaptive context pruning framework tailored for coding agents. Drawing inspiration from how human programmers \"selectively skim\" source code during development and debugging, SWE-Pruner performs task-aware adaptive pruning for long contexts. Given the current task, the agent formulates an explicit goal (e.g., \"focus on error handling\") as a hint to guide the pruning targets. A lightweight neural skimmer (0.6B parameters) is trained to dynamically select relevant lines from the surrounding context given the goal. Evaluations across four benchmarks and multiple models validate SWE-Pruner's effectiveness in various scenarios, achieving 23-54% token reduction on agent tasks like SWE-Bench Verified and up to 14.84x compression on single-turn tasks like LongCodeQA with minimal performance impact.",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 3,
+        "index": 52,
+        "title": "TwinBrainVLA: Unleashing the Potential of Generalist VLMs for Embodied Tasks via Asymmetric Mixture-of-Transformers",
+        "author": [
+            "Bin Yu",
+            "Shijie Lian",
+            "Xiaopeng Lin",
+            "Yuliang Wei",
+            "Zhaolong Shen",
+            "Changti Wu",
+            "Yuzhuo Miao",
+            "Xinming Wang",
+            "Bailing Wang",
+            "Cong Huang",
+            "Kai Chen"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.14133",
+        "abstract": "Standard Vision-Language-Action (VLA) models typically fine-tune a monolithic Vision-Language Model (VLM) backbone explicitly for robotic control. However, this approach creates a critical tension between maintaining high-level general semantic understanding and learning low-level, fine-grained sensorimotor skills, often leading to \"catastrophic forgetting\" of the model's open-world capabilities. To resolve this conflict, we introduce TwinBrainVLA, a novel architecture that coordinates a generalist VLM retaining universal semantic understanding and a specialist VLM dedicated to embodied proprioception for joint robotic control. TwinBrainVLA synergizes a frozen \"Left Brain\", which retains robust general visual reasoning, with a trainable \"Right Brain\", specialized for embodied perception, via a novel Asymmetric Mixture-of-Transformers (AsyMoT) mechanism. This design allows the Right Brain to dynamically query semantic knowledge from the frozen Left Brain and fuse it with proprioceptive states, providing rich conditioning for a Flow-Matching Action Expert to generate precise continuous controls. Extensive experiments on SimplerEnv and RoboCasa benchmarks demonstrate that TwinBrainVLA achieves superior manipulation performance compared to state-of-the-art baselines while explicitly preserving the comprehensive visual understanding capabilities of the pre-trained VLM, offering a promising direction for building general-purpose robots that simultaneously achieve high-level semantic understanding and low-level physical dexterity.",
+        "tags": [
+            "Flow Matching",
+            "VLM"
+        ]
+    },
+    {
+        "id": 4,
+        "index": 23,
+        "title": "VisGym: Diverse, Customizable, Scalable Environments for Multimodal Agents",
+        "author": [
+            "Zirui Wang",
+            "Junyi Zhang",
+            "Jiaxin Ge",
+            "Long Lian",
+            "Letian Fu",
+            "Lisa Dunlap",
+            "Ken Goldberg",
+            "XuDong Wang",
+            "Ion Stoica",
+            "David M. Chan",
+            "Sewon Min",
+            "Joseph E. Gonzalez"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.16973",
+        "abstract": "Modern Vision-Language Models (VLMs) remain poorly characterized in multi-step visual interactions, particularly in how they integrate perception, memory, and action over long horizons. We introduce VisGym, a gymnasium of 17 environments for evaluating and training VLMs. The suite spans symbolic puzzles, real-image understanding, navigation, and manipulation, and provides flexible controls over difficulty, input representation, planning horizon, and feedback. We also provide multi-step solvers that generate structured demonstrations, enabling supervised finetuning. Our evaluations show that all frontier models struggle in interactive settings, achieving low success rates in both the easy (46.6%) and hard (26.0%) configurations. Our experiments reveal notable limitations: models struggle to effectively leverage long context, performing worse with an unbounded history than with truncated windows. Furthermore, we find that several text-based symbolic tasks become substantially harder once rendered visually. However, explicit goal observations, textual feedback, and exploratory demonstrations in partially observable or unknown-dynamics settings for supervised finetuning yield consistent gains, highlighting concrete failure modes and pathways for improving multi-step visual decision-making. Code, data, and models can be found at: https://visgym.github.io/.",
+        "tags": [
+            "VLM"
+        ]
+    },
+    {
+        "id": 5,
+        "index": 14,
+        "title": "Memory-V2V: Augmenting Video-to-Video Diffusion Models with Memory",
+        "author": [
+            "Dohun Lee",
+            "Chun-Hao Paul Huang",
+            "Xuelin Chen",
+            "Jong Chul Ye",
+            "Duygu Ceylan",
+            "Hyeonho Jeong"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.16296",
+        "abstract": "Recent foundational video-to-video diffusion models have achieved impressive results in editing user provided videos by modifying appearance, motion, or camera movement. However, real-world video editing is often an iterative process, where users refine results across multiple rounds of interaction. In this multi-turn setting, current video editors struggle to maintain cross-consistency across sequential edits. In this work, we tackle, for the first time, the problem of cross-consistency in multi-turn video editing and introduce Memory-V2V, a simple, yet effective framework that augments existing video-to-video models with explicit memory. Given an external cache of previously edited videos, Memory-V2V employs accurate retrieval and dynamic tokenization strategies to condition the current editing step on prior results. To further mitigate redundancy and computational overhead, we propose a learnable token compressor within the DiT backbone that compresses redundant conditioning tokens while preserving essential visual cues, achieving an overall speedup of 30%. We validate Memory-V2V on challenging tasks including video novel view synthesis and text-conditioned long video editing. Extensive experiments show that Memory-V2V produces videos that are significantly more cross-consistent with minimal computational overhead, while maintaining or even improving task-specific performance over state-of-the-art baselines. Project page: https://dohunlee1.github.io/MemoryV2V",
+        "tags": [
+            "DiT",
+            "Diffusion",
+            "Video Editing"
+        ]
+    },
+    {
+        "id": 6,
+        "index": 14,
+        "title": "Inference-Time Scaling of Verification: Self-Evolving Deep Research Agents via Test-Time Rubric-Guided Verification",
+        "author": [
+            "Yuxuan Wan",
+            "Tianqing Fang",
+            "Zaitang Li",
+            "Yintong Huo",
+            "Wenxuan Wang",
+            "Haitao Mi",
+            "Dong Yu",
+            "Michael R. Lyu"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.15808",
+        "abstract": "Recent advances in Deep Research Agents (DRAs) are transforming automated knowledge discovery and problem-solving. While the majority of existing efforts focus on enhancing policy capabilities via post-training, we propose an alternative paradigm: self-evolving the agent's ability by iteratively verifying the policy model's outputs, guided by meticulously crafted rubrics. This approach gives rise to the inference-time scaling of verification, wherein an agent self-improves by evaluating its generated answers to produce iterative feedback and refinements. We derive the rubrics based on an automatically constructed DRA Failure Taxonomy, which systematically classifies agent failures into five major categories and thirteen sub-categories. We present DeepVerifier, a rubrics-based outcome reward verifier that leverages the asymmetry of verification and outperforms vanilla agent-as-judge and LLM judge baselines by 12%-48% in meta-evaluation F1 score. To enable practical self-evolution, DeepVerifier integrates as a plug-and-play module during test-time inference. The verifier produces detailed rubric-based feedback, which is fed back to the agent for iterative bootstrapping, refining responses without additional training. This test-time scaling delivers 8%-11% accuracy gains on challenging subsets of GAIA and XBench-DeepResearch when powered by capable closed-source LLMs. Finally, to support open-source advancement, we release DeepVerifier-4K, a curated supervised fine-tuning dataset of 4,646 high-quality agent steps focused on DRA verification. These examples emphasize reflection and self-critique, enabling open models to develop robust verification capabilities.",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 7,
+        "index": 13,
+        "title": "Jet-RL: Enabling On-Policy FP8 Reinforcement Learning with Unified Training and Rollout Precision Flow",
+        "author": [
+            "Haocheng Xi",
+            "Charlie Ruan",
+            "Peiyuan Liao",
+            "Yujun Lin",
+            "Han Cai",
+            "Yilong Zhao",
+            "Shuo Yang",
+            "Kurt Keutzer",
+            "Song Han",
+            "Ligeng Zhu"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.14243",
+        "abstract": "Reinforcement learning (RL) is essential for enhancing the complex reasoning capabilities of large language models (LLMs). However, existing RL training pipelines are computationally inefficient and resource-intensive, with the rollout phase accounting for over 70% of total training time. Quantized RL training, particularly using FP8 precision, offers a promising approach to mitigating this bottleneck. A commonly adopted strategy applies FP8 precision during rollout while retaining BF16 precision for training. In this work, we present the first comprehensive study of FP8 RL training and demonstrate that the widely used BF16-training + FP8-rollout strategy suffers from severe training instability and catastrophic accuracy collapse under long-horizon rollouts and challenging tasks. Our analysis shows that these failures stem from the off-policy nature of the approach, which introduces substantial numerical mismatch between training and inference. Motivated by these observations, we propose Jet-RL, an FP8 RL training framework that enables robust and stable RL optimization. The key idea is to adopt a unified FP8 precision flow for both training and rollout, thereby minimizing numerical discrepancies and eliminating the need for inefficient inter-step calibration. Extensive experiments validate the effectiveness of Jet-RL: our method achieves up to 33% speedup in the rollout phase, up to 41% speedup in the training phase, and a 16% end-to-end speedup over BF16 training, while maintaining stable convergence across all settings and incurring negligible accuracy degradation.",
+        "tags": [
+            "LLM",
+            "RL"
+        ]
+    },
+    {
+        "id": 8,
+        "index": 9,
+        "title": "SALAD: Achieve High-Sparsity Attention via Efficient Linear Attention Tuning for Video Diffusion Transformer",
+        "author": [
+            "Tongcheng Fang",
+            "Hanling Zhang",
+            "Ruiqi Xie",
+            "Zhuo Han",
+            "Xin Tao",
+            "Tianchen Zhao",
+            "Pengfei Wan",
+            "Wenbo Ding",
+            "Wanli Ouyang",
+            "Xuefei Ning",
+            "Yu Wang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.16515",
+        "abstract": "Diffusion Transformers have recently demonstrated remarkable performance in video generation. However, the long input sequences result in high computational latency due to the quadratic complexity of full attention. Various sparse attention mechanisms have been proposed. Training-free sparse attention is constrained by limited sparsity and thus offers modest acceleration, whereas training-based methods can reach much higher sparsity but demand substantial data and computation for training. In this work, we propose SALAD, introducing a lightweight linear attention branch in parallel with the sparse attention. By incorporating an input-dependent gating mechanism to finely balance the two branches, our method attains 90% sparsity and 1.72x inference speedup, while maintaining generation quality comparable to the full attention baseline. Moreover, our finetuning process is highly efficient, requiring only 2,000 video samples and 1,600 training steps with a batch size of 8.",
+        "tags": [
+            "DiT",
+            "Diffusion",
+            "Transformer",
+            "Video Generation"
+        ]
+    },
+    {
+        "id": 9,
+        "index": 8,
+        "title": "GameTalk: Training LLMs for Strategic Conversation",
+        "author": [
+            "Victor Conchello Vendrell",
+            "Max Ruiz Luyten",
+            "Mihaela van der Schaar"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.16276",
+        "abstract": "Strategic decision-making in multi-agent settings is a key challenge for large language models (LLMs), particularly when coordination and negotiation must unfold over extended conversations. While recent work has explored the use of LLMs in isolated decision tasks, little attention has been given to optimizing long-term objectives through dialogue. We introduce \\textbf{GameTalk}, a framework for training LLMs to make strategic decisions via multi-turn interactions. Unlike prior work that focuses on single-turn objectives or static action prediction, we train LLMs to optimize a global objective across full conversations. We achieve this by adapting fine-tuning methods like GRPO, DPO, and STaR to incorporate reward signals that depend on the entire interaction. We evaluate this approach on a suite of increasingly complex games, designed to stress different aspects of reasoning, coordination, and opponent modeling. Our results show that GameTalk significantly outperforms untrained models, especially under reward shaping, with DPO consistently yielding the strongest gains. These findings position conversational fine-tuning as a promising path for LLMs to reason, negotiate, and act in interactive environments.",
+        "tags": [
+            "DPO",
+            "GRPO",
+            "LLM"
+        ]
+    },
+    {
+        "id": 10,
+        "index": 8,
+        "title": "MeepleLM: A Virtual Playtester Simulating Diverse Subjective Experiences",
+        "author": [
+            "Zizhen Li",
+            "Chuanhao Li",
+            "Yibin Wang",
+            "Yukang Feng",
+            "Jianwen Sun",
+            "Jiaxin Ai",
+            "Fanrui Zhang",
+            "Mingzhu Sun",
+            "Yifei Huang",
+            "Kaipeng Zhang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.07251",
+        "abstract": "Recent advancements have expanded the role of Large Language Models in board games from playing agents to creative co-designers. However, a critical gap remains: current systems lack the capacity to offer constructive critique grounded in the emergent user experience. Bridging this gap is fundamental for harmonizing Human-AI collaboration, as it empowers designers to refine their creations via external perspectives while steering models away from biased or unpredictable outcomes. Automating critique for board games presents two challenges: inferring the latent dynamics connecting rules to gameplay without an explicit engine, and modeling the subjective heterogeneity of diverse player groups. To address these, we curate a dataset of 1,727 structurally corrected rulebooks and 150K reviews selected via quality scoring and facet-aware sampling. We augment this data with Mechanics-Dynamics-Aesthetics (MDA) reasoning to explicitly bridge the causal gap between written rules and player experience. We further distill player personas and introduce MeepleLM, a specialized model that internalizes persona-specific reasoning patterns to accurately simulate the subjective feedback of diverse player archetypes. Experiments demonstrate that MeepleLM significantly outperforms latest commercial models (e.g., GPT-5.1, Gemini3-Pro) in community alignment and critique quality, achieving a 70% preference rate in user studies assessing utility. MeepleLM serves as a reliable virtual playtester for general interactive systems, marking a pivotal step towards audience-aligned, experience-aware Human-AI collaboration.",
+        "tags": [
+            "GPT",
+            "LLM"
+        ]
+    },
+    {
+        "id": 11,
+        "index": 7,
+        "title": "DSGym: A Holistic Framework for Evaluating and Training Data Science Agents",
+        "author": [
+            "Fan Nie",
+            "Junlin Wang",
+            "Harper Hua",
+            "Federico Bianchi",
+            "Yongchan Kwon",
+            "Zhenting Qi",
+            "Owen Queen",
+            "Shang Zhu",
+            "James Zou"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.16344",
+        "abstract": "Data science agents promise to accelerate discovery and insight-generation by turning data into executable analyses and findings. Yet existing data science benchmarks fall short due to fragmented evaluation interfaces that make cross-benchmark comparison difficult, narrow task coverage and a lack of rigorous data grounding. In particular, we show that a substantial portion of tasks in current benchmarks can be solved without using the actual data. To address these limitations, we introduce DSGym, a standardized framework for evaluating and training data science agents in self-contained execution environments. Unlike static benchmarks, DSGym provides a modular architecture that makes it easy to add tasks, agent scaffolds, and tools, positioning it as a live, extensible testbed. We curate DSGym-Tasks, a holistic task suite that standardizes and refines existing benchmarks via quality and shortcut solvability filtering. We further expand coverage with (1) DSBio: expert-derived bioinformatics tasks grounded in literature and (2) DSPredict: challenging prediction tasks spanning domains such as computer vision, molecular prediction, and single-cell perturbation. Beyond evaluation, DSGym enables agent training via execution-verified data synthesis pipeline. As a case study, we build a 2,000-example training set and trained a 4B model in DSGym that outperforms GPT-4o on standardized analysis benchmarks. Overall, DSGym enables rigorous end-to-end measurement of whether agents can plan, implement, and validate data analyses in realistic scientific context.",
+        "tags": [
+            "GPT"
+        ]
+    },
+    {
+        "id": 12,
+        "index": 7,
+        "title": "Mecellem Models: Turkish Models Trained from Scratch and Continually Pre-trained for the Legal Domain",
+        "author": [
+            "ÃzgÃ¼r UÄur",
+            "Mahmut GÃ¶ksu",
+            "Mahmut Ãimen",
+            "Musa YÄ±lmaz",
+            "Esra Åavirdi",
+            "Alp Talha Demir",
+            "Rumeysa GÃ¼llÃ¼ce",
+            "Ä°clal Ãetin",
+            "Ãmer Can SaÄbaÅ"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.16018",
+        "abstract": "This paper presents Mecellem models, a framework for developing specialized language models for the Turkish legal domain through domain adaptation strategies. We make two contributions: (1)Encoder Model Pre-trained from Scratch: ModernBERT-based bidirectional encoders pre-trained on a Turkish-dominant corpus of 112.7 billion tokens. We implement a checkpoint selection strategy that evaluates downstream retrieval performance throughout training, revealing that optimal checkpoints achieve best retrieval scores before pre-training loss reaches its minimum. Our encoder models achieve top-3 rankings on the Turkish retrieval leaderboard, with smaller models (155M parameters) achieving comparable performance to larger reference models (307M-567M parameters). Our approach achieves 92.36% production efficiency compared to state-of-the-art models (embeddinggemma-300m: 100.00%, BAAI/bge-m3: 99.54%, newmindai/bge-m3-stsb: 94.38%), ranking fourth overall despite requiring less computational resources. SOTA models rely on multi-stage, computationally intensive training pipelines, making our single-stage pre-training followed by efficient post-training approach a cost-effective alternative; (2)Decoder Model with Continual Pre-training (CPT): Qwen3-1.7B and Qwen3-4B models adapted to Turkish legal domain through controlled curriculum learning. Four-phase CPT with optimal sample ratios enables gradual transition from general language knowledge to specialized legal terminology and long-context reasoning. This approach achieves 36.2% perplexity reduction on Turkish legal text, demonstrating domain adaptation gains.",
+        "tags": []
+    },
+    {
+        "id": 13,
+        "index": 5,
+        "title": "Endless Terminals: Scaling RL Environments for Terminal Agents",
+        "author": [
+            "Kanishk Gandhi",
+            "Shivam Garg",
+            "Noah D. Goodman",
+            "Dimitris Papailiopoulos"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.16443",
+        "abstract": "Environments are the bottleneck for self-improving agents. Current terminal benchmarks were built for evaluation, not training; reinforcement learning requires a scalable pipeline, not just a dataset. We introduce Endless Terminals, a fully autonomous pipeline that procedurally generates terminal-use tasks without human annotation. The pipeline has four stages: generating diverse task descriptions, building and validating containerized environments, producing completion tests, and filtering for solvability. From this pipeline we obtain 3255 tasks spanning file operations, log management, data processing, scripting, and database operations. We train agents using vanilla PPO with binary episode level rewards and a minimal interaction loop: no retrieval, multi-agent coordination, or specialized tools. Despite this simplicity, models trained on Endless Terminals show substantial gains: on our held-out dev set, Llama-3.2-3B improves from 4.0% to 18.2%, Qwen2.5-7B from 10.7% to 53.3%, and Qwen3-8B-openthinker-sft from 42.6% to 59.0%. These improvements transfer to human-curated benchmarks: models trained on Endless Terminals show substantial gains on held out human curated benchmarks: on TerminalBench 2.0, Llama-3.2-3B improves from 0.0% to 2.2%, Qwen2.5-7B from 2.2% to 3.4%, and Qwen3-8B-openthinker-sft from 1.1% to 6.7%, in each case outperforming alternative approaches including models with more complex agentic scaffolds. These results demonstrate that simple RL succeeds when environments scale.",
+        "tags": [
+            "LLaMA",
+            "PPO",
+            "RL"
+        ]
+    },
+    {
+        "id": 14,
+        "index": 4,
+        "title": "ChartVerse: Scaling Chart Reasoning via Reliable Programmatic Synthesis from Scratch",
+        "author": [
+            "Zheng Liu",
+            "Honglin Lin",
+            "Chonghan Qin",
+            "Xiaoyang Wang",
+            "Xin Gao",
+            "Yu Li",
+            "Mengzhang Cai",
+            "Yun Zhu",
+            "Zhanping Zhong",
+            "Qizhi Pei",
+            "Zhuoshi Pan",
+            "Xiaoran Shang",
+            "Bin Cui",
+            "Conghui He",
+            "Wentao Zhang",
+            "Lijun Wu"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.13606",
+        "abstract": "Chart reasoning is a critical capability for Vision Language Models (VLMs). However, the development of open-source models is severely hindered by the lack of high-quality training data. Existing datasets suffer from a dual challenge: synthetic charts are often simplistic and repetitive, while the associated QA pairs are prone to hallucinations and lack the reasoning depth required for complex tasks. To bridge this gap, we propose ChartVerse, a scalable framework designed to synthesize complex charts and reliable reasoning data from scratch. (1) To address the bottleneck of simple patterns, we first introduce Rollout Posterior Entropy (RPE), a novel metric that quantifies chart complexity. Guided by RPE, we develop complexity-aware chart coder to autonomously synthesize diverse, high-complexity charts via executable programs. (2) To guarantee reasoning rigor, we develop truth-anchored inverse QA synthesis. Diverging from standard generation, we adopt an answer-first paradigm: we extract deterministic answers directly from the source code, generate questions conditional on these anchors, and enforce strict consistency verification. To further elevate difficulty and reasoning depth, we filter samples based on model fail-rate and distill high-quality Chain-of-Thought (CoT) reasoning. We curate ChartVerse-SFT-600K and ChartVerse-RL-40K using Qwen3-VL-30B-A3B-Thinking as the teacher. Experimental results demonstrate that ChartVerse-8B achieves state-of-the-art performance, notably surpassing its teacher and rivaling the stronger Qwen3-VL-32B-Thinking.",
+        "tags": [
+            "CoT",
+            "RL",
+            "VLM"
+        ]
+    },
+    {
+        "id": 15,
+        "index": 4,
+        "title": "Knowledge is Not Enough: Injecting RL Skills for Continual Adaptation",
+        "author": [
+            "Pingzhi Tang",
+            "Yiding Wang",
+            "Muhan Zhang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.11258",
+        "abstract": "Large Language Models (LLMs) face the \"knowledge cutoff\" challenge, where their frozen parametric memory prevents direct internalization of new information. While Supervised Fine-Tuning (SFT) is commonly used to update model knowledge, it often updates factual content without reliably improving the model's ability to use the newly incorporated information for question answering or decision-making. Reinforcement Learning (RL) is essential for acquiring reasoning skills; however, its high computational cost makes it impractical for efficient online adaptation. We empirically observe that the parameter updates induced by SFT and RL are nearly orthogonal. Based on this observation, we propose Parametric Skill Transfer (PaST), a framework that supports modular skill transfer for efficient and effective knowledge adaptation. By extracting a domain-agnostic Skill Vector from a source domain, we can linearly inject knowledge manipulation skills into a target model after it has undergone lightweight SFT on new data. Experiments on knowledge-incorporation QA (SQuAD, LooGLE) and agentic tool-use benchmarks (ToolBench) demonstrate the effectiveness of our method. On SQuAD, PaST outperforms the state-of-the-art self-editing SFT baseline by up to 9.9 points. PaST further scales to long-context QA on LooGLE with an 8.0-point absolute accuracy gain, and improves zero-shot ToolBench success rates by +10.3 points on average with consistent gains across tool categories, indicating strong scalability and cross-domain transferability of the Skill Vector.",
+        "tags": [
+            "LLM",
+            "RL"
+        ]
+    },
+    {
+        "id": 16,
+        "index": 1,
+        "title": "Dancing in Chains: Strategic Persuasion in Academic Rebuttal via Theory of Mind",
+        "author": [
+            "Zhitao He",
+            "Zongwei Lyu",
+            "Yi R Fung"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.15715",
+        "abstract": "Although artificial intelligence (AI) has become deeply integrated into various stages of the research workflow and achieved remarkable advancements, academic rebuttal remains a significant and underexplored challenge. This is because rebuttal is a complex process of strategic communication under severe information asymmetry rather than a simple technical debate. Consequently, current approaches struggle as they largely imitate surface-level linguistics, missing the essential element of perspective-taking required for effective persuasion. In this paper, we introduce RebuttalAgent, the first framework to ground academic rebuttal in Theory of Mind (ToM), operationalized through a ToM-Strategy-Response (TSR) pipeline that models reviewer mental state, formulates persuasion strategy, and generates strategy-grounded response. To train our agent, we construct RebuttalBench, a large-scale dataset synthesized via a novel critique-and-refine approach. Our training process consists of two stages, beginning with a supervised fine-tuning phase to equip the agent with ToM-based analysis and strategic planning capabilities, followed by a reinforcement learning phase leveraging the self-reward mechanism for scalable self-improvement. For reliable and efficient automated evaluation, we further develop Rebuttal-RM, a specialized evaluator trained on over 100K samples of multi-source rebuttal data, which achieves scoring consistency with human preferences surpassing powerful judge GPT-4.1. Extensive experiments show RebuttalAgent significantly outperforms the base model by an average of 18.3% on automated metrics, while also outperforming advanced proprietary models across both automated and human evaluations. Disclaimer: the generated rebuttal content is for reference only to inspire authors and assist in drafting. It is not intended to replace the author's own critical analysis and response.",
+        "tags": [
+            "GPT",
+            "RL"
+        ]
+    },
+    {
+        "id": 17,
+        "index": 1,
+        "title": "Guidelines to Prompt Large Language Models for Code Generation: An Empirical Characterization",
+        "author": [
+            "Alessandro Midolo",
+            "Alessandro Giagnorio",
+            "Fiorella Zampetti",
+            "Rosalia Tufano",
+            "Gabriele Bavota",
+            "Massimiliano Di Penta"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.13118",
+        "abstract": "Large Language Models (LLMs) are nowadays extensively used for various types of software engineering tasks, primarily code generation. Previous research has shown how suitable prompt engineering could help developers in improving their code generation prompts. However, so far, there do not exist specific guidelines driving developers towards writing suitable prompts for code generation. In this work, we derive and evaluate development-specific prompt optimization guidelines. First, we use an iterative, test-driven approach to automatically refine code generation prompts, and we analyze the outcome of this process to identify prompt improvement items that lead to test passes. We use such elements to elicit 10 guidelines for prompt improvement, related to better specifying I/O, pre-post conditions, providing examples, various types of details, or clarifying ambiguities. We conduct an assessment with 50 practitioners, who report their usage of the elicited prompt improvement patterns, as well as their perceived usefulness, which does not always correspond to the actual usage before knowing our guidelines. Our results lead to implications not only for practitioners and educators, but also for those aimed at creating better LLM-aided software development tools.",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 18,
+        "index": 0,
+        "title": "VISTA-PATH: An interactive foundation model for pathology image segmentation and quantitative analysis in computational pathology",
+        "author": [
+            "Peixian Liang",
+            "Songhao Li",
+            "Shunsuke Koga",
+            "Yutong Li",
+            "Zahra Alipour",
+            "Yucheng Tang",
+            "Daguang Xu",
+            "Zhi Huang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.16451",
+        "abstract": "Accurate semantic segmentation for histopathology image is crucial for quantitative tissue analysis and downstream clinical modeling. Recent segmentation foundation models have improved generalization through large-scale pretraining, yet remain poorly aligned with pathology because they treat segmentation as a static visual prediction task. Here we present VISTA-PATH, an interactive, class-aware pathology segmentation foundation model designed to resolve heterogeneous structures, incorporate expert feedback, and produce pixel-level segmentation that are directly meaningful for clinical interpretation. VISTA-PATH jointly conditions segmentation on visual context, semantic tissue descriptions, and optional expert-provided spatial prompts, enabling precise multi-class segmentation across heterogeneous pathology images. To support this paradigm, we curate VISTA-PATH Data, a large-scale pathology segmentation corpus comprising over 1.6 million image-mask-text triplets spanning 9 organs and 93 tissue classes. Across extensive held-out and external benchmarks, VISTA-PATH consistently outperforms existing segmentation foundation models. Importantly, VISTA-PATH supports dynamic human-in-the-loop refinement by propagating sparse, patch-level bounding-box annotation feedback into whole-slide segmentation. Finally, we show that the high-fidelity, class-aware segmentation produced by VISTA-PATH is a preferred model for computational pathology. It improve tissue microenvironment analysis through proposed Tumor Interaction Score (TIS), which exhibits strong and significant associations with patient survival. Together, these results establish VISTA-PATH as a foundation model that elevates pathology image segmentation from a static prediction to an interactive and clinically grounded representation for digital pathology. Source code and demo can be found at https://github.com/zhihuanglab/VISTA-PATH.",
+        "tags": [
+            "Segmentation"
+        ]
+    }
+]
