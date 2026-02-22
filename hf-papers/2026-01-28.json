@@ -1,0 +1,522 @@
+[
+    {
+        "id": 1,
+        "index": 60,
+        "title": "AgentDoG: A Diagnostic Guardrail Framework for AI Agent Safety and Security",
+        "author": [
+            "Dongrui Liu",
+            "Qihan Ren",
+            "Chen Qian",
+            "Shuai Shao",
+            "Yuejin Xie",
+            "Yu Li",
+            "Zhonghao Yang",
+            "Haoyu Luo",
+            "Peng Wang",
+            "Qingyu Liu",
+            "Binxin Hu",
+            "Ling Tang",
+            "Jilin Mei",
+            "Dadi Guo",
+            "Leitao Yuan",
+            "Junyao Yang",
+            "Guanxu Chen",
+            "Qihao Lin",
+            "Yi Yu",
+            "Bo Zhang",
+            "Jiaxuan Guo",
+            "Jie Zhang",
+            "Wenqi Shao",
+            "Huiqi Deng",
+            "Zhiheng Xi",
+            "Wenjie Wang",
+            "Wenxuan Wang",
+            "Wen Shen",
+            "Zhikai Chen",
+            "Haoyu Xie",
+            "Jialing Tao",
+            "Juntao Dai",
+            "Jiaming Ji",
+            "Zhongjie Ba",
+            "Linfeng Zhang",
+            "Yong Liu",
+            "Quanshi Zhang",
+            "Lei Zhu",
+            "Zhihua Wei",
+            "Hui Xue",
+            "Chaochao Lu",
+            "Jing Shao",
+            "Xia Hu"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.18491",
+        "abstract": "The rise of AI agents introduces complex safety and security challenges arising from autonomous tool use and environmental interactions. Current guardrail models lack agentic risk awareness and transparency in risk diagnosis. To introduce an agentic guardrail that covers complex and numerous risky behaviors, we first propose a unified three-dimensional taxonomy that orthogonally categorizes agentic risks by their source (where), failure mode (how), and consequence (what). Guided by this structured and hierarchical taxonomy, we introduce a new fine-grained agentic safety benchmark (ATBench) and a Diagnostic Guardrail framework for agent safety and security (AgentDoG). AgentDoG provides fine-grained and contextual monitoring across agent trajectories. More Crucially, AgentDoG can diagnose the root causes of unsafe actions and seemingly safe but unreasonable actions, offering provenance and transparency beyond binary labels to facilitate effective agent alignment. AgentDoG variants are available in three sizes (4B, 7B, and 8B parameters) across Qwen and Llama model families. Extensive experimental results demonstrate that AgentDoG achieves state-of-the-art performance in agentic safety moderation in diverse and complex interactive scenarios. All models and datasets are openly released.",
+        "tags": [
+            "LLaMA",
+            "Qwen"
+        ]
+    },
+    {
+        "id": 2,
+        "index": 38,
+        "title": "AdaReasoner: Dynamic Tool Orchestration for Iterative Visual Reasoning",
+        "author": [
+            "Mingyang Song",
+            "Haoyu Sun",
+            "Jiawei Gu",
+            "Linjie Li",
+            "Luxin Xu",
+            "Ranjay Krishna",
+            "Yu Cheng"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.18631",
+        "abstract": "When humans face problems beyond their immediate capabilities, they rely on tools, providing a promising paradigm for improving visual reasoning in multimodal large language models (MLLMs). Effective reasoning, therefore, hinges on knowing which tools to use, when to invoke them, and how to compose them over multiple steps, even when faced with new tools or new tasks. We introduce \\textbf{AdaReasoner}, a family of multimodal models that learn tool use as a general reasoning skill rather than as tool-specific or explicitly supervised behavior. AdaReasoner is enabled by (i) a scalable data curation pipeline exposing models to long-horizon, multi-step tool interactions; (ii) Tool-GRPO, a reinforcement learning algorithm that optimizes tool selection and sequencing based on end-task success; and (iii) an adaptive learning mechanism that dynamically regulates tool usage. Together, these components allow models to infer tool utility from task context and intermediate outcomes, enabling coordination of multiple tools and generalization to unseen tools. Empirically, AdaReasoner exhibits strong tool-adaptive and generalization behaviors: it autonomously adopts beneficial tools, suppresses irrelevant ones, and adjusts tool usage frequency based on task demands, despite never being explicitly trained to do so. These capabilities translate into state-of-the-art performance across challenging benchmarks, improving the 7B base model by +24.9\\% on average and surpassing strong proprietary systems such as GPT-5 on multiple tasks, including VSP and Jigsaw.",
+        "tags": [
+            "GPT",
+            "GRPO",
+            "LLM",
+            "RL"
+        ]
+    },
+    {
+        "id": 3,
+        "index": 25,
+        "title": "A Pragmatic VLA Foundation Model",
+        "author": [
+            "Wei Wu",
+            "Fan Lu",
+            "Yunnan Wang",
+            "Shuai Yang",
+            "Shi Liu",
+            "Fangjing Wang",
+            "Qian Zhu",
+            "He Sun",
+            "Yong Wang",
+            "Shuailei Ma",
+            "Yiyu Ren",
+            "Kejia Zhang",
+            "Hui Yu",
+            "Jingmei Zhao",
+            "Shuai Zhou",
+            "Zhenqi Qiu",
+            "Houlong Xiong",
+            "Ziyu Wang",
+            "Zechen Wang",
+            "Ran Cheng",
+            "Yong-Lu Li",
+            "Yongtao Huang",
+            "Xing Zhu",
+            "Yujun Shen",
+            "Kecheng Zheng"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.18692",
+        "abstract": "Offering great potential in robotic manipulation, a capable Vision-Language-Action (VLA) foundation model is expected to faithfully generalize across tasks and platforms while ensuring cost efficiency (e.g., data and GPU hours required for adaptation). To this end, we develop LingBot-VLA with around 20,000 hours of real-world data from 9 popular dual-arm robot configurations. Through a systematic assessment on 3 robotic platforms, each completing 100 tasks with 130 post-training episodes per task, our model achieves clear superiority over competitors, showcasing its strong performance and broad generalizability. We have also built an efficient codebase, which delivers a throughput of 261 samples per second per GPU with an 8-GPU training setup, representing a 1.5~2.8$\\times$ (depending on the relied VLM base model) speedup over existing VLA-oriented codebases. The above features ensure that our model is well-suited for real-world deployment. To advance the field of robot learning, we provide open access to the code, base model, and benchmark data, with a focus on enabling more challenging tasks and promoting sound evaluation standards.",
+        "tags": [
+            "Robotics",
+            "VLM"
+        ]
+    },
+    {
+        "id": 4,
+        "index": 19,
+        "title": "Visual Generation Unlocks Human-Like Reasoning through Multimodal World Models",
+        "author": [
+            "Jialong Wu",
+            "Xiaoying Zhang",
+            "Hongyi Yuan",
+            "Xiangcheng Zhang",
+            "Tianhao Huang",
+            "Changjing He",
+            "Chaoyi Deng",
+            "Renrui Zhang",
+            "Youbin Wu",
+            "Mingsheng Long"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.19834",
+        "abstract": "Humans construct internal world models and reason by manipulating the concepts within these models. Recent advances in AI, particularly chain-of-thought (CoT) reasoning, approximate such human cognitive abilities, where world models are believed to be embedded within large language models. Expert-level performance in formal and abstract domains such as mathematics and programming has been achieved in current systems by relying predominantly on verbal reasoning. However, they still lag far behind humans in domains like physical and spatial intelligence, which require richer representations and prior knowledge. The emergence of unified multimodal models (UMMs) capable of both verbal and visual generation has therefore sparked interest in more human-like reasoning grounded in complementary multimodal pathways, though their benefits remain unclear. From a world-model perspective, this paper presents the first principled study of when and how visual generation benefits reasoning. Our key position is the visual superiority hypothesis: for certain tasks--particularly those grounded in the physical world--visual generation more naturally serves as world models, whereas purely verbal world models encounter bottlenecks arising from representational limitations or insufficient prior knowledge. Theoretically, we formalize internal world modeling as a core component of CoT reasoning and analyze distinctions among different forms of world models. Empirically, we identify tasks that necessitate interleaved visual-verbal CoT reasoning, constructing a new evaluation suite, VisWorld-Eval. Controlled experiments on a state-of-the-art UMM show that interleaved CoT significantly outperforms purely verbal CoT on tasks that favor visual world modeling, but offers no clear advantage otherwise. Together, this work clarifies the potential of multimodal world modeling for more powerful, human-like multimodal AI.",
+        "tags": [
+            "CoT",
+            "LLM"
+        ]
+    },
+    {
+        "id": 5,
+        "index": 19,
+        "title": "AVMeme Exam: A Multimodal Multilingual Multicultural Benchmark for LLMs' Contextual and Cultural Knowledge and Thinking",
+        "author": [
+            "Xilin Jiang",
+            "Qiaolin Wang",
+            "Junkai Wu",
+            "Xiaomin He",
+            "Zhongweiyang Xu",
+            "Yinghao Ma",
+            "Minshuo Piao",
+            "Kaiyi Yang",
+            "Xiuwen Zheng",
+            "Riki Shimizu",
+            "Yicong Chen",
+            "Arsalan Firoozi",
+            "Gavin Mischler",
+            "Sukru Samet Dindar",
+            "Richard Antonello",
+            "Linyang He",
+            "Tsun-An Hsieh",
+            "Xulin Fan",
+            "Yulun Wu",
+            "Yuesheng Ma",
+            "Chaitanya Amballa",
+            "Weixiong Chen",
+            "Jiarui Hai",
+            "Ruisi Li",
+            "Vishal Choudhari",
+            "Cong Han",
+            "Yinghao Aaron Li",
+            "Adeen Flinker",
+            "Mounya Elhilali",
+            "Emmanouil Benetos",
+            "Mark Hasegawa-Johnson",
+            "Romit Roy Choudhury",
+            "Nima Mesgarani"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.17645",
+        "abstract": "Internet audio-visual clips convey meaning through time-varying sound and motion, which extend beyond what text alone can represent. To examine whether AI models can understand such signals in human cultural contexts, we introduce AVMeme Exam, a human-curated benchmark of over one thousand iconic Internet sounds and videos spanning speech, songs, music, and sound effects. Each meme is paired with a unique Q&A assessing levels of understanding from surface content to context and emotion to usage and world knowledge, along with metadata such as original year, transcript, summary, and sensitivity. We systematically evaluate state-of-the-art multimodal large language models (MLLMs) alongside human participants using this benchmark. Our results reveal a consistent limitation: current models perform poorly on textless music and sound effects, and struggle to think in context and in culture compared to surface content. These findings highlight a key gap in human-aligned multimodal intelligence and call for models that can perceive contextually and culturally beyond the surface of what they hear and see. Project page: http://avmemeexam.github.io/public",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 6,
+        "index": 16,
+        "title": "Youtu-VL: Unleashing Visual Potential via Unified Vision-Language Supervision",
+        "author": [
+            "Zhixiang Wei",
+            "Yi Li",
+            "Zhehan Kan",
+            "Xinghua Jiang",
+            "Zuwei Long",
+            "Shifeng Liu",
+            "Hongze Shen",
+            "Wei Liu",
+            "Xiaoyu Tan",
+            "Haojia Lin",
+            "Yubo Zhu",
+            "Qianyu Li",
+            "Di Yin",
+            "Haoyu Cao",
+            "Weibo Gu",
+            "Xin Li",
+            "Yinsong Liu",
+            "Deqiang Jiang",
+            "Xing Sun",
+            "Yunsheng Wu",
+            "Mingkong Tang",
+            "Shuangyin Liu",
+            "Lexiang Tang",
+            "Haodong Lin",
+            "Junru Lu",
+            "Jiarui Qin",
+            "Lingfeng Qiao",
+            "Ruizhi Qiao",
+            "Bo Ke",
+            "Jianfeng He",
+            "Ke Li",
+            "Yangning Li",
+            "Yunhang Shen",
+            "Mengdan Zhang",
+            "Peixian Chen",
+            "Kun Yin",
+            "Bing Liu",
+            "Yunfei Wu",
+            "Huang Chen",
+            "Zhongpeng Cai",
+            "Xiaotian Li"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.19798",
+        "abstract": "Despite the significant advancements represented by Vision-Language Models (VLMs), current architectures often exhibit limitations in retaining fine-grained visual information, leading to coarse-grained multimodal comprehension. We attribute this deficiency to a suboptimal training paradigm inherent in prevailing VLMs, which exhibits a text-dominant optimization bias by conceptualizing visual signals merely as passive conditional inputs rather than supervisory targets. To mitigate this, we introduce Youtu-VL, a framework leveraging the Vision-Language Unified Autoregressive Supervision (VLUAS) paradigm, which fundamentally shifts the optimization objective from ``vision-as-input'' to ``vision-as-target.'' By integrating visual tokens directly into the prediction stream, Youtu-VL applies unified autoregressive supervision to both visual details and linguistic content. Furthermore, we extend this paradigm to encompass vision-centric tasks, enabling a standard VLM to perform vision-centric tasks without task-specific additions. Extensive empirical evaluations demonstrate that Youtu-VL achieves competitive performance on both general multimodal tasks and vision-centric tasks, establishing a robust foundation for the development of comprehensive generalist visual agents.",
+        "tags": [
+            "VLM"
+        ]
+    },
+    {
+        "id": 7,
+        "index": 15,
+        "title": "World Craft: Agentic Framework to Create Visualizable Worlds via Text",
+        "author": [
+            "Jianwen Sun",
+            "Yukang Feng",
+            "Kaining Ying",
+            "Chuanhao Li",
+            "Zizhen Li",
+            "Fanrui Zhang",
+            "Jiaxin Ai",
+            "Yifan Chang",
+            "Yu Dai",
+            "Yifei Huang",
+            "Kaipeng Zhang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.09150",
+        "abstract": "Large Language Models (LLMs) motivate generative agent simulation (e.g., AI Town) to create a ``dynamic world'', holding immense value across entertainment and research. However, for non-experts, especially those without programming skills, it isn't easy to customize a visualizable environment by themselves. In this paper, we introduce World Craft, an agentic world creation framework to create an executable and visualizable AI Town via user textual descriptions. It consists of two main modules, World Scaffold and World Guild. World Scaffold is a structured and concise standardization to develop interactive game scenes, serving as an efficient scaffolding for LLMs to customize an executable AI Town-like environment. World Guild is a multi-agent framework to progressively analyze users' intents from rough descriptions, and synthesizes required structured contents (\\eg environment layout and assets) for World Scaffold . Moreover, we construct a high-quality error-correction dataset via reverse engineering to enhance spatial knowledge and improve the stability and controllability of layout generation, while reporting multi-dimensional evaluation metrics for further analysis. Extensive experiments demonstrate that our framework significantly outperforms existing commercial code agents (Cursor and Antigravity) and LLMs (Qwen3 and Gemini-3-Pro). in scene construction and narrative intent conveyance, providing a scalable solution for the democratization of environment creation.",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 8,
+        "index": 9,
+        "title": "TriPlay-RL: Tri-Role Self-Play Reinforcement Learning for LLM Safety Alignment",
+        "author": [
+            "Zhewen Tan",
+            "Wenhan Yu",
+            "Jianfeng Si",
+            "Tongxin Liu",
+            "Kaiqi Guan",
+            "Huiyan Jin",
+            "Jiawen Tao",
+            "Xiaokun Yuan",
+            "Duohe Ma",
+            "Xiangzheng Zhang",
+            "Tong Yang",
+            "Lin Sun"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.18292",
+        "abstract": "In recent years, safety risks associated with large language models have become increasingly prominent, highlighting the urgent need to mitigate the generation of toxic and harmful content. The mainstream paradigm for LLM safety alignment typically adopts a collaborative framework involving three roles: an attacker for adversarial prompt generation, a defender for safety defense, and an evaluator for response assessment. In this paper, we propose a closed-loop reinforcement learning framework called TriPlay-RL that enables iterative and co-improving collaboration among three roles with near-zero manual annotation. Experimental results show that the attacker preserves high output diversity while achieving a 20%-50% improvement in adversarial effectiveness; the defender attains 10%-30% gains in safety performance without degrading general reasoning capability; and the evaluator continuously refines its fine-grained judgment ability through iterations, accurately distinguishing unsafe responses, simple refusals, and useful guidance. Overall, our framework establishes an efficient and scalable paradigm for LLM safety alignment, enabling continuous co-evolution within a unified learning loop.",
+        "tags": [
+            "LLM",
+            "RL"
+        ]
+    },
+    {
+        "id": 9,
+        "index": 9,
+        "title": "FABLE: Forest-Based Adaptive Bi-Path LLM-Enhanced Retrieval for Multi-Document Reasoning",
+        "author": [
+            "Lin Sun",
+            "Linglin Zhang",
+            "Jingang Huang",
+            "Change Jia",
+            "Zhengwei Cheng",
+            "Xiangzheng Zhang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.18116",
+        "abstract": "The rapid expansion of long-context Large Language Models (LLMs) has reignited debate on whether Retrieval-Augmented Generation (RAG) remains necessary. However, empirical evidence reveals persistent limitations of long-context inference, including the lost-in-the-middle phenomenon, high computational cost, and poor scalability for multi-document reasoning. Conversely, traditional RAG systems, while efficient, are constrained by flat chunk-level retrieval that introduces semantic noise and fails to support structured cross-document synthesis.\nWe present \\textbf{FABLE}, a \\textbf{F}orest-based \\textbf{A}daptive \\textbf{B}i-path \\textbf{L}LM-\\textbf{E}nhanced retrieval framework that integrates LLMs into both knowledge organization and retrieval. FABLE constructs LLM-enhanced hierarchical forest indexes with multi-granularity semantic structures, then employs a bi-path strategy combining LLM-guided hierarchical traversal with structure-aware propagation for fine-grained evidence acquisition, with explicit budget control for adaptive efficiency trade-offs.\nExtensive experiments demonstrate that FABLE consistently outperforms SOTA RAG methods and achieves comparable accuracy to full-context LLM inference with up to 94\\% token reduction, showing that long-context LLMs amplify rather than fully replace the need for structured retrieval.",
+        "tags": [
+            "LLM",
+            "RAG"
+        ]
+    },
+    {
+        "id": 10,
+        "index": 8,
+        "title": "Post-LayerNorm Is Back: Stable, ExpressivE, and Deep",
+        "author": [
+            "Chen Chen",
+            "Lai Wei"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.19895",
+        "abstract": "Large language model (LLM) scaling is hitting a wall. Widening models yields diminishing returns, and extending context length does not improve fundamental expressivity. In contrast, depth scaling offers theoretically superior expressivity, yet current Transformer architectures struggle to train reliably at extreme depths. We revisit the Post-LayerNorm (Post-LN) formulation, whose instability at scale caused its replacement by Pre-LN in modern LLMs. We show that the central failure mode of Post-LN arises from the ResNet-style residual pathway, which introduces gradient vanishing in deep networks. We present Keel, a Post-LN Transformer that replaces this residual path with a Highway-style connection. This modification preserves the gradient flow through the residual branch, preventing signal vanishing from the top layers to the bottom. Unlike prior methods, Keel enables stable training at extreme depths without requiring specialized initialization or complex optimization tricks. Keel trains robustly at depths exceeding 1000 layers and consistently improves perplexity and depth-scaling characteristics over Pre-LN. These findings indicate that Post-LN, when paired with a Highway-style connection, provides a simple and effective foundation for building deeply scalable LLMs, opening the possibility for future infinite-depth architectures.",
+        "tags": [
+            "LLM",
+            "Transformer"
+        ]
+    },
+    {
+        "id": 11,
+        "index": 5,
+        "title": "Selective Steering: Norm-Preserving Control Through Discriminative Layer Selection",
+        "author": [
+            "Quy-Anh Dang",
+            "Chris Ngo"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.19375",
+        "abstract": "Despite significant progress in alignment, large language models (LLMs) remain vulnerable to adversarial attacks that elicit harmful behaviors. Activation steering techniques offer a promising inference-time intervention approach, but existing methods suffer from critical limitations: activation addition requires careful coefficient tuning and is sensitive to layer-specific norm variations, while directional ablation provides only binary control. Recent work on Angular Steering introduces continuous control via rotation in a 2D subspace, but its practical implementation violates norm preservation, causing distribution shift and generation collapse, particularly in models below 7B parameters. We propose Selective Steering, which addresses these limitations through two key innovations: (1) a mathematically rigorous norm-preserving rotation formulation that maintains activation distribution integrity, and (2) discriminative layer selection that applies steering only where feature representations exhibit opposite-signed class alignment. Experiments across nine models demonstrate that Selective Steering achieves 5.5x higher attack success rates than prior methods while maintaining zero perplexity violations and approximately 100\\% capability retention on standard benchmarks. Our approach provides a principled, efficient framework for controllable and stable LLM behavior modification. Code: https://github.com/knoveleng/steering",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 12,
+        "index": 4,
+        "title": "Revisiting Parameter Server in LLM Post-Training",
+        "author": [
+            "Xinyi Wan",
+            "Penghui Qi",
+            "Guangxing Huang",
+            "Chaoyi Ruan",
+            "Min Lin",
+            "Jialin Li"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.19362",
+        "abstract": "Modern data parallel (DP) training favors collective communication over parameter servers (PS) for its simplicity and efficiency under balanced workloads. However, the balanced workload assumption no longer holds in large language model (LLM) post-training due to the high variance in sequence lengths. Under imbalanced workloads, collective communication creates synchronization barriers, leading to under-utilization of devices with smaller workloads. This change in training dynamics calls for a revisit of the PS paradigm for its robustness to such imbalance. We propose \\textbf{On-Demand Communication (ODC)}, which adapts PS into Fully Sharded Data Parallel (FSDP) by replacing collective all-gather and reduce-scatter with direct point-to-point communication. Compared to FSDP, ODC reduces the synchronization barrier from once per layer to once per minibatch and decouples the workload on each device so that faster workers are not stalled. It also enables simpler and more effective load balancing at the minibatch level. Across diverse LLM post-training tasks, ODC consistently improves device utilization and training throughput, achieving up to a 36\\% speedup over standard FSDP. These results demonstrate that ODC is a superior fit for the prevalent imbalanced workloads in LLM post-training. Our implementation of ODC and integration with FSDP is open-sourced at https://github.com/sail-sg/odc.",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 13,
+        "index": 4,
+        "title": "Towards Pixel-Level VLM Perception via Simple Points Prediction",
+        "author": [
+            "Tianhui Song",
+            "Haoyu Lu",
+            "Hao Yang",
+            "Lin Sui",
+            "Haoning Wu",
+            "Zaida Zhou",
+            "Zhiqi Huang",
+            "Yiping Bao",
+            "Y.Charles",
+            "Xinyu Zhou",
+            "Limin Wang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.19228",
+        "abstract": "We present SimpleSeg, a strikingly simple yet highly effective approach to endow Multimodal Large Language Models (MLLMs) with native pixel-level perception. Our method reframes segmentation as a simple sequence generation problem: the model directly predicts sequences of points (textual coordinates) delineating object boundaries, entirely within its language space. To achieve high fidelity, we introduce a two-stage SF$\\to$RL training pipeline, where Reinforcement Learning with an IoU-based reward refines the point sequences to accurately match ground-truth contours. We find that the standard MLLM architecture possesses a strong, inherent capacity for low-level perception that can be unlocked without any specialized architecture. On segmentation benchmarks, SimpleSeg achieves performance that is comparable to, and often surpasses, methods relying on complex, task-specific designs. This work lays out that precise spatial understanding can emerge from simple point prediction, challenging the prevailing need for auxiliary components and paving the way for more unified and capable VLMs. Homepage: https://simpleseg.github.io/",
+        "tags": [
+            "LLM",
+            "RL",
+            "Segmentation",
+            "VLM"
+        ]
+    },
+    {
+        "id": 14,
+        "index": 3,
+        "title": "HalluCitation Matters: Revealing the Impact of Hallucinated References with 300 Hallucinated Papers in ACL Conferences",
+        "author": [
+            "Yusuke Sakai",
+            "Hidetaka Kamigaito",
+            "Taro Watanabe"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.18724",
+        "abstract": "Recently, we have often observed hallucinated citations or references that do not correspond to any existing work in papers under review, preprints, or published papers. Such hallucinated citations pose a serious concern to scientific reliability. When they appear in accepted papers, they may also negatively affect the credibility of conferences. In this study, we refer to hallucinated citations as \"HalluCitation\" and systematically investigate their prevalence and impact. We analyze all papers published at ACL, NAACL, and EMNLP in 2024 and 2025, including main conference, Findings, and workshop papers. Our analysis reveals that nearly 300 papers contain at least one HalluCitation, most of which were published in 2025. Notably, half of these papers were identified at EMNLP 2025, the most recent conference, indicating that this issue is rapidly increasing. Moreover, more than 100 such papers were accepted as main conference and Findings papers at EMNLP 2025, affecting the credibility.",
+        "tags": []
+    },
+    {
+        "id": 15,
+        "index": 3,
+        "title": "HyperAlign: Hypernetwork for Efficient Test-Time Alignment of Diffusion Models",
+        "author": [
+            "Xin Xie",
+            "Jiaxian Guo",
+            "Dong Gong"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.15968",
+        "abstract": "Diffusion models achieve state-of-the-art performance but often fail to generate outputs that align with human preferences and intentions, resulting in images with poor aesthetic quality and semantic inconsistencies. Existing alignment methods present a difficult trade-off: fine-tuning approaches suffer from loss of diversity with reward over-optimization, while test-time scaling methods introduce significant computational overhead and tend to under-optimize. To address these limitations, we propose HyperAlign, a novel framework that trains a hypernetwork for efficient and effective test-time alignment. Instead of modifying latent states, HyperAlign dynamically generates low-rank adaptation weights to modulate the diffusion model's generation operators. This allows the denoising trajectory to be adaptively adjusted based on input latents, timesteps and prompts for reward-conditioned alignment. We introduce multiple variants of HyperAlign that differ in how frequently the hypernetwork is applied, balancing between performance and efficiency. Furthermore, we optimize the hypernetwork using a reward score objective regularized with preference data to reduce reward hacking. We evaluate HyperAlign on multiple extended generative paradigms, including Stable Diffusion and FLUX. It significantly outperforms existing fine-tuning and test-time scaling baselines in enhancing semantic consistency and visual appeal.",
+        "tags": [
+            "Diffusion",
+            "FLUX",
+            "LoRA"
+        ]
+    },
+    {
+        "id": 16,
+        "index": 1,
+        "title": "Self-Distillation Enables Continual Learning",
+        "author": [
+            "Idan Shenfeld",
+            "Mehul Damani",
+            "Jonas HÃ¼botter",
+            "Pulkit Agrawal"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.19897",
+        "abstract": "Continual learning, enabling models to acquire new skills and knowledge without degrading existing capabilities, remains a fundamental challenge for foundation models. While on-policy reinforcement learning can reduce forgetting, it requires explicit reward functions that are often unavailable. Learning from expert demonstrations, the primary alternative, is dominated by supervised fine-tuning (SFT), which is inherently off-policy. We introduce Self-Distillation Fine-Tuning (SDFT), a simple method that enables on-policy learning directly from demonstrations. SDFT leverages in-context learning by using a demonstration-conditioned model as its own teacher, generating on-policy training signals that preserve prior capabilities while acquiring new skills. Across skill learning and knowledge acquisition tasks, SDFT consistently outperforms SFT, achieving higher new-task accuracy while substantially reducing catastrophic forgetting. In sequential learning experiments, SDFT enables a single model to accumulate multiple skills over time without performance regression, establishing on-policy distillation as a practical path to continual learning from demonstrations.",
+        "tags": [
+            "RL"
+        ]
+    },
+    {
+        "id": 17,
+        "index": 1,
+        "title": "Benchmarks Saturate When The Model Gets Smarter Than The Judge",
+        "author": [
+            "Marthe Ballon",
+            "Andres Algaba",
+            "Brecht Verbeken",
+            "Vincent Ginis"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.19532",
+        "abstract": "Benchmarks are important tools to track progress in the development of Large Language Models (LLMs), yet inaccuracies in datasets and evaluation methods consistently undermine their effectiveness. Here, we present Omni-MATH-2, a manually revised version of the Omni-MATH dataset comprising a clean, exact-answer subset ($n{=}4181$) and a tagged, non-standard subset ($n{=}247$). Each problem was audited to ensure LaTeX compilability, solvability and verifiability, which involved adding missing figures or information, labeling problems requiring a proof, estimation or image, and removing clutter. This process significantly reduces dataset-induced noise, thereby providing a more precise assessment of model performance. The annotated dataset also allows us to evaluate judge-induced noise by comparing GPT-5 mini with the original Omni-Judge, revealing substantial discrepancies between judges on both the clean and tagged problem subsets. Expert annotations reveal that Omni-Judge is wrong in $96.4\\%$ of the judge disagreements, indicating its inability to differentiate between models' abilities, even well before saturation of the benchmark occurs. As problems become more challenging, we find that increasingly competent judges become essential in order to prevent judge errors from masking genuine differences between models. Finally, neither judge identifies the present failure modes for the subset of tagged problems, demonstrating that dataset quality and judge reliability are both critical to develop accurate benchmarks of model performance.",
+        "tags": [
+            "GPT",
+            "LLM"
+        ]
+    },
+    {
+        "id": 18,
+        "index": 1,
+        "title": "GPCR-Filter: a deep learning framework for efficient and precise GPCR modulator discovery",
+        "author": [
+            "Jingjie Ning",
+            "Xiangzhen Shen",
+            "Li Hou",
+            "Shiyi Shen",
+            "Jiahao Yang",
+            "Junrui Li",
+            "Hong Shan",
+            "Sanan Wu",
+            "Sihan Gao",
+            "Huaqiang Eric Xu",
+            "Xinheng He"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.19149",
+        "abstract": "G protein-coupled receptors (GPCRs) govern diverse physiological processes and are central to modern pharmacology. Yet discovering GPCR modulators remains challenging because receptor activation often arises from complex allosteric effects rather than direct binding affinity, and conventional assays are slow, costly, and not optimized for capturing these dynamics. Here we present GPCR-Filter, a deep learning framework specifically developed for GPCR modulator discovery. We assembled a high-quality dataset of over 90,000 experimentally validated GPCR-ligand pairs, providing a robust foundation for training and evaluation. GPCR-Filter integrates the ESM-3 protein language model for high-fidelity GPCR sequence representations with graph neural networks that encode ligand structures, coupled through an attention-based fusion mechanism that learns receptor-ligand functional relationships. Across multiple evaluation settings, GPCR-Filter consistently outperforms state-of-the-art compound-protein interaction models and exhibits strong generalization to unseen receptors and ligands. Notably, the model successfully identified micromolar-level agonists of the 5-HT\\textsubscript{1A} receptor with distinct chemical frameworks. These results establish GPCR-Filter as a scalable and effective computational approach for GPCR modulator discovery, advancing AI-assisted drug development for complex signaling systems.",
+        "tags": []
+    },
+    {
+        "id": 19,
+        "index": 1,
+        "title": "DeFM: Learning Foundation Representations from Depth for Robotics",
+        "author": [
+            "Manthan Patel",
+            "Jonas Frey",
+            "Mayank Mittal",
+            "Fan Yang",
+            "Alexander Hansson",
+            "Amir Bar",
+            "Cesar Cadena",
+            "Marco Hutter"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.18923",
+        "abstract": "Depth sensors are widely deployed across robotic platforms, and advances in fast, high-fidelity depth simulation have enabled robotic policies trained on depth observations to achieve robust sim-to-real transfer for a wide range of tasks. Despite this, representation learning for depth modality remains underexplored compared to RGB, where large-scale foundation models now define the state of the art. To address this gap, we present DeFM, a self-supervised foundation model trained entirely on depth images for robotic applications. Using a DINO-style self-distillation objective on a curated dataset of 60M depth images, DeFM learns geometric and semantic representations that generalize to diverse environments, tasks, and sensors. To retain metric awareness across multiple scales, we introduce a novel input normalization strategy. We further distill DeFM into compact models suitable for resource-constrained robotic systems. When evaluated on depth-based classification, segmentation, navigation, locomotion, and manipulation benchmarks, DeFM achieves state-of-the-art performance and demonstrates strong generalization from simulation to real-world environments. We release all our pretrained models, which can be adopted off-the-shelf for depth-based robotic learning without task-specific fine-tuning. Webpage: https://de-fm.github.io/",
+        "tags": [
+            "Robotics",
+            "Segmentation"
+        ]
+    },
+    {
+        "id": 20,
+        "index": 1,
+        "title": "EvolVE: Evolutionary Search for LLM-based Verilog Generation and Optimization",
+        "author": [
+            "Wei-Po Hsin",
+            "Ren-Hao Deng",
+            "Yao-Ting Hsieh",
+            "En-Ming Huang",
+            "Shih-Hao Hung"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.18067",
+        "abstract": "Verilog's design cycle is inherently labor-intensive and necessitates extensive domain expertise. Although Large Language Models (LLMs) offer a promising pathway toward automation, their limited training data and intrinsic sequential reasoning fail to capture the strict formal logic and concurrency inherent in hardware systems. To overcome these barriers, we present EvolVE, the first framework to analyze multiple evolution strategies on chip design tasks, revealing that Monte Carlo Tree Search (MCTS) excels at maximizing functional correctness, while Idea-Guided Refinement (IGR) proves superior for optimization. We further leverage Structured Testbench Generation (STG) to accelerate the evolutionary process. To address the lack of complex optimization benchmarks, we introduce IC-RTL, targeting industry-scale problems derived from the National Integrated Circuit Contest. Evaluations establish EvolVE as the new state-of-the-art, achieving 98.1% on VerilogEval v2 and 92% on RTLLM v2. Furthermore, on the industry-scale IC-RTL suite, our framework surpasses reference implementations authored by contest participants, reducing the Power, Performance, Area (PPA) product by up to 66% in Huffman Coding and 17% in the geometric mean across all problems. The source code of the IC-RTL benchmark is available at https://github.com/weiber2002/ICRTL.",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 21,
+        "index": 1,
+        "title": "CooperBench: Why Coding Agents Cannot be Your Teammates Yet",
+        "author": [
+            "Arpandeep Khatua",
+            "Hao Zhu",
+            "Peter Tran",
+            "Arya Prabhudesai",
+            "Frederic Sadrieh",
+            "Johann K. Lieberwirth",
+            "Xinkai Yu",
+            "Yicheng Fu",
+            "Michael J. Ryan",
+            "Jiaxin Pei",
+            "Diyi Yang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.13295",
+        "abstract": "Resolving team conflicts requires not only task-specific competence, but also social intelligence to find common ground and build consensus. As AI agents increasingly collaborate on complex work, they must develop coordination capabilities to function as effective teammates. Yet we hypothesize that current agents lack these capabilities. To test this, we introduce CooperBench, a benchmark of over 600 collaborative coding tasks across 12 libraries in 4 programming languages. Each task assigns two agents different features that can be implemented independently but may conflict without proper coordination. Tasks are grounded in real open-source repositories with expert-written tests. Evaluating state-of-the-art coding agents, we observe the curse of coordination: agents achieve on average 30% lower success rates when working together compared to performing both tasks individually. This contrasts sharply with human teams, where adding teammates typically improves productivity. Our analysis reveals three key issues: (1) communication channels become jammed with vague, ill-timed, and inaccurate messages; (2) even with effective communication, agents deviate from their commitments; and (3) agents often hold incorrect expectations about others' plans and communication. Through large-scale simulation, we also observe rare but interesting emergent coordination behavior including role division, resource division, and negotiation. Our research presents a novel benchmark for collaborative coding and calls for a shift from pursuing individual agent capability to developing social intelligence.",
+        "tags": []
+    }
+]
