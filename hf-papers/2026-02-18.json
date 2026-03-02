@@ -1,0 +1,620 @@
+[
+    {
+        "id": 1,
+        "index": 51,
+        "title": "Sanity Checks for Sparse Autoencoders: Do SAEs Beat Random Baselines?",
+        "author": [
+            "Anton Korznikov",
+            "Andrey Galichin",
+            "Alexey Dontsov",
+            "Oleg Rogov",
+            "Ivan Oseledets",
+            "Elena Tutubalina"
+        ],
+        "pdf": "https://arxiv.org/pdf/2602.14111",
+        "abstract": "Sparse Autoencoders (SAEs) have emerged as a promising tool for interpreting neural networks by decomposing their activations into sparse sets of human-interpretable features. Recent work has introduced multiple SAE variants and successfully scaled them to frontier models. Despite much excitement, a growing number of negative results in downstream tasks casts doubt on whether SAEs recover meaningful features. To directly investigate this, we perform two complementary evaluations. On a synthetic setup with known ground-truth features, we demonstrate that SAEs recover only $9\\%$ of true features despite achieving $71\\%$ explained variance, showing that they fail at their core task even when reconstruction is strong. To evaluate SAEs on real activations, we introduce three baselines that constrain SAE feature directions or their activation patterns to random values. Through extensive experiments across multiple SAE architectures, we show that our baselines match fully-trained SAEs in interpretability (0.87 vs 0.90), sparse probing (0.69 vs 0.72), and causal editing (0.73 vs 0.72). Together, these results suggest that SAEs in their current state do not reliably decompose models' internal mechanisms.",
+        "tags": []
+    },
+    {
+        "id": 2,
+        "index": 36,
+        "title": "SkillsBench: Benchmarking How Well Agent Skills Work Across Diverse Tasks",
+        "author": [
+            "Xiangyi Li",
+            "Wenbo Chen",
+            "Yimin Liu",
+            "Shenghan Zheng",
+            "Xiaokun Chen",
+            "Yifeng He",
+            "Yubo Li",
+            "Bingran You",
+            "Haotian Shen",
+            "Jiankai Sun",
+            "Shuyi Wang",
+            "Qunhong Zeng",
+            "Di Wang",
+            "Xuandong Zhao",
+            "Yuanli Wang",
+            "Roey Ben Chaim",
+            "Zonglin Di",
+            "Yipeng Gao",
+            "Junwei He",
+            "Yizhuo He",
+            "Liqiang Jing",
+            "Luyang Kong",
+            "Xin Lan",
+            "Jiachen Li",
+            "Songlin Li",
+            "Yijiang Li",
+            "Yueqian Lin",
+            "Xinyi Liu",
+            "Xuanqing Liu",
+            "Haoran Lyu",
+            "Ze Ma",
+            "Bowei Wang",
+            "Runhui Wang",
+            "Tianyu Wang",
+            "Wengao Ye",
+            "Yue Zhang",
+            "Hanwen Xing",
+            "Yiqi Xue",
+            "Steven Dillmann",
+            "Han-chung Lee"
+        ],
+        "pdf": "https://arxiv.org/pdf/2602.12670",
+        "abstract": "Agent Skills are structured packages of procedural knowledge that augment LLM agents at inference time. Despite rapid adoption, there is no standard way to measure whether they actually help. We present SkillsBench, a benchmark of 86 tasks across 11 domains paired with curated Skills and deterministic verifiers. Each task is evaluated under three conditions: no Skills, curated Skills, and self-generated Skills. We test 7 agent-model configurations over 7,308 trajectories. Curated Skills raise average pass rate by 16.2 percentage points(pp), but effects vary widely by domain (+4.5pp for Software Engineering to +51.9pp for Healthcare) and 16 of 84 tasks show negative deltas. Self-generated Skills provide no benefit on average, showing that models cannot reliably author the procedural knowledge they benefit from consuming. Focused Skills with 2--3 modules outperform comprehensive documentation, and smaller models with Skills can match larger models without them.",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 3,
+        "index": 31,
+        "title": "GLM-5: from Vibe Coding to Agentic Engineering",
+        "author": [
+            "GLM-5 Team",
+            "Aohan Zeng",
+            "Xin Lv",
+            "Zhenyu Hou",
+            "Zhengxiao Du",
+            "Qinkai Zheng",
+            "Bin Chen",
+            "Da Yin",
+            "Chendi Ge",
+            "Chengxing Xie",
+            "Cunxiang Wang",
+            "Gengzheng Pan",
+            "Hao Zeng",
+            "Haoke Zhang",
+            "Haoran Wang",
+            "Huilong Chen",
+            "Jiajie Zhang",
+            "Jian Jiao",
+            "Jiaqi Guo",
+            "Jingsen Wang",
+            "Jingzhao Du",
+            "Jinzhu Wu",
+            "Kedong Wang",
+            "Lei Li",
+            "Lin Fan",
+            "Lucen Zhong",
+            "Mingdao Liu",
+            "Mingming Zhao",
+            "Pengfan Du",
+            "Qian Dong",
+            "Rui Lu",
+            "Shuang-Li",
+            "Shulin Cao",
+            "Song Liu",
+            "Ting Jiang",
+            "Xiaodong Chen",
+            "Xiaohan Zhang",
+            "Xuancheng Huang",
+            "Xuezhen Dong",
+            "Yabo Xu",
+            "Yao Wei",
+            "Yifan An",
+            "Yilin Niu",
+            "Yitong Zhu",
+            "Yuanhao Wen",
+            "Yukuo Cen",
+            "Yushi Bai",
+            "Zhongpei Qiao",
+            "Zihan Wang",
+            "Zikang Wang",
+            "Zilin Zhu",
+            "Ziqiang Liu",
+            "Zixuan Li",
+            "Bojie Wang",
+            "Bosi Wen",
+            "Can Huang",
+            "Changpeng Cai",
+            "Chao Yu",
+            "Chen Li",
+            "Chen Li",
+            "Chenghua Huang",
+            "Chengwei Hu",
+            "Chenhui Zhang",
+            "Chenzheng Zhu",
+            "Congfeng Yin",
+            "Daoyan Lin",
+            "Dayong Yang",
+            "Di Wang",
+            "Ding Ai",
+            "Erle Zhu",
+            "Fangzhou Yi",
+            "Feiyu Chen",
+            "Guohong Wen",
+            "Hailong Sun",
+            "Haisha Zhao",
+            "Haiyi Hu",
+            "Hanchen Zhang",
+            "Hanrui Liu",
+            "Hanyu Zhang",
+            "Hao Peng",
+            "Hao Tai",
+            "Haobo Zhang",
+            "He Liu",
+            "Hongwei Wang",
+            "Hongxi Yan",
+            "Hongyu Ge",
+            "Huan Liu",
+            "Huan Liu",
+            "Huanpeng Chu",
+            "Jia'ni Zhao",
+            "Jiachen Wang",
+            "Jiajing Zhao",
+            "Jiamin Ren",
+            "Jiapeng Wang",
+            "Jiaxin Zhang",
+            "Jiayi Gui",
+            "Jiayue Zhao",
+            "Jijie Li",
+            "Jing An",
+            "Jing Li",
+            "\n    et al. (86 additional authors not shown)"
+        ],
+        "pdf": "https://arxiv.org/pdf/2602.15763",
+        "abstract": "We present GLM-5, a next-generation foundation model designed to transition the paradigm of vibe coding to agentic engineering. Building upon the agentic, reasoning, and coding (ARC) capabilities of its predecessor, GLM-5 adopts DSA to significantly reduce training and inference costs while maintaining long-context fidelity. To advance model alignment and autonomy, we implement a new asynchronous reinforcement learning infrastructure that drastically improves post-training efficiency by decoupling generation from training. Furthermore, we propose novel asynchronous agent RL algorithms that further improve RL quality, enabling the model to learn from complex, long-horizon interactions more effectively. Through these innovations, GLM-5 achieves state-of-the-art performance on major open benchmarks. Most critically, GLM-5 demonstrates unprecedented capability in real-world coding tasks, surpassing previous baselines in handling end-to-end software engineering challenges. Code, models, and more information are available at https://github.com/zai-org/GLM-5.",
+        "tags": [
+            "GLM",
+            "RL"
+        ]
+    },
+    {
+        "id": 4,
+        "index": 21,
+        "title": "Does Socialization Emerge in AI Agent Society? A Case Study of Moltbook",
+        "author": [
+            "Ming Li",
+            "Xirui Li",
+            "Tianyi Zhou"
+        ],
+        "pdf": "https://arxiv.org/pdf/2602.14299",
+        "abstract": "As large language model agents increasingly populate networked environments, a fundamental question arises: do artificial intelligence (AI) agent societies undergo convergence dynamics similar to human social systems? Lately, Moltbook approximates a plausible future scenario in which autonomous agents participate in an open-ended, continuously evolving online society. We present the first large-scale systemic diagnosis of this AI agent society. Beyond static observation, we introduce a quantitative diagnostic framework for dynamic evolution in AI agent societies, measuring semantic stabilization, lexical turnover, individual inertia, influence persistence, and collective consensus. Our analysis reveals a system in dynamic balance in Moltbook: while global semantic averages stabilize rapidly, individual agents retain high diversity and persistent lexical turnover, defying homogenization. However, agents exhibit strong individual inertia and minimal adaptive response to interaction partners, preventing mutual influence and consensus. Consequently, influence remains transient with no persistent supernodes, and the society fails to develop stable collective influence anchors due to the absence of shared social memory. These findings demonstrate that scale and interaction density alone are insufficient to induce socialization, providing actionable design and analysis principles for upcoming next-generation AI agent societies.",
+        "tags": []
+    },
+    {
+        "id": 5,
+        "index": 14,
+        "title": "ResearchGym: Evaluating Language Model Agents on Real-World AI Research",
+        "author": [
+            "Aniketh Garikaparthi",
+            "Manasi Patwardhan",
+            "Arman Cohan"
+        ],
+        "pdf": "https://arxiv.org/pdf/2602.15112",
+        "abstract": "We introduce ResearchGym, a benchmark and execution environment for evaluating AI agents on end-to-end research. To instantiate this, we repurpose five oral and spotlight papers from ICML, ICLR, and ACL. From each paper's repository, we preserve the datasets, evaluation harness, and baseline implementations but withhold the paper's proposed method. This results in five containerized task environments comprising 39 sub-tasks in total. Within each environment, agents must propose novel hypotheses, run experiments, and attempt to surpass strong human baselines on the paper's metrics. In a controlled evaluation of an agent powered by GPT-5, we observe a sharp capability--reliability gap. The agent improves over the provided baselines from the repository in just 1 of 15 evaluations (6.7%) by 11.5%, and completes only 26.5% of sub-tasks on average. We identify recurring long-horizon failure modes, including impatience, poor time and resource management, overconfidence in weak hypotheses, difficulty coordinating parallel experiments, and hard limits from context length. Yet in a single run, the agent surpasses the solution of an ICML 2025 Spotlight task, indicating that frontier agents can occasionally reach state-of-the-art performance, but do so unreliably. We additionally evaluate proprietary agent scaffolds including Claude Code (Opus-4.5) and Codex (GPT-5.2) which display a similar gap. ResearchGym provides infrastructure for systematic evaluation and analysis of autonomous agents on closed-loop research.",
+        "tags": [
+            "GPT"
+        ]
+    },
+    {
+        "id": 6,
+        "index": 13,
+        "title": "UniT: Unified Multimodal Chain-of-Thought Test-time Scaling",
+        "author": [
+            "Leon Liangyu Chen",
+            "Haoyu Ma",
+            "Zhipeng Fan",
+            "Ziqi Huang",
+            "Animesh Sinha",
+            "Xiaoliang Dai",
+            "Jialiang Wang",
+            "Zecheng He",
+            "Jianwei Yang",
+            "Chunyuan Li",
+            "Junzhe Sun",
+            "Chu Wang",
+            "Serena Yeung-Levy",
+            "Felix Juefei-Xu"
+        ],
+        "pdf": "https://arxiv.org/pdf/2602.12279",
+        "abstract": "Unified models can handle both multimodal understanding and generation within a single architecture, yet they typically operate in a single pass without iteratively refining their outputs. Many multimodal tasks, especially those involving complex spatial compositions, multiple interacting objects, or evolving instructions, require decomposing instructions, verifying intermediate results, and making iterative corrections. While test-time scaling (TTS) has demonstrated that allocating additional inference compute for iterative reasoning substantially improves language model performance, extending this paradigm to unified multimodal models remains an open challenge. We introduce UniT, a framework for multimodal chain-of-thought test-time scaling that enables a single unified model to reason, verify, and refine across multiple rounds. UniT combines agentic data synthesis, unified model training, and flexible test-time inference to elicit cognitive behaviors including verification, subgoal decomposition, and content memory. Our key findings are: (1) unified models trained on short reasoning trajectories generalize to longer inference chains at test time; (2) sequential chain-of-thought reasoning provides a more scalable and compute-efficient TTS strategy than parallel sampling; (3) training on generation and editing trajectories improves out-of-distribution visual reasoning. These results establish multimodal test-time scaling as an effective paradigm for advancing both generation and understanding in unified models.",
+        "tags": [
+            "CoT"
+        ]
+    },
+    {
+        "id": 7,
+        "index": 9,
+        "title": "jina-embeddings-v5-text: Task-Targeted Embedding Distillation",
+        "author": [
+            "Mohammad Kalim Akram",
+            "Saba Sturua",
+            "Nastia Havriushenko",
+            "Quentin Herreros",
+            "Michael GÃ¼nther",
+            "Maximilian Werk",
+            "Han Xiao"
+        ],
+        "pdf": "https://arxiv.org/pdf/2602.15547",
+        "abstract": "Text embedding models are widely used for semantic similarity tasks, including information retrieval, clustering, and classification. General-purpose models are typically trained with single- or multi-stage processes using contrastive loss functions. We introduce a novel training regimen that combines model distillation techniques with task-specific contrastive loss to produce compact, high-performance embedding models. Our findings suggest that this approach is more effective for training small models than purely contrastive or distillation-based training paradigms alone. Benchmark scores for the resulting models, jina-embeddings-v5-text-small and jina-embeddings-v5-text-nano, exceed or match the state-of-the-art for models of similar size. jina-embeddings-v5-text models additionally support long texts (up to 32k tokens) in many languages, and generate embeddings that remain robust under truncation and binary quantization. Model weights are publicly available, hopefully inspiring further advances in embedding model development.",
+        "tags": []
+    },
+    {
+        "id": 8,
+        "index": 7,
+        "title": "Revisiting the Platonic Representation Hypothesis: An Aristotelian View",
+        "author": [
+            "Fabian GrÃ¶ger",
+            "Shuo Wen",
+            "Maria BrbiÄ"
+        ],
+        "pdf": "https://arxiv.org/pdf/2602.14486",
+        "abstract": "The Platonic Representation Hypothesis suggests that representations from neural networks are converging to a common statistical model of reality. We show that the existing metrics used to measure representational similarity are confounded by network scale: increasing model depth or width can systematically inflate representational similarity scores. To correct these effects, we introduce a permutation-based null-calibration framework that transforms any representational similarity metric into a calibrated score with statistical guarantees. We revisit the Platonic Representation Hypothesis with our calibration framework, which reveals a nuanced picture: the apparent convergence reported by global spectral measures largely disappears after calibration, while local neighborhood similarity, but not local distances, retains significant agreement across different modalities. Based on these findings, we propose the Aristotelian Representation Hypothesis: representations in neural networks are converging to shared local neighborhood relationships.",
+        "tags": []
+    },
+    {
+        "id": 9,
+        "index": 5,
+        "title": "Understanding vs. Generation: Navigating Optimization Dilemma in Multimodal Models",
+        "author": [
+            "Sen Ye",
+            "Mengde Xu",
+            "Shuyang Gu",
+            "Di He",
+            "Liwei Wang",
+            "Han Hu"
+        ],
+        "pdf": "https://arxiv.org/pdf/2602.15772",
+        "abstract": "Current research in multimodal models faces a key challenge where enhancing generative capabilities often comes at the expense of understanding, and vice versa. We analyzed this trade-off and identify the primary cause might be the potential conflict between generation and understanding, which creates a competitive dynamic within the model. To address this, we propose the Reason-Reflect-Refine (R3) framework. This innovative algorithm re-frames the single-step generation task into a multi-step process of \"generate-understand-regenerate\". By explicitly leveraging the model's understanding capability during generation, we successfully mitigate the optimization dilemma, achieved stronger generation results and improved understanding ability which are related to the generation process. This offers valuable insights for designing next-generation unified multimodal models. Code is available at https://github.com/sen-ye/R3.",
+        "tags": []
+    },
+    {
+        "id": 10,
+        "index": 5,
+        "title": "On Surprising Effectiveness of Masking Updates in Adaptive Optimizers",
+        "author": [
+            "Taejong Joo",
+            "Wenhan Xia",
+            "Cheolmin Kim",
+            "Ming Zhang",
+            "Eugene Ie"
+        ],
+        "pdf": "https://arxiv.org/pdf/2602.15322",
+        "abstract": "Training large language models (LLMs) relies almost exclusively on dense adaptive optimizers with increasingly sophisticated preconditioners. We challenge this by showing that randomly masking parameter updates can be highly effective, with a masked variant of RMSProp consistently outperforming recent state-of-the-art optimizers. Our analysis reveals that the random masking induces a curvature-dependent geometric regularization that smooths the optimization trajectory. Motivated by this finding, we introduce Momentum-aligned gradient masking (Magma), which modulates the masked updates using momentum-gradient alignment. Extensive LLM pre-training experiments show that Magma is a simple drop-in replacement for adaptive optimizers with consistent gains and negligible computational overhead. Notably, for the 1B model size, Magma reduces perplexity by over 19\\% and 9\\% compared to Adam and Muon, respectively.",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 11,
+        "index": 5,
+        "title": "COMPOT: Calibration-Optimized Matrix Procrustes Orthogonalization for Transformers Compression",
+        "author": [
+            "Denis Makhov",
+            "Dmitriy Shopkhoev",
+            "Magauiya Zhussip",
+            "Ammar Ali",
+            "Baher Mohammad",
+            "Stamatios Lefkimmiatis"
+        ],
+        "pdf": "https://arxiv.org/pdf/2602.15200",
+        "abstract": "Post-training compression of Transformer models commonly relies on truncated singular value decomposition (SVD). However, enforcing a single shared subspace can degrade accuracy even at moderate compression. Sparse dictionary learning provides a more flexible union-of-subspaces representation, but existing approaches often suffer from iterative dictionary and coefficient updates. We propose COMPOT (Calibration-Optimized Matrix Procrustes Orthogonalization for Transformers), a training-free compression framework that uses a small calibration dataset to estimate a sparse weight factorization. COMPOT employs orthogonal dictionaries that enable closed-form Procrustes updates for the dictionary and analytical single-step sparse coding for the coefficients, eliminating iterative optimization. To handle heterogeneous layer sensitivity under a global compression budget, COMPOT further introduces a one-shot dynamic allocation strategy that adaptively redistributes layer-wise compression rates. Extensive experiments across diverse architectures and tasks show that COMPOT consistently delivers a superior quality-compression trade-off over strong low-rank and sparse baselines, while remaining fully compatible with post-training quantization for extreme compression. Code is available $\\href{https://github.com/mts-ai/COMPOT}{here}$.",
+        "tags": [
+            "Transformer"
+        ]
+    },
+    {
+        "id": 12,
+        "index": 4,
+        "title": "TAROT: Test-driven and Capability-adaptive Curriculum Reinforcement Fine-tuning for Code Generation with Large Language Models",
+        "author": [
+            "Chansung Park",
+            "Juyong Jiang",
+            "Fan Wang",
+            "Sayak Paul",
+            "Jiasi Shen",
+            "Jing Tang",
+            "Jianguo Li"
+        ],
+        "pdf": "https://arxiv.org/pdf/2602.15449",
+        "abstract": "Large Language Models (LLMs) are changing the coding paradigm, known as vibe coding, yet synthesizing algorithmically sophisticated and robust code still remains a critical challenge. Incentivizing the deep reasoning capabilities of LLMs is essential to overcoming this hurdle. Reinforcement Fine-Tuning (RFT) has emerged as a promising strategy to address this need. However, most existing approaches overlook the heterogeneous difficulty and granularity inherent in test cases, leading to an imbalanced distribution of reward signals and consequently biased gradient updates during training. To address this, we propose Test-driven and cApability-adaptive cuRriculum reinfOrcement fine-Tuning (TAROT). TAROT systematically constructs, for each problem, a four-tier test suite (basic, intermediate, complex, edge), providing a controlled difficulty landscape for curriculum design and evaluation. Crucially, TAROT decouples curriculum progression from raw reward scores, enabling capability-conditioned evaluation and principled selection from a portfolio of curriculum policies rather than incidental test-case difficulty composition. This design fosters stable optimization and more efficient competency acquisition. Extensive experimental results reveal that the optimal curriculum for RFT in code generation is closely tied to a model's inherent capability, with less capable models achieving greater gains with an easy-to-hard progression, whereas more competent models excel under a hard-first curriculum. TAROT provides a reproducible method that adaptively tailors curriculum design to a model's capability, thereby consistently improving the functional correctness and robustness of the generated code. All code and data are released to foster reproducibility and advance community research at https://github.com/deep-diver/TAROT.",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 13,
+        "index": 4,
+        "title": "Panini: Continual Learning in Token Space via Structured Memory",
+        "author": [
+            "Shreyas Rajesh",
+            "Pavan Holur",
+            "Mehmet Yigit Turali",
+            "Chenda Duan",
+            "Vwani Roychowdhury"
+        ],
+        "pdf": "https://arxiv.org/pdf/2602.15156",
+        "abstract": "Language models are increasingly used to reason over content they were not trained on, such as new documents, evolving knowledge, and user-specific data. A common approach is retrieval-augmented generation (RAG), which stores verbatim documents externally (as chunks) and retrieves only a relevant subset at inference time for an LLM to reason over. However, this results in inefficient usage of test-time compute (LLM repeatedly reasons over the same documents); moreover, chunk retrieval can inject irrelevant context that increases unsupported generation. We propose a human-like non-parametric continual learning framework, where the base model remains fixed, and learning occurs by integrating each new experience into an external semantic memory state that accumulates and consolidates itself continually. We present Panini, which realizes this by representing documents as Generative Semantic Workspaces (GSW) -- an entity- and event-aware network of question-answer (QA) pairs, sufficient for an LLM to reconstruct the experienced situations and mine latent knowledge via reasoning-grounded inference chains on the network. Given a query, Panini only traverses the continually-updated GSW (not the verbatim documents or chunks), and retrieves the most likely inference chains. Across six QA benchmarks, Panini achieves the highest average performance, 5%-7% higher than other competitive baselines, while using 2-30x fewer answer-context tokens, supports fully open-source pipelines, and reduces unsupported answers on curated unanswerable queries. The results show that efficient and accurate structuring of experiences at write time -- as achieved by the GSW framework -- yields both efficiency and reliability gains at read time. Code is available at https://github.com/roychowdhuryresearch/gsw-memory.",
+        "tags": [
+            "LLM",
+            "RAG"
+        ]
+    },
+    {
+        "id": 14,
+        "index": 3,
+        "title": "STAPO: Stabilizing Reinforcement Learning for LLMs by Silencing Rare Spurious Tokens",
+        "author": [
+            "Shiqi Liu",
+            "Zeyu He",
+            "Guojian Zhan",
+            "Letian Tao",
+            "Zhilong Zheng",
+            "Jiang Wu",
+            "Yinuo Wang",
+            "Yang Guan",
+            "Kehua Sheng",
+            "Bo Zhang",
+            "Keqiang Li",
+            "Jingliang Duan",
+            "Shengbo Eben Li"
+        ],
+        "pdf": "https://arxiv.org/pdf/2602.15620",
+        "abstract": "Reinforcement Learning (RL) has significantly improved large language model reasoning, but existing RL fine-tuning methods rely heavily on heuristic techniques such as entropy regularization and reweighting to maintain stability. In practice, they often experience late-stage performance collapse, leading to degraded reasoning quality and unstable training. We derive that the magnitude of token-wise policy gradients in RL is negatively correlated with token probability and local policy entropy. Building on this result, we prove that training instability is driven by a tiny fraction of tokens, approximately 0.01\\%, which we term \\emph{spurious tokens}. When such tokens appear in correct responses, they contribute little to the reasoning outcome but inherit the full sequence-level reward, leading to abnormally amplified gradient updates. Motivated by this observation, we propose Spurious-Token-Aware Policy Optimization (STAPO) for large-scale model refining, which selectively masks such updates and renormalizes the loss over valid tokens. Across six mathematical reasoning benchmarks using Qwen 1.7B, 8B, and 14B base models, STAPO consistently demonstrates superior entropy stability and achieves an average performance improvement of 7.13\\% over GRPO, 20-Entropy and JustRL.",
+        "tags": [
+            "GRPO",
+            "LLM",
+            "Qwen",
+            "RL"
+        ]
+    },
+    {
+        "id": 15,
+        "index": 3,
+        "title": "Visual Persuasion: What Influences Decisions of Vision-Language Models?",
+        "author": [
+            "Manuel Cherep",
+            "Pranav M R",
+            "Pattie Maes",
+            "Nikhil Singh"
+        ],
+        "pdf": "https://arxiv.org/pdf/2602.15278",
+        "abstract": "The web is littered with images, once created for human consumption and now increasingly interpreted by agents using vision-language models (VLMs). These agents make visual decisions at scale, deciding what to click, recommend, or buy. Yet, we know little about the structure of their visual preferences. We introduce a framework for studying this by placing VLMs in controlled image-based choice tasks and systematically perturbing their inputs. Our key idea is to treat the agent's decision function as a latent visual utility that can be inferred through revealed preference: choices between systematically edited images. Starting from common images, such as product photos, we propose methods for visual prompt optimization, adapting text optimization methods to iteratively propose and apply visually plausible modifications using an image generation model (such as in composition, lighting, or background). We then evaluate which edits increase selection probability. Through large-scale experiments on frontier VLMs, we demonstrate that optimized edits significantly shift choice probabilities in head-to-head comparisons. We develop an automatic interpretability pipeline to explain these preferences, identifying consistent visual themes that drive selection. We argue that this approach offers a practical and efficient way to surface visual vulnerabilities, safety concerns that might otherwise be discovered implicitly in the wild, supporting more proactive auditing and governance of image-based AI agents.",
+        "tags": [
+            "VLM"
+        ]
+    },
+    {
+        "id": 16,
+        "index": 2,
+        "title": "Prescriptive Scaling Reveals the Evolution of Language Model Capabilities",
+        "author": [
+            "Hanlin Zhang",
+            "Jikai Jin",
+            "Vasilis Syrgkanis",
+            "Sham Kakade"
+        ],
+        "pdf": "https://arxiv.org/pdf/2602.15327",
+        "abstract": "For deploying foundation models, practitioners increasingly need prescriptive scaling laws: given a pre training compute budget, what downstream accuracy is attainable with contemporary post training practice, and how stable is that mapping as the field evolves? Using large scale observational evaluations with 5k observational and 2k newly sampled data on model performance, we estimate capability boundaries, high conditional quantiles of benchmark scores as a function of log pre training FLOPs, via smoothed quantile regression with a monotone, saturating sigmoid parameterization. We validate the temporal reliability by fitting on earlier model generations and evaluating on later releases. Across various tasks, the estimated boundaries are mostly stable, with the exception of math reasoning that exhibits a consistently advancing boundary over time. We then extend our approach to analyze task dependent saturation and to probe contamination related shifts on math reasoning tasks. Finally, we introduce an efficient algorithm that recovers near full data frontiers using roughly 20% of evaluation budget. Together, our work releases the Proteus 2k, the latest model performance evaluation dataset, and introduces a practical methodology for translating compute budgets into reliable performance expectations and for monitoring when capability boundaries shift across time.",
+        "tags": []
+    },
+    {
+        "id": 17,
+        "index": 2,
+        "title": "Learning Native Continuation for Action Chunking Flow Policies",
+        "author": [
+            "Yufeng Liu",
+            "Hang Yu",
+            "Juntu Zhao",
+            "Bocheng Li",
+            "Di Zhang",
+            "Mingzhu Li",
+            "Wenxuan Wu",
+            "Yingdong Hu",
+            "Junyuan Xie",
+            "Junliang Guo",
+            "Dequan Wang",
+            "Yang Gao"
+        ],
+        "pdf": "https://arxiv.org/pdf/2602.12978",
+        "abstract": "Action chunking enables Vision Language Action (VLA) models to run in real time, but naive chunked execution often exhibits discontinuities at chunk boundaries. Real-Time Chunking (RTC) alleviates this issue but is external to the policy, leading to spurious multimodal switching and trajectories that are not intrinsically smooth. We propose Legato, a training-time continuation method for action-chunked flow-based VLA policies. Specifically, Legato initializes denoising from a schedule-shaped mixture of known actions and noise, exposing the model to partial action information. Moreover, Legato reshapes the learned flow dynamics to ensure that the denoising process remains consistent between training and inference under per-step guidance. Legato further uses randomized schedule condition during training to support varying inference delays and achieve controllable smoothness. Empirically, Legato produces smoother trajectories and reduces spurious multimodal switching during execution, leading to less hesitation and shorter task completion time. Extensive real-world experiments show that Legato consistently outperforms RTC across five manipulation tasks, achieving approximately 10% improvements in both trajectory smoothness and task completion time.",
+        "tags": []
+    },
+    {
+        "id": 18,
+        "index": 2,
+        "title": "Causal-JEPA: Learning World Models through Object-Level Latent Interventions",
+        "author": [
+            "Heejeong Nam",
+            "Quentin Le Lidec",
+            "Lucas Maes",
+            "Yann LeCun",
+            "Randall Balestriero"
+        ],
+        "pdf": "https://arxiv.org/pdf/2602.11389",
+        "abstract": "World models require robust relational understanding to support prediction, reasoning, and control. While object-centric representations provide a useful abstraction, they are not sufficient to capture interaction-dependent dynamics. We therefore propose C-JEPA, a simple and flexible object-centric world model that extends masked joint embedding prediction from image patches to object-centric representations. By applying object-level masking that requires an object's state to be inferred from other objects, C-JEPA induces latent interventions with counterfactual-like effects and prevents shortcut solutions, making interaction reasoning essential. Empirically, C-JEPA leads to consistent gains in visual question answering, with an absolute improvement of about 20\\% in counterfactual reasoning compared to the same architecture without object-level masking. On agent control tasks, C-JEPA enables substantially more efficient planning by using only 1\\% of the total latent input features required by patch-based world models, while achieving comparable performance. Finally, we provide a formal analysis demonstrating that object-level masking induces a causal inductive bias via latent interventions. Our code is available at https://github.com/galilai-group/cjepa.",
+        "tags": []
+    },
+    {
+        "id": 19,
+        "index": 2,
+        "title": "ClinAlign: Scaling Healthcare Alignment from Clinician Preference",
+        "author": [
+            "Shiwei Lyu",
+            "Xidong Wang",
+            "Lei Liu",
+            "Hao Zhu",
+            "Chaohe Zhang",
+            "Jian Wang",
+            "Jinjie Gu",
+            "Benyou Wang",
+            "Yue Shen"
+        ],
+        "pdf": "https://arxiv.org/pdf/2602.09653",
+        "abstract": "Although large language models (LLMs) demonstrate expert-level medical knowledge, aligning their open-ended outputs with fine-grained clinician preferences remains challenging. Existing methods often rely on coarse objectives or unreliable automated judges that are weakly grounded in professional guidelines. We propose a two-stage framework to address this gap. First, we introduce HealthRubrics, a dataset of 7,034 physician-verified preference examples in which clinicians refine LLM-drafted rubrics to meet rigorous medical standards. Second, we distill these rubrics into HealthPrinciples: 119 broadly reusable, clinically grounded principles organized by clinical dimensions, enabling scalable supervision beyond manual annotation. We use HealthPrinciples for (1) offline alignment by synthesizing rubrics for unlabeled queries and (2) an inference-time tool for guided self-revision. A 30B-A3B model trained with our framework achieves 33.4% on HealthBench-Hard, outperforming much larger models including Deepseek-R1 and o3, establishing a resource-efficient baseline for clinical alignment.",
+        "tags": [
+            "DeepSeek",
+            "LLM"
+        ]
+    },
+    {
+        "id": 20,
+        "index": 2,
+        "title": "Geometry-Aware Rotary Position Embedding for Consistent Video World Model",
+        "author": [
+            "Chendong Xiang",
+            "Jiajun Liu",
+            "Jintao Zhang",
+            "Xiao Yang",
+            "Zhengwei Fang",
+            "Shizun Wang",
+            "Zijun Wang",
+            "Yingtian Zou",
+            "Hang Su",
+            "Jun Zhu"
+        ],
+        "pdf": "https://arxiv.org/pdf/2602.07854",
+        "abstract": "Predictive world models that simulate future observations under explicit camera control are fundamental to interactive AI. Despite rapid advances, current systems lack spatial persistence: they fail to maintain stable scene structures over long trajectories, frequently hallucinating details when cameras revisit previously observed locations. We identify that this geometric drift stems from reliance on screen-space positional embeddings, which conflict with the projective geometry required for 3D consistency. We introduce \\textbf{ViewRope}, a geometry-aware encoding that injects camera-ray directions directly into video transformer self-attention layers. By parameterizing attention with relative ray geometry rather than pixel locality, ViewRope provides a model-native inductive bias for retrieving 3D-consistent content across temporal gaps. We further propose \\textbf{Geometry-Aware Frame-Sparse Attention}, which exploits these geometric cues to selectively attend to relevant historical frames, improving efficiency without sacrificing memory consistency. We also present \\textbf{ViewBench}, a diagnostic suite measuring loop-closure fidelity and geometric drift. Our results demonstrate that ViewRope substantially improves long-term consistency while reducing computational costs.",
+        "tags": [
+            "3D",
+            "RoPE",
+            "Transformer"
+        ]
+    },
+    {
+        "id": 21,
+        "index": 1,
+        "title": "The Vision Wormhole: Latent-Space Communication in Heterogeneous Multi-Agent Systems",
+        "author": [
+            "Xiaoze Liu",
+            "Ruowang Zhang",
+            "Weichen Yu",
+            "Siheng Xiong",
+            "Liu He",
+            "Feijie Wu",
+            "Hoin Jung",
+            "Matt Fredrikson",
+            "Xiaoqian Wang",
+            "Jing Gao"
+        ],
+        "pdf": "https://arxiv.org/pdf/2602.15382",
+        "abstract": "Multi-Agent Systems (MAS) powered by Large Language Models have unlocked advanced collaborative reasoning, yet they remain shackled by the inefficiency of discrete text communication, which imposes significant runtime overhead and information quantization loss. While latent state transfer offers a high-bandwidth alternative, existing approaches either assume homogeneous sender-receiver architectures or rely on pair-specific learned translators, limiting scalability and modularity across diverse model families with disjoint manifolds. In this work, we propose the Vision Wormhole, a novel framework that repurposes the visual interface of Vision-Language Models (VLMs) to enable model-agnostic, text-free communication. By introducing a Universal Visual Codec, we map heterogeneous reasoning traces into a shared continuous latent space and inject them directly into the receiver's visual pathway, effectively treating the vision encoder as a universal port for inter-agent telepathy. Our framework adopts a hub-and-spoke topology to reduce pairwise alignment complexity from O(N^2) to O(N) and leverages a label-free, teacher-student distillation objective to align the high-speed visual channel with the robust reasoning patterns of the text pathway. Extensive experiments across heterogeneous model families (e.g., Qwen-VL, Gemma) demonstrate that the Vision Wormhole reduces end-to-end wall-clock time in controlled comparisons while maintaining reasoning fidelity comparable to standard text-based MAS. Code is available at https://github.com/xz-liu/heterogeneous-latent-mas",
+        "tags": [
+            "LLM",
+            "Qwen",
+            "VLM"
+        ]
+    },
+    {
+        "id": 22,
+        "index": 1,
+        "title": "A Trajectory-Based Safety Audit of Clawdbot (OpenClaw)",
+        "author": [
+            "Tianyu Chen",
+            "Dongrui Liu",
+            "Xia Hu",
+            "Jingyi Yu",
+            "Wenjie Wang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2602.14364",
+        "abstract": "Clawdbot is a self-hosted, tool-using personal AI agent with a broad action space spanning local execution and web-mediated workflows, which raises heightened safety and security concerns under ambiguity and adversarial steering. We present a trajectory-centric evaluation of Clawdbot across six risk dimensions. Our test suite samples and lightly adapts scenarios from prior agent-safety benchmarks (including ATBench and LPS-Bench) and supplements them with hand-designed cases tailored to Clawdbot's tool surface. We log complete interaction trajectories (messages, actions, tool-call arguments/outputs) and assess safety using both an automated trajectory judge (AgentDoG-Qwen3-4B) and human review. Across 34 canonical cases, we find a non-uniform safety profile: performance is generally consistent on reliability-focused tasks, while most failures arise under underspecified intent, open-ended goals, or benign-seeming jailbreak prompts, where minor misinterpretations can escalate into higher-impact tool actions. We supplemented the overall results with representative case studies and summarized the commonalities of these cases, analyzing the security vulnerabilities and typical failure modes that Clawdbot is prone to trigger in practice.",
+        "tags": []
+    },
+    {
+        "id": 23,
+        "index": 1,
+        "title": "HLE-Verified: A Systematic Verification and Structured Revision of Humanity's Last Exam",
+        "author": [
+            "Weiqi Zhai",
+            "Zhihai Wang",
+            "Jinghang Wang",
+            "Boyu Yang",
+            "Xiaogang Li",
+            "Xiang Xu",
+            "Bohan Wang",
+            "Peng Wang",
+            "Xingzhe Wu",
+            "Anfeng Li",
+            "Qiyuan Feng",
+            "Yuhao Zhou",
+            "Shoulin Han",
+            "Wenjie Luo",
+            "Yiyuan Li",
+            "Yaxuan Wang",
+            "Ruixian Luo",
+            "Guojie Lin",
+            "Peiyao Xiao",
+            "Chengliang Xu",
+            "Ben Wang",
+            "Zeyu Wang",
+            "Zichao Chen",
+            "Jianan Ye",
+            "Yijie Hu",
+            "Jialong Chen",
+            "Zongwen Shen",
+            "Yuliang Xu",
+            "An Yang",
+            "Bowen Yu",
+            "Dayiheng Liu",
+            "Junyang Lin",
+            "Hu Wei",
+            "Que Shen",
+            "Bing Zhao"
+        ],
+        "pdf": "https://arxiv.org/pdf/2602.13964",
+        "abstract": "Humanity's Last Exam (HLE) has become a widely used benchmark for evaluating frontier large language models on challenging, multi-domain questions. However, community-led analyses have raised concerns that HLE contains a non-trivial number of noisy items, which can bias evaluation results and distort cross-model comparisons. To address this challenge, we introduce HLE-Verified, a verified and revised version of HLE with a transparent verification protocol and fine-grained error taxonomy. Our construction follows a two-stage validation-and-repair workflow resulting in a certified benchmark. In Stage I, each item undergoes binary validation of the problem and final answer through domain-expert review and model-based cross-checks, yielding 641 verified items. In Stage II, flawed but fixable items are revised under strict constraints preserving the original evaluation intent, through dual independent expert repairs, model-assisted auditing, and final adjudication, resulting in 1,170 revised-and-certified items. The remaining 689 items are released as a documented uncertain set with explicit uncertainty sources and expertise tags for future refinement. We evaluate seven state-of-the-art language models on HLE and HLE-Verified, observing an average absolute accuracy gain of 7--10 percentage points on HLE-Verified. The improvement is particularly pronounced on items where the original problem statement and/or reference answer is erroneous, with gains of 30--40 percentage points. Our analyses further reveal a strong association between model confidence and the presence of errors in the problem statement or reference answer, supporting the effectiveness of our revisions. Overall, HLE-Verified improves HLE-style evaluations by reducing annotation noise and enabling more faithful measurement of model capabilities. Data is available at: https://github.com/SKYLENAGE-AI/HLE-Verified",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 24,
+        "index": 1,
+        "title": "Detecting Overflow in Compressed Token Representations for Retrieval-Augmented Generation",
+        "author": [
+            "Julia Belikova",
+            "Danila Rozhevskii",
+            "Dennis Svirin",
+            "Konstantin Polev",
+            "Alexander Panchenko"
+        ],
+        "pdf": "https://arxiv.org/pdf/2602.12235",
+        "abstract": "Efficient long-context processing remains a crucial challenge for contemporary large language models (LLMs), especially in resource-constrained environments. Soft compression architectures promise to extend effective context length by replacing long token sequences with smaller sets of learned compressed tokens. Yet, the limits of compressibility -- and when compression begins to erase task-relevant content -- remain underexplored. In this paper, we define token overflow as a regime in which compressed representations no longer contain sufficient information to answer a given query, and propose a methodology to characterize and detect it. In the xRAG soft-compression setting, we find that query-agnostic saturation statistics reliably separate compressed from uncompressed token representations, providing a practical tool for identifying compressed tokens but showing limited overflow detection capability. Lightweight probing classifiers over both query and context xRAG representations detect overflow with 0.72 AUC-ROC on average on HotpotQA, SQuADv2, and TriviaQA datasets, demonstrating that incorporating query information improves detection performance. These results advance from query-independent diagnostics to query-aware detectors, enabling low-cost pre-LLM gating to mitigate compression-induced errors.",
+        "tags": [
+            "Detection",
+            "LLM"
+        ]
+    },
+    {
+        "id": 25,
+        "index": 1,
+        "title": "How Much Reasoning Do Retrieval-Augmented Models Add beyond LLMs? A Benchmarking Framework for Multi-Hop Inference over Hybrid Knowledge",
+        "author": [
+            "Junhong Lin",
+            "Bing Zhang",
+            "Song Wang",
+            "Ziyan Liu",
+            "Dan Gutfreund",
+            "Julian Shun",
+            "Yada Zhu"
+        ],
+        "pdf": "https://arxiv.org/pdf/2602.10210",
+        "abstract": "Large language models (LLMs) continue to struggle with knowledge-intensive questions that require up-to-date information and multi-hop reasoning. Augmenting LLMs with hybrid external knowledge, such as unstructured text and structured knowledge graphs, offers a promising alternative to costly continual pretraining. As such, reliable evaluation of their retrieval and reasoning capabilities becomes critical. However, many existing benchmarks increasingly overlap with LLM pretraining data, which means answers or supporting knowledge may already be encoded in model parameters, making it difficult to distinguish genuine retrieval and reasoning from parametric recall. We introduce HybridRAG-Bench, a framework for constructing benchmarks to evaluate retrieval-intensive, multi-hop reasoning over hybrid knowledge. HybridRAG-Bench automatically couples unstructured text and structured knowledge graph representations derived from recent scientific literature on arXiv, and generates knowledge-intensive question-answer pairs grounded in explicit reasoning paths. The framework supports flexible domain and time-frame selection, enabling contamination-aware and customizable evaluation as models and knowledge evolve. Experiments across three domains (artificial intelligence, governance and policy, and bioinformatics) demonstrate that HybridRAG-Bench rewards genuine retrieval and reasoning rather than parametric recall, offering a principled testbed for evaluating hybrid knowledge-augmented reasoning systems. We release our code and data at http://github.com/junhongmit/HybridRAG-Bench.",
+        "tags": [
+            "LLM"
+        ]
+    }
+]

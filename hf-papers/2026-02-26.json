@@ -1,0 +1,622 @@
+[
+    {
+        "id": 1,
+        "index": 46,
+        "title": "HyTRec: A Hybrid Temporal-Aware Attention Architecture for Long Behavior Sequential Recommendation",
+        "author": [
+            "Lei Xin",
+            "Yuhao Zheng",
+            "Ke Cheng",
+            "Changjiang Jiang",
+            "Zifan Zhang",
+            "Fanhu Zeng"
+        ],
+        "pdf": "https://arxiv.org/pdf/2602.18283",
+        "abstract": "Modeling long sequences of user behaviors has emerged as a critical frontier in generative recommendation. However, existing solutions face a dilemma: linear attention mechanisms achieve efficiency at the cost of retrieval precision due to limited state capacity, while softmax attention suffers from prohibitive computational overhead. To address this challenge, we propose HyTRec, a model featuring a Hybrid Attention architecture that explicitly decouples long-term stable preferences from short-term intent spikes. By assigning massive historical sequences to a linear attention branch and reserving a specialized softmax attention branch for recent interactions, our approach restores precise retrieval capabilities within industrial-scale contexts involving ten thousand interactions. To mitigate the lag in capturing rapid interest drifts within the linear layers, we furthermore design Temporal-Aware Delta Network (TADN) to dynamically upweight fresh behavioral signals while effectively suppressing historical noise. Empirical results on industrial-scale datasets confirm the superiority that our model maintains linear inference speed and outperforms strong baselines, notably delivering over 8% improvement in Hit Rate for users with ultra-long sequences with great efficiency.",
+        "tags": []
+    },
+    {
+        "id": 2,
+        "index": 41,
+        "title": "MolHIT: Advancing Molecular-Graph Generation with Hierarchical Discrete Diffusion Models",
+        "author": [
+            "Hojung Jung",
+            "Rodrigo Hormazabal",
+            "Jaehyeong Jo",
+            "Youngrok Park",
+            "Kyunggeun Roh",
+            "Se-Young Yun",
+            "Sehui Han",
+            "Dae-Woong Jeong"
+        ],
+        "pdf": "https://arxiv.org/pdf/2602.17602",
+        "abstract": "Molecular generation with diffusion models has emerged as a promising direction for AI-driven drug discovery and materials science. While graph diffusion models have been widely adopted due to the discrete nature of 2D molecular graphs, existing models suffer from low chemical validity and struggle to meet the desired properties compared to 1D modeling. In this work, we introduce MolHIT, a powerful molecular graph generation framework that overcomes long-standing performance limitations in existing methods. MolHIT is based on the Hierarchical Discrete Diffusion Model, which generalizes discrete diffusion to additional categories that encode chemical priors, and decoupled atom encoding that splits the atom types according to their chemical roles. Overall, MolHIT achieves new state-of-the-art performance on the MOSES dataset with near-perfect validity for the first time in graph diffusion, surpassing strong 1D baselines across multiple metrics. We further demonstrate strong performance in downstream tasks, including multi-property guided generation and scaffold extension.",
+        "tags": [
+            "Diffusion"
+        ]
+    },
+    {
+        "id": 3,
+        "index": 29,
+        "title": "DreamID-Omni: Unified Framework for Controllable Human-Centric Audio-Video Generation",
+        "author": [
+            "Xu Guo",
+            "Fulong Ye",
+            "Qichao Sun",
+            "Liyang Chen",
+            "Bingchuan Li",
+            "Pengze Zhang",
+            "Jiawei Liu",
+            "Songtao Zhao",
+            "Qian He",
+            "Xiangwang Hou"
+        ],
+        "pdf": "https://arxiv.org/pdf/2602.12160",
+        "abstract": "Recent advancements in foundation models have revolutionized joint audio-video generation. However, existing approaches typically treat human-centric tasks including reference-based audio-video generation (R2AV), video editing (RV2AV) and audio-driven video animation (RA2V) as isolated objectives. Furthermore, achieving precise, disentangled control over multiple character identities and voice timbres within a single framework remains an open challenge. In this paper, we propose DreamID-Omni, a unified framework for controllable human-centric audio-video generation. Specifically, we design a Symmetric Conditional Diffusion Transformer that integrates heterogeneous conditioning signals via a symmetric conditional injection scheme. To resolve the pervasive identity-timbre binding failures and speaker confusion in multi-person scenarios, we introduce a Dual-Level Disentanglement strategy: Synchronized RoPE at the signal level to ensure rigid attention-space binding, and Structured Captions at the semantic level to establish explicit attribute-subject mappings. Furthermore, we devise a Multi-Task Progressive Training scheme that leverages weakly-constrained generative priors to regularize strongly-constrained tasks, preventing overfitting and harmonizing disparate objectives. Extensive experiments demonstrate that DreamID-Omni achieves comprehensive state-of-the-art performance across video, audio, and audio-visual consistency, even outperforming leading proprietary commercial models. We will release our code to bridge the gap between academic research and commercial-grade applications.",
+        "tags": [
+            "DiT",
+            "Diffusion",
+            "RoPE",
+            "Transformer",
+            "Video Editing",
+            "Video Generation"
+        ]
+    },
+    {
+        "id": 4,
+        "index": 19,
+        "title": "SkyReels-V4: Multi-modal Video-Audio Generation, Inpainting and Editing model",
+        "author": [
+            "Guibin Chen",
+            "Dixuan Lin",
+            "Jiangping Yang",
+            "Youqiang Zhang",
+            "Zhengcong Fei",
+            "Debang Li",
+            "Sheng Chen",
+            "Chaofeng Ao",
+            "Nuo Pang",
+            "Yiming Wang",
+            "Yikun Dou",
+            "Zheng Chen",
+            "Mingyuan Fan",
+            "Tuanhui Li",
+            "Mingshan Chang",
+            "Hao Zhang",
+            "Xiaopeng Sun",
+            "Jingtao Xu",
+            "Yuqiang Xie",
+            "Jiahua Wang",
+            "Zhiheng Xu",
+            "Weiming Xiong",
+            "Yuzhe Jin",
+            "Baoxuan Gu",
+            "Binjie Mao",
+            "Yunjie Yu",
+            "Jujie He",
+            "Yuhao Feng",
+            "Shiwen Tu",
+            "Chaojie Wang",
+            "Rui Yan",
+            "Wei Shen",
+            "Jingchen Wu",
+            "Peng Zhao",
+            "Xuanyue Zhong",
+            "Zhuangzhuang Liu",
+            "Kaifei Wang",
+            "Fuxiang Zhang",
+            "Weikai Xu",
+            "Wenyan Liu",
+            "Binglu Zhang",
+            "Yu Shen",
+            "Tianhui Xiong",
+            "Bin Peng",
+            "Liang Zeng",
+            "Xuchen Song",
+            "Haoxiang Guo",
+            "Peiyu Wang",
+            "Yahui Zhou"
+        ],
+        "pdf": "https://arxiv.org/pdf/2602.21818",
+        "abstract": "SkyReels V4 is a unified multi modal video foundation model for joint video audio generation, inpainting, and editing. The model adopts a dual stream Multimodal Diffusion Transformer (MMDiT) architecture, where one branch synthesizes video and the other generates temporally aligned audio, while sharing a powerful text encoder based on the Multimodal Large Language Models (MMLM). SkyReels V4 accepts rich multi modal instructions, including text, images, video clips, masks, and audio references. By combining the MMLMs multi modal instruction following capability with in context learning in the video branch MMDiT, the model can inject fine grained visual guidance under complex conditioning, while the audio branch MMDiT simultaneously leverages audio references to guide sound generation. On the video side, we adopt a channel concatenation formulation that unifies a wide range of inpainting style tasks, such as image to video, video extension, and video editing under a single interface, and naturally extends to vision referenced inpainting and editing via multi modal prompts. SkyReels V4 supports up to 1080p resolution, 32 FPS, and 15 second duration, enabling high fidelity, multi shot, cinema level video generation with synchronized audio. To make such high resolution, long-duration generation computationally feasible, we introduce an efficiency strategy: Joint generation of low resolution full sequences and high-resolution keyframes, followed by dedicated super-resolution and frame interpolation models. To our knowledge, SkyReels V4 is the first video foundation model that simultaneously supports multi-modal input, joint video audio generation, and a unified treatment of generation, inpainting, and editing, while maintaining strong efficiency and quality at cinematic resolutions and durations.",
+        "tags": [
+            "DiT",
+            "Diffusion",
+            "Inpainting",
+            "LLM",
+            "Super Resolution",
+            "Transformer",
+            "Video Editing",
+            "Video Generation"
+        ]
+    },
+    {
+        "id": 5,
+        "index": 16,
+        "title": "ARLArena: A Unified Framework for Stable Agentic Reinforcement Learning",
+        "author": [
+            "Xiaoxuan Wang",
+            "Han Zhang",
+            "Haixin Wang",
+            "Yidan Shi",
+            "Ruoyan Li",
+            "Kaiqiao Han",
+            "Chenyi Tong",
+            "Haoran Deng",
+            "Renliang Sun",
+            "Alexander Taylor",
+            "Yanqiao Zhu",
+            "Jason Cong",
+            "Yizhou Sun",
+            "Wei Wang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2602.21534",
+        "abstract": "Agentic reinforcement learning (ARL) has rapidly gained attention as a promising paradigm for training agents to solve complex, multi-step interactive tasks. Despite encouraging early results, ARL remains highly unstable, often leading to training collapse. This instability limits scalability to larger environments and longer interaction horizons, and constrains systematic exploration of algorithmic design choices. In this paper, we first propose ARLArena, a stable training recipe and systematic analysis framework that examines training stability in a controlled and reproducible setting. ARLArena first constructs a clean and standardized testbed. Then, we decompose policy gradient into four core design dimensions and assess the performance and stability of each dimension. Through this fine-grained analysis, we distill a unified perspective on ARL and propose SAMPO, a stable agentic policy optimization method designed to mitigate the dominant sources of instability in ARL. Empirically, SAMPO achieves consistently stable training and strong performance across diverse agentic tasks. Overall, this study provides a unifying policy gradient perspective for ARL and offers practical guidance for building stable and reproducible LLM-based agent training pipelines.",
+        "tags": [
+            "LLM",
+            "RL"
+        ]
+    },
+    {
+        "id": 6,
+        "index": 11,
+        "title": "GUI-Libra: Training Native GUI Agents to Reason and Act with Action-aware Supervision and Partially Verifiable RL",
+        "author": [
+            "Rui Yang",
+            "Qianhui Wu",
+            "Zhaoyang Wang",
+            "Hanyang Chen",
+            "Ke Yang",
+            "Hao Cheng",
+            "Huaxiu Yao",
+            "Baoling Peng",
+            "Huan Zhang",
+            "Jianfeng Gao",
+            "Tong Zhang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2602.22190",
+        "abstract": "Open-source native GUI agents still lag behind closed-source systems on long-horizon navigation tasks. This gap stems from two limitations: a shortage of high-quality, action-aligned reasoning data, and the direct adoption of generic post-training pipelines that overlook the unique challenges of GUI agents. We identify two fundamental issues in these pipelines: (i) standard SFT with CoT reasoning often hurts grounding, and (ii) step-wise RLVR-tyle training faces partial verifiability, where multiple actions can be correct but only a single demonstrated action is used for verification. This makes offline step-wise metrics weak predictors of online task success. In this work, we present GUI-Libra, a tailored training recipe that addresses these challenges. First, to mitigate the scarcity of action-aligned reasoning data, we introduce a data construction and filtering pipeline and release a curated 81K GUI reasoning dataset. Second, to reconcile reasoning with grounding, we propose action-aware SFT that mixes reasoning-then-action and direct-action data and reweights tokens to emphasize action and grounding. Third, to stabilize RL under partial verifiability, we identify the overlooked importance of KL regularization in RLVR and show that a KL trust region is critical for improving offline-to-online predictability; we further introduce success-adaptive scaling to downweight unreliable negative gradients. Across diverse web and mobile benchmarks, GUI-Libra consistently improves both step-wise accuracy and end-to-end task completion. Our results suggest that carefully designed post-training and data curation can unlock significantly stronger task-solving capabilities without costly online data collection. We release our dataset, code, and models to facilitate further research on data-efficient post-training for reasoning-capable GUI agents.",
+        "tags": [
+            "CoT",
+            "RL"
+        ]
+    },
+    {
+        "id": 7,
+        "index": 10,
+        "title": "Solaris: Building a Multiplayer Video World Model in Minecraft",
+        "author": [
+            "Georgy Savva",
+            "Oscar Michel",
+            "Daohan Lu",
+            "Suppakit Waiwitlikhit",
+            "Timothy Meehan",
+            "Dhairya Mishra",
+            "Srivats Poddar",
+            "Jack Lu",
+            "Saining Xie"
+        ],
+        "pdf": "https://arxiv.org/pdf/2602.22208",
+        "abstract": "Existing action-conditioned video generation models (video world models) are limited to single-agent perspectives, failing to capture the multi-agent interactions of real-world environments. We introduce Solaris, a multiplayer video world model that simulates consistent multi-view observations. To enable this, we develop a multiplayer data system designed for robust, continuous, and automated data collection on video games such as Minecraft. Unlike prior platforms built for single-player settings, our system supports coordinated multi-agent interaction and synchronized videos + actions capture. Using this system, we collect 12.64 million multiplayer frames and propose an evaluation framework for multiplayer movement, memory, grounding, building, and view consistency. We train Solaris using a staged pipeline that progressively transitions from single-player to multiplayer modeling, combining bidirectional, causal, and Self Forcing training. In the final stage, we introduce Checkpointed Self Forcing, a memory-efficient Self Forcing variant that enables a longer-horizon teacher. Results show our architecture and training design outperform existing baselines. Through open-sourcing our system and models, we hope to lay the groundwork for a new generation of multi-agent world models.",
+        "tags": [
+            "Video Generation"
+        ]
+    },
+    {
+        "id": 8,
+        "index": 9,
+        "title": "VecGlypher: Unified Vector Glyph Generation with Language Models",
+        "author": [
+            "Xiaoke Huang",
+            "Bhavul Gauri",
+            "Kam Woh Ng",
+            "Tony Ng",
+            "Mengmeng Xu",
+            "Zhiheng Liu",
+            "Weiming Ren",
+            "Zhaochong An",
+            "Zijian Zhou",
+            "Haonan Qiu",
+            "Yuyin Zhou",
+            "Sen He",
+            "Ziheng Wang",
+            "Tao Xiang",
+            "Xiao Han"
+        ],
+        "pdf": "https://arxiv.org/pdf/2602.21461",
+        "abstract": "Vector glyphs are the atomic units of digital typography, yet most learning-based pipelines still depend on carefully curated exemplar sheets and raster-to-vector postprocessing, which limits accessibility and editability. We introduce VecGlypher, a single multimodal language model that generates high-fidelity vector glyphs directly from text descriptions or image exemplars. Given a style prompt, optional reference glyph images, and a target character, VecGlypher autoregressively emits SVG path tokens, avoiding raster intermediates and producing editable, watertight outlines in one pass. A typography-aware data and training recipe makes this possible: (i) a large-scale continuation stage on 39K noisy Envato fonts to master SVG syntax and long-horizon geometry, followed by (ii) post-training on 2.5K expert-annotated Google Fonts with descriptive tags and exemplars to align language and imagery with geometry; preprocessing normalizes coordinate frames, canonicalizes paths, de-duplicates families, and quantizes coordinates for stable long-sequence decoding. On cross-family OOD evaluation, VecGlypher substantially outperforms both general-purpose LLMs and specialized vector-font baselines for text-only generation, while image-referenced generation reaches a state-of-the-art performance, with marked gains over DeepVecFont-v2 and DualVector. Ablations show that model scale and the two-stage recipe are critical and that absolute-coordinate serialization yields the best geometry. VecGlypher lowers the barrier to font creation by letting users design with words or exemplars, and provides a scalable foundation for future multimodal design tools.",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 9,
+        "index": 9,
+        "title": "JavisDiT++: Unified Modeling and Optimization for Joint Audio-Video Generation",
+        "author": [
+            "Kai Liu",
+            "Yanhao Zheng",
+            "Kai Wang",
+            "Shengqiong Wu",
+            "Rongjunchen Zhang",
+            "Jiebo Luo",
+            "Dimitrios Hatzinakos",
+            "Ziwei Liu",
+            "Hao Fei",
+            "Tat-Seng Chua"
+        ],
+        "pdf": "https://arxiv.org/pdf/2602.19163",
+        "abstract": "AIGC has rapidly expanded from text-to-image generation toward high-quality multimodal synthesis across video and audio. Within this context, joint audio-video generation (JAVG) has emerged as a fundamental task that produces synchronized and semantically aligned sound and vision from textual descriptions. However, compared with advanced commercial models such as Veo3, existing open-source methods still suffer from limitations in generation quality, temporal synchrony, and alignment with human preferences. To bridge the gap, this paper presents JavisDiT++, a concise yet powerful framework for unified modeling and optimization of JAVG. First, we introduce a modality-specific mixture-of-experts (MS-MoE) design that enables cross-modal interaction efficacy while enhancing single-modal generation quality. Then, we propose a temporal-aligned RoPE (TA-RoPE) strategy to achieve explicit, frame-level synchronization between audio and video tokens. Besides, we develop an audio-video direct preference optimization (AV-DPO) method to align model outputs with human preference across quality, consistency, and synchrony dimensions. Built upon Wan2.1-1.3B-T2V, our model achieves state-of-the-art performance merely with around 1M public training entries, significantly outperforming prior approaches in both qualitative and quantitative evaluations. Comprehensive ablation studies have been conducted to validate the effectiveness of our proposed modules. All the code, model, and dataset are released at https://JavisVerse.github.io/JavisDiT2-page.",
+        "tags": [
+            "DPO",
+            "MoE",
+            "RoPE",
+            "Text-to-Image",
+            "Video Generation"
+        ]
+    },
+    {
+        "id": 10,
+        "index": 9,
+        "title": "Image Generation with a Sphere Encoder",
+        "author": [
+            "Kaiyu Yue",
+            "Menglin Jia",
+            "Ji Hou",
+            "Tom Goldstein"
+        ],
+        "pdf": "https://arxiv.org/pdf/2602.15030",
+        "abstract": "We introduce the Sphere Encoder, an efficient generative framework capable of producing images in a single forward pass and competing with many-step diffusion models using fewer than five steps. Our approach works by learning an encoder that maps natural images uniformly onto a spherical latent space, and a decoder that maps random latent vectors back to the image space. Trained solely through image reconstruction losses, the model generates an image by simply decoding a random point on the sphere. Our architecture naturally supports conditional generation, and looping the encoder/decoder a few times can further enhance image quality. Across several datasets, the sphere encoder approach yields performance competitive with state of the art diffusions, but with a small fraction of the inference cost. Project page is available at https://sphere-encoder.github.io .",
+        "tags": [
+            "Diffusion"
+        ]
+    },
+    {
+        "id": 11,
+        "index": 7,
+        "title": "World Guidance: World Modeling in Condition Space for Action Generation",
+        "author": [
+            "Yue Su",
+            "Sijin Chen",
+            "Haixin Shi",
+            "Mingyu Liu",
+            "Zhengshen Zhang",
+            "Ningyuan Huang",
+            "Weiheng Zhong",
+            "Zhengbang Zhu",
+            "Yuxiao Liu",
+            "Xihui Liu"
+        ],
+        "pdf": "https://arxiv.org/pdf/2602.22010",
+        "abstract": "Leveraging future observation modeling to facilitate action generation presents a promising avenue for enhancing the capabilities of Vision-Language-Action (VLA) models. However, existing approaches struggle to strike a balance between maintaining efficient, predictable future representations and preserving sufficient fine-grained information to guide precise action generation. To address this limitation, we propose WoG (World Guidance), a framework that maps future observations into compact conditions by injecting them into the action inference pipeline. The VLA is then trained to simultaneously predict these compressed conditions alongside future actions, thereby achieving effective world modeling within the condition space for action inference. We demonstrate that modeling and predicting this condition space not only facilitates fine-grained action generation but also exhibits superior generalization capabilities. Moreover, it learns effectively from substantial human manipulation videos. Extensive experiments across both simulation and real-world environments validate that our method significantly outperforms existing methods based on future prediction. Project page is available at: https://selen-suyue.github.io/WoGNet/",
+        "tags": []
+    },
+    {
+        "id": 12,
+        "index": 7,
+        "title": "DualPath: Breaking the Storage Bandwidth Bottleneck in Agentic LLM Inference",
+        "author": [
+            "Yongtong Wu",
+            "Shaoyuan Chen",
+            "Yinmin Zhong",
+            "Rilin Huang",
+            "Yixuan Tan",
+            "Wentao Zhang",
+            "Liyue Zhang",
+            "Shangyan Zhou",
+            "Yuxuan Liu",
+            "Shunfeng Zhou",
+            "Mingxing Zhang",
+            "Xin Jin",
+            "Panpan Huang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2602.21548",
+        "abstract": "The performance of multi-turn, agentic LLM inference is increasingly dominated by KV-Cache storage I/O rather than computation. In prevalent disaggregated architectures, loading the massive KV-Cache from external storage creates a fundamental imbalance: storage NICs on prefill engines become bandwidth-saturated, while those on decoding engines remain idle. This asymmetry severely constrains overall system throughput.\nWe present DualPath, an inference system that breaks this bottleneck by introducing dual-path KV-Cache loading. Beyond the traditional storage-to-prefill path, DualPath enables a novel storage-to-decode path, in which the KV-Cache is loaded into decoding engines and then efficiently transferred to prefill engines via RDMA over the compute network. DualPath combines this optimized data path -- which inherently avoids network congestion and avoids interference with latency-critical model execution communications -- with a global scheduler that dynamically balances load across prefill and decode engines.\nOur evaluation on three models with production agentic workloads demonstrates that DualPath improves offline inference throughput by up to 1.87$\\times$ on our in-house inference system. It can also improve online serving throughput by an average factor of 1.96$\\times$ without violating SLO.",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 13,
+        "index": 5,
+        "title": "From Statics to Dynamics: Physics-Aware Image Editing with Latent Transition Priors",
+        "author": [
+            "Liangbing Zhao",
+            "Le Zhuo",
+            "Sayak Paul",
+            "Hongsheng Li",
+            "Mohamed Elhoseiny"
+        ],
+        "pdf": "https://arxiv.org/pdf/2602.21778",
+        "abstract": "Instruction-based image editing has achieved remarkable success in semantic alignment, yet state-of-the-art models frequently fail to render physically plausible results when editing involves complex causal dynamics, such as refraction or material deformation. We attribute this limitation to the dominant paradigm that treats editing as a discrete mapping between image pairs, which provides only boundary conditions and leaves transition dynamics underspecified. To address this, we reformulate physics-aware editing as predictive physical state transitions and introduce PhysicTran38K, a large-scale video-based dataset comprising 38K transition trajectories across five physical domains, constructed via a two-stage filtering and constraint-aware annotation pipeline. Building on this supervision, we propose PhysicEdit, an end-to-end framework equipped with a textual-visual dual-thinking mechanism. It combines a frozen Qwen2.5-VL for physically grounded reasoning with learnable transition queries that provide timestep-adaptive visual guidance to a diffusion backbone. Experiments show that PhysicEdit improves over Qwen-Image-Edit by 5.9% in physical realism and 10.1% in knowledge-grounded editing, setting a new state-of-the-art for open-source methods, while remaining competitive with leading proprietary models.",
+        "tags": [
+            "Diffusion",
+            "Image Editing",
+            "Qwen"
+        ]
+    },
+    {
+        "id": 14,
+        "index": 4,
+        "title": "NanoKnow: How to Know What Your Language Model Knows",
+        "author": [
+            "Lingwei Gu",
+            "Nour Jedidi",
+            "Jimmy Lin"
+        ],
+        "pdf": "https://arxiv.org/pdf/2602.20122",
+        "abstract": "How do large language models (LLMs) know what they know? Answering this question has been difficult because pre-training data is often a \"black box\" -- unknown or inaccessible. The recent release of nanochat -- a family of small LLMs with fully open pre-training data -- addresses this as it provides a transparent view into where a model's parametric knowledge comes from. Towards the goal of understanding how knowledge is encoded by LLMs, we release NanoKnow, a benchmark dataset that partitions questions from Natural Questions and SQuAD into splits based on whether their answers are present in nanochat's pre-training corpus. Using these splits, we can now properly disentangle the sources of knowledge that LLMs rely on when producing an output. To demonstrate NanoKnow's utility, we conduct experiments using eight nanochat checkpoints. Our findings show: (1) closed-book accuracy is strongly influenced by answer frequency in the pre-training data, (2) providing external evidence can mitigate this frequency dependence, (3) even with external evidence, models are more accurate when answers were seen during pre-training, demonstrating that parametric and external knowledge are complementary, and (4) non-relevant information is harmful, with accuracy decreasing based on both the position and the number of non-relevant contexts. We release all NanoKnow artifacts at https://github.com/castorini/NanoKnow.",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 15,
+        "index": 3,
+        "title": "The Design Space of Tri-Modal Masked Diffusion Models",
+        "author": [
+            "Louis Bethune",
+            "Victor Turrisi",
+            "Bruno Kacper Mlodozeniec",
+            "Pau Rodriguez Lopez",
+            "Lokesh Boominathan",
+            "Nikhil Bhendawade",
+            "Amitis Shidani",
+            "Joris Pelemans",
+            "Theo X. Olausson",
+            "Devon Hjelm",
+            "Paul Dixon",
+            "Joao Monteiro",
+            "Pierre Ablin",
+            "Vishnu Banna",
+            "Arno Blaas",
+            "Nick Henderson",
+            "Kari Noriy",
+            "Dan Busbridge",
+            "Josh Susskind",
+            "Marco Cuturi",
+            "Irina Belousova",
+            "Luca Zappella",
+            "Russ Webb",
+            "Jason Ramapuram"
+        ],
+        "pdf": "https://arxiv.org/pdf/2602.21472",
+        "abstract": "Discrete diffusion models have emerged as strong alternatives to autoregressive language models, with recent work initializing and fine-tuning a base unimodal model for bimodal generation. Diverging from previous approaches, we introduce the first tri-modal masked diffusion model pretrained from scratch on text, image-text, and audio-text data. We systematically analyze multimodal scaling laws, modality mixing ratios, noise schedules, and batch-size effects, and we provide optimized inference sampling defaults. Our batch-size analysis yields a novel stochastic differential equation (SDE)-based reparameterization that eliminates the need for tuning the optimal batch size as reported in recent work. This reparameterization decouples the physical batch size, often chosen based on compute constraints (GPU saturation, FLOP efficiency, wall-clock time), from the logical batch size, chosen to balance gradient variance during stochastic optimization. Finally, we pretrain a preliminary 3B-parameter tri-modal model on 6.4T tokens, demonstrating the capabilities of a unified design and achieving strong results in text generation, text-to-image tasks, and text-to-speech tasks. Our work represents the largest-scale systematic open study of multimodal discrete diffusion models conducted to date, providing insights into scaling behaviors across multiple modalities.",
+        "tags": [
+            "Diffusion",
+            "SDE",
+            "Text-to-Image"
+        ]
+    },
+    {
+        "id": 16,
+        "index": 3,
+        "title": "SeaCache: Spectral-Evolution-Aware Cache for Accelerating Diffusion Models",
+        "author": [
+            "Jiwoo Chung",
+            "Sangeek Hyun",
+            "MinKyu Lee",
+            "Byeongju Han",
+            "Geonho Cha",
+            "Dongyoon Wee",
+            "Youngjun Hong",
+            "Jae-Pil Heo"
+        ],
+        "pdf": "https://arxiv.org/pdf/2602.18993",
+        "abstract": "Diffusion models are a strong backbone for visual generation, but their inherently sequential denoising process leads to slow inference. Previous methods accelerate sampling by caching and reusing intermediate outputs based on feature distances between adjacent timesteps. However, existing caching strategies typically rely on raw feature differences that entangle content and noise. This design overlooks spectral evolution, where low-frequency structure appears early and high-frequency detail is refined later. We introduce Spectral-Evolution-Aware Cache (SeaCache), a training-free cache schedule that bases reuse decisions on a spectrally aligned representation. Through theoretical and empirical analysis, we derive a Spectral-Evolution-Aware (SEA) filter that preserves content-relevant components while suppressing noise. Employing SEA-filtered input features to estimate redundancy leads to dynamic schedules that adapt to content while respecting the spectral priors underlying the diffusion model. Extensive experiments on diverse visual generative models and the baselines show that SeaCache achieves state-of-the-art latency-quality trade-offs.",
+        "tags": [
+            "Diffusion"
+        ]
+    },
+    {
+        "id": 17,
+        "index": 2,
+        "title": "Revisiting Text Ranking in Deep Research",
+        "author": [
+            "Chuan Meng",
+            "Litu Ou",
+            "Sean MacAvaney",
+            "Jeff Dalton"
+        ],
+        "pdf": "https://arxiv.org/pdf/2602.21456",
+        "abstract": "Deep research has emerged as an important task that aims to address hard queries through extensive open-web exploration. To tackle it, most prior work equips large language model (LLM)-based agents with opaque web search APIs, enabling agents to iteratively issue search queries, retrieve external evidence, and reason over it. Despite search's essential role in deep research, black-box web search APIs hinder systematic analysis of search components, leaving the behaviour of established text ranking methods in deep research largely unclear. To fill this gap, we reproduce a selection of key findings and best practices for IR text ranking methods in the deep research setting. In particular, we examine their effectiveness from three perspectives: (i) retrieval units (documents vs. passages), (ii) pipeline configurations (different retrievers, re-rankers, and re-ranking depths), and (iii) query characteristics (the mismatch between agent-issued queries and the training queries of text rankers). We perform experiments on BrowseComp-Plus, a deep research dataset with a fixed corpus, evaluating 2 open-source agents, 5 retrievers, and 3 re-rankers across diverse setups. We find that agent-issued queries typically follow web-search-style syntax (e.g., quoted exact matches), favouring lexical, learned sparse, and multi-vector retrievers; passage-level units are more efficient under limited context windows, and avoid the difficulties of document length normalisation in lexical retrieval; re-ranking is highly effective; translating agent-issued queries into natural-language questions significantly bridges the query mismatch.",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 18,
+        "index": 2,
+        "title": "Model Context Protocol (MCP) Tool Descriptions Are Smelly! Towards Improving AI Agent Efficiency with Augmented MCP Tool Descriptions",
+        "author": [
+            "Mohammed Mehedi Hasan",
+            "Hao Li",
+            "Gopi Krishnan Rajbahadur",
+            "Bram Adams",
+            "Ahmed E. Hassan"
+        ],
+        "pdf": "https://arxiv.org/pdf/2602.14878",
+        "abstract": "The Model Context Protocol (MCP) introduces a standard specification that defines how Foundation Model (FM)-based agents should interact with external systems by invoking tools. However, to understand a tool's purpose and features, FMs rely on natural-language tool descriptions, making these descriptions a critical component in guiding FMs to select the optimal tool for a given (sub)task and to pass the right arguments to the tool. While defects or smells in these descriptions can misguide FM-based agents, their prevalence and consequences in the MCP ecosystem remain unclear.\nHence, we examine 856 tools spread across 103 MCP servers empirically, assess their description quality, and their impact on agent performance. We identify six components of tool descriptions from the literature, develop a scoring rubric utilizing these components, and then formalize tool description smells based on this rubric. By operationalizing this rubric through an FM-based scanner, we find that 97.1% of the analyzed tool descriptions contain at least one smell, with 56% failing to state their purpose clearly. While augmenting these descriptions for all components improves task success rates by a median of 5.85 percentage points and improves partial goal completion by 15.12%, it also increases the number of execution steps by 67.46% and regresses performance in 16.67% of cases. These results indicate that achieving performance gains is not straightforward; while execution cost can act as a trade-off, execution context can also impact. Furthermore, component ablations show that compact variants of different component combinations often preserve behavioral reliability while reducing unnecessary token overhead, enabling more efficient use of the FM context window and lower execution costs.",
+        "tags": []
+    },
+    {
+        "id": 19,
+        "index": 1,
+        "title": "NoLan: Mitigating Object Hallucinations in Large Vision-Language Models via Dynamic Suppression of Language Priors",
+        "author": [
+            "Lingfeng Ren",
+            "Weihao Yu",
+            "Runpeng Yu",
+            "Xinchao Wang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2602.22144",
+        "abstract": "Object hallucination is a critical issue in Large Vision-Language Models (LVLMs), where outputs include objects that do not appear in the input image. A natural question arises from this phenomenon: Which component of the LVLM pipeline primarily contributes to object hallucinations? The vision encoder to perceive visual information, or the language decoder to generate text responses? In this work, we strive to answer this question through designing a systematic experiment to analyze the roles of the vision encoder and the language decoder in hallucination generation. Our observations reveal that object hallucinations are predominantly associated with the strong priors from the language decoder. Based on this finding, we propose a simple and training-free framework, No-Language-Hallucination Decoding, NoLan, which refines the output distribution by dynamically suppressing language priors, modulated based on the output distribution difference between multimodal and text-only inputs. Experimental results demonstrate that NoLan effectively reduces object hallucinations across various LVLMs on different tasks. For instance, NoLan achieves substantial improvements on POPE, enhancing the accuracy of LLaVA-1.5 7B and Qwen-VL 7B by up to 6.45 and 7.21, respectively. The code is publicly available at: https://github.com/lingfengren/NoLan.",
+        "tags": [
+            "LLaVA",
+            "Qwen",
+            "VLM"
+        ]
+    },
+    {
+        "id": 20,
+        "index": 1,
+        "title": "UniVBench: Towards Unified Evaluation for Video Foundation Models",
+        "author": [
+            "Jianhui Wei",
+            "Xiaotian Zhang",
+            "Yichen Li",
+            "Yuan Wang",
+            "Yan Zhang",
+            "Ziyi Chen",
+            "Zhihang Tang",
+            "Wei Xu",
+            "Zuozhu Liu"
+        ],
+        "pdf": "https://arxiv.org/pdf/2602.21835",
+        "abstract": "Video foundation models aim to integrate video understanding, generation, editing, and instruction following within a single framework, making them a central direction for next-generation multimodal systems. However, existing evaluation benchmarks remain fragmented and limited in scope, as they each target a single task, rely on task-specific metrics, and typically use short or simple video clips. As a result, they do not capture the unified capabilities that these models are designed to deliver. To address this gap, we introduce UniVBench, a benchmark purpose-built for evaluating video foundation models across four core abilities: video understanding, video generation, video editing, and a newly proposed task, video reconstruction, which assesses how faithfully a model can reproduce video content it has encountered. Our benchmark substantially expands the complexity of evaluation by incorporating 200 high-quality, diverse and multi-shot videos, each paired with detailed captions, multi-format editing instructions, and reference images. All videos are human-created and carefully validated, offering richer cinematic information than prior benchmarks. In addition, we develop a unified agentic evaluation system (UniV-Eval) that standardizes prompting, instruction parsing, and scoring across all tasks, enabling fair, scalable, and reproducible comparisons of unified video models. By grounding evaluation in instruction-based multi-shot video tasks, UniVBench provides the first framework for measuring the integrated capabilities that video foundation models aim to achieve. Extensive human annotations ensure our evaluation aligns with human judgment, enabling rigorous assessment and accelerating progress toward robust video intelligence.",
+        "tags": [
+            "Video Editing",
+            "Video Generation"
+        ]
+    },
+    {
+        "id": 21,
+        "index": 1,
+        "title": "Small Language Models for Privacy-Preserving Clinical Information Extraction in Low-Resource Languages",
+        "author": [
+            "Mohammadreza Ghaffarzadeh-Esfahani",
+            "Nahid Yousefian",
+            "Ebrahim Heidari-Farsani",
+            "Ali Akbar Omidvarian",
+            "Sepehr Ghahraei",
+            "Atena Farangi",
+            "AmirBahador Boroumand"
+        ],
+        "pdf": "https://arxiv.org/pdf/2602.21374",
+        "abstract": "Extracting clinical information from medical transcripts in low-resource languages remains a significant challenge in healthcare natural language processing (NLP). This study evaluates a two-step pipeline combining Aya-expanse-8B as a Persian-to-English translation model with five open-source small language models (SLMs) -- Qwen2.5-7B-Instruct, Llama-3.1-8B-Instruct, Llama-3.2-3B-Instruct, Qwen2.5-1.5B-Instruct, and Gemma-3-1B-it -- for binary extraction of 13 clinical features from 1,221 anonymized Persian transcripts collected at a cancer palliative care call center. Using a few-shot prompting strategy without fine-tuning, models were assessed on macro-averaged F1-score, Matthews Correlation Coefficient (MCC), sensitivity, and specificity to account for class imbalance. Qwen2.5-7B-Instruct achieved the highest overall performance (median macro-F1: 0.899; MCC: 0.797), while Gemma-3-1B-it showed the weakest results. Larger models (7B--8B parameters) consistently outperformed smaller counterparts in sensitivity and MCC. A bilingual analysis of Aya-expanse-8B revealed that translating Persian transcripts to English improved sensitivity, reduced missing outputs, and boosted metrics robust to class imbalance, though at the cost of slightly lower specificity and precision. Feature-level results showed reliable extraction of physiological symptoms across most models, whereas psychological complaints, administrative requests, and complex somatic features remained challenging. These findings establish a practical, privacy-preserving blueprint for deploying open-source SLMs in multilingual clinical NLP settings with limited infrastructure and annotation resources, and highlight the importance of jointly optimizing model scale and input language strategy for sensitive healthcare applications.",
+        "tags": [
+            "LLaMA"
+        ]
+    },
+    {
+        "id": 22,
+        "index": 1,
+        "title": "Functional Continuous Decomposition",
+        "author": [
+            "Teymur Aghayev"
+        ],
+        "pdf": "https://arxiv.org/pdf/2602.20857",
+        "abstract": "The analysis of non-stationary time-series data requires insight into its local and global patterns with physical interpretability. However, traditional smoothing algorithms, such as B-splines, Savitzky-Golay filtering, and Empirical Mode Decomposition (EMD), lack the ability to perform parametric optimization with guaranteed continuity. In this paper, we propose Functional Continuous Decomposition (FCD), a JAX-accelerated framework that performs parametric, continuous optimization on a wide range of mathematical functions. By using Levenberg-Marquardt optimization to achieve up to $C^1$ continuous fitting, FCD transforms raw time-series data into $M$ modes that capture different temporal patterns from short-term to long-term trends. Applications of FCD include physics, medicine, financial analysis, and machine learning, where it is commonly used for the analysis of signal temporal patterns, optimized parameters, derivatives, and integrals of decomposition. Furthermore, FCD can be applied for physical analysis and feature extraction with an average SRMSE of 0.735 per segment and a speed of 0.47s on full decomposition of 1,000 points. Finally, we demonstrate that a Convolutional Neural Network (CNN) enhanced with FCD features, such as optimized function values, parameters, and derivatives, achieved 16.8% faster convergence and 2.5% higher accuracy over a standard CNN.",
+        "tags": []
+    },
+    {
+        "id": 23,
+        "index": 1,
+        "title": "The Truthfulness Spectrum Hypothesis",
+        "author": [
+            "Zhuofan Josh Ying",
+            "Shauli Ravfogel",
+            "Nikolaus Kriegeskorte",
+            "Peter Hase"
+        ],
+        "pdf": "https://arxiv.org/pdf/2602.20273",
+        "abstract": "Large language models (LLMs) have been reported to linearly encode truthfulness, yet recent work questions this finding's generality. We reconcile these views with the truthfulness spectrum hypothesis: the representational space contains directions ranging from broadly domain-general to narrowly domain-specific. To test this hypothesis, we systematically evaluate probe generalization across five truth types (definitional, empirical, logical, fictional, and ethical), sycophantic and expectation-inverted lying, and existing honesty benchmarks. Linear probes generalize well across most domains but fail on sycophantic and expectation-inverted lying. Yet training on all domains jointly recovers strong performance, confirming that domain-general directions exist despite poor pairwise transfer. The geometry of probe directions explains these patterns: Mahalanobis cosine similarity between probes near-perfectly predicts cross-domain generalization (R^2=0.98). Concept-erasure methods further isolate truth directions that are (1) domain-general, (2) domain-specific, or (3) shared only across particular domain subsets. Causal interventions reveal that domain-specific directions steer more effectively than domain-general ones. Finally, post-training reshapes truth geometry, pushing sycophantic lying further from other truth types, suggesting a representational basis for chat models' sycophantic tendencies. Together, our results support the truthfulness spectrum hypothesis: truth directions of varying generality coexist in representational space, with post-training reshaping their geometry. Code for all experiments is provided in https://github.com/zfying/truth_spec.",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 24,
+        "index": 1,
+        "title": "ISO-Bench: Can Coding Agents Optimize Real-World Inference Workloads?",
+        "author": [
+            "Ayush Nangia",
+            "Shikhar Mishra",
+            "Aman Gokrani",
+            "Paras Chopra"
+        ],
+        "pdf": "https://arxiv.org/pdf/2602.19594",
+        "abstract": "We introduce ISO-Bench, a benchmark for coding agents to test their capabilities on real-world inference optimization tasks. These tasks were taken from vLLM and SGLang, two of the most popular LLM serving frameworks. Each task provides an agent with a codebase and bottleneck description, whereby the agent must produce an optimization patch evaluated against expert human solutions. We curated 54 tasks from merged pull requests with measurable performance improvements. While existing benchmarks heavily use runtime-based metrics, such approaches can be gamed to pass tests without capturing the actual intent of the code changes. Therefore, we combine both hard (execution-based) and soft (LLM-based) metrics to show that both are necessary for complete evaluation. While evaluating both closed and open-source coding agents, we find no single agent dominates across codebases. Surprisingly, agents often identify correct bottlenecks but fail to execute working solutions. We also show that agents with identical underlying models differ substantially, suggesting scaffolding is as important as the model.",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 25,
+        "index": 1,
+        "title": "JAEGER: Joint 3D Audio-Visual Grounding and Reasoning in Simulated Physical Environments",
+        "author": [
+            "Zhan Liu",
+            "Changli Tang",
+            "Yuxin Wang",
+            "Zhiyuan Zhu",
+            "Youjun Chen",
+            "Yiwen Shao",
+            "Tianzi Wang",
+            "Lei Ke",
+            "Zengrui Jin",
+            "Chao Zhang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2602.18527",
+        "abstract": "Current audio-visual large language models (AV-LLMs) are predominantly restricted to 2D perception, relying on RGB video and monaural audio. This design choice introduces a fundamental dimensionality mismatch that precludes reliable source localization and spatial reasoning in complex 3D environments. We address this limitation by presenting JAEGER, a framework that extends AV-LLMs to 3D space, to enable joint spatial grounding and reasoning through the integration of RGB-D observations and multi-channel first-order ambisonics. A core contribution of our work is the neural intensity vector (Neural IV), a learned spatial audio representation that encodes robust directional cues to enhance direction-of-arrival estimation, even in adverse acoustic scenarios with overlapping sources. To facilitate large-scale training and systematic evaluation, we propose SpatialSceneQA, a benchmark of 61k instruction-tuning samples curated from simulated physical environments. Extensive experiments demonstrate that our approach consistently surpasses 2D-centric baselines across diverse spatial perception and reasoning tasks, underscoring the necessity of explicit 3D modelling for advancing AI in physical environments. Our source code, pre-trained model checkpoints and datasets will be released upon acceptance.",
+        "tags": [
+            "3D",
+            "LLM"
+        ]
+    },
+    {
+        "id": 26,
+        "index": 1,
+        "title": "Intent Laundering: AI Safety Datasets Are Not What They Seem",
+        "author": [
+            "Shahriar Golchin",
+            "Marc Wetter"
+        ],
+        "pdf": "https://arxiv.org/pdf/2602.16729",
+        "abstract": "We systematically evaluate the quality of widely used AI safety datasets from two perspectives: in isolation and in practice. In isolation, we examine how well these datasets reflect real-world adversarial attacks based on three key properties: being driven by ulterior intent, well-crafted, and out-of-distribution. We find that these datasets overrely on \"triggering cues\": words or phrases with overt negative/sensitive connotations that are intended to trigger safety mechanisms explicitly, which is unrealistic compared to real-world attacks. In practice, we evaluate whether these datasets genuinely measure safety risks or merely provoke refusals through triggering cues. To explore this, we introduce \"intent laundering\": a procedure that abstracts away triggering cues from adversarial attacks (data points) while strictly preserving their malicious intent and all relevant details. Our results indicate that current AI safety datasets fail to faithfully represent real-world adversarial behavior due to their overreliance on triggering cues. Once these cues are removed, all previously evaluated \"reasonably safe\" models become unsafe, including Gemini 3 Pro and Claude Sonnet 3.7. Moreover, when intent laundering is adapted as a jailbreaking technique, it consistently achieves high attack success rates, ranging from 90% to over 98%, under fully black-box access. Overall, our findings expose a significant disconnect between how model safety is evaluated by existing datasets and how real-world adversaries behave.",
+        "tags": []
+    },
+    {
+        "id": 27,
+        "index": 0,
+        "title": "MoBind: Motion Binding for Fine-Grained IMU-Video Pose Alignment",
+        "author": [
+            "Duc Duy Nguyen",
+            "Tat-Jun Chin",
+            "Minh Hoai"
+        ],
+        "pdf": "https://arxiv.org/pdf/2602.19004",
+        "abstract": "We aim to learn a joint representation between inertial measurement unit (IMU) signals and 2D pose sequences extracted from video, enabling accurate cross-modal retrieval, temporal synchronization, subject and body-part localization, and action recognition. To this end, we introduce MoBind, a hierarchical contrastive learning framework designed to address three challenges: (1) filtering out irrelevant visual background, (2) modeling structured multi-sensor IMU configurations, and (3) achieving fine-grained, sub-second temporal alignment. To isolate motion-relevant cues, MoBind aligns IMU signals with skeletal motion sequences rather than raw pixels. We further decompose full-body motion into local body-part trajectories, pairing each with its corresponding IMU to enable semantically grounded multi-sensor alignment. To capture detailed temporal correspondence, MoBind employs a hierarchical contrastive strategy that first aligns token-level temporal segments, then fuses local (body-part) alignment with global (body-wide) motion aggregation. Evaluated on mRi, TotalCapture, and EgoHumans, MoBind consistently outperforms strong baselines across all four tasks, demonstrating robust fine-grained temporal alignment while preserving coarse semantic consistency across modalities. Code is available at https://github.com/bbvisual/ MoBind.",
+        "tags": []
+    },
+    {
+        "id": 28,
+        "index": 0,
+        "title": "Yor-Sarc: A gold-standard dataset for sarcasm detection in a low-resource African language",
+        "author": [
+            "Toheeb Aduramomi Jimoh",
+            "Tabea De Wille",
+            "Nikola S. Nikolov"
+        ],
+        "pdf": "https://arxiv.org/pdf/2602.18964",
+        "abstract": "Sarcasm detection poses a fundamental challenge in computational semantics, requiring models to resolve disparities between literal and intended meaning. The challenge is amplified in low-resource languages where annotated datasets are scarce or nonexistent. We present \\textbf{Yor-Sarc}, the first gold-standard dataset for sarcasm detection in YorÃ¹bÃ¡, a tonal Niger-Congo language spoken by over $50$ million people. The dataset comprises 436 instances annotated by three native speakers from diverse dialectal backgrounds using an annotation protocol specifically designed for YorÃ¹bÃ¡ sarcasm by taking culture into account. This protocol incorporates context-sensitive interpretation and community-informed guidelines and is accompanied by a comprehensive analysis of inter-annotator agreement to support replication in other African languages. Substantial to almost perfect agreement was achieved (Fleiss' $\\kappa = 0.7660$; pairwise Cohen's $\\kappa = 0.6732$--$0.8743$), with $83.3\\%$ unanimous consensus. One annotator pair achieved almost perfect agreement ($\\kappa = 0.8743$; $93.8\\%$ raw agreement), exceeding a number of reported benchmarks for English sarcasm research works. The remaining $16.7\\%$ majority-agreement cases are preserved as soft labels for uncertainty-aware modelling. Yor-Sarc\\footnote{https://github.com/toheebadura/yor-sarc} is expected to facilitate research on semantic interpretation and culturally informed NLP for low-resource African languages.",
+        "tags": [
+            "Detection"
+        ]
+    },
+    {
+        "id": 29,
+        "index": 0,
+        "title": "DM4CT: Benchmarking Diffusion Models for Computed Tomography Reconstruction",
+        "author": [
+            "Jiayang Shi",
+            "Daniel M. Pelt",
+            "K. Joost Batenburg"
+        ],
+        "pdf": "https://arxiv.org/pdf/2602.18589",
+        "abstract": "Diffusion models have recently emerged as powerful priors for solving inverse problems. While computed tomography (CT) is theoretically a linear inverse problem, it poses many practical challenges. These include correlated noise, artifact structures, reliance on system geometry, and misaligned value ranges, which make the direct application of diffusion models more difficult than in domains like natural image generation. To systematically evaluate how diffusion models perform in this context and compare them with established reconstruction methods, we introduce DM4CT, a comprehensive benchmark for CT reconstruction. DM4CT includes datasets from both medical and industrial domains with sparse-view and noisy configurations. To explore the challenges of deploying diffusion models in practice, we additionally acquire a high-resolution CT dataset at a high-energy synchrotron facility and evaluate all methods under real experimental conditions. We benchmark ten recent diffusion-based methods alongside seven strong baselines, including model-based, unsupervised, and supervised approaches. Our analysis provides detailed insights into the behavior, strengths, and limitations of diffusion models for CT reconstruction. The real-world dataset is publicly available at http://zenodo.org/records/15420527, and the codebase is open-sourced at http://github.com/DM4CT/DM4CT.",
+        "tags": [
+            "Diffusion"
+        ]
+    }
+]

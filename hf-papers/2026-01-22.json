@@ -1,0 +1,529 @@
+[
+    {
+        "id": 1,
+        "index": 125,
+        "title": "Agentic Reasoning for Large Language Models",
+        "author": [
+            "Tianxin Wei",
+            "Ting-Wei Li",
+            "Zhining Liu",
+            "Xuying Ning",
+            "Ze Yang",
+            "Jiaru Zou",
+            "Zhichen Zeng",
+            "Ruizhong Qiu",
+            "Xiao Lin",
+            "Dongqi Fu",
+            "Zihao Li",
+            "Mengting Ai",
+            "Duo Zhou",
+            "Wenxuan Bao",
+            "Yunzhe Li",
+            "Gaotang Li",
+            "Cheng Qian",
+            "Yu Wang",
+            "Xiangru Tang",
+            "Yin Xiao",
+            "Liri Fang",
+            "Hui Liu",
+            "Xianfeng Tang",
+            "Yuji Zhang",
+            "Chi Wang",
+            "Jiaxuan You",
+            "Heng Ji",
+            "Hanghang Tong",
+            "Jingrui He"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.12538",
+        "abstract": "Reasoning is a fundamental cognitive process underlying inference, problem-solving, and decision-making. While large language models (LLMs) demonstrate strong reasoning capabilities in closed-world settings, they struggle in open-ended and dynamic environments. Agentic reasoning marks a paradigm shift by reframing LLMs as autonomous agents that plan, act, and learn through continual interaction. In this survey, we organize agentic reasoning along three complementary dimensions. First, we characterize environmental dynamics through three layers: foundational agentic reasoning, which establishes core single-agent capabilities including planning, tool use, and search in stable environments; self-evolving agentic reasoning, which studies how agents refine these capabilities through feedback, memory, and adaptation; and collective multi-agent reasoning, which extends intelligence to collaborative settings involving coordination, knowledge sharing, and shared goals. Across these layers, we distinguish in-context reasoning, which scales test-time interaction through structured orchestration, from post-training reasoning, which optimizes behaviors via reinforcement learning and supervised fine-tuning. We further review representative agentic reasoning frameworks across real-world applications and benchmarks, including science, robotics, healthcare, autonomous research, and mathematics. This survey synthesizes agentic reasoning methods into a unified roadmap bridging thought and action, and outlines open challenges and future directions, including personalization, long-horizon interaction, world modeling, scalable multi-agent training, and governance for real-world deployment.",
+        "tags": [
+            "LLM",
+            "RL",
+            "Robotics"
+        ]
+    },
+    {
+        "id": 2,
+        "index": 41,
+        "title": "MMDeepResearch-Bench: A Benchmark for Multimodal Deep Research Agents",
+        "author": [
+            "Peizhou Huang",
+            "Zixuan Zhong",
+            "Zhongwei Wan",
+            "Donghao Zhou",
+            "Samiul Alam",
+            "Xin Wang",
+            "Zexin Li",
+            "Zhihao Dou",
+            "Li Zhu",
+            "Jing Xiong",
+            "Chaofan Tao",
+            "Yan Xu",
+            "Dimitrios Dimitriadis",
+            "Tuo Zhang",
+            "Mi Zhang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.12346",
+        "abstract": "Deep Research Agents (DRAs) generate citation-rich reports via multi-step search and synthesis, yet existing benchmarks mainly target text-only settings or short-form multimodal QA, missing end-to-end multimodal evidence use. We introduce MMDeepResearch-Bench (MMDR-Bench), a benchmark of 140 expert-crafted tasks across 21 domains, where each task provides an image-text bundle to evaluate multimodal understanding and citation-grounded report generation. Compared to prior setups, MMDR-Bench emphasizes report-style synthesis with explicit evidence use, where models must connect visual artifacts to sourced claims and maintain consistency across narrative, citations, and visual references. We further propose a unified, interpretable evaluation pipeline: Formula-LLM Adaptive Evaluation (FLAE) for report quality, Trustworthy Retrieval-Aligned Citation Evaluation (TRACE) for citation-grounded evidence alignment, and Multimodal Support-Aligned Integrity Check (MOSAIC) for text-visual integrity, each producing fine-grained signals that support error diagnosis beyond a single overall score. Experiments across 25 state-of-the-art models reveal systematic trade-offs between generation quality, citation discipline, and multimodal grounding, highlighting that strong prose alone does not guarantee faithful evidence use and that multimodal integrity remains a key bottleneck for deep research agents.",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 3,
+        "index": 36,
+        "title": "Rethinking Video Generation Model for the Embodied World",
+        "author": [
+            "Yufan Deng",
+            "Zilin Pan",
+            "Hongyu Zhang",
+            "Xiaojie Li",
+            "Ruoqing Hu",
+            "Yufei Ding",
+            "Yiming Zou",
+            "Yan Zeng",
+            "Daquan Zhou"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.15282",
+        "abstract": "Video generation models have significantly advanced embodied intelligence, unlocking new possibilities for generating diverse robot data that capture perception, reasoning, and action in the physical world. However, synthesizing high-quality videos that accurately reflect real-world robotic interactions remains challenging, and the lack of a standardized benchmark limits fair comparisons and progress. To address this gap, we introduce a comprehensive robotics benchmark, RBench, designed to evaluate robot-oriented video generation across five task domains and four distinct embodiments. It assesses both task-level correctness and visual fidelity through reproducible sub-metrics, including structural consistency, physical plausibility, and action completeness. Evaluation of 25 representative models highlights significant deficiencies in generating physically realistic robot behaviors. Furthermore, the benchmark achieves a Spearman correlation coefficient of 0.96 with human evaluations, validating its effectiveness. While RBench provides the necessary lens to identify these deficiencies, achieving physical realism requires moving beyond evaluation to address the critical shortage of high-quality training data. Driven by these insights, we introduce a refined four-stage data pipeline, resulting in RoVid-X, the largest open-source robotic dataset for video generation with 4 million annotated video clips, covering thousands of tasks and enriched with comprehensive physical property annotations. Collectively, this synergistic ecosystem of evaluation and data establishes a robust foundation for rigorous assessment and scalable training of video models, accelerating the evolution of embodied AI toward general intelligence.",
+        "tags": [
+            "Robotics",
+            "Video Generation"
+        ]
+    },
+    {
+        "id": 4,
+        "index": 35,
+        "title": "Paper2Rebuttal: A Multi-Agent Framework for Transparent Author Response Assistance",
+        "author": [
+            "Qianli Ma",
+            "Chang Guo",
+            "Zhiheng Tian",
+            "Siyu Wang",
+            "Jipeng Xiao",
+            "Yuanhao Yue",
+            "Zhipeng Zhang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.14171",
+        "abstract": "Writing effective rebuttals is a high-stakes task that demands more than linguistic fluency, as it requires precise alignment between reviewer intent and manuscript details. Current solutions typically treat this as a direct-to-text generation problem, suffering from hallucination, overlooked critiques, and a lack of verifiable grounding. To address these limitations, we introduce $\\textbf{RebuttalAgent}$, the first multi-agents framework that reframes rebuttal generation as an evidence-centric planning task. Our system decomposes complex feedback into atomic concerns and dynamically constructs hybrid contexts by synthesizing compressed summaries with high-fidelity text while integrating an autonomous and on-demand external search module to resolve concerns requiring outside literature. By generating an inspectable response plan before drafting, $\\textbf{RebuttalAgent}$ ensures that every argument is explicitly anchored in internal or external evidence. We validate our approach on the proposed $\\textbf{RebuttalBench}$ and demonstrate that our pipeline outperforms strong baselines in coverage, faithfulness, and strategic coherence, offering a transparent and controllable assistant for the peer review process. Code will be released.",
+        "tags": []
+    },
+    {
+        "id": 5,
+        "index": 15,
+        "title": "Behavior Knowledge Merge in Reinforced Agentic Models",
+        "author": [
+            "Xiangchi Yuan",
+            "Dachuan Shi",
+            "Chunhui Zhang",
+            "Zheyuan Liu",
+            "Shenglong Yao",
+            "Soroush Vosoughi",
+            "Wenke Lee"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.13572",
+        "abstract": "Reinforcement learning (RL) is central to post-training, particularly for agentic models that require specialized reasoning behaviors. In this setting, model merging offers a practical mechanism for integrating multiple RL-trained agents from different tasks into a single generalist model. However, existing merging methods are designed for supervised fine-tuning (SFT), and they are suboptimal to preserve task-specific capabilities on RL-trained agentic models. The root is a task-vector mismatch between RL and SFT: on-policy RL induces task vectors that are highly sparse and heterogeneous, whereas SFT-style merging implicitly assumes dense and globally comparable task vectors. When standard global averaging is applied under this mismatch, RL's non-overlapping task vectors that encode critical task-specific behaviors are reduced and parameter updates are diluted. To address this issue, we propose Reinforced Agent Merging (RAM), a distribution-aware merging framework explicitly designed for RL-trained agentic models. RAM disentangles shared and task-specific unique parameter updates, averaging shared components while selectively preserving and rescaling unique ones to counteract parameter update dilution. Experiments across multiple agent domains and model architectures demonstrate that RAM not only surpasses merging baselines, but also unlocks synergistic potential among agents to achieve performance superior to that of specialized agents in their domains.",
+        "tags": [
+            "RL"
+        ]
+    },
+    {
+        "id": 6,
+        "index": 14,
+        "title": "Render-of-Thought: Rendering Textual Chain-of-Thought as Images for Visual Latent Reasoning",
+        "author": [
+            "Yifan Wang",
+            "Shiyu Li",
+            "Peiming Li",
+            "Xiaochen Yang",
+            "Yang Tang",
+            "Zheng Wei"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.14750",
+        "abstract": "Chain-of-Thought (CoT) prompting has achieved remarkable success in unlocking the reasoning capabilities of Large Language Models (LLMs). Although CoT prompting enhances reasoning, its verbosity imposes substantial computational overhead. Recent works often focus exclusively on outcome alignment and lack supervision on the intermediate reasoning process. These deficiencies obscure the analyzability of the latent reasoning chain. To address these challenges, we introduce Render-of-Thought (RoT), the first framework to reify the reasoning chain by rendering textual steps into images, making the latent rationale explicit and traceable. Specifically, we leverage the vision encoders of existing Vision Language Models (VLMs) as semantic anchors to align the vision embeddings with the textual space. This design ensures plug-and-play implementation without incurring additional pre-training overhead. Extensive experiments on mathematical and logical reasoning benchmarks demonstrate that our method achieves 3-4x token compression and substantial inference acceleration compared to explicit CoT. Furthermore, it maintains competitive performance against other methods, validating the feasibility of this paradigm. Our code is available at https://github.com/TencentBAC/RoT",
+        "tags": [
+            "CoT",
+            "LLM",
+            "VLM"
+        ]
+    },
+    {
+        "id": 7,
+        "index": 14,
+        "title": "GutenOCR: A Grounded Vision-Language Front-End for Documents",
+        "author": [
+            "Hunter Heidenreich",
+            "Ben Elliott",
+            "Olivia Dinica",
+            "Yosheb Getachew"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.14490",
+        "abstract": "GutenOCR is a family of grounded OCR front-ends obtained by fine-tuning Qwen2.5-VL-3B and Qwen2.5-VL-7B. The resulting single-checkpoint vision-language models expose reading, detection, and grounding through a unified, prompt-based interface. Trained on business documents, scientific articles, and synthetic grounding data, the models support full-page and localized reading with line- and paragraph-level bounding boxes and conditional ``where is x?'' queries. We introduce a grounded OCR evaluation protocol and show that GutenOCR-7B more than doubles the composite grounded OCR score of its Qwen2.5-VL-7B backbone on 10.5K held-out business and scientific pages (0.40 to 0.82). On Fox and OmniDocBench v1.5, our approach substantially improves region- and line-level OCR as well as text-detection recall, but reveals trade-offs in page-level linearization, color-guided OCR, and formula-heavy layouts.",
+        "tags": [
+            "Detection",
+            "VLM"
+        ]
+    },
+    {
+        "id": 8,
+        "index": 12,
+        "title": "Typhoon OCR: Open Vision-Language Model For Thai Document Extraction",
+        "author": [
+            "Surapon Nonesung",
+            "Natapong Nitarach",
+            "Teetouch Jaknamon",
+            "Pittawat Taveekitworachai",
+            "Kunat Pipatanakul"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.14722",
+        "abstract": "Document extraction is a core component of digital workflows, yet existing vision-language models (VLMs) predominantly favor high-resource languages. Thai presents additional challenges due to script complexity from non-latin letters, the absence of explicit word boundaries, and the prevalence of highly unstructured real-world documents, limiting the effectiveness of current open-source models. This paper presents Typhoon OCR, an open VLM for document extraction tailored for Thai and English. The model is fine-tuned from vision-language backbones using a Thai-focused training dataset. The dataset is developed using a multi-stage data construction pipeline that combines traditional OCR, VLM-based restructuring, and curated synthetic data. Typhoon OCR is a unified framework capable of text transcription, layout reconstruction, and document-level structural consistency. The latest iteration of our model, Typhoon OCR V1.5, is a compact and inference-efficient model designed to reduce reliance on metadata and simplify deployment. Comprehensive evaluations across diverse Thai document categories, including financial reports, government forms, books, infographics, and handwritten documents, show that Typhoon OCR achieves performance comparable to or exceeding larger frontier proprietary models, despite substantially lower computational cost. The results demonstrate that open vision-language OCR models can achieve accurate text extraction and layout reconstruction for Thai documents, reaching performance comparable to proprietary systems while remaining lightweight and deployable.",
+        "tags": [
+            "VLM"
+        ]
+    },
+    {
+        "id": 9,
+        "index": 11,
+        "title": "Typhoon ASR Real-time: FastConformer-Transducer for Thai Automatic Speech Recognition",
+        "author": [
+            "Warit Sirichotedumrong",
+            "Adisai Na-Thalang",
+            "Potsawee Manakul",
+            "Pittawat Taveekitworachai",
+            "Sittipong Sripaisarnmongkol",
+            "Kunat Pipatanakul"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.13044",
+        "abstract": "Large encoder-decoder models like Whisper achieve strong offline transcription but remain impractical for streaming applications due to high latency. However, due to the accessibility of pre-trained checkpoints, the open Thai ASR landscape remains dominated by these offline architectures, leaving a critical gap in efficient streaming solutions. We present Typhoon ASR Real-time, a 115M-parameter FastConformer-Transducer model for low-latency Thai speech recognition. We demonstrate that rigorous text normalization can match the impact of model scaling: our compact model achieves a 45x reduction in computational cost compared to Whisper Large-v3 while delivering comparable accuracy. Our normalization pipeline resolves systemic ambiguities in Thai transcription --including context-dependent number verbalization and repetition markers (mai yamok) --creating consistent training targets. We further introduce a two-stage curriculum learning approach for Isan (north-eastern) dialect adaptation that preserves Central Thai performance. To address reproducibility challenges in Thai ASR, we release the Typhoon ASR Benchmark, a gold-standard human-labeled datasets with transcriptions following established Thai linguistic conventions, providing standardized evaluation protocols for the research community.",
+        "tags": []
+    },
+    {
+        "id": 10,
+        "index": 9,
+        "title": "Numina-Lean-Agent: An Open and General Agentic Reasoning System for Formal Mathematics",
+        "author": [
+            "Junqi Liu",
+            "Zihao Zhou",
+            "Zekai Zhu",
+            "Marco Dos Santos",
+            "Weikun He",
+            "Jiawei Liu",
+            "Ran Wang",
+            "Yunzhou Xie",
+            "Junqiao Zhao",
+            "Qiufeng Wang",
+            "Lihong Zhi",
+            "Jia Li",
+            "Wenda Li"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.14027",
+        "abstract": "Agentic systems have recently become the dominant paradigm for formal theorem proving, achieving strong performance by coordinating multiple models and tools. However, existing approaches often rely on task-specific pipelines and trained formal provers, limiting their flexibility and reproducibility. In this paper, we propose the paradigm that directly uses a general coding agent as a formal math reasoner. This paradigm is motivated by (1) A general coding agent provides a natural interface for diverse reasoning tasks beyond proving, (2) Performance can be improved by simply replacing the underlying base model, without training, and (3) MCP enables flexible extension and autonomous calling of specialized tools, avoiding complex design. Based on this paradigm, we introduce Numina-Lean-Agent, which combines Claude Code with Numina-Lean-MCP to enable autonomous interaction with Lean, retrieval of relevant theorems, informal proving and auxiliary reasoning tools. Using Claude Opus 4.5 as the base model, Numina-Lean-Agent solves all problems in Putnam 2025 (12 / 12), matching the best closed-source system. Beyond benchmark evaluation, we further demonstrate its generality by interacting with mathematicians to successfully formalize the Brascamp-Lieb theorem. We release Numina-Lean-Agent and all solutions at https://github.com/project-numina/numina-lean-agent.",
+        "tags": []
+    },
+    {
+        "id": 11,
+        "index": 8,
+        "title": "FlashLabs Chroma 1.0: A Real-Time End-to-End Spoken Dialogue Model with Personalized Voice Cloning",
+        "author": [
+            "Tanyu Chen",
+            "Tairan Chen",
+            "Kai Shen",
+            "Zhenghua Bao",
+            "Zhihui Zhang",
+            "Man Yuan",
+            "Yi Shi"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.11141",
+        "abstract": "Recent end-to-end spoken dialogue systems leverage speech tokenizers and neural audio codecs to enable LLMs to operate directly on discrete speech representations. However, these models often exhibit limited speaker identity preservation, hindering personalized voice interaction. In this work, we present Chroma 1.0, the first open-source, real-time, end-to-end spoken dialogue model that achieves both low-latency interaction and high-fidelity personalized voice cloning. Chroma achieves sub-second end-to-end latency through an interleaved text-audio token schedule (1:2) that supports streaming generation, while maintaining high-quality personalized voice synthesis across multi-turn conversations. Our experimental results demonstrate that Chroma achieves a 10.96% relative improvement in speaker similarity over the human baseline, with a Real-Time Factor (RTF) of 0.43, while maintaining strong reasoning and dialogue capabilities. Our code and models are publicly available at https://github.com/FlashLabs-AI-Corp/FlashLabs-Chroma and https://huggingface.co/FlashLabs/Chroma-4B .",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 12,
+        "index": 8,
+        "title": "FinVault: Benchmarking Financial Agent Safety in Execution-Grounded Environments",
+        "author": [
+            "Zhi Yang",
+            "Runguo Li",
+            "Qiqi Qiang",
+            "Jiashun Wang",
+            "Fangqi Lou",
+            "Mengping Li",
+            "Dongpo Cheng",
+            "Rui Xu",
+            "Heng Lian",
+            "Shuo Zhang",
+            "Xiaolong Liang",
+            "Xiaoming Huang",
+            "Zheng Wei",
+            "Zhaowei Liu",
+            "Xin Guo",
+            "Huacan Wang",
+            "Ronghao Chen",
+            "Liwen Zhang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.07853",
+        "abstract": "Financial agents powered by large language models (LLMs) are increasingly deployed for investment analysis, risk assessment, and automated decision-making, where their abilities to plan, invoke tools, and manipulate mutable state introduce new security risks in high-stakes and highly regulated financial environments. However, existing safety evaluations largely focus on language-model-level content compliance or abstract agent settings, failing to capture execution-grounded risks arising from real operational workflows and state-changing actions. To bridge this gap, we propose FinVault, the first execution-grounded security benchmark for financial agents, comprising 31 regulatory case-driven sandbox scenarios with state-writable databases and explicit compliance constraints, together with 107 real-world vulnerabilities and 963 test cases that systematically cover prompt injection, jailbreaking, financially adapted attacks, as well as benign inputs for false-positive evaluation. Experimental results reveal that existing defense mechanisms remain ineffective in realistic financial agent settings, with average attack success rates (ASR) still reaching up to 50.0\\% on state-of-the-art models and remaining non-negligible even for the most robust systems (ASR 6.7\\%), highlighting the limited transferability of current safety designs and the need for stronger financial-specific defenses. Our code can be found at https://github.com/aifinlab/FinVault.",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 13,
+        "index": 7,
+        "title": "XR: Cross-Modal Agents for Composed Image Retrieval",
+        "author": [
+            "Zhongyu Yang",
+            "Wei Pang",
+            "Yingfang Yuan"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.14245",
+        "abstract": "Retrieval is being redefined by agentic AI, demanding multimodal reasoning beyond conventional similarity-based paradigms. Composed Image Retrieval (CIR) exemplifies this shift as each query combines a reference image with textual modifications, requiring compositional understanding across modalities. While embedding-based CIR methods have achieved progress, they remain narrow in perspective, capturing limited cross-modal cues and lacking semantic reasoning. To address these limitations, we introduce XR, a training-free multi-agent framework that reframes retrieval as a progressively coordinated reasoning process. It orchestrates three specialized types of agents: imagination agents synthesize target representations through cross-modal generation, similarity agents perform coarse filtering via hybrid matching, and question agents verify factual consistency through targeted reasoning for fine filtering. Through progressive multi-agent coordination, XR iteratively refines retrieval to meet both semantic and visual query constraints, achieving up to a 38% gain over strong training-free and training-based baselines on FashionIQ, CIRR, and CIRCO, while ablations show each agent is essential. Code is available: https://01yzzyu.github.io/xr.github.io/.",
+        "tags": []
+    },
+    {
+        "id": 14,
+        "index": 6,
+        "title": "Privacy Collapse: Benign Fine-Tuning Can Break Contextual Privacy in Language Models",
+        "author": [
+            "Anmol Goel",
+            "Cornelius Emde",
+            "Sangdoo Yun",
+            "Seong Joon Oh",
+            "Martin Gubri"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.15220",
+        "abstract": "We identify a novel phenomenon in language models: benign fine-tuning of frontier models can lead to privacy collapse. We find that diverse, subtle patterns in training data can degrade contextual privacy, including optimisation for helpfulness, exposure to user information, emotional and subjective dialogue, and debugging code printing internal variables, among others. Fine-tuned models lose their ability to reason about contextual privacy norms, share information inappropriately with tools, and violate memory boundaries across contexts. Privacy collapse is a ``silent failure'' because models maintain high performance on standard safety and utility benchmarks whilst exhibiting severe privacy vulnerabilities. Our experiments show evidence of privacy collapse across six models (closed and open weight), five fine-tuning datasets (real-world and controlled data), and two task categories (agentic and memory-based). Our mechanistic analysis reveals that privacy representations are uniquely fragile to fine-tuning, compared to task-relevant features which are preserved. Our results reveal a critical gap in current safety evaluations, in particular for the deployment of specialised agents.",
+        "tags": []
+    },
+    {
+        "id": 15,
+        "index": 6,
+        "title": "RoboBrain 2.5: Depth in Sight, Time in Mind",
+        "author": [
+            "Huajie Tan",
+            "Enshen Zhou",
+            "Zhiyu Li",
+            "Yijie Xu",
+            "Yuheng Ji",
+            "Xiansheng Chen",
+            "Cheng Chi",
+            "Pengwei Wang",
+            "Huizhu Jia",
+            "Yulong Ao",
+            "Mingyu Cao",
+            "Sixiang Chen",
+            "Zhe Li",
+            "Mengzhen Liu",
+            "Zixiao Wang",
+            "Shanyu Rong",
+            "Yaoxu Lyu",
+            "Zhongxia Zhao",
+            "Peterson Co",
+            "Yibo Li",
+            "Yi Han",
+            "Shaoxuan Xie",
+            "Guocai Yao",
+            "Songjing Wang",
+            "Leiduo Zhang",
+            "Xi Yang",
+            "Yance Jiao",
+            "Donghai Shi",
+            "Kunchang Xie",
+            "Shaokai Nie",
+            "Chunlei Men",
+            "Yonghua Lin",
+            "Zhongyuan Wang",
+            "Tiejun Huang",
+            "Shanghang Zhang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.14352",
+        "abstract": "We introduce RoboBrain 2.5, a next-generation embodied AI foundation model that advances general perception, spatial reasoning, and temporal modeling through extensive training on high-quality spatiotemporal supervision. Building upon its predecessor, RoboBrain 2.5 introduces two major capability upgrades. Specifically, it unlocks Precise 3D Spatial Reasoning by shifting from 2D pixel-relative grounding to depth-aware coordinate prediction and absolute metric constraint comprehension, generating complete 3D manipulation traces as ordered keypoint sequences under physical constraints. Complementing this spatial precision, the model establishes Dense Temporal Value Estimation that provides dense, step-aware progress prediction and execution state understanding across varying viewpoints, producing stable feedback signals for downstream learning. Together, these upgrades extend the framework toward more physically grounded and execution-aware embodied intelligence for complex, fine-grained manipulation. The code and checkpoints are available at project website: https://superrobobrain.github.io",
+        "tags": [
+            "3D"
+        ]
+    },
+    {
+        "id": 16,
+        "index": 5,
+        "title": "Quantifying Speaker Embedding Phonological Rule Interactions in Accented Speech Synthesis",
+        "author": [
+            "Thanathai Lertpetchpun",
+            "Yoonjeong Lee",
+            "Thanapat Trachu",
+            "Jihwan Lee",
+            "Tiantian Feng",
+            "Dani Byrd",
+            "Shrikanth Narayanan"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.14417",
+        "abstract": "Many spoken languages, including English, exhibit wide variation in dialects and accents, making accent control an important capability for flexible text-to-speech (TTS) models. Current TTS systems typically generate accented speech by conditioning on speaker embeddings associated with specific accents. While effective, this approach offers limited interpretability and controllability, as embeddings also encode traits such as timbre and emotion. In this study, we analyze the interaction between speaker embeddings and linguistically motivated phonological rules in accented speech synthesis. Using American and British English as a case study, we implement rules for flapping, rhoticity, and vowel correspondences. We propose the phoneme shift rate (PSR), a novel metric quantifying how strongly embeddings preserve or override rule-based transformations. Experiments show that combining rules with embeddings yields more authentic accents, while embeddings can attenuate or overwrite rules, revealing entanglement between accent and speaker identity. Our findings highlight rules as a lever for accent control and a framework for evaluating disentanglement in speech generation.",
+        "tags": []
+    },
+    {
+        "id": 17,
+        "index": 5,
+        "title": "Implicit Neural Representation Facilitates Unified Universal Vision Encoding",
+        "author": [
+            "Matthew Gwilliam",
+            "Xiao Wang",
+            "Xuefeng Hu",
+            "Zhenheng Yang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.14256",
+        "abstract": "Models for image representation learning are typically designed for either recognition or generation. Various forms of contrastive learning help models learn to convert images to embeddings that are useful for classification, detection, and segmentation. On the other hand, models can be trained to reconstruct images with pixel-wise, perceptual, and adversarial losses in order to learn a latent space that is useful for image generation. We seek to unify these two directions with a first-of-its-kind model that learns representations which are simultaneously useful for recognition and generation. We train our model as a hyper-network for implicit neural representation, which learns to map images to model weights for fast, accurate reconstruction. We further integrate our INR hyper-network with knowledge distillation to improve its generalization and performance. Beyond the novel training design, the model also learns an unprecedented compressed embedding space with outstanding performance for various visual tasks. The complete model competes with state-of-the-art results for image representation learning, while also enabling generative capabilities with its high-quality tiny embeddings. The code is available at https://github.com/tiktok/huvr.",
+        "tags": [
+            "Detection",
+            "Segmentation"
+        ]
+    },
+    {
+        "id": 18,
+        "index": 5,
+        "title": "AgentEHR: Advancing Autonomous Clinical Decision-Making via Retrospective Summarization",
+        "author": [
+            "Yusheng Liao",
+            "Chuan Xuan",
+            "Yutong Cai",
+            "Lina Yang",
+            "Zhe Chen",
+            "Yanfeng Wang",
+            "Yu Wang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.13918",
+        "abstract": "Large Language Models have demonstrated profound utility in the medical domain. However, their application to autonomous Electronic Health Records~(EHRs) navigation remains constrained by a reliance on curated inputs and simplified retrieval tasks. To bridge the gap between idealized experimental settings and realistic clinical environments, we present AgentEHR. This benchmark challenges agents to execute complex decision-making tasks, such as diagnosis and treatment planning, requiring long-range interactive reasoning directly within raw and high-noise databases. In tackling these tasks, we identify that existing summarization methods inevitably suffer from critical information loss and fractured reasoning continuity. To address this, we propose RetroSum, a novel framework that unifies a retrospective summarization mechanism with an evolving experience strategy. By dynamically re-evaluating interaction history, the retrospective mechanism prevents long-context information loss and ensures unbroken logical coherence. Additionally, the evolving strategy bridges the domain gap by retrieving accumulated experience from a memory bank. Extensive empirical evaluations demonstrate that RetroSum achieves performance gains of up to 29.16% over competitive baselines, while significantly decreasing total interaction errors by up to 92.3%.",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 19,
+        "index": 4,
+        "title": "FARE: Fast-Slow Agentic Robotic Exploration",
+        "author": [
+            "Shuhao Liao",
+            "Xuxin Lv",
+            "Jeric Lew",
+            "Shizhe Zhang",
+            "Jingsong Liang",
+            "Peizhuo Li",
+            "Yuhong Cao",
+            "Wenjun Wu",
+            "Guillaume Sartoretti"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.14681",
+        "abstract": "This work advances autonomous robot exploration by integrating agent-level semantic reasoning with fast local control. We introduce FARE, a hierarchical autonomous exploration framework that integrates a large language model (LLM) for global reasoning with a reinforcement learning (RL) policy for local decision making. FARE follows a fast-slow thinking paradigm. The slow-thinking LLM module interprets a concise textual description of the unknown environment and synthesizes an agent-level exploration strategy, which is then grounded into a sequence of global waypoints through a topological graph. To further improve reasoning efficiency, this module employs a modularity-based pruning mechanism that reduces redundant graph structures. The fast-thinking RL module executes exploration by reacting to local observations while being guided by the LLM-generated global waypoints. The RL policy is additionally shaped by a reward term that encourages adherence to the global waypoints, enabling coherent and robust closed-loop behavior. This architecture decouples semantic reasoning from geometric decision, allowing each module to operate in its appropriate temporal and spatial scale. In challenging simulated environments, our results show that FARE achieves substantial improvements in exploration efficiency over state-of-the-art baselines. We further deploy FARE on hardware and validate it in complex, large scale $200m\\times130m$ building environment.",
+        "tags": [
+            "LLM",
+            "RL",
+            "Robotics"
+        ]
+    },
+    {
+        "id": 20,
+        "index": 4,
+        "title": "Lost in the Prompt Order: Revealing the Limitations of Causal Attention in Language Models",
+        "author": [
+            "Hyunjong Ok",
+            "Jaeho Lee"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.14152",
+        "abstract": "Large language models exhibit surprising sensitivity to the structure of the prompt, but the mechanisms underlying this sensitivity remain poorly understood. In this work, we conduct an in-depth investigation on a striking case: in multiple-choice question answering, placing context before the questions and options (CQO) outperforms the reverse order (QOC) by over 14%p, consistently over a wide range of models and datasets. Through systematic architectural analysis, we identify causal attention as the core mechanism: in QOC prompts, the causal mask prevents option tokens from attending to context, creating an information bottleneck where context becomes invisible to options.",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 21,
+        "index": 2,
+        "title": "The Responsibility Vacuum: Organizational Failure in Scaled Agent Systems",
+        "author": [
+            "Oleg Romanchuk",
+            "Roman Bondar"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.15059",
+        "abstract": "Modern CI/CD pipelines integrating agent-generated code exhibit a structural failure in responsibility attribution. Decisions are executed through formally correct approval processes, yet no entity possesses both the authority to approve those decisions and the epistemic capacity to meaningfully understand their basis.\nWe define this condition as responsibility vacuum: a state in which decisions occur, but responsibility cannot be attributed because authority and verification capacity do not coincide. We show that this is not a process deviation or technical defect, but a structural property of deployments where decision generation throughput exceeds bounded human verification capacity.\nWe identify a scaling limit under standard deployment assumptions, including parallel agent generation, CI-based validation, and individualized human approval gates. Beyond a throughput threshold, verification ceases to function as a decision criterion and is replaced by ritualized approval based on proxy signals. Personalized responsibility becomes structurally unattainable in this regime.\nWe further characterize a CI amplification dynamic, whereby increasing automated validation coverage raises proxy signal density without restoring human capacity. Under fixed time and attention constraints, this accelerates cognitive offloading in the broad sense and widens the gap between formal approval and epistemic understanding. Additional automation therefore amplifies, rather than mitigates, the responsibility vacuum.\nWe conclude that unless organizations explicitly redesign decision boundaries or reassign responsibility away from individual decisions toward batch- or system-level ownership, responsibility vacuum remains an invisible but persistent failure mode in scaled agent deployments.",
+        "tags": []
+    },
+    {
+        "id": 22,
+        "index": 1,
+        "title": "Facilitating Proactive and Reactive Guidance for Decision Making on the Web: A Design Probe with WebSeek",
+        "author": [
+            "Yanwei Huang",
+            "Arpit Narechania"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.15100",
+        "abstract": "Web AI agents such as ChatGPT Agent and GenSpark are increasingly used for routine web-based tasks, yet they still rely on text-based input prompts, lack proactive detection of user intent, and offer no support for interactive data analysis and decision making. We present WebSeek, a mixed-initiative browser extension that enables users to discover and extract information from webpages to then flexibly build, transform, and refine tangible data artifacts-such as tables, lists, and visualizations-all within an interactive canvas. Within this environment, users can perform analysis-including data transformations such as joining tables or creating visualizations-while an in-built AI both proactively offers context-aware guidance and automation, and reactively responds to explicit user requests. An exploratory user study (N=15) with WebSeek as a probe reveals participants' diverse analysis strategies, underscoring their desire for transparency and control during human-AI collaboration.",
+        "tags": [
+            "Detection",
+            "GPT"
+        ]
+    },
+    {
+        "id": 23,
+        "index": 1,
+        "title": "sangkuriang: A pseudo-spectral Python library for Korteweg-de Vries soliton simulation",
+        "author": [
+            "Sandy H. S. Herho",
+            "Faruq Khadami",
+            "Iwan P. Anwar",
+            "Dasapta E. Irawan"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.12029",
+        "abstract": "The Korteweg-de Vries (KdV) equation serves as a foundational model in nonlinear wave physics, describing the balance between dispersive spreading and nonlinear steepening that gives rise to solitons. This article introduces sangkuriang, an open-source Python library for solving this equation using Fourier pseudo-spectral spatial discretization coupled with adaptive high-order time integration. The implementation leverages just-in-time (JIT) compilation for computational efficiency while maintaining accessibility for instructional purposes. Validation encompasses progressively complex scenarios including isolated soliton propagation, symmetric two-wave configurations, overtaking collisions between waves of differing amplitudes, and three-body interactions. Conservation of the classical invariants is monitored throughout, with deviations remaining small across all test cases. Measured soliton velocities conform closely to theoretical predictions based on the amplitude-velocity relationship characteristic of integrable systems. Complementary diagnostics drawn from information theory and recurrence analysis confirm that computed solutions preserve the regular phase-space structure expected for completely integrable dynamics. The solver outputs data in standard scientific formats compatible with common analysis tools and generates visualizations of spatiotemporal wave evolution. By combining numerical accuracy with practical accessibility on modest computational resources, sangkuriang offers a platform suitable for both classroom demonstrations of nonlinear wave phenomena and exploratory research into soliton dynamics.",
+        "tags": []
+    },
+    {
+        "id": 24,
+        "index": 1,
+        "title": "Show me the evidence: Evaluating the role of evidence and natural language explanations in AI-supported fact-checking",
+        "author": [
+            "Greta Warren",
+            "Jingyi Sun",
+            "Irina Shklovski",
+            "Isabelle Augenstein"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.11387",
+        "abstract": "Although much research has focused on AI explanations to support decisions in complex information-seeking tasks such as fact-checking, the role of evidence is surprisingly under-researched. In our study, we systematically varied explanation type, AI prediction certainty, and correctness of AI system advice for non-expert participants, who evaluated the veracity of claims and AI system predictions. Participants were provided the option of easily inspecting the underlying evidence. We found that participants consistently relied on evidence to validate AI claims across all experimental conditions. When participants were presented with natural language explanations, evidence was used less frequently although they relied on it when these explanations seemed insufficient or flawed. Qualitative data suggests that participants attempted to infer evidence source reliability, despite source identities being deliberately omitted. Our results demonstrate that evidence is a key ingredient in how people evaluate the reliability of information presented by an AI system and, in combination with natural language explanations, offers valuable support for decision-making. Further research is urgently needed to understand how evidence ought to be presented and how people engage with it in practice.",
+        "tags": []
+    },
+    {
+        "id": 25,
+        "index": 0,
+        "title": "Motion 3-to-4: 3D Motion Reconstruction for 4D Synthesis",
+        "author": [
+            "Hongyuan Chen",
+            "Xingyu Chen",
+            "Youjia Zhang",
+            "Zexiang Xu",
+            "Anpei Chen"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.14253",
+        "abstract": "We present Motion 3-to-4, a feed-forward framework for synthesising high-quality 4D dynamic objects from a single monocular video and an optional 3D reference mesh. While recent advances have significantly improved 2D, video, and 3D content generation, 4D synthesis remains difficult due to limited training data and the inherent ambiguity of recovering geometry and motion from a monocular viewpoint. Motion 3-to-4 addresses these challenges by decomposing 4D synthesis into static 3D shape generation and motion reconstruction. Using a canonical reference mesh, our model learns a compact motion latent representation and predicts per-frame vertex trajectories to recover complete, temporally coherent geometry. A scalable frame-wise transformer further enables robustness to varying sequence lengths. Evaluations on both standard benchmarks and a new dataset with accurate ground-truth geometry show that Motion 3-to-4 delivers superior fidelity and spatial consistency compared to prior work. Project page is available at https://motion3-to-4.github.io/.",
+        "tags": [
+            "3D",
+            "Transformer"
+        ]
+    },
+    {
+        "id": 26,
+        "index": 0,
+        "title": "CURE-Med: Curriculum-Informed Reinforcement Learning for Multilingual Medical Reasoning",
+        "author": [
+            "Eric Onyame",
+            "Akash Ghosh",
+            "Subhadip Baidya",
+            "Sriparna Saha",
+            "Xiuying Chen",
+            "Chirag Agarwal"
+        ],
+        "pdf": "https://arxiv.org/pdf/2601.13262",
+        "abstract": "While large language models (LLMs) have shown to perform well on monolingual mathematical and commonsense reasoning, they remain unreliable for multilingual medical reasoning applications, hindering their deployment in multilingual healthcare settings. We address this by first introducing CUREMED-BENCH, a high-quality multilingual medical reasoning dataset with open-ended reasoning queries with a single verifiable answer, spanning thirteen languages, including underrepresented languages such as Amharic, Yoruba, and Swahili. Building on this dataset, we propose CURE-MED, a curriculum-informed reinforcement learning framework that integrates code-switching-aware supervised fine-tuning and Group Relative Policy Optimization to jointly improve logical correctness and language stability. Across thirteen languages, our approach consistently outperforms strong baselines and scales effectively, achieving 85.21% language consistency and 54.35% logical correctness at 7B parameters, and 94.96% language consistency and 70.04% logical correctness at 32B parameters. These results support reliable and equitable multilingual medical reasoning in LLMs. The code and dataset are available at https://cure-med.github.io/",
+        "tags": [
+            "LLM",
+            "RL"
+        ]
+    }
+]

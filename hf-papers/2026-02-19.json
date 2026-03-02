@@ -1,0 +1,385 @@
+[
+    {
+        "id": 1,
+        "index": 42,
+        "title": "SLA2: Sparse-Linear Attention with Learnable Routing and QAT",
+        "author": [
+            "Jintao Zhang",
+            "Haoxu Wang",
+            "Kai Jiang",
+            "Kaiwen Zheng",
+            "Youhe Jiang",
+            "Ion Stoica",
+            "Jianfei Chen",
+            "Jun Zhu",
+            "Joseph E. Gonzalez"
+        ],
+        "pdf": "https://arxiv.org/pdf/2602.12675",
+        "abstract": "Sparse-Linear Attention (SLA) combines sparse and linear attention to accelerate diffusion models and has shown strong performance in video generation. However, (i) SLA relies on a heuristic split that assigns computations to the sparse or linear branch based on attention-weight magnitude, which can be suboptimal. Additionally, (ii) after formally analyzing the attention error in SLA, we identify a mismatch between SLA and a direct decomposition into sparse and linear attention. We propose SLA2, which introduces (I) a learnable router that dynamically selects whether each attention computation should use sparse or linear attention, (II) a more faithful and direct sparse-linear attention formulation that uses a learnable ratio to combine the sparse and linear attention branches, and (III) a sparse + low-bit attention design, where low-bit attention is introduced via quantization-aware fine-tuning to reduce quantization error. Experiments show that on video diffusion models, SLA2 can achieve 97% attention sparsity and deliver an 18.6x attention speedup while preserving generation quality.",
+        "tags": [
+            "Diffusion",
+            "Video Generation"
+        ]
+    },
+    {
+        "id": 2,
+        "index": 26,
+        "title": "RynnBrain: Open Embodied Foundation Models",
+        "author": [
+            "Ronghao Dang",
+            "Jiayan Guo",
+            "Bohan Hou",
+            "Sicong Leng",
+            "Kehan Li",
+            "Xin Li",
+            "Jiangpin Liu",
+            "Yunxuan Mao",
+            "Zhikai Wang",
+            "Yuqian Yuan",
+            "Minghao Zhu",
+            "Xiao Lin",
+            "Yang Bai",
+            "Qian Jiang",
+            "Yaxi Zhao",
+            "Minghua Zeng",
+            "Junlong Gao",
+            "Yuming Jiang",
+            "Jun Cen",
+            "Siteng Huang",
+            "Liuyi Wang",
+            "Wenqiao Zhang",
+            "Chengju Liu",
+            "Jianfei Yang",
+            "Shijian Lu",
+            "Deli Zhao"
+        ],
+        "pdf": "https://arxiv.org/pdf/2602.14979",
+        "abstract": "Despite rapid progress in multimodal foundation models, embodied intelligence community still lacks a unified, physically grounded foundation model that integrates perception, reasoning, and planning within real-world spatial-temporal dynamics. We introduce RynnBrain, an open-source spatiotemporal foundation model for embodied intelligence. RynnBrain strengthens four core capabilities in a unified framework: comprehensive egocentric understanding, diverse spatiotemporal localization, physically grounded reasoning, and physics-aware planning. The RynnBrain family comprises three foundation model scales (2B, 8B, and 30B-A3B MoE) and four post-trained variants tailored for downstream embodied tasks (i.e., RynnBrain-Nav, RynnBrain-Plan, and RynnBrain-VLA) or complex spatial reasoning tasks (i.e., RynnBrain-CoP). In terms of extensive evaluations on 20 embodied benchmarks and 8 general vision understanding benchmarks, our RynnBrain foundation models largely outperform existing embodied foundation models by a significant margin. The post-trained model suite further substantiates two key potentials of the RynnBrain foundation model: (i) enabling physically grounded reasoning and planning, and (ii) serving as a strong pretrained backbone that can be efficiently adapted to diverse embodied tasks.",
+        "tags": [
+            "MoE"
+        ]
+    },
+    {
+        "id": 3,
+        "index": 25,
+        "title": "Learning Humanoid End-Effector Control for Open-Vocabulary Visual Loco-Manipulation",
+        "author": [
+            "Runpei Dong",
+            "Ziyan Li",
+            "Xialin He",
+            "Saurabh Gupta"
+        ],
+        "pdf": "https://arxiv.org/pdf/2602.16705",
+        "abstract": "Visual loco-manipulation of arbitrary objects in the wild with humanoid robots requires accurate end-effector (EE) control and a generalizable understanding of the scene via visual inputs (e.g., RGB-D images). Existing approaches are based on real-world imitation learning and exhibit limited generalization due to the difficulty in collecting large-scale training datasets. This paper presents a new paradigm, HERO, for object loco-manipulation with humanoid robots that combines the strong generalization and open-vocabulary understanding of large vision models with strong control performance from simulated training. We achieve this by designing an accurate residual-aware EE tracking policy. This EE tracking policy combines classical robotics with machine learning. It uses a) inverse kinematics to convert residual end-effector targets into reference trajectories, b) a learned neural forward model for accurate forward kinematics, c) goal adjustment, and d) replanning. Together, these innovations help us cut down the end-effector tracking error by 3.2x. We use this accurate end-effector tracker to build a modular system for loco-manipulation, where we use open-vocabulary large vision models for strong visual generalization. Our system is able to operate in diverse real-world environments, from offices to coffee shops, where the robot is able to reliably manipulate various everyday objects (e.g., mugs, apples, toys) on surfaces ranging from 43cm to 92cm in height. Systematic modular and end-to-end tests in simulation and the real world demonstrate the effectiveness of our proposed design. We believe the advances in this paper can open up new ways of training humanoid robots to interact with daily objects.",
+        "tags": [
+            "Robotics"
+        ]
+    },
+    {
+        "id": 4,
+        "index": 19,
+        "title": "CADEvolve: Creating Realistic CAD via Program Evolution",
+        "author": [
+            "Maksim Elistratov",
+            "Marina Barannikov",
+            "Gregory Ivanov",
+            "Valentin Khrulkov",
+            "Anton Konushin",
+            "Andrey Kuznetsov",
+            "Dmitrii Zhemchuzhnikov"
+        ],
+        "pdf": "https://arxiv.org/pdf/2602.16317",
+        "abstract": "Computer-Aided Design (CAD) delivers rapid, editable modeling for engineering and manufacturing. Recent AI progress now makes full automation feasible for various CAD tasks. However, progress is bottlenecked by data: public corpora mostly contain sketch-extrude sequences, lack complex operations, multi-operation composition and design intent, and thus hinder effective fine-tuning. Attempts to bypass this with frozen VLMs often yield simple or invalid programs due to limited 3D grounding in current foundation models. We present CADEvolve, an evolution-based pipeline and dataset that starts from simple primitives and, via VLM-guided edits and validations, incrementally grows CAD programs toward industrial-grade complexity. The result is 8k complex parts expressed as executable CadQuery parametric generators. After multi-stage post-processing and augmentation, we obtain a unified dataset of 1.3m scripts paired with rendered geometry and exercising the full CadQuery operation set. A VLM fine-tuned on CADEvolve achieves state-of-the-art results on the Image2CAD task across the DeepCAD, Fusion 360, and MCB benchmarks.",
+        "tags": [
+            "3D",
+            "VLM"
+        ]
+    },
+    {
+        "id": 5,
+        "index": 16,
+        "title": "Empty Shelves or Lost Keys? Recall Is the Bottleneck for Parametric Factuality",
+        "author": [
+            "Nitay Calderon",
+            "Eyal Ben-David",
+            "Zorik Gekhman",
+            "Eran Ofek",
+            "Gal Yona"
+        ],
+        "pdf": "https://arxiv.org/pdf/2602.14080",
+        "abstract": "Standard factuality evaluations of LLMs treat all errors alike, obscuring whether failures arise from missing knowledge (empty shelves) or from limited access to encoded facts (lost keys). We propose a behavioral framework that profiles factual knowledge at the level of facts rather than questions, characterizing each fact by whether it is encoded, and then by how accessible it is: cannot be recalled, can be directly recalled, or can only be recalled with inference-time computation (thinking). To support such profiling, we introduce WikiProfile, a new benchmark constructed via an automated pipeline with a prompted LLM grounded in web search. Across 4 million responses from 13 LLMs, we find that encoding is nearly saturated in frontier models on our benchmark, with GPT-5 and Gemini-3 encoding 95--98% of facts. However, recall remains a major bottleneck: many errors previously attributed to missing knowledge instead stem from failures to access it. These failures are systematic and disproportionately affect long-tail facts and reverse questions. Finally, we show that thinking improves recall and can recover a substantial fraction of failures, indicating that future gains may rely less on scaling and more on methods that improve how models utilize what they already encode.",
+        "tags": [
+            "GPT",
+            "LLM"
+        ]
+    },
+    {
+        "id": 6,
+        "index": 12,
+        "title": "MAEB: Massive Audio Embedding Benchmark",
+        "author": [
+            "Adnan El Assadi",
+            "Isaac Chung",
+            "Chenghao Xiao",
+            "Roman Solomatin",
+            "Animesh Jha",
+            "Rahul Chand",
+            "Silky Singh",
+            "Kaitlyn Wang",
+            "Ali Sartaz Khan",
+            "Marc Moussa Nasser",
+            "Sufen Fong",
+            "Pengfei He",
+            "Alan Xiao",
+            "Ayush Sunil Munot",
+            "Aditya Shrivastava",
+            "Artem Gazizov",
+            "Niklas Muennighoff",
+            "Kenneth Enevoldsen"
+        ],
+        "pdf": "https://arxiv.org/pdf/2602.16008",
+        "abstract": "We introduce the Massive Audio Embedding Benchmark (MAEB), a large-scale benchmark covering 30 tasks across speech, music, environmental sounds, and cross-modal audio-text reasoning in 100+ languages. We evaluate 50+ models and find that no single model dominates across all tasks: contrastive audio-text models excel at environmental sound classification (e.g., ESC50) but score near random on multilingual speech tasks (e.g., SIB-FLEURS), while speech-pretrained models show the opposite pattern. Clustering remains challenging for all models, with even the best-performing model achieving only modest results. We observe that models excelling on acoustic understanding often perform poorly on linguistic tasks, and vice versa. We also show that the performance of audio encoders on MAEB correlates highly with their performance when used in audio large language models. MAEB is derived from MAEB+, a collection of 98 tasks. MAEB is designed to maintain task diversity while reducing evaluation cost, and it integrates into the MTEB ecosystem for unified evaluation across text, image, and audio modalities. We release MAEB and all 98 tasks along with code and a leaderboard at https://github.com/embeddings-benchmark/mteb.",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 7,
+        "index": 11,
+        "title": "Towards a Science of AI Agent Reliability",
+        "author": [
+            "Stephan Rabanser",
+            "Sayash Kapoor",
+            "Peter Kirgis",
+            "Kangheng Liu",
+            "Saiteja Utpala",
+            "Arvind Narayanan"
+        ],
+        "pdf": "https://arxiv.org/pdf/2602.16666",
+        "abstract": "AI agents are increasingly deployed to execute important tasks. While rising accuracy scores on standard benchmarks suggest rapid progress, many agents still continue to fail in practice. This discrepancy highlights a fundamental limitation of current evaluations: compressing agent behavior into a single success metric obscures critical operational flaws. Notably, it ignores whether agents behave consistently across runs, withstand perturbations, fail predictably, or have bounded error severity. Grounded in safety-critical engineering, we provide a holistic performance profile by proposing twelve concrete metrics that decompose agent reliability along four key dimensions: consistency, robustness, predictability, and safety. Evaluating 14 agentic models across two complementary benchmarks, we find that recent capability gains have only yielded small improvements in reliability. By exposing these persistent limitations, our metrics complement traditional evaluations while offering tools for reasoning about how agents perform, degrade, and fail.",
+        "tags": []
+    },
+    {
+        "id": 8,
+        "index": 10,
+        "title": "Multi-agent cooperation through in-context co-player inference",
+        "author": [
+            "Marissa A. Weis",
+            "Maciej WoÅczyk",
+            "Rajai Nasser",
+            "Rif A. Saurous",
+            "Blaise AgÃ¼era y Arcas",
+            "JoÃ£o Sacramento",
+            "Alexander Meulemans"
+        ],
+        "pdf": "https://arxiv.org/pdf/2602.16301",
+        "abstract": "Achieving cooperation among self-interested agents remains a fundamental challenge in multi-agent reinforcement learning. Recent work showed that mutual cooperation can be induced between \"learning-aware\" agents that account for and shape the learning dynamics of their co-players. However, existing approaches typically rely on hardcoded, often inconsistent, assumptions about co-player learning rules or enforce a strict separation between \"naive learners\" updating on fast timescales and \"meta-learners\" observing these updates. Here, we demonstrate that the in-context learning capabilities of sequence models allow for co-player learning awareness without requiring hardcoded assumptions or explicit timescale separation. We show that training sequence model agents against a diverse distribution of co-players naturally induces in-context best-response strategies, effectively functioning as learning algorithms on the fast intra-episode timescale. We find that the cooperative mechanism identified in prior work-where vulnerability to extortion drives mutual shaping-emerges naturally in this setting: in-context adaptation renders agents vulnerable to extortion, and the resulting mutual pressure to shape the opponent's in-context learning dynamics resolves into the learning of cooperative behavior. Our results suggest that standard decentralized reinforcement learning on sequence models combined with co-player diversity provides a scalable path to learning cooperative behaviors.",
+        "tags": [
+            "RL"
+        ]
+    },
+    {
+        "id": 9,
+        "index": 9,
+        "title": "World Action Models are Zero-shot Policies",
+        "author": [
+            "Seonghyeon Ye",
+            "Yunhao Ge",
+            "Kaiyuan Zheng",
+            "Shenyuan Gao",
+            "Sihyun Yu",
+            "George Kurian",
+            "Suneel Indupuru",
+            "You Liang Tan",
+            "Chuning Zhu",
+            "Jiannan Xiang",
+            "Ayaan Malik",
+            "Kyungmin Lee",
+            "William Liang",
+            "Nadun Ranawaka",
+            "Jiasheng Gu",
+            "Yinzhen Xu",
+            "Guanzhi Wang",
+            "Fengyuan Hu",
+            "Avnish Narayan",
+            "Johan Bjorck",
+            "Jing Wang",
+            "Gwanghyun Kim",
+            "Dantong Niu",
+            "Ruijie Zheng",
+            "Yuqi Xie",
+            "Jimmy Wu",
+            "Qi Wang",
+            "Ryan Julian",
+            "Danfei Xu",
+            "Yilun Du",
+            "Yevgen Chebotar",
+            "Scott Reed",
+            "Jan Kautz",
+            "Yuke Zhu",
+            "Linxi \"Jim\" Fan",
+            "Joel Jang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2602.15922",
+        "abstract": "State-of-the-art Vision-Language-Action (VLA) models excel at semantic generalization but struggle to generalize to unseen physical motions in novel environments. We introduce DreamZero, a World Action Model (WAM) built upon a pretrained video diffusion backbone. Unlike VLAs, WAMs learn physical dynamics by predicting future world states and actions, using video as a dense representation of how the world evolves. By jointly modeling video and action, DreamZero learns diverse skills effectively from heterogeneous robot data without relying on repetitive demonstrations. This results in over 2x improvement in generalization to new tasks and environments compared to state-of-the-art VLAs in real robot experiments. Crucially, through model and system optimizations, we enable a 14B autoregressive video diffusion model to perform real-time closed-loop control at 7Hz. Finally, we demonstrate two forms of cross-embodiment transfer: video-only demonstrations from other robots or humans yield a relative improvement of over 42% on unseen task performance with just 10-20 minutes of data. More surprisingly, DreamZero enables few-shot embodiment adaptation, transferring to a new embodiment with only 30 minutes of play data while retaining zero-shot generalization.",
+        "tags": [
+            "Diffusion",
+            "Robotics"
+        ]
+    },
+    {
+        "id": 10,
+        "index": 8,
+        "title": "Reinforced Fast Weights with Next-Sequence Prediction",
+        "author": [
+            "Hee Seung Hwang",
+            "Xindi Wu",
+            "Sanghyuk Chun",
+            "Olga Russakovsky"
+        ],
+        "pdf": "https://arxiv.org/pdf/2602.16704",
+        "abstract": "Fast weight architectures offer a promising alternative to attention-based transformers for long-context modeling by maintaining constant memory overhead regardless of context length. However, their potential is limited by the next-token prediction (NTP) training paradigm. NTP optimizes single-token predictions and ignores semantic coherence across multiple tokens following a prefix. Consequently, fast weight models, which dynamically update their parameters to store contextual information, learn suboptimal representations that fail to capture long-range dependencies. We introduce REFINE (Reinforced Fast weIghts with Next sEquence prediction), a reinforcement learning framework that trains fast weight models under the next-sequence prediction (NSP) objective. REFINE selects informative token positions based on prediction entropy, generates multi-token rollouts, assigns self-supervised sequence-level rewards, and optimizes the model with group relative policy optimization (GRPO). REFINE is applicable throughout the training lifecycle of pre-trained language models: mid-training, post-training, and test-time training. Our experiments on LaCT-760M and DeltaNet-1.3B demonstrate that REFINE consistently outperforms supervised fine-tuning with NTP across needle-in-a-haystack retrieval, long-context question answering, and diverse tasks in LongBench. REFINE provides an effective and versatile framework for improving long-context modeling in fast weight architectures.",
+        "tags": [
+            "GRPO",
+            "RL",
+            "TTT"
+        ]
+    },
+    {
+        "id": 11,
+        "index": 7,
+        "title": "SAM 3D Body: Robust Full-Body Human Mesh Recovery",
+        "author": [
+            "Xitong Yang",
+            "Devansh Kukreja",
+            "Don Pinkus",
+            "Anushka Sagar",
+            "Taosha Fan",
+            "Jinhyung Park",
+            "Soyong Shin",
+            "Jinkun Cao",
+            "Jiawei Liu",
+            "Nicolas Ugrinovic",
+            "Matt Feiszli",
+            "Jitendra Malik",
+            "Piotr Dollar",
+            "Kris Kitani"
+        ],
+        "pdf": "https://arxiv.org/pdf/2602.15989",
+        "abstract": "We introduce SAM 3D Body (3DB), a promptable model for single-image full-body 3D human mesh recovery (HMR) that demonstrates state-of-the-art performance, with strong generalization and consistent accuracy in diverse in-the-wild conditions. 3DB estimates the human pose of the body, feet, and hands. It is the first model to use a new parametric mesh representation, Momentum Human Rig (MHR), which decouples skeletal structure and surface shape. 3DB employs an encoder-decoder architecture and supports auxiliary prompts, including 2D keypoints and masks, enabling user-guided inference similar to the SAM family of models. We derive high-quality annotations from a multi-stage annotation pipeline that uses various combinations of manual keypoint annotation, differentiable optimization, multi-view geometry, and dense keypoint detection. Our data engine efficiently selects and processes data to ensure data diversity, collecting unusual poses and rare imaging conditions. We present a new evaluation dataset organized by pose and appearance categories, enabling nuanced analysis of model behavior. Our experiments demonstrate superior generalization and substantial improvements over prior methods in both qualitative user preference studies and traditional quantitative analysis. Both 3DB and MHR are open-source.",
+        "tags": [
+            "3D",
+            "Detection",
+            "SAM"
+        ]
+    },
+    {
+        "id": 12,
+        "index": 5,
+        "title": "Learning Situated Awareness in the Real World",
+        "author": [
+            "Chuhan Li",
+            "Ruilin Han",
+            "Joy Hsu",
+            "Yongyuan Liang",
+            "Rajiv Dhawan",
+            "Jiajun Wu",
+            "Ming-Hsuan Yang",
+            "Xin Eric Wang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2602.16682",
+        "abstract": "A core aspect of human perception is situated awareness, the ability to relate ourselves to the surrounding physical environment and reason over possible actions in context. However, most existing benchmarks for multimodal foundation models (MFMs) emphasize environment-centric spatial relations (relations among objects in a scene), while largely overlooking observer-centric relationships that require reasoning relative to agent's viewpoint, pose, and motion. To bridge this gap, we introduce SAW-Bench (Situated Awareness in the Real World), a novel benchmark for evaluating egocentric situated awareness using real-world videos. SAW-Bench comprises 786 self-recorded videos captured with Ray-Ban Meta (Gen 2) smart glasses spanning diverse indoor and outdoor environments, and over 2,071 human-annotated question-answer pairs. It probes a model's observer-centric understanding with six different awareness tasks. Our comprehensive evaluation reveals a human-model performance gap of 37.66%, even with the best-performing MFM, Gemini 3 Flash. Beyond this gap, our in-depth analysis uncovers several notable findings; for example, while models can exploit partial geometric cues in egocentric videos, they often fail to infer a coherent camera geometry, leading to systematic spatial reasoning errors. We position SAW-Bench as a benchmark for situated spatial intelligence, moving beyond passive observation to understanding physically grounded, observer-centric dynamics.",
+        "tags": []
+    },
+    {
+        "id": 13,
+        "index": 5,
+        "title": "MMA: Multimodal Memory Agent",
+        "author": [
+            "Yihao Lu",
+            "Wanru Cheng",
+            "Zeyu Zhang",
+            "Hao Tang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2602.16493",
+        "abstract": "Long-horizon multimodal agents depend on external memory; however, similarity-based retrieval often surfaces stale, low-credibility, or conflicting items, which can trigger overconfident errors. We propose Multimodal Memory Agent (MMA), which assigns each retrieved memory item a dynamic reliability score by combining source credibility, temporal decay, and conflict-aware network consensus, and uses this signal to reweight evidence and abstain when support is insufficient. We also introduce MMA-Bench, a programmatically generated benchmark for belief dynamics with controlled speaker reliability and structured text-vision contradictions. Using this framework, we uncover the \"Visual Placebo Effect\", revealing how RAG-based agents inherit latent visual biases from foundation models. On FEVER, MMA matches baseline accuracy while reducing variance by 35.2% and improving selective utility; on LoCoMo, a safety-oriented configuration improves actionable accuracy and reduces wrong answers; on MMA-Bench, MMA reaches 41.18% Type-B accuracy in Vision mode, while the baseline collapses to 0.0% under the same protocol. Code: https://github.com/AIGeeksGroup/MMA.",
+        "tags": [
+            "RAG"
+        ]
+    },
+    {
+        "id": 14,
+        "index": 5,
+        "title": "Learning Personalized Agents from Human Feedback",
+        "author": [
+            "Kaiqu Liang",
+            "Julia Kruk",
+            "Shengyi Qian",
+            "Xianjun Yang",
+            "Shengjie Bi",
+            "Yuanshun Yao",
+            "Shaoliang Nie",
+            "Mingyang Zhang",
+            "Lijuan Liu",
+            "Jaime FernÃ¡ndez Fisac",
+            "Shuyan Zhou",
+            "Saghar Hosseini"
+        ],
+        "pdf": "https://arxiv.org/pdf/2602.16173",
+        "abstract": "Modern AI agents are powerful but often fail to align with the idiosyncratic, evolving preferences of individual users. Prior approaches typically rely on static datasets, either training implicit preference models on interaction history or encoding user profiles in external memory. However, these approaches struggle with new users and with preferences that change over time. We introduce Personalized Agents from Human Feedback (PAHF), a framework for continual personalization in which agents learn online from live interaction using explicit per-user memory. PAHF operationalizes a three-step loop: (1) seeking pre-action clarification to resolve ambiguity, (2) grounding actions in preferences retrieved from memory, and (3) integrating post-action feedback to update memory when preferences drift. To evaluate this capability, we develop a four-phase protocol and two benchmarks in embodied manipulation and online shopping. These benchmarks quantify an agent's ability to learn initial preferences from scratch and subsequently adapt to persona shifts. Our theoretical analysis and empirical results show that integrating explicit memory with dual feedback channels is critical: PAHF learns substantially faster and consistently outperforms both no-memory and single-channel baselines, reducing initial personalization error and enabling rapid adaptation to preference shifts.",
+        "tags": []
+    },
+    {
+        "id": 15,
+        "index": 4,
+        "title": "Optimizing Few-Step Generation with Adaptive Matching Distillation",
+        "author": [
+            "Lichen Bai",
+            "Zikai Zhou",
+            "Shitong Shao",
+            "Wenliang Zhong",
+            "Shuo Yang",
+            "Shuo Chen",
+            "Bojun Chen",
+            "Zeke Xie"
+        ],
+        "pdf": "https://arxiv.org/pdf/2602.07345",
+        "abstract": "Distribution Matching Distillation (DMD) is a powerful acceleration paradigm, yet its stability is often compromised in Forbidden Zone, regions where the real teacher provides unreliable guidance while the fake teacher exerts insufficient repulsive force. In this work, we propose a unified optimization framework that reinterprets prior art as implicit strategies to avoid these corrupted regions. Based on this insight, we introduce Adaptive Matching Distillation (AMD), a self-correcting mechanism that utilizes reward proxies to explicitly detect and escape Forbidden Zones. AMD dynamically prioritizes corrective gradients via structural signal decomposition and introduces Repulsive Landscape Sharpening to enforce steep energy barriers against failure mode collapse. Extensive experiments across image and video generation tasks (e.g., SDXL, Wan2.1) and rigorous benchmarks (e.g., VBench, GenEval) demonstrate that AMD significantly enhances sample fidelity and training robustness. For instance, AMD improves the HPSv2 score on SDXL from 30.64 to 31.25, outperforming state-of-the-art baselines. These findings validate that explicitly rectifying optimization trajectories within Forbidden Zones is essential for pushing the performance ceiling of few-step generative models.",
+        "tags": [
+            "SDXL",
+            "Video Generation"
+        ]
+    },
+    {
+        "id": 16,
+        "index": 3,
+        "title": "Visual Memory Injection Attacks for Multi-Turn Conversations",
+        "author": [
+            "Christian Schlarmann",
+            "Matthias Hein"
+        ],
+        "pdf": "https://arxiv.org/pdf/2602.15927",
+        "abstract": "Generative large vision-language models (LVLMs) have recently achieved impressive performance gains, and their user base is growing rapidly. However, the security of LVLMs, in particular in a long-context multi-turn setting, is largely underexplored. In this paper, we consider the realistic scenario in which an attacker uploads a manipulated image to the web/social media. A benign user downloads this image and uses it as input to the LVLM. Our novel stealthy Visual Memory Injection (VMI) attack is designed such that on normal prompts the LVLM exhibits nominal behavior, but once the user gives a triggering prompt, the LVLM outputs a specific prescribed target message to manipulate the user, e.g. for adversarial marketing or political persuasion. Compared to previous work that focused on single-turn attacks, VMI is effective even after a long multi-turn conversation with the user. We demonstrate our attack on several recent open-weight LVLMs. This article thereby shows that large-scale manipulation of users is feasible with perturbed images in multi-turn conversation settings, calling for better robustness of LVLMs against these attacks. We release the source code at https://github.com/chs20/visual-memory-injection",
+        "tags": [
+            "VLM"
+        ]
+    },
+    {
+        "id": 17,
+        "index": 2,
+        "title": "BiManiBench: A Hierarchical Benchmark for Evaluating Bimanual Coordination of Multimodal Large Language Models",
+        "author": [
+            "Xin Wu",
+            "Zhixuan Liang",
+            "Yue Ma",
+            "Mengkang Hu",
+            "Zhiyuan Qin",
+            "Xiu Li"
+        ],
+        "pdf": "https://arxiv.org/pdf/2602.08392",
+        "abstract": "Multimodal Large Language Models (MLLMs) have significantly advanced embodied AI, and using them to benchmark robotic intelligence has become a pivotal trend. However, existing frameworks remain predominantly confined to single-arm manipulation, failing to capture the spatio-temporal coordination required for bimanual tasks like lifting a heavy pot. To address this, we introduce BiManiBench, a hierarchical benchmark evaluating MLLMs across three tiers: fundamental spatial reasoning, high-level action planning, and low-level end-effector control. Our framework isolates unique bimanual challenges, such as arm reachability and kinematic constraints, thereby distinguishing perceptual hallucinations from planning failures. Analysis of over 30 state-of-the-art models reveals that despite high-level reasoning proficiency, MLLMs struggle with dual-arm spatial grounding and control, frequently resulting in mutual interference and sequencing errors. These findings suggest the current paradigm lacks a deep understanding of mutual kinematic constraints, highlighting the need for future research to focus on inter-arm collision-avoidance and fine-grained temporal sequencing.",
+        "tags": [
+            "LLM"
+        ]
+    }
+]
