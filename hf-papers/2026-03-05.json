@@ -1,0 +1,429 @@
+[
+    {
+        "id": 1,
+        "index": 106,
+        "title": "Helios: Real Real-Time Long Video Generation Model",
+        "author": [
+            "Shenghai Yuan",
+            "Yuanyang Yin",
+            "Zongjian Li",
+            "Xinwei Huang",
+            "Xiao Yang",
+            "Li Yuan"
+        ],
+        "pdf": "https://arxiv.org/pdf/2603.04379",
+        "abstract": "We introduce Helios, the first 14B video generation model that runs at 19.5 FPS on a single NVIDIA H100 GPU and supports minute-scale generation while matching the quality of a strong baseline. We make breakthroughs along three key dimensions: (1) robustness to long-video drifting without commonly used anti-drifting heuristics such as self-forcing, error-banks, or keyframe sampling; (2) real-time generation without standard acceleration techniques such as KV-cache, sparse/linear attention, or quantization; and (3) training without parallelism or sharding frameworks, enabling image-diffusion-scale batch sizes while fitting up to four 14B models within 80 GB of GPU memory. Specifically, Helios is a 14B autoregressive diffusion model with a unified input representation that natively supports T2V, I2V, and V2V tasks. To mitigate drifting in long-video generation, we characterize typical failure modes and propose simple yet effective training strategies that explicitly simulate drifting during training, while eliminating repetitive motion at its source. For efficiency, we heavily compress the historical and noisy context and reduce the number of sampling steps, yielding computational costs comparable to -- or lower than -- those of 1.3B video generative models. Moreover, we introduce infrastructure-level optimizations that accelerate both inference and training while reducing memory consumption. Extensive experiments demonstrate that Helios consistently outperforms prior methods on both short- and long-video generation. We plan to release the code, base model, and distilled model to support further development by the community.",
+        "tags": [
+            "Diffusion",
+            "Video Generation"
+        ]
+    },
+    {
+        "id": 2,
+        "index": 93,
+        "title": "T2S-Bench & Structure-of-Thought: Benchmarking and Prompting Comprehensive Text-to-Structure Reasoning",
+        "author": [
+            "Qinsi Wang",
+            "Hancheng Ye",
+            "Jinhee Kim",
+            "Jinghan Ke",
+            "Yifei Wang",
+            "Martin Kuo",
+            "Zishan Shao",
+            "Dongting Li",
+            "Yueqian Lin",
+            "Ting Jiang",
+            "Chiyue Wei",
+            "Qi Qian",
+            "Wei Wen",
+            "Helen Li",
+            "Yiran Chen"
+        ],
+        "pdf": "https://arxiv.org/pdf/2603.03790",
+        "abstract": "Think about how human handles complex reading tasks: marking key points, inferring their relationships, and structuring information to guide understanding and responses. Likewise, can a large language model benefit from text structure to enhance text-processing performance? To explore it, in this work, we first introduce Structure of Thought (SoT), a prompting technique that explicitly guides models to construct intermediate text structures, consistently boosting performance across eight tasks and three model families. Building upon this insight, we present T2S-Bench, the first benchmark designed to evaluate and improve text-to-structure capabilities of models. T2S-Bench includes 1.8K samples across 6 scientific domains and 32 structural types, rigorously constructed to ensure accuracy, fairness, and quality. Evaluation on 45 mainstream models reveals substantial improvement potential: the average accuracy on the multi-hop reasoning task is only 52.1%, and even the most advanced model achieves 58.1% node accuracy in end-to-end extraction. Furthermore, on Qwen2.5-7B-Instruct, SoT alone yields an average +5.7% improvement across eight diverse text-processing tasks, and fine-tuning on T2S-Bench further increases this gain to +8.6%. These results highlight the value of explicit text structuring and the complementary contributions of SoT and T2S-Bench. Dataset and eval code have been released at https://t2s-bench.github.io/T2S-Bench-Page/.",
+        "tags": []
+    },
+    {
+        "id": 3,
+        "index": 92,
+        "title": "Heterogeneous Agent Collaborative Reinforcement Learning",
+        "author": [
+            "Zhixia Zhang",
+            "Zixuan Huang",
+            "Xin Xia",
+            "Deqing Wang",
+            "Fuzhen Zhuang",
+            "Shuai Ma",
+            "Ning Ding",
+            "Yaodong Yang",
+            "Jianxin Li",
+            "Yikun Ban"
+        ],
+        "pdf": "https://arxiv.org/pdf/2603.02604",
+        "abstract": "We introduce Heterogeneous Agent Collaborative Reinforcement Learning (HACRL), a new learning paradigm that addresses the inefficiencies of isolated on-policy optimization. HACRL enables collaborative optimization with independent execution: heterogeneous agents share verified rollouts during training to mutually improve, while operating independently at inference time. Unlike LLM-based multi-agent reinforcement learning (MARL), HACRL does not require coordinated deployment, and unlike on-/off-policy distillation, it enables bidirectional mutual learning among heterogeneous agents rather than one-directional teacher-to-student transfer. Building on this paradigm, we propose HACPO, a collaborative RL algorithm that enables principled rollout sharing to maximize sample utilization and cross-agent knowledge transfer. To mitigate capability discrepancies and policy distribution shifts, HACPO introduces four tailored mechanisms with theoretical guarantees on unbiased advantage estimation and optimization correctness. Extensive experiments across diverse heterogeneous model combinations and reasoning benchmarks show that HACPO consistently improves all participating agents, outperforming GSPO by an average of 3.3\\% while using only half the rollout cost.",
+        "tags": [
+            "LLM",
+            "RL"
+        ]
+    },
+    {
+        "id": 4,
+        "index": 22,
+        "title": "Proact-VL: A Proactive VideoLLM for Real-Time AI Companions",
+        "author": [
+            "Weicai Yan",
+            "Yuhong Dai",
+            "Qi Ran",
+            "Haodong Li",
+            "Wang Lin",
+            "Hao Liao",
+            "Xing Xie",
+            "Tao Jin",
+            "Jianxun Lian"
+        ],
+        "pdf": "https://arxiv.org/pdf/2603.03447",
+        "abstract": "Proactive and real-time interactive experiences are essential for human-like AI companions, yet face three key challenges: (1) achieving low-latency inference under continuous streaming inputs, (2) autonomously deciding when to respond, and (3) controlling both quality and quantity of generated content to meet real-time constraints. In this work, we instantiate AI companions through two gaming scenarios, commentator and guide, selected for their suitability for automatic evaluation. We introduce the Live Gaming Benchmark, a large-scale dataset with three representative scenarios: solo commentary, co-commentary, and user guidance, and present Proact-VL, a general framework that shapes multimodal language models into proactive, real-time interactive agents capable of human-like environment perception and interaction. Extensive experiments show Proact-VL achieves superior response latency and quality while maintaining strong video understanding capabilities, demonstrating its practicality for real-time interactive applications.",
+        "tags": []
+    },
+    {
+        "id": 5,
+        "index": 20,
+        "title": "MemSifter: Offloading LLM Memory Retrieval via Outcome-Driven Proxy Reasoning",
+        "author": [
+            "Jiejun Tan",
+            "Zhicheng Dou",
+            "Liancheng Zhang",
+            "Yuyang Hu",
+            "Yiruo Cheng",
+            "Ji-Rong Wen"
+        ],
+        "pdf": "https://arxiv.org/pdf/2603.03379",
+        "abstract": "As Large Language Models (LLMs) are increasingly used for long-duration tasks, maintaining effective long-term memory has become a critical challenge. Current methods often face a trade-off between cost and accuracy. Simple storage methods often fail to retrieve relevant information, while complex indexing methods (such as memory graphs) require heavy computation and can cause information loss. Furthermore, relying on the working LLM to process all memories is computationally expensive and slow. To address these limitations, we propose MemSifter, a novel framework that offloads the memory retrieval process to a small-scale proxy model. Instead of increasing the burden on the primary working LLM, MemSifter uses a smaller model to reason about the task before retrieving the necessary information. This approach requires no heavy computation during the indexing phase and adds minimal overhead during inference. To optimize the proxy model, we introduce a memory-specific Reinforcement Learning (RL) training paradigm. We design a task-outcome-oriented reward based on the working LLM's actual performance in completing the task. The reward measures the actual contribution of retrieved memories by mutiple interactions with the working LLM, and discriminates retrieved rankings by stepped decreasing contributions. Additionally, we employ training techniques such as Curriculum Learning and Model Merging to improve performance. We evaluated MemSifter on eight LLM memory benchmarks, including Deep Research tasks. The results demonstrate that our method meets or exceeds the performance of existing state-of-the-art approaches in both retrieval accuracy and final task completion. MemSifter offers an efficient and scalable solution for long-term LLM memory. We have open-sourced the model weights, code, and training data to support further research.",
+        "tags": [
+            "LLM",
+            "RL"
+        ]
+    },
+    {
+        "id": 6,
+        "index": 19,
+        "title": "ArtHOI: Articulated Human-Object Interaction Synthesis by 4D Reconstruction from Video Priors",
+        "author": [
+            "Zihao Huang",
+            "Tianqi Liu",
+            "Zhaoxi Chen",
+            "Shaocong Xu",
+            "Saining Zhang",
+            "Lixing Xiao",
+            "Zhiguo Cao",
+            "Wei Li",
+            "Hao Zhao",
+            "Ziwei Liu"
+        ],
+        "pdf": "https://arxiv.org/pdf/2603.04338",
+        "abstract": "Synthesizing physically plausible articulated human-object interactions (HOI) without 3D/4D supervision remains a fundamental challenge. While recent zero-shot approaches leverage video diffusion models to synthesize human-object interactions, they are largely confined to rigid-object manipulation and lack explicit 4D geometric reasoning. To bridge this gap, we formulate articulated HOI synthesis as a 4D reconstruction problem from monocular video priors: given only a video generated by a diffusion model, we reconstruct a full 4D articulated scene without any 3D supervision. This reconstruction-based approach treats the generated 2D video as supervision for an inverse rendering problem, recovering geometrically consistent and physically plausible 4D scenes that naturally respect contact, articulation, and temporal coherence. We introduce ArtHOI, the first zero-shot framework for articulated human-object interaction synthesis via 4D reconstruction from video priors. Our key designs are: 1) Flow-based part segmentation: leveraging optical flow as a geometric cue to disentangle dynamic from static regions in monocular video; 2) Decoupled reconstruction pipeline: joint optimization of human motion and object articulation is unstable under monocular ambiguity, so we first recover object articulation, then synthesize human motion conditioned on the reconstructed object states. ArtHOI bridges video-based generation and geometry-aware reconstruction, producing interactions that are both semantically aligned and physically grounded. Across diverse articulated scenes (e.g., opening fridges, cabinets, microwaves), ArtHOI significantly outperforms prior methods in contact accuracy, penetration reduction, and articulation fidelity, extending zero-shot interaction synthesis beyond rigid manipulation through reconstruction-informed synthesis.",
+        "tags": [
+            "3D",
+            "Diffusion",
+            "Segmentation"
+        ]
+    },
+    {
+        "id": 7,
+        "index": 11,
+        "title": "Phi-4-reasoning-vision-15B Technical Report",
+        "author": [
+            "Jyoti Aneja",
+            "Michael Harrison",
+            "Neel Joshi",
+            "Tyler LaBonte",
+            "John Langford",
+            "Eduardo Salinas"
+        ],
+        "pdf": "https://arxiv.org/pdf/2603.03975",
+        "abstract": "We present Phi-4-reasoning-vision-15B, a compact open-weight multimodal reasoning model, and share the motivations, design choices, experiments, and learnings that informed its development. Our goal is to contribute practical insight to the research community on building smaller, efficient multimodal reasoning models and to share the result of these learnings as an open-weight model that is good at common vision and language tasks and excels at scientific and mathematical reasoning and understanding user interfaces. Our contributions include demonstrating that careful architecture choices and rigorous data curation enable smaller, open-weight multimodal models to achieve competitive performance with significantly less training and inference-time compute and tokens. The most substantial improvements come from systematic filtering, error correction, and synthetic augmentation -- reinforcing that data quality remains the primary lever for model performance. Systematic ablations show that high-resolution, dynamic-resolution encoders yield consistent improvements, as accurate perception is a prerequisite for high-quality reasoning. Finally, a hybrid mix of reasoning and non-reasoning data with explicit mode tokens allows a single model to deliver fast direct answers for simpler tasks and chain-of-thought reasoning for complex problems.",
+        "tags": [
+            "CoT"
+        ]
+    },
+    {
+        "id": 8,
+        "index": 9,
+        "title": "CubeComposer: Spatio-Temporal Autoregressive 4K 360Â° Video Generation from Perspective Video",
+        "author": [
+            "Lingen Li",
+            "Guangzhi Wang",
+            "Xiaoyu Li",
+            "Zhaoyang Zhang",
+            "Qi Dou",
+            "Jinwei Gu",
+            "Tianfan Xue",
+            "Ying Shan"
+        ],
+        "pdf": "https://arxiv.org/pdf/2603.04291",
+        "abstract": "Generating high-quality 360Â° panoramic videos from perspective input is one of the crucial applications for virtual reality (VR), whereby high-resolution videos are especially important for immersive experience. Existing methods are constrained by computational limitations of vanilla diffusion models, only supporting $\\leq$ 1K resolution native generation and relying on suboptimal post super-resolution to increase resolution. We introduce CubeComposer, a novel spatio-temporal autoregressive diffusion model that natively generates 4K-resolution 360Â° videos. By decomposing videos into cubemap representations with six faces, CubeComposer autoregressively synthesizes content in a well-planned spatio-temporal order, reducing memory demands while enabling high-resolution output. Specifically, to address challenges in multi-dimensional autoregression, we propose: (1) a spatio-temporal autoregressive strategy that orchestrates 360Â° video generation across cube faces and time windows for coherent synthesis; (2) a cube face context management mechanism, equipped with a sparse context attention design to improve efficiency; and (3) continuity-aware techniques, including cube-aware positional encoding, padding, and blending to eliminate boundary seams. Extensive experiments on benchmark datasets demonstrate that CubeComposer outperforms state-of-the-art methods in native resolution and visual quality, supporting practical VR application scenarios. Project page: https://lg-li.github.io/project/cubecomposer",
+        "tags": [
+            "Diffusion",
+            "Super Resolution",
+            "Video Generation"
+        ]
+    },
+    {
+        "id": 9,
+        "index": 8,
+        "title": "Memex(RL): Scaling Long-Horizon LLM Agents via Indexed Experience Memory",
+        "author": [
+            "Zhenting Wang",
+            "Huancheng Chen",
+            "Jiayun Wang",
+            "Wei Wei"
+        ],
+        "pdf": "https://arxiv.org/pdf/2603.04257",
+        "abstract": "Large language model (LLM) agents are fundamentally bottlenecked by finite context windows on long-horizon tasks. As trajectories grow, retaining tool outputs and intermediate reasoning in-context quickly becomes infeasible: the working context becomes prohibitively long, eventually exceeds the context budget, and makes distant evidence harder to use even when it is still present. Existing solutions typically shorten context through truncation or running summaries, but these methods are fundamentally lossy because they compress or discard past evidence itself. We introduce Memex, an indexed experience memory mechanism that instead compresses context without discarding evidence. Memex maintains a compact working context consisting of concise structured summaries and stable indices, while storing full-fidelity underlying interactions in an external experience database under those indices. The agent can then decide when to dereference an index and recover the exact past evidence needed for the current subgoal. We optimize both write and read behaviors with our reinforcement learning framework MemexRL, using reward shaping tailored to indexed memory usage under a context budget, so the agent learns what to summarize, what to archive, how to index it, and when to retrieve it. This yields a substantially less lossy form of long-horizon memory than summary-only approaches. We further provide a theoretical analysis showing the potential of the Memex loop to preserve decision quality with bounded dereferencing while keeping effective in-context computation bounded as history grows. Empirically, on challenging long-horizon tasks, Memex agent trained with MemexRL improves task success while using a significantly smaller working context.",
+        "tags": [
+            "LLM",
+            "RL"
+        ]
+    },
+    {
+        "id": 10,
+        "index": 6,
+        "title": "AgilePruner: An Empirical Study of Attention and Diversity for Adaptive Visual Token Pruning in Large Vision-Language Models",
+        "author": [
+            "Changwoo Baek",
+            "Jouwon Song",
+            "Sohyeon Kim",
+            "Kyeongbo Kong"
+        ],
+        "pdf": "https://arxiv.org/pdf/2603.01236",
+        "abstract": "Large Vision-Language Models (LVLMs) have adopted visual token pruning strategies to mitigate substantial computational overhead incurred by extensive visual token sequences. While prior works primarily focus on either attention-based or diversity-based pruning methods, in-depth analysis of these approaches' characteristics and limitations remains largely unexplored. In this work, we conduct thorough empirical analysis using effective rank (erank) as a measure of feature diversity and attention score entropy to investigate visual token processing mechanisms and analyze the strengths and weaknesses of each approach. Our analysis reveals two insights: (1) Our erank-based quantitative analysis shows that many diversity-oriented pruning methods preserve substantially less feature diversity than intended; moreover, analysis using the CHAIR dataset reveals that the diversity they do retain is closely tied to increased hallucination frequency compared to attention-based pruning. (2) We further observe that attention-based approaches are more effective on simple images where visual evidence is concentrated, while diversity-based methods better handle complex images with distributed features. Building on these empirical insights, we show that incorporating image-aware adjustments into existing hybrid pruning strategies consistently improves their performance. We also provide a minimal instantiation of our empirical findings through a simple adaptive pruning mechanism, which achieves strong and reliable performance across standard benchmarks as well as hallucination-specific evaluations. Our project page available at https://cvsp-lab.github.io/AgilePruner.",
+        "tags": [
+            "VLM"
+        ]
+    },
+    {
+        "id": 11,
+        "index": 5,
+        "title": "$V_1$: Unifying Generation and Self-Verification for Parallel Reasoners",
+        "author": [
+            "Harman Singh",
+            "Xiuyu Li",
+            "Kusha Sareen",
+            "Monishwaran Maheswaran",
+            "Sijun Tan",
+            "Xiaoxia Wu",
+            "Junxiong Wang",
+            "Alpay Ariyak",
+            "Qingyang Wu",
+            "Samir Khaki",
+            "Rishabh Tiwari",
+            "Long Lian",
+            "Yucheng Lu",
+            "Boyi Li",
+            "Alane Suhr",
+            "Ben Athiwaratkun",
+            "Kurt Keutzer"
+        ],
+        "pdf": "https://arxiv.org/pdf/2603.04304",
+        "abstract": "Test-time scaling for complex reasoning tasks shows that leveraging inference-time compute, by methods such as independently sampling and aggregating multiple solutions, results in significantly better task outcomes. However, a critical bottleneck is verification: sampling is only effective if correct solutions can be reliably identified among candidates. While existing approaches typically evaluate candidates independently via scalar scoring, we demonstrate that models are substantially stronger at pairwise self-verification. Leveraging this insight, we introduce $V_1$, a framework that unifies generation and verification through efficient pairwise ranking. $V_1$ comprises two components: $V_1$-Infer, an uncertainty-guided algorithm using a tournament-based ranking that dynamically allocates self-verification compute to candidate pairs whose relative correctness is most uncertain; and $V_1$-PairRL, an RL framework that jointly trains a single model as both generator and pairwise self-verifier, ensuring the verifier adapts to the generator's evolving distribution. On code generation (LiveCodeBench, CodeContests, SWE-Bench) and math reasoning (AIME, HMMT) benchmarks, $V_1$-Infer improves Pass@1 by up to $10%$ over pointwise verification and outperforms recent test-time scaling methods while being significantly more efficient. Furthermore, $V_1$-PairRL achieves $7$--$9%$ test-time scaling gains over standard RL and pointwise joint training, and improves base Pass@1 by up to 8.7% over standard RL in a code-generation setting.",
+        "tags": [
+            "RL"
+        ]
+    },
+    {
+        "id": 12,
+        "index": 4,
+        "title": "RIVER: A Real-Time Interaction Benchmark for Video LLMs",
+        "author": [
+            "Yansong Shi",
+            "Qingsong Zhao",
+            "Tianxiang Jiang",
+            "Xiangyu Zeng",
+            "Yi Wang",
+            "Limin Wang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2603.03985",
+        "abstract": "The rapid advancement of multimodal large language models has demonstrated impressive capabilities, yet nearly all operate in an offline paradigm, hindering real-time interactivity. Addressing this gap, we introduce the Real-tIme Video intERaction Bench (RIVER Bench), designed for evaluating online video comprehension. RIVER Bench introduces a novel framework comprising Retrospective Memory, Live-Perception, and Proactive Anticipation tasks, closely mimicking interactive dialogues rather than responding to entire videos at once. We conducted detailed annotations using videos from diverse sources and varying lengths, and precisely defined the real-time interactive format. Evaluations across various model categories reveal that while offline models perform well in single question-answering tasks, they struggle with real-time processing. Addressing the limitations of existing models in online video interaction, especially their deficiencies in long-term memory and future perception, we proposed a general improvement method that enables models to interact with users more flexibly in real time. We believe this work will significantly advance the development of real-time interactive video understanding models and inspire future research in this emerging field. Datasets and code are publicly available at https://github.com/OpenGVLab/RIVER.",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 13,
+        "index": 4,
+        "title": "InfinityStory: Unlimited Video Generation with World Consistency and Character-Aware Shot Transitions",
+        "author": [
+            "Mohamed Elmoghany",
+            "Liangbing Zhao",
+            "Xiaoqian Shen",
+            "Subhojyoti Mukherjee",
+            "Yang Zhou",
+            "Gang Wu",
+            "Viet Dac Lai",
+            "Seunghyun Yoon",
+            "Ryan Rossi",
+            "Abdullah Rashwan",
+            "Puneet Mathur",
+            "Varun Manjunatha",
+            "Daksh Dangi",
+            "Chien Nguyen",
+            "Nedim Lipka",
+            "Trung Bui",
+            "Krishna Kumar Singh",
+            "Ruiyi Zhang",
+            "Xiaolei Huang",
+            "Jaemin Cho",
+            "Yu Wang",
+            "Namyong Park",
+            "Zhengzhong Tu",
+            "Hongjie Chen",
+            "Hoda Eldardiry",
+            "Nesreen Ahmed",
+            "Thien Nguyen",
+            "Dinesh Manocha",
+            "Mohamed Elhoseiny",
+            "Franck Dernoncourt"
+        ],
+        "pdf": "https://arxiv.org/pdf/2603.03646",
+        "abstract": "Generating long-form storytelling videos with consistent visual narratives remains a significant challenge in video synthesis. We present a novel framework, dataset, and a model that address three critical limitations: background consistency across shots, seamless multi-subject shot-to-shot transitions, and scalability to hour-long narratives. Our approach introduces a background-consistent generation pipeline that maintains visual coherence across scenes while preserving character identity and spatial relationships. We further propose a transition-aware video synthesis module that generates smooth shot transitions for complex scenarios involving multiple subjects entering or exiting frames, going beyond the single-subject limitations of prior work. To support this, we contribute with a synthetic dataset of 10,000 multi-subject transition sequences covering underrepresented dynamic scene compositions. On VBench, InfinityStory achieves the highest Background Consistency (88.94), highest Subject Consistency (82.11), and the best overall average rank (2.80), showing improved stability, smoother transitions, and better temporal coherence.",
+        "tags": [
+            "Video Generation"
+        ]
+    },
+    {
+        "id": 14,
+        "index": 3,
+        "title": "SWE-CI: Evaluating Agent Capabilities in Maintaining Codebases via Continuous Integration",
+        "author": [
+            "Jialong Chen",
+            "Xander Xu",
+            "Hu Wei",
+            "Chuan Chen",
+            "Bing Zhao"
+        ],
+        "pdf": "https://arxiv.org/pdf/2603.03823",
+        "abstract": "Large language model (LLM)-powered agents have demonstrated strong capabilities in automating software engineering tasks such as static bug fixing, as evidenced by benchmarks like SWE-bench. However, in the real world, the development of mature software is typically predicated on complex requirement changes and long-term feature iterations -- a process that static, one-shot repair paradigms fail to capture. To bridge this gap, we propose \\textbf{SWE-CI}, the first repository-level benchmark built upon the Continuous Integration loop, aiming to shift the evaluation paradigm for code generation from static, short-term \\textit{functional correctness} toward dynamic, long-term \\textit{maintainability}. The benchmark comprises 100 tasks, each corresponding on average to an evolution history spanning 233 days and 71 consecutive commits in a real-world code repository. SWE-CI requires agents to systematically resolve these tasks through dozens of rounds of analysis and coding iterations. SWE-CI provides valuable insights into how well agents can sustain code quality throughout long-term evolution.",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 15,
+        "index": 2,
+        "title": "MUSE: A Run-Centric Platform for Multimodal Unified Safety Evaluation of Large Language Models",
+        "author": [
+            "Zhongxi Wang",
+            "Yueqian Lin",
+            "Jingyang Zhang",
+            "Hai Helen Li",
+            "Yiran Chen"
+        ],
+        "pdf": "https://arxiv.org/pdf/2603.02482",
+        "abstract": "Safety evaluation and red-teaming of large language models remain predominantly text-centric, and existing frameworks lack the infrastructure to systematically test whether alignment generalizes to audio, image, and video inputs. We present MUSE (Multimodal Unified Safety Evaluation), an open-source, run-centric platform that integrates automatic cross-modal payload generation, three multi-turn attack algorithms (Crescendo, PAIR, Violent Durian), provider-agnostic model routing, and an LLM judge with a five-level safety taxonomy into a single browser-based system. A dual-metric framework distinguishes hard Attack Success Rate (Compliance only) from soft ASR (including Partial Compliance), capturing partial information leakage that binary metrics miss. To probe whether alignment generalizes across modality boundaries, we introduce Inter-Turn Modality Switching (ITMS), which augments multi-turn attacks with per-turn modality rotation. Experiments across six multimodal LLMs from four providers show that multi-turn strategies can achieve up to 90-100% ASR against models with near-perfect single-turn refusal. ITMS does not uniformly raise final ASR on already-saturated baselines, but accelerates convergence by destabilizing early-turn defenses, and ablation reveals that the direction of modality effects is model-family-specific rather than universal, underscoring the need for provider-aware cross-modal safety testing.",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 16,
+        "index": 1,
+        "title": "EmbodiedSplat: Online Feed-Forward Semantic 3DGS for Open-Vocabulary 3D Scene Understanding",
+        "author": [
+            "Seungjun Lee",
+            "Zihan Wang",
+            "Yunsong Wang",
+            "Gim Hee Lee"
+        ],
+        "pdf": "https://arxiv.org/pdf/2603.04254",
+        "abstract": "Understanding a 3D scene immediately with its exploration is essential for embodied tasks, where an agent must construct and comprehend the 3D scene in an online and nearly real-time manner. In this study, we propose EmbodiedSplat, an online feed-forward 3DGS for open-vocabulary scene understanding that enables simultaneous online 3D reconstruction and 3D semantic understanding from the streaming images. Unlike existing open-vocabulary 3DGS methods which are typically restricted to either offline or per-scene optimization setting, our objectives are two-fold: 1) Reconstructs the semantic-embedded 3DGS of the entire scene from over 300 streaming images in an online manner. 2) Highly generalizable to novel scenes with feed-forward design and supports nearly real-time 3D semantic reconstruction when combined with real-time 2D models. To achieve these objectives, we propose an Online Sparse Coefficients Field with a CLIP Global Codebook where it binds the 2D CLIP embeddings to each 3D Gaussian while minimizing memory consumption and preserving the full semantic generalizability of CLIP. Furthermore, we generate 3D geometric-aware CLIP features by aggregating the partial point cloud of 3DGS through 3D U-Net to compensate the 3D geometric prior to 2D-oriented language embeddings. Extensive experiments on diverse indoor datasets, including ScanNet, ScanNet++, and Replica, demonstrate both the effectiveness and efficiency of our method. Check out our project page in https://0nandon.github.io/EmbodiedSplat/.",
+        "tags": [
+            "3D",
+            "CLIP"
+        ]
+    },
+    {
+        "id": 17,
+        "index": 1,
+        "title": "BeamPERL: Parameter-Efficient RL with Verifiable Rewards Specializes Compact LLMs for Structured Beam Mechanics Reasoning",
+        "author": [
+            "Tarjei Paule Hage",
+            "Markus J. Buehler"
+        ],
+        "pdf": "https://arxiv.org/pdf/2603.04124",
+        "abstract": "Can reinforcement learning with hard, verifiable rewards teach a compact language model to reason about physics, or does it primarily learn to pattern-match toward correct answers? We study this question by training a 1.5B-parameter reasoning model on beam statics, a classic engineering problem, using parameter-efficient RLVR with binary correctness rewards from symbolic solvers, without teacher-generated reasoning traces. The best BeamPERL checkpoint achieves a 66.7% improvement in Pass@1 over the base model. However, the learned competence is anisotropic: the model generalizes compositionally (more loads) but fails under topological shifts (moved supports) that require the same equilibrium equations. Intermediate checkpoints yield the strongest reasoning, while continued optimization degrades robustness while maintaining reward. These findings reveal a key limitation of outcome-level alignment: reinforcement learning with exact physics rewards induces procedural solution templates rather than internalization of governing equations. The precision of the reward signal - even when analytically exact - does not by itself guarantee transferable physical reasoning. Our results suggest that verifiable rewards may need to be paired with structured reasoning scaffolding to move beyond template matching toward robust scientific reasoning.",
+        "tags": [
+            "LLM",
+            "RL"
+        ]
+    },
+    {
+        "id": 18,
+        "index": 1,
+        "title": "MIBURI: Towards Expressive Interactive Gesture Synthesis",
+        "author": [
+            "M. Hamza Mughal",
+            "Rishabh Dabral",
+            "Vera Demberg",
+            "Christian Theobalt"
+        ],
+        "pdf": "https://arxiv.org/pdf/2603.03282",
+        "abstract": "Embodied Conversational Agents (ECAs) aim to emulate human face-to-face interaction through speech, gestures, and facial expressions. Current large language model (LLM)-based conversational agents lack embodiment and the expressive gestures essential for natural interaction. Existing solutions for ECAs often produce rigid, low-diversity motions, that are unsuitable for human-like interaction. Alternatively, generative methods for co-speech gesture synthesis yield natural body gestures but depend on future speech context and require long run-times. To bridge this gap, we present MIBURI, the first online, causal framework for generating expressive full-body gestures and facial expressions synchronized with real-time spoken dialogue. We employ body-part aware gesture codecs that encode hierarchical motion details into multi-level discrete tokens. These tokens are then autoregressively generated by a two-dimensional causal framework conditioned on LLM-based speech-text embeddings, modeling both temporal dynamics and part-level motion hierarchy in real time. Further, we introduce auxiliary objectives to encourage expressive and diverse gestures while preventing convergence to static poses. Comparative evaluations demonstrate that our causal and real-time approach produces natural and contextually aligned gestures against recent baselines. We urge the reader to explore demo videos on https://vcai.mpi-inf.mpg.de/projects/MIBURI/.",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 19,
+        "index": 1,
+        "title": "Specificity-aware reinforcement learning for fine-grained open-world classification",
+        "author": [
+            "Samuele Angheben",
+            "Davide Berasi",
+            "Alessandro Conti",
+            "Elisa Ricci",
+            "Yiming Wang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2603.03197",
+        "abstract": "Classifying fine-grained visual concepts under open-world settings, i.e., without a predefined label set, demands models to be both accurate and specific. Recent reasoning Large Multimodal Models (LMMs) exhibit strong visual understanding capability but tend to produce overly generic predictions when performing fine-grained image classification. Our preliminary analysis reveals that models do possess the intrinsic fine-grained domain knowledge. However, promoting more specific predictions (specificity) without compromising correct ones (correctness) remains a non-trivial and understudied challenge. In this work, we investigate how to steer reasoning LMMs toward predictions that are both correct and specific. We propose a novel specificity-aware reinforcement learning framework, SpeciaRL, to fine-tune reasoning LMMs on fine-grained image classification under the open-world setting. SpeciaRL introduces a dynamic, verifier-based reward signal anchored to the best predictions within online rollouts, promoting specificity while respecting the model's capabilities to prevent incorrect predictions. Our out-of-domain experiments show that SpeciaRL delivers the best trade-off between correctness and specificity across extensive fine-grained benchmarks, surpassing existing methods and advancing open-world fine-grained image classification. Code and model are publicly available at https://github.com/s-angheben/SpeciaRL.",
+        "tags": [
+            "RL"
+        ]
+    },
+    {
+        "id": 20,
+        "index": 1,
+        "title": "GroupEnsemble: Efficient Uncertainty Estimation for DETR-based Object Detection",
+        "author": [
+            "Yutong Yang",
+            "Katarina PopoviÄ",
+            "Julian Wiederer",
+            "Markus Braun",
+            "Vasileios Belagiannis",
+            "Bin Yang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2603.01847",
+        "abstract": "Detection Transformer (DETR) and its variants show strong performance on object detection, a key task for autonomous systems. However, a critical limitation of these models is that their confidence scores only reflect semantic uncertainty, failing to capture the equally important spatial uncertainty. This results in an incomplete assessment of the detection reliability. On the other hand, Deep Ensembles can tackle this by providing high-quality spatial uncertainty estimates. However, their immense memory consumption makes them impractical for real-world applications. A cheaper alternative, Monte Carlo (MC) Dropout, suffers from high latency due to the need of multiple forward passes during inference to estimate uncertainty.\nTo address these limitations, we introduce GroupEnsemble, an efficient and effective uncertainty estimation method for DETR-like models. GroupEnsemble simultaneously predicts multiple individual detection sets by feeding additional diverse groups of object queries to the transformer decoder during inference. Each query group is transformed by the shared decoder in isolation and predicts a complete detection set for the same input. An attention mask is applied to the decoder to prevent inter-group query interactions, ensuring each group detects independently to achieve reliable ensemble-based uncertainty estimation. By leveraging the decoder's inherent parallelism, GroupEnsemble efficiently estimates uncertainty in a single forward pass without sequential repetition. We validated our method under autonomous driving scenes and common daily scenes using the Cityscapes and COCO datasets, respectively. The results show that a hybrid approach combining MC-Dropout and GroupEnsemble outperforms Deep Ensembles on several metrics at a fraction of the cost. The code is available at https://github.com/yutongy98/GroupEnsemble.",
+        "tags": [
+            "Detection",
+            "Transformer"
+        ]
+    },
+    {
+        "id": 21,
+        "index": 0,
+        "title": "HDINO: A Concise and Efficient Open-Vocabulary Detector",
+        "author": [
+            "Hao Zhang",
+            "Yiqun Wang",
+            "Qinran Lin",
+            "Runze Fan",
+            "Yong Li"
+        ],
+        "pdf": "https://arxiv.org/pdf/2603.02924",
+        "abstract": "Despite the growing interest in open-vocabulary object detection in recent years, most existing methods rely heavily on manually curated fine-grained training datasets as well as resource-intensive layer-wise cross-modal feature extraction. In this paper, we propose HDINO, a concise yet efficient open-vocabulary object detector that eliminates the dependence on these components. Specifically, we propose a two-stage training strategy built upon the transformer-based DINO model. In the first stage, noisy samples are treated as additional positive object instances to construct a One-to-Many Semantic Alignment Mechanism(O2M) between the visual and textual modalities, thereby facilitating semantic alignment. A Difficulty Weighted Classification Loss (DWCL) is also designed based on initial detection difficulty to mine hard examples and further improve model performance. In the second stage, a lightweight feature fusion module is applied to the aligned representations to enhance sensitivity to linguistic semantics. Under the Swin Transformer-T setting, HDINO-T achieves \\textbf{49.2} mAP on COCO using 2.2M training images from two publicly available detection datasets, without any manual data curation and the use of grounding data, surpassing Grounding DINO-T and T-Rex2 by \\textbf{0.8} mAP and \\textbf{2.8} mAP, respectively, which are trained on 5.4M and 6.5M images. After fine-tuning on COCO, HDINO-T and HDINO-L further achieve \\textbf{56.4} mAP and \\textbf{59.2} mAP, highlighting the effectiveness and scalability of our approach. Code and models are available at https://github.com/HaoZ416/HDINO.",
+        "tags": [
+            "Detection",
+            "Transformer"
+        ]
+    }
+]
