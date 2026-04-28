@@ -1,0 +1,62 @@
+[000002] 2026-04-28 15:10:49 - DEBUG - /home/runner/work/ghapi-action/ghapi-action/arxiv/main.py:10 - running /home/runner/work/ghapi-action/ghapi-action/arxiv/xhs.py...
+[000007] 2026-04-28 15:10:49 - DEBUG - /home/runner/work/ghapi-action/ghapi-action/arxiv/main.py:10 - running /home/runner/work/ghapi-action/ghapi-action/arxiv/arxiv.py...
+[000028] 2026-04-28 15:10:49 - DEBUG - /home/runner/work/ghapi-action/ghapi-action/arxiv/main.py:10 - running /home/runner/work/ghapi-action/ghapi-action/arxiv/hf_papers.py...
+[000473] 2026-04-28 15:10:50 - DEBUG - /home/runner/work/ghapi-action/ghapi-action/arxiv/arxiv.py:25 - arxiv info has already been updated!
+[034943] 2026-04-28 15:11:24 - ERROR - /home/runner/work/ghapi-action/ghapi-action/arxiv/main.py:13 - running /home/runner/work/ghapi-action/ghapi-action/arxiv/xhs.py failed!
+Traceback (most recent call last):
+  File "/home/runner/work/ghapi-action/ghapi-action/arxiv/main.py", line 11, in task
+    runpy.run_path(fn)
+  File "<frozen runpy>", line 287, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/runner/work/ghapi-action/ghapi-action/arxiv/xhs.py", line 231, in <module>
+    asyncio.run(amain())
+  File "/opt/hostedtoolcache/Python/3.12.13/x64/lib/python3.12/asyncio/runners.py", line 195, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.13/x64/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.13/x64/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/home/runner/work/ghapi-action/ghapi-action/arxiv/xhs.py", line 226, in amain
+    await asyncio.to_thread(main)
+  File "/opt/hostedtoolcache/Python/3.12.13/x64/lib/python3.12/asyncio/threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.13/x64/lib/python3.12/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/ghapi-action/ghapi-action/arxiv/xhs.py", line 220, in main
+    publish_hf_paper(p)
+  File "/home/runner/work/ghapi-action/ghapi-action/arxiv/xhs.py", line 192, in publish_hf_paper
+    box = upload_image_btn.bounding_box()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.13/x64/lib/python3.12/site-packages/playwright/sync_api/_generated.py", line 15479, in bounding_box
+    self._sync(self._impl_obj.bounding_box(timeout=timeout))
+  File "/opt/hostedtoolcache/Python/3.12.13/x64/lib/python3.12/site-packages/playwright/_impl/_sync_base.py", line 115, in _sync
+    return task.result()
+           ^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.13/x64/lib/python3.12/site-packages/playwright/_impl/_locator.py", line 132, in bounding_box
+    return await self._with_element(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.13/x64/lib/python3.12/site-packages/playwright/_impl/_locator.py", line 113, in _with_element
+    handle = await self.element_handle(timeout=timeout)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.13/x64/lib/python3.12/site-packages/playwright/_impl/_locator.py", line 319, in element_handle
+    handle = await self._frame.wait_for_selector(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.13/x64/lib/python3.12/site-packages/playwright/_impl/_frame.py", line 369, in wait_for_selector
+    await self._channel.send(
+  File "/opt/hostedtoolcache/Python/3.12.13/x64/lib/python3.12/site-packages/playwright/_impl/_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.13/x64/lib/python3.12/site-packages/playwright/_impl/_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TimeoutError: Locator.bounding_box: Timeout 30000ms exceeded.
+Call log:
+  - waiting for get_by_text("上传图文").last
+    - waiting for" https://creator.xiaohongshu.com/login?source=&redirectReason=401&lastUrl=%252Fcreator%252Fhome" navigation to finish...
+    - navigated to "https://creator.xiaohongshu.com/login?source=&redirectReason=401&lastUrl=%252Fcreator%252Fhome"
+

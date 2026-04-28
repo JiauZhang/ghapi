@@ -1,0 +1,647 @@
+[
+    {
+        "id": 1,
+        "index": 197,
+        "title": "Video-MME-v2: Towards the Next Stage in Benchmarks for Comprehensive Video Understanding",
+        "author": [
+            "Chaoyou Fu",
+            "Haozhi Yuan",
+            "Yuhao Dong",
+            "Yi-Fan Zhang",
+            "Yunhang Shen",
+            "Xiaoxing Hu",
+            "Xueying Li",
+            "Jinsen Su",
+            "Chengwu Long",
+            "Xiaoyao Xie",
+            "Yongkang Xie",
+            "Xiawu Zheng",
+            "Xue Yang",
+            "Haoyu Cao",
+            "Yunsheng Wu",
+            "Ziwei Liu",
+            "Xing Sun",
+            "Caifeng Shan",
+            "Ran He"
+        ],
+        "pdf": "https://arxiv.org/pdf/2604.05015",
+        "abstract": "With the rapid advancement of video understanding, existing benchmarks are becoming increasingly saturated, exposing a critical discrepancy between inflated leaderboard scores and real-world model capabilities. To address this widening gap, we introduce Video-MME-v2, a comprehensive benchmark designed to rigorously evaluate the robustness and faithfulness of video understanding. To systematically evaluate model capabilities, we design a \\textbf{progressive tri-level hierarchy} that incrementally increases the complexity of video comprehension, ranging from multi-point visual information aggregation, to temporal dynamics modeling, and ultimately to complex multimodal reasoning. Besides, in contrast to conventional per-question accuracy, we propose a \\textbf{group-based non-linear evaluation} strategy that enforces both consistency across related queries and coherence in multi-step reasoning. It penalizes fragmented or guess-based correctness and assigns credit only to answers supported by valid reasoning. To guarantee data quality, Video-MME-v2 is constructed through a rigorously controlled human annotation pipeline, involving 12 annotators and 50 independent reviewers. Backed by \\textbf{3,300 human-hours} and up to \\textbf{5 rounds} of quality assurance, Video-MME-v2 aims to serve as one of the most authoritative video benchmarks. Extensive experiments reveal a substantial gap between current best model Gemini-3-Pro and human experts, and uncover a clear hierarchical bottleneck where errors in visual information aggregation and temporal modeling propagate to limit high-level reasoning. We further find that thinking-based reasoning is highly dependent on textual cues, improving performance with subtitles but sometimes degrading it in purely visual settings. By exposing these limitations, Video-MME-v2 establishes a demanding new testbed for the development of next-generation video MLLMs.",
+        "tags": []
+    },
+    {
+        "id": 2,
+        "index": 95,
+        "title": "Claw-Eval: Toward Trustworthy Evaluation of Autonomous Agents",
+        "author": [
+            "Bowen Ye",
+            "Rang Li",
+            "Qibin Yang",
+            "Yuanxin Liu",
+            "Linli Yao",
+            "Hanglong Lv",
+            "Zhihui Xie",
+            "Chenxin An",
+            "Lei Li",
+            "Lingpeng Kong",
+            "Qi Liu",
+            "Zhifang Sui",
+            "Tong Yang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2604.06132",
+        "abstract": "Large language models are increasingly deployed as autonomous agents executing multi-step workflows in real-world software environments. However, existing agent benchmarks suffer from three critical limitations: (1) trajectory-opaque grading that checks only final outputs, (2) underspecified safety and robustness evaluation, and (3) narrow modality coverage and interaction paradigms. We introduce Claw-Eval, an end-to-end evaluation suite addressing all three gaps. It comprises 300 human-verified tasks spanning 9 categories across three groups (general service orchestration, multimodal perception and generation, and multi-turn professional dialogue). Every agent action is recorded through three independent evidence channels (execution traces, audit logs, and environment snapshots), enabling trajectory-aware grading over 2,159 fine-grained rubric items. The scoring protocol evaluates Completion, Safety, and Robustness, reporting Average Score, Pass@k, and Pass^k across three trials to distinguish genuine capability from lucky outcomes. Experiments on 14 frontier models reveal that: (1) trajectory-opaque evaluation is systematically unreliable, missing 44% of safety violations and 13% of robustness failures that our hybrid pipeline catches; (2) controlled error injection primarily degrades consistency rather than peak capability, with Pass^3 dropping up to 24% while Pass@3 remains stable; (3) multimodal performance varies sharply, with most models performing poorer on video than on document or image, and no single model dominating across all modalities. Beyond benchmarking, Claw-Eval highlights actionable directions for agent development, shedding light on what it takes to build agents that are not only capable but reliably deployable.",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 3,
+        "index": 55,
+        "title": "Learning to Retrieve from Agent Trajectories",
+        "author": [
+            "Yuqi Zhou",
+            "Sunhao Dai",
+            "Changle Qu",
+            "Liang Pang",
+            "Jun Xu",
+            "Ji-Rong Wen"
+        ],
+        "pdf": "https://arxiv.org/pdf/2604.04949",
+        "abstract": "Information retrieval (IR) systems have traditionally been designed and trained for human users, with learning-to-rank methods relying heavily on large-scale human interaction logs such as clicks and dwell time. With the rapid emergence of large language model (LLM) powered search agents, however, retrieval is increasingly consumed by agents rather than human beings, and is embedded as a core component within multi-turn reasoning and action loops. In this setting, retrieval models trained under human-centric assumptions exhibit a fundamental mismatch with the way agents issue queries and consume results. In this work, we argue that retrieval models for agentic search should be trained directly from agent interaction data. We introduce learning to retrieve from agent trajectories as a new training paradigm, where supervision is derived from multi-step agent interactions. Through a systematic analysis of search agent trajectories, we identify key behavioral signals that reveal document utility, including browsing actions, unbrowsed rejections, and post-browse reasoning traces. Guided by these insights, we propose LRAT, a simple yet effective framework that mines high-quality retrieval supervision from agent trajectories and incorporates relevance intensity through weighted optimization. Extensive experiments on both in-domain and out-of-domain deep research benchmarks demonstrate that retrievers trained with LRAT consistently improve evidence recall, end-to-end task success, and execution efficiency across diverse agent architectures and scales. Our results highlight agent trajectories as a practical and scalable supervision source, pointing to a promising direction for retrieval in the era of agentic search.",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 4,
+        "index": 46,
+        "title": "ACES: Who Tests the Tests? Leave-One-Out AUC Consistency for Code Generation",
+        "author": [
+            "Hui Sun",
+            "Yun-Ji Zhang",
+            "Zheng Xie",
+            "Ren-Biao Liu",
+            "Yali Du",
+            "Xin-Ye Li",
+            "Ming Li"
+        ],
+        "pdf": "https://arxiv.org/pdf/2604.03922",
+        "abstract": "Selecting LLM-generated code candidates using LLM-generated tests is challenging because the tests themselves may be incorrect. Existing methods either treat all tests equally or rely on ad-hoc heuristics to filter unreliable tests. Yet determining test correctness requires knowing which codes are correct, creating a \\emph{circular dependency}. Our key insight is that we need not determine test correctness at all: \\emph{test votes should rank, not merely count}. What matters is not how many codes pass a test, but whether the test can \\emph{distinguish} correct from incorrect code. We break the circular dependency via leave-one-out evaluation: hold out one test, rank codes by their aggregate scores on all remaining tests, and measure whether the held-out test's pass/fail pattern agrees with this ranking. We formalize this agreement as the leave-one-out AUC~(LOO-AUC) and prove that the expected LOO-AUC is proportional to each test's ability to separate correct code from incorrect code. Building on this, we propose \\textbf{ACES}~(\\textbf{A}UC \\textbf{C}onsist\\textbf{E}ncy \\textbf{S}coring) with two complementary variants: ACES-C provides closed-form weights that provably approximate the oracle in expectation under a mild assumption on average test quality; ACES-O drops this assumption and iteratively optimizes a differentiable LOO-AUC objective. Both operate solely on the binary pass matrix with negligible overhead, and achieve state-of-the-art Pass@$k$ on multiple code generation benchmarks.",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 5,
+        "index": 37,
+        "title": "GBQA: A Game Benchmark for Evaluating LLMs as Quality Assurance Engineers",
+        "author": [
+            "Shufan Jiang",
+            "Chios Chen",
+            "Zhiyang Chen"
+        ],
+        "pdf": "https://arxiv.org/pdf/2604.02648",
+        "abstract": "The autonomous discovery of bugs remains a significant challenge in modern software development. Compared to code generation, the complexity of dynamic runtime environments makes bug discovery considerably harder for large language models (LLMs). In this paper, we take game development as a representative domain and introduce the Game Benchmark for Quality Assurance (GBQA), a benchmark containing 30 games and 124 human-verified bugs across three difficulty levels, to evaluate whether LLMs can autonomously detect software bugs. The benchmark is constructed using a multi-agent system that develops games and injects bugs in a scalable manner, with human experts in the loop to ensure correctness. Moreover, we provide a baseline interactive agent equipped with a multi-round ReAct loop and a memory mechanism, enabling long-horizon exploration of game environments for bug detection across different LLMs. Extensive experiments on frontier LLMs demonstrate that autonomous bug discovery remains highly challenging: the best-performing model, Claude-4.6-Opus in thinking mode, identifies only 48.39% of the verified bugs. We believe GBQA provides an adequate testbed and evaluation criterion, and that further progress on it will help close the gap in autonomous software engineering.",
+        "tags": [
+            "Detection",
+            "LLM"
+        ]
+    },
+    {
+        "id": 6,
+        "index": 32,
+        "title": "ThinkTwice: Jointly Optimizing Large Language Models for Reasoning and Self-Refinement",
+        "author": [
+            "Difan Jiao",
+            "Qianfeng Wen",
+            "Blair Yang",
+            "Zhenwei Tang",
+            "Ashton Anderson"
+        ],
+        "pdf": "https://arxiv.org/pdf/2604.01591",
+        "abstract": "We introduce ThinkTwice, a simple two-phase framework that jointly optimizes LLMs to solve reasoning problems and refine the answers, based on Group Relative Policy Optimization (GRPO). In each pair of training steps, ThinkTwice first optimizes the model on solving reasoning problems, then optimizes it on refining its own solutions to the same problems, using the same binary correctness reward in both phases without correctness signals or critique annotations. Across five mathematical reasoning benchmarks and two model families including Qwen3-4B and Olmo3-7B, ThinkTwice substantially improves both reasoning and refinement performance over competitive online policy optimization baselines. Specifically, on Qwen3-4B, ThinkTwice outperforms GRPO on AIME by 5 percentage points before refinement and by 11.5 points after one self-refinement step, measured by pass@4. Analysis of the training dynamics of ThinkTwice reveals an implicit rectify-then-fortify curriculum: refinement predominantly corrects errors early in training and naturally shifts toward preserving already-correct solutions as the model improves, yielding a more rectified reward signal. Our work establishes joint training of reasoning and self-refinement as a principled and effective methodology for RLVR.",
+        "tags": [
+            "GRPO",
+            "LLM"
+        ]
+    },
+    {
+        "id": 7,
+        "index": 30,
+        "title": "Vanast: Virtual Try-On with Human Image Animation via Synthetic Triplet Supervision",
+        "author": [
+            "Hyunsoo Cha",
+            "Wonjung Woo",
+            "Byungjun Kim",
+            "Hanbyul Joo"
+        ],
+        "pdf": "https://arxiv.org/pdf/2604.04934",
+        "abstract": "We present Vanast, a unified framework that generates garment-transferred human animation videos directly from a single human image, garment images, and a pose guidance video. Conventional two-stage pipelines treat image-based virtual try-on and pose-driven animation as separate processes, which often results in identity drift, garment distortion, and front-back inconsistency. Our model addresses these issues by performing the entire process in a single unified step to achieve coherent synthesis. To enable this setting, we construct large-scale triplet supervision. Our data generation pipeline includes generating identity-preserving human images in alternative outfits that differ from garment catalog images, capturing full upper and lower garment triplets to overcome the single-garment-posed video pair limitation, and assembling diverse in-the-wild triplets without requiring garment catalog images. We further introduce a Dual Module architecture for video diffusion transformers to stabilize training, preserve pretrained generative quality, and improve garment accuracy, pose adherence, and identity preservation while supporting zero-shot garment interpolation. Together, these contributions allow Vanast to produce high-fidelity, identity-consistent animation across a wide range of garment types.",
+        "tags": [
+            "Diffusion",
+            "Virtual Try-On"
+        ]
+    },
+    {
+        "id": 8,
+        "index": 29,
+        "title": "Beyond Accuracy: Unveiling Inefficiency Patterns in Tool-Integrated Reasoning",
+        "author": [
+            "Qisheng Su",
+            "Shiting Huang",
+            "Zhen Fang",
+            "Ziyan Chen",
+            "Zehui Chen",
+            "Feng Zhao"
+        ],
+        "pdf": "https://arxiv.org/pdf/2604.05404",
+        "abstract": "In real-world Tool-Integrated Reasoning (TIR) scenarios, where LLMs interleave reasoning with external tool calls, a major source of inefficiency is that the toolcalls create pauses between LLM requests and cause KV-Cache eviction, forcing recomputation. Also, the long, unfiltered response returned by external tools inflates the KV-Cache, so each decode step spends more time loading the growing cache and thus becomes steadily slower as context length increases. However, existing efficiency metrics like token counts and toolcall counts fail to capture the real model inference latency. To address this, we introduce PTE (Prefill Token Equivalents), a hardware-aware TIR-efficiency metric that unifies internal reasoning and external tool-use costs while explicitly accounting for non-reusable KV-Cache and long-tool-response scenarios. Validation in a high-concurrency industrial setting indicates that PTE aligns significantly better with wall-clock latency than standard token counts, while maintaining consistent efficiency rankings across diverse hardware profiles. We conduct extensive experiments across five TIR benchmarks, quantify their PTE costs, and identify four inefficiency patterns that appear in TIR. We also discover that trajectories with higher PTE costs tend to have lower reasoning correctness, indicating that simply using more tools does not improve the quality of the answer.",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 9,
+        "index": 24,
+        "title": "Watch Before You Answer: Learning from Visually Grounded Post-Training",
+        "author": [
+            "Yuxuan Zhang",
+            "EunJeong Hwang",
+            "Huaisong Zhang",
+            "Penghui Du",
+            "Yiming Jia",
+            "Dongfu Jiang",
+            "Xuan He",
+            "Shenhui Zhang",
+            "Ping Nie",
+            "Peter West",
+            "Kelsey R. Allen"
+        ],
+        "pdf": "https://arxiv.org/pdf/2604.05117",
+        "abstract": "It is critical for vision-language models (VLMs) to comprehensively understand visual, temporal, and textual cues. However, despite rapid progress in multimodal modeling, video understanding performance still lags behind text-based reasoning. In this work, we find that progress is even worse than previously assumed: commonly reported long video understanding benchmarks contain 40-60% of questions that can be answered using text cues alone. Furthermore, we find that these issues are also pervasive in widely used post-training datasets, potentially undercutting the ability of post-training to improve VLM video understanding performance. Guided by this observation, we introduce VidGround as a simple yet effective solution: using only the actual visually grounded questions without any linguistic biases for post-training. When used in tandem with RL-based post-training algorithms, this simple technique improves performance by up to 6.2 points relative to using the full dataset, while using only 69.1% of the original post-training data. Moreover, we show that data curation with a simple post-training algorithm outperforms several more complex post-training techniques, highlighting that data quality is a major bottleneck for improving video understanding in VLMs. These results underscore the importance of curating post-training data and evaluation benchmarks that truly require visual grounding to advance the development of more capable VLMs. Project page: http://vidground.etuagi.com.",
+        "tags": [
+            "RL",
+            "VLM"
+        ]
+    },
+    {
+        "id": 10,
+        "index": 24,
+        "title": "MegaTrain: Full Precision Training of 100B+ Parameter Large Language Models on a Single GPU",
+        "author": [
+            "Zhengqing Yuan",
+            "Hanchi Sun",
+            "Lichao Sun",
+            "Yanfang Ye"
+        ],
+        "pdf": "https://arxiv.org/pdf/2604.05091",
+        "abstract": "We present MegaTrain, a memory-centric system that efficiently trains 100B+ parameter large language models at full precision on a single GPU. Unlike traditional GPU-centric systems, MegaTrain stores parameters and optimizer states in host memory (CPU memory) and treats GPUs as transient compute engines. For each layer, we stream parameters in and compute gradients out, minimizing persistent device state. To battle the CPU-GPU bandwidth bottleneck, we adopt two key optimizations. 1) We introduce a pipelined double-buffered execution engine that overlaps parameter prefetching, computation, and gradient offloading across multiple CUDA streams, enabling continuous GPU execution. 2) We replace persistent autograd graphs with stateless layer templates, binding weights dynamically as they stream in, eliminating persistent graph metadata while providing flexibility in scheduling. On a single H200 GPU with 1.5TB host memory, MegaTrain reliably trains models up to 120B parameters. It also achieves 1.84$\\times$ the training throughput of DeepSpeed ZeRO-3 with CPU offloading when training 14B models. MegaTrain also enables 7B model training with 512k token context on a single GH200.",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 11,
+        "index": 24,
+        "title": "How Well Do Agentic Skills Work in the Wild: Benchmarking LLM Skill Usage in Realistic Settings",
+        "author": [
+            "Yujian Liu",
+            "Jiabao Ji",
+            "Li An",
+            "Tommi Jaakkola",
+            "Yang Zhang",
+            "Shiyu Chang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2604.04323",
+        "abstract": "Agent skills, which are reusable, domain-specific knowledge artifacts, have become a popular mechanism for extending LLM-based agents, yet formally benchmarking skill usage performance remains scarce. Existing skill benchmarking efforts focus on overly idealized conditions, where LLMs are directly provided with hand-crafted, narrowly-tailored task-specific skills for each task, whereas in many realistic settings, the LLM agent may have to search for and select relevant skills on its own, and even the closest matching skills may not be well-tailored for the task. In this paper, we conduct the first comprehensive study of skill utility under progressively challenging realistic settings, where agents must retrieve skills from a large collection of 34k real-world skills and may not have access to any hand-curated skills. Our findings reveal that the benefits of skills are fragile: performance gains degrade consistently as settings become more realistic, with pass rates approaching no-skill baselines in the most challenging scenarios. To narrow this gap, we study skill refinement strategies, including query-specific and query-agnostic approaches, and we show that query-specific refinement substantially recovers lost performance when the initial skills are of reasonable relevance and quality. We further demonstrate the generality of retrieval and refinement on Terminal-Bench 2.0, where they improve the pass rate of Claude Opus 4.6 from 57.7% to 65.5%. Our results, consistent across multiple models, highlight both the promise and the current limitations of skills for LLM-based agents. Our code is available at https://github.com/UCSB-NLP-Chang/Skill-Usage.",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 12,
+        "index": 20,
+        "title": "Paper Circle: An Open-source Multi-agent Research Discovery and Analysis Framework",
+        "author": [
+            "Komal Kumar",
+            "Aman Chadha",
+            "Salman Khan",
+            "Fahad Shahbaz Khan",
+            "Hisham Cholakkal"
+        ],
+        "pdf": "https://arxiv.org/pdf/2604.06170",
+        "abstract": "The rapid growth of scientific literature has made it increasingly difficult for researchers to efficiently discover, evaluate, and synthesize relevant work. Recent advances in multi-agent large language models (LLMs) have demonstrated strong potential for understanding user intent and are being trained to utilize various tools. In this paper, we introduce Paper Circle, a multi-agent research discovery and analysis system designed to reduce the effort required to find, assess, organize, and understand academic literature. The system comprises two complementary pipelines: (1) a Discovery Pipeline that integrates offline and online retrieval from multiple sources, multi-criteria scoring, diversity-aware ranking, and structured outputs; and (2) an Analysis Pipeline that transforms individual papers into structured knowledge graphs with typed nodes such as concepts, methods, experiments, and figures, enabling graph-aware question answering and coverage verification. Both pipelines are implemented within a coder LLM-based multi-agent orchestration framework and produce fully reproducible, synchronized outputs including JSON, CSV, BibTeX, Markdown, and HTML at each agent step. This paper describes the system architecture, agent roles, retrieval and scoring methods, knowledge graph schema, and evaluation interfaces that together form the Paper Circle research workflow. We benchmark Paper Circle on both paper retrieval and paper review generation, reporting hit rate, MRR, and Recall at K. Results show consistent improvements with stronger agent models. We have publicly released the website at https://papercircle.vercel.app/ and the code at https://github.com/MAXNORM8650/papercircle.",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 13,
+        "index": 20,
+        "title": "General Multimodal Protein Design Enables DNA-Encoding of Chemistry",
+        "author": [
+            "Jarrid Rector-Brooks",
+            "ThÃ©ophile Lambert",
+            "Marta Skreta",
+            "Daniel Roth",
+            "Yueming Long",
+            "Zi-Qi Li",
+            "Xi Zhang",
+            "Miruna Cretu",
+            "Francesca-Zhoufan Li",
+            "Tanvi Ganapathy",
+            "Emily Jin",
+            "Avishek Joey Bose",
+            "Jason Yang",
+            "Kirill Neklyudov",
+            "Yoshua Bengio",
+            "Alexander Tong",
+            "Frances H. Arnold",
+            "Cheng-Hao Liu"
+        ],
+        "pdf": "https://arxiv.org/pdf/2604.05181",
+        "abstract": "Evolution is an extraordinary engine for enzymatic diversity, yet the chemistry it has explored remains a narrow slice of what DNA can encode. Deep generative models can design new proteins that bind ligands, but none have created enzymes without pre-specifying catalytic residues. We introduce DISCO (DIffusion for Sequence-structure CO-design), a multimodal model that co-designs protein sequence and 3D structure around arbitrary biomolecules, as well as inference-time scaling methods that optimize objectives across both modalities. Conditioned solely on reactive intermediates, DISCO designs diverse heme enzymes with novel active-site geometries. These enzymes catalyze new-to-nature carbene-transfer reactions, including alkene cyclopropanation, spirocyclopropanation, B-H, and C(sp$^3$)-H insertions, with high activities exceeding those of engineered enzymes. Random mutagenesis of a selected design further confirmed that enzyme activity can be improved through directed evolution. By providing a scalable route to evolvable enzymes, DISCO broadens the potential scope of genetically encodable transformations. Code is available at https://github.com/DISCO-design/DISCO.",
+        "tags": [
+            "3D",
+            "Diffusion"
+        ]
+    },
+    {
+        "id": 14,
+        "index": 16,
+        "title": "DARE: Diffusion Large Language Models Alignment and Reinforcement Executor",
+        "author": [
+            "Jingyi Yang",
+            "Yuxian Jiang",
+            "Xuhao Hu",
+            "Shuang Cheng",
+            "Biqing Qi",
+            "Jing Shao"
+        ],
+        "pdf": "https://arxiv.org/pdf/2604.04215",
+        "abstract": "Diffusion large language models (dLLMs) are emerging as a compelling alternative to dominant autoregressive models, replacing strictly sequential token generation with iterative denoising and parallel generation dynamics. However, their open-source ecosystem remains fragmented across model families and, in particular, across post-training pipelines, where reinforcement learning objectives, rollout implementations and evaluation scripts are often released as paper-specific codebases. This fragmentation slows research iteration, raises the engineering burden of reproduction, and makes fair comparison across algorithms difficult. We present \\textbf{DARE} (\\textbf{d}LLMs \\textbf{A}lignment and \\textbf{R}einforcement \\textbf{E}xecutor), an open framework for post-training and evaluating dLLMs. Built on top of verl~\\cite{sheng2024hybridflow} and OpenCompass~\\cite{2023opencompass}, DARE unifies supervised fine-tuning, parameter-efficient fine-tuning, preference optimization, and dLLM-specific reinforcement learning under a shared execution stack for both masked and block diffusion language models. Across representative model families including LLaDA, Dream, SDAR, and LLaDA2.x, DARE provides broad algorithmic coverage, reproducible benchmark evaluation, and practical acceleration. Extensive empirical results position that DARE serves as a reusable research substrate for developing, comparing, and deploying post-training methods for current and emerging dLLMs.",
+        "tags": [
+            "Diffusion",
+            "LLM",
+            "RL"
+        ]
+    },
+    {
+        "id": 15,
+        "index": 15,
+        "title": "ClawsBench: Evaluating Capability and Safety of LLM Productivity Agents in Simulated Workspaces",
+        "author": [
+            "Xiangyi Li",
+            "Kyoung Whan Choe",
+            "Yimin Liu",
+            "Xiaokun Chen",
+            "Chujun Tao",
+            "Bingran You",
+            "Wenbo Chen",
+            "Zonglin Di",
+            "Jiankai Sun",
+            "Shenghan Zheng",
+            "Jiajun Bao",
+            "Yuanli Wang",
+            "Weixiang Yan",
+            "Yiyuan Li",
+            "Han-chung Lee"
+        ],
+        "pdf": "https://arxiv.org/pdf/2604.05172",
+        "abstract": "Large language model (LLM) agents are increasingly deployed to automate productivity tasks (e.g., email, scheduling, document management), but evaluating them on live services is risky due to potentially irreversible changes. Existing benchmarks rely on simplified environments and fail to capture realistic, stateful, multi-service workflows. We introduce ClawsBench, a benchmark for evaluating and improving LLM agents in realistic productivity settings. It includes five high-fidelity mock services (Gmail, Slack, Google Calendar, Google Docs, Google Drive) with full state management and deterministic snapshot/restore, along with 44 structured tasks covering single-service, cross-service, and safety-critical scenarios. We decompose agent scaffolding into two independent levers (domain skills that inject API knowledge via progressive disclosure, and a meta prompt that coordinates behavior across services) and vary both to measure their separate and combined effects. Experiments across 6 models, 4 agent harnesses, and 33 conditions show that with full scaffolding, agents achieve task success rates of 39-64% but exhibit unsafe action rates of 7-33%. On OpenClaw, the top five models fall within a 10 percentage-point band on task success (53-63%), with unsafe action rates from 7% to 23% and no consistent ordering between the two metrics. We identify eight recurring patterns of unsafe behavior, including multi-step sandbox escalation and silent contract modification.",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 16,
+        "index": 13,
+        "title": "In-Place Test-Time Training",
+        "author": [
+            "Guhao Feng",
+            "Shengjie Luo",
+            "Kai Hua",
+            "Ge Zhang",
+            "Di He",
+            "Wenhao Huang",
+            "Tianle Cai"
+        ],
+        "pdf": "https://arxiv.org/pdf/2604.06169",
+        "abstract": "The static ``train then deploy\" paradigm fundamentally limits Large Language Models (LLMs) from dynamically adapting their weights in response to continuous streams of new information inherent in real-world tasks. Test-Time Training (TTT) offers a compelling alternative by updating a subset of model parameters (fast weights) at inference time, yet its potential in the current LLM ecosystem is hindered by critical barriers including architectural incompatibility, computational inefficiency and misaligned fast weight objectives for language modeling. In this work, we introduce In-Place Test-Time Training (In-Place TTT), a framework that seamlessly endows LLMs with Test-Time Training ability. In-Place TTT treats the final projection matrix of the ubiquitous MLP blocks as its adaptable fast weights, enabling a ``drop-in\" enhancement for LLMs without costly retraining from scratch. Furthermore, we replace TTT's generic reconstruction objective with a tailored, theoretically-grounded objective explicitly aligned with the Next-Token-Prediction task governing autoregressive language modeling. This principled objective, combined with an efficient chunk-wise update mechanism, results in a highly scalable algorithm compatible with context parallelism. Extensive experiments validate our framework's effectiveness: as an in-place enhancement, it enables a 4B-parameter model to achieve superior performance on tasks with contexts up to 128k, and when pretrained from scratch, it consistently outperforms competitive TTT-related approaches. Ablation study results further provide deeper insights on our design choices. Collectively, our results establish In-Place TTT as a promising step towards a paradigm of continual learning in LLMs.",
+        "tags": [
+            "LLM",
+            "TTT"
+        ]
+    },
+    {
+        "id": 17,
+        "index": 12,
+        "title": "Demystifying When Pruning Works via Representation Hierarchies",
+        "author": [
+            "Shwai He",
+            "Guoheng Sun",
+            "Haichao Zhang",
+            "Yun Fu",
+            "Ang Li"
+        ],
+        "pdf": "https://arxiv.org/pdf/2603.24652",
+        "abstract": "Network pruning, which removes less important parameters or architectures, is often expected to improve efficiency while preserving performance. However, this expectation does not consistently hold across language tasks: pruned models can perform well on non-generative tasks but frequently fail in generative settings. To understand this discrepancy, we analyze network pruning from a representation-hierarchy perspective, decomposing the internal computation of language models into three sequential spaces: embedding (hidden representations), logit (pre-softmax outputs), and probability (post-softmax distributions). We find that representations in the embedding and logit spaces are largely robust to pruning-induced perturbations. However, the nonlinear transformation from logits to probabilities amplifies these deviations, which accumulate across time steps and lead to substantial degradation during generation. In contrast, the stability of the categorical-token probability subspace, together with the robustness of the embedding space, supports the effectiveness of pruning for non-generative tasks such as retrieval and multiple-choice selection. Our analysis disentangles the effects of pruning across tasks and provides practical guidance for its application. Code is available at https://github.com/CASE-Lab-UMD/Pruning-on-Representations",
+        "tags": []
+    },
+    {
+        "id": 18,
+        "index": 9,
+        "title": "MedGemma 1.5 Technical Report",
+        "author": [
+            "Andrew Sellergren",
+            "Chufan Gao",
+            "Fereshteh Mahvar",
+            "Timo Kohlberger",
+            "Fayaz Jamil",
+            "Madeleine Traverse",
+            "Alberto Tono",
+            "Bashir Sadjad",
+            "Lin Yang",
+            "Charles Lau",
+            "Liron Yatziv",
+            "Tiffany Chen",
+            "Bram Sterling",
+            "Kenneth Philbrick",
+            "Richa Tiwari",
+            "Yun Liu",
+            "Madhuram Jajoo",
+            "Chandrashekar Sankarapu",
+            "Swapnil Vispute",
+            "Harshad Purandare",
+            "Abhishek Bijay Mishra",
+            "Sam Schmidgall",
+            "Tao Tu",
+            "Anil Palepu",
+            "Chunjong Park",
+            "Tim Strother",
+            "Rahul Thapa",
+            "Yong Cheng",
+            "Preeti Singh",
+            "Kat Black",
+            "Yossi Matias",
+            "Katherine Chou",
+            "Avinatan Hassidim",
+            "Kavi Goel",
+            "Joelle Barral",
+            "Tris Warkentin",
+            "Shravya Shetty",
+            "Dale Webster",
+            "Sunny Virmani",
+            "David F. Steiner",
+            "Can Kirmizibayrak",
+            "Daniel Golden"
+        ],
+        "pdf": "https://arxiv.org/pdf/2604.05081",
+        "abstract": "We introduce MedGemma 1.5 4B, the latest model in the MedGemma collection. MedGemma 1.5 expands on MedGemma 1 by integrating additional capabilities: high-dimensional medical imaging (CT/MRI volumes and histopathology whole slide images), anatomical localization via bounding boxes, multi-timepoint chest X-ray analysis, and improved medical document understanding (lab reports, electronic health records). We detail the innovations required to enable these modalities within a single architecture, including new training data, long-context 3D volume slicing, and whole-slide pathology sampling. Compared to MedGemma 1 4B, MedGemma 1.5 4B demonstrates significant gains in these new areas, improving 3D MRI condition classification accuracy by 11% and 3D CT condition classification by 3% (absolute improvements). In whole slide pathology imaging, MedGemma 1.5 4B achieves a 47% macro F1 gain. Additionally, it improves anatomical localization with a 35% increase in Intersection over Union on chest X-rays and achieves a 4% macro accuracy for longitudinal (multi-timepoint) chest x-ray analysis. Beyond its improved multimodal performance over MedGemma 1, MedGemma 1.5 improves on text-based clinical knowledge and reasoning, improving by 5% on MedQA accuracy and 22% on EHRQA accuracy. It also achieves an average of 18% macro F1 on 4 different lab report information extraction datasets (EHR Datasets 2, 3, 4, and Mendeley Clinical Laboratory Test Reports). Taken together, MedGemma 1.5 serves as a robust, open resource for the community, designed as an improved foundation on which developers can create the next generation of medical AI systems. Resources and tutorials for building upon MedGemma 1.5 can be found at https://goo.gle/MedGemma.",
+        "tags": [
+            "3D"
+        ]
+    },
+    {
+        "id": 19,
+        "index": 8,
+        "title": "Action Images: End-to-End Policy Learning via Multiview Video Generation",
+        "author": [
+            "Haoyu Zhen",
+            "Zixian Gao",
+            "Qiao Sun",
+            "Yilin Zhao",
+            "Yuncong Yang",
+            "Yilun Du",
+            "Tsun-Hsuan Wang",
+            "Yi-Ling Qiao",
+            "Chuang Gan"
+        ],
+        "pdf": "https://arxiv.org/pdf/2604.06168",
+        "abstract": "World action models (WAMs) have emerged as a promising direction for robot policy learning, as they can leverage powerful video backbones to model the future states. However, existing approaches often rely on separate action modules, or use action representations that are not pixel-grounded, making it difficult to fully exploit the pretrained knowledge of video models and limiting transfer across viewpoints and environments. In this work, we present Action Images, a unified world action model that formulates policy learning as multiview video generation. Instead of encoding control as low-dimensional tokens, we translate 7-DoF robot actions into interpretable action images: multi-view action videos that are grounded in 2D pixels and explicitly track robot-arm motion. This pixel-grounded action representation allows the video backbone itself to act as a zero-shot policy, without a separate policy head or action module. Beyond control, the same unified model supports video-action joint generation, action-conditioned video generation, and action labeling under a shared representation. On RLBench and real-world evaluations, our model achieves the strongest zero-shot success rates and improves video-action joint generation quality over prior video-space world models, suggesting that interpretable action images are a promising route to policy learning.",
+        "tags": [
+            "Robotics",
+            "Video Generation"
+        ]
+    },
+    {
+        "id": 20,
+        "index": 7,
+        "title": "MMEmb-R1: Reasoning-Enhanced Multimodal Embedding with Pair-Aware Selection and Adaptive Control",
+        "author": [
+            "Yuchi Wang",
+            "Haiyang Yu",
+            "Weikang Bian",
+            "Jiefeng Long",
+            "Xiao Liang",
+            "Chao Feng",
+            "Hongsheng Li"
+        ],
+        "pdf": "https://arxiv.org/pdf/2604.06156",
+        "abstract": "MLLMs have been successfully applied to multimodal embedding tasks, yet their generative reasoning capabilities remain underutilized. Directly incorporating chain-of-thought reasoning into embedding learning introduces two fundamental challenges. First, structural misalignment between instance-level reasoning and pairwise contrastive supervision may lead to shortcut behavior, where the model merely learns the superficial format of reasoning. Second, reasoning is not universally beneficial for embedding tasks. Enforcing reasoning for all inputs may introduce unnecessary computation and latency, and can even obscure salient semantic signals for simple cases. To address these issues, we propose MMEmb-R1, an adaptive reasoning-based multimodal embedding framework. We formulate reasoning as a latent variable and introduce pair-aware reasoning selection that employs counterfactual intervention to identify reasoning paths beneficial for query-target alignment. Furthermore, we adopt reinforcement learning to selectively invoke reasoning only when necessary. Experiments on the MMEB-V2 benchmark demonstrate that our model achieves a score of 71.2 with only 4B parameters, establishing a new state-of-the-art while significantly reducing reasoning overhead and inference latency.",
+        "tags": [
+            "CoT",
+            "RL"
+        ]
+    },
+    {
+        "id": 21,
+        "index": 6,
+        "title": "Experience Transfer for Multimodal LLM Agents in Minecraft Game",
+        "author": [
+            "Chenghao Li",
+            "Jun Liu",
+            "Songbo Zhang",
+            "Huadong Jian",
+            "Hao Ni",
+            "Lik-Hang Lee",
+            "Sung-Ho Bae",
+            "Guoqing Wang",
+            "Yang Yang",
+            "Chaoning Zhang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2604.05533",
+        "abstract": "Multimodal LLM agents operating in complex game environments must continually reuse past experience to solve new tasks efficiently. In this work, we propose Echo, a transfer-oriented memory framework that enables agents to derive actionable knowledge from prior interactions rather than treating memory as a passive repository of static records. To make transfer explicit, Echo decomposes reusable knowledge into five dimensions: structure, attribute, process, function, and interaction. This formulation allows the agent to identify recurring patterns shared across different tasks and infer what prior experience remains applicable in new situations. Building on this formulation, Echo leverages In-Context Analogy Learning (ICAL) to retrieve relevant experiences and adapt them to unseen tasks through contextual examples. Experiments in Minecraft show that, under a from-scratch learning setting, Echo achieves a 1.3x to 1.7x speed-up on object-unlocking tasks. Moreover, Echo exhibits a burst-like chain-unlocking phenomenon, rapidly unlocking multiple similar items within a short time interval after acquiring transferable experience. These results suggest that experience transfer is a promising direction for improving the efficiency and adaptability of multimodal LLM agents in complex interactive environments.",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 22,
+        "index": 5,
+        "title": "FactReview: Evidence-Grounded Reviews with Literature Positioning and Execution-Based Claim Verification",
+        "author": [
+            "Hang Xu",
+            "Ling Yue",
+            "Chaoqian Ouyang",
+            "Yuchen Liu",
+            "Libin Zheng",
+            "Shaowu Pan",
+            "Shimin Di",
+            "Min-Ling Zhang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2604.04074",
+        "abstract": "Peer review in machine learning is under growing pressure from rising submission volume and limited reviewer time. Most LLM-based reviewing systems read only the manuscript and generate comments from the paper's own narrative. This makes their outputs sensitive to presentation quality and leaves them weak when the evidence needed for review lies in related work or released code. We present FactReview, an evidence-grounded reviewing system that combines claim extraction, literature positioning, and execution-based claim verification. Given a submission, FactReview identifies major claims and reported results, retrieves nearby work to clarify the paper's technical position, and, when code is available, executes the released repository under bounded budgets to test central empirical claims. It then produces a concise review and an evidence report that assigns each major claim one of five labels: Supported, Supported by the paper, Partially supported, In conflict, or Inconclusive. In a case study on CompGCN, FactReview reproduces results that closely match those reported for link prediction and node classification, yet also shows that the paper's broader performance claim across tasks is not fully sustained: on MUTAG graph classification, the reproduced result is 88.4%, whereas the strongest baseline reported in the paper remains 92.6%. The claim is therefore only partially supported. More broadly, this case suggests that AI is most useful in peer review not as a final decision-maker, but as a tool for gathering evidence and helping reviewers produce more evidence-grounded assessments. The code is public at https://github.com/DEFENSE-SEU/Review-Assistant.",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 23,
+        "index": 4,
+        "title": "QiMeng-PRepair: Precise Code Repair via Edit-Aware Reward Optimization",
+        "author": [
+            "Changxin Ke",
+            "Rui Zhang",
+            "Jiaming Guo",
+            "Yuanbo Wen",
+            "Li Ding",
+            "Shuo Wang",
+            "Xuyuan Zhu",
+            "Xiong Peng",
+            "Di Huang",
+            "Zidong Du",
+            "Xing Hu",
+            "Qi Guo",
+            "Yunji Chen"
+        ],
+        "pdf": "https://arxiv.org/pdf/2604.05963",
+        "abstract": "Large Language Models (LLMs) achieve strong program repair performance but often suffer from over-editing, where excessive modifications overwrite correct code and hinder bug localization. We systematically quantify its impact and introduce precise repair task, which maximizes reuse of correct code while fixing only buggy parts. Building on this insight, we propose PRepair, a framework that mitigates over-editing and improves repair accuracy. PRepair has two components: Self-Breaking, which generates diverse buggy programs via controlled bug injection and min-max sampling, and Self-Repairing, which trains models with Edit-Aware Group Relative Policy Optimization (EA-GRPO) using an edit-aware reward to encourage minimal yet correct edits. Experiments show that PRepair improves repair precision by up to 31.4% under $\\mathrm{fix}_1@1$, a metric that jointly considers repair correctness and extent, and significantly increases decoding throughput when combined with speculative editing, demonstrating its potential for precise and practical code repair.",
+        "tags": [
+            "GRPO",
+            "LLM"
+        ]
+    },
+    {
+        "id": 24,
+        "index": 4,
+        "title": "Squeez: Task-Conditioned Tool-Output Pruning for Coding Agents",
+        "author": [
+            "ÃdÃ¡m KovÃ¡cs"
+        ],
+        "pdf": "https://arxiv.org/pdf/2604.04979",
+        "abstract": "Coding agents repeatedly consume long tool observations even though only a small fraction of each observation matters for the next step. We study task-conditioned tool-output pruning: given a focused query and one tool output, return the smallest verbatim evidence block the agent should inspect next. We introduce a benchmark of 11,477 examples built from SWE-bench repository interactions and synthetic multi-ecosystem tool outputs, with a manually curated 618-example test set. We fine-tune Qwen 3.5 2B with LoRA and compare it against larger zero-shot models and heuristic pruning baselines. Our model reaches 0.86 recall and 0.80 F1 while removing 92% of input tokens, outperforming zero-shot Qwen 3.5 35B A3B by 11 recall points and all heuristic baselines by a wide margin.",
+        "tags": [
+            "LoRA",
+            "Qwen"
+        ]
+    },
+    {
+        "id": 25,
+        "index": 3,
+        "title": "Context-Value-Action Architecture for Value-Driven Large Language Model Agents",
+        "author": [
+            "TianZe Zhang",
+            "Sirui Sun",
+            "Yuhang Xie",
+            "Xin Zhang",
+            "Zhiqiang Wu",
+            "Guojie Song"
+        ],
+        "pdf": "https://arxiv.org/pdf/2604.05939",
+        "abstract": "Large Language Models (LLMs) have shown promise in simulating human behavior, yet existing agents often exhibit behavioral rigidity, a flaw frequently masked by the self-referential bias of current \"LLM-as-a-judge\" evaluations. By evaluating against empirical ground truth, we reveal a counter-intuitive phenomenon: increasing the intensity of prompt-driven reasoning does not enhance fidelity but rather exacerbates value polarization, collapsing population diversity. To address this, we propose the Context-Value-Action (CVA) architecture, grounded in the Stimulus-Organism-Response (S-O-R) model and Schwartz's Theory of Basic Human Values. Unlike methods relying on self-verification, CVA decouples action generation from cognitive reasoning via a novel Value Verifier trained on authentic human data to explicitly model dynamic value activation. Experiments on CVABench, which comprises over 1.1 million real-world interaction traces, demonstrate that CVA significantly outperforms baselines. Our approach effectively mitigates polarization while offering superior behavioral fidelity and interpretability.",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 26,
+        "index": 3,
+        "title": "Scientific Graphics Program Synthesis via Dual Self-Consistency Reinforcement Learning",
+        "author": [
+            "Juekai Lin",
+            "Yun Zhu",
+            "Honglin Lin",
+            "Sijing Li",
+            "Tianwei Lin",
+            "Zheng Liu",
+            "Xiaoyang Wang",
+            "Wenqiao Zhang",
+            "Lijun Wu"
+        ],
+        "pdf": "https://arxiv.org/pdf/2604.06079",
+        "abstract": "Graphics Program Synthesis is pivotal for interpreting and editing visual data, effectively facilitating the reverse-engineering of static visuals into editable TikZ code. While TikZ is the de facto standard for scientific schematics due to its programmatic flexibility, its requirement for rigorous spatial precision presents a significant challenge for Multimodal Large Language Models. Progress is currently stifled by two primary gaps: (1) Data Quality Gap: existing image-TikZ corpora often lack strict executability and reliable visual alignment; (2) Evaluation Gap: a lack of benchmarks for both structural and visual fidelity. To address these, we present a closed-loop framework featuring: SciTikZ-230K, a large-scale, high-quality dataset from our Execution-Centric Data Engine covering 11 diverse scientific disciplines; SciTikZ-Bench, a multifaceted benchmark spanning from basic geometric constructs to intricate hierarchical schematics to evaluate both visual fidelity and structural logic. To further broaden the scope of visual-code optimization methodology, we introduce a novel Dual Self-Consistency Reinforcement Learning optimization paradigm, which utilizes Round-Trip Verification to penalize degenerate code and boost overall self-consistency. Empowered by these, our trained model SciTikZer-8B achieves state-of-the-art performance, consistently outperforming proprietary giants like Gemini-2.5-Pro and massive models like Qwen3-VL-235B-A22B-Instruct.",
+        "tags": [
+            "LLM",
+            "RL"
+        ]
+    },
+    {
+        "id": 27,
+        "index": 2,
+        "title": "CUE-R: Beyond the Final Answer in Retrieval-Augmented Generation",
+        "author": [
+            "Siddharth Jain",
+            "Venkat Narayan Vedam"
+        ],
+        "pdf": "https://arxiv.org/pdf/2604.05467",
+        "abstract": "As language models shift from single-shot answer generation toward multi-step reasoning that retrieves and consumes evidence mid-inference, evaluating the role of individual retrieved items becomes more important. Existing RAG evaluation typically targets final-answer quality, citation faithfulness, or answer-level attribution, but none of these directly targets the intervention-based, per-evidence-item utility view we study here. We introduce CUE-R, a lightweight intervention-based framework for measuring per-evidence-item operational utility in single-shot RAG using shallow observable retrieval-use traces. CUE-R perturbs individual evidence items via REMOVE, REPLACE, and DUPLICATE operators, then measures changes along three utility axes (correctness, proxy-based grounding faithfulness, and confidence error) plus a trace-divergence signal. We also outline an operational evidence-role taxonomy for interpreting intervention outcomes. Experiments on HotpotQA and 2WikiMultihopQA with Qwen-3 8B and GPT-5.2 reveal a consistent pattern: REMOVE and REPLACE substantially harm correctness and grounding while producing large trace shifts, whereas DUPLICATE is often answer-redundant yet not fully behaviorally neutral. A zero-retrieval control confirms that these effects arise from degradation of meaningful retrieval. A two-support ablation further shows that multi-hop evidence items can interact non-additively: removing both supports harms performance far more than either single removal. Our results suggest that answer-only evaluation misses important evidence effects and that intervention-based utility analysis is a practical complement for RAG evaluation.",
+        "tags": [
+            "GPT",
+            "Qwen",
+            "RAG"
+        ]
+    },
+    {
+        "id": 28,
+        "index": 2,
+        "title": "REAM: Merging Improves Pruning of Experts in LLMs",
+        "author": [
+            "Saurav Jha",
+            "Maryam Hashemzadeh",
+            "Ali Saheb Pasand",
+            "Ali Parviz",
+            "Min-Joong Lee",
+            "Boris Knyazev"
+        ],
+        "pdf": "https://arxiv.org/pdf/2604.04356",
+        "abstract": "Mixture-of-Experts (MoE) large language models (LLMs) are among the top-performing architectures. The largest models, often with hundreds of billions of parameters, pose significant memory challenges for deployment. Traditional approaches to reduce memory requirements include weight pruning and quantization. Motivated by the Router-weighted Expert Activation Pruning (REAP) that prunes experts, we propose a novel method, Router-weighted Expert Activation Merging (REAM). Instead of removing experts, REAM groups them and merges their weights, better preserving original performance. We evaluate REAM against REAP and other baselines across multiple MoE LLMs on diverse multiple-choice (MC) question answering and generative (GEN) benchmarks. Our results reveal a trade-off between MC and GEN performance that depends on the mix of calibration data. By controlling the mix of general, math and coding data, we examine the Pareto frontier of this trade-off and show that REAM often outperforms the baselines and in many cases is comparable to the original uncompressed models.",
+        "tags": [
+            "LLM",
+            "MoE"
+        ]
+    },
+    {
+        "id": 29,
+        "index": 2,
+        "title": "Can Natural Image Autoencoders Compactly Tokenize fMRI Volumes for Long-Range Dynamics Modeling?",
+        "author": [
+            "Peter Yongho Kim",
+            "Juhyeon Park",
+            "Jungwoo Park",
+            "Jubin Choi",
+            "Jungwoo Seo",
+            "Jiook Cha",
+            "Taesup Moon"
+        ],
+        "pdf": "https://arxiv.org/pdf/2604.03619",
+        "abstract": "Modeling long-range spatiotemporal dynamics in functional Magnetic Resonance Imaging (fMRI) remains a key challenge due to the high dimensionality of the four-dimensional signals. Prior voxel-based models, although demonstrating excellent performance and interpretation capabilities, are constrained by prohibitive memory demands and thus can only capture limited temporal windows. To address this, we propose TABLeT (Two-dimensionally Autoencoded Brain Latent Transformer), a novel approach that tokenizes fMRI volumes using a pre-trained 2D natural image autoencoder. Each 3D fMRI volume is compressed into a compact set of continuous tokens, enabling long-sequence modeling with a simple Transformer encoder with limited VRAM. Across large-scale benchmarks including the UK-Biobank (UKB), Human Connectome Project (HCP), and ADHD-200 datasets, TABLeT outperforms existing models in multiple tasks, while demonstrating substantial gains in computational and memory efficiency over the state-of-the-art voxel-based method given the same input. Furthermore, we develop a self-supervised masked token modeling approach to pre-train TABLeT, which improves the model's performance for various downstream tasks. Our findings suggest a promising approach for scalable and interpretable spatiotemporal modeling of brain activity. Our code is available at https://github.com/beotborry/TABLeT.",
+        "tags": [
+            "3D",
+            "Transformer"
+        ]
+    },
+    {
+        "id": 30,
+        "index": 2,
+        "title": "Expert-Choice Routing Enables Adaptive Computation in Diffusion Language Models",
+        "author": [
+            "Shuibai Zhang",
+            "Caspian Zhuang",
+            "Chihan Cui",
+            "Zhihan Yang",
+            "Fred Zhangzhi Peng",
+            "Yanxin Zhang",
+            "Haoyue Bai",
+            "Zack Jia",
+            "Yang Zhou",
+            "Guanhua Chen",
+            "Ming Liu"
+        ],
+        "pdf": "https://arxiv.org/pdf/2604.01622",
+        "abstract": "Diffusion language models (DLMs) enable parallel, non-autoregressive text generation, yet existing DLM mixture-of-experts (MoE) models inherit token-choice (TC) routing from autoregressive systems, leading to load imbalance and rigid computation allocation. We show that expert-choice (EC) routing is a better fit for DLMs: it provides deterministic load balancing by design, yielding higher throughput and faster convergence than TC. Building on the property that EC capacity is externally controllable, we introduce timestep-dependent expert capacity, which varies expert allocation according to the denoising step. We find that allocating more capacity to low-mask-ratio steps consistently achieves the best performance under matched FLOPs, and provide a mechanistic explanation: tokens in low-mask-ratio contexts exhibit an order-of-magnitude higher learning efficiency, so concentrating compute on these steps yields the largest marginal return. Finally, we show that existing pretrained TC DLMs can be retrofitted to EC by replacing only the router, achieving faster convergence and improved accuracy across diverse downstream tasks. Together, these results establish EC routing as a superior paradigm for DLM MoE models and demonstrate that computation in DLMs can be treated as an adaptive policy rather than a fixed architectural constant. Code is available at https://github.com/zhangshuibai/EC-DLM.",
+        "tags": [
+            "Diffusion",
+            "MoE"
+        ]
+    }
+]
