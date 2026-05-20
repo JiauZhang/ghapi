@@ -1,0 +1,443 @@
+[
+    {
+        "id": 1,
+        "index": 73,
+        "title": "GLM-5V-Turbo: Toward a Native Foundation Model for Multimodal Agents",
+        "author": [
+            "GLM-V Team",
+            "Wenyi Hong",
+            "Xiaotao Gu",
+            "Ziyang Pan",
+            "Zhen Yang",
+            "Yuting Wang",
+            "Yue Wang",
+            "Yuanchang Yue",
+            "Yu Wang",
+            "Yanling Wang",
+            "Yan Wang",
+            "Xijun Liu",
+            "Wenmeng Yu",
+            "Weihan Wang",
+            "Wei Li",
+            "Shuaiqi Duan",
+            "Sheng Yang",
+            "Ruiliang Lv",
+            "Mingdao Liu",
+            "Lihang Pan",
+            "Ke Ning",
+            "Junhui Ji",
+            "Jinjiang Wang",
+            "Jing Chen",
+            "Jiazheng Xu",
+            "Jiale Zhu",
+            "Jiale Cheng",
+            "Ji Qi",
+            "Guobing Gan",
+            "Guo Wang",
+            "Cong Yao",
+            "Zijun Dou",
+            "Zihao Zhou",
+            "Zihan Wang",
+            "Zhiqi Ge",
+            "Zhijie Li",
+            "Zhenyu Hou",
+            "Zhao Xue",
+            "Zehui Wang",
+            "Zehai He",
+            "Yusen Liu",
+            "Yukuo Cen",
+            "Yuchen Li",
+            "Yuan Wang",
+            "Yijian Lu",
+            "Yanzi Wang",
+            "Yadong Xue",
+            "Xinyu Zhang",
+            "Xinyu Liu",
+            "Wenkai Li",
+            "Tianyu Tong",
+            "Tianshu Zhang",
+            "Shengdong Yan",
+            "Qinkai Zheng",
+            "Mingde Xu",
+            "Licheng Bao",
+            "Jiaxing Xu",
+            "Jiaxin Fan",
+            "Jiawen Qian",
+            "Jiali Chen",
+            "Jiahui Lin",
+            "Haozhi Zheng",
+            "Haoran Wang",
+            "Haochen Li",
+            "Fan Yang",
+            "Dan Zhang",
+            "Chuangxin Zhao",
+            "Chengcheng Wu",
+            "Boyan Shi",
+            "Bowei Jia",
+            "Baoxu Wang",
+            "Peng Zhang",
+            "Debing Liu",
+            "Bin Xu",
+            "Juanzi Li",
+            "Minlie Huang",
+            "Yuxiao Dong",
+            "Jie Tang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2604.26752",
+        "abstract": "We present GLM-5V-Turbo, a step toward native foundation models for multimodal agents. As foundation models are increasingly deployed in real environments, agentic capability depends not only on language reasoning, but also on the ability to perceive, interpret, and act over heterogeneous contexts such as images, videos, webpages, documents, GUIs. GLM-5V-Turbo is built around this objective: multimodal perception is integrated as a core component of reasoning, planning, tool use, and execution, rather than as an auxiliary interface to a language model. This report summarizes the main improvements behind GLM-5V-Turbo across model design, multimodal training, reinforcement learning, toolchain expansion, and integration with agent frameworks. These developments lead to strong performance in multimodal coding, visual tool use, and framework-based agentic tasks, while preserving competitive text-only coding capability. More importantly, our development process offers practical insights for building multimodal agents, highlighting the central role of multimodal perception, hierarchical optimization, and reliable end-to-end verification.",
+        "tags": [
+            "GLM",
+            "RL"
+        ]
+    },
+    {
+        "id": 2,
+        "index": 54,
+        "title": "Large Language Models Explore by Latent Distilling",
+        "author": [
+            "Yuanhao Zeng",
+            "Ao Lu",
+            "Lufei Li",
+            "Zheng Zhang",
+            "Yexin Li",
+            "Kan Ren"
+        ],
+        "pdf": "https://arxiv.org/pdf/2604.24927",
+        "abstract": "Generating diverse responses is crucial for test-time scaling of large language models (LLMs), yet standard stochastic sampling mostly yields surface-level lexical variation, limiting semantic exploration. In this paper, we propose Exploratory Sampling (ESamp), a decoding approach that explicitly encourages semantic diversity during generation. ESamp is motivated by the well-known observation that neural networks tend to make lower-error predictions on inputs similar to those encountered before, and incur higher prediction error on novel ones. Building on this property, we train a lightweight Distiller at test time to predict deep-layer hidden representations of the LLM from its shallow-layer representations to model the LLM's depth-wise representation transitions. During decoding, the Distiller continuously adapts to the mappings induced by the current generation context. ESamp uses the prediction error as a novelty signal to reweight candidate token extensions conditioned on the current prefix, thereby biasing decoding toward less-explored semantic patterns. ESamp is implemented with an asynchronous training--inference pipeline, with less than 5% worst case overhead (1.2% in the optimized release). Empirical results show that ESamp significantly boosts the Pass@k efficiency of reasoning models, showing superior or comparable performance to strong stochastic and heuristic baselines. Notably, ESamp achieves robust generalization across mathematics, science, and code generation benchmarks and breaks the trade-off between diversity and coherence in creative writing. Our code has released at: https://github.com/LinesHogan/tLLM.",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 3,
+        "index": 49,
+        "title": "RADIO-ViPE: Online Tightly Coupled Multi-Modal Fusion for Open-Vocabulary Semantic SLAM in Dynamic Environments",
+        "author": [
+            "Zaid Nasser",
+            "Mikhail Iumanov",
+            "Tianhao Li",
+            "Maxim Popov",
+            "Jaafar Mahmoud",
+            "Sergey Kolyubin"
+        ],
+        "pdf": "https://arxiv.org/pdf/2604.26067",
+        "abstract": "We present RADIO-ViPE (Reduce All Domains Into One -- Video Pose Engine), an online semantic SLAM system that enables geometry-aware open-vocabulary grounding, associating arbitrary natural language queries with localized 3D regions and objects in dynamic environments. Unlike existing approaches that require calibrated, posed RGB-D input, RADIO-ViPE operates directly on raw monocular RGB video streams, requiring no prior camera intrinsics, depth sensors, or pose initialization. The system tightly couples multi-modal embeddings -- spanning vision and language -- derived from agglomerative foundation models (e.g., RADIO) with geometric scene information. This coupling takes place in initialization, optimization and factor graph connections to improve the consistency of the map from multiple modalities. The optimization is wrapped within adaptive robust kernels, designed to handle both actively moving objects and agent-displaced scene elements (e.g., furniture rearranged during ego-centric session). Experiments demonstrate that RADIO-ViPE achieves state-of-the-art results on the dynamic TUM-RGBD benchmark while maintaining competitive performance against offline open-vocabulary methods that rely on calibrated data and static scene assumptions. RADIO-ViPE bridges a critical gap in real-world deployment, enabling robust open-vocabulary semantic grounding for autonomous robotics and unconstrained in-the-wild video streams. Project page: https://be2rlab.github.io/radio_vipe",
+        "tags": [
+            "3D",
+            "Robotics",
+            "SLAM"
+        ]
+    },
+    {
+        "id": 4,
+        "index": 38,
+        "title": "ClawGym: A Scalable Framework for Building Effective Claw Agents",
+        "author": [
+            "Fei Bai",
+            "Huatong Song",
+            "Shuang Sun",
+            "Daixuan Cheng",
+            "Yike Yang",
+            "Chuan Hao",
+            "Renyuan Li",
+            "Feng Chang",
+            "Yuan Wei",
+            "Ran Tao",
+            "Bryan Dai",
+            "Jian Yang",
+            "Wayne Xin Zhao"
+        ],
+        "pdf": "https://arxiv.org/pdf/2604.26904",
+        "abstract": "Claw-style environments support multi-step workflows over local files, tools, and persistent workspace states. However, scalable development around these environments remains constrained by the absence of a systematic framework, especially one for synthesizing verifiable training data and integrating it with agent training and diagnostic evaluation. To address this challenge, we present ClawGym, a scalable framework that supports the full lifecycle of Claw-style personal agent development. Concretely, we construct ClawGym-SynData, a diverse dataset of 13.5K filtered tasks synthesized from persona-driven intents and skill-grounded operations, paired with realistic mock workspaces and hybrid verification mechanisms. We then train a family of capable Claw-style models, termed ClawGym-Agents, through supervised fine-tuning on black-box rollout trajectories, and further explore reinforcement learning via a lightweight pipeline that parallelizes rollouts across per-task http://sandboxes.To support reliable evaluation, we further construct ClawGym-Bench, a benchmark of 200 instances calibrated through automated filtering and human-LLM review. Relevant resources will be soon released at https://github.com/ClawGym.",
+        "tags": [
+            "LLM",
+            "RL"
+        ]
+    },
+    {
+        "id": 5,
+        "index": 36,
+        "title": "Turning the TIDE: Cross-Architecture Distillation for Diffusion Large Language Models",
+        "author": [
+            "Gongbo Zhang",
+            "Wen Wang",
+            "Ye Tian",
+            "Li Yuan"
+        ],
+        "pdf": "https://arxiv.org/pdf/2604.26951",
+        "abstract": "Diffusion large language models (dLLMs) offer parallel decoding and bidirectional context, but state-of-the-art dLLMs require billions of parameters for competitive performance. While existing distillation methods for dLLMs reduce inference steps within a single architecture, none address cross-architecture knowledge transfer, in which the teacher and student differ in architecture, attention mechanism, and tokenizer. We present TIDE, the first framework for cross-architecture dLLM distillation, comprising three modular components: (1) TIDAL, which jointly modulates distillation strength across training progress and diffusion timestep to account for the teacher's noise-dependent reliability; (2) CompDemo, which enriches the teacher's context via complementary mask splitting to improve predictions under heavy masking; and (3) Reverse CALM, a cross-tokenizer objective that inverts chunk-level likelihood matching, yielding bounded gradients and dual-end noise filtering. Distilling 8B dense and 16B MoE teachers into a 0.6B student via two heterogeneous pipelines outperforms the baseline by an average of 1.53 points across eight benchmarks, yielding notable gains in code generation, where HumanEval scores reach 48.78 compared to 32.3 for the AR baseline.",
+        "tags": [
+            "Diffusion",
+            "LLM",
+            "MoE"
+        ]
+    },
+    {
+        "id": 6,
+        "index": 7,
+        "title": "Diffusion Templates: A Unified Plugin Framework for Controllable Diffusion",
+        "author": [
+            "Zhongjie Duan",
+            "Hong Zhang",
+            "Yingda Chen"
+        ],
+        "pdf": "https://arxiv.org/pdf/2604.24351",
+        "abstract": "Controllable diffusion methods have substantially expanded the practical utility of diffusion models, but they are typically developed as isolated, backbone-specific systems with incompatible training pipelines, parameter formats, and runtime hooks. This fragmentation makes it difficult to reuse infrastructure across tasks, transfer capabilities across backbones, or compose multiple controls within a single generation pipeline. We present Diffusion Templates, a unified and open plugin framework that decouples base-model inference from controllable capability injection. The framework is organized around three components: Template models that map arbitrary task-specific inputs to an intermediate capability representation, a Template cache that functions as a standardized interface for capability injection, and a Template pipeline that loads, merges, and injects one or more Template caches into the base diffusion runtime. Because the interface is defined at the systems level rather than tied to a specific control architecture, heterogeneous capability carriers such as KV-Cache and LoRA can be supported under the same abstraction. Based on this design, we build a diverse model zoo spanning structural control, brightness adjustment, color adjustment, image editing, super-resolution, sharpness enhancement, aesthetic alignment, content reference, local inpainting, and age control. These case studies show that Diffusion Templates can unify a broad range of controllable generation tasks while preserving modularity, composability, and practical extensibility across rapidly evolving diffusion backbones. All resources will be open sourced, including code, models, and datasets.",
+        "tags": [
+            "Diffusion",
+            "Image Editing",
+            "Inpainting",
+            "LoRA",
+            "Super Resolution"
+        ]
+    },
+    {
+        "id": 7,
+        "index": 6,
+        "title": "FAMA: Failure-Aware Meta-Agentic Framework for Open-Source LLMs in Interactive Tool Use Environments",
+        "author": [
+            "Amir Saeidi",
+            "Venkatesh Mishra",
+            "Souradeep Mukhopadhyay",
+            "Gaowen Liu",
+            "Ali Payani",
+            "Jayanth Srinivasa",
+            "Chitta Baral"
+        ],
+        "pdf": "https://arxiv.org/pdf/2604.25135",
+        "abstract": "Large Language Models are being increasingly deployed as the decision-making core of autonomous agents capable of effecting change in external environments. Yet, in conversational benchmarks, which simulate real-world customer-centric issue resolution scenarios, these agents frequently fail due to the cascading effects of incorrect decision-making. These challenges are particularly pronounced for open-source LLMs with smaller parameter sizes, limited context windows, and constrained inference budgets, which contribute to increased error accumulation in agentic settings. To tackle these challenges, we present the Failure-Aware Meta-Agentic (FAMA) framework. FAMA operates in two stages: first, it analyzes failure trajectories from baseline agents to identify the most prevalent errors; second, it employs an orchestration mechanism that activates a minimal subset of specialized agents tailored to address these failures by injecting a targeted context for the tool-use agent before the decision-making step. Experiments across open-source LLMs demonstrate performance gains up to 27% across evaluation modes over standard baselines. These results highlight that targeted curation of context through specialized agents to address common failures is a valuable design principle for building reliable, multi-turn tool-use LLM agents that simulate real-world conversational scenarios.",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 8,
+        "index": 4,
+        "title": "Accelerating RL Post-Training Rollouts via System-Integrated Speculative Decoding",
+        "author": [
+            "Hayate Iso",
+            "Tiyasa Mitra",
+            "Sudipta Mondal",
+            "Rasoul Shafipour",
+            "Venmugil Elango",
+            "Terry Kong",
+            "Yuki Huang",
+            "Seonjin Na",
+            "Izzy Putterman",
+            "Benjamin Chislett",
+            "Maor Ashkenazi",
+            "Joseph Guman",
+            "Gerald Shen",
+            "Tugrul Konuk",
+            "Ashwath Aithal",
+            "Ritika Borkar",
+            "Ran Zilberstein",
+            "Bita Rouhani"
+        ],
+        "pdf": "https://arxiv.org/pdf/2604.26779",
+        "abstract": "RL post-training of frontier language models is increasingly bottlenecked by autoregressive rollout generation, making rollout acceleration a central systems challenge. Many existing efficiency methods improve throughput by changing the rollout or optimization regime, for example, through off-policy execution, replay, or lower-precision generation. We study speculative decoding as a lossless acceleration primitive for RL rollouts that preserves the target model's output distribution. We implement speculative decoding in NeMo-RL with a vLLM backend, supporting both synchronous and asynchronous pipelines and enabling speculation during RL rollouts. This benefit is realizable across speculation mechanisms, such as pretrained MTP heads, small external draft models or even techniques such as Eagle3, which are traditionally applied after RL phase. This yields a deployment path for state-of-the-art speculative decoding inside RL training. In a reasoning post-training workload at 8B scale under synchronous RL, speculative decoding improves rollout throughput by 1.8x. Using a high-fidelity performance simulator, we project that combining speculative decoding with asynchronous RL yields up to 2.5x end-to-end training speedup at 235B scale.",
+        "tags": [
+            "RL"
+        ]
+    },
+    {
+        "id": 9,
+        "index": 4,
+        "title": "Unified 4D World Action Modeling from Video Priors with Asynchronous Denoising",
+        "author": [
+            "Jun Guo",
+            "Qiwei Li",
+            "Peiyan Li",
+            "Zilong Chen",
+            "Nan Sun",
+            "Yifei Su",
+            "Heyun Wang",
+            "Yuan Zhang",
+            "Xinghang Li",
+            "Huaping Liu"
+        ],
+        "pdf": "https://arxiv.org/pdf/2604.26694",
+        "abstract": "We propose X-WAM, a Unified 4D World Model that unifies real-time robotic action execution and high-fidelity 4D world synthesis (video + 3D reconstruction) in a single framework, addressing the critical limitations of prior unified world models (e.g., UWM) that only model 2D pixel-space and fail to balance action efficiency and world modeling quality. To leverage the strong visual priors of pretrained video diffusion models, X-WAM imagines the future world by predicting multi-view RGB-D videos, and obtains spatial information efficiently through a lightweight structural adaptation: replicating the final few blocks of the pretrained Diffusion Transformer into a dedicated depth prediction branch for the reconstruction of future spatial information. Moreover, we propose Asynchronous Noise Sampling (ANS) to jointly optimize generation quality and action decoding efficiency. ANS applies a specialized asynchronous denoising schedule during inference, which rapidly decodes actions with fewer steps to enable efficient real-time execution, while dedicating the full sequence of steps to generate high-fidelity video. Rather than entirely decoupling the timesteps during training, ANS samples from their joint distribution to align with the inference distribution. Pretrained on over 5,800 hours of robotic data, X-WAM achieves 79.2% and 90.7% average success rate on RoboCasa and RoboTwin 2.0 benchmarks, while producing high-fidelity 4D reconstruction and generation surpassing existing methods in both visual and geometric metrics.",
+        "tags": [
+            "3D",
+            "DiT",
+            "Diffusion",
+            "Transformer"
+        ]
+    },
+    {
+        "id": 10,
+        "index": 4,
+        "title": "Operating-Layer Controls for Onchain Language-Model Agents Under Real Capital",
+        "author": [
+            "T.J. Barton",
+            "Chris Constantakis",
+            "Patti Hauseman",
+            "Annie Mous",
+            "Alaska Hoffman",
+            "Brian Bergeron",
+            "Hunter Goodreau"
+        ],
+        "pdf": "https://arxiv.org/pdf/2604.26091",
+        "abstract": "We study reliability in autonomous language-model agents that translate user mandates into validated tool actions under real capital. The setting is DX Terminal Pro, a 21-day deployment in which 3,505 user-funded agents traded real ETH in a bounded onchain market. Users configured vaults through structured controls and natural-language strategies, but only agents could choose normal buy/sell trades. The system produced 7.5M agent invocations, roughly 300K onchain actions, about $20M in volume, more than 5,000 ETH deployed, roughly 70B inference tokens, and 99.9% settlement success for policy-valid submitted transactions. Long-running agents accumulated thousands of sequential decisions, including 6,000+ prompt-state-action cycles for continuously active agents, yielding a large-scale trace from user mandate to rendered prompt, reasoning, validation, portfolio state, and settlement. Reliability did not come from the base model alone; it emerged from the operating layer around the model: prompt compilation, typed controls, policy validation, execution guards, memory design, and trace-level observability. Pre-launch testing exposed failures that text-only benchmarks rarely measure, including fabricated trading rules, fee paralysis, numeric anchoring, cadence trading, and misread tokenomics. Targeted harness changes reduced fabricated sell rules from 57% to 3%, reduced fee-led observations from 32.5% to below 10%, and increased capital deployment from 42.9% to 78.0% in an affected test population. We show that capital-managing agents should be evaluated across the full path from user mandate to prompt, validated action, and settlement.",
+        "tags": []
+    },
+    {
+        "id": 11,
+        "index": 2,
+        "title": "A Survey on LLM-based Conversational User Simulation",
+        "author": [
+            "Bo Ni",
+            "Leyao Wang",
+            "Yu Wang",
+            "Branislav Kveton",
+            "Franck Dernoncourt",
+            "Yu Xia",
+            "Hongjie Chen",
+            "Reuben Leura",
+            "Samyadeep Basu",
+            "Subhojyoti Mukherjee",
+            "Puneet Mathur",
+            "Nesreen Ahmed",
+            "Junda Wu",
+            "Li Li",
+            "Huixin Zhang",
+            "Ruiyi Zhang",
+            "Tong Yu",
+            "Sungchul Kim",
+            "Jiuxiang Gu",
+            "Zhengzhong Tu",
+            "Alexa Siu",
+            "Zichao Wang",
+            "David Seunghyun Yoon",
+            "Nedim Lipka",
+            "Namyong Park",
+            "Zihao Lin",
+            "Trung Bui",
+            "Yue Zhao",
+            "Tyler Derr",
+            "Ryan A. Rossi"
+        ],
+        "pdf": "https://arxiv.org/pdf/2604.24977",
+        "abstract": "User simulation has long played a vital role in computer science due to its potential to support a wide range of applications. Language, as the primary medium of human communication, forms the foundation of social interaction and behavior. Consequently, simulating conversational behavior has become a key area of study. Recent advancements in large language models (LLMs) have significantly catalyzed progress in this domain by enabling high-fidelity generation of synthetic user conversation. In this paper, we survey recent advancements in LLM-based conversational user simulation. We introduce a novel taxonomy covering user granularity and simulation objectives. Additionally, we systematically analyze core techniques and evaluation methodologies. We aim to keep the research community informed of the latest advancements in conversational user simulation and to further facilitate future research by identifying open challenges and organizing existing work under a unified framework.",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 12,
+        "index": 1,
+        "title": "FASH-iCNN: Making Editorial Fashion Identity Inspectable Through Multimodal CNN Probing",
+        "author": [
+            "Morayo Danielle Adeyemi",
+            "Ryan A. Rossi",
+            "Franck Dernoncourt"
+        ],
+        "pdf": "https://arxiv.org/pdf/2604.26186",
+        "abstract": "Fashion AI systems routinely encode the aesthetic logic of specific houses, editors, and historical moments without disclosing it. We present FASH-iCNN, a multimodal system trained on 87,547 Vogue runway images across 15 fashion houses spanning 1991-2024 that makes this cultural logic inspectable. Given a photograph of a garment, the system recovers which house produced it, which era it belongs to, and which color tradition it reflects. A clothing-only model identifies the fashion house at 78.2% top-1 across 14 houses, the decade at 88.6% top-1, and the specific year at 58.3% top-1 across 34 years with a mean error of just 2.2 years. Probing which visual channels carry this signal reveals a sharp dissociation: removing color costs only 10.6pp of house identity accuracy, while removing texture costs 37.6pp, establishing texture and luminance as the primary carriers of editorial identity. FASH-iCNN treats editorial culture as the signal rather than background noise, identifying which houses, eras, and color traditions shaped each output so that users can see not just what the system predicts but which houses, editors, and historical moments are encoded in that prediction.",
+        "tags": []
+    },
+    {
+        "id": 13,
+        "index": 1,
+        "title": "Agentic Fusion of Large Atomic and Language Models to Accelerate Superconductors Discovery",
+        "author": [
+            "Mingze Li",
+            "Yu Rong",
+            "Songyou Li",
+            "Lihong Wang",
+            "Jiacheng Cen",
+            "Liming Wu",
+            "Anyi Li",
+            "Zongzhao Li",
+            "Qiuliang Liu",
+            "Rui Jiao",
+            "Tian Bian",
+            "Pengju Wang",
+            "Hao Sun",
+            "Jianfeng Zhang",
+            "Ji-Rong Wen",
+            "Deli Zhao",
+            "Shifeng Jin",
+            "Tingyang Xu",
+            "Wenbing Huang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2604.23758",
+        "abstract": "The discovery of novel materials is critical for global energy and quantum technology transitions. While deep learning has fundamentally reshaped this landscape, existing predictive or generative models typically operate in isolation, lacking the autonomous orchestration required to execute the full discovery process. Here we present ElementsClaw, an agentic framework for materials discovery that synergizes Large Atomic Models (LAMs) with Large Language Models (LLMs). In response to varied human queries, ElementsClaw orchestrates a suite of LAM tools finetuned from our proposed 1-billion-parameter model Elements for atomic-scale numerical computation, while leveraging LLMs for high-level semantic reasoning. This shift moves AI-driven materials science from isolated processes toward integrated and human interactive discovery. Applied to superconductors, ElementsClaw screens 2.4 million crystals in just 28 GPU hours to identify 68,000 high-confidence candidates (The complete dataset of screened superconductors is available at https://developer.damo-academy.com/material), expanding known superconducting space by orders of magnitude compared to datasets curated over decades. Critically, ElementsClaw achieves a high success rate in identifying superconductors hidden in literature and discovers four novel experimentally verified superconductors, exemplified by Zr3ScRe8 with a transition temperature of 6.8 K and HfZrRe4 at 6.7 K. Together, our results establish a knowledge integrated, autonomously orchestrated, and experimentally grounded paradigm for materials discovery.",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 14,
+        "index": 1,
+        "title": "Praxy Voice: Voice-Prompt Recovery + BUPS for Commercial-Class Indic TTS from a Frozen Non-Indic Base at Zero Commercial-Training-Data Cost",
+        "author": [
+            "Venkata Pushpak Teja Menta"
+        ],
+        "pdf": "https://arxiv.org/pdf/2604.25441",
+        "abstract": "Commercial TTS systems produce near-native Indic audio, but the best open-source bases (Chatterbox, Indic Parler-TTS, IndicF5) trail them on measured phonological dimensions, and the most widely adopted multilingual base (Chatterbox, 23 languages) does not even tokenise Telugu or Tamil. We ask: what is the minimum intervention that brings such a non-Indic-native base to commercial-class output on Telugu, Tamil, and Hindi, without training a new acoustic decoder and without any commercial TTS training data? We combine three pieces: (1) BUPS, a Brahmic Unified Phoneme Space that deterministically romanises seven Indic scripts to ISO-15919 so Chatterbox's Latin tokeniser can process them; (2) a LoRA adapter on only the text-token predictor (Chatterbox's t3), trained on ~1,220h of licensed Indic audio with a Hindi-proxy language_id; (3) a voice-prompt recovery recipe -- an 8-11s same-language reference clip plus three sampling overrides (exaggeration 0.7, temperature 0.6, min_p 0.1; \"Config B\") -- that recovers commercial-class acoustic output with no acoustic-decoder training. On Hindi, the LoRA regresses accuracy and we instead use vanilla Chatterbox + Config B, giving a two-branch deployment. Evaluated on 10-utterance pilot sets with the companion PSP benchmark, Praxy Voice matches or slightly leads commercial baselines: 26.7% retroflex collapse on Telugu (vs Sarvam Bulbul 33.3%), 71% Tamil-zha collapse (vs commercial trio's 86%), 0.025 LLM-WER on Hindi (tied with Cartesia Sonic-3). For intra-sentential code-mix we add a third branch (IndicF5 + native-script transliteration) that drops code-mix LLM-WER from 0.80-0.85 to 0.14-0.27 across Hi/Te/Ta. We release R6 LoRA weights (Apache-2.0), inference code and router (MIT), and a Gradio demo.",
+        "tags": [
+            "CLIP",
+            "LLM",
+            "LoRA"
+        ]
+    },
+    {
+        "id": 15,
+        "index": 1,
+        "title": "PSP: An Interpretable Per-Dimension Accent Benchmark for Indic Text-to-Speech",
+        "author": [
+            "Venkata Pushpak Teja Menta"
+        ],
+        "pdf": "https://arxiv.org/pdf/2604.25476",
+        "abstract": "Standard text-to-speech (TTS) evaluation measures intelligibility (WER, CER) and overall naturalness (MOS, UTMOS) but does not quantify accent. A synthesiser may score well on all four yet sound non-native on features that are phonemic in the target language. For Indic languages, these features include retroflex articulation, aspiration, vowel length, and the Tamil retroflex approximant (letter zha). We present PSP, the Phoneme Substitution Profile, an interpretable, per-phonological-dimension accent benchmark for Indic TTS. PSP decomposes accent into six complementary dimensions: retroflex collapse rate (RR), aspiration fidelity (AF), vowel-length fidelity (LF), Tamil-zha fidelity (ZF), Frechet Audio Distance (FAD), and prosodic signature divergence (PSD). The first four are measured via forced alignment plus native-speaker-centroid acoustic probes over Wav2Vec2-XLS-R layer-9 embeddings; the latter two are corpus-level distributional distances. In this v1 we benchmark four commercial and open-source systems (ElevenLabs v3, Cartesia Sonic-3, Sarvam Bulbul, Indic Parler-TTS) on Hindi, Telugu, and Tamil pilot sets, with a fifth system (Praxy Voice) included on all three languages, plus an R5->R6 case study on Telugu. Three findings: (i) retroflex collapse grows monotonically with phonological difficulty Hindi < Telugu < Tamil (~1%, ~40%, ~68%); (ii) PSP ordering diverges from WER ordering -- commercial WER-leaders do not uniformly lead on retroflex or prosodic fidelity; (iii) no single system is Pareto-optimal across all six dimensions. We release native reference centroids (500 clips per language), 1000-clip embeddings for FAD, 500-clip prosodic feature matrices for PSD, 300-utterance golden sets per language, scoring code under MIT, and centroids under CC-BY. Formal MOS-correlation is deferred to v2; v1 reports five internal-consistency signals plus a native-audio sanity check.",
+        "tags": [
+            "CLIP"
+        ]
+    },
+    {
+        "id": 16,
+        "index": 0,
+        "title": "Sample Selection Using Multi-Task Autoencoders in Federated Learning with Non-IID Data",
+        "author": [
+            "Emre ArdÄ±Ã§",
+            "Yakup GenÃ§"
+        ],
+        "pdf": "https://arxiv.org/pdf/2604.26116",
+        "abstract": "Federated learning is a machine learning paradigm in which multiple devices collaboratively train a model under the supervision of a central server while ensuring data privacy. However, its performance is often hindered by redundant, malicious, or abnormal samples, leading to model degradation and inefficiency. To overcome these issues, we propose novel sample selection methods for image classification, employing a multitask autoencoder to estimate sample contributions through loss and feature analysis. Our approach incorporates unsupervised outlier detection, using one-class support vector machine (OCSVM), isolation forest (IF), and adaptive loss threshold (AT) methods managed by a central server to filter noisy samples on clients. We also propose a multi-class deep support vector data description (SVDD) loss controlled by a central server to enhance feature-based sample selection. We validate our methods on CIFAR10 and MNIST datasets across varying numbers of clients, non-IID distributions, and noise levels up to 40%. The results show significant accuracy improvements with loss-based sample selection, achieving gains of up to 7.02% on CIFAR10 with OCSVM and 1.83% on MNIST with AT. Additionally, our federated SVDD loss further improves feature-based sample selection, yielding accuracy gains of up to 0.99% on CIFAR10 with OCSVM. These results show the effectiveness of our methods in improving model accuracy across various client counts and noise conditions.",
+        "tags": [
+            "Detection"
+        ]
+    },
+    {
+        "id": 17,
+        "index": 0,
+        "title": "Enhanced Privacy and Communication Efficiency in Non-IID Federated Learning with Adaptive Quantization and Differential Privacy",
+        "author": [
+            "Emre ArdÄ±Ã§",
+            "Yakup GenÃ§"
+        ],
+        "pdf": "https://arxiv.org/pdf/2604.23426",
+        "abstract": "Federated learning (FL) is a distributed machine learning method where multiple devices collaboratively train a model under the management of a central server without sharing underlying data. One of the key challenges of FL is the communication bottleneck caused by variations in connection speed and bandwidth across devices. Therefore, it is essential to reduce the size of transmitted data during training. Additionally, there is a potential risk of exposing sensitive information through the model or gradient analysis during training. To address both privacy and communication efficiency, we combine differential privacy (DP) and adaptive quantization methods. We use Laplacian-based DP to preserve privacy, which is relatively underexplored in FL and offers tighter privacy guarantees than Gaussian-based DP. We propose a simple and efficient global bit-length scheduler using round-based cosine annealing, along with a client-based scheduler that dynamically adapts based on client contribution estimated through dataset entropy analysis. We evaluate our approach through extensive experiments on CIFAR10, MNIST, and medical imaging datasets, using non-IID data distributions across varying client counts, bit-length schedulers, and privacy budgets. The results show that our adaptive quantization methods reduce total communicated data by up to 52.64% for MNIST, 45.06% for CIFAR10, and 31% to 37% for medical imaging datasets compared to 32-bit float training while maintaining competitive model accuracy and ensuring robust privacy through differential privacy.",
+        "tags": []
+    },
+    {
+        "id": 18,
+        "index": 0,
+        "title": "Probing Visual Planning in Image Editing Models",
+        "author": [
+            "Zhimu Zhou",
+            "Yanpeng Zhao",
+            "Qiuyu Liao",
+            "Bo Zhao",
+            "Xiaojian Ma"
+        ],
+        "pdf": "https://arxiv.org/pdf/2604.22868",
+        "abstract": "Visual planning represents a crucial facet of human intelligence, especially in tasks that require complex spatial reasoning and navigation. Yet, in machine learning, this inherently visual problem is often tackled through a verbal-centric lens. While recent research demonstrates the promise of fully visual approaches, they suffer from significant computational inefficiency due to the step-by-step planning-by-generation paradigm. In this work, we present EAR, an editing-as-reasoning paradigm that reformulates visual planning as a single-step image transformation. To isolate intrinsic reasoning from visual recognition, we employ abstract puzzles as probing tasks and introduce AMAZE, a procedurally generated dataset that features the classical Maze and Queen problems, covering distinct, complementary forms of visual planning. The abstract nature of AMAZE also facilitates automatic evaluation of autoregressive and diffusion-based models in terms of both pixel-wise fidelity and logical validity. We assess leading proprietary and open-source editing models. The results show that they all struggle in the zero-shot setting, finetuning on basic scales enables remarkable generalization to larger in-domain scales and out-of-domain scales and geometries. However, our best model that runs on high-end hardware fails to match the zero-shot efficiency of human solvers, highlighting a persistent gap in neural visual reasoning.",
+        "tags": [
+            "Diffusion",
+            "Image Editing"
+        ]
+    }
+]
