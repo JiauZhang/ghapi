@@ -1,0 +1,61 @@
+[000004] 2026-07-02 15:55:33 - DEBUG - /home/runner/work/ghapi-action/ghapi-action/news/main.py:26 - 2026-07-02 23:55:33.785486+00:00
+[000205] 2026-07-02 15:55:33 - DEBUG - /home/runner/work/ghapi-action/ghapi-action/news/main.py:62 - fetching jiemian...
+[000206] 2026-07-02 15:55:33 - DEBUG - /home/runner/work/ghapi-action/ghapi-action/news/main.py:62 - fetching huanqiu...
+[000208] 2026-07-02 15:55:33 - DEBUG - /home/runner/work/ghapi-action/ghapi-action/news/main.py:62 - fetching wallstreet...
+[000208] 2026-07-02 15:55:33 - DEBUG - /home/runner/work/ghapi-action/ghapi-action/news/main.py:62 - fetching ifeng...
+[000208] 2026-07-02 15:55:33 - DEBUG - /home/runner/work/ghapi-action/ghapi-action/news/main.py:62 - fetching kr36...
+[000208] 2026-07-02 15:55:33 - DEBUG - /home/runner/work/ghapi-action/ghapi-action/news/main.py:62 - fetching pingwest...
+[000208] 2026-07-02 15:55:33 - DEBUG - /home/runner/work/ghapi-action/ghapi-action/news/main.py:62 - fetching ithome...
+[000208] 2026-07-02 15:55:33 - DEBUG - /home/runner/work/ghapi-action/ghapi-action/news/main.py:62 - fetching nbd...
+[001784] 2026-07-02 15:55:35 - DEBUG - /home/runner/work/ghapi-action/ghapi-action/news/huanqiu.py:24 - huanqiu offset: 0, item size: 25
+[001784] 2026-07-02 15:55:35 - DEBUG - /home/runner/work/ghapi-action/ghapi-action/news/huanqiu.py:31 - huanqiu latest time: 2013-08-28 08:13:00
+[001784] 2026-07-02 15:55:35 - DEBUG - /home/runner/work/ghapi-action/ghapi-action/news/main.py:68 - huanqiu data size: 0, time: 2026-05-15 16:30:58.249000
+[002126] 2026-07-02 15:55:35 - DEBUG - /home/runner/work/ghapi-action/ghapi-action/news/main.py:68 - ithome data size: 30, time: 2026-07-02 23:52:17
+[002310] 2026-07-02 15:55:36 - DEBUG - /home/runner/work/ghapi-action/ghapi-action/news/main.py:68 - wallstreet data size: 3, time: 2026-07-02 15:02:09
+[002506] 2026-07-02 15:55:36 - DEBUG - /home/runner/work/ghapi-action/ghapi-action/news/jiemian.py:28 - jiemian keys: dict_keys(['hideBtn', 'list'])
+[002506] 2026-07-02 15:55:36 - DEBUG - /home/runner/work/ghapi-action/ghapi-action/news/jiemian.py:30 - jiemian dict items list len: 20
+[002506] 2026-07-02 15:55:36 - DEBUG - /home/runner/work/ghapi-action/ghapi-action/news/main.py:68 - jiemian data size: 7, time: 2026-07-02 15:33:12
+[002596] 2026-07-02 15:55:36 - ERROR - /home/runner/work/ghapi-action/ghapi-action/news/main.py:70 - running pingwest failed!
+Traceback (most recent call last):
+  File "/home/runner/work/ghapi-action/ghapi-action/news/main.py", line 63, in task
+    ret = m.fetch(fromisoformat(times[idx]).replace(tzinfo=None), local_time)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/ghapi-action/ghapi-action/news/pingwest.py", line 18, in fetch
+    r = client.get(url).json()
+        ^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.13/x64/lib/python3.12/site-packages/httpx/_models.py", line 832, in json
+    return jsonlib.loads(self.content, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.13/x64/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.13/x64/lib/python3.12/json/decoder.py", line 338, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.13/x64/lib/python3.12/json/decoder.py", line 356, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+[003944] 2026-07-02 15:55:37 - ERROR - /home/runner/work/ghapi-action/ghapi-action/news/main.py:70 - running kr36 failed!
+Traceback (most recent call last):
+  File "/home/runner/work/ghapi-action/ghapi-action/news/main.py", line 63, in task
+    ret = m.fetch(fromisoformat(times[idx]).replace(tzinfo=None), local_time)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/ghapi-action/ghapi-action/news/kr36.py", line 36, in fetch
+    info = json.loads(info)
+           ^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.13/x64/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.13/x64/lib/python3.12/json/decoder.py", line 341, in decode
+    raise JSONDecodeError("Extra data", s, end)
+json.decoder.JSONDecodeError: Extra data: line 1 column 59 (char 58)
+[004007] 2026-07-02 15:55:37 - DEBUG - /home/runner/work/ghapi-action/ghapi-action/news/main.py:68 - nbd data size: 16, time: 2026-07-02 22:50:33
+[006465] 2026-07-02 15:55:40 - ERROR - /home/runner/work/ghapi-action/ghapi-action/news/main.py:70 - running ifeng failed!
+Traceback (most recent call last):
+  File "/home/runner/work/ghapi-action/ghapi-action/news/main.py", line 63, in task
+    ret = m.fetch(fromisoformat(times[idx]).replace(tzinfo=None), local_time)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/ghapi-action/ghapi-action/news/ifeng.py", line 38, in fetch
+    while time > last_time:
+          ^^^^^^^^^^^^^^^^
+TypeError: '>' not supported between instances of 'int' and 'datetime.datetime'
