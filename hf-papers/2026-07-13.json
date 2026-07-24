@@ -1,0 +1,346 @@
+[
+    {
+        "id": 1,
+        "index": 36,
+        "title": "Long-Horizon-Terminal-Bench: Testing the Limits of Agents on Long-Horizon Terminal Tasks with Dense Reward-Based Grading",
+        "author": [
+            "Zongxia Li",
+            "Zhongzhi Li",
+            "Yucheng Shi",
+            "Ruhan Wang",
+            "Junyao Yang",
+            "Zhichao Liu",
+            "Xiyang Wu",
+            "Anhao Li",
+            "Yue Yu",
+            "Ninghao Liu",
+            "Lichao Sun",
+            "Haotao Mi",
+            "LeoweiLiang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.08964",
+        "abstract": "AI agents have become capable of autonomously completing short, well-specified tasks. However, existing terminal benchmarks largely focus on simple problems that finish within minutes and are evaluated only by their final outcome. This setup overlooks intermediate progress and partial solutions, yielding sparse reward signals and an incomplete picture of agent capability. We introduce Long-Horizon-Terminal-Bench, a terminal benchmark of 46 long-horizon tasks spanning nine categories, including experiment reproduction, software engineering, multimodal analysis, interactive games, and scientific computing. Each task follows a Terminal-Bench-style setup with a reference solution or simulation engine, but is further decomposed into fine-grained graded subtasks. This design enables dense intermediate rewards and partial credit, allowing evaluation to capture not only whether an agent reaches the final goal, but also how far it progresses on open-ended workflows. Tasks in Long-Horizon-Terminal-Bench typically require hundreds of episodes and minutes to hours of execution, stressing long-horizon planning, long-context management, and iterative debugging rather than one-shot problem solving. We evaluate 15 frontier models and find that agents consume on average 9.9M tokens per task, with roughly 231 episodes and 85.3 minutes of execution time per run, making Long-Horizon-Terminal-Bench more demanding than prior terminal-based benchmarks. Even the strongest tested model achieves 15.2% pass@1 at a partial-reward threshold of 0.95 and 10.9% at a perfect-reward threshold of 1.0, while the mean pass rate across models is 4.3% and 1.7% under the two thresholds, respectively. These results reveal headroom for improvement. We further analyze failure modes and error patterns, and release Long-Horizon-Terminal-Bench to support future progress on long-horizon terminal agents.",
+        "tags": []
+    },
+    {
+        "id": 2,
+        "index": 33,
+        "title": "Scalable Visual Pretraining for Language Intelligence",
+        "author": [
+            "Yiming Zhang",
+            "Zhonghan Zhao",
+            "Wenwei Zhang",
+            "Haiteng Zhao",
+            "Tianyang Lin",
+            "Yunhua Zhou",
+            "Demin Song",
+            "Kuikun Liu",
+            "Haochen Ye",
+            "Haian Huang",
+            "Yuzhe Gu",
+            "Haijun Lv",
+            "Qipeng Guo",
+            "Bin Liu",
+            "Gaoang Wang",
+            "Kai Chen"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.09657",
+        "abstract": "The rapid progress of large foundation models has been driven predominantly by pretraining on large-scale text corpora. However, many forms of knowledge are conveyed through visual representations, where figures, typeset equations, and page layouts carry rich information that cannot be faithfully or completely captured by text alone. Yet current pretraining approaches discard these visual cues by converting visually rich sources, such as documents and web pages, into plain text for learning language intelligence. This paper challenges the default assumption that language models must be trained on text-only representations and shows that Visual Pretraining is a scalable learner for foundation model intelligence. To this end, we conduct a systematic study of unsupervised visual pretraining paradigms that directly leverage visual documents without text extraction. Across multiple backbones and benchmarks, visual pretraining on the same underlying corpora consistently outperforms text-only pretraining, offering an efficient pathway to scalable language intelligence.",
+        "tags": []
+    },
+    {
+        "id": 3,
+        "index": 32,
+        "title": "Video Generation Models are General-Purpose Vision Learners",
+        "author": [
+            "Letian Wang",
+            "Chuhan Zhang",
+            "Rishabh Kabra",
+            "Jasper Uijlings",
+            "Steven Waslander",
+            "Andrew Zisserman",
+            "Joao Carreira",
+            "Kaiming He",
+            "Misha Andriluka",
+            "Eduard Gabriel Bazavan",
+            "Andrei Zanfir",
+            "Cristian Sminchisescu"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.09024",
+        "abstract": "Driven by next-token prediction, NLP shifted from task-specific models into powerful generalist foundation models. What, then, is the equivalent catalyst needed to achieve a general-purpose model in computer vision? In this paper, we contend that large-scale text-to-video generation serves as a strong pre-training paradigm for computer vision, providing the necessary spatiotemporal priors, vision-language alignment, and scalability required for general visual intelligence. We introduce GenCeption, which leverages a pre-trained video generative diffusion backbone to define a feed-forward perception model, capable of performing various vision tasks steered by text instructions. Empirical results demonstrate that GenCeption achieves state-of-the-art performance across a diverse suite of tasks, including depth, surface normal, and camera pose estimation, expression-referring segmentation, and 3D keypoint prediction, often matching or surpassing specialized models (e.g. DepthAnything3, SAM3, D4RT, VGGT-Omega, Sapiens, David, Genmo, and Lotus-2). Furthermore, the video generative pretrained backbone outperforms alternative pretraining paradigms (e.g., V-JEPA, and Video MAE) under comparable settings. Importantly, GenCeption exhibits preliminary data and model scaling properties along with exceptional data efficiency, where it achieves comparable performance with leading models like D4RT and VGGT-Omega with 7 to 500 less training data. Finally, GenCeption also exhibits intriguing emergent behaviors: a model trained exclusively on synthetic human videos generalizes to real-world footage and out-of-distribution object categories (e.g., animals and robots). These findings suggest that video generation is not merely a synthesis tool, but a foundational path toward generalist vision intelligence for the physical world. Project page: https://genception.github.io",
+        "tags": [
+            "3D",
+            "Diffusion",
+            "Pose Estimation",
+            "Segmentation",
+            "Text-to-Video",
+            "Video Generation"
+        ]
+    },
+    {
+        "id": 4,
+        "index": 14,
+        "title": "Trust Region Policy Distillation",
+        "author": [
+            "Zhengpeng Xie",
+            "Li Lyna Zhang",
+            "Zeke Xie",
+            "Mao Yang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.04751",
+        "abstract": "Big goals are hard to achieve all at once; breaking them into small steps is wiser. We present Trust Region Policy Distillation (TOP-D), which transforms the notoriously unstable, high-variance On-Policy Distillation (OPD) into a stable training paradigm by dynamically constructing a proximal teacher. Theoretically, we establish a rigorous framework demonstrating that TOP-D inherently controls gradient variance. By providing a formal global convergence analysis alongside a monotonic improvement bound, we mathematically formalize the reliability and stability of the overall training dynamics. Empirically, TOP-D dramatically enhances training stability, sample efficiency, and final performance on mathematical reasoning tasks. More importantly, TOP-D introduces zero additional computational overhead, positioning itself as a promising alternative to the well-established OPD paradigm.",
+        "tags": []
+    },
+    {
+        "id": 5,
+        "index": 9,
+        "title": "KronQ: LLM Quantization via Kronecker-Factored Hessian",
+        "author": [
+            "Donghyun Lee",
+            "Yuhang Li",
+            "Ruokai Yin",
+            "Priyadarshini Panda"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.07964",
+        "abstract": "Post-training quantization (PTQ) is a widely adopted technique for compressing large language models (LLMs) without retraining. Existing second-order PTQ methods, including GPTQ, construct quantization objectives exclusively from input activation statistics, effectively assuming that all output channels contribute equally to the layer-wise reconstruction objective. We propose KronQ, a PTQ framework that challenges this assumption by introducing the gradient covariance into the quantization pipeline. Under the Kronecker-factored Hessian approximation, the quantization loss depends jointly on both the activation and gradient covariances, and KronQ exploits this at two complementary levels. (1) KronQ introduces bidirectional incoherence processing, extending the existing input-side random rotation to the output dimension using the gradient covariance, reducing weight magnitude variance across both input and output dimensions. (2) KronQ derives a new sensitivity metric for inter-layer mixed-precision allocation, driven by the gradient and activation Hessian traces. Notably, in the case of 2-bit weight-only quantization on LLaMA-3-70B, while GPTQ and GPTAQ diverge or produce degenerate quantizations (>2000 perplexity on WikiText-2), KronQ achieves 7.93 perplexity.",
+        "tags": [
+            "LLM",
+            "LLaMA"
+        ]
+    },
+    {
+        "id": 6,
+        "index": 7,
+        "title": "PanoWorld: Real-World Panoramic Generation",
+        "author": [
+            "Haoyuan Li",
+            "Dizhe Zhang",
+            "Yuemei Zhou",
+            "Xiangkai Zhang",
+            "Haoran Feng",
+            "Xiaofan Lin",
+            "Wenjie Jiang",
+            "Bo Du",
+            "Ming-Hsuan Yang",
+            "Lu Qi"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.09661",
+        "abstract": "In this work, we aim to address the challenge of long-range memory in panoramic world models by exploiting the rotation-equivariant property of omnidirectional representations, where rotation can be treated as an implicit geometric http://transformation.Building on this insight, we propose PanoWorld, which simplifies camera trajectories into translations via fixed headings for both current-action modeling and long-range memory through Dense Panoramic Ray-Conditioning (DPRC) and Geometry-aware Memory Augmentation (GMA).Then, a three-stage training pipeline is introduced to progressively optimize each component. To better evaluate physical consistency under large-scale spatial variations and diverse illumination conditions, where existing datasets are relatively stable, we construct World360, a large-scale dataset consisting of both real-world video clips collected via panoramic unmanned aerial vehicles and high-quality simulated clips generated by http://AirSim360.Extensive experiments on World360 demonstrate the effectiveness of PanoWorld, outperforming alternative methods by a large http://margin.Our models, training code, and dataset will be publicly available. More information can be found on our project page: https://lihaoy-ux.github.io/panoworld-page/.",
+        "tags": []
+    },
+    {
+        "id": 7,
+        "index": 7,
+        "title": "From RGB Generation to Dense Field Readout: Pixel-Space Dense Prediction with Text-to-Image Models",
+        "author": [
+            "Zanyi Wang",
+            "Xin Lin",
+            "Haodong Li",
+            "Dengyang Jiang",
+            "Yijiang Li"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.06553",
+        "abstract": "Large-scale text-to-image models are attractive backbones for dense prediction because RGB generation pretraining learns rich semantic, structural, and geometric priors. Existing generative and editing approaches reuse these priors by casting dense prediction as target generation: annotations such as depth, normals, alpha mattes, masks, and heatmaps are encoded into an RGB-trained VAE latent space and decoded back as image-like targets. We argue this inherits more of the generative output interface than dense prediction requires: unlike RGB synthesis, dense prediction asks for pixel-correct, task-native fields on the same image plane, not new RGB content to be rendered. Our key observation is that a pretrained DiT already organizes RGB inputs through a patch-to-token-to-patch lattice on the image plane, so each token indexes a fixed output patch whose channels can carry task-native quantities instead of RGB appearance. We instantiate this as ReChannel: we keep the VAE encoder for the DiT's input distribution but drop the target-side decoder, adapt the frozen DiT with task LoRA, and map each token to its p x p x K_t pixel-space patch through a shared token-local linear head--about 33K parameters, no spatial mixing. Using FLUX-Klein, we evaluate on six dense prediction tasks and over a dozen benchmarks. This minimal interface sets new state-of-the-art on trimap-free matting, KITTI depth, and referring segmentation, and stays competitive on normals, saliency, and pose. In a matched 4B setting it is more accurate and 2.48x faster than an edit-plus-latent-decode counterpart--dense perception can benefit from generative pretraining without inheriting its output interface.",
+        "tags": [
+            "DiT",
+            "FLUX",
+            "LoRA",
+            "Matting",
+            "Segmentation",
+            "Text-to-Image",
+            "VAE"
+        ]
+    },
+    {
+        "id": 8,
+        "index": 5,
+        "title": "Self-Guided Test-Time Training for Long-Context LLMs",
+        "author": [
+            "Xinyu Zhu",
+            "Zhe Xu",
+            "Xiaohan Wei",
+            "Yunchen Pu",
+            "Fei Tian",
+            "Chonglin Sun",
+            "Kaushik Rangadurai",
+            "Hua Zhi",
+            "Frank Shyu",
+            "Sandeep Pandey",
+            "Luke Simon",
+            "Yu Meng",
+            "Xi Liu"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.09415",
+        "abstract": "Long-context processing has become increasingly important for large language models (LLMs), but simply extending the context window does not guarantee effective utilization of long inputs. As input length grows, accuracy often degrades, indicating that models still struggle to identify and use the evidence most relevant to a question. A promising way to improve long-context utilization is test-time training (TTT), which treats the test context as a training example for instance-specific parameter adaptation. However, applying TTT to the entire long context is prohibitively expensive, while adapting on randomly sampled spans introduces severe noise. Because most spans in a long context are irrelevant to the specific question, training on them may even degrade the base model's performance. Our preliminary study shows that TTT is highly sensitive to training-span quality: on LongBench-v2, TTT on randomly sampled spans hurts performance, whereas TTT on oracle spans substantially improves it. Motivated by this, we propose a simple method, Self-Guided TTT (S-TTT): before adaptation, the model identifies the evidence spans it should learn from, and the standard language-modeling training objective is applied only to those selected spans. On two challenging long-context reasoning benchmarks, LongBench-v2 and LongBench-Pro, S-TTT improves accuracy for both Qwen3-4B-Thinking-2507 and Llama-3.1-8B-Instruct, achieving up to a 15% relative improvement.",
+        "tags": [
+            "LLM",
+            "LLaMA",
+            "TTT"
+        ]
+    },
+    {
+        "id": 9,
+        "index": 3,
+        "title": "Flow-ERD: Agent-type Aware Flow Matching with Entropy-Regularized Distillation for Diverse Traffic Simulation",
+        "author": [
+            "Seulbin Hwang",
+            "Kiyoung Om",
+            "Daejung Kim",
+            "Jinhan Lee"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.06957",
+        "abstract": "Realistic and diverse traffic simulation is essential to autonomous driving development. Yet prevailing benchmarks predominantly reward realism, and recent methods have optimized accordingly, leaving diversity underexplored. We introduce \\textbf{Flow-ERD}, a multi-agent simulator that pursues realism and diversity jointly. Its backbone, \\textbf{Agent-Type Aware Flow Matching} (AFM), couples flow matching's multi-modal expressiveness with type-specific kinematic execution. It preserves fine-grained diversity while keeping motions consistent with each agent type. A second stage, \\textbf{Entropy-Regularized Distillation} (ERD), fine-tunes the closed-loop rollout distribution with an entropy-regularized reverse-KL objective. This mitigates covariate shift while explicitly preventing collapse onto high-density modes. We evaluate Flow-ERD with a log-free diversity metric alongside standard realism scores. Flow-ERD ranks first on the WOSAC test benchmark and dominates the realism--diversity Pareto front among reproducible baselines. Our project page is available \\href{https://seulbinhwang.github.io/flow-erd-project-page/}{here}.",
+        "tags": [
+            "Flow Matching"
+        ]
+    },
+    {
+        "id": 10,
+        "index": 1,
+        "title": "Phone Segmentation and Recognition through Phonological Activation Mapping",
+        "author": [
+            "Shikhar Bharadwaj",
+            "Kwanghee Choi",
+            "Stephen McIntosh",
+            "Chin-Jou Li",
+            "Eunjung Yeo",
+            "Daisuke Saito",
+            "Nobuaki Minematsu",
+            "Shinji Watanabe",
+            "Jian Zhu",
+            "David Harwath",
+            "David R. Mortensen"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.09020",
+        "abstract": "Phone segmentation and recognition are inherently related tasks, yet modern approaches typically model them separately. We argue that phonetic structure is already latent in the representations of self-supervised speech models (S3Ms), and one only needs to steer them to solve both tasks. We leverage S3M-based Phonological Activation Mapping (SPAM), which maps each S3M representation frame to a vector of phonological feature activations, such as voicing and nasality. On top of SPAM, we introduce two simple but effective lightweight, gradient-descent-free prediction heads: a recognition head and a segmentation head. Our method requires less than a minute of phonetic transcriptions, and generalizes to unseen phones during training. Across a diverse range of datasets, our approach attains strong segmentation and recognition performance.",
+        "tags": [
+            "Segmentation"
+        ]
+    },
+    {
+        "id": 11,
+        "index": 1,
+        "title": "Towards Mechanistically Understanding Why Memorized Knowledge Fails to Generalize in Large Language Model Finetuning",
+        "author": [
+            "Lu Dai",
+            "Ziyang Rao",
+            "Yili Wang",
+            "Hanqing Wang",
+            "Hao Liu",
+            "Hui Xiong"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.08393",
+        "abstract": "Fine-tuning LLMs to inject new knowledge faces a critical challenge: LLMs can quickly memorize new facts, yet fail to use them for downstream reasoning tasks. We formalize this failure as the \\textit{\\textbf{Knowing--Using Gap}}, characterized by an accuracy gap and a temporal lag between memorization and generalization. To understand this phenomenon, we fine-tune LLMs with unseen knowledge and monitor the spatial permeation dynamics of the knowledge internally using a novel intervention technique called self-patching. Self-patching identifies activation locations where relocating representations substantially improves failed generalization cases. These results are consistent with a knowledge-circuit misalignment hypothesis: memorized representations can exist internally but may not be routed to computation-effective layers. To demonstrate the practicality of this diagnostic finding, we design a simple heuristic strategy which recovers 58--75\\% of the oracle headroom in generalization failure. Experiments are done cross-domain for the robustness of this finding.",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 12,
+        "index": 0,
+        "title": "A Sovereign, Open-Source Foundation Model for German and English",
+        "author": [
+            "Soofi-Team",
+            "Benedikt Droste",
+            "David Fitzek",
+            "Ruben HÃ¤rle",
+            "Lukas Helff",
+            "Maximilian Idahl",
+            "Alex Jude",
+            "Abbas Goher Khan",
+            "Maurice Kraus",
+            "Timm Ruland",
+            "Richard Rutmann",
+            "Sebastian Sztwiertnia",
+            "Markus Frey",
+            "Daniil Gurgurov",
+            "Jan Pfister",
+            "Tom RÃ¶hr",
+            "Sebastian von Rohrscheidt",
+            "JÃ¶rg Bienert",
+            "Nicolas Flores-Herr",
+            "Simon Gottschalk",
+            "Andreas Hotho",
+            "Kristian Kersting",
+            "Joachim KÃ¶hler",
+            "Alexander LÃ¶ser",
+            "Wolfgang Nejdl",
+            "Simon Ostermann",
+            "Jan Plogsties",
+            "Patrick Putzky",
+            "Mehdi Ali",
+            "Michael Fromm",
+            "Max LÃ¼bbering"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.09424",
+        "abstract": "We present Soofi S 30B-A3B, a sovereign, open-source Mixture-of-Experts (MoE) hybrid Mamba Transformer foundation model for German and English. Its hybrid design activates only 3B of 30B parameters per token and keeps the inference cache near-constant as context grows, giving it a decisive throughput advantage over dense models for long-context, high-concurrency deployment. Pretrained on roughly 27 trillion tokens with deliberately up-weighted German, Soofi S matches dense 14 to 27B models on aggregate English and German benchmarks while achieving the best code aggregates in both languages among 17 open base models, and outperforms every European sovereign baseline in our comparison, including ones far larger in active parameters. Among fully open models, Soofi S obtains the highest English and German evaluation scores, ahead of Olmo 3 32B and Apertus 70B. Soofi S was built end-to-end on the German Industrial AI Cloud, a sovereign HPC scale AI infrastructure operated by Deutsche Telekom in Munich. Soofi S will be released under highly permissive, open-access terms: weights, selected intermediate checkpoints, full per-source data accounting, hyperparameters, and training and evaluation code. Where source licenses permit, data-construction artifacts are released under permissive licenses; commercially licensed sources are documented with aggregate statistics and exact mixture accounting.",
+        "tags": [
+            "Mamba",
+            "MoE",
+            "Transformer"
+        ]
+    },
+    {
+        "id": 13,
+        "index": 0,
+        "title": "MedPMC: A Systematic Framework for Scaling High-Fidelity Medical Multimodal Data for Foundation Models",
+        "author": [
+            "Hyunjae Kim",
+            "Dain Kim",
+            "Pan Xiao",
+            "Serina S. Applebaum",
+            "Younjoon Chung",
+            "Xuguang Ai",
+            "Yu Yin",
+            "Roy Jiang",
+            "Yuexi Du",
+            "Yawen Wei",
+            "Yiming Kong",
+            "Tuo Guo",
+            "Zhiyuan Cao",
+            "Mengmeng Du",
+            "Yuelei Fu",
+            "Yan Hu",
+            "Rui Shi",
+            "Gui Yang",
+            "Kevin W. Jin",
+            "Yuntian Liu",
+            "Yuxuan Tian",
+            "Jonathan Marquez",
+            "Zhen Chen",
+            "Sheng Zhang",
+            "Hoifung Poon",
+            "Hua Xu",
+            "Jaewoo Kang",
+            "Qingyu Chen"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.07673",
+        "abstract": "Medicine is inherently multimodal, requiring clinicians to synthesize information across diverse data streams. Yet the development of multimodal foundation models is constrained by limited access to large-scale, high-quality clinical data. Although PubMed Central (PMC) offers a complementary source of expert-authored image-text data, existing PMC-derived resources remain limited in fidelity, reproducibility, and clinical validation. We introduce MedPMC, an automated, continuously updatable framework that transforms permissively licensed literature into high-fidelity infrastructure for medical multimodal models. Applied to 6.1 million PMC articles, MedPMC curated 11 million medical image-text pairs. Component evaluations showed strong performance for initial screening (F1 = 93.2), multi-panel figure detection (F1 = 96.5), figure separation (mAP = 89.8), caption separation and alignment (F1 = 81.4; ROUGE-L = 85.3), and medical figure classification (F1 = 96.5). Manual review by five annotators, three with medical training, found 95.3% of MedPMC images medically relevant, versus 19.7% in a prior PMC-derived dataset. Across 26 benchmarks spanning 11 specialties, a MedPMC-trained CLIP-style model improved average zero-shot AUC by 7.1 percentage points over the strongest architecture-matched biomedical CLIP baseline despite using fewer than half as many image-text pairs. As the vision encoder in a multimodal large language model, it improved medical visual question-answering by 1.9 and 16.9 percentage points across two benchmarks. In 10,524 Yale New Haven Health System dermatology photographs, it improved morphology-to-image retrieval Recall@5 by 11.7 percentage points. These findings show that high-fidelity literature curation strengthens medical multimodal foundation models across benchmark and clinical settings. We publicly release the framework, corpus, benchmarks, and pretrained models.",
+        "tags": [
+            "CLIP",
+            "Detection"
+        ]
+    },
+    {
+        "id": 14,
+        "index": 0,
+        "title": "VaseMuseum: Digital Intelligent Museum for Ancient Greek Pottery",
+        "author": [
+            "Jiazi Wang",
+            "Nonghai Zhang",
+            "Qiushi Xie",
+            "Zeyu Zhang",
+            "Yufeng Chen",
+            "Yang Zhao",
+            "Ling Shao",
+            "Hao Tang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.06374",
+        "abstract": "Vision-language models (VLMs) have made interactive digital museums increasingly feasible by connecting 3D digitization with natural-language artifact exploration. However, in cultural heritage domains such as ancient Greek pottery, reliable VLM assistance is limited by two challenges. First, open-ended interpretation requires grounding fine-grained 2D/3D visual evidence in specialized curatorial knowledge, yet the retrieval process may introduce weak sources and unverifiable references. Second, when the available evidence is incomplete, noisy, or ambiguous, VLMs often produce confident but unsupported answers instead of calibrated uncertainty. To address these challenges, we propose VaseMuseum, a lightweight and modular multimodal agent framework for intelligent digital museums of ancient Greek pottery. VaseMuseum combines an interactive virtual museum with VaseAgent, which supports both 2D images and 3D artifacts through multimodal perception, 3D-aware reasoning, external knowledge retrieval, and inference-time reliability control. Specifically, VaseAgent retrieves evidence from authoritative web and museum knowledge sources, and source-level control selects diverse and verifiable evidence before generation. Meanwhile, response-level control checks generated claims against the evidence pool and encourages neutral, evidence-bounded answers when support is insufficient or conflicting. Moreover, a training-free GRPO-style selection mechanism favors responses with valid references and calibrated confidence without updating the VLM backbone. Experiments in a realistic digital museum simulation show that VaseMuseum improves citation validity, reduces hallucinations on knowledge-intensive queries, and produces more neutral answers under ambiguity compared with search-enabled VLM baselines.",
+        "tags": [
+            "3D",
+            "GRPO",
+            "VLM"
+        ]
+    }
+]

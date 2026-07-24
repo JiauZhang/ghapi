@@ -1,0 +1,17 @@
+[000002] 2026-07-24 14:26:44 - DEBUG - /home/runner/work/ghapi-action/ghapi-action/arxiv/main.py:10 - running /home/runner/work/ghapi-action/ghapi-action/arxiv/xhs.py...
+[000008] 2026-07-24 14:26:44 - DEBUG - /home/runner/work/ghapi-action/ghapi-action/arxiv/main.py:10 - running /home/runner/work/ghapi-action/ghapi-action/arxiv/arxiv.py...
+[000018] 2026-07-24 14:26:44 - DEBUG - /home/runner/work/ghapi-action/ghapi-action/arxiv/main.py:10 - running /home/runner/work/ghapi-action/ghapi-action/arxiv/hf_papers.py...
+[000313] 2026-07-24 14:26:45 - DEBUG - /home/runner/work/ghapi-action/ghapi-action/arxiv/arxiv.py:25 - arxiv info has already been updated!
+[001787] 2026-07-24 14:26:46 - ERROR - /home/runner/work/ghapi-action/ghapi-action/arxiv/main.py:13 - running /home/runner/work/ghapi-action/ghapi-action/arxiv/hf_papers.py failed!
+Traceback (most recent call last):
+  File "/home/runner/work/ghapi-action/ghapi-action/arxiv/main.py", line 11, in task
+    runpy.run_path(fn)
+  File "<frozen runpy>", line 287, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/runner/work/ghapi-action/ghapi-action/arxiv/hf_papers.py", line 123, in <module>
+    for i in range(diff): P.rm(f'{root}/{files[i]}')
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.13/x64/lib/python3.12/site-packages/conippets/path.py", line 5, in rm
+    os.remove(path)
+FileNotFoundError: [Errno 2] No such file or directory: '../ghapi/hf-papers/2026-06-03.json'
