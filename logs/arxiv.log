@@ -1,0 +1,77 @@
+[000010] 2026-08-08 15:12:05 - DEBUG - /home/runner/work/ghapi-action/ghapi-action/arxiv/main.py:10 - running /home/runner/work/ghapi-action/ghapi-action/arxiv/xhs.py...
+[000038] 2026-08-08 15:12:05 - DEBUG - /home/runner/work/ghapi-action/ghapi-action/arxiv/main.py:10 - running /home/runner/work/ghapi-action/ghapi-action/arxiv/arxiv.py...
+[000045] 2026-08-08 15:12:05 - DEBUG - /home/runner/work/ghapi-action/ghapi-action/arxiv/main.py:10 - running /home/runner/work/ghapi-action/ghapi-action/arxiv/hf_papers.py...
+[000260] 2026-08-08 15:12:05 - DEBUG - /home/runner/work/ghapi-action/ghapi-action/arxiv/arxiv.py:120 - fetch arxiv info...
+[000856] 2026-08-08 15:12:05 - ERROR - /home/runner/work/ghapi-action/ghapi-action/arxiv/main.py:13 - running /home/runner/work/ghapi-action/ghapi-action/arxiv/hf_papers.py failed!
+Traceback (most recent call last):
+  File "/home/runner/work/ghapi-action/ghapi-action/arxiv/main.py", line 11, in task
+    runpy.run_path(fn)
+  File "<frozen runpy>", line 287, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/runner/work/ghapi-action/ghapi-action/arxiv/hf_papers.py", line 123, in <module>
+    for i in range(diff): P.rm(f'{root}/{files[i]}')
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.13/x64/lib/python3.12/site-packages/conippets/path.py", line 5, in rm
+    os.remove(path)
+FileNotFoundError: [Errno 2] No such file or directory: '../ghapi/hf-papers/2026-06-03.json'
+[001309] 2026-08-08 15:12:06 - DEBUG - /home/runner/work/ghapi-action/ghapi-action/arxiv/arxiv.py:42 - day-month-year: ['New submissions (showing 607 of 607 entries)', 'Cross submissions (showing 49 of 49 entries)', 'Replacement submissions (showing 355 of 355 entries)']
+[002323] 2026-08-08 15:12:07 - DEBUG - /home/runner/work/ghapi-action/ghapi-action/arxiv/arxiv.py:141 - intersection ratio: 1.0
+[002324] 2026-08-08 15:12:07 - DEBUG - /home/runner/work/ghapi-action/ghapi-action/arxiv/arxiv.py:143 - it's not new arxiv data!
+[009084] 2026-08-08 15:12:14 - ERROR - /home/runner/work/ghapi-action/ghapi-action/arxiv/main.py:13 - running /home/runner/work/ghapi-action/ghapi-action/arxiv/xhs.py failed!
+Traceback (most recent call last):
+  File "/home/runner/work/ghapi-action/ghapi-action/arxiv/main.py", line 11, in task
+    runpy.run_path(fn)
+  File "<frozen runpy>", line 287, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/runner/work/ghapi-action/ghapi-action/arxiv/xhs.py", line 240, in <module>
+    asyncio.run(amain())
+  File "/opt/hostedtoolcache/Python/3.12.13/x64/lib/python3.12/asyncio/runners.py", line 195, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.13/x64/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.13/x64/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/home/runner/work/ghapi-action/ghapi-action/arxiv/xhs.py", line 235, in amain
+    await asyncio.to_thread(main)
+  File "/opt/hostedtoolcache/Python/3.12.13/x64/lib/python3.12/asyncio/threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.13/x64/lib/python3.12/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/ghapi-action/ghapi-action/arxiv/xhs.py", line 201, in main
+    context = p.chromium.launch_persistent_context(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.13/x64/lib/python3.12/site-packages/playwright/sync_api/_generated.py", line 17003, in launch_persistent_context
+    self._sync(
+  File "/opt/hostedtoolcache/Python/3.12.13/x64/lib/python3.12/site-packages/playwright/_impl/_sync_base.py", line 115, in _sync
+    return task.result()
+           ^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.13/x64/lib/python3.12/site-packages/playwright/_impl/_browser_type.py", line 165, in launch_persistent_context
+    result = await self._channel.send_return_as_dict(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.13/x64/lib/python3.12/site-packages/playwright/_impl/_connection.py", line 103, in send_return_as_dict
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.13/x64/lib/python3.12/site-packages/playwright/_impl/_connection.py", line 632, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.Error: BrowserType.launch_persistent_context: Failed to create a ProcessSingleton for your profile directory. This usually means that the profile is already in use by another instance of Chromium.
+Call log:
+  - <launching> /usr/bin/google-chrome --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,BoundaryEventDispatchTracksNodeRemoval,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,BlockOriginHeaderModificationOnRedirect,Translate,AutoDeElevate,OptimizationHints,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --headless=new --user-data-dir=/home/runner/xhs --remote-debugging-pipe about:blank
+  - <launched> pid=2211
+  - [pid=2211][err] [2211:2211:0808/151210.726635:ERROR:chrome/browser/process_singleton_posix.cc:347] Failed to create /home/runner/xhs/SingletonLock: File exists (17)
+  - [pid=2211][err] [2211:2211:0808/151214.048089:ERROR:chrome/app/chrome_main_delegate.cc:520] Failed to create a ProcessSingleton for your profile directory. This means that running multiple instances would start multiple browser processes rather than opening a new window in the existing process. Aborting now to avoid profile corruption.
+  - [pid=2211] <gracefully close start>
+  - [pid=2211] <kill>
+  - [pid=2211] <will force kill>
+  - [pid=2211] exception while trying to kill process: Error: kill ESRCH
+  - [pid=2211] <process did exit: exitCode=21, signal=null>
+  - [pid=2211] starting temporary directories cleanup
+  - [pid=2211] finished temporary directories cleanup
+  - [pid=2211] <gracefully close end>
+

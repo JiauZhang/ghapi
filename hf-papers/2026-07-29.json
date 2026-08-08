@@ -1,0 +1,474 @@
+[
+    {
+        "id": 1,
+        "index": 103,
+        "title": "HiFi-UMI: Learning Deployable Manipulation Policies from High-Fidelity UMI Data Alone",
+        "author": [
+            "Simple AI",
+            "Yuteng Wei",
+            "Jinming Ma",
+            "Jiawei Wang",
+            "Weitao Zhou",
+            "Yushen Zuo",
+            "Ke Rui",
+            "Minglei Li",
+            "Jinhao Zhang",
+            "Zhikang Pan",
+            "Xiang Wang",
+            "Haoran Jia",
+            "Huan Du",
+            "Zicheng Zeng",
+            "Jun Ma",
+            "Guiyu Qin",
+            "Di Zhang",
+            "Xiaofei Li"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.25895",
+        "abstract": "Learning deployable manipulation policies is bottlenecked by the scarcity of data that is both high-fidelity and scalable. Real-robot teleoperation is accurate but costly to scale; robot-free UMI capture scales readily, and current practice uses the resulting data mainly for pre-training, adding a small real-robot \"anchor\" at post-training. We ask whether raising the fidelity of robot-free UMI data, rather than shrinking the real-robot fraction, can remove that anchor. We present HiFi-UMI, a portable UMI data-production system co-designed for trajectory accuracy, inter-gripper relative pose, synchronization, and field of view: head-mounted offline stereo-inertial SLAM, native rather than reconstructed relative pose, a shared microsecond GPIO trigger, and two wide-angle cameras per hand covering ~200 degrees. It reaches 3 mm workspace-local end-effector accuracy without external tracking infrastructure. Using this corpus, we demonstrate zero-robot post-training: a policy post-trained solely on HiFi-UMI demonstrations deploys directly on a real robot and matches in-domain teleoperation across three backbones spanning the vision-language-action and world-action-model families, with success-rate differences of -2.5, +3.1, and -0.6 percentage points on StarVLA-QwenPI, OpenPI-pi_0.5, and LingBot-VA; the strongest policy reaches 85% on a precision insertion task, even though the teleoperation baseline is collected in the evaluation scene and no HiFi-UMI trajectory is. Pre-training on 4,000 hours from the same corpus lowers action error on ten unseen tasks by 41% and, on StarVLA-QwenPI, raises real-robot success by a further 18.1 percentage points. We open-source HiFi-UMI-2K, 2,000 hours of microsecond-synchronized, ultra-wide-FoV demonstrations, each automatically reconstructed and validated through simulation replay, as a large-scale, high-fidelity resource for the robot-learning community.",
+        "tags": [
+            "Robotics",
+            "SLAM"
+        ]
+    },
+    {
+        "id": 2,
+        "index": 77,
+        "title": "A New Role for Relevance: Guiding Corpus Interaction in Agentic Search",
+        "author": [
+            "Jiangnan Li",
+            "Yuqing Li",
+            "Mo Yu",
+            "Jinchao Zhang",
+            "Jie Zhou"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.24223",
+        "abstract": "Relevance is a query-dependent estimate of whether a document or excerpt contains useful evidence. Existing retrieval agents use relevance to select top-$k$ content, but document relevance alone cannot localize, compose, or verify the evidence required by complex questions. Direct Corpus Interaction (DCI) enables such fine-grained operations through grep-style exploration, but its relevance-agnostic search can expose useful clues late and delay convergence. Recent advances use relevance to narrow the corpus into a working space for interaction. Once interaction begins, however, relevance still does not directly guide which documents grep searches first or distinguish informative excerpts from a broad set of matches to let LLMs see them first. We introduce the Relevance-Aware RipGrep Search Agent (RARG), which turns relevance into an execution prior for corpus interaction. RARG provides coarse-to-fine relevance guidance: it orders documents for sequential 'ripgrep' traversal to expose globally relevant clues earlier, initializes promising entry points with query-relevant paragraphs, and reranks grep matches to surface informative excerpts that document-level ranking may otherwise obscure. Across challenging browse question answering and reasoning-intensive retrieval, RARG improves the accuracy--efficiency frontier over retrieval-based and direct-interaction agents. These results demonstrate that relevance-aware interaction enables faster and more reliable search convergence.",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 3,
+        "index": 53,
+        "title": "ReDesign: Recovering Editable Design Structures from Images via Agentic Decomposition",
+        "author": [
+            "Jooyeol Yun",
+            "Jintae Park",
+            "Hyesu Lim",
+            "Junha Hyung",
+            "Hyungjin Chung",
+            "Jaegul Choo"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.25565",
+        "abstract": "Recovering an editable design file from a raster image is a common and costly bottleneck in modern design workflows, yet remains challenging since editability depends on recovering multi-modal attributes, such as typography, vector geometry, colors, grouping, and layer ordering. We present ReDesign, an agentic framework that grows an editable layer hierarchy by selecting and composing specialized tools across modalities. To keep this long decision process reliable despite imperfect tool outputs, we introduce graceful verification at each expansion, which provides local accept, prune, or retry feedback that prevents error accumulation and avoids large scale reruns. To evaluate editability at scale, we introduce the Figma Edit Replay Benchmark, consisting of 909 raw Figma files and 14,796 controlled edit instructions that replay edits on reconstructed outputs. Across this benchmark and standard reconstruction metrics, ReDesign achieves strong visual fidelity while delivering the highest editability across layout, color, and text edits, outperforming layered decomposition baselines and serial tool use pipelines.",
+        "tags": []
+    },
+    {
+        "id": 4,
+        "index": 22,
+        "title": "Keep It InMind: Benchmarking the Implicit-Association Blind Spot in Agent Memory",
+        "author": [
+            "Ruizhe Li",
+            "Mingxuan Du",
+            "Benfeng Xu",
+            "Zhendong Mao"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.24368",
+        "abstract": "Long-term memory systems store what a user says in an external store and retrieve it when a related query arrives. This interface rests on an assumption so natural that it is rarely stated: a memory that is needed will resemble the query that needs it. World knowledge breaks the assumption. A tree-nut allergy should change the answer to a macaron request through their almond-flour ingredient, yet the two texts share no cue a retriever can see. We call this failure mode the implicit-association blind spot and introduce InMind, a 125-task, expert-verified benchmark spanning ten life domains, with 113 tasks grounded in citable public sources. Its paired controls separate three explanations that existing evaluations conflate: the fact was never stored, the model lacks the bridging knowledge, or the fact was stored and never surfaced. The verdict is clean. With the decisive memory placed in context, the backbone answers 84.0 percent of indirect queries; when the same memory must be retrieved, six vector, graph, and agentic memory systems reach at most 14.4 percent, even though they recall the same facts on demand at up to 100 percent. An embedding with eight times the dimensionality raises answer-blind target recall for every system yet leaves the gap essentially intact. A minimal diagnostic probe that keeps memory visible before the query arrives recovers most of the gap, locating the failure in the query-conditioned interface itself and pointing to routing, deciding which facts must stay visible, as the open problem InMind is built to score.",
+        "tags": []
+    },
+    {
+        "id": 5,
+        "index": 20,
+        "title": "Pass the Baton: Trajectory-Relayed On-Policy Distillation",
+        "author": [
+            "Haolei Xu",
+            "Xiaowen Xu",
+            "Haiwen Hong",
+            "Zixuan Ni",
+            "Hongxing Li",
+            "Yiwen Qiu",
+            "Weiming Lu",
+            "Yongliang Shen"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.26057",
+        "abstract": "On-policy distillation (OPD) grounds token-level supervision in the student's own trajectory, yet suffers from prefix failure: once the student commits to a wrong reasoning direction, all subsequent generation builds on this deviation, producing misdirected continuations that elicit unreliable supervision and waste compute. We identify a teacher-student continuation asymmetry on failed prefixes, where the teacher tends to redirect while the student continues along the original direction, and convert it into a label-free handoff trigger in Relay On-Policy Distillation (Relay-OPD). During training, Relay-OPD constructs relay trajectories by letting the teacher briefly take over at detected trigger points to produce a teacher leg, after which the student resumes and is optimized on the resulting trajectory. A limited relay budget concentrates intervention on critical early positions while limiting departure from the student policy. With a Qwen3-4B-Instruct-2507 teacher and Qwen3-0.6B/1.7B-Non-Thinking students on eight mathematical reasoning benchmarks, Relay-OPD achieves the best or second-best results on every benchmark, outperforming standard OPD by +5.73% and the strongest baseline FastOPD by +1.49% on average for 1.7B, with consistent gains at 0.6B. Training trajectory length is reduced by over 50%.",
+        "tags": []
+    },
+    {
+        "id": 6,
+        "index": 19,
+        "title": "CodeNib: A Multi-View Data System for Serving Repository Context to Coding Agents",
+        "author": [
+            "Zhongming Yu",
+            "Hengjia Yu",
+            "Boqin Yuan",
+            "Shuting Zhao",
+            "Yizhao Chen",
+            "Aryan Dokania",
+            "Mihir Jagtap",
+            "Jiayu Chang",
+            "Yitong Ma",
+            "Yash Jayswal",
+            "Wentao Ni",
+            "Hejia Zhang",
+            "Zhaoling Chen",
+            "Gangda Deng",
+            "Jishen Zhao"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.25431",
+        "abstract": "Coding agents repeatedly search, navigate, and retain context from evolving repositories, but disconnected indexes, language servers, and task-local histories force repeated discovery and obscure lifecycle costs. CodeNib builds reusable lexical, dense, and structural views per repository commit, maps outputs to repository-relative source ranges, maintains selected views across edits, and serves ranked search, symbol navigation, and bounded context through one runtime.\nAcross 100 snapshots, we map quality-cost frontiers across the repository-context lifecycle. When outputs match an independent rebuild, graph and vector updates are $8.7\\times$ and $25.4\\times$ faster at the median. On the static-navigation subset matching normalized live-server locations (63% of 1,000 requests), the median per-request live/static latency ratio is $4.7\\times$. Across five models, selected context policies preserve localization with 50--87% fewer trajectory tokens than paired grep/read. Together, these results support multi-view repository-context serving with explicit, operation-specific validity boundaries.",
+        "tags": []
+    },
+    {
+        "id": 7,
+        "index": 19,
+        "title": "Mage-VL: An Efficient Codec-Native Streaming Multimodal Foundation Model",
+        "author": [
+            "Senqiao Yang",
+            "Kaichen Zhang",
+            "Zhaoyang Jia",
+            "Jinghao Guo",
+            "Yifei Shen",
+            "Xinjie Zhang",
+            "Xiaoyi Zhang",
+            "Haoqing Wang",
+            "Xiao Li",
+            "Peng Zhang",
+            "Xiang An",
+            "Yin Xie",
+            "Zhening Liu",
+            "Xun Guo",
+            "Jiahao Li",
+            "Shicheng Zheng",
+            "Jinglu Wang",
+            "Zongyu Guo",
+            "Wenxuan Xie",
+            "Zihan Zheng",
+            "Yuxuan Luo",
+            "Bin Li",
+            "Yan Lu"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.24904",
+        "abstract": "Standard vision-language models (VLMs) suffer from Moravec's paradox: they excel at complex offline visual reasoning but struggle with simple streaming perception tasks and process them inefficiently. We present Mage-VL, an efficient codec-native streaming foundation model for real-time multimodal understanding and interaction. At its core, our custom tokenizer, Mage-ViT, replaces uniform frame sampling by selectively encoding dynamic, entropy-rich regions using motion vectors and residual energy across sparse anchor (I) and predicted (P) frames. Operating at a 16 x 16 patch level, this reduces visual token consumption by over 75% while preserving spatiotemporal context. Trained from scratch on approximately 560M unlabeled images and 100M unlabeled video frames, Mage-ViT matches or outperforms flagship encoders trained on billions of image-text pairs. We establish AI4AI data pipelines encompassing prompt-code joint optimization for multimodal captioning and AI-driven performance diagnosis to guide training recipes. Furthermore, through a bio-inspired dual-system architecture - a lightweight System 1 event gate and a causal System 2 decoder - Mage-VL enables proactive streaming perception. Extensive evaluations show that Mage-VL-4B matches Qwen3-VL-4B on static tasks while achieving strong gains in video understanding and 2D/3D spatial reasoning, with up to a 3.5x wall-clock inference speedup, and comprehensively surpasses the 15B Phi-4-reasoning-vision baseline. Beyond model artifacts, we deliver seven key empirical findings covering pre-training data efficiency, variable-resolution scaling, codec system acceleration, VideoQA SFT redundancy, motion-spatial synergy, AI4AI data pipelines, and Zero-Vision SFT for multimodal RL.",
+        "tags": [
+            "3D",
+            "RL",
+            "VLM",
+            "ViT"
+        ]
+    },
+    {
+        "id": 8,
+        "index": 12,
+        "title": "Novel Claim or DÃ©jÃ  Vu? Rethinking \"Contamination-Free'' Dynamic Evaluation for Multimodal Automated Fact-Checking",
+        "author": [
+            "Haorui He",
+            "Xinwen Chen",
+            "Dacheng Wen",
+            "Reynold Cheng",
+            "Francis C. M. Lau",
+            "Yupeng Li"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.23514",
+        "abstract": "Multimodal automated fact-checking (MAFC) verifies claims by retrieving and reasoning over external evidence. However, most existing static benchmarks risk contamination: they primarily consist of outdated claims verifiable using an LLM's internal knowledge without external evidence. This can inflate performance estimates and fail to reflect true capability on novel claims that require up-to-date information. To address this, emerging dynamic benchmarks collect claims published after LLMs' knowledge cut-off dates, assuming they are uncontaminated. This work revisits this assumption by empirically studying contamination risks in both the state-of-the-art (SOTA) static AVeriTeC benchmark and our newly constructed dynamic ClaimReview2025Q4 benchmark, as well as their impact on MAFC evaluation. Our experiments yield 16 findings, highlighting three key results: (1) Dynamic evaluation reduces but does not eliminate contamination risks, as 17.09\\%--29.30\\% of post-cut-off claims remain potentially contaminated; (2) Many newly published claims can be verified either directly or by synthesizing multiple pieces of public knowledge available before the cut-off; and (3) Contamination can induce statistically significant inflation in MAFC performance, increasing Macro-F1 by up to 11.34 points and distorting system rankings. In light of these findings, we re-evaluate SOTA LLMs under a strictly contamination-controlled setting. Our study provides practical guidelines for trustworthy MAFC evaluation.",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 9,
+        "index": 9,
+        "title": "Wonder: Video World Model Done Better",
+        "author": [
+            "Jiacong Xu",
+            "Hanwen Jiang",
+            "Zhixin Shu",
+            "Kalyan Sunkavalli",
+            "Vishal M. Patel",
+            "Yiqun Mei"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.26037",
+        "abstract": "We present Wonder, a general-purpose video world model for real-time, camera-controllable world exploration. Given an image or a conditional video, Wonder constructs a playable world where users can navigate interactively by moving the camera, discovering unseen regions, and revisiting previously observed areas in real time and over a long-term horizon. Achieving this capability requires a system-level co-design of control method, memory mechanism, and training strategy. We introduce a novel camera conditioning with a dense coordinate field whose renderings provide spatially aligned motion and orientation cues, allowing the model to interpret camera motion directly as visual evidence. To support fast and precise memory retrieval over a growing generation context, we propose an efficient sparse attention-based memory mechanism, enabling the model to selectively attend to a small set of relevant context tokens at inference time, regardless of actual context length. We further develop several techniques to rectify the self-forcing-style distillation pipeline, improving the student model's ability to respect control signals, as well as maintaining diverse generation modes and long-term memory from the teacher. Together, these components enable Wonder to synthesize diverse, minute-scale videos at 16 FPS while preserving coherent geometry, appearance, and dynamics across long rollouts. Beyond image-to-video generation, Wonder naturally supports video-conditioned generation, allowing existing dynamic scenes to be re-shot in real time.",
+        "tags": [
+            "Video Generation"
+        ]
+    },
+    {
+        "id": 10,
+        "index": 9,
+        "title": "Shieldstral",
+        "author": [
+            "Antonia Calvi",
+            "Avinash Sooriyarachchi",
+            "Giada Pistilli",
+            "Guillaume Lample",
+            "Maarten Buyl",
+            "Maximilian Augustin",
+            "Maximilian MÃ¼ller",
+            "Pierre Stock",
+            "Tom Bewley",
+            "Wassim Bouaziz",
+            "Yimu Pan"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.25857",
+        "abstract": "We introduce Shieldstral, a 3B-parameter policy-adaptive multimodal safety classifier that matches or outperforms models nearly 7$\\times$ its size on text safety benchmarks and sets a new state of the art on multimodal safety classification. Shieldstral formulates content moderation as a binary question-answering task. This simple formulation unifies diverse moderation tasks into a single yes/no problem, enabling heterogeneous safety datasets with divergent taxonomies to be consolidated under one training framework. We present the data construction recipe, covering curation and generation of approximately 54.1M samples and a fine-grained evaluation set to evaluate policy adaptability. Together, these enable a small adaptive model to match or outperform much larger models.",
+        "tags": []
+    },
+    {
+        "id": 11,
+        "index": 9,
+        "title": "PerceptionBench: Evaluating Atomic Visual Perception in Multimodal Large Language Models",
+        "author": [
+            "Zichao Lin",
+            "Yifeng Xie",
+            "Bowen Qu",
+            "Haiming Wang",
+            "Jia Li",
+            "Haoning Wu",
+            "Yuhao Dong",
+            "Zuhao Yang",
+            "Jinguo Zhu",
+            "Haoyu Lu",
+            "Zijia Zhao",
+            "Tongtian Yue",
+            "Zhangyang Qi",
+            "Junwei Yang",
+            "Mengfan Dong",
+            "Peizhou Cao",
+            "Chenzhuang Du",
+            "Zaida Zhou",
+            "Haotian Yao",
+            "Hao Yang",
+            "Hongcheng Gao",
+            "Lin Sui",
+            "Weihong Li",
+            "Xinxing Zu",
+            "Jia Chen",
+            "Yao Wang",
+            "Xiaoxue Wu",
+            "Yalin Wang",
+            "Y. Charles",
+            "Yiping Bao",
+            "Yangyang Liu",
+            "Zhiqi Huang",
+            "Xinyu Zhou"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.24957",
+        "abstract": "We introduce PerceptionBench, a benchmark specifically designed to evaluate the atomic visual perception capabilities of Multimodal Large Language Models (MLLMs). Existing benchmarks often fail to isolate perception: holistic evaluations conflate perceptual errors with failures in reasoning or domain knowledge, while application-driven benchmarks only cover narrow, fragmented domains shaped by heuristic designs. To address these limitations, PerceptionBench adopts a bottom-up approach: by diagnosing the earliest failure points in the responses of frontier MLLMs across 42 existing benchmarks, we construct an error taxonomy whose perception branch defines ten atomic perceptual capabilities. Guided by this taxonomy, we construct 3,000 verified questions with short, unambiguous answers, each isolating a single capability, with difficulty stemming from perception rather than reasoning or knowledge. Benchmark results across sixteen frontier MLLMs reveal that atomic perception remains largely unsolved---no model reaches 60\\% accuracy, perception-related hallucination is the weakest capability on average, and similar overall scores conceal sharply divergent capability profiles. PerceptionBench thus provides a capability-level standard for measuring and diagnosing the visual perception boundaries of MLLMs.",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 12,
+        "index": 7,
+        "title": "MODUS: Decoder-Only Any-to-Any Modeling of Diverse Modalities",
+        "author": [
+            "Mingqiao Ye",
+            "Zhaochong An",
+            "Zhitong Gao",
+            "Xian Liu",
+            "FranÃ§ois Fleuret",
+            "Chuan Li",
+            "Amir Zadeh",
+            "Serge Belongie",
+            "Afshin Dehghan",
+            "Jesse Allardice",
+            "David Mizrahi",
+            "OÄuzhan Fatih Kar",
+            "Roman Bachmann",
+            "Amir Zamir"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.25948",
+        "abstract": "Any-to-any models predict any modality from any combination of others within a single network, a formulation used in multimodal vision and vision-language models, and increasingly in scientific domains such as ecology and astronomy. Existing any-to-any models are typically trained from scratch using encoder-decoder or diffusion architectures, impacting their performance and preventing them from using strong pre-trained decoder-only models as a prior. In this work, we investigate decoder-only any-to-any multimodal modeling, which treats all modalities symmetrically and supports arbitrary modalities as inputs and outputs without modality-specific heads, losses, or task pipelines. Because every modality is both an input and an output of the same model, the resulting model, named Modus, can support a range of applications, such as chained generation through intermediate modalities or cross-modal self-verification by scoring the model's own outputs with another generated modality. Modus demonstrates strong out-of-the-box performance and is competitive with specialist and multitask baselines using a single model across various benchmarks. All materials are open-sourced at https://modus-multimodal.epfl.ch/.",
+        "tags": [
+            "Diffusion",
+            "VLM"
+        ]
+    },
+    {
+        "id": 13,
+        "index": 7,
+        "title": "Visual prompt engineering for video models",
+        "author": [
+            "Robert Geirhos",
+            "Yuxuan Li",
+            "ThaddÃ¤us Wiedemer",
+            "Neha Kalibhat",
+            "Zi Wang",
+            "Mani Malek",
+            "Oyvind Tafjord",
+            "Kevin Swersky",
+            "Been Kim",
+            "Priyank Jaini"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.25537",
+        "abstract": "In the age of foundation models, a model is only as good as its prompt. For this reason, prompt engineering has become an essential technique for improving language model performance. Since video models are currently becoming foundation models for visual tasks (e.g., visual reasoning), we here ask whether they similarly benefit from visual prompt engineering: automatically modifying the task image to improve model performance. For example, for a visual physics reasoning task (\"Where does the ball land, after passing a set of obstacles?\"), an abstract sketch-like scene can be turned into a photorealistic version with a simple call to an image editing model. We find that visual prompt engineering, or VIPE for short, improves video reasoning performance across tasks. In fact, for video models, visual prompt engineering can be even more effective than classic text-based prompt engineering or test-time scaling. Ultimately, just as text-based prompt engineering systematically improves language model performance, visual prompt engineering can serve as a simple, compute-efficient approach to elicit better visual reasoning performance from video models. Example videos on our project page at https://visual-prompt-engineering.github.io/.",
+        "tags": [
+            "Image Editing"
+        ]
+    },
+    {
+        "id": 14,
+        "index": 6,
+        "title": "Parallel Decoding Distillation for Fast Image and Video Generation",
+        "author": [
+            "Neta Shaul",
+            "Chao Liu",
+            "Arash Vahdat",
+            "Julius Berner"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.26004",
+        "abstract": "Generation in video diffusion or flow models is computationally expensive due to the slow and iterative sampling process. Current state-of-the-art (SOTA) acceleration methods heavily rely on variational score distillation (VSD) and adversarial losses to distill diffusion models into few-step generators. Albeit achieving high-quality video generation, these training losses are notoriously hard to optimize and suffer from mode collapse, leading to loss of video diversity and lack of motion. In this paper, we introduce Parallel Decoding Distillation (PDD), a simplified and scalable trajectory-based distillation method for fast inference of diffusion and flow matching models. Our architecture and training procedure are compatible with any pre-trained model and support sampling with a varying number of function evaluations (NFE). PDD accelerates generation by predicting multiple denoising steps per network evaluation. Conceptually, it learns a representation of the mean velocity without regressing its derivative using JVPs or finite-difference approximations. Our method achieves SOTA performance with 4-8 NFE on LTX-2.3 Text-to-Video/Audio, Wan 14B Text-to-Video, and Qwen-Image Text-to-Image. Moreover, PDD presents a significant improvement in generated video diversity.",
+        "tags": [
+            "Diffusion",
+            "Flow Matching",
+            "Qwen",
+            "Text-to-Image",
+            "Text-to-Video",
+            "Video Generation"
+        ]
+    },
+    {
+        "id": 15,
+        "index": 4,
+        "title": "OmniDelta: Skill-Driven Budget Allocation for Token Compression in OmniLLMs",
+        "author": [
+            "Haoyang Huang",
+            "Wenjie Huang",
+            "Tianqi Xu",
+            "Hongyaoxing Gu",
+            "Kang Tan",
+            "Yikai Fu",
+            "Yuhao Shen",
+            "Tianyu Liu",
+            "Baolin Zhang",
+            "Jun Zhang",
+            "Xinyi Hu",
+            "Jun Dai",
+            "Shuang Ge",
+            "Lei Chen",
+            "Yue Li",
+            "Mingchen Wang",
+            "Meng Zhang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.25669",
+        "abstract": "Emerging Omni-modal Large Language Models (OmniLLMs) enable unified understanding of text, audio, and video, but their long audio-video token sequences introduce substantial memory and inference costs. Existing compression methods mainly focus on selecting important tokens under fixed budgets, leaving the preceding budget-allocation problem underexplored. We show that direct query-to-audio/video similarity is unreliable for inter-modal budget allocation, and that uniform intra-modal budgets can miss key evidence while retaining redundant content. To address these limitations, we propose OmniDelta, a training-free, skill-driven framework that couples intent-aware inter-modal allocation with content-aware intra-modal allocation. OmniDelta first constructs audio and video skill pools to shift the fixed retained-token budget according to query demand, then reallocates modality budgets over audio segments and video frames using local complexity and temporal redundancy. The resulting local budgets can be combined with existing pruning strategies, preserving the total retained-token ratio while changing where the budget is spent. Experiments on four audio-video benchmarks with two Qwen2.5-Omni models show that OmniDelta establishes a new accuracy-efficiency Pareto frontier across pruning ratios. At 25% token retention on Qwen2.5-Omni-7B, OmniDelta reduces GPU memory by 22.0% and achieves a 1.64x end-to-end speedup over full-token inference.",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 16,
+        "index": 3,
+        "title": "Where Quality Breaks in Compressed Short-Text Generation: Staged Bottleneck Localization",
+        "author": [
+            "Alexey Gavrilov",
+            "Alan-Barsag Gazzaev",
+            "Sergey Muravyov"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.24176",
+        "abstract": "Compressed short-text generators can fail in two different places: the codec may discard information before generation starts, or the latent generator may produce weak codes. Without separating these failure modes, researchers can spend compute improving the wrong component. We study this problem in a controlled 64-to-16 TinyStories case study built from a hierarchical VQ-VAE-2 codec and a masked discrete diffusion generator (MDLM). We use a staged validation protocol that separates codec reconstruction fidelity, latent generation quality, and auxiliary latent diagnostics under one shared external GPT-2 scorer, while reporting complementary semantic metrics for the geometry study. In the tested configuration, codec reconstruction alone raises median external perplexity from 15.17 to 27.36 (+80.4%) and p95 from 25.10 to 98.91 (+294.1%), showing that the dominant quality loss appears before latent generation begins. Under the same scorer, code-space MDLM remains materially stronger than token-space diffusion, reducing mean, median, and p95 by 32.9%, 30.9%, and 36.6%, respectively. Geometry-aware regularization improves local latent proxies but does not improve decoded-text metrics in the available runs. The contribution is methodological rather than algorithmic: the paper presents a reusable staged diagnosis for one concrete pipeline and shows that, in this setting, codec fidelity rather than latent denoising sets the practical quality ceiling.",
+        "tags": [
+            "Diffusion",
+            "GPT",
+            "VAE"
+        ]
+    },
+    {
+        "id": 17,
+        "index": 3,
+        "title": "Towards Robust Reinforcement Learning for Small-Scale Language Model Agents",
+        "author": [
+            "Md Rezwanul Haque",
+            "Md. Milon Islam",
+            "Fakhri Karray"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.25091",
+        "abstract": "The alignment of Small Language Models (SLMs) in the 70--500M parameter range using reinforcement learning is often considered unstable, though the underlying failure mechanisms have not been systematically investigated. In the State-of-the-Art (SOTA) research, fifteen (model, corpus) configurations were trained using Proximal Policy Optimization (PPO). The experiments included Pythia-70M, 160M, 410M and SmolLM2-135M, 360M on the TinyStories, CNN/DailyMail, and Wikitext-103 corpora. Three reproducible failure modes were identified in small-scale language models: silent LoRA parameter freezing in standard PEFT/TRL pipelines, numerical overflow in importance ratios when using bfloat16, and catastrophic policy collapse due to reward-model error. These issues were addressed using a merge-and-reinitialize adapter technique, float32 precision during PPO updates, and a three-layer safety mechanism comprising reward whitening, importance-ratio guarding, and weight rollback. In this paper, a capacity-headroom hypothesis is proposed, which states that PPO performance at the SLM scale depends on both a fluent supervised model ($\\text{PPL}<20$) and a discriminative reward signal, rather than on the number of model parameters. The proposed system converged stably in all experiments and improved preference win rate over the SFT baseline in configurations with a fluent prior and an informative reward signal. Furthermore, it outperformed instruction-tuned baselines while requiring significantly less training data. All checkpoints, preference datasets, and training scripts are publicly released$^Â§$.",
+        "tags": [
+            "LoRA",
+            "PPO",
+            "RL"
+        ]
+    },
+    {
+        "id": 18,
+        "index": 2,
+        "title": "Mapping CVEs to MITRE ATT&CK Techniques: A Curated Gold-Set Classifier and the Limits of LLM-Assisted Label Expansion",
+        "author": [
+            "CÃ©dric Bonhomme",
+            "Alexandre Dulaunoy"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.25572",
+        "abstract": "We present a reproducible pipeline for mapping Common Vulnerabilities and Exposures (CVEs) to MITRE ATT&CK Enterprise techniques from free-text vulnerability descriptions. Rather than relying on the CWE->CAPEC->ATT&CK derivation chain, whose table-expansion artifacts we quantify, we train a multi-label classifier on a curated gold dataset of 1,207 CVEs from expert MITRE Center for Threat-Informed Defense mappings. The resulting model approximately doubles recall@5 compared with a zero-shot embedding-similarity baseline and improves every ranking metric. We then investigate whether LLM-assisted labeling can extend the gold dataset. Initial experiments suggest contradictory conclusions: a single run indicates degraded performance, while averaging over five random seeds suggests a small gain. However, an independent replication and an expansion-size study (100--984 additional CVEs) show that the apparent improvement is an evaluation artifact. LLM-generated labels, with approximately 0.39 agreement with expert annotations, provide no reliable improvement at any expansion size and reduce rare-technique coverage at around 1,000 added CVEs (macro-F1 decreases by 0.04). The root cause is evaluation noise. Selecting checkpoints on a small test split effectively maximizes over many noisy evaluations, producing recall@5 differences of up to 0.05 between otherwise identical runs. Using a corrected protocol based on validation-split checkpoint selection, the gold-only model achieves recall@5 of (0.673 \\pm 0.019), and repeating the decisive experiment confirms the null result for LLM expansion. A final scaling study shows that additional expert-curated data consistently improves performance, whereas LLM-labeled data does not, indicating that the classifier is limited by label quality rather than dataset size. All datasets, models, code, and training logs are publicly released.",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 19,
+        "index": 1,
+        "title": "VisualPatchWorld: Code World Models as Latent Structured Representations for Planning",
+        "author": [
+            "Jiaxin Bai",
+            "Jiaxuan Xiong"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.25236",
+        "abstract": "Different research lines use the term world model in different ways, yet they share a common aim: to capture how the world evolves under action in a form that supports perception, simulation, and planning. Two prominent realizations are neural predictors that learn dynamics in continuous vector spaces, and hand-built physics engines that expose explicit state and physical laws. Neural predictors scale from data but leave the form of the dynamics implicit; physics engines are inspectable and editable but difficult to construct at scale. We introduce VisualPatchWorld (VPW), which represents world dynamics as code. VPW first selects a qualitative dynamical form with short active probes, then fits that form's free parameters from recorded state-action traces by minimizing multi-step prediction error. The resulting programs can be rolled forward like a simulator, inspected in source form, and used inside model-predictive control; image-derived scene graphs can supply the live state at replan time. Across comparisons with prior code-based world models, VPW attains 69.0% mean planning success and exceeds the strongest code baseline by 23.5 points. The largest gains arise when choosing the correct qualitative dynamics is essential. Under the same planner, the induced models approach ground-truth engine success on navigation and grasp-rich control; a residual gap remains for contact-rich pushing, and checking a shortlist of promising plans in the engine closes most of that gap. These results establish a practical route toward automatically constructed code world models that are useful for planning. Code is available at https://github.com/HKBU-KnowComp/VisualPatchWorld/.",
+        "tags": []
+    },
+    {
+        "id": 20,
+        "index": 1,
+        "title": "Temporal-Distance JEPA: Plan-Aware Representation Learning for Latent World Model Predictive Control",
+        "author": [
+            "Jiaxin Bai",
+            "Jiaxuan Xiong"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.25337",
+        "abstract": "Joint-Embedding Predictive Architectures (JEPAs) learn world models by predicting in representation space rather than reconstructing pixels, making them a natural backbone for latent model predictive control from offline demonstration logs. JEPA-style training optimizes short-horizon latent prediction, whereas planning requires a multi-step ranking of imagined futures by goal progress. Prior JEPA planners often inherit that ranking from embedding geometry, typically latent Euclidean distance, which arises as a byproduct of representation learning rather than as a progress cost mined from the logs. We propose temporal-distance JEPA (TD-JEPA), which retains the LeWM encoder--predictor backbone and mines a directed temporal cost from reward-free trajectories: same-trajectory step order supplies positive targets, cross-trajectory pairs act as heuristic negatives, and a rollout-consistency term matches the planner horizon. The mined supervision serves two roles: as the deployed planning cost when progress is topological, and as a representation signal that improves Euclidean planning when contact geometry dominates. Under locked evaluation, deploying the mined cost raises Two-Room success to 100.0% versus LeWM's 97.4%, while shared Euclidean planning on the same temporally trained checkpoint raises OGB-Cube by 14.2 points over LeWM and improves Push-T. Against LeWM and the concurrent RC-aux baseline under locked evaluation, TD-JEPA matches or exceeds both methods on every environment. Ablations show that the directed head, cross-trajectory negatives, and rollout consistency each contribute. TD-JEPA narrows the train--plan gap for JEPA world-model planners by discovering temporal progress structure in offline logs and co-designing cost form with plan-time deployment. Code is available at https://github.com/HKBU-KnowComp/TD-JEPA.",
+        "tags": []
+    },
+    {
+        "id": 21,
+        "index": 0,
+        "title": "GLI-AL: A Multi-Modal Glioma MRI Label Resource with Unified Anatomy-Lesion Labels",
+        "author": [
+            "Xingyu Xiang",
+            "Shuang Hao",
+            "Fan Wang",
+            "Jianhua Ma",
+            "Chunfeng Lian"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.22135",
+        "abstract": "Existing BraTS-GLI datasets provide a widely used benchmark for adult glioma MRI segmentation, but their task definition focuses on tumor subregions and does not systematically represent coexisting white matter hyperintensities (WMH). In joint segmentation settings, such unlabeled abnormalities introduce task-specific label noise by treating pathological regions as normal tissue. To address this limitation, we introduce BraTS-GLI Anatomy-Lesion, a controlled-access, labels-only derived resource built from the BraTS 2023-GLI training cohort. The resource provides 1,251 unified eight-class anatomy-lesion label sets aligned with the original four-modal MRI cases, including image-repair labels for 116 cases requiring repaired imaging inputs. The cohort is organized into a 394-case purified subset and an 857-case extended subset, with case-level metadata covering label source, image-repair requirements, quality-control status, access conditions, checksums, and release boundaries. Compared with the original BraTS-GLI annotations, the resource substantially expands foreground supervision by incorporating healthy brain tissues and previously unlabeled coexisting abnormalities within a unified label space. A validation study using MedNeXt and T1/FLAIR inputs suggests that WMH-aware supervision preserves healthy-tissue segmentation performance across both in-domain GLI and external WMH datasets, while improving sensitivity to coexisting lesions relative to noisy-control training. The resource is intended for scientific research and supports joint anatomy-lesion supervision, label-noise analysis, and reproducible evaluation. Data are available at https://www.synapse.org/Synapse:syn75210889/wiki/, and code is available at https://github.com/xyx200/brats-gli-anatomy-lesion-code. The data resource DOI is https://doi.org/10.7303/SYN75210889.",
+        "tags": [
+            "Segmentation"
+        ]
+    },
+    {
+        "id": 22,
+        "index": 0,
+        "title": "Projection Pursuit CPCANet for Domain Generalization",
+        "author": [
+            "Yu-Hsi Chen",
+            "Abd-Krim Seghouane"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.22117",
+        "abstract": "Domain Generalization (DG) aims to learn representations robust to distribution shifts. Recent geometric alignment methods, such as CPCANet, extract domain-invariant structures through batch-wise Common Principal Component Analysis (CPCA). However, CPCANet suffers from rank-deficient covariance estimation due to the small-sample-size issue in mini-batch training. To address this limitation, we propose Projection Pursuit CPCANet (PP-CPCANet), a covariance-free framework that learns a global orthogonal basis on the Stiefel manifold and jointly optimizes it with network parameters via the Cayley transform. We further introduce a symmetry-breaking detached-median PP dispersion objective to extract common principal components (CPCs) with dense and robust optimization signals. Experiments on four DG benchmarks show that PP-CPCANet achieves SOTA performance while maintaining stable training.",
+        "tags": []
+    },
+    {
+        "id": 23,
+        "index": 0,
+        "title": "Edge-Aware Thermal Infrared UAV Swarm Tracking",
+        "author": [
+            "Yu-Hsi Chen"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.12544",
+        "abstract": "Thermal infrared (TIR) imaging is essential for UAV swarm operations in visually degraded environments. However, tracking tiny UAVs remains challenging due to limited appearance cues, frequent occlusions, and rapid maneuvers. Despite significant progress driven by benchmarks such as the Anti-UAV challenge, existing methods primarily prioritize accuracy while overlooking the computational constraints of real-time edge deployment. The standard Kalman Filter (KF) offers the efficiency required for edge devices, yet its constant-velocity assumption often breaks down under highly dynamic UAV motion and thermal sensor jitter. More sophisticated nonlinear estimators can improve robustness but often introduce additional computational costs. To address this gap, we propose an edge-aware online tracking pipeline centered on the Adaptive Kinematic Kalman Filter (AKKF), which augments the linear KF with state-dependent kinematic modeling while preserving real-time efficiency. Combined with transient false-positive suppression and kinematics-driven predictive coasting, the presented pipeline improves trajectory continuity under challenging TIR conditions. Experiments on the Beyond Strong Baseline (BSB) benchmark provide a starting point for edge-aware UAV tracking by jointly evaluating tracking performance and computational efficiency, offering insights toward future real-time deployment.",
+        "tags": []
+    }
+]

@@ -1,0 +1,293 @@
+[
+    {
+        "id": 1,
+        "index": 141,
+        "title": "The Mirage of Optimizing Training Policies: Monotonic Inference Policies as the Real Objective for LLM Reinforcement Learning",
+        "author": [
+            "Jing Liang",
+            "Hongyao Tang",
+            "Yi Ma",
+            "Yancheng He",
+            "Weixun Wang",
+            "Xiaoyang Li",
+            "Ju Huang",
+            "Wenbo Su",
+            "Jinyi Liu",
+            "Yan Zheng",
+            "Jianye Hao",
+            "Bo Zheng"
+        ],
+        "pdf": "https://arxiv.org/pdf/2606.29526",
+        "abstract": "Reinforcement learning (RL) has gained growing attention in large language model (LLM) post-training, yet RL training remains fragile and can suffer from instability or collapse. One vital cause is training-inference mismatch: LLM adopts separate inference and training engines for generation efficiency and training precision, which in practice exhibits inconsistent probabilities for the same trajectories on training and inference sides, even with synchronized model parameters. This naturally induces a special type of off-policyness ever existing and poisoning the training. Prior works have made various efforts in addressing the off-policyness to stabilize the training policies under the mismatch. In this paper, we point out the objective misalignment neglected by existing works that an effective update to the policy in the training engine not necessarily ensures the improvement of the inference policy, i.e., the one used in deployment. To this end, we propose a new policy optimization objective for LLM RL, named Monotonic Inference Policy Improvement (MIPI). Following this principle, we introduce Monotonic Inference Policy Update (MIPU), a two-step LLM RL framework that constructs sampler-referenced candidate updates and selectively accepts synchronized candidates using an inference-side gap proxy. Experiments conducted on two model scales under high mismatch show that MIPU improves average reasoning performance and training stability.",
+        "tags": [
+            "LLM",
+            "RL"
+        ]
+    },
+    {
+        "id": 2,
+        "index": 37,
+        "title": "Embodied.cpp: A Portable Inference Runtime of Embodied AI Models on Heterogeneous Robots",
+        "author": [
+            "Ling Xu",
+            "Chuyu Han",
+            "Borui Li",
+            "Hao Wu",
+            "Shiqi Jiang",
+            "Ting Cao",
+            "Chuanyou Li",
+            "Sheng Zhong",
+            "Shuai Wang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.02501",
+        "abstract": "Embodied AI models now span vision-language-action (VLA) models and world-action models (WAMs), but practical deployment remains fragmented across model-specific Python stacks, backend assumptions, and robot-side glue code, especially on heterogeneous edge devices. Existing inference runtimes are designed mainly for request-response serving and therefore do not satisfy the runtime contract of embodied deployment: multi-rate execution inside closed-loop control, latency-first batch-1 inference on heterogeneous hardware, and extensible embodied interfaces beyond fixed token I/O. We present http://Embodied.cpp, a portable C++ inference runtime for embodied models. Based on an architectural analysis of representative VLA models and WAMs, http://Embodied.cpp captures a shared execution path and organizes it into five layers: input adapters, sequence builders, backbone execution, head plugins, and deployment adapters. The runtime provides modular multi-rate execution, latency-first fused inference, and extensible operator and I/O support, enabling deployment across heterogeneous devices, robots, and simulators through one backend abstraction. We evaluate http://Embodied.cpp on two VLA models, HY-VLA and pi0.5, and on a preliminary WAM benchmark using a LingBot-VA Transformer block. The VLA deployments achieve successful closed-loop execution with 100.0% and 91.0% task success rates, respectively. The WAM benchmark reduces block memory from 312.2 MiB to 88.1 MiB. These results show that http://Embodied.cpp improves deployment efficiency while preserving high accuracy across diverse embodied model architectures.",
+        "tags": [
+            "Robotics",
+            "Transformer"
+        ]
+    },
+    {
+        "id": 3,
+        "index": 28,
+        "title": "OrbitQuant: Data-Agnostic Quantization for Image and Video Diffusion Transformers",
+        "author": [
+            "Donghyun Lee",
+            "Jitesh Chavan",
+            "Duy Nguyen",
+            "Sam Huang",
+            "Liming Jiang",
+            "Priyadarshini Panda",
+            "Timo Mertens",
+            "Saurabh Shukla"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.02461",
+        "abstract": "Diffusion transformers (DiTs) achieve state-of-the-art image and video generation, but their multi-step sampling and growing parameter count make inference expensive. Post-training quantization (PTQ) is the natural remedy, yet DiT activations shift across timesteps, prompts, and guidance branches, forcing prior methods to re-fit calibration data for every new checkpoint or modality. We present OrbitQuant, a data-agnostic weight-activation quantizer that bypasses range estimation by quantizing in a normalized, rotated basis. In this basis, a randomized permuted block-Hadamard (RPBH) rotation concentrates each coordinate around one fixed, known marginal regardless of the input, so a single Lloyd-Max codebook serves all timesteps, prompts, and layers of a given input dimension. We extend the same quantizer to weight rows offline, absorbing the rotation into the weights so that it cancels inside each linear layer and only a forward rotation on the activations remains at runtime. The same recipe transfers from image to video with no per-modality tuning. Across FLUX.1, Z-Image-Turbo, Wan 2.1, and CogVideoX, it sets the state of the art for PTQ at several low-bit settings. It also pushes PTQ of image diffusion transformers to W2A4 with usable generation quality.",
+        "tags": [
+            "CogVideo",
+            "DiT",
+            "Diffusion",
+            "FLUX",
+            "Video Generation"
+        ]
+    },
+    {
+        "id": 4,
+        "index": 23,
+        "title": "VLA-Corrector: Lightweight Detect-and-Correct Inference for Adaptive Action Horizon",
+        "author": [
+            "Yi Pan",
+            "Miao Pan",
+            "Qi Lu",
+            "Jiaming Huang",
+            "Man Zhang",
+            "Siteng Huang",
+            "Xin Li",
+            "Jie Zhang",
+            "Yongliang Shen",
+            "Xuhong Zhang",
+            "Wenqi Zhang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.01804",
+        "abstract": "Vision-Language-Action (VLA) foundation models have recently achieved strong progress in embodied intelligence. To reduce policy-call frequency while preserving temporal coherence, most generative policies adopt an action chunk mechanism, executing multiple future actions in an open-loop manner under a fixed action horizon. However, this \"predict-then-blindly-execute\" paradigm sacrifices closed-loop reactivity: in contact-rich physical interactions, even small local perturbations can rapidly amplify within the open-loop blind spot, leading to compounding errors and ultimately task failure. To address this limitation, we propose VLA-Corrector, a lightweight corrective inference framework for action-chunked VLA policies. Without modifying the backbone policy weights, VLA-Corrector introduces a lightweight Latent-space Vision Monitor (LVM) that continuously compares predicted and actual visual feature evolution, enabling online detection of visual dynamics deviations. Once persistent deviation is detected, the system triggers a truncation event, discards the remaining stale actions, and invokes corrective replanning via Online Gradient Guidance (OGG). The detect-and-correct mechanism of VLA-Corrector naturally induces an event-triggered adaptive action horizon: it preserves long-horizon execution when the current chunk remains reliable, and invokes short-horizon corrective replanning when execution begins to drift. In doing so, VLA-Corrector mitigates the trade-off imposed by static horizons between execution robustness and policy-call frequency. It can be integrated into different VLA models without further retraining the VLA backbone, interrupting compounding errors while preserving much of the efficiency benefit of action chunking and substantially improving robustness in long-horizon, contact-rich robotic manipulation tasks.",
+        "tags": [
+            "Detection"
+        ]
+    },
+    {
+        "id": 5,
+        "index": 20,
+        "title": "DataComp-VLM: Improved Open Datasets for Vision-Language Models",
+        "author": [
+            "Matteo Farina",
+            "Vishaal Udandarao",
+            "Thao Nguyen",
+            "Selim Kuzucu",
+            "Maximilian BÃ¶ther",
+            "Andreas Hochlehnert",
+            "Adhiraj Ghosh",
+            "Marianna Nezhurina",
+            "Karsten Roth",
+            "Joschka Struber",
+            "Yuhui Zhang",
+            "Sebastian Dziadzio",
+            "Elaine Sui",
+            "Soumya Jahagirdar",
+            "Dhruba Ghosh",
+            "Hasan Hammoud",
+            "Thomas De Min",
+            "Simone Caldarella",
+            "Jehanzeb Mirza",
+            "Sedrick Keh",
+            "Mehdi Cherti",
+            "Hilde Kuehne",
+            "Bernt Schiele",
+            "Serena Yeung-Levy",
+            "Muhammad Ferjad Naeem",
+            "Federico Tombari",
+            "Ana Klimovic",
+            "Elisa Ricci",
+            "Matthias Bethge",
+            "Sewoong Oh",
+            "Ameya Prabhu",
+            "Alessio Tonioni",
+            "Jenia Jitsev",
+            "Massimiliano Mancini",
+            "Ludwig Schmidt",
+            "Nikhil Parthasarathy"
+        ],
+        "pdf": "https://arxiv.org/pdf/2606.28551",
+        "abstract": "Building performant Vision-Language Models (VLMs) requires carefully curating large-scale training datasets, yet the community lacks systematic benchmarks for evaluating such curation strategies. We introduce DataComp for VLMs (DCVLM), a benchmark for controlled data-centric experiments to improve VLM training. As part of DCVLM, we collect 160 datasets spanning four data types -- image-caption pairs, multimodal interleaved documents, text-only, and instruction-tuning data -- into a corpus of 6T multimodal tokens. DCVLM allows participants to test curation strategies (filtering, mixing, formatting, sampling) across 1B-8B models and 6.25B-200B token budgets. Models are then evaluated on a carefully selected suite of up to 52 downstream benchmarks across 9 domains. We conduct extensive experiments on DCVLM and find that data mixing, not filtering, is key to a high-quality training dataset: instruction-heavy mixtures scale better than caption-heavy ones, with gains widening at larger scales. The resulting dataset, DCVLM-Baseline, enables training an 8B VLM to 63.6% accuracy on our 33-task core suite with 200B training tokens. Compared to FineVision, the state-of-the-art open VLM training dataset, this represents an improvement of +5.4pp. DCVLM and all accompanying artifacts will be made publicly available at https://www.datacomp.ai/dcvlm/.",
+        "tags": [
+            "VLM"
+        ]
+    },
+    {
+        "id": 6,
+        "index": 8,
+        "title": "Securing the AI Agent: A Unified Framework for Multi-Layer Agent Red Teaming",
+        "author": [
+            "Yong Yang",
+            "Xing Zheng",
+            "Huiyu Wu",
+            "Huangsheng Cheng",
+            "Xiaorong Shi",
+            "Jing Guo",
+            "Bo Yang",
+            "Yi Zhou",
+            "Xiangfan Wu",
+            "Zonghao Ying"
+        ],
+        "pdf": "https://arxiv.org/pdf/2606.31227",
+        "abstract": "The fast growth of open-source AI infrastructure, from model serving engines and agent platforms to the Model Context Protocol (MCP) ecosystem and the language models themselves, has outpaced the security tooling available to defend it. We present AI-Infra-Guard, an open-source framework that organizes AI red teaming around a single observation: the attack surface of an AI agent is stratified across layers (infrastructure, protocol/tool, agent behavior, and model), and no single detection paradigm fits all of them. The framework therefore matches a paradigm to each layer, from deterministic rule matching over 75+ AI components and 1{,}400+ vulnerability rules, through LLM-driven agentic auditing of MCP servers and agent-skill packages and multi-turn black-box agent red teaming, to a jailbreak harness with 26+ attack operators over sixteen datasets. To our knowledge it is the only open-source framework to span all of these, including supply-chain auditing of the agent skills that increasingly extend AI agents. We release AI-Infra-Guard as open source so that \\emph{layer-paradigm matching} can serve as a practical foundation for agent security and a shared base for the community to build on.",
+        "tags": [
+            "Detection",
+            "LLM"
+        ]
+    },
+    {
+        "id": 7,
+        "index": 6,
+        "title": "Measuring the Gap Between Human and LLM Research Ideas",
+        "author": [
+            "Ziyu Chen",
+            "Yilun Zhao",
+            "Arman Cohan"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.01233",
+        "abstract": "LLMs are increasingly used to brainstorm research ideas, but existing evaluations mostly judge individual ideas by novelty, feasibility, or expert preference. We instead ask: how far are current LLM-generated ideas from human researchers? To characterize this gap, we build a large-scale evaluation framework for ideation from high-quality human research papers. For each paper, we reverse-engineer a small set of closely related prior works that likely inspired its core idea. LLMs are then prompted to generate a new idea from the set of paper titles and summaries. We introduce a two-axis research-taste taxonomy to profile each idea by its opportunity pattern and research paradigm, and use it to quantify the divergence between human and LLM ideas. Across idea sets generated by different LLMs, we observe a consistent distributional gap: LLM ideas are disproportionately concentrated around bridge-like opportunities and synthesis methods, whereas the human paper reference distribution spreads more broadly across ways of framing gaps and constructing contributions. This result suggests that strong LLMs can produce a range of reasonable ideas, but that range remains narrower than, and systematically shifted relative to, human research taste.",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 8,
+        "index": 5,
+        "title": "MultAttnAttrib: Training-Free Multimodal Attribution in Long Document Question Answering",
+        "author": [
+            "Dang Quang Thien Tran",
+            "Quang V. Dang",
+            "Vinamra Tyagi",
+            "Sai Soorya Rao Veeravalli",
+            "Trang Nguyen",
+            "Ryan A. Rossi",
+            "Franck Dernoncourt",
+            "Nedim Lipka",
+            "Koustava Goswami",
+            "Samyadeep Basu"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.01420",
+        "abstract": "As grounded QA systems are increasingly deployed in AI assistants, accurately attributing generated answers to evidence is critical for user trust and model safety. While unimodal attributions have been explored in depth, the multimodal setting remains relatively under-researched. As a result, we introduce MultAttnAttrib, a training-free attribution-generation method that leverages a model's prefill pass, selected attention heads, and calibrated thresholds to locate source evidence within a document. To establish baseline results for the method, we introduce MultAttrEval, a complementary benchmark dataset annotated with fine-grained, ground-truth attributions for answer components grounded in multimodal source documents. To our knowledge, this is the first evaluation dataset designed specifically for multimodal attribution in long-form documents. Experimental results show that MultAttnAttrib consistently outperforms a variety of attribution-generation methods, including several strong prompting-based approaches and matches the latest frontier models such as GPT 5.4. Our method not only substantially improves attribution accuracy for both unimodal and multimodal attribution types, but also produces attributions at up to one-seventh of the direct inference latency compared to prompting on the same base model.",
+        "tags": [
+            "GPT"
+        ]
+    },
+    {
+        "id": 9,
+        "index": 4,
+        "title": "Interpretation-Oriented Cloud Removal via Observation-Anchored Residual Flow with Geo-Contextual Alignment",
+        "author": [
+            "Ziyao Wang",
+            "Maonan Wang",
+            "Yucheng He",
+            "Xianping Ma",
+            "Ziyi Wang",
+            "Hongyang Zhang",
+            "Yirong Cheng",
+            "Man-on Pun"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.02471",
+        "abstract": "Cloud removal (CR) is essential for optical remote sensing, serving as a prerequisite for reliable downstream interpretation, such as semantic segmentation and change detection. However, existing CR approaches often prioritize visual realism while overlooking their impact on subsequent analytical tasks, leading to semantic drift and degraded downstream performance. To address this issue, we propose Geo-Anchored Cloud Removal (GACR), a unified framework that jointly ensures faithful reconstruction and robust interpretability. At its core, GACR incorporates Observation-Anchored Residual Flow (OAR-Flow), which reformulates CR as a physically grounded residual inversion process. By anchoring the generative trajectory to the cloudy observation rather than pure noise, OAR-Flow enables fast, stable, and faithful reconstruction. To further preserve semantic structures critical for downstream interpretation, GACR integrates Geo-Contextual Prior Alignment (GCPA) to constrain the reconstruction within a semantic manifold induced by a Vision Foundation Model (VFM). Consequently, GACR strictly maintains the spatial-semantic integrity of complex landscapes. Extensive experiments across six CR datasets and twelve downstream tasks demonstrate that GACR produces superior reconstruction quality while consistently improving downstream task accuracy. The code is available at https://github.com/wzy6055/GACR.",
+        "tags": [
+            "Detection",
+            "Segmentation"
+        ]
+    },
+    {
+        "id": 10,
+        "index": 3,
+        "title": "AGE: Adaptive-masking for Graph Embedding in Graph Retrieval-Augmented Generation",
+        "author": [
+            "Bao Long Nguyen Huu",
+            "Atsushi Hashimoto"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.00052",
+        "abstract": "GraphRAG is an extension of retrieval-augmented generation (RAG) that supports large language models (LLMs) by referring to graph-structured data as external knowledge. While this technique ideally captures intricate relationships, it often struggles with graph representations for LLMs, particularly for frozen LLMs, due to the misalignment between graph-based and text-based latent features. We tackle this issue by introducing the {\\it Adaptive-masking for Graph Embedding (AGE)}. AGE employs a Transformer in a mask-based self-supervised learning (SSL) approach. We designed the architecture similar to text embedding encoders, addressing the latent feature misalignment. In contrast to natural language texts, graphs are concise representations, and there exist {\\it key nodes} that hold dominant contextual information, which are challenging to predict from their surroundings. Masking such key nodes leads to inefficiency in the SSL process. Therefore, AGE focuses on predicting nodes apart from key nodes, utilizing a learnable node sampler. Our experimental results indicate that AGE significantly improves approaches using non-parametric search component in GraphQA tasks, achieving superior accuracy across four benchmark datasets with distinct characteristics.",
+        "tags": [
+            "LLM",
+            "RAG",
+            "Transformer"
+        ]
+    },
+    {
+        "id": 11,
+        "index": 2,
+        "title": "AnyBokeh: Physics-Guided Any-to-Any Bokeh Editing with Optical Fingerprint Transfer",
+        "author": [
+            "Xinyu Hou",
+            "Xiaoming Li",
+            "Zongsheng Yue",
+            "Chen Change Loy"
+        ],
+        "pdf": "https://arxiv.org/pdf/2606.31959",
+        "abstract": "Depth-of-field control is a fundamental tool in photography, yet post-capture bokeh editing from a single image remains challenging. A practical editor should handle images captured under arbitrary focus and aperture settings. Existing methods typically assume an all-in-focus input, or first recover an all-in-focus image before rendering new bokeh. Such pipelines can discard useful blur cues from the source image and propagate reconstruction artifacts into the final edit. We introduce AnyBokeh, a physics-guided framework for any-to-any bokeh editing. Instead of treating source blur merely as a degradation to be removed, AnyBokeh estimates the source blur state with a signed circle-of-confusion map and a disparity map. By modeling the linear relation between signed circle of confusion and disparity difference, AnyBokeh estimates a source-specific optical fingerprint and transfers the source optical characteristics to the desired focus and aperture setting. A generative editor conditioned on both source and target circle-of-confusion maps then performs relative blur synthesis, enabling spatially adaptive deblurring, preservation, and defocus rendering. To support physically supervised learning, we further construct a high-fidelity synthetic dataset with accurate depth, focus distance, and full EXIF metadata. Experiments on real-world benchmarks show that AnyBokeh achieves faithful and controllable editing across any-to-any bokeh editing, all-in-focus-to-bokeh rendering, and defocus deblurring, while avoiding all-in-focus reconstruction and test-time bokeh-level calibration commonly required by existing approaches. The code and dataset will be available at https://github.com/itsmag11/AnyBokeh.",
+        "tags": [
+            "Deblurring"
+        ]
+    },
+    {
+        "id": 12,
+        "index": 1,
+        "title": "Teaching LLMs to Recommend and Defer in Underrepresented Epilepsy Care",
+        "author": [
+            "Shreyas Rajesh",
+            "Kartik Sharma",
+            "Tonmoy Monsoor",
+            "Mehmet Yigit Turali",
+            "Richard Idro",
+            "Juliana Kayaga",
+            "Robert Sebunya",
+            "Tracy Tushabe Namata",
+            "Jessica Nichole Pasqua",
+            "Vwani Roychowdhury",
+            "Rajarshi Mazumder"
+        ],
+        "pdf": "https://arxiv.org/pdf/2606.31036",
+        "abstract": "Specialist epilepsy expertise is scarce in resource-constrained settings, making LLM-based decision support attractive for frontline clinicians managing longitudinal treatment. Such systems must adapt to local prescribing practice and know when to defer. We study this problem in Ugandan pediatric epilepsy care, predicting anti-seizure medication regimens from longitudinal unstructured clinic notes. Standard prompting achieves non-trivial agreement with physician prescriptions, but neurologist review shows that many errors reflect distribution-miscalibrated prescribing defaults rather than failures to parse the local record. We introduce MANANA, a non-parametric prompt-learning framework that learns local prescribing guidance from a small patient-level training set. MANANA converts observed prescription errors into auditable prompt memories, instantiated in single-agent and multi-agent variants, and improves over classical ML models, direct LLM prompting, and prompt-optimization baselines across two independently collected Ugandan cohorts. We further propose Bayesian prompt averaging, which converts the learned prompt trajectory into prescription likelihoods and an uncertainty-based deferral signal. On the independently collected held-out cohort, this improves visit-level top-3 prescription accuracy by 4-8 percentage points over prompt-optimization baselines and enables selective prediction: the system can auto-handle the most confident half of cases at 95% precision, or the most confident quarter at 99% precision, while deferring lower-confidence cases for specialist review.",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 13,
+        "index": 1,
+        "title": "Generated Contents Enrichment",
+        "author": [
+            "Mahdi Naseri",
+            "Jiayan Qiu",
+            "Zhou Wang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2405.03650",
+        "abstract": "We study Generated Contents Enrichment (GCE), a conditional image-generation task in which a sparse scene description is first enriched through an explicit scene representation and then rendered into semantically richer visual content. Conventional image-generation systems can produce visually realistic outputs from limited scene descriptions, but the added content is usually implicit in the generator rather than represented as an inspectable intermediate structure. In contrast, GCE seeks to make scene enrichment explicit at the scene-representation level while examining its visual consequences during generation, with the goal of encouraging generated content that is visually plausible, structurally coherent, and semantically richer than the sparse input. To instantiate GCE, we propose a jointly trained adversarial framework that enriches scene graphs by modeling object semantics and inter-object relations. Our approach first represents the input description as a scene graph, where nodes model objects and edges capture inter-object relations. The framework uses graph convolutional networks to predict additional objects and their relations to the existing scene. Finally, the enriched scene graph is passed through the downstream image-generation pipeline to generate the corresponding visual content. We evaluate the framework with proxy scene graph enrichment metrics, image-quality comparisons, qualitative examples, and user studies on the Visual Genome dataset.",
+        "tags": []
+    }
+]

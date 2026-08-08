@@ -1,0 +1,37 @@
+[000002] 2026-08-08 15:12:04 - DEBUG - /home/runner/work/ghapi-action/ghapi-action/news/main.py:26 - 2026-08-08 23:12:04.979327+00:00
+[000129] 2026-08-08 15:12:05 - DEBUG - /home/runner/work/ghapi-action/ghapi-action/news/main.py:62 - fetching jiemian...
+[000130] 2026-08-08 15:12:05 - DEBUG - /home/runner/work/ghapi-action/ghapi-action/news/main.py:62 - fetching wallstreet...
+[000130] 2026-08-08 15:12:05 - DEBUG - /home/runner/work/ghapi-action/ghapi-action/news/main.py:62 - fetching huanqiu...
+[000130] 2026-08-08 15:12:05 - DEBUG - /home/runner/work/ghapi-action/ghapi-action/news/main.py:62 - fetching ifeng...
+[000130] 2026-08-08 15:12:05 - DEBUG - /home/runner/work/ghapi-action/ghapi-action/news/main.py:62 - fetching kr36...
+[000130] 2026-08-08 15:12:05 - DEBUG - /home/runner/work/ghapi-action/ghapi-action/news/main.py:62 - fetching pingwest...
+[000130] 2026-08-08 15:12:05 - DEBUG - /home/runner/work/ghapi-action/ghapi-action/news/main.py:62 - fetching nbd...
+[000130] 2026-08-08 15:12:05 - DEBUG - /home/runner/work/ghapi-action/ghapi-action/news/main.py:62 - fetching ithome...
+[001736] 2026-08-08 15:12:06 - DEBUG - /home/runner/work/ghapi-action/ghapi-action/news/main.py:68 - pingwest data size: 0, time: 2026-08-08 11:51:52
+[001776] 2026-08-08 15:12:06 - DEBUG - /home/runner/work/ghapi-action/ghapi-action/news/jiemian.py:28 - jiemian keys: dict_keys(['hideBtn', 'list'])
+[001776] 2026-08-08 15:12:06 - DEBUG - /home/runner/work/ghapi-action/ghapi-action/news/jiemian.py:30 - jiemian dict items list len: 20
+[001776] 2026-08-08 15:12:06 - DEBUG - /home/runner/work/ghapi-action/ghapi-action/news/main.py:68 - jiemian data size: 0, time: 2026-08-08 11:16:19
+[002372] 2026-08-08 15:12:07 - DEBUG - /home/runner/work/ghapi-action/ghapi-action/news/main.py:68 - ithome data size: 3, time: 2026-08-08 23:09:05
+[002678] 2026-08-08 15:12:07 - ERROR - /home/runner/work/ghapi-action/ghapi-action/news/main.py:70 - running kr36 failed!
+Traceback (most recent call last):
+  File "/home/runner/work/ghapi-action/ghapi-action/news/main.py", line 63, in task
+    ret = m.fetch(fromisoformat(times[idx]).replace(tzinfo=None), local_time)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/ghapi-action/ghapi-action/news/kr36.py", line 32, in fetch
+    script = html.xpath('/html/body/script[not(@src)]')[0]
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+IndexError: list index out of range
+[002899] 2026-08-08 15:12:07 - DEBUG - /home/runner/work/ghapi-action/ghapi-action/news/main.py:68 - nbd data size: 0, time: 2026-08-08 22:07:43
+[003105] 2026-08-08 15:12:08 - DEBUG - /home/runner/work/ghapi-action/ghapi-action/news/huanqiu.py:24 - huanqiu offset: 0, item size: 25
+[003105] 2026-08-08 15:12:08 - DEBUG - /home/runner/work/ghapi-action/ghapi-action/news/huanqiu.py:31 - huanqiu latest time: 2013-08-28 08:13:00
+[003105] 2026-08-08 15:12:08 - DEBUG - /home/runner/work/ghapi-action/ghapi-action/news/main.py:68 - huanqiu data size: 0, time: 2026-05-15 16:30:58.249000
+[006041] 2026-08-08 15:12:11 - DEBUG - /home/runner/work/ghapi-action/ghapi-action/news/main.py:68 - wallstreet data size: 0, time: 2026-08-08 13:12:23
+[006944] 2026-08-08 15:12:11 - ERROR - /home/runner/work/ghapi-action/ghapi-action/news/main.py:70 - running ifeng failed!
+Traceback (most recent call last):
+  File "/home/runner/work/ghapi-action/ghapi-action/news/main.py", line 63, in task
+    ret = m.fetch(fromisoformat(times[idx]).replace(tzinfo=None), local_time)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/ghapi-action/ghapi-action/news/ifeng.py", line 38, in fetch
+    while time > last_time:
+          ^^^^^^^^^^^^^^^^
+TypeError: '>' not supported between instances of 'int' and 'datetime.datetime'

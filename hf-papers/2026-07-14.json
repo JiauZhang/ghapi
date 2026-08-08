@@ -1,0 +1,392 @@
+[
+    {
+        "id": 1,
+        "index": 87,
+        "title": "Weak-to-Strong Generalization via Direct On-Policy Distillation",
+        "author": [
+            "Shiyuan Feng",
+            "Huan-ang Gao",
+            "Haohan Chi",
+            "Hanlin Wu",
+            "Zhilong Zhang",
+            "Zheng Jiang",
+            "Bingxiang He",
+            "Wei-Ying Ma",
+            "Ya-Qin Zhang",
+            "Hao Zhou"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.05394",
+        "abstract": "Reinforcement learning with verifiable rewards (RLVR) is a powerful recipe for improving language-model reasoning, but it is expensive to repeat on every new strong model because the target model must generate many rollouts during training. As models scale, post-training itself becomes a bottleneck. We study a weak-to-strong alternative: run RL on a smaller model where rollouts are cheaper, then reuse what that RL run learned to improve a stronger target model. Directly distilling the post-RL weak teacher is not enough, because the teacher's final policy mixes useful RL gains with the limitations of the smaller model. We propose Direct On-Policy Distillation (Direct-OPD), which transfers the teacher's RL-induced policy shift instead. Direct-OPD compares the post-RL teacher with its own pre-RL reference and treats their log-ratio as a dense implicit reward for the student. In plain terms, the checkpoint pair tells us which actions RL made the weak model more or less likely to take, and Direct-OPD applies that signal on the stronger student's own on-policy states. This directly reuses the weak model's RL supervision signal without running sparse-reward RL on the target model. Empirically, Direct-OPD consistently leverages weaker teachers to improve stronger target models; notably, it boosts Qwen3-1.7B from 48.3% to 58.3% on AIME 2024 in just 4 hours on 8 A100 GPUs. It outperforms step-matched direct RL and enables the sequential composition of multiple policy shifts. Our results show that RL outcomes can be reused across model scales as implicit reward signals, not merely as final models to imitate.",
+        "tags": [
+            "RL"
+        ]
+    },
+    {
+        "id": 2,
+        "index": 76,
+        "title": "ABot-N1: Toward a General Visual Language Navigation Foundation Model",
+        "author": [
+            "Ruiyan Gong",
+            "Yingnan Guo",
+            "Junjun Hu",
+            "Jintao Kong",
+            "Xiaoxu Leng",
+            "Tianlun Li",
+            "Weize Li",
+            "Fei Liu",
+            "Zhicheng Liu",
+            "Jia Lu",
+            "Minghua Luo",
+            "Chenlin Ming",
+            "Yanfen Shen",
+            "Jiyue Tao",
+            "Zhengbo Wang",
+            "Mingyang Yin",
+            "Minqi Gu",
+            "Zihao Guan",
+            "Wei Guo",
+            "Guoqing Liu",
+            "Huachong Pang",
+            "Menglin Yang",
+            "Zeqian Ye",
+            "Xiaoxiao Geng",
+            "Zhining Gu",
+            "Honglin Han",
+            "Di Jing",
+            "Hongyu Pan",
+            "Mingchao Sun",
+            "Kuan Yang",
+            "Jianfang Zhang",
+            "Yanghong Chen",
+            "Ye He",
+            "Wei Mei",
+            "Jiahao Shi",
+            "Xiangpo Yang",
+            "Yanqing Zhu",
+            "Zedong Chu",
+            "Xiaolong Wu",
+            "Mu Xu"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.10383",
+        "abstract": "Visual Language Navigation foundation models aim to unify deep reasoning for grounded spatial decisions with broad versatility for diverse embodied tasks. Current approaches typically achieve this integration via monolithic policies that map observations directly to actions, yet they often suffer from coordinate drift and poor handling of long-tail semantics. Furthermore, these black-box mappings lack interpretability, hindering the simultaneous achievement of generality, robustness, and transparency. We present ABot-N1, a step toward a general Visual Language Navigation foundation model, that addresses these challenges by decoupling cognition from control via a slow-fast architecture guided by dual visual-language signals. More specifically, a slow vision-language reasoner performs explicit Chain-of-Thought reasoning while producing a pixel goal. This compact set of image-space anchor points serves as a universal interface for diverse tasks, including point-goal, object-goal, poi-goal, instruction-following, and person-following. Subsequently, a fast action expert leverages both the textual cues and the pixel guidance to generate continuous waypoints at the native control frequency. By bridging high-level intents and low-level control through pixel-grounded anchors paired with explicit linguistic traces, our approach ensures robust, generalizable, and interpretable navigation across simulation and real-world benchmarks. ABot-N1 establishes new state-of-the-art records, delivering massive gains specifically in urban-scale navigation: boosting POI arrival by 35.0% (to 77.3%) and achieving 95.4%/92.9% SR in complex indoor and outdoor scenes. It also maintains superior robustness across object-reaching, person-following, and instruction-following tasks. New Point-Goal/POI-Goal benchmarks are released as open source to advance the field of urban-scale navigation.",
+        "tags": [
+            "CoT"
+        ]
+    },
+    {
+        "id": 3,
+        "index": 66,
+        "title": "ABot-AgentOS: A General Robotic Agent OS with Lifelong Multi-modal Memory",
+        "author": [
+            "Jiayi Tian",
+            "Shiao Liu",
+            "Yuting Xu",
+            "Jia Lu",
+            "Zihao Guan",
+            "Honglin Han",
+            "Di Yang",
+            "Minqi Gu",
+            "Yifei Qian",
+            "Tianlin Zhang",
+            "Yanqing Zhu",
+            "Zeqian Ye",
+            "Menglin Yang",
+            "Fei Wang",
+            "Xu Hu",
+            "Xiuxian Li",
+            "Wei Zhang",
+            "Shihui Su",
+            "Yiyan Ji",
+            "Jingbo Wang",
+            "Ziteng Feng",
+            "Jiaheng Liu",
+            "Zhaoxiang Zhang",
+            "Xiaolong Wu",
+            "Mingyang Yin",
+            "Zedong Chu",
+            "Mu Xu"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.10350",
+        "abstract": "Recent VLM and VLA systems have improved robotic perception and action prediction, yet long-horizon embodied agents still require a general runtime layer for reasoning, memory, tool use, verification, and cross-embodiment execution. We present ABot-AgentOS, a general robotic Agent Operating System that sits above low-level controllers and provides a deliberative agent layer for scene-conditioned planning, context-isolated skill execution, multi-stage verification, multi-modal memory, and edge-cloud collaboration. To evaluate such systems, we introduce EmbodiedWorldBench, an executable benchmark with 16 indoor, outdoor, and hybrid scenes, four difficulty levels, and over 200 tasks involving navigation, object search, NPC dialogue, dynamic events, and trace-grounded scoring. ABot-AgentOS further introduces Universal Multi-modal Graph Memory, a persistent source-grounded substrate that converts dialogue, visual observations, spatial context, temporal relations, and task traces into typed nodes and edges. A failure-driven self-evolution loop converts diagnosed memory failures into gated runtime evo-assets that are promoted only to later evaluation splits, preventing current-split ground-truth leakage while enabling continual improvement. On an initial EmbodiedWorldBench subset, ABot-AgentOS improves over a single-controller baseline in both task success and goal completion. Across memory benchmarks, ABot-AgentOS Static achieves 87.5 on LoCoMo, 59.9 on OpenEQA EM-EQA, 88.6 on Mem-Gallery, and 76.5 Acc@All on NExT-QA; self-evolution further improves LoCoMo to 88.7, OpenEQA to 60.4, and Mem-Gallery to 89.0. These results suggest that a general Agent OS layer can improve long-horizon embodied execution while providing persistent, auditable memory for continual interaction.",
+        "tags": [
+            "VLM"
+        ]
+    },
+    {
+        "id": 4,
+        "index": 40,
+        "title": "4D Human-Scene Reconstruction from Low-Overlap Captures",
+        "author": [
+            "Minhyuk Hwang",
+            "Sangmin Kim",
+            "Seunguk Do",
+            "Daneul Kim",
+            "Jaesik Park"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.09125",
+        "abstract": "Existing volumetric capture of dynamic human performance achieves high fidelity with dense camera arrays. However, in real-world scenarios, only a handful of low-overlap cameras are available, which degrades the output quality and leaves large areas unobserved. Recent 4D reconstruction methods have focused on low-overlap settings, yet they still produce noticeable artifacts in under-observed regions. Video diffusion models have emerged as another option, but they show geometrically inconsistent results for humans. To address these limitations, we propose StudioRecon, a pipeline that reconstructs 4D human scenes from sparse, low-overlap cameras by decoupling background and humans. We densify background supervision by synthesizing hundreds of camera-controlled novel views with a video diffusion model. We also robustly initialize deformable Gaussian humans with cross-view identity association and triangulated multi-view keypoint fitting. Finally, our recursive enhancement module with motion-adaptive consistency injection harmonizes the composed output, thereby further avoiding remaining artifacts. We achieve state-of-the-art novel view synthesis across four real-world datasets and demonstrate applications such as novel trajectory rendering and human replacement.",
+        "tags": [
+            "Diffusion"
+        ]
+    },
+    {
+        "id": 5,
+        "index": 32,
+        "title": "LightMem-Ego: Your AI Memory for Everyday Life",
+        "author": [
+            "Yijun Chen",
+            "Boyi Xiao",
+            "Yixian Zhao",
+            "Haoting Xia",
+            "Buqiang Xu",
+            "Jizhan Fang",
+            "Yanya Li",
+            "Yaqi Zheng",
+            "Xuehai Wang",
+            "Zirui Xue",
+            "Liuxin Zhang",
+            "Hui Li",
+            "Ningyu Zhang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.11487",
+        "abstract": "Personal AI assistants on mobile and wearable devices continuously perceive users' daily lives through visual and audio streams. However, answering queries about past experiences requires lightweight multimodal memory that can continuously accumulate, organize, and retrieve long-term experiences, which remains challenging. To address this challenge, we present LightMem-Ego, a lightweight streaming multimodal memory system for everyday-life assistance. The system continuously captures egocentric visual and audio streams, aligns them on a shared timeline, and organizes them into a hierarchical memory consisting of current, short-term, and long-term memory. Given a user query, LightMem-Ego dynamically routes retrieval to the appropriate memory level and generates answers grounded in multimodal evidence. The demonstration can be deployed on smartphones and AI glasses, supporting object finding, conversation recall, life summarization, routine discovery, and personalized assistance. Code is available at https://github.com/zjunlp/LightMem-Ego.",
+        "tags": []
+    },
+    {
+        "id": 6,
+        "index": 18,
+        "title": "AdvancedMathBench: A Benchmark Suite for Advanced Mathematical Proof Generation and Verification",
+        "author": [
+            "Lingkai Kong",
+            "Zijian Wu",
+            "Yuzhe Gu",
+            "Haiteng Zhao",
+            "Wenyong Huang",
+            "Shuang Sun",
+            "Zhicheng Xiong",
+            "Xiaotian Zhang",
+            "Shuya Zhao",
+            "Yan Wang",
+            "Disheng Xu",
+            "Wenwei Zhang",
+            "Kai Chen"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.11849",
+        "abstract": "Large language models (LLMs) have achieved remarkable performance on high-school and olympiad-style mathematics, yet their capabilities on advanced mathematics remain poorly understood. Existing benchmarks, however, fall short in both scope and evaluation granularity: they provide limited disciplinary coverage and often rely on final-answer correctness or coarse judgments, leaving the validity of the reasoning process inadequately assessed. To bridge this gap, we introduce AdvancedMathBench, a benchmark suite designed to evaluate advanced mathematical reasoning capabilities. Its core proof-generation benchmark, ProverBench, contains 296 problems spanning undergraduate and doctoral qualifying-exam levels. To provide reliable evaluation of the proofs, we develop a dedicated automatic verification pipeline trained on large-scale expert annotations to produce both correctness verdicts and fine-grained assessments of proof errors, which exhibits strong agreement with human experts on held-out proof trajectories. We further introduce VerifierBench, consisting of 888 model-generated proof trajectories paired with expert ground truth, to evaluate whether models can correctly judge proof validity and provide sound verification rationales. Experiments show that AdvancedMathBench remains challenging for frontier models. On proof generation, the best-performing model, GPT-5.5-xhigh, achieves only 75.8 and 66.1 on the UGD and QE splits, respectively, indicating substantial room for improvement on advanced mathematical proof construction. On proof verification, the best model attains a Balanced F1 of only 65.1, and models generally exhibit low true negative rates, suggesting that critical error detection remains a major bottleneck.",
+        "tags": [
+            "Detection",
+            "GPT",
+            "LLM"
+        ]
+    },
+    {
+        "id": 7,
+        "index": 12,
+        "title": "Metacognition in LLMs: Foundations, Progress, and Opportunities",
+        "author": [
+            "Gabrielle Kaili-May Liu",
+            "Areeb Gani",
+            "Jacqueline Lu",
+            "Jordan Thomas",
+            "Mark Steyvers",
+            "Arman Cohan"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.11881",
+        "abstract": "Metacognition is a foundational component of intelligence critical to effective learning, problem solving, decision-making, communication, and more. In recent years, it has become increasingly recognized as a cornerstone of capable, transparent AI systems. Yet while LLMs have made significant progress across diverse real-world tasks, it is not yet clear when, how, or to what extent they can exhibit or be endowed with effective metacognitive abilities, nor how such abilities can be adapted to advance the fundamental capabilities, reliability, and intelligence of AI systems. This paper bridges this gap by presenting the first comprehensive overview of the current state of knowledge on metacognition for LLMs. We analyze and taxonomize the landscape of this emerging field and summarize recent technical advancements, including methods and benchmarks to measure and evaluate LLMs' metacognitive abilities, techniques to elicit, improve, and apply metacognition in LLMs, and findings and implications of ongoing research. We also discuss applications, open questions and challenges, and promising directions for future work. Our aim is to provide a detailed and up-to-date review of this topic and stimulate meaningful research and discussion. An organized list of papers can be found at https://github.com/yale-nlp/LLM-Metacognition.",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 8,
+        "index": 8,
+        "title": "EgoSteer: A Full-Stack System Towards Steerable Dexterous Manipulation from Egocentric Videos",
+        "author": [
+            "Yifan Zhong",
+            "Zhang Chen",
+            "Tianrui Guan",
+            "Fanlian Zeng",
+            "Yuyao Ye",
+            "Tianjia He",
+            "Ka Nam Lui",
+            "Jiayi Li",
+            "Tingrui Zhang",
+            "Ruilin Yan",
+            "Xinhao Ji",
+            "Guangyu Zhao",
+            "Wenjie Lou",
+            "Jiayuan Zhang",
+            "Yuanpei Chen",
+            "Yaodong Yang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.09701",
+        "abstract": "Steerability is a defining capability of generalist robot policies, yet remains largely absent in dexterous-hand systems for lack of large-scale, language-aligned, and action-accurate demonstration data. To address this bottleneck, we present a full-stack system that scales dexterous VLA pre-training from egocentric human videos and enables data-efficient real-robot post-training. It integrates EgoSmith, a data pipeline that curates in-the-wild egocentric videos into 9.6K hours of high-quality pre-training data with 9x higher throughput and better accuracy than prior SOTA; a unified robot stack for teleoperation and human-in-the-loop correction; and EgoSteer, a world-model-enhanced VLA trained on optimized infrastructure. Human-data pre-training equips EgoSteer with language-guided manipulation priors, which are grounded through robot post-training and improved by DAgger refinement. Empirically, EgoSteer robustly executes free-form instructions across 40+ diverse tasks, demonstrating failure recovery, dexterity, and generalization. The pre-trained model also few-shot adapts to complex long-horizon tasks, including box folding, on two embodiments with 75+% success. We open-source the system, data, and model at https://egosteer.github.io/.",
+        "tags": [
+            "Robotics"
+        ]
+    },
+    {
+        "id": 9,
+        "index": 7,
+        "title": "Proxy Exploration and Reusable Guidance: A Modular LLM Post-Training Paradigm via Proxy-Guided Update Signals",
+        "author": [
+            "Daocheng Fu",
+            "Rong Wu",
+            "Yu Yang",
+            "Xuemeng Yang",
+            "Jianbiao Mei",
+            "Licheng Wen",
+            "Pinlong Cai",
+            "Yong Liu",
+            "Botian Shi",
+            "Yu Qiao"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.11505",
+        "abstract": "Post-training is essential for refining the domain-specific capabilities of large language models (LLMs), yet existing reward optimization and distribution matching methods tightly couple policy exploration with distribution alignment. This coupling forces expensive exploration directly on the policy model and severely hinders the asynchronous generation, reuse, and cross-model transfer of optimization signals. In this paper, we propose Proxy-guided Update Signal Transfer (PUST), a novel post-training framework that fundamentally decouples update-signal exploration from distribution alignment. Instead of utilizing the primary model for costly exploration, PUST employs a lightweight proxy model as an efficient testbed to discover high-reward behaviors. We extract the relative improvement signal between the proxy's initial and optimized states, transferring this directional update to the primary model to guide its policy alignment. This decoupled pipeline, comprising proxy exploration, update-signal extraction, and signal transfer, significantly reduces computational overhead and enables optimization signals to be asynchronously generated, cached, and reused. Crucially, by transferring relative improvements rather than absolute policy distributions, PUST naturally supports weak-to-strong improvement and seamless cross-model transfer. Systematic evaluations on Qwen3-family models across math and code domains demonstrate that update signals extracted from substantially weaker proxies can robustly and adjustably enhance stronger primary models. Ultimately, PUST transforms post-training from a monolithic online optimization process into a highly modular, reusable, and cost-efficient paradigm.",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 10,
+        "index": 5,
+        "title": "NeuroCogMap Reveals Cognitive Organization of Large Language Models",
+        "author": [
+            "Zhongxiang Sun",
+            "Haolang Lu",
+            "Qiang Ma",
+            "Qi Li",
+            "Qipeng Wang",
+            "Liang Pang",
+            "Chenyu Liu",
+            "Qiankun Li",
+            "Hao Sun",
+            "Kun Wang",
+            "Yi Zeng",
+            "Jun Xu",
+            "Guoqi Li",
+            "Ji-Rong Wen"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.00397",
+        "abstract": "Understanding how complex cognitive functions are organized within artificial systems is central to interpreting large language models (LLMs) and relating them to biological cognition. Yet although LLMs exhibit broad cognitive-like behaviours, it remains unclear whether their internal representations form reproducible functional systems that explain behaviour, failure and links to human cognition. Here we present NeuroCogMap, a cognitive neuroscience-inspired framework that organizes internal features of LLMs into functional parcels and links them to interpretable functions, cognitive capabilities and a cognitive hierarchy. These parcels form a stable and semantically coherent organization that is partly conserved across models and functionally linked to model outputs. Within this organization, major LLM failures, including hallucination, bias, refusal failure and sycophancy, correspond to distinct disruptions in representational and behavioural-control systems, yielding internal signatures for mechanism-guided detection and targeted intervention. Beyond model behaviour, NeuroCogMap improves prediction of human cortical responses during naturalistic language comprehension, with the strongest correspondence in higher-order association cortex. At the cognitive level, its internal signatures expose latent strategies that guide refinements of classical models of human decision-making. Together, these findings establish NeuroCogMap as a system-level framework for mapping functional organization in artificial systems and for relating this organization to human cortical function and cognitive behaviour.",
+        "tags": [
+            "Detection",
+            "LLM"
+        ]
+    },
+    {
+        "id": 11,
+        "index": 3,
+        "title": "Motion4Motion: Motion Transfer Across Subjects at Inference",
+        "author": [
+            "Ling-Hao Chen",
+            "Zixin Yin",
+            "Duomin Wang",
+            "Xianfang Zeng",
+            "Gang Yu"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.11644",
+        "abstract": "This work explores the motion transfer from one video to another, which is crucial in animation for diverse characters. Previously, video motion transfer has been largely explored between human and human-like characters, enabling a lot of applications in digital creation. However, these approaches encounter a main limitation. Specifically, related technical pipelines heavily rely on a predefined human skeleton structure and accordingly require skeleton-conditional model training. On the one hand, these methods are difficult to generalize to diverse characters, such as animals from different species, while preserving their unique motion styles. On the other hand, labeled data in diverse skeletons is limited, which additionally restricts the large-scale training for the task. In this paper, we jump out of the skeleton-based motion transfer framework and propose a training-free motion transfer framework, named Motion4Motion. Motion4Motionmodels the motion flow of the character in a video instead of skeletons, which makes motion transfer across species easier. Extensive experimental results and novel applications show our methods outperform baselines impressively. Project page is available at https://lhchen.top/Motion4Motion.",
+        "tags": []
+    },
+    {
+        "id": 12,
+        "index": 3,
+        "title": "CtrlVTON: Controllable Virtual Try-On via Visual-Instance-Prompt Segmentation",
+        "author": [
+            "Seungyong Lee",
+            "Hyun Jun Jang",
+            "Sangoh Kim",
+            "Sungjoon Park"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.09362",
+        "abstract": "Virtual try-on (VTO) has made significant progress in realistically transferring garments onto a target person. Yet most systems give the user little control over how a garment should be worn -- its size (loose or fitted), style (e.g., tucked in or untucked, open or closed), and spatial placement on the body. We address this gap with two complementary contributions. First, we define and solve Visual-Instance-Prompt Segmentation via VIP-SAM: given a flatlay image of a garment, segment that specific instance in a photograph of a person wearing it. This is an instance-level task, distinct from the typically studied category-level segmentation. Second, we introduce CtrlVTON, a controllable VTO framework that recasts try-on as an image editing problem and adds segmentation masks as pixel-level control over garment layout, including style, size, and spatial placement on the body. VIP-SAM and CtrlVTON each achieve state-of-the-art results on their respective tasks. In particular, CtrlVTON generates images that follow user-provided layouts far more faithfully than the strongest proprietary editing systems while matching them on garment fidelity.",
+        "tags": [
+            "Image Editing",
+            "SAM",
+            "Segmentation",
+            "Virtual Try-On"
+        ]
+    },
+    {
+        "id": 13,
+        "index": 2,
+        "title": "Latent-Identity Tuning in Text-to-Image Personalization Models",
+        "author": [
+            "Daniel Garibi",
+            "Ronen Kamenetsky",
+            "Hadar Averbuch-Elor",
+            "Daniel Cohen-Or",
+            "Or Patashnik"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.11885",
+        "abstract": "Generating and editing a person's face demands high precision, as even minor modifications can significantly alter a subject's perceived identity. Current personalization and editing methods built on general-purpose text-to-image models, however, often lack the precision required for fine-grained facial edits. We present a method for fine-grained identity tuning in text-to-image personalization models. Unlike standard image editing, which operates on a given image, identity tuning modifies the latent representation of a specific identity, enabling the generation of diverse images that consistently depict the same edited identity. To enable fine-grained latent identity tuning, we explore the latent space of a pre-trained, frozen encoder for text-to-image personalization. Our approach requires no additional training. Instead, it leverages the existing architecture of a frozen encoder to uncover latent semantic directions. This space consists of a set of latent tokens that play distinct roles in capturing different aspects of an identity and often correspond to specific spatial or semantic facial regions. We show that meaningful directions can be identified within this space and within subspaces defined by selected tokens, enabling localized, fine-grained, and semantically coherent edits. We validate our approach through qualitative and quantitative experiments that demonstrate diverse localized facial edits while preserving cross-image identity consistency. Project page at: https://garibida.github.io/IdentityTuning/",
+        "tags": [
+            "Image Editing",
+            "Text-to-Image"
+        ]
+    },
+    {
+        "id": 14,
+        "index": 2,
+        "title": "LATO.2: Factorized 3D Mesh Generation with Vertex and Topology Flow",
+        "author": [
+            "Hang Long",
+            "Tianhao Zhao",
+            "Junkai Lin",
+            "Youjia Zhang",
+            "Huipeng Guo",
+            "Rendong Liang",
+            "Jiale Xu",
+            "Jozef HladkÃ½",
+            "Matthias NieÃner",
+            "Wei Yang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.10623",
+        "abstract": "Flow matching over carefully designed latent representations has recently emerged as a powerful paradigm for topology-aware mesh generation. Existing approaches, however, model vertices and connectivity jointly in a joint latent space, entangling continuous vertex geometry with discrete combinatorial structure; this complicates flow learning and manifests as drifting vertices and broken surfaces. We present LATO.2, a factorized flow matching framework that decomposes mesh generation into a vertex flow followed by a connectivity flow conditioned on the realized vertices, with both stages anchored to a shared coarse voxel scaffold. Dedicated VAEs underpin the two stages, recovering vertices at sub-voxel precision and embedding discrete connectivity into a continuous latent space. We demonstrate two advantages unique to this factorization: (i) part-wise generation, in which the scaffold is partitioned and each part synthesized at full latent capacity, yielding substantially higher-resolution meshes than a monolithic latent permits; and (ii) topology-adaptive editing, in which manipulating first-stage vertices induces the corresponding connectivity without re-optimization. Experiments show that LATO.2 surpasses state-of-the-art topology-aware mesh generators in geometric fidelity and connectivity quality.",
+        "tags": [
+            "3D",
+            "Flow Matching"
+        ]
+    },
+    {
+        "id": 15,
+        "index": 1,
+        "title": "Xiaomi-Robotics-U0: Unified Embodied Synthesis with World Foundation Model",
+        "author": [
+            "Xinghang Li",
+            "Jun Guo",
+            "Qiwei Li",
+            "Long Qian",
+            "Hang Lai",
+            "Yueze Wang",
+            "Hongyu Yan",
+            "Jiahang Cao",
+            "Xi Chen",
+            "Jingen Qu",
+            "Jiaxi Song",
+            "Nan Sun",
+            "Hanye Zhao",
+            "Futeng Liu",
+            "Wanli Peng",
+            "Heyun Wang",
+            "Yunhong Wang",
+            "Caoyu Xia",
+            "Jack Zhao",
+            "Diyun Xiang",
+            "Hangjun Ye",
+            "Heng Qu",
+            "Huaping Liu",
+            "Jason Li"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.11643",
+        "abstract": "Recent foundation image and video generation models offer strong generalization and controllability, but their direct application to embodied scenarios is limited by requirements for multi-view consistency, geometric coherence, and robot embodiment constraints. Existing methods typically adapt foundation models with limited robot data, often sacrificing visual knowledge acquired during large-scale pre-training. We present Xiaomi-Robotics-U0, a 38-billion-parameter multimodal autoregressive model for unified embodied synthesis. It treats embodied generation as an extension of foundation image and video generation and jointly optimizes text-to-image generation, image editing, embodied scene generation, embodied transfer, and embodied video generation. This unified framework preserves the generalization of the pre-trained world foundation model while adapting it to embodied settings. Xiaomi-Robotics-U0 is the first model to support high-quality multi-view scene generation across multiple robot embodiments and to introduce structured, controllable embodied transfer for fine-grained editing while preserving multi-view consistency and interaction dynamics. It achieves state-of-the-art results on single-step and sequential generation tasks, outperforming GPT-Image-2.0 in human evaluations of embodied scene generation and transfer, ranking first on World Arena for embodied video generation, and improving the out-of-distribution success rate of pi_0.5 from 36.9% to 63.2% on challenging real-world manipulation tasks. These results show that foundation world models can serve both as embodied world models and scalable data engines for embodied intelligence. Code and checkpoints are available at https://robotics.xiaomi.com/xiaomi-robotics-u0.html.",
+        "tags": [
+            "GPT",
+            "Image Editing",
+            "Robotics",
+            "Text-to-Image",
+            "Video Generation"
+        ]
+    }
+]

@@ -1,0 +1,389 @@
+[
+    {
+        "id": 1,
+        "index": 40,
+        "title": "SLAI T-Rex: Full-Parameter Post-training of the DeepSeek-V4 Family on Ascend SuperPOD",
+        "author": [
+            "Dongfang Li",
+            "Xiaodong Luo",
+            "Ruoyu Sun",
+            "Xuhui Chen",
+            "Linyuan Qiu",
+            "Jian Meng",
+            "Zhengxuan Lu",
+            "Yiting Wang",
+            "Yucheng Xie",
+            "Tao Guo",
+            "Tianxiang Fang",
+            "Jing Li",
+            "Sihang Chen",
+            "Shihao Hong",
+            "Chang Liu",
+            "Weihua Dai",
+            "Zirong Zeng",
+            "Ziwei Zhu",
+            "Zhuohan Wang",
+            "Zhengjun Yue",
+            "Igor Vasilyev",
+            "Min Liu",
+            "Weijian Sun",
+            "Xin Chen",
+            "Yingmeng Gao",
+            "Jinhua Zhou",
+            "Taolue Chen",
+            "Chenwei Wu",
+            "Dong Zhang",
+            "Wenlong Jin",
+            "Jinmin Xiang",
+            "Barkova Maria",
+            "Ushakov Anton",
+            "Xianfei Jin",
+            "Tian Ding",
+            "Zhihang Lin",
+            "Qian Chen",
+            "Linxin Yang",
+            "Mingzhe Yang",
+            "Bingwei Zhang",
+            "Hongzhang Yang",
+            "Fangxue Zhang",
+            "Shijun Qin",
+            "Jie Yu",
+            "Cuihua Hu",
+            "Tolstykh Vasiliy",
+            "Nosov Ivan",
+            "Abdullin Amir",
+            "Zhichen Zhou",
+            "Xin Zhang",
+            "Zhixiong Ning",
+            "Xutong Zhao",
+            "Junjie Huang",
+            "Jiajun Liu",
+            "Weiyan Kong",
+            "Zheng Zhang",
+            "Wenhan Luo",
+            "Lin Hu",
+            "Yangbo Guo",
+            "Li Zeng",
+            "Shihao Zeng",
+            "Baotian Hu",
+            "Min Zhang",
+            "Haizhou Li",
+            "Zhiquan Luo"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.20145",
+        "abstract": "Full-parameter post-training of trillion-parameter-scale MoE models introduces substantial system-level challenges for large-scale distributed training, including severe memory pressure, non-overlapped communication overhead, and inefficient kernel execution. While most large-scale LLM training systems are built around GPU-based clusters, this report presents an end-to-end optimization practice on the Ascend NPU SuperPOD. Using the DeepSeek-V4 model family as the target workload, we develop a hierarchical optimization framework spanning model-level parallelism, computation-communication orchestration, and low-level kernel execution. The resulting system achieves 34.22% Model FLOPs Utilization (MFU) with a 2.93x improvement over the open-source baseline recipe while maintaining training stability. Building on this optimized infrastructure, we further establish a CPT and SFT workflow for complex Operations Research (OR) tasks. We refer to the integrated framework as SLAI T-Rex. Using DeepSeek-V4-Flash, we develop OR-oriented CPT and SFT data pipelines that combine collected domain resources with solver-verified synthetic optimization documents. The resulting dataset contains 10K high-quality SFT samples spanning four task categories and three problem representations. The specialized model achieves the highest average zero-shot Pass@1 score among the evaluated models, reaching 71.81% and outperforming GPT-5.4-Mini and the base DeepSeek-V4-Flash model by 3.98 and 11.27 percentage points, respectively. Overall, this work demonstrates a full-stack pathway from efficient trillion-parameter model post-training on Ascend infra to domain-specialized Flash models for solver-grounded mathematical modeling, advancing frontier-model systems for complex reasoning.",
+        "tags": [
+            "DeepSeek",
+            "GPT",
+            "LLM",
+            "MoE"
+        ]
+    },
+    {
+        "id": 2,
+        "index": 27,
+        "title": "Self Gradient Forcing: Native Long Video Extrapolation",
+        "author": [
+            "Junhao Zhuang",
+            "Shiyi Zhang",
+            "Yuxuan Bian",
+            "Yaowei Li",
+            "Yawen Luo",
+            "Yijun Liu",
+            "Weiyang Jin",
+            "Songchun Zhang",
+            "Xianglong He",
+            "Xuying Zhang",
+            "Haoran Li",
+            "Haoyang Huang",
+            "Zeyue Xue",
+            "Nan Duan"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.20368",
+        "abstract": "Recent autoregressive video diffusion methods are increasingly built upon Self Forcing, where the student is trained on histories produced by its own rollout rather than ground-truth video contexts. This reduces exposure bias, but the historical key-value cache is still used by future frames only as frozen rollout state. As a result, future losses cannot supervise how earlier generated latents should be written into more useful keys and values for later video-latent generation. We call this the historical context-gradient gap. We propose Self Gradient Forcing (SGF), a two-pass training strategy that restores this missing supervision signal without backpropagating through the full serial rollout. Pass 1 performs a no-gradient autoregressive rollout matching inference and, at a sampled denoising exit step, records both the self-generated context and the noisy latents fed to the model. Pass 2 performs parallel context-gradient reconstruction for the recorded exit step. The generated context is used as stop-gradient clean-latent input, while the model recomputes the context KV representations and future-to-context causal attention. Thus, SGF provides the missing memory-writing supervision within the native autoregressive training objective, using losses on future video latents to train the model to encode context into more effective causal memory. Across extensive long-horizon frame-wise and chunk-wise experiments under different initializations, SGF achieves stronger native long-video extrapolation than Self Forcing, especially in subject identity, background/layout consistency, and temporal stability. Remarkably, using only a 5-second training window, SGF can extrapolate to videos lasting several minutes. Code and models will be released to advance research on autoregressive video generation.",
+        "tags": [
+            "Diffusion",
+            "Video Generation"
+        ]
+    },
+    {
+        "id": 3,
+        "index": 22,
+        "title": "Beyond Relevance-Centric Retrieval: Rubric-Oriented Document Set Selection and Ranking",
+        "author": [
+            "Kailin Jiang",
+            "Lei Liu",
+            "Jian Xi",
+            "Hui Xu",
+            "Junlin Liu",
+            "Baochen Fu",
+            "Shaoqing Ren",
+            "Bin Li",
+            "Vichwang",
+            "Yu Lu",
+            "Haibo Shi"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.19747",
+        "abstract": "As large language models and AI agents become the primary consumers of search results, document set quality determines the upper bound of downstream generation. Yet existing evaluation systems remain confined to scoring documents independently and aggregating via nDCG, ignoring inter-document interactions (redundancy, conflict, complementarity) and unable to answer what makes one document set better than another. To address these issues, we propose a complete evaluate-diagnose-optimize framework. We design SetwiseEvalKit, a three-level, nine-dimension document set evaluation benchmark covering both short-form and long-form scenarios, comprising approximately 28K high-quality evaluation rubrics. We systematically evaluate 12 rerankers: even the best method achieves no more than 45% coverage, cross-document coordination dimensions are universally weak, and no single method maintains top performance across both settings. Building on this, we propose Rubric4Setwise, a training-free method that converts rubric-based evaluation criteria into document set selection signals, achieving the best downstream generation performance with fewer documents and search rounds. It is the only method that maintains state-of-the-art results across both scenarios, validating the effectiveness of closing the loop from evaluation to optimization.",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 4,
+        "index": 12,
+        "title": "An Exam for Active Observers",
+        "author": [
+            "Jiarui Zhang",
+            "Muzi Tao",
+            "Shangshang Wang",
+            "Ollie Liu",
+            "Xuezhe Ma",
+            "Willie Neiswanger"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.16165",
+        "abstract": "Human vision is a closed loop: gaze is continuously redirected by intermediate hypotheses rather than a single snapshot. Decades of psychophysics and cognitive science have argued that this active observation is essential for a wide range of tasks. Whether today's multimodal large language models (MLLMs) exercise active observation is an empirical question that current vision-language benchmarks do not answer. We introduce ActiveVision, a benchmark that makes active observation measurable for MLLMs, comprising 17 tasks across 3 categories. Tasks are designed to force repeated visual perception rather than a single static description. Frontier MLLMs collapse on ActiveVision: the highest-scoring model we evaluate, GPT-5.5 at the highest exposed reasoning-effort tier, solves only 10.6% of items and scores zero on 11 of the 17 tasks, and even Claude Fable 5, despite topping most reasoning and coding leaderboards, solves just 3.5%, far behind three human participants who average 96.1%. Furthermore, much of the gap persists even when models write and run their own vision code: such code is unreliable on realistic imagery, and catching its failures itself requires the active perception the models lack. Together, these results indicate that current MLLMs lack robust active visual observation, motivating architectures and training objectives that close the perception-reasoning loop.",
+        "tags": [
+            "GPT",
+            "LLM"
+        ]
+    },
+    {
+        "id": 5,
+        "index": 9,
+        "title": "Scaling Laws for Hypernetwork-Based Knowledge Injection in Large Language Models",
+        "author": [
+            "Nischay Dhankhar",
+            "Dos Baha",
+            "Abulhair Saparov"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.19604",
+        "abstract": "Injecting factual knowledge into large language models (LLMs) reliably and at scale remains an open challenge. Hypernetworks provide a promising solution to large-scale knowledge injection. Although hypernetworks are typically applied for test-time adaptation, we explore their use in train-time knowledge injection, where, given a large corpus of facts, we train a hypernetwork to generate a fixed LoRA adapter that, when inserted into the target model, enable the model to answer questions about those facts. In this work, we investigate whether hypernetworks can be used to perform train-time knowledge injection and how this ability varies with scale. The scaling behavior of hypernetworks remains largely unstudied. Our design decouples the hypernetwork's injection capacity from the target model's general capability, enabling, for the first time, a rigorous study of scaling laws for hypernetwork architectures. We characterize how loss, reasoning accuracy, and out-of-distribution (OOD) generalization vary with hypernetwork depth, width, and target network size. We construct a large-scale dataset, called MegaWikiQA, containing tens of millions of multi-hop question-answer examples across 39 domains constructed from examples in Wikidata5M. Our results reveal: (i) hypernetwork-based injection exhibits broadly predictive power law scaling along all architecture axes; and (ii) hypernetworks are capable of reliable OOD generalization at increasing scales, suggesting that hypernetwork provides a promising alternative to other train-time adaptation methods such as LoRA finetuning and full fine-tuning, exhibiting steeper scaling exponents in all OOD evaluations. Together, these results establish hypernetworks as a principled and scalable substrate for train-time adaptation, and provide the first empirically grounded scaling laws to guide hypernetworks for factual reasoning in large language models.",
+        "tags": [
+            "LLM",
+            "LoRA"
+        ]
+    },
+    {
+        "id": 6,
+        "index": 8,
+        "title": "Beyond Euclidean Clipping: Overcoming Exploration Collapse in LLM RL via Riemannian Isometric Policy Optimization",
+        "author": [
+            "Zhicheng Cai",
+            "Xinyuan Guo",
+            "Hanlin Wu",
+            "Mingxuan Wang",
+            "Wei-Ying Ma",
+            "Ya-Qin Zhang",
+            "Hao Zhou"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.10169",
+        "abstract": "Reinforcement learning (RL) has become a dominant paradigm for enhancing LLMs' reasoning capabilities. However, RL algorithms with PPO-Clip are inherently limited by exploration collapse. Subsequent works remain primarily heuristic and fail to identify the essential cause of PPO-Clip's failure. This work reveals the fundamental flaw of PPO-Clip: it implicitly measures policy discrepancy using Euclidean metric, which is theoretically inconsistent with the intrinsic geometry on the policy Riemannian manifold. This geometric mismatch results in overly conservative updates in low-probability regions while aggressive in high-probability regions, ultimately collapsing exploration. To correct this geometric flaw, we propose Riemannian Isometric Policy Optimization (RIPO), which guarantees isometric policy updates on the Riemannian manifold, effectively balancing exploration and exploitation. We further show that RIPO achieves a favorable bias-variance trade-off, which stabilizes optimization. Extensive experiments demonstrate that RIPO significantly surpasses existing LLM RL algorithms across seven competition-level benchmarks (up to 60% improvement over GRPO on AIME24).",
+        "tags": [
+            "CLIP",
+            "GRPO",
+            "LLM",
+            "PPO",
+            "RL"
+        ]
+    },
+    {
+        "id": 7,
+        "index": 7,
+        "title": "Generalizable VLA Finetuning via Representation Anchoring and Language-Action Alignment",
+        "author": [
+            "Dwip Dalal",
+            "Shivansh Patel",
+            "Chahit Jain",
+            "Jeonghwan Kim",
+            "Utkarsh Mishra",
+            "Alex Baratian",
+            "Hyeonjeong Ha",
+            "Heng Ji",
+            "Svetlana Lazebnik",
+            "Unnat Jain"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.13429",
+        "abstract": "Finetuning a pretrained vision-language model (VLM) on robot demonstrations via behavior cloning (BC) has become the standard recipe for vision-language-action (VLA) policies. However, BC finetuning progressively overwrites the pretrained representations that support visual and semantic generalization. Co-training on web image-text data, a common remedy, does not prevent this; it applies language and action losses to separate observations, leaving VLAs with language-action misalignment that standard manipulation benchmarks do not expose. We propose Anchor-Align, which augments BC with two objectives: Vision-Language Anchoring distills layer-wise representations from a frozen VLM copy to prevent this drift, while Language-Action Alignment converts each action target into a discrete motion-direction label and jointly trains language and action prediction on the same robot observation. On a physical xArm7 robot, across two widely used VLA architectures, Anchor-Align improves real-robot success on both (28% to 54% and 37% to 60%). At scale in simulation, we demonstrate consistent improvements on OOD perturbations, perceptual robustness, and long-horizon control across LIBERO-PRO, LIBERO-Plus, and CALVIN, respectively, suggesting that preserving pretrained representations and effective action learning are not fundamentally at odds. Project page: http://anchoralignvla.github.io",
+        "tags": [
+            "Robotics",
+            "VLM"
+        ]
+    },
+    {
+        "id": 8,
+        "index": 4,
+        "title": "DocOps: A Verifiable Benchmark for Autonomous Agents in Complex Document Operations",
+        "author": [
+            "Jiazhen Jiang",
+            "Boxi Cao",
+            "Lingyong Yan",
+            "Yaojie Lu",
+            "Hongyu Lin",
+            "Shuaiqiang Wang",
+            "Dawei Yin",
+            "Xianpei Han",
+            "Le Sun"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.19865",
+        "abstract": "As autonomous agents rapidly evolve, their ability to reliably manipulate ubiquitous digital documents has become critical for enabling general-purpose AI assistants and automating complex workspace workflows. In this paper, we introduce DocOps, a deterministically verifiable evaluation framework underpinned by a hierarchical taxonomy that deconstructs document operations inspired by real-world practices into atomic dimensions and escalating workflow complexities. Based on DocOps, we systematically evaluate representative closed- and open-source models across various agentic harnesses, revealing that even the most advanced frontier configurations still exhibit profound limitations when handling highly coupled, long-range tasks. Furthermore, a fine-grained analysis of existing agents' manipulation behaviors uncovers 3 key failure modes: long-term state tracking collapse, shallow semantic verification, and destructive editing of structural metadata. Ultimately, our work exposes the capability boundaries of agents in maintaining global document consistency, shedding light on the future design of robust, non-destructive agents for complex digital ecosystems.",
+        "tags": []
+    },
+    {
+        "id": 9,
+        "index": 4,
+        "title": "FVAttn: Adaptive Sparse Attention with Runtime Load Balancing for Video Generation",
+        "author": [
+            "Hao Liu",
+            "Chenghuan Huang",
+            "Ye Huang",
+            "Zhiying Wen",
+            "Hao Liu",
+            "Mohan Zhang",
+            "Chen Li",
+            "Ziyang Ma",
+            "Jing Lyu",
+            "Jiangsu Du"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.16190",
+        "abstract": "Video Diffusion Transformers process long spatio-temporal sequences, making self-attention the main bottleneck in high-resolution video generation. Training-free sparse attention reduces this cost, but adaptive Top-$p$ routing creates uneven per-head workloads under multi-GPU sequence parallelism. The resulting workload heterogeneity turns sparse attention into a rank-level straggler problem. We present \\method{}, a training-free sparse-attention system that improves the distributed execution efficiency of adaptive sparse attention under multi-GPU sequence parallelism. \\method{} uses Top-$p$ routing, a Top-$k$ safety floor, and video-aware block organization as the sparse-routing frontend, then repairs the materialized mask at runtime. Runtime Load Balancing migrates a small number of heavy heads via P2P communication to shorten the current critical path. Slack-Aware Sparse Augmentation fills residual non-critical-rank slack with additional high-value blocks, while overlap hides scheduling and migration overhead behind existing computation. On step-distilled Wan2.2 I2V, \\method{} reduces average load imbalance from 1.34 to 1.08 and delivers a $4.41\\times$ attention speedup over FlashAttention, while achieving a $2.02$--$2.11\\times$ DiT inference speedup with competitive video quality.",
+        "tags": [
+            "DiT",
+            "Diffusion",
+            "Video Generation"
+        ]
+    },
+    {
+        "id": 10,
+        "index": 3,
+        "title": "Trace: A Taxonomy-Guided Environment for Multidomain Visual Reasoning",
+        "author": [
+            "Md Tanvirul Alam"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.19790",
+        "abstract": "Reinforcement learning with verifiable rewards (RLVR) has substantially improved language-model reasoning, yet its extension to vision-language models remains constrained by the lack of training data that are simultaneously broad, exactly verifiable, and reproducible. We introduce Trace, a taxonomy-guided environment for multidomain visual reasoning. Trace factorizes task construction into a scene grammar and an executable task program, separating visual realization from answer computation. A shared semantic state determines the rendered image, prompt, typed answer, verifier state, and replayable instance trace. The resulting environment comprises 1,000 tasks over 277 scene grammars and 11 visual domains, with controlled semantic and visual variation. RLVR on 64,000 Trace instances improves the macro-average across 24 external benchmarks by 3.51 percentage points for Qwen2.5-VL-3B and 4.06 points for Qwen2.5-VL-7B, providing evidence that broad procedural training can transfer beyond the generated task distributions. Project page: https://maveryn.github.io/trace/.",
+        "tags": [
+            "RL",
+            "VLM"
+        ]
+    },
+    {
+        "id": 11,
+        "index": 2,
+        "title": "SLPO: Scaling Latent Reasoning via a Surrogate Policy",
+        "author": [
+            "Runyang You",
+            "Zhiyuan Liu",
+            "Yongqi Li",
+            "Wenjie Li"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.19691",
+        "abstract": "Reinforcement learning with verifiable rewards has become the predominant recipe for eliciting test-time scaling in explicit Chain-of-Thought reasoners. Yet this scaling path remains computationally costly, since every intermediate step must be decoded as a language token. Latent reasoning instead carries intermediate computation as continuous vectors and already matches or surpasses explicit CoT at far shorter horizons. Despite this promise, latent reasoners remain largely imitation-bound, while explicit CoT has already moved past imitation via outcome-reward RL. Latent trajectories lack a tractable per-step likelihood and an adaptive stopping interface under fixed thinking budgets, so outcome rewards cannot elicit latent test-time scaling. We introduce Surrogate Latent Policy Optimization (SLPO) to bring outcome-reward RL to autoregressive latent reasoners: an empirical surrogate policy density over latent transitions for trajectory-level credit assignment, and a correctness-supervised stopping head that outcome-reward optimization refines into a variable-horizon policy. Across continuous and soft thinking settings, SLPO improves Pass@$k$ under parallel sampling and allocates longer latent computation to harder instances with higher deterministic accuracy.",
+        "tags": [
+            "CoT",
+            "RL"
+        ]
+    },
+    {
+        "id": 12,
+        "index": 2,
+        "title": "G-MAD: A Game-Based Data Generation Framework for Multi-View RGB-T Aerial Object Detection",
+        "author": [
+            "Yechan Kim",
+            "JongHyun Park",
+            "Dongho Yoon",
+            "Namhoon Jung",
+            "Moongu Jeon"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.19942",
+        "abstract": "This work introduces G-MAD, an open-source framework that uses Arma3 to generate synchronized multi-view RGB-T data for aerial object detection. G-MAD addresses key limitations of real-world aerial dataset construction, including limited viewpoint control, imperfect RGB-T alignment and high annotation cost. The framework supports structured scenario specification, controllable multi-view camera placement, simultaneous visible/thermal capture, and automatic bounding box annotation using engine-level geometric metadata. These capabilities enable controlled studies of viewpoint variation, multi-modal fusion, and synthetic-to-real transfer in aerial object detection. Besides, using G-MAD, we construct and release AMOD, a new large-scale multi-view aerial RGB-T object detection benchmark. The source code and the dataset are available at https://unique-chan.github.io/G-MAD-Project.",
+        "tags": [
+            "Detection"
+        ]
+    },
+    {
+        "id": 13,
+        "index": 1,
+        "title": "Train the Model, Not the Reader: Decodability Supervision for Verifiable Activation Explanations",
+        "author": [
+            "Hiskias Dingeto"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.20379",
+        "abstract": "Natural-language autoencoders score explanations of hidden activations by reconstruction: an explanation is deemed faithful if the activation can be regenerated from it. The test is structurally insensitive to individual false claims: if flipping a claim does not change the reconstruction, the claim is never penalized. We show the test is passed in two ways, neither faithful. On a released Qwen-2.5-7B verbalizer, explanations reconstruct well above chance while ~2% of specific claims are reconstruction-dependent, so the score tracks gist, not specific facts. Under exact synthetic ground truth, the standard recipe develops co-adapted private codes (false wording the reconstruction depends on) in 5/5 runs, and fixes that leave the target model unchanged do not help. We contribute two audit protocols, the grounded-vs-true cross and the evaluator swap, and RECAP (Readable Encodings via Co-trained Auxiliary Predictors): linear heads trained alongside the target model to keep designated content decodable. On RECAP-trained sandbox models, fresh verbalizers state the designated content truly and the codes vanish, at a +0.001-nat cost. This replicates on a pretrained Pythia-160M: the content becomes reliably probe-decodable, though a fresh verbalizer conveys it only in part (truth 0.44-0.46 vs a near-zero control). For interpretability, high reconstruction does not certify individual claims. For AI safety, RECAP makes designated internal content independently checkable against probes rather than asserted by prose a model can game: an independent probe scores the verbalizer's true claims above its false ones (AUC 0.96, vs 0.82 without RECAP). Against an adversary that edits an explanation to maximize the reconstruction score while lying (suppressing ~87% of its lie penalty), the RECAP probe still flags the lies (AUC 0.95) while the control probe collapses to chance (0.51).",
+        "tags": [
+            "Qwen"
+        ]
+    },
+    {
+        "id": 14,
+        "index": 1,
+        "title": "ATSplat: Compact Feed-forward 3D Gaussian Splatting with Adaptive Token Expansion",
+        "author": [
+            "Cho In",
+            "Jeonghwan Cho",
+            "Mijin Yoo",
+            "Gim Hee Lee",
+            "Seon Joo Kim"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.20417",
+        "abstract": "3D Gaussian Splatting (3DGS) achieves high-quality novel-view synthesis by optimizing freely placed primitives in 3D and adaptively densifying them in under-reconstructed regions. However, this scene-adaptive capacity allocation is largely lost in existing feed-forward 3DGS methods, which commonly regress Gaussians at input pixels and lift them along camera rays. Such pixel-aligned formulations make the number and placement of primitives depend on image resolution and input viewpoints rather than scene complexity, resulting in dense and often redundant Gaussian sets. We present ATSplat, a feed-forward 3DGS framework that restores the adaptive allocation capability of 3DGS optimization through Adaptive 3D Tokens. ATSplat first lifts coarse patch-level depth and camera cues into sparse 3D anchor tokens, forming a compact scaffold of the scene. Each token is then regressed into local Gaussians with learnable 3D offsets, decoupling primitive placement from input image grids. An Adaptive Token Expansion module predicts a token-level uncertainty score, supervised by rendering error maps, and selectively expands high-uncertainty tokens through learnable expansion layers. This sparse-to-adaptive formulation enables ATSplat to concentrate primitives in challenging regions while maintaining a compact representation. Experiments on two representative datasets, RealEstate10K and DL3DV, show that ATSplat achieves state-of-the-art rendering quality while reducing the number of Gaussians by more than $5.7\\times$ compared with dense feed-forward 3DGS methods. From 12 input images at $512 \\times 960$ resolution, ATSplat completes reconstruction in less than a second using a single commercial GPU, and renders high-quality novel views at 1136 FPS ($512 \\times 960$) with only 311K Gaussians.",
+        "tags": [
+            "3D",
+            "Gaussian Splatting"
+        ]
+    },
+    {
+        "id": 15,
+        "index": 0,
+        "title": "SeededGrasp: Language-Guided Grasping in Complex Scenes with Multiple Embodiments",
+        "author": [
+            "Yang Xu",
+            "Gurpreet Singh Mukker",
+            "Raymond Wang",
+            "Jasper Gerigk",
+            "Maria Attarian",
+            "Igor Gilitschenski"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.20207",
+        "abstract": "Practical robotic grasping in complex scenes requires both 3D spatial reasoning and alignment with task-specific requirements. Vision-language models (VLMs) offer a natural way to specify these requirements using language, but existing approaches either use a VLM to predict the grasp directly with limited spatial awareness, or train the VLM together with the grasping model, which requires significantly more data and compute. These limitations impede performance and have prevented scaling to multiple embodiments in complex scenes. We address this by proposing SeededGrasp, a novel data-efficient framework that enables a VLM to predict a seed point to be used as conditioning for a subsequent lightweight grasp-generation model. Our architecture decouples high-level semantic reasoning from low-level geometric execution, enabling multi-embodiment support while bypassing the need for expensive end-to-end training. To enable training such models, we release the first multi-embodiment tabletop grasping dataset comprising over 2.5M grasps in cluttered scenes. Experimental results demonstrate that our approach outperforms existing baselines, achieving 72% success in simulation and 78% in real-world grasping experiments. See our project site for data and code: https://uoft-isl.github.io/seeded-grasp/",
+        "tags": [
+            "3D",
+            "VLM"
+        ]
+    },
+    {
+        "id": 16,
+        "index": 0,
+        "title": "Moving Alphabet: A Controlled Study of Training Data for Text-to-Video Generation",
+        "author": [
+            "Amber Yijia Zheng",
+            "Lu Liu",
+            "Raymond A. Yeh",
+            "Xi Yin"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.18789",
+        "abstract": "Text-to-video generation has advanced significantly over the past five years through scaling of model size, data, and compute. Unlike model architecture, training data is often underexplored. Real-world data curation is complex and non-trivial, involving clip selection from raw videos and captioning to create video-text pairs for learning text-to-video mappings. We study how data distribution and caption quality impact text-to-video models. To enable controlled experiments, we introduce Moving Alphabet, a procedural testbed that renders letters with varying fonts, colors, sizes, and positions, moving in different directions and speeds against a black background. This design allows precise control over data distribution and caption quality by corrupting ground-truth metadata. Our experiments yield three findings: a) a diverse and balanced distribution of video content and duration is critical for generalization; b) caption quality significantly affects both model performance and training efficiency, suggesting that text-to-video models are bounded by video understanding capabilities; and c) classifier-free guidance and fine-tuning on high-quality data provide partial recovery from models trained on corrupted captions, but cannot fully compensate for poor pre-training data. We believe these insights can inform the development of large-scale text-to-video models, and we advocate for greater attention to the science of pre-training data.",
+        "tags": [
+            "CLIP",
+            "Text-to-Video",
+            "Video Generation"
+        ]
+    },
+    {
+        "id": 17,
+        "index": 0,
+        "title": "SLAM in Low-Light Environments: Project Report",
+        "author": [
+            "Oleh Basystyi",
+            "Anna Stasyshyn",
+            "Oleksandr Kosovan",
+            "Yaroslav Prytula"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.17699",
+        "abstract": "Simultaneous localization and mapping (SLAM) is one of the fundamental problems in robotics, as it enables autonomous operations in real-world scenarios. Under low illumination, reduced contrast, sensor noise, and motion blur degrade both feature extraction and feature matching, while compensating with LiDAR, depth, or thermal sensors raises cost, power draw, and integration complexity. Existing benchmarks remain dominated by well-lit indoor or daylight sequences, leaving open how far SLAM with standard RGB cameras can be pushed in the dark. We benchmark six systems spanning the feature-based, direct, filter-based, and learning-based paradigms - ORB-SLAM3, DSO, Kimera-VIO, OpenVINS, DPVO, and DPV-SLAM - on five LaMARia sequences of varying difficulty and illumination, reporting absolute and relative pose error alongside control-point recall. Kimera-VIO is the only system to track all five sequences to completion, combining the lowest relative pose error with steadily growing absolute error due to the absence of loop closure; DPVO and DPV-SLAM never lose tracking but incur absolute errors of roughly 100 m under low light; and the classical monocular pipelines (ORB-SLAM3, DSO) together with the filter-based OpenVINS fail outright or diverge on most of the harder and low-light sequences. The results suggest that RGB-only SLAM maintains stable low-light tracking only when both inertial fusion and global optimization are present. Closing the remaining gap will likely require low-light-specific learned front-ends or a return to complementary sensing.",
+        "tags": [
+            "Robotics",
+            "SLAM"
+        ]
+    }
+]
