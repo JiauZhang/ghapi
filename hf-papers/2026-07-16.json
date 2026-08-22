@@ -1,0 +1,480 @@
+[
+    {
+        "id": 1,
+        "index": 157,
+        "title": "Harness Handbook: Making Evolving Agent Harnesses Readable,Navigable, and Editable",
+        "author": [
+            "Ruhan Wang",
+            "Yucheng Shi",
+            "Zongxia Li",
+            "Zhongzhi Li",
+            "Yue Yu",
+            "Junyao Yang",
+            "Kishan Panaganti",
+            "Haitao Mi",
+            "Dongruo Zhou",
+            "Leoweiliang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.13285",
+        "abstract": "The capability of a modern AI agent depends not only on its foundation model but also on its harness, which constructs prompts, manages state, invokes tools, and coordinates execution. As models, APIs, environments, and requirements evolve, the harness must be continually modified. Before such a change can be made, a developer or coding agent must identify all code locations that implement the target behavior. This is difficult because production harnesses are large, tightly coupled, and behaviorally distributed, while modification requests describe what the system should do and repositories are organized by files and modules. Code search, repository indexing, and long-context processing ease inspection, but still leave this behavior-to-code mapping to be recovered by hand. Behavior localization is therefore a central bottleneck in harness evolution. We introduce the Harness Handbook, a behavior-centric representation synthesized automatically from a harness codebase via static analysis and LLM-assisted structuring, linking each behavior to its corresponding source. We also introduce Behavior-Guided Progressive Disclosure (BGPD), which guides agents from high-level behaviors to relevant implementation details and verifies candidate locations against the current source. On diverse modification requests from two open-source harnesses, Handbook-Assisted planning improves behavior localization and edit-plan quality while using fewer planner tokens, with the largest gains on scattered sites, rarely executed paths, and cross-module interactions. Evolving complex agentic systems thus depends not only on generating edits, but also on determining where those edits should be made.",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 2,
+        "index": 104,
+        "title": "Boogu-Image-0.1: Boosting Open-Source Unified Multimodal Understanding and Generation",
+        "author": [
+            "Guoxuan Chen",
+            "Chufeng Xiao",
+            "Haoran Yang",
+            "Siyue Xie",
+            "Binxiao Huang",
+            "Ming Zhang",
+            "Cheuk Him Chau",
+            "Xinyu Fu",
+            "Yingzhao Lian",
+            "Tom S.Y. Li",
+            "Jintao Lin",
+            "Bowen Dong",
+            "Zian Qian",
+            "Yuhao Liu",
+            "Yuxuan Hu",
+            "Weikang Shi",
+            "Bin Zou",
+            "Bowen Zheng",
+            "Haoxuan Che",
+            "Chang Chen",
+            "Yuyang He",
+            "Heyang Sun",
+            "Tianyu Huang",
+            "Chong Hou Choi",
+            "Cheng Gong",
+            "Han Shi",
+            "Haoli Bai",
+            "Xihui Liu",
+            "Hongsheng Li",
+            "Qifeng Chen",
+            "Chao Huang",
+            "Rui Liu",
+            "Chenyang Lei"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.13125",
+        "abstract": "We introduce Boogu-Image-0.1, an open-source unified multimodal understanding and generation model family, comprising Base, Turbo, Edit, and Edit-Turbo variants. It delivers competitive performance in high-quality text-to-image generation, fast inference, instruction-based editing, and bilingual (Chinese-English) text rendering. Closed-source multimodal systems like Nano-Banana-Pro and GPT-Image-2 achieve strong performance through system-level integration rather than a single model, yet their internal practices remain largely undisclosed. In this work, we demonstrate that targeted improvements in model understanding, data quality, and training pipelines, coupled with agentic inference-time scaling, can substantially enhance generation and editing performance even under highly constrained compute budgets. Comprehensive evaluations show that Boogu-Image-0.1 consistently matches or surpasses other open-source models across standard benchmarks, and achieves results approaching leading closed-source systems. Notably, this is accomplished with only 208.62 million unique images. The base model's theoretical training cost is only approximately \\$400K. We share practical discussions that we believe are valuable to the broader research community, and release weights, code, and recipes under Apache 2.0 to advance the open ecosystem for unified multimodal understanding and generation. Our code is available here: https://github.com/Boogu-Project/Boogu-Image.",
+        "tags": [
+            "GPT",
+            "Text-to-Image"
+        ]
+    },
+    {
+        "id": 3,
+        "index": 76,
+        "title": "Ring-Zero: Scaling Zero RL to a Trillion Parameters for Emergent Reasoning",
+        "author": [
+            "Xinyu Tang",
+            "Gangqiang Cao",
+            "Yurou Liu",
+            "Yuliang Zhan",
+            "Xiaochong Lan",
+            "Yifan Li",
+            "Yuchen Yan",
+            "Han Peng",
+            "Zican Dong",
+            "Zhenduo Zhang",
+            "Tianshu Wang",
+            "Xinyu Kong",
+            "Zujie Wen",
+            "Wayne Xin Zhao",
+            "Zhiqiang Zhang",
+            "Jun Zhou"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.12395",
+        "abstract": "Reinforcement learning with verifiable rewards without human-annotated data, often referred to as zero RL, has emerged as a powerful paradigm for eliciting chain-of-thought reasoning. However, due to computational constraints, existing studies are largely restricted to small models, leaving the training dynamics and emergent capabilities at a large scale unexplored. To meaningfully explore this frontier, we aim to elicit high-quality reasoning behaviors from the model. However, we find that naive scaling often suffers from poor readability, token redundancy, and a lack of adaptive reasoning depth. To address these challenges, we present a stable and efficient training pipeline, incorporating algorithmic and system optimizations such as clipped importance sampling, training-inference ratio correction, and mixed-precision control. Our experiments offer three key findings that validate the \"bitter lesson\" of scaling: (1) scaling to 1T parameters significantly enhances sample efficiency and performance ceilings; (2) the training process progresses sequentially through an initial discovery phase followed by a sharpening phase; and (3) the model spontaneously develops advanced cognitive behaviors, including anthropomorphism, structured formatting, self-verification, parallel reasoning, and context anxiety, rendering hand-crafted heuristics redundant. Evaluated on seven mathematical benchmarks, Ring-2.5-1T-Zero achieves competitive performance. Additionally, to assess CoT quality beyond final-answer correctness, we propose a structured evaluation framework across three dimensions: comprehensibility, reproducibility, and efficiency, where our model demonstrates clear advantages in producing structured and concise reasoning traces. By sharing our observed emergent phenomena, we hope to provide the community with deeper insights into scaling behaviors, particularly at the 1-trillion scale.",
+        "tags": [
+            "CoT",
+            "RL"
+        ]
+    },
+    {
+        "id": 4,
+        "index": 43,
+        "title": "KnowAct-GUIClaw: Know Deeply, Act Perfectly, Personal GUI Assistant with Self-Evolving Memory and Skill",
+        "author": [
+            "Yunxin Li",
+            "Jinchao Li",
+            "Shibo Su",
+            "Zhenran Xu",
+            "Chenrui Zhao",
+            "Tongshu Bian",
+            "Xiaoman Liang",
+            "Meishan Zhang",
+            "Baotian Hu",
+            "Min Zhang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.12625",
+        "abstract": "OpenClaw has emerged as a leading agent framework for complex task automation, yet it faces insufficient cross-platform GUI interaction support and a well-built self-evolution mechanism. These flaws limit its adaptation to diverse device ecosystems and prevent performance improvements through continuous learning from execution experience. To resolve these issues, we propose the Know Deeply, Act Perfectly paradigm for personal assistants, which holds that accumulated user interaction and task-running experience directly improve execution accuracy and efficiency, unifying cognitive comprehension and operational execution. Based on this paradigm, we introduce KnowAct-GUIClaw, a novel Know-Route-Act-Reflect framework designed to address OpenClaw's GUI manipulation deficits and break through its cross-platform and recursive self-improvement constraints. First, the host agent leverages accumulated interaction experience and task-relevant knowledge for long-horizon task decomposition and allocation (Know). Second, a pluggable GUI subagent with an experience-attributable memory system (Know) and self-evolving skill library (Act), enabling seamless cross-platform migration and fast-path integration. Especially, this framework continuously stores user profiles and feedback to improve the accuracy of task decomposition and tool calls. Extensive experiments across Android, iOS, HarmonyOS and Windows show that KnowAct-GUIClaw achieves superior efficiency, accuracy and cross-platform adaptability. Especially, the GUIClaw with open-source Kimi-2.6 models achieves the best performance (64.1%) on the long-horizon MobileWorld benchmark, beating all agentical frameworks and closed-source agentical models, e.g., Seed-2.0-Pro and GPT-5.5. Additionally, the knowledgeable memory and execution skills supported by our framework are transferable across diverse base models, improving by 8.5% with Kimi-2.6.",
+        "tags": [
+            "GPT"
+        ]
+    },
+    {
+        "id": 5,
+        "index": 42,
+        "title": "OvisOCR2 Technical Report",
+        "author": [
+            "Shiyin Lu",
+            "Yinglun Li",
+            "Yu Xia",
+            "Yuhui Chen",
+            "An-Yang Ji",
+            "Jun-Peng Jiang",
+            "Qing-Guo Chen",
+            "Jianshan Zhao",
+            "En Lin",
+            "Haijun Li",
+            "Cheng Qin",
+            "Zhao Xu",
+            "Weihua Luo"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.13639",
+        "abstract": "We introduce OvisOCR2, a 0.8B document parsing model. OvisOCR2 is designed as an end-to-end parser: given a document page image, it generates a Markdown representation in natural reading order, covering text, formulas, tables, and visual regions. We build a data engine that combines filtered real-document annotations with synthetic pages whose rendered images and Markdown targets are derived from the same HTML source. The training recipe includes supervised fine-tuning, reinforcement learning on a 4B branch with a multi-component reward design, on-policy distillation into the 0.8B model, and model fusion. On OmniDocBench v1.6, OvisOCR2 achieves a state-of-the-art overall score of 96.58, placing an end-to-end model at the top of this leaderboard previously dominated by pipeline methods and highlighting the potential of end-to-end document parsing. On PureDocBench, OvisOCR2 also achieves the highest Avg3 score of 75.06. Beyond these two public benchmarks, we evaluate OvisOCR2 on an in-house benchmark designed to cover a broader set of long-tail and challenging scenarios. OvisOCR2 obtains the best overall performance among the compared methods, providing further evidence of its generalization and robustness. OvisOCR2 is available at https://huggingface.co/ATH-MaaS/OvisOCR2.",
+        "tags": [
+            "RL"
+        ]
+    },
+    {
+        "id": 6,
+        "index": 29,
+        "title": "PolicyShiftGuard: Benchmarking and Improving Policy-Adaptive Image Guardrails",
+        "author": [
+            "Mingyang Song",
+            "Luxin Xu",
+            "Haoyu Sun",
+            "Minzhou Pan",
+            "Yu Cheng",
+            "Bo Li"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.05910",
+        "abstract": "Image guardrails are typically trained and evaluated under a fixed safety policy, implicitly treating safety as an intrinsic property of an image. Real deployments are different: the same image may be allowed in one product, restricted in another, and newly disallowed when a policy boundary changes. We study policy-adaptive image guardrailing, where a model must decide whether an image violates the currently supplied policy and generalize to held-out policy definitions. We introduce PolicyShiftBench, a comprehensive benchmark with 2,000 policy-discriminative instances over 265 images, where each image is paired with 7.55 policy-conditioned prompts on average to test whether models adapt to the active policy rather than relying on image-level safety priors. We then propose PolicyShiftGuard, a compact policy-conditioned guardrail trained with a two-stage training recipe that combines Randomized Policy SFT (RP-SFT) with Boundary-Pair Policy Adaptation (BP-Adapt). BP-Adapt trains matched prompts for the same image and risk category using standard label supervision and a pairwise comparison loss that separates blocking policies from passing policies. Experiments show that existing VLMs and specialized guardrails remain brittle under policy shifts, while PolicyShiftGuard substantially improves policy-sensitive performance. The 7B model achieves SOTA performance of 76.9 Avg. F1 and 72.1 Avg. PSS on PolicyShiftBench, transfers well to UnSafeBench and SafeEditBench, and improves the latency-performance trade-off with a concise output format. Ablations confirm that matched pass/block boundary pairs are essential for stable policy adaptation.",
+        "tags": [
+            "VLM"
+        ]
+    },
+    {
+        "id": 7,
+        "index": 21,
+        "title": "GigaWorld-Policy-0.5: A Faster and Stronger WAM Empowered by AutoResearch",
+        "author": [
+            "GigaWorld Team",
+            "Angen Ye",
+            "Angyuan Ma",
+            "Boyuan Wang",
+            "Chaojun Ni",
+            "Fangzheng Ye",
+            "Guan Huang",
+            "Guo Li",
+            "Guosheng Zhao",
+            "Haodong Yan",
+            "Hengtao Li",
+            "Jiwen Lu",
+            "Kai Wang",
+            "Mingming Yu",
+            "Qitang Hu",
+            "Qiuping Deng",
+            "Songling Liu",
+            "Xiaoyu Tian",
+            "Xiaofeng Wang",
+            "Xinyu Zhou",
+            "Xiuwei Xu",
+            "Xinze Chen",
+            "Yang Wang",
+            "Yejun Zeng",
+            "Yifan Chang",
+            "Yun Ye",
+            "Zhenyu Wu",
+            "Zhanqian Wu",
+            "Zheng Zhu"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.13960",
+        "abstract": "World Action Models (WAMs) improve robot policy learning by jointly modeling actions and future visual observations, using future scene evolution as dense supervision for physically grounded action generation. However, a common design in existing WAMs is to explicitly generate future videos at inference time, incurring substantial computational overhead and hindering real-time closed-loop deployment. GigaWorld-Policy addresses this issue with an action-centered formulation, where future visual dynamics are used during training while action-only decoding is used at inference time. Building upon this framework, we present GigaWorld-Policy-0.5, an enhanced action-centered WAM designed for more efficient robot control. During pretraining, GigaWorld-Policy-0.5 adopts a mixed Action-Conditioned World Modeling (AC-WM) and WAM training strategy. This strengthens the coupling between visual dynamics and robot actions and improves the transferability of action representations for downstream policy learning. For efficient inference, GigaWorld-Policy-0.5 introduces a Mixture-of-Transformers architecture that separates visual dynamics modeling and action generation into specialized experts, reducing active computation during action-only inference and achieving 85 ms inference latency on a local RTX 4090 setup. In addition, we employ an agent-based AutoResearch pipeline to systematically search training configurations, enabling more efficient identification of optimal experimental setups while reducing the time and manual intervention required for hyperparameter tuning. Experiments and ablations show that GigaWorld-Policy-0.5 preserves the training benefits of future visual dynamics while improving inference efficiency for robot control.",
+        "tags": [
+            "Robotics"
+        ]
+    },
+    {
+        "id": 8,
+        "index": 21,
+        "title": "MetaView: Monocular Novel View Synthesis with Scale-Aware Implicit Geometry Priors",
+        "author": [
+            "Yufei Cai",
+            "Xuesong Niu",
+            "Hao Lu",
+            "Kun Gai",
+            "Kai Wu",
+            "Guosheng Lin"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.12000",
+        "abstract": "Current visual generation models are capable of producing high-quality content, yet they lack a coherent perception of the spatial structure. Existing generative novel view synthesis methods typically introduce explicit geometry priors, which enforce spatial consistency but inherently restrict generalization in large view changes. In contrast, recent interactive generative methods favor implicit scene modeling, offering greater flexibility at the cost of precise camera control and geometry consistency. In this paper, we propose MetaView, a diffusion-based monocular novel view synthesis framework that enables rendering under large view changes from a single image. Our key insight is to combine implicit geometry modeling with minimal yet essential explicit 3D cues: we incorporate implicit geometry priors from a feed-forward geometry perception network to regularize structure without imposing restrictive reconstruction pipelines, while leveraging metric depth to anchor the generation to a metric scale. This design allows MetaView to achieve both geometry consistency and precise controllability. Extensive experiments demonstrate that, under challenging monocular large viewpoint changes, MetaView significantly outperforms existing methods and exhibits superior generalization. Our code is publicly available at https://github.com/KlingAIResearch/MetaView.",
+        "tags": [
+            "3D",
+            "Diffusion"
+        ]
+    },
+    {
+        "id": 9,
+        "index": 11,
+        "title": "Hallo4D: Multi-Modal Hallucination Mitigation for Consistent Spatio-Temporal Generation",
+        "author": [
+            "Hongbo Wang",
+            "Huaibo Huang",
+            "Jie Cao",
+            "Jin Liu",
+            "Haoyang Tong",
+            "Ran He"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.12752",
+        "abstract": "While recent advances in 3D generation have enabled impressive visual synthesis, existing methods often rely on 2D diffusion supervision without explicit mechanisms for geometric consistency, leading to spatial hallucinations such as duplicated structures and misaligned geometry. These issues become more severe in 4D generation, where maintaining consistency across viewpoints and temporal evolution introduces additional challenges, including jitter, identity flicker, and structural drift. We present \\textbf{Hallo4D}, a unified and model-agnostic framework for mitigating spatiotemporal hallucinations in 3D and 4D content generation. Hallo4D introduces a generation-detection-correction paradigm that leverages large multimodal language models (LMMs) to identify and summarize spatial and temporal inconsistencies from multi-view and multi-frame renderings. These insights guide a consensus-driven image-space consistency optimization, where an LMM-based selector evaluates candidate corrections through multi-model voting, without requiring retraining or architectural modifications. To further improve temporal consistency and optimization efficiency, Hallo4D incorporates motion-aware keyframe sampling, LMM-guided initialization, and appearance alignment. We additionally introduce exposure-aware optimization and visibility pruning to enhance robustness under challenging viewpoints. Extensive experiments demonstrate that Hallo4D consistently outperforms strong baselines across diverse 3D and 4D generation settings, providing a scalable and generalizable solution for consistency-aware content generation.",
+        "tags": [
+            "3D",
+            "Detection",
+            "Diffusion"
+        ]
+    },
+    {
+        "id": 10,
+        "index": 11,
+        "title": "Registers Matter for Pixel-Space Diffusion Transformers",
+        "author": [
+            "Nikita Starodubcev",
+            "Ilia Sudakov",
+            "Ilya Drobyshevskiy",
+            "Artem Babenko",
+            "Dmitry Baranchuk"
+        ],
+        "pdf": "https://arxiv.org/pdf/2605.16147",
+        "abstract": "Vision Transformers (ViTs) are known to exhibit high-norm patch-token outliers that degrade feature map quality, a problem effectively mitigated by register tokens. As diffusion models increasingly adopt transformer architectures and move toward pixel-space training, they become closer in form to ViTs, raising the question of whether register tokens are also useful for Diffusion Transformers (DiTs). In this work, we show that DiTs differ from ViTs in a key respect: they do not exhibit patch-token outliers but still benefit from registers. Interestingly, registers are more effective in pixel-space DiTs than in latent-space DiTs. By analyzing intermediate representations, we find that register tokens produce cleaner feature maps at high noise levels, which may contribute to their effectiveness in pixel-space generation. We further observe that recent pixel-space DiT architectures implicitly incorporate register-like mechanisms, which may partially account for their strong empirical performance. Motivated by these observations, we propose Register Guidance, a technique that amplifies the contribution of register tokens responsible for improving visual structure and coherence.",
+        "tags": [
+            "DiT",
+            "Diffusion",
+            "Transformer"
+        ]
+    },
+    {
+        "id": 11,
+        "index": 10,
+        "title": "ShortOPD: Recovering Pruned LLMs with Short-to-Long On-Policy Distillation",
+        "author": [
+            "Qingyu Zhang",
+            "Qianhao Yuan",
+            "Hongyu Lin",
+            "Yaojie Lu",
+            "Xianpei Han",
+            "Le Sun",
+            "Xiang Li",
+            "Ming Xu",
+            "Jiarui Li",
+            "Xiuyin Zhao"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.13124",
+        "abstract": "Structured pruning is a hardware-friendly way to compress LLMs, but it is mostly validated on multiple-choice recognition tasks, while the same compressed checkpoints can collapse on the free-form generation that deployment actually requires. Two observations trace this gap. First, greedy \\textsc{pass}@$1$ nearly vanishes after compression, yet \\textsc{pass}@$k$ recovers substantially under repeated sampling: useful generations are demoted, not erased. Second, the recoverable regime fails mainly through suffix repetition. Recovery should therefore train on the compressed model's own on-policy states with dense token-level supervision, which On-Policy Distillation (OPD) provides by reusing the pre-compression model as a frozen teacher. However, long on-policy rollouts spend early recovery budget on low-information repetitive suffixes, delaying loss descent. To mitigate this waste, we propose \\textbf{\\shortopd}, a short-to-long OPD schedule that detects teacher-confirmed repetitive suffixes, treats the surviving prefix as each rollout's effective length, and allocates future rollout budgets to the effective lengths the policy can currently use. Across math, code, and open-ended generation, \\shortopd\\ raises the compressed model's score to about $9\\times$ its unrecovered value and $1.6$--$4.4\\times$ standard recovery recipes (SFT w/o KD, KD, and SeqKD), and it matches a fixed $8192$-token rollout horizon within two points using a quarter of the training time ($8.5$ vs.\\ $35.9$ hours) and $71\\%$ fewer rollout tokens. We hope this recipe helps move structured pruning beyond marginal gains on perplexity and multiple-choice benchmarks, a step closer to deployment-ready generation quality.",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 12,
+        "index": 7,
+        "title": "Self-Improvements in Modern Agentic Systems: A Survey",
+        "author": [
+            "Zhe Ren",
+            "Yimeng Chen",
+            "Dandan Guo",
+            "Guowei Rong",
+            "Tonghui Li",
+            "R. B. Xiong",
+            "Qingfeng Lan",
+            "Wenyi Wang",
+            "Li Nanbo",
+            "Yibo Yang",
+            "Mingchen Zhuge",
+            "JÃ¼rgen Schmidhuber"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.13104",
+        "abstract": "Self-improving autonomous agents are moving from research prototypes to deployed systems. The primary goal is controllable evolution, or adaptation, from experience with minimal or even no human input. This survey frames modern self-improving agents as adaptive systems that convert experience into accumulated capability gains. We offer a system-level framework that represents a modern agent as a configuration coupling a foundation model with an operational scaffold of prompts, memory, tools, and control logic. Within this framework, self-improvement is formalized as a self-induced update operator that obtains and commits updates to model parameters or scaffold components. We organize prior work by update target and by the signals that drive change, then review applications and discuss evaluation, before closing with open problems and future directions. For convenience, we track technical updates on https://github.com/selfimproving-agent/awesome-Self-Improving-Agents.",
+        "tags": []
+    },
+    {
+        "id": 13,
+        "index": 7,
+        "title": "Vinci2: Providing Proactive Assistance in Continuous Egocentric Videos",
+        "author": [
+            "Gong Sitong",
+            "Tianyu Yan",
+            "Caixin Kang",
+            "Bo Zheng",
+            "Xiang Ruan",
+            "Huchuan Lu",
+            "Kaipeng Zhang",
+            "Yoichi Sato",
+            "Yifei Huang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.11523",
+        "abstract": "When should an intelligent assistant speak up without being asked? Continuous egocentric video offers rich, evolving context that enables a new form of assistance: one that is proactive rather than merely reactive. Yet existing approaches either wait passively for user queries or treat every detected event as requiring a response, without considering the user's history, current activity, or whether assistance would actually be welcome. We reframe proactive assistance as a context-dependent decision problem: the agent must not only perceive what is happening, but reason over accumulated temporal context to determine when and whether to intervene. To this end, we present Vinci2, a proactive egocentric assistance system that advances the on-device assistant Vinci from reactive response toward proactivity. On the evaluation side, we present EgoServe, the first large-scale benchmark for proactive assistance in continuous egocentric video. EgoServe comprises over 3,000 service instances organized along 4 temporal memory horizons, ranging from immediate safety alerts to long-term habit coaching, across 10 service categories. On the modeling side, we propose EgoMemo, a training-free, memory-augmented agent that maintains three complementary memory representations: multi-scale temporal summaries, a semantic knowledge graph, and visual embedding archives. At each timestep, EgoMemo performs retrieval-augmented reasoning to determine whether assistance is warranted and, if so, produces contextually grounded responses. Experiments demonstrate that EgoMemo establishes strong baselines on EgoServe while remaining competitive on existing egocentric benchmarks. Our benchmark and code are publicly available at \\href{https://sitonggong.github.io/EgoServe-page/}{Vinci2}.",
+        "tags": []
+    },
+    {
+        "id": 14,
+        "index": 6,
+        "title": "AgentCompass: A Unified Evaluation Infrastructure for Agent Capabilities",
+        "author": [
+            "Zichen Ding",
+            "Jiaye Ge",
+            "Shufan Jiang",
+            "Kai Chen",
+            "Mo Li",
+            "Qingqiu Li",
+            "Zehao Li",
+            "Zonglin Li",
+            "Tiaohao Liang",
+            "Shudong Liu",
+            "Zerun Ma",
+            "Zixing Shang",
+            "Wenhui Tian",
+            "Zun Wang",
+            "Liwei Wu",
+            "Zhenyu Wu",
+            "Jun Xu",
+            "Bowen Yang",
+            "Dingbo Yuan",
+            "Qi Zhang",
+            "Songyang Zhang",
+            "Peiheng Zhou",
+            "Dongsheng Zhu"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.13705",
+        "abstract": "As Large Language Models (LLMs) evolve into autonomous agents, the need for unified evaluation infrastructure becomes critical. However, current evaluation pipelines remain highly fragmented and tightly coupled, hindering reproducibility and causing redundant engineering. To address this, we introduce AgentCompass, an open-source, lightweight, and extensible infrastructure for evaluating LLM-based agents. AgentCompass organizes the evaluation process around three independent components, namely Benchmark, Harness, and Environment, thereby enabling flexible configurations without requiring the reimplementation of complex execution logic. Furthermore, it features a fault-tolerant asynchronous runtime and comprehensive trajectory analysis tools to transparently diagnose nuanced failure modes like reward-hacking. Natively supporting over 20 benchmarks across five capability dimensions, AgentCompass provides the community with a scalable and reproducible infrastructure for advancing agent research.",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 15,
+        "index": 5,
+        "title": "Tracing Agentic Failure from the Flow of Success",
+        "author": [
+            "Samuel Yeh",
+            "Yiwen Zhu",
+            "Shaleen Deep",
+            "Sharon Li"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.12747",
+        "abstract": "Failure attribution for LLM-based agentic systems, i.e., identifying which steps in a failure trajectory caused the task to fail, is critical for debugging and improving these systems. Existing approaches either rely on prompting-based pipelines, which are computationally expensive, or require post-training on failure trajectories with step-level error annotations, which are costly to collect and difficult to scale. We argue that a practical failure attribution model should be lightweight and trainable without step-level supervision on failure data. To this end, we address unsupervised failure attribution, i.e., training exclusively on successful trajectories and identifying error steps at inference time given a failure trajectory. We propose OAT, which casts this problem as one-class learning with neural controlled differential equations, modeling the dynamical pattern of successful trajectories in latent space. At inference time, each step in a failure trajectory is assigned an anomaly score based on its deviation from the dynamics learned on successful trajectories, which is then used to form a set of error steps. With training on only 100 successful trajectories, experiments show that OAT is 200--5000 $\\times$ faster than prompting-based baselines, and, at the same time, consistently outperforms them in both in-domain and out-of-distribution datasets with +20% and +7% F1 scores, respectively, demonstrating that OAT is a promising and efficient direction for diagnosing agentic system failures.",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 16,
+        "index": 5,
+        "title": "From Noisy Traces to Root Causes: Structural Trajectory Analysis and Causal Extraction for Agent Optimization",
+        "author": [
+            "Ying Chang",
+            "Jiahang Xu",
+            "Xuan Feng",
+            "Chenyuan Yang",
+            "Peng Cheng",
+            "Yuqing Yang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.07702",
+        "abstract": "The optimization of long-horizon agents increasingly relies on reflection-based mechanisms, where a large language model (LLM) acts as an optimizer to diagnose agent failures and improve agent policies. However, real execution traces are difficult to use directly for optimization: large trace collections are often redundant and heterogeneous, making optimization inefficient and prone to overfitting to low-value failures; meanwhile, each individual trajectory also contains many irrelevant steps, while naive context reduction methods such as truncation or sliding windows can discard causally important evidence and produce misleading optimization signals. To resolve this dilemma, we introduce STRACE (Structural TRajectory Analysis and Causal Extraction), a framework that constructs high signal-noise optimization contexts for more precise and effective optimization. At the batch level, STRACE mines failure patterns to filter redundant traces and retain representative failures; within each selected trace, it performs causal localization over a textual dependency graph to remove non-causal steps and identify the true root-cause module for optimization. Empirical results demonstrate that STRACE significantly outperforms standard context-filtering baselines. Notably, on a challenging formal verification task (VeruSAGE-Bench), it successfully optimizes human-expert designed agents, delivering $1.4\\times$ success-rate improvement (42.5% to 58.5%). The code is available at https://github.com/moomight/STRACE .",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 17,
+        "index": 4,
+        "title": "Discrete Diffusion Models: A Unified Framework from Tokenization to Generation",
+        "author": [
+            "Ye Yuan",
+            "Weien Li",
+            "Rui Song",
+            "Zeyu Li",
+            "Haochen Liu",
+            "Xiangyu Kong",
+            "Zixuan Dong",
+            "Linfeng Du",
+            "Zipeng Sun",
+            "Weixu Zhang",
+            "Jiaxin Huang",
+            "Changjiang Han",
+            "Yonghan Yang",
+            "Zichen Zhao",
+            "Xiuyuan Hu",
+            "Haolun Wu",
+            "Yankai Chen",
+            "Fengran Mo",
+            "Jikun Kang",
+            "Bowei He",
+            "Philip S. Yu",
+            "Xue Liu"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.13431",
+        "abstract": "Discrete denoising diffusion models (DDMs) have recently emerged as a compelling alternative to autoregressive (AR) modeling for discrete data, offering parallel generation and iterative global refinement capabilities. Unlike continuous diffusion, where the state space is fixed, DDMs are fundamentally shaped by how the discrete state space is constructed: the tokenization scheme, the vocabulary topology, and domain-specific structural alphabets. This work introduces a unified conceptual framework that views discrete diffusion models through the construction of the underlying discrete state space. Within this framework, existing formulations, including transition-matrix, masking/absorbing-state, and score/ratio-based approaches, emerge as different instantiations of a common design space. The framework further exposes common design trade-offs across training objectives, inference algorithms, scaling behavior, systems optimization, and evaluation protocols, suggesting several promising directions for future research.",
+        "tags": [
+            "Diffusion"
+        ]
+    },
+    {
+        "id": 18,
+        "index": 3,
+        "title": "PalmClaw: A Native On-Device Agent Framework for Mobile Phones",
+        "author": [
+            "Hongru Cai",
+            "Yongqi Li",
+            "Ran Wei",
+            "Wenjie Li"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.13027",
+        "abstract": "Large Language Model (LLM) agents have moved beyond generating responses to executing multi-step tasks by calling tools, observing the results, and iteratively deciding the next action. Most agent systems run on desktops or servers, which support tool use and task automation. Mobile devices are also important agent environments because they are widely accessible and contain users' data, sensors, and daily-use applications. Existing mobile agents mainly operate smartphones through graphical user interface (GUI) actions such as tapping, swiping, and typing, which often form long, interface-dependent sequences, cannot directly access device capabilities, and make execution boundaries difficult to define. We present \\textbf{PalmClaw}, an open-source agent framework that runs natively on mobile phones and manages the sessions, memory, skills, tools, and agent loop directly on the device. PalmClaw exposes device capabilities as device tools with explicit arguments, structured results, and clearly defined execution boundaries. This design enables agents to use mobile capabilities directly while keeping each action explicit and controlled. Experiments show an 11.5\\% relative improvement in task success and a 94.9\\% reduction in completion time over the strongest baseline, with lower setup burden and traces illustrating how execution boundaries are applied. Code is available at https://github.com/ModalityDance/PalmClaw.",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 19,
+        "index": 1,
+        "title": "From Controlled to the Wild: Evaluation of Pentesting Agents for the Real-World",
+        "author": [
+            "Pedro Conde",
+            "Henrique Branquinho",
+            "Valerio Mazzone",
+            "Bruno Mendes",
+            "AndrÃ© Baptista",
+            "Nuno Moniz"
+        ],
+        "pdf": "https://arxiv.org/pdf/2605.10834",
+        "abstract": "AI pentesting agents are increasingly credible as offensive security systems, but current benchmarks still provide limited guidance on which will perform best in real-world targets. Existing evaluation protocols assess and optimize for predefined goals such as capture-the-flag, remote code execution, exploit reproduction, or trajectory similarity, in simplified or narrow settings. These tools are valuable for measuring bounded capabilities, yet they do not adequately capture the complexity, open-ended exploration, and strategic decision-making required in realistic pentesting. In this paper, we present a practical evaluation protocol that shifts assessment from task completion to validated vulnerability discovery, allowing evaluation in sufficiently complex targets spanning multiple attack surfaces and vulnerability classes. The protocol combines structured ground-truth with LLM-based semantic matching to identify vulnerabilities, bipartite resolution to score findings under realistic ambiguity, continuous ground-truth maintenance, repeated and cumulative evaluation of stochastic agents, efficiency metrics, and reduced-suite selection for sustainable experimentation. This protocol extends the state of the art by enabling a more realistic, operationally informative comparison of AI pentesting agents. To enable reproducibility, we also release expert-annotated ground truth and code for the proposed evaluation protocol: https://github.com/ethiack/ethibench.",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 20,
+        "index": 0,
+        "title": "AffectFlow-DINO: Uncertainty-Aware Multi-Task Affect Estimation via Conditional Rectified Flow",
+        "author": [
+            "Salah Eddine Bekhouche",
+            "Abdellah Zakaria Sellam",
+            "Fadi Dornaika",
+            "Abdenour Hadid"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.13250",
+        "abstract": "We present \\textbf{AffectFlow-DINO}, a multi-task learning system for the 11th ABAW challenge that extends a standard deterministic architecture with a conditional rectified-flow head to model the inherent ambiguity of in-the-wild facial behavior. Instead of predicting a single affect estimate, the model learns a conditional generative distribution, enabling uncertainty-aware one-to-many predictions through Monte Carlo sampling. The system jointly estimates continuous valence-arousal, classifies eight facial expressions, and detects twelve Action Units from static face images. Built on a frozen DINOv3 ViT-S/16 backbone, extensive ablation studies show that rectified-flow decoding consistently improves deterministic prediction, particularly for valence-arousal estimation (CCC-V $+0.058$). We further show that post-hoc threshold calibration effectively recovers performance on severely imbalanced rare classes (e.g., Fear: $3.8\\% \\rightarrow 33.1\\%$) without retraining. Combined with backbone fine-tuning and flow retuning, the final model achieves $\\mathbf{P_{MTL}=1.177}$, substantially outperforming the official challenge baseline of $P_{MTL}=0.45$.",
+        "tags": [
+            "Rectified Flow",
+            "ViT"
+        ]
+    }
+]

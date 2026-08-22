@@ -1,0 +1,195 @@
+[
+    {
+        "id": 1,
+        "index": 26,
+        "title": "Read It Back: Pretrained MLLMs Are Zero-Shot Reward Models for Text-to-Image Generation",
+        "author": [
+            "Runhui Huang",
+            "Qihui Zhang",
+            "Zhe Liu",
+            "Yu Gao",
+            "Jie Wu",
+            "Hengshuang Zhao"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.11886",
+        "abstract": "In this paper, we propose SpectraReward, a training-free reward function that turns pretrained MLLMs into off-the-shelf reward models for image-generation reinforcement learning. Instead of asking the MLLM to judge a generated image or answer decomposed verification questions, SpectraReward measures how well the original prompt can be recovered from the generated image through a single image-conditioned, teacher-forced forward pass. We use the average image-conditioned prompt log-likelihood as the reward, directly reusing the MLLM's pretrained image-text alignment ability without preference labels, reward-model fine-tuning. We further introduce Self-SpectraReward, a special case for unified multimodal models where the policy's own understanding branch serves as the reward model for its generation branch, forming a closed-loop self-improving framework without external reward models or external knowledge. Extensive experiments validate SpectraReward through a broad image-generation RL study covering two diffusion models, three RL algorithms, nine reward MLLM backbones from four MLLM families spanning 4B to 235B parameters, and five out-of-distribution text-to-image benchmarks. Results show that both SpectraReward and Self-SpectraReward significantly and consistently improve generation performance and outperform prior MLLM-derived reward training methods. Further analysis reveals that larger reward MLLMs are not always better, while Self-SpectraReward can match or surpass much larger external reward models, suggesting that reward-policy alignment is a key factor for effective image-generation RL. Project Page: https://huangrh99.github.io/SpectraReward/",
+        "tags": [
+            "Diffusion",
+            "RL",
+            "Text-to-Image"
+        ]
+    },
+    {
+        "id": 2,
+        "index": 16,
+        "title": "Blind-Spots-Bench: Evaluating Blind Spots in Multimodal Models",
+        "author": [
+            "Matteo Santelmo",
+            "Xiuying Wei",
+            "Israa Fakih",
+            "Felix Bauer",
+            "Juan Garcia Giraldo",
+            "Chengkun Li",
+            "Etienne Bamas",
+            "Emmanuel AbbÃ©"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.08317",
+        "abstract": "Modern AI models achieve strong performance on many established benchmarks, yet they still fail on tasks that humans find almost trivial, such as manipulating a string or drawing a dog with five legs. These examples suggest that existing benchmarks may under-measure persistent blind spots in current systems. We introduce $\\texttt{blind-spots-bench}$, a benchmark designed to expose such blind spots through tasks that appear simple for humans but remain challenging for modern AI. We collect raw questions from students in an AI course, clean and annotate them with structured reference solutions, and propose a task taxonomy tailored to the resulting dataset of 235 samples. We further develop an automated grading pipeline to evaluate a wide range of models, including open-weight and closed-source language, vision-language, and image-generation models. Our analysis on $\\texttt{blind-spots-bench}$ reveals that closed-source frontier models can substantially outperform open-weight models with even $\\approx10\\%$ gap, even when they attain comparable performance on existing benchmarks. A more fine-grained analysis shows that no single model dominates across all task types, and that some tasks remain challenging for all evaluated models. These results highlight the value of $\\texttt{blind-spots-bench}$ as a diagnostic stress test for identifying concrete weaknesses in current modern models.",
+        "tags": []
+    },
+    {
+        "id": 3,
+        "index": 4,
+        "title": "Know Before Fix: QA-Driven Repository Knowledge Acquisition for Software Issue Resolution",
+        "author": [
+            "Haotian Lin",
+            "Silin Chen",
+            "Xiaodong Gu",
+            "Yuling Shi",
+            "Chengxi Pan",
+            "Jiaqi Ge",
+            "Mengfan Li",
+            "Jianghong Huang",
+            "Mengchieh Chuang",
+            "Beijun Shen",
+            "Haibing Guan"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.11111",
+        "abstract": "LLM-based coding agents have significantly advanced automated software issue resolution, yet they remain highly prone to factual errors caused by insufficient repository understanding. Recent methods attempt to mitigate this limitation through pre-repair repository exploration; however, their fix-driven strategies explore repositories without identifying the agent's knowledge gaps, often yielding imprecise context that fails to bridge the underlying understanding deficit. In this paper, we propose ACQUIRE, a QA-driven framework for software issue resolution. Mirroring how experienced developers first comprehend unfamiliar code before attempting a fix, ACQUIRE explicitly acquires repository knowledge prior to repair. The framework decouples knowledge acquisition from patch generation through two stages: in the first stage, a Questioner and an Answerer collaborate to acquire structured repository knowledge, where the Questioner poses targeted questions and the Answerer produces evidence-grounded answers through autonomous exploration; in the second stage, the Resolver leverages the resulting QA knowledge to generate informed patches. By transforming implicit knowledge gaps into explicit, factually reliable understanding, ACQUIRE accelerates knowledge-intensive repair stages and enables more accurate resolution. Experiments on SWE-bench Verified demonstrate that ACQUIRE consistently outperforms representative pre-repair methods, raising Pass@1 by up to 4.4 percentage points with modest additional cost and time.",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 4,
+        "index": 3,
+        "title": "MuScriptor: An Open Model for Multi-Instrument Music Transcription",
+        "author": [
+            "Simon Rouard",
+            "Michael Krause",
+            "Axel Roebel",
+            "Carl-Johann Simon-Gabriel",
+            "Alexandre DÃ©fossez"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.08168",
+        "abstract": "Existing methods for automatic music transcription are often limited to single-instrument recordings or fail on complex, real music mixes. Although previous work utilizes synthetic training data, the resulting models generalize poorly, leading to largely unusable transcription output in realistic, multi-instrument settings. In this work, we analyze the effectiveness of synthetic data for pre-training while combining it with fine-tuning on real music audio and post-training using reinforcement learning. We further introduce conditioning on instrument presence to customize transcriptions. Finally, we release MuScriptor, an open-weight multi-instrument music transcription model that works on real-world music recordings from across a diverse range of musical genres.",
+        "tags": [
+            "RL"
+        ]
+    },
+    {
+        "id": 5,
+        "index": 3,
+        "title": "Search Beyond What Can Be Taught: Evolving the Knowledge Boundary in Agentic Visual Generation",
+        "author": [
+            "Haozhe Wang",
+            "Weijia Feng",
+            "Jinpeng Yu",
+            "Che Liu",
+            "Ping Nie",
+            "Fangzhen Lin",
+            "Jiaming Liu",
+            "Ruihua Huang",
+            "Jimmy Lin",
+            "Wenhu Chen",
+            "Cong Wei"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.05382",
+        "abstract": "Visual generators excel at rendering, but they confidently fabricate what they do not know. User requests are unbounded, evolving, and deeply long-tailed: new characters, trending entities, post-cutoff events, and more. This world-knowledge bottleneck is structural: generators are trained on fixed corpora, but the visual world is open-ended. We construct SearchGen-20K and SearchGen-Bench, with 20,839 prompts spanning twelve failure categories and twenty-two domains, paired with a pre-executed multimodal SearchGen-Corpus-1M to support offline, reproducible research. On SearchGen-Bench, frontier open generators score only 21 to 28 out of 100, a 40-point collapse invisible to existing benchmarks. The natural remedy is to employ search tools, enabling agentic visual generation. However, we find that naive search fails: it retrieves indiscriminately, injecting noise into prompts the generator already handles. We trace the root cause to a generator-specific, evolving knowledge boundary: the divide between what a generator can internalize through training and what must remain in external context. Although this boundary is hard to specify in advance, we show that it is discoverable through a teach-then-search co-training framework. Even a minimal version of this co-training recipe produces monotonic improvement, laying the foundation for recursive self-improvement in visual generation that can meet world-knowledge-grounded requests. We release the full dataset, co-training corpus, and search corpus as a replayable harness for tool-augmented, world-knowledge-grounded visual generation.",
+        "tags": []
+    },
+    {
+        "id": 6,
+        "index": 2,
+        "title": "Let RGB Be the Language of Vision",
+        "author": [
+            "Timing Yang",
+            "Jinrui Yang",
+            "Xinlong Li",
+            "Yuhan Wang",
+            "Haoran Li",
+            "Yanqing Liu",
+            "Guoyizhe Wei",
+            "Jixuan Ying",
+            "Chen Wei",
+            "Rama Chellappa",
+            "Yuyin Zhou",
+            "Cihang Xie",
+            "Alan Yuille",
+            "Feng Wang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.12450",
+        "abstract": "This work introduces a unified formulation for vision models, where diverse forms of visual information beyond natural images, such as masks, depth maps, and other structured visual signals, are all represented as RGB images, while general visual tasks can be converted into a common RGB-to-RGB image editing problem. In this paradigm, different types of visual information internally share the same encoding and decoding architecture and parameters as natural images, enabling a single model to transfer across tasks through a unified visual interface, in a way analogous to how language models operate over text. We refer to this formulation as RGB In and RGB Out (RINO). Built upon a generic image editing backbone without task-specific fine-tuning, RINO demonstrates robust and competitive zero-shot performance on both dense understanding tasks such as segmentation and depth estimation (where we unify outputs as RGB), and dense-conditioned generation tasks such as pose-to-image generation (where we unify inputs as RGB). We hope this study provides useful insights toward general unified vision-language systems, where diverse visual tasks can be expressed, interpreted, and solved through a shared visual language. Code is available at https://github.com/yangtiming/RINO.",
+        "tags": [
+            "Depth Estimation",
+            "Image Editing",
+            "Segmentation"
+        ]
+    },
+    {
+        "id": 7,
+        "index": 2,
+        "title": "MonkeyOCRv2: A Visual-Text Foundation Model for Document AI",
+        "author": [
+            "Yuliang Liu",
+            "Zhang Li",
+            "Ziyang Zhang",
+            "Shuo Zhang",
+            "Qiang Liu",
+            "Jiajun Song",
+            "Zidun Guo",
+            "Xinhan Wang",
+            "Handong Zheng",
+            "Yang Liu",
+            "Dongliang Luo",
+            "Zhiyin Ma",
+            "Jiarui Zhang",
+            "Xiang Bai"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.11562",
+        "abstract": "Mainstream visual encoders are pretrained on natural images and cannot be effectively applied to document images without document-oriented adaptation, as dense text and fine-grained character strokes demand character-level visual perception. We present MonkeyOCRv2, a visual-text pretrained model for document AI. First, we construct MonkeyDoc v2, to our knowledge the largest document-image pretraining corpus, comprising 113 million images spanning 17 languages. Second, we propose a pretraining strategy that jointly learns image-to-text generation and pixel-level document reconstruction: the former aligns visual representations with textual content, while the latter preserves character strokes and layout details. Extensive experiments are conducted on five representative document analysis tasks, including text recognition, formula recognition, text detection, document tampering detection, and overlapping text segmentation. Replacing the original encoders with MonkeyOCRv2 consistently improves performance across all five tasks. Finally, we validate its effectiveness as the vision encoder of multimodal large language models on the more challenging tasks of document parsing and document understanding. Kept frozen and paired with a lightweight language model, it yields a 0.7B document parsing model that sets a new open-source state-of-the-art on MDPBench, a recent benchmark spanning digital-born and photographed documents across 17 languages, surpassing the previous best 3B http://dots.mocr by 2.8% absolute with a vision encoder roughly 11$\\times$ smaller. The frozen encoder also powers a document understanding model that outperforms counterparts built on CLIP, DINO, and SAM across eight benchmarks under identical training settings. These results suggest that document-oriented visual pretraining can serve as a foundation for document intelligence in its own right.",
+        "tags": [
+            "CLIP",
+            "Detection",
+            "LLM",
+            "SAM",
+            "Segmentation"
+        ]
+    },
+    {
+        "id": 8,
+        "index": 2,
+        "title": "Towards Autonomous and Auditable Medical Imaging Model Development",
+        "author": [
+            "Shengyuan Liu",
+            "Jia-Xuan Jiang",
+            "Boyun Zheng",
+            "Cheng Wang",
+            "Zipei Wang",
+            "Wentao Pan",
+            "Hongtao Wu",
+            "Houwen Peng",
+            "Yu Gu",
+            "Lichao Sun",
+            "Yixuan Yuan"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.10522",
+        "abstract": "Large language model (LLM) agents are beginning to automate machine learning engineering (MLE) by coupling planning, code execution, debugging, and empirical feedback. Translating this capability to medical imaging remains difficult because each task imposes modality-specific experimentation and strict requirements for validation protocols and prediction artifacts. Here we introduce AMID, an autonomous multi-agent framework for medical imaging model development. AMID first proposes Data-Conditioned Method Planning, which refines coarse task-level search spaces into executable, parallelizable method lanes grounded in task-specific data analysis and runnable medical-imaging resources. It then develops Verification-Guided Two-Stage Optimization, moving from broad early exploration of diverse method lanes to selective exploitation of promising candidates while enforcing strict verification of validation protocols, metric computation, and prediction artifacts throughout the optimization. Across 20 medical imaging challenge tasks spanning diverse modalities and prediction types, AMID outperformed evaluated general-purpose MLE systems and, on several tasks, approached or matched strong human-designed challenge solutions. These results suggest that AMID can turn task-specific medical imaging model development from bespoke manual engineering into an agentic workflow for producing high-performing and auditable model artifacts across heterogeneous tasks.",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 9,
+        "index": 2,
+        "title": "Principled Analysis of Deep Reinforcement Learning Evaluation and Design Paradigms",
+        "author": [
+            "Ezgi Korkmaz"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.07769",
+        "abstract": "Starting from the utilization of deep neural networks to approximate the state-action value function that led to winning one of the most challenging games, to algorithmic advancements that allowed solving problems without even explicitly stating the rules of the challenge at hand, reinforcement learning research has been the center of remarkable scientific progress for the past decade. In this paper, we focus on the key ingredients of this research progress and we analyze the canonical evaluation and design paradigms in reinforcement learning. We introduce the theoretical foundations of scaling laws in reinforcement learning and show that the asymptotic performance of reinforcement learning algorithms does not have a monotone relationship between performance rankings and data-regimes. We conduct large-scale experiments and our results demonstrate that a line of reinforcement learning research under the canonical design and evaluation paradigms resulted in incorrect conclusions. Our analysis and results provide a core analysis on scaling, capacity and complexity of deep reinforcement learning.",
+        "tags": [
+            "RL"
+        ]
+    }
+]

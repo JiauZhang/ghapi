@@ -1,0 +1,711 @@
+[
+    {
+        "id": 1,
+        "index": 230,
+        "title": "Kimi K3: Open Frontier Intelligence",
+        "author": [
+            "Kimi Team",
+            "Tongtong Bai",
+            "Yifan Bai",
+            "Yiping Bao",
+            "M. C.",
+            "Jianfeng Cai",
+            "Xinyuan Cai",
+            "Peizhou Cao",
+            "Yuxuan Cao",
+            "Ziwei Chai",
+            "Y. Charles",
+            "H.S. Che",
+            "Guanduo Chen",
+            "Guangyu Chen",
+            "Guanzheng Chen",
+            "Huarong Chen",
+            "Jia Chen",
+            "Jianlong Chen",
+            "Jun Chen",
+            "Kexin Chen",
+            "Peng Chen",
+            "Ruijue Chen",
+            "Wentao Chen",
+            "Xin Chen",
+            "Yang Chen",
+            "Yanru Chen",
+            "Yifei Chen",
+            "Yingjiang Chen",
+            "Yuankun Chen",
+            "Yujie Chen",
+            "Yutian Chen",
+            "Zhirong Chen",
+            "Dazhi Cheng",
+            "Yean Cheng",
+            "Jialei Cui",
+            "Jingbing Cui",
+            "Anqi Dai",
+            "Jiaqi Deng",
+            "Hao Ding",
+            "Rui Ding",
+            "Shaofeng Ding",
+            "Mengfan Dong",
+            "Mengnan Dong",
+            "Yuhao Dong",
+            "Yuxin Dong",
+            "Angang Du",
+            "Chenzhuang Du",
+            "Dikang Du",
+            "Jusen Du",
+            "Yulun Du",
+            "Yu Fan",
+            "Jing Feng",
+            "Qiulin Feng",
+            "Yichen Feng",
+            "Kelin Fu",
+            "Qiang Fu",
+            "Fuxuan Gao",
+            "Hongcheng Gao",
+            "Jingyue Gao",
+            "Tong Gao",
+            "Weijia Gao",
+            "Shangyi Geng",
+            "Jie Gong",
+            "Linhu Gong",
+            "Shengao Gong",
+            "Xiaochen Gong",
+            "Qizheng Gu",
+            "Yicheng Gu",
+            "Shuhao Guan",
+            "Haiqing Guo",
+            "Shiqi Guo",
+            "Xiang Guo",
+            "Zhengyan Guo",
+            "Beixi Hao",
+            "Wenxin Hao",
+            "Xiaoru Hao",
+            "Dailan He",
+            "Haotian He",
+            "Lehan He",
+            "Qi He",
+            "Weiran He",
+            "Xinran He",
+            "Xinyi He",
+            "Yibo He",
+            "Yunjia He",
+            "Chao Hong",
+            "Tiange Hong",
+            "Hao Hu",
+            "Jiaxi Hu",
+            "Ruikun Hu",
+            "Weiming Hu",
+            "Yangyang Hu",
+            "Zhenxing Hu",
+            "Liang Hua",
+            "Jinbin Huang",
+            "Ke Huang",
+            "Ruiyuan Huang",
+            "Siying Huang",
+            "Weixiao Huang",
+            "Yan Huang",
+            "\n    et al. (302 additional authors not shown)"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.24653",
+        "abstract": "We introduce Kimi K3, a 2.8T parameter Mixture-of-Experts model with 104 billion activated parameters, native vision capabilities, and a 1-million-token context window. Kimi K3 is built on Kimi Delta Attention and Attention Residuals, which improve information flow across sequence length and model depth. Together with Stable LatentMoE, which effectively activates 16 of 896 routed experts per token, and refined training and data recipes, these advances yield an approximately 2.5x improvement in overall scaling efficiency over Kimi K2. Post-training highlights reinforcement learning across general, agentic, and coding domains and multiple reasoning-effort levels, enabling compositional generalization and robust long-horizon execution. At 2.8T scale, Kimi K3 is supported by infrastructure advances in multiple areas: algorithm-system co-design for KDA, perfectly balanced expert-parallel training with efficient memory management, million-token agentic RL with persistent rollout and sandbox states, and deployment innovations. Extensive evaluations show that Kimi K3 achieves frontier-level performance across long-horizon coding, agentic, knowledge, reasoning, and vision tasks. While its overall performance still trails the most powerful proprietary models, namely Claude Fable 5 and GPT-5.6 Sol, Kimi K3 consistently outperforms other open and proprietary models evaluated in our suite. We release the full Kimi K3 model weights to facilitate future research and accelerate the broader deployment and adoption of frontier intelligence.",
+        "tags": [
+            "GPT",
+            "MoE",
+            "RL"
+        ]
+    },
+    {
+        "id": 2,
+        "index": 99,
+        "title": "JarvisHub: An Open Harness for Canvas-Native Multimodal Creative Agents",
+        "author": [
+            "Yunlong Lin",
+            "Zixu Lin",
+            "Zhaohu Xing",
+            "Biqiang Li",
+            "Chenxin Li",
+            "Haonan Wang",
+            "Haitao Wu",
+            "Hengyu Liu",
+            "Jianghai Chen",
+            "Kaituo Feng",
+            "Kaixin Li",
+            "Shawn Chen",
+            "Shijue Huang",
+            "Sixiang Chen",
+            "Tsung-Yi Ho",
+            "Wenxuan Huang",
+            "Xiangyan Liu",
+            "Xiaomeng Hu",
+            "Xuanhua He",
+            "Yan Sun",
+            "Yunqing Zhao",
+            "Zhiqin Yang",
+            "Zehan Wang",
+            "Zhengyang Tang",
+            "Tianyu Pang",
+            "Xiangyu Yue"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.23588",
+        "abstract": "Creative AI is moving from single-step asset generation toward long-horizon multimodal production. Although recent generative models can synthesize high-quality images, videos, audio clips, UI elements, storyboards, slides, and other creative assets, real-world creative work requires more than isolated prompt-output interactions. It involves references, drafts, alternatives, edits, failed attempts, version relations, tool actions, evaluation signals, and human feedback, which together form an evolving project state. Existing prompt-based, chat-based, and node-based generation systems only partially support this state, as they often discard intermediate context, rely on linear conversations, or require manually specified workflows. Recent commercial systems indicate a shift toward agent-assisted creative production, but their closed architectures make it difficult to study how agents represent context, choose tools, revise artifacts, recover from failures, and maintain consistency over time. To address this gap, we introduce JarvisHub, a canvas-native creative agent harness for long-horizon multimodal creation. JarvisHub treats an editable canvas as the user workspace, the agent's external memory, action space, and shared project state, representing multimodal artifacts, dependencies, versions, and feedback as typed canvas nodes and links. Through a three-layer architecture of canvas state, protocol bridge, and agent runtime, JarvisHub enables agents to act within an inspectable and editable creative state. This design moves creative agents beyond isolated tool use toward sustained, human-steerable creative automation, where agents can progressively plan, generate, revise, and organize multimodal projects while users remain able to inspect, guide, and intervene throughout the process.",
+        "tags": []
+    },
+    {
+        "id": 3,
+        "index": 63,
+        "title": "From Proprietary to Open-Source: Bridging the Distribution Gap via Multi-Agent Protocol Distillation in Agentic Search",
+        "author": [
+            "Junlin Liu",
+            "Jiangwang Chen",
+            "Zixin Song",
+            "Shuaiyu Zhou",
+            "Chunji Lv",
+            "Hank Wu",
+            "Kailin Jiang",
+            "Jinyang Wu",
+            "Bohan Yu",
+            "Chenxi Zhou"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.24280",
+        "abstract": "Agentic search enables large language models to solve knowledge-intensive tasks by interleaving multi-step reasoning with retrieval, yet optimizing this with outcome-based reinforcement learning (RL) provides only sparse supervision. Knowledge distillation can supply denser guidance, and advanced proprietary models with their strong reasoning capabilities are promising teachers. While distilling from proprietary models can densify this supervisory signal, conventional logit-matching is precluded by hidden logits and mismatched tokenizers, whereas raw natural language trajectory imitation transfers superficial stylistic artifacts rather than core reasoning competence. To address the heterogeneous distillation problem and bridge the distribution gap, we propose Multi-Agent Protocol Distillation (MAPD), a joint distillation and RL framework uses a structured, style-normalized protocol as an intermediate representation. An offline multi-agent system (MAS) decomposes each query, retrieves supporting evidence, repairs failed searches, and converts the resulting exploration trace into a JSON protocol containing the task type, reasoning plan, and extractive grounding facts. During training, the protocol is provided only to a privileged branch of the student policy, whose token distributions furnish a dense distillation signal alongside the sparse RL objective. Extensive evaluations across seven QA benchmarks demonstrate that MAPD consistently outperforms competitive distillation and RL, achieving average success rates of 39.4\\% on Qwen3-1.7B and 44.4\\% on Qwen3-4B. Crucially, the framework generalizes robustly across diverse proprietary teachers while effectively mitigating the student policy from style drift and verbosity degeneration.",
+        "tags": [
+            "LLM",
+            "RL"
+        ]
+    },
+    {
+        "id": 4,
+        "index": 59,
+        "title": "Rethinking Classifier-Free Guidance in On-Policy Diffusion Distillation",
+        "author": [
+            "Bingnan Li",
+            "Haozhe Wang",
+            "Haozhong Xiong",
+            "Fangtai Wu",
+            "Jinpeng Yu",
+            "Yang Shi",
+            "Jiaming Liu",
+            "Ruihua Huang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.24731",
+        "abstract": "On-policy distillation (OPD) adapts diffusion models by querying a teacher along trajectories generated by the current student, but how it should behave under classifier-free guidance (CFG), a default component of modern diffusion systems, remains poorly understood. Existing OPD methods naturally extend velocity matching to the CFG-composed prediction, directly matching teacher and student guided velocities. We show that this objective is under-identified at the branch level: positive- and negative-branch errors can compensate in the guided prediction. Through two contrasting cases, we find that naive matching remains effective under shared negative conditioning, where both branch errors decrease jointly. When the model's native CFG schema retains privileged information in the teacher's negative branch that is unavailable to the student, however, this joint reduction breaks down and the composed objective induces antagonistic branch-error dynamics, reducing the positive-branch error while increasing the negative-branch error. We term this failure mode Negative Branch Asymmetry (NBA). To address NBA, we introduce Positive--Direction Matching (PDM), a branch-aware OPD objective that separately constrains the positive prediction and the CFG conditional direction. We apply PDM to dense-to-sparse video control, where naive guided matching is highly sensitive to inference guidance scales, while branch-aware supervision enables more robust and effective knowledge transfer.",
+        "tags": [
+            "Diffusion"
+        ]
+    },
+    {
+        "id": 5,
+        "index": 55,
+        "title": "Progress Reward Modeling for Robotic Learning: A Comprehensive Survey",
+        "author": [
+            "Jianshu Zhang",
+            "Keliang Wu",
+            "Haoran Lu",
+            "Anbang Liu",
+            "Ce Zhang",
+            "Weijie Yin",
+            "Chengxuan Qian",
+            "Xiyuan Yang",
+            "Zhenyu Pan",
+            "Guo Ye",
+            "Han Liu"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.21655",
+        "abstract": "Robotic learning takes place in dynamic environments with large behavior spaces. A terminal success signal only tells the robot whether the task is completed. It does not explain whether the current behavior is making progress, remaining unchanged, or undoing earlier progress. For this reason, recent studies have increasingly explored progress rewards that provide feedback during task execution. However, the current literature lacks a shared framework. Existing methods use different observations, goal specifications, output signals, supervision sources, and evaluation protocols. This makes it difficult to compare them and understand what their results actually validate. In this survey, we provide a unified view of progress reward modeling for robotic learning. We organize the field in three connected steps. We first study the interface of a progress model. This defines the problem from the outside by asking what information the model receives and what form of progress signal it produces. We then move inside the model and study the methods used to construct this signal. This reveals the different assumptions and mechanisms behind progress estimation and reward generation. Finally, we examine the data and benchmarks that support these methods. This shows how progress supervision is obtained and what different evaluations actually measure. Together, these three perspectives connect what a progress model is, how it is built, and how its quality is validated. We further summarize the main limitations of current approaches and discuss future research directions.",
+        "tags": [
+            "Robotics"
+        ]
+    },
+    {
+        "id": 6,
+        "index": 50,
+        "title": "StateAct: Program State, before Pixels, for Long-Horizon Computer-Use Agents",
+        "author": [
+            "Yan Yang",
+            "Xiangru Jian",
+            "Ziyang Luo",
+            "Zirui Zhao",
+            "Yutong Dai",
+            "Ziji Shi",
+            "Hanshu Yan",
+            "Jun Hao Liew",
+            "Silvio Savarese",
+            "Junnan Li"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.22798",
+        "abstract": "Computer-use agents are usually improved by strengthening perception: better models for reading a screenshot and choosing where to click. Yet a screenshot is only a lossy rendering of the underlying program state, e.g., the files, application backends, and DOM that hold the task data. Different states can produce the same pixels, while code can inspect and modify that state directly. StateAct is a code-first, multi-agent harness built around this distinction. Its main agent works directly with program state by using code, while a dedicated GUI subagent handles screenshot-and-click interaction on the few subgoals that need it, just 28 of 108 tasks and 1.1% of main-agent steps. The same direct access to program state also supports verification: an independent finish gate double-checks the saved result for structural failures, e.g., output that is missing, unsaved, or written to the wrong path. To stay on track over hundreds of steps, the main agent hands subgoals to fresh subagents, keeping its own context focused. On OSWorld 2.0, StateAct lifts Claude Opus 4.8 from 20.6% to 26.9% on binary success, and from 54.8% to 61.6% on partial success, at ~ 9x lower cost per task than the same model driven by screenshots alone; a code-only variant with no GUI subagent reaches only 45.9% partial, below that screenshot-based baseline's 54.8%. In general, grounding action, verification, and memory in state, what we call state-grounding, shifts the main bottleneck from perception toward reasoning: failures depend more on what the agent thinks than on what it sees.",
+        "tags": []
+    },
+    {
+        "id": 7,
+        "index": 29,
+        "title": "Data Pyramid for Embodied Manipulation",
+        "author": [
+            "Yifan Ye",
+            "Yankai Fu",
+            "Yaoxu Lv",
+            "Bohan Hou",
+            "Jun Cen",
+            "Lingdong Kong",
+            "Duo Zheng",
+            "Tianxing Chen",
+            "Jiaming Liu",
+            "Ziang Cao",
+            "Yunfan Lou",
+            "Wei Chow",
+            "Xian Sun",
+            "Yingshuo Wang",
+            "Kuangzhi Ge",
+            "Xiaowei Chi",
+            "Xidong Zhang",
+            "Zhibo Pang",
+            "Yiwu Zhong",
+            "Sirui Han",
+            "Zhihe Lu",
+            "Weihao Yuan",
+            "Qifeng Chen",
+            "Michael Yu Wang",
+            "Yao Mu",
+            "Ziwei Liu",
+            "Jianfei Yang",
+            "Ping Luo",
+            "Shanghang Zhang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.24744",
+        "abstract": "Multimodal foundation models learned to see and to speak by consuming the whole internet. Embodied agents admit no such shortcut, since they require data that couple observations with physical states and actions. These signals can be provided, to varying degrees, by multiple data sources. In this work, we organize the embodied data ecosystem as a \"pyramid\" spanning five complementary sources: real-robot data, UMI-style data, egocentric and exocentric data, simulation data, and general vision-language data. We organize the pyramid around the tension between scalability and robot alignment, and further characterize each source in terms of data quality, diversity, reusability, and physical fidelity. We then analyze recent embodied foundation models through the lens of their data recipes, examining how different sources are selected, aligned, and mixed during pretraining. For embodied brain models, vision-language-action models, and world-action models alike, we relate data composition to capabilities in perception, reasoning, planning, action generation, and world prediction. We close by discussing six open challenges: building large-scale tactile datasets, collecting failure and recovery data, developing scalable data-collection pipelines, aligning actions across embodiments, leveraging egocentric data for dexterous manipulation, and designing principled data recipes for robot learning. We hope this work paves the foundation for the design of next-generation embodied systems.",
+        "tags": [
+            "Robotics"
+        ]
+    },
+    {
+        "id": 8,
+        "index": 23,
+        "title": "Sol-Attn: Accelerating Video Generation Inference via On-the-Fly Attention Sparsification",
+        "author": [
+            "Haopeng Li",
+            "Yitong Li",
+            "Junsong Chen",
+            "Tian Ye",
+            "Haozhe Liu",
+            "Jincheng Yu",
+            "Duomin Wang",
+            "Ruihua Zhang",
+            "Zeke Xie",
+            "Enze Xie",
+            "Song Han"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.24027",
+        "abstract": "Diffusion transformers are essential for high-fidelity video generation, but long token sequences make attention a dominant inference bottleneck. Training-free dynamic sparse attention alleviates this bottleneck by computing only selected key-value blocks, yet existing methods struggle to sparsify attention both efficiently and accurately for two reasons: (1) Rigid, unpredictable, and costly routing: selecting a fixed fraction of top-ranked blocks by proxy score imposes fixed budgets, whereas retaining blocks to reach a target cumulative proxy probability mass yields dynamic but potentially imbalanced budgets; both incur non-negligible overhead from computing and materializing proxy scores. (2) Lossy keep-or-drop sparsification: unselected blocks are discarded entirely, degrading accuracy under aggressive sparsity. These limitations motivate cheaper dynamic-budget routing while limiting accuracy degradation. In this paper, we introduce training-free Sol-Attn (Sparsifying online attention), which unifies dynamic routing, sparse computation, and approximation correction in a single online-softmax pass, achieving a better accuracy-efficiency trade-off in sparse attention. The core of Sol-Attn is on-the-fly block thresholding with proxy-score reuse, which selects critical blocks by comparing block proxy scores against a threshold during online softmax. This design enables dynamic yet controllable block budgets without materializing the proxy map, while directly reusing the proxy scores of unselected blocks to approximate their contribution. Experiments across image and video generation tasks show that Sol-Attn advances the quality-efficiency frontier of training-free sparse attention, delivering 2.1 times and 2.3 times end-to-end speedups for video generation and editing, respectively, while preserving visual quality.",
+        "tags": [
+            "Diffusion",
+            "Video Generation"
+        ]
+    },
+    {
+        "id": 9,
+        "index": 20,
+        "title": "OmniVAE: An Audio-Video VAE with Cross-Modal Alignment for Joint Generation",
+        "author": [
+            "Jun Zhan",
+            "Chen Yang",
+            "Yitian Gong",
+            "Donghua Yu",
+            "Kuangwei Chen",
+            "Wenbo Zhang",
+            "Kexin Huang",
+            "Qi Luo",
+            "Zhe Xu",
+            "Ying Zhu",
+            "Jin Wang",
+            "Tengyue Zhang",
+            "Qi Chen",
+            "Cheng Chang",
+            "Songlin Wang",
+            "Junqi Dai",
+            "Jiasheng Ye",
+            "Xiaogui Yang",
+            "Tianyi Liang",
+            "Xiangyu Peng",
+            "Zhaoye Fei",
+            "Shimin Li",
+            "Qinyuan Cheng",
+            "Xie Chen",
+            "Xinchi Chen",
+            "Xipeng Qiu"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.23855",
+        "abstract": "Recent generative models are moving beyond silent video or standalone audio synthesis toward the joint generation of synchronized audio and video. Despite this progress, jointly generating audio and video with fine-grained cross-modal correspondence remains challenging due to their fundamental structural differences. Most existing methods use audio and video VAEs trained separately. As a result, the two latent spaces lack cross-modal alignment, leaving the downstream generative model to learn cross-modal synchronization from scratch. We present OmniVAE, a jointly trained audio-video VAE that learns fine-grained semantic alignment between audio and video latent representations. Beyond reconstruction, OmniVAE uses a segment-level audio-video contrastive objective to capture temporal-semantic correspondence and align the two latent spaces. In parallel, it distills features from pretrained modality-specific semantic encoders into each modality, improving the downstream learnability of both latent spaces. Extensive experiments show that both objectives consistently improve the learnability of the latent spaces, translating into higher generation quality and more accurate cross-modal synchronization in downstream text-to-audio-video generation. These findings underscore the importance of learning unified representations as a foundation for omnimodal modeling.1",
+        "tags": [
+            "VAE",
+            "Video Generation"
+        ]
+    },
+    {
+        "id": 10,
+        "index": 19,
+        "title": "The Physics of Multi-Turn Long-Horizon Planning: From Pre-training to Post-training via Single- and Multi-Teacher On-Policy Agentic Distillation",
+        "author": [
+            "Tianyi Men",
+            "Zhuoran Jin",
+            "Kang Liu",
+            "Jun Zhao"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.24720",
+        "abstract": "Multi-turn long-horizon planning is critical for foundation model agents, yet how to fundamentally improve it remains unclear. Existing models are trained on uncontrollable and opaque Internet data, making it difficult to identify how planning ability is acquired, shaped, and integrated. To address this challenge, we introduce a unified and controlled multi-turn environment that enables precise control. It allows systematically study long-horizon planning across three stages. (1) Planning ability acquisition during pre-training. We study data format, distribution, and quality. Explicit world model construction through CoT state transition modeling yields stronger long-horizon generalization. Atomic skills alone are insufficient for compositional generalization, whereas a litte long-horizon data works. Moreover, suboptimal trajectories severely impair performance because errors amplify over long horizons. (2) Planning ability shaping via GRPO and OPD post-training. Through mutual information, we distinguish general planning patterns from task-specific planning knowledge. For planning patterns, we identify three application regions of post-training: unnecessary, effective, and unsupported. OPD has a broader effective region than GRPO under low-quality and long-horizon settings, as it provides more consistent update directions. For planning knowledge, distilling unseen procedures from a teacher with different knowledge may impair student's prior world modeling without fully establishing new knowledge. (3) Planning ability integration through MOPD post-training. We show that multi-teacher on-policy distillation (MOPD) integrates capabilities by converging to shared planning-pattern across environments. Compatible patterns enable cross-environment generalization, partially shared patterns support continual learning, while completely conflicting patterns cause severe interference.",
+        "tags": [
+            "CoT",
+            "GRPO"
+        ]
+    },
+    {
+        "id": 11,
+        "index": 19,
+        "title": "Oxygen-TryOn: Fashion-Native Foundation Model for Any-item Virtual Try-On",
+        "author": [
+            "Yong Liu",
+            "Xiaolong Fu",
+            "Zihang Xu",
+            "Wen Xue",
+            "Xueheng Li",
+            "Lin Song",
+            "Yuan Zhang",
+            "Chuyang Zhao",
+            "Haoyang Huang",
+            "Nan Duan",
+            "Yipeng Sun",
+            "Yan Li",
+            "Simiu Gu"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.21694",
+        "abstract": "We present Oxygen-TryOn, a unified foundation model for any-item virtual try-on. Rather than repurposing a general-purpose image editor, Oxygen-TryOn is fashion-native, built for try-on through a dedicated data engine and try-on-specific training. Given one or more reference items (clean product shots or in-the-wild worn-on photos) and a single target subject image, it synthesizes a photorealistic image of the subject wearing the items across virtually any fashion category. Prior systems handle a single garment category in a studio setting, and recent multi-reference methods remain garment-centric; in contrast, Oxygen-TryOn supports diverse items and scenarios, including full- and half-body views, a variable number of references, and free multi-item composition, while faithfully preserving both subject identity and item appearance. Instead of mask-based inpainting, we reformulate try-on as a multi-reference, understanding-driven generation task. We build a data engine that collects, manufactures, annotates, and filters high-quality try-on data at scale, and design a three-stage recipe of continued pre-training (CPT), supervised fine-tuning (SFT), and reinforcement learning (RL). The RL stage uses a hybrid reward combining an in-house try-on reward model with a proprietary, rubric-guided general-purpose model, jointly supervising fine-grained consistency and instruction-level quality. It also follows general editing instructions (e.g., pose changes) in the same pass. Across public benchmarks and our in-house Oxygen-TryOn Bench, it achieves state-of-the-art consistency and realism on single-item try-on and leads on multi-item try-on, matching or surpassing both leading proprietary systems (Nano Banana Pro, GPT-Image-2, Seedream5 Lite) and open-source models (FLUX.2).",
+        "tags": [
+            "FLUX",
+            "GPT",
+            "Inpainting",
+            "RL",
+            "Virtual Try-On"
+        ]
+    },
+    {
+        "id": 12,
+        "index": 6,
+        "title": "Chamaileon: Cross-Context Binder Design with Contextualized Modeling and Mixed Sampling",
+        "author": [
+            "Hengyuan Cao",
+            "Shizhuo Cheng",
+            "Mingxuan Liu",
+            "Weicheng Huang",
+            "Yunhong Lu",
+            "Chenxi Cai",
+            "Yan Zhang",
+            "Min Zhang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.23518",
+        "abstract": "The rapid evolution of generative models has unlocked new potentials in protein binder design, a pivotal task in structural biology, by facilitating end-to-end generation via joint sequence-structure modeling or hallucination. However, existing approaches are predominantly implemented under a single-target, single-state assumption, limiting their ability to model multi-target or multi-state interactions required for advanced function-oriented protein design. Here, we introduce Chamaileon, which unifies multi-target and multi-state binder design by formulating the problem as cross-context binding landscape modeling. The framework is underpinned by a training paradigm termed In-Context Complex Co-Design (I3CD) for context-aware sequence-structure co-modeling. During inference, we employ Mixture-of-Paths Sampling (MoPS), a scalable strategy that optimizes a single sequence across contexts while alleviating the scarcity of high-quality multi-conformational paired data. Extensive evaluation on our newly constructed benchmark, CROSS, demonstrates that Chamaileon effectively generates sequences adaptable to diverse conformational landscapes and multi-target requirements. The code is available on https://github.com/caohengyuan/Chamaileon.",
+        "tags": []
+    },
+    {
+        "id": 13,
+        "index": 6,
+        "title": "dRAE: Representation Autoencoder with Hyper-Spherical Codes",
+        "author": [
+            "Tianren Ma",
+            "Lin Long",
+            "Chuyan Chen",
+            "Mu Zhang",
+            "Junbo Zhao",
+            "Tong Zhang",
+            "Qixiang Ye"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.22148",
+        "abstract": "In this work, we aim to discretize the high-dimensional visual representations to bridge the gap with language models - a non-trivial challenge, as existing quantization methods suffer from codebook collapse, failing to scale while preserving semantic coherence. We identify the root cause as metric mismatch: standard Euclidean codebook objectives are fundamentally misaligned with the anisotropic geometry of representation space, leading to codebook embeddings with high-variance magnitude scales and uneven angular distributions that hinder scalability. To address this, we propose Hyper-Spherical Quantization (HSQ), which decouples semantic content from feature magnitude via angular routing, preventing code assignment from being dominated by scale rather than meaning. The resulting discrete Representation Autoencoder (dRAE) achieves high-fidelity reconstruction while preserving semantic integrity and supporting scalable codebook budget. Extensive experiments demonstrate consistent performance gains as the vocabulary size scales to 131{,}072, along with 100\\% codebook utilization, simplified training pipeline, and strong performance across understanding and generation tasks.",
+        "tags": []
+    },
+    {
+        "id": 14,
+        "index": 5,
+        "title": "DecoupleMix: Decoupled Ratio Search and Convex Allocation for Scalable VLM Data Recipes",
+        "author": [
+            "Jiahao Xie",
+            "Zhongbin Guo",
+            "Qianle Wang",
+            "Ruiqi Lu",
+            "Dongling Xiao",
+            "Wanxuan Sun",
+            "Cheng Yang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.24516",
+        "abstract": "While data curation for Vision Language Models (VLMs) is increasingly active, public practice for constructing pretraining mixtures remains largely heuristic: practitioners stack datasets that pass quality filters, set cross-domain ratios by intuition, and lack a principled, attributable criterion for admitting new data, while frontier recipes remain undisclosed. We formulate data construction as a systematic mixture-optimization problem and turn it into a reproducible engineering discipline by decoupling the mixture into two orthogonal sub-problems: inter-class ratios across capabilities and intra-class ratios within a category. For inter-class allocation, we use a single-variable iterative search; for intra-class composition, we apply a multidimensional, dataset-level assessment scoring Quality and Difficulty, and formulate selection as a constrained convex optimization with a diversity objective. The DecoupleMix framework delivers two critical capabilities: guiding what data to collect next and rendering dataset validation a controlled, attributable experiment. Experiments show our approach consistently surpasses heuristic baselines. Moreover, optimal ratios discovered on small-scale proxies transfer seamlessly to larger scales without retuning. Using 80B additional multimodal continue-pretraining tokens, our VLM is competitive with strong open-source models trained with substantially larger multimodal budgets.",
+        "tags": [
+            "VLM"
+        ]
+    },
+    {
+        "id": 15,
+        "index": 4,
+        "title": "ClinFusion: A Vision-Centric Multimodal LLM System for Holistic Medical Understanding",
+        "author": [
+            "Hangjie Yuan",
+            "Yichen Qian",
+            "Zhiwei Tang",
+            "Xianzhe Xu",
+            "Lirong Wu",
+            "Sicheng Yang",
+            "Jinwang Wang",
+            "Pengju Wang",
+            "Zhitao Zeng",
+            "Yizeng Han",
+            "Yan Xing",
+            "Shengxuan Luo",
+            "Tao Feng",
+            "Qing Xie",
+            "Weigen Yao",
+            "Yi Yang",
+            "Zuozhu Liu",
+            "Jiasheng Tang",
+            "Shaocheng Wang",
+            "Jitao Wang",
+            "Jiahong Dong",
+            "Weihua Chen",
+            "Feng Xu",
+            "Fan Wang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.24743",
+        "abstract": "Multimodal large language models (MLLMs) hold immense potential to revolutionize clinical practice, yet deploying them in the medical domain is fundamentally a vision-centric challenge: models must absorb knowledge from heterogeneous 2D and 3D medical images, and evaluation protocols must align with radiologists' clinical practice and provide an accurate, fine-grained and factualness-driven assessment. In this paper, we introduce ClinFusion, a vision-centric MLLM designed for holistic medical understanding that systematically addresses these limitations. We propose a compositional and cascaded vision encoder architecture featuring a Cascade Spatial-Aware Locality Fusion operator that unifies diverse 2D and native 3D medical image understanding within a fused encoder. We further introduce a vision-grounded evaluation framework, including MedIF-Bench for instruction-following assessment and a region-of-interest-grounded method for clinically aligned and factualness-driven report generation evaluation. We show that ClinFusion sets a new state-of-the-art across a comprehensive suite of 2D and 3D multimodal medical benchmarks---spanning visual question answering, report generation, and instruction following---as well as textual medical tasks, outperforming leading open-source medical MLLMs (\\textit{e.g.}, Hulu-Med, Lingshu) on 20 out of 24 benchmarks and demonstrating multimodal capabilities better than powerful proprietary models such as GPT-5.2 and Gemini-3-Flash on 13 out of 16 benchmarks, and can be further augmented with agentic tool use for retrieval-augmented and tool-assisted clinical workflows. A blinded evaluation by board-certified radiologists confirms that ClinFusion produces the highest-ranked reports, and validates our RoI-grounded metric as achieving the strongest correlation with expert judgment among all automatic evaluation metrics examined.",
+        "tags": [
+            "3D",
+            "GPT",
+            "LLM"
+        ]
+    },
+    {
+        "id": 16,
+        "index": 4,
+        "title": "Codifying the Judge: Scalable Evaluation via Program Distillation",
+        "author": [
+            "Tzu-Heng Huang",
+            "Shengqi Qiu",
+            "Frederic Sala"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.22561",
+        "abstract": "LLM-as-a-judge has become the standard for automated evaluation, but it suffers from high cost, significant latency, and opaque decisions -- limitations that undermine its scalability and reliability. We address these with a simple, efficient alternative: program distillation. Instead of prompting an LLM at the evaluation time, we distill its decision logic into a committee of programs that score candidates directly. These programmatic judges offer transparency, are easily inspected or edited, and eliminate per-sample API costs. Building on this notion, we introduce PAJAMA, a system that synthesizes programs as judges, aggregates their decisions into a joint verdict, and incorporates a fallback mechanism to selectively escalate low-confidence cases to an LLM. Across five datasets and four model families, we show that programmatic judges can match the performance of a 13B-size LLM judge. When using program outputs as routing signals, PAJAMA improves both accuracy and throughput and advances the Pareto frontier. Beyond evaluation, programmatic judges produce cheap and effective reward signals: on RewardBench, a reward model distilled from programs' verdicts outperforms one trained on a proprietary LLM's labels at two orders of magnitude lower API cost.",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 17,
+        "index": 3,
+        "title": "FilmBench: A Film-Grade Benchmark for Cinematic Video Generation",
+        "author": [
+            "Shengyi Wang",
+            "Niantong Li",
+            "Guangzheng Hu",
+            "Hong Qi",
+            "Fei Ding",
+            "Weixu Qiao",
+            "Jinlin Wang",
+            "Xiaotong Lv",
+            "Peng Han",
+            "Zimeng Li",
+            "Fanshu Ding",
+            "Yushu Wang",
+            "Han Wu",
+            "Jingjing Chen",
+            "Chongxiao Wang",
+            "Yanhao Wu",
+            "Chenglong Huang",
+            "Xiaoqian Zhu",
+            "Jie Tian",
+            "Hua Li",
+            "Jingjing Fan",
+            "Mingshuang Tang",
+            "Zhong Li",
+            "Hengxia Qiang",
+            "Weibin Chen",
+            "Jinyang Zhen",
+            "Bing Zhao",
+            "Lin Qu",
+            "Jing Li",
+            "Hu Wei"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.24241",
+        "abstract": "Progress in video generation keeps narrowing the visual gap between AI-generated and professionally produced footage, yet most benchmarks still draw prompts from web sources or LLM templates and score them with untrained, generic multimodal models. More fundamentally, their evaluation taxonomies remain rudimentary (overall visual quality, coarse text alignment and temporal smoothness) rather than the professional Cinematic Language criteria by which films are actually made and judged, so they assess basic video plausibility rather than film-grade craft. We introduce FilmBench, a text-to-video (T2V) and reference-to-video (R2V) benchmark grounded in the professional Cinematic Language of the film- academy tradition and co-developed with directors and faculty from the Beijing Film Academy and the Hujing Digital Media & Entertainment Group film studio. It rests on three choices. First, prompts are reverse-engineered from clips of award-winning films spanning 20 cinematic genres and chosen by professional directors, so every prompt is anchored to a verified live-action reference; the prompts follow real shot lists, and most script multiple shots (1,056 of the 1,169 prompts are multi-shot), unlike prior single-clip benchmarks. Second, evaluation follows a three-level Cinematic taxonomy of 3 axes, 12 components and 35 (T2V) +3 (R2V-only) sub-metrics. Third, we develop an in-house expert-grade automatic evaluation agent and open-source its core suite of Cinematic Language operators (FilmOps). Benchmarking leading video generation models (9 for T2V, 7 for R2V), the evaluator reproduces the human model ranking at model-level Spearman \\r{ho} = 0.95 (T2V) and 0.96 (R2V). Scores fall well below prior web-style benchmarks, with two consistent gaps in dynamic aesthetics and a marked single- to multi-shot performance drop that widens for weaker models.",
+        "tags": [
+            "CLIP",
+            "LLM",
+            "Text-to-Video",
+            "Video Generation"
+        ]
+    },
+    {
+        "id": 18,
+        "index": 3,
+        "title": "A Frozen 12B Beats Frontier Models on Verified Work: 100% Accuracy, 0 Tokens, Bit-Exact, Forever",
+        "author": [
+            "Sietse Schelpe"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.23806",
+        "abstract": "Improving a language model today means retraining it: enormous compute, a new opaque model each cycle, non-deterministic output. We take the opposite path: the model stays frozen, and a persistent memory of verified solutions grows beside it. Once a problem family is solved and has passed an independent verification step that never consults the answer key, every new instance of that family is answered at zero generation tokens, bit-exact, deterministically. Across 180 fresh instances spanning nine problem families, four architectures from four vendors - dense and mixture-of-experts - each score 180/180 at zero generation tokens per answer: execution-bound capability decoupled from parameter scaling. A negative control attributes the capability fully to the memory: emptied, it solves nothing. The same verify-before-store contract holds for open-ended reasoning: 88/88 consistency-gated acceptances across all four models, machine-checked formal proof, and reasoning-method transfer at 77/80. Memory selection takes 1.4 microseconds; a full reuse completes in 6-23 ms at 36 mWh. Approximate similarity retrieval selects the wrong item 94.3% of the time on a 4,500-item verified store where exact addressing makes zero errors. The store also serves as working context at a scale no shipped engine matches: a 6,000,000-token movable window on a single 46 GB GPU at flat memory, where vLLM stops at 30,399 tokens and SGLang silently truncates past 32,000. On published benchmarks, frontier models remain far ahead of any 12B at raw from-scratch reasoning; on everything this system has solved and verified, the comparison inverts: a frontier API call pays a fresh generation pass on every query, forever, while verified reuse costs zero tokens and returns the identical bits every time. A public testbench with free, rate-limited access accompanies this report: https://corbenic-galahad-bench.hf.space",
+        "tags": [
+            "MoE"
+        ]
+    },
+    {
+        "id": 19,
+        "index": 3,
+        "title": "GNM Head: A Generative aNthropometric Model of the human head",
+        "author": [
+            "Stylianos Ploumpis",
+            "Jan Bednarik",
+            "Gaspard Zoss",
+            "Ruslan Guseinov",
+            "Luca Prasso",
+            "Prashanth Chandran",
+            "Oliver Boyne",
+            "Vasileios Choutas",
+            "Timo Bolkart",
+            "Daoye Wang",
+            "Menglei Chai",
+            "Di Qiu",
+            "Sebastian Winberg",
+            "Gilles Rainer",
+            "Lewis Bridgeman",
+            "Delio Vicini",
+            "JÃ©rÃ©my Riviere",
+            "Yannick Boetzel",
+            "Alexander Koumis",
+            "Jay Busch",
+            "Cynthia Herrera",
+            "Jacob Still",
+            "Scott Ysebert",
+            "Peter Lincoln",
+            "Sergio Orts Escolano",
+            "Christoph Rhemann",
+            "Erroll Wood",
+            "Thabo Beeler",
+            "Stefanos Zafeiriou"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.23687",
+        "abstract": "Parametric models of the human head are essential tools traditionally used in computer vision and graphics for animation, rendering, and reconstruction. More recently, they serve as crucial conditioning signals within generative large vision models, allowing for tight spatial control of generated imagery. However, existing publicly available models are typically limited in anatomical scope, modeling only outer geometry while ignoring intra-oral and ocular structures, and frequently suffer from reduced geometric quality stemming from low-fidelity input datasets. In this report we introduce a new parametric model dubbed Generative aNthropometric Model (GNM), named as a homophone of the human genome. GNM encompasses the head, face, neck, eyeballs, teeth, and tongue, and it is built on an extensive database of high-resolution 3D scans combined with high-quality anatomy specific artist-made samples. This report details the data provenance, the model architecture including the specialized sub-models for the ocular and intra-oral structures, and shows its SotA performance on fitting target 3D face scans. To foster community innovation, the complete GNM framework is made publicly available.",
+        "tags": [
+            "3D"
+        ]
+    },
+    {
+        "id": 20,
+        "index": 3,
+        "title": "Leveraging External Knowledge for Historical Document Restoration via Retrieval-Augmented Large Language Models",
+        "author": [
+            "Gabeen Kim",
+            "Kyeongpil Kang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.21936",
+        "abstract": "Historical documents act as invaluable knowledge archives but often suffer from illegibility due to physical deterioration and damage. While existing restoration methods based on masked language modeling effectively utilize local context, they struggle to restore named entities that require external historical knowledge. To address this limitation, we introduce a novel framework for historical document restoration that leverages large language models with retrieval-augmented generation (RAG). By combining the implicit knowledge of pre-trained LLMs with explicitly retrieved external context, our model ARI effectively mitigates the challenge of inferring context-dependent proper nouns. Extensive experiments on Korean historical documents demonstrate that our approach significantly outperforms baselines, achieving substantial gains in restoring both general characters and named entities. Furthermore, comprehensive evaluations including expert assessments confirm that ARI serves as a practical tool for domain experts, promising to accelerate the analysis of historical records.",
+        "tags": [
+            "LLM",
+            "RAG"
+        ]
+    },
+    {
+        "id": 21,
+        "index": 3,
+        "title": "Reasoning Denoiser: Denoising Reasoning Traces for Hallucination Detection in Large Reasoning Models",
+        "author": [
+            "Junlin Fang",
+            "Do Nguyen-Thanh",
+            "Xiaogang Xu",
+            "Zhen Fang",
+            "Sean Du"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.22098",
+        "abstract": "Large reasoning models (LRMs) generate long reasoning traces before producing final answers. While these traces may contain useful signals for hallucination detection, harnessing them is non-trivial because long trajectories often include noisy steps that obscure the cues relevant to truthfulness assessment. In this paper, we identify two prevalent forms of reasoning noises, i.e., irrelevant steps and repetitive steps, and show that both substantially degrade hallucination detection performance. Existing confidence-based scores and naive embedding-based filtering fail to reliably separate noisy from informative steps. To address this challenge, we propose REDE, a novel learning framework for denoising reasoning traces for hallucination detection. Specifically, REDE leverages final-answer attention as an automatic supervision signal to shape the step-level representation space, yielding refined embeddings in which noisy steps can be reliably identified and filtered. REDE can be readily plugged into diverse hallucination detectors by operating on the filtered reasoning trajectory after removing noisy steps. Extensive experiments on multiple reasoning benchmarks show that REDE consistently improves detection performance over competitive baselines.",
+        "tags": [
+            "Detection"
+        ]
+    },
+    {
+        "id": 22,
+        "index": 1,
+        "title": "Evidence Attribution in Visual Document Understanding without Coordinates or Region Labels",
+        "author": [
+            "Zhuchenyang Liu",
+            "Yao Zhang",
+            "Yu Xiao"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.24651",
+        "abstract": "Reliable visual document understanding requires a model to attribute each answer to the evidence regions that support it. Recent benchmarks and systems express this step through a coordinate interface: the model outputs the coordinates of bounding boxes that mark the evidence regions in the document. Under this interface, vision-language models often fail to identify the right regions even when the answer is correct, a failure known as Attribution Hallucination. We present a study that investigates whether this failure is partially limited by what the model can express through coordinates. On a verified bilingual CiteVQA subset, we compare the coordinate interface with a language interface in which the model outputs only text, quoting its evidence verbatim, and a multimodal retriever returns the location of each quote as a page region proposed by a layout parser (tables and figures are quoted through their captions or notes); the comparison is repeated over six open vision-language models. Compared with the coordinate interface, evidence recall rises from at most 8 points to between 26 and 47 and the hallucination rate roughly halves, with little change in answer quality. Building on this comparison, we use the same quote-and-retrieve pipeline as a training scaffold: because region-level evidence labels are expensive to collect for long documents, we introduce a GRPO recipe whose reward is a judge's reading of the gold answer and crops of the retrieved regions, training the model to quote better evidence without any region labels and raising an 8B backbone's strict attributed accuracy from 22.4 to 33.8. These findings indicate a practical path to improve attribution\"without a coordinate interface and without costly region-level supervision.",
+        "tags": [
+            "GRPO",
+            "VLM"
+        ]
+    },
+    {
+        "id": 23,
+        "index": 1,
+        "title": "IndicTalk: A Large-Scale Persona-Based Multilingual Conversational Corpus for Indic Languages",
+        "author": [
+            "Sahil Deepak Gawande",
+            "Mayank Singh"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.23242",
+        "abstract": "Large Language Models (LLMs) have transformed conversational AI, yet high-quality multilingual code-mixed dialogue resources remain scarce, particularly for Indic languages where speakers naturally alternate between English and their native language in both native-script and Romanized forms. We present IndicTalk, one of the largest multilingual Indic code-mixed conversational corpora, comprising over 13,28,604 event-grounded multi-turn conversations across 18 language varieties covering 9 Indic languages. The corpus is generated through a fully automated pipeline that combines real-world news grounding, persona-conditioned dialogue generation using multilingual LLMs, and automatic quality validation. Extensive linguistic, automatic, and human evaluations demonstrate that IndicTalk produces fluent, coherent, and naturally code-mixed conversations across both script variants. We will release IndicTalk to support the development and evaluation of multilingual conversational AI for underrepresented Indic languages. The dataset is available at: https://huggingface.co/datasets/LingoIITGN/IndicTalk .",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 24,
+        "index": 1,
+        "title": "A Vocabulary for Multi-Agent Automated Research Systems",
+        "author": [
+            "Bardiya Akhbari"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.22682",
+        "abstract": "We introduce a vocabulary for automated research systems built from one or more agents to make their design choices easier to describe and compare. The vocabulary specifies 1) who the agents are, 2) what operations are available in the system, 3) who may invoke them, 4) how agents communicate, 5) what information is visible within and across runs, 6) how the next action is chosen, 7) how a run begins, and 8) how outputs are evaluated. A trajectory records one run from the input task to the returned artifact. Because agents, operations, and initialization may be stochastic, repeated runs on the same task induce a distribution over trajectories rather than a single behavior.\nOur vocabulary turns structural design questions, such as when agents should communicate, gain or lose a capability, or carry information across runs, into testable choices. It also makes the evaluator a component of the system, since reported gains depend on how closely the proxy score matches true quality. That separation also splits the vague complaint that these systems lack taste into two failures with different solutions. Generative taste is the rate at which a system proposes novel trajectories before any score is observed, and evaluative taste is the gap between the proxy score and the quality it should match. We instantiate the vocabulary on recent autoresearch systems to illustrate that it covers designs that differ widely in structure.",
+        "tags": []
+    },
+    {
+        "id": 25,
+        "index": 0,
+        "title": "Characterizing Warp Divergence from Pascal to Blackwell",
+        "author": [
+            "Alpin Dale"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.23402",
+        "abstract": "Since Volta introduced Independent Thread Scheduling (ITS), NVIDIA GPUs have been widely assumed to handle warp divergence in a fixed manner. We test this assumption across Ampere, Hopper, and datacenter and consumer Blackwell GPUs, using pre-ITS Pascal as a baseline. Combining cycle-accurate microbenchmarks, hardware counters, and static analysis of compiler-generated SASS, we separate stable behavior from architectural change. Across all tested generations, divergent paths serialize linearly with the number of paths $k$, following $T(k) \\approx sk$ with no super-linear reconvergence penalty. Warp execution efficiency falls as $32/k$, the penalty is independent of occupancy, and predication removes the serialization cost. The same behavior appears on Pascal, showing that this programmer-visible cost model predates ITS. The compiler-emitted reconvergence machinery, however, has changed substantially. Pascal uses a per-warp SSY/SYNC instruction stack, whereas later generations use barrier-register instructions. Deferred reconvergence beyond the immediate post-dominator falls from 29 cases on Ampere to 2 on Blackwell. Blackwell also introduces a two-tier convergence-barrier classification, uniform-branch instructions, and explicit partial-mask warp synchronization, none of which appear on Ampere or Hopper. Controlled bit-flip experiments indicate that the new barrier class is a static compiler classification with no observable runtime effect in our tests. Thus, divergence retains a stable and predictable performance cost even as NVIDIA's control-flow ISA and reconvergence mechanisms continue to evolve.",
+        "tags": []
+    },
+    {
+        "id": 26,
+        "index": 0,
+        "title": "DriveDNA: A Large-Scale Multimodal Naturalistic Driving Dataset and Benchmark for Driving Style Identification",
+        "author": [
+            "Yuhang Wang",
+            "Lingyao Li",
+            "Hao Zhou"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.23822",
+        "abstract": "Driving style captures stable, driver-specific patterns in how a vehicle is driven. In naturalistic data, however, this signal is hard to isolate because drivers are observed in different vehicles, on different roads, and under different conditions, so models may mistake vehicle- or situation-specific regularities for driver-specific style. We introduce DriveDNA, a large-scale naturalistic dataset and benchmark for personalized driving-style modeling, comprising 4,121 drives from 465 drivers across 115 vehicle models and totaling 975 hours of human-controlled driving at 10 Hz with forward video, collected from community drivers in everyday use. DriveDNA defines driving style as a consistent, driver-specific behavioral pattern in how a vehicle moves under similar conditions. The benchmark evaluates this signal through three core tasks: few-shot driver re-identification, personalized behavior prediction, and condition-matched comparison, and provides behavioral annotations plus 276,248 rule-generated maneuver events across six classes with large-scale human auditing. We evaluate baselines spanning classical descriptors, supervised and self-supervised time-series encoders, multimodal fusion, probabilistic prediction, and zero-shot foundation models under a fixed multi-seed protocol. Learned representations substantially outperform classical descriptors on unseen drivers (AUROC .935 vs. .707) and retain driver-specific information under matched driving conditions, while descriptor performance approaches chance. Video-only models achieve comparable re-identification accuracy but exhibit severe route leakage, showing that strong recognition may arise from contextual shortcuts rather than driving behavior. These findings show that reliable driving-style evaluation must assess both the behavioral value of learned representations and their robustness to vehicle, drive, and condition confounds.",
+        "tags": []
+    },
+    {
+        "id": 27,
+        "index": 0,
+        "title": "TRACE: Business Rule-Grounded Reasoning Curriculum for Knowledge-Preserving Parametric Tool Retrieval in Enterprise LLMs",
+        "author": [
+            "Sai Shruthi Sistla",
+            "Ashutosh Hathidara",
+            "Christopher Toukmaji",
+            "Mayank Shrivastava",
+            "Karthikeyan Asokkumar"
+        ],
+        "pdf": "https://arxiv.org/pdf/2607.22639",
+        "abstract": "Parametric retrieval enables LLMs to retrieve tools implicitly by assigning each API a unique virtual token and training the model to generate it via constrained beam search. Toolsense shows that this regime has two critical drawbacks: it destroys parametric tool knowledge during training, and its beam-search decoding is too slow for real-time deployment. We introduce TRACE (Tool Retrieval via Augmented Chain-of-thought and Enterprise rules), a two-stage curriculum that resolves this dissociation. Stage 1 reuses the multi-format memorization SFT from ToolSense to seed tool knowledge with LoRA. Stage 2 is our core contribution: the model is trained to emit a thinking trace before producing a JSON list of tool tokens, using two data sources -- RRB pairs from ToolSense and queries synthesized to target business rules curated by domain experts -- both augmented with reasoning traces. This training objective preserves Stage 1 MCQ and QA probing accuracy while enabling single-beam greedy decoding at production latency. Evaluated on a combined enterprise catalog of 8,300+ tools across two enterprise product lines, TRACE training for Stage 2 not only preserves but improves tool understanding: MCQ accuracy gains +3.2 pp and QA probing gains +9 pp over Stage 1. On retrieval, TRACE achieves ~86% recall on Domain A and ~60% on Domain B -- compared to embedding baseline performance of ~27% & ~52% -- both with single-beam greedy decoding, making it directly deployable at production latency.",
+        "tags": [
+            "CoT",
+            "LLM",
+            "LoRA"
+        ]
+    }
+]
