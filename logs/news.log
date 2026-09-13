@@ -1,0 +1,16 @@
+[000290] 2026-09-13 10:38:16 - DEBUG - /home/runner/work/ghapi-action/ghapi-action/news/__init__.py:19 - 2026-09-13 18:38:16.969517+00:00
+[001005] 2026-09-13 10:38:17 - DEBUG - /home/runner/work/ghapi-action/ghapi-action/news/huanqiu.py:43 - huanqiu offset: 0, item size: 25
+[001005] 2026-09-13 10:38:17 - DEBUG - /home/runner/work/ghapi-action/ghapi-action/news/huanqiu.py:54 - huanqiu latest time: 2026-09-13 12:03:40.898000
+[001545] 2026-09-13 10:38:18 - DEBUG - /home/runner/work/ghapi-action/ghapi-action/news/jiemian.py:27 - jiemian keys: dict_keys(['hideBtn', 'list'])
+[001545] 2026-09-13 10:38:18 - DEBUG - /home/runner/work/ghapi-action/ghapi-action/news/jiemian.py:29 - jiemian dict items list len: 20
+[001876] 2026-09-13 10:38:18 - ERROR - /home/runner/work/ghapi-action/ghapi-action/news/__init__.py:46 - running news.jiemian failed!
+Traceback (most recent call last):
+  File "/home/runner/work/ghapi-action/ghapi-action/news/__init__.py", line 44, in one
+    return await mod.fetch(session, datetime.fromisoformat(times[str(idx)]).replace(tzinfo=None), local_time)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/ghapi-action/ghapi-action/news/jiemian.py", line 23, in fetch
+    r = await resp.json()
+        ^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/site-packages/aiohttp/client_reqrep.py", line 778, in json
+    raise ContentTypeError(
+aiohttp.client_exceptions.ContentTypeError: 200, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url='https://papi.jiemian.com/page/api/kuaixun/getlistmore?cid=48&start_time=1789226069&page=2&tagid='
