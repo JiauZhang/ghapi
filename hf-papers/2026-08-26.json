@@ -1,0 +1,559 @@
+[
+    {
+        "id": 1,
+        "index": 87,
+        "title": "GigaBrain-0.7: Scaling Embodied Foundation Models to Emergent Capabilities with a Three-System Architecture",
+        "author": [
+            "GigaBrain Team",
+            "Angen Ye",
+            "Axiang Sun",
+            "Can Jin",
+            "Chenxi Cheng",
+            "Chong Shi",
+            "Dengke Shang",
+            "Dingqian Zhang",
+            "Guan Huang",
+            "Guangqiang Wang",
+            "Guangqing Ding",
+            "Guo Li",
+            "Hangcong Li",
+            "Hengyu Zhong",
+            "Hongtao Lu",
+            "Jianbo Qin",
+            "Jiming Mao",
+            "Jing Zhu",
+            "Jindi Lv",
+            "Jingzhi Cui",
+            "Junjie Xie",
+            "Junyi Bao",
+            "Kai Liu",
+            "Lei Yuan",
+            "Limin Long",
+            "Lv Feng",
+            "Mingming Yu",
+            "Peng Li",
+            "Pengfei Yi",
+            "Qi Li",
+            "Qianli Zhang",
+            "Qingfang Li",
+            "Qitang Hu",
+            "Rui Zhang",
+            "Shaoyan Sun",
+            "Shibo Sun",
+            "Shiying Duan",
+            "Tenghui Chen",
+            "Tianze Liu",
+            "Weijie Ke",
+            "Wenyao Xue",
+            "Xiaofeng Wang",
+            "Xiaoyu Tian",
+            "Xinyu Liu",
+            "Xinze Chen",
+            "Yang Wang",
+            "Yankai Wang",
+            "Yejun Zeng",
+            "Yifan Li",
+            "Yifei Nie",
+            "Yilong Li",
+            "Yilong Liu",
+            "Yongchao Feng",
+            "Yumeng Wang",
+            "Yun Ye",
+            "Zhichao Liu",
+            "Ziheng He",
+            "Zonghai Yang",
+            "Zheng Zhu"
+        ],
+        "pdf": "https://arxiv.org/pdf/2608.15875",
+        "abstract": "Vision-language-action (VLA) models have become a dominant paradigm for generalist embodied agents, demonstrating strong complex and long-horizon task completion in structured settings. Yet it remains an open question whether current VLA systems can benefit from more effective architectural design, scale to substantially larger and more heterogeneous data regimes, and achieve broader generalization across tasks and embodiments. To this end, we present GigaBrain-0.7, an embodied foundation model with substantially improved generalization across diverse robot embodiments. Specifically, GigaBrain-0.7 unifies understanding, prediction, and action through a three-system architecture, scales pretraining to over 37,000 hours of heterogeneous embodied data, and introduces one-stage alignment training that jointly optimizes vision-language understanding and multi-embodiment action generation. Compared with the preceding GigaBrain-0 series and prior state-of-the-art models including $\\pi_{0.5}$, GigaBrain-0.7 achieves substantial improvements in foundation zero-shot capabilities, language-conditioned instruction following, and post-training task success rates. In particular, on our in-house Maker H01 platform and mainstream robot embodiments, GigaBrain-0.7 demonstrates strong task adaptability and completion ability across both home and industrial scenarios. All training code and pretrained model weights will be released.",
+        "tags": [
+            "Robotics"
+        ]
+    },
+    {
+        "id": 2,
+        "index": 80,
+        "title": "Annotations as Rollouts: Efficient and Scalable Reinforcement Learning for Video MLLMs",
+        "author": [
+            "Yunheng Li",
+            "Guohong Mu",
+            "Hao Li",
+            "Shengsheng Qian",
+            "Dingwen Zhang",
+            "Qibin Hou",
+            "Ming-Ming Cheng"
+        ],
+        "pdf": "https://arxiv.org/pdf/2608.20492",
+        "abstract": "Multimodal large language models (MLLMs) have become a prevailing paradigm for unified video perception. However, post-training on large multi-task datasets remains challenging, as existing reinforcement learning methods sample on-policy groups with few high-quality rollouts even with costly chain-of-thought (CoT) generation. In this paper, we study the sample efficiency and scalability of RL post-training for video MLLMs and introduce OraRL. We identify an overlooked role for annotations: Beyond scoring rollouts, each can enter its on-policy group as an oracle rollout, a direct positive optimization target. Direct oracle integration, however, is nontrivial: a high-reward oracle raises the group baseline and inverts otherwise positive policy advantages, a failure we term advantage inversion. At the core of OraRL is a decoupled advantage estimator: policy rollouts determine an oracle-free baseline, while the oracle-policy gap modulates both a directional gain and a separate detached oracle advantage. Sign-balanced pruning improves efficiency: by retaining only the oracle and the strongest rollouts of each sign, OraRL requires just 2.2x the step time of SFT, less than half the 4.9x required by GRPO with CoT. OraRL scales with model size and data, surpassing its backbone from 0.8B to 9B and GRPO up to 100k prompts. Without chain-of-thought, Video-ORA-9B decodes in 130 ms instead of 4,780 ms. Compared with the respective prior best models, it raises temporal mIoU from 62.5 to 66.0, tracking AO from 73.0 to 78.2, segmentation from 64.3 to 70.4, and the three-benchmark spatial-intelligence macro average from 51.0 to 56.1; on VSI-Bench, it scores 73.1 against 55.0 for GPT-5 and 55.1 for Gemini-3-Pro.",
+        "tags": [
+            "CoT",
+            "GPT",
+            "GRPO",
+            "LLM",
+            "RL",
+            "Segmentation"
+        ]
+    },
+    {
+        "id": 3,
+        "index": 54,
+        "title": "WeMM-Embedding: WeChat Multi-Modal Embedding Technical Report",
+        "author": [
+            "Junjie Zhou",
+            "Ke Mei",
+            "Lei Li",
+            "Tianyi Wang",
+            "Fengyun Rao",
+            "Jing Lyu"
+        ],
+        "pdf": "https://arxiv.org/pdf/2608.24053",
+        "abstract": "Universal multimodal embeddings are becoming a core component of modern AI systems, enabling heterogeneous content to be represented in a shared space for applications such as retrieval, recommendation, classification, and agentic systems. In this report, we present WeMM-Embedding, a family of universal multimodal embedding models supporting text, images, videos, visual documents, and arbitrarily interleaved multimodal inputs with flexible output dimensions. The family comprises 2B, 4B, and 9B variants and is trained in two stages: a large-scale multimodal alignment stage, followed by a refinement stage using curated data, fine-grained relevance supervision, and cross-scale knowledge transfer. Across extensive evaluations, WeMM-Embedding achieves leading performance on multiple public benchmarks. Notably, the 2B variant already surpasses the previously leading 8B open-source baseline on MMEB-v2, while the 9B variant further achieves a new state-of-the-art overall score of 80.6. WeMM-Embedding also demonstrates strong practical performance across WeChat applications, with substantial gains on a 26-task in-house benchmark and consistent improvements across 14 online A/B tests. It has been deployed at scale across recommendation and search applications, including WeChat Channels, Official Accounts, Moments, and e-commerce services. We have released the model weights and code to facilitate future research at https://github.com/Tencent/WeMM-Embedding.",
+        "tags": []
+    },
+    {
+        "id": 4,
+        "index": 49,
+        "title": "AutoSaddler: Automatic Harness Optimization with Durable Updates from Agent Execution Traces",
+        "author": [
+            "Sungho Park",
+            "Wonjoong Kim",
+            "Rongyuan Tan",
+            "Jue Zhang",
+            "Wook-Shin Han",
+            "Pengfei Gao",
+            "Chanyoung Park",
+            "Yongqiang Yao",
+            "Rao Fu",
+            "Elsie Nallipogu",
+            "Qingwei Lin",
+            "Saravan Rajmohan",
+            "Dongmei Zhang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2608.23041",
+        "abstract": "LLM agents remain unreliable on long-horizon tasks, where small local failures can compound over extended interactions and lead to overall task failure. Although external harnesses can substantially improve robustness, harness design remains a manual and expensive process that requires searching over a large space of prompts, tool configurations, and control logic. We propose AutoSaddler, an automatic harness optimization framework that formulates harness improvement as an offline learning problem and iteratively updates the harness using failure signals from mini-batches. AutoSaddler combines failure-trace diagnosis, structured patch generation that treats the harness as code, and validation-based update selection. Experiments on GAIA2, SWE-Bench Pro, and Terminal-Bench 2.0 show that AutoSaddler substantially improves agent performance over the corresponding base harnesses, achieving gains of 9.0, 9.6, and 10.0 percentage points, respectively. Ablation studies further suggest that effective harness optimization benefits from three ingredients: deep debugging rather than shallow reflection, targeted modifications rather than unconstrained editing, and generalization-aware selection rather than trajectory-specific repair. Together, these results suggest that automatic harness optimization is a promising path toward more performant and reliable agent systems.",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 5,
+        "index": 46,
+        "title": "On-Policy Self-Distillation in Diffusion Models",
+        "author": [
+            "Wei Zhou",
+            "Xiongwei Zhu",
+            "Lingdong Kong",
+            "Bo Chen",
+            "Lei Zhang",
+            "Yongyuan Liang",
+            "Xiaoxia Hou",
+            "Ye Tian",
+            "Xian Sun",
+            "Yingshuo Wang",
+            "Linfeng Li",
+            "Shengqiong Wu",
+            "Leigang Qu",
+            "Feng Li",
+            "Wei Liu",
+            "Julian McAuley",
+            "Tat-Seng Chua"
+        ],
+        "pdf": "https://arxiv.org/pdf/2608.24646",
+        "abstract": "Reinforcement learning can align diffusion models with human preferences and task-specific objectives, but endpoint rewards do not specify how an intermediate denoising prediction should change. We introduce DiffusionOPSD as an on-policy self-distillation framework that converts image-level reward guidance into explicit targets for clean-output predictions at sampled queries. At each outer iteration, a frozen behavior policy generates trajectories and supplies query states and anchors. Reward gradients construct bounded positive and negative targets around each anchor. The trainable policy fits these targets as detached supervision through finite fitting before an exponential moving average update refreshes the behavior policy. This setup lets us measure target construction and finite realization separately. Controlled same-query experiments show that larger target-construction gains do not necessarily translate into larger realized gains after a single fitting update. Across SD 3.5-M and the step-distilled Z-Image-Turbo, our approach achieves the best final held-out scores in 19 of 20 reward-matched settings across two backbones and ten evaluators. It outperforms the strongest competing method by up to 44.0% and reduces training GPU-hours relative to DiffusionNFT by 40% on SD 3.5-M and 63% on Z-Image-Turbo. These results support on-policy self-distillation as an efficient and analyzable approach to diffusion post-training by converting image-level reward guidance into explicit and continually refreshed intermediate supervision, thereby opening a path toward more efficient and diagnosable alignment.",
+        "tags": [
+            "Diffusion",
+            "RL"
+        ]
+    },
+    {
+        "id": 6,
+        "index": 36,
+        "title": "SecOPD: Mitigating Adaptive Prompt Injections by On-Policy Distillation",
+        "author": [
+            "Yibo Peng",
+            "Long Lian",
+            "David Wagner",
+            "Sizhe Chen"
+        ],
+        "pdf": "https://arxiv.org/pdf/2608.21500",
+        "abstract": "Prompt injection is listed as the \\#1 threat to AI agents. When an agent accesses external data from websites, files, or emails, an attacker may inject a prompt into the data, saying, \"Ignore all prior instructions and perform <an attacker's task>.\" To prevent arbitrary manipulation of agents, defenders try to train secure LLMs, which, however, still suffer from near 100% attack success rates (ASRs) against adaptive prompt injections. We note that this is because existing defensive finetuning recipes rely on sequence-level feedback signals (in DPO or GRPO). Treating an entire output equally prevents the model from learning precisely which output tokens are insecure. In this paper, we propose Secure On-Policy Distillation (SecOPD) that provides token-level feedback to guide defensive fine-tuning. The LLM receives an injected sample and produces a rollout, whose tokens are scored by the initialization model given the corresponding clean input. With more fine-grained training signals, our defended Qwen3.6-27B achieves a 9.0% ASR against the SoTA PISmith adaptive prompt injections, compared to 94.0% for the prior SoTA, Meta-SecAlign. The obtained security generalizes to domains completely unseen in training: in agentic tool calling, SecOPD achieves a 4.7% ASR compared to 5.5% for Meta-SecAlign. Code and the model are available at https://github.com/pppyb/SecOPD and https://huggingface.co/pybbb/Qwen3.6-27B-SecOPD.",
+        "tags": [
+            "DPO",
+            "GRPO",
+            "LLM"
+        ]
+    },
+    {
+        "id": 7,
+        "index": 27,
+        "title": "CyberFactory: Scaling Cyber Security Capabilities with Instances from the Wild",
+        "author": [
+            "Jian Yang",
+            "Haau-Sing Li",
+            "Shawn Guo",
+            "Zixi Zhao",
+            "Yibo Tan",
+            "Jiajun Wu",
+            "Aishan Liu",
+            "Zhoujun Li",
+            "Xianglong Liu",
+            "Tianyu Zheng",
+            "Bryan Dai",
+            "Chengran Yang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2608.23181",
+        "abstract": "As large language models (LLMs) continue to advance in coding capabilities, their potential in cybersecurity has drawn increasing research attention, with closed-source LLMs (e.g., Mythos) delivering advanced cybersecurity capabilities. However, existing open-source efforts remain limited: frontier open-weight models do not provide reproducible cybersecurity training solutions, open-source training solutions focus on isolated tasks and lack scalable agentic data, and scaling agentic rollouts requires strong domain priors. In this work, we introduce \\textbf{CyberFactory}, a unified open-source framework that connects data construction, trajectory synthesis, and model training across proof-of-concept (PoC) generation, vulnerability patching, and cybersecurity question answering (CyberQA). CyberFactory transforms public vulnerability artifacts, including CVEs from the wild, into executable and verifiable task instances. It further uses a reusable vulnerability-analysis skill to guide the teacher through source inspection, problem solving with domain prior, and evidence-based validation. The resulting supervision is agentic: the model interacts with tools and target environments and revises its solutions according to execution feedback. Using these trajectories, we train and release \\modelname\\footnote{\\emph{Aegis} is, in Greek mythology, the protective shield of Zeus and Athena; the name reflects the model's defensive, security-oriented purpose.}, which internalizes the skill-guided procedure without requiring the skill at inference time. On CyberGym, \\modelname reaches 52.4% Pass@1 under a one-hour budget, improving over its Qwen~3.5 base model by +22.8 points and outperforming the evaluated general-purpose backbones under the same scaffold.",
+        "tags": [
+            "LLM",
+            "Qwen"
+        ]
+    },
+    {
+        "id": 8,
+        "index": 18,
+        "title": "Recursive Experiential-Working Memory Evolution for Long-Horizon Agent Harnesses",
+        "author": [
+            "Zhaochen Yu",
+            "Yingcheng Wu",
+            "Zhenfei Yin",
+            "Kaiyuan Chen",
+            "Zhe Zhao",
+            "Mengdi Wang",
+            "Shuicheng Yan",
+            "Ling Yang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2608.24876",
+        "abstract": "Recursive self-improvement (RSI) remains hard in long-horizon tasks, where growing histories obscure the task state and misalign skill invocation. We introduce Recuris, a recursive Experiential-Working Memory architecture for long-horizon agent harnesses, in which Working Memory tracks task progress and guides skill selection from Experiential Memory, grounding skill use in current needs rather than the full history. This coupling also turns execution into structured evidence that localizes failures to specific memory components. Across tasks, a fixed Meta-Agent turns that evidence into localized, validation-gated updates to Skill Memory that reshape execution and yield new evidence, forming a bounded recursive memory-evolution loop. Across four long-horizon benchmarks and ten models, Recuris improves task success in 35 of the 37 completed model-benchmark pairs, carrying frontier models to SOTA-level task success: on tau-bench it adds +17.8 points to GPT-5.6 Sol and +15.6 to Claude Opus 5, taking Opus 5 to 87.9%, and +16.6/+13.5 points on Qwen3.6-27B/35B on SkillFlow. The advantage widens as the interaction horizon grows, to +32.2 points on the longest tasks, and common long-horizon failures fall by up to 80%. These results position recursively evolving memory as a scalable foundation for RSI, enabling agents to continuously transform accumulated experience into increasingly effective long-horizon behavior. Code: https://github.com/Gen-Verse/Recuris",
+        "tags": [
+            "GPT"
+        ]
+    },
+    {
+        "id": 9,
+        "index": 11,
+        "title": "Best Practice Critic Optimization",
+        "author": [
+            "Penghui Qi",
+            "Xiangxin Zhou",
+            "Wee Sun Lee"
+        ],
+        "pdf": "https://arxiv.org/pdf/2608.23566",
+        "abstract": "Group-based reinforcement learning methods such as GRPO for large language models avoid training a critic by sampling multiple responses for each prompt. A reliable critic could instead estimate token-level advantages from one response, but standard critic-based training recipes are often unstable. We study this instability and develop **Best Practice Critic Optimization (BPCO)**, a recipe that combines DPPO, value predictions bounded to the reward range, Monte Carlo value targets, unnormalized policy advantages, and length-adaptive generalized advantage estimation. Because the critic is used only during training, BPCO can also condition it on reward-defining information, such as a reference answer or grading rubric, that is hidden from the policy. Controlled experiments isolate the effect of each design choice. Across mathematical reasoning tasks with models ranging from 1.5B parameters to 30B-A3B mixtures of experts, BPCO improves a strong critic-based baseline consistently, and matches or exceeds a group-based baseline while sampling one response per prompt. The same recipe also improves learning with rubric-based rewards. These results show that a carefully designed critic provides a reliable alternative to group-relative advantage estimation. Code is available at https://github.com/QPHutu/golden_critic.",
+        "tags": [
+            "GRPO",
+            "LLM",
+            "RL"
+        ]
+    },
+    {
+        "id": 10,
+        "index": 11,
+        "title": "On-policy Distillation with Verifiable Reward",
+        "author": [
+            "Wenze Lin",
+            "Jiale Zhao",
+            "Xitai Jiang",
+            "Songde Rao",
+            "Yining Li",
+            "Shenzhi Wang",
+            "Bingxiang He",
+            "Gao Huang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2608.24696",
+        "abstract": "Reinforcement Learning with Verifiable Rewards (RLVR) and on-policy distillation (OPD) have become two widely adopted paradigms for post-training large language models. However, RLVR suffers from sparse task-level feedback, while OPD provides dense token-level guidance but ignores trajectory correctness, limiting its performance to that of the teacher. Combining them is a promising direction: OPD supplies dense supervisory signals, while RLVR provides task-level correctness. Nevertheless, existing integrations often rely on weighted combination or heuristic switching, introducing extra hyperparameters and trade-offs. We propose On-policy Distillation with Verifiable Reward (OPDVR), a simple yet effective method that seamlessly combines OPD and RLVR without adding any hyperparameters. We first reformulate the implicit reward of sampled-token OPD based on trajectory correctness, then apply a ReLU gating mechanism to ensure that correct trajectories receive non-negative rewards and incorrect ones receive non-positive rewards---thereby aligning the distillation signal with task success while preserving the teacher's distributional guidance. Furthermore, our modification transforms sampled-token OPD into a proper RLVR method, making it readily combinable with any policy gradient algorithm, such as GRPO. Experiments on six reasoning benchmarks show that OPDVR consistently outperforms standard OPD. Our code is available at https://github.com/LeapLabTHU/OPDVR.",
+        "tags": [
+            "GRPO",
+            "LLM",
+            "RL"
+        ]
+    },
+    {
+        "id": 11,
+        "index": 8,
+        "title": "Game2World Engine: Unlocking In-the-Wild Gameplay Videos for World Model Training",
+        "author": [
+            "Wenxuan Shen",
+            "Dongna Jin",
+            "Dongping Chen"
+        ],
+        "pdf": "https://arxiv.org/pdf/2608.24680",
+        "abstract": "Video games provide a scalable source of training data for video world models, offering diverse environments, complex interactions, and abundant in-the-wild gameplay videos. However, raw gameplay footage entangles the game world with screen-space interfaces, introducing game-specific biases and irrelevant dynamics that hinder world-model training. To address this problem, we introduce GameUI-Taxonomy and G2WEngine, a full-stack framework that formalizes gameplay UI grounding and removal. G2WEngine automatically extracts reusable UI assets from real gameplay videos and synthesizes temporally coherent UI overlays on clean footage. Using this engine, we construct Game2World, comprising 96K synthetic paired videos with precise reconstruction targets and 1,079 in-the-wild clips from 303 games for realistic evaluation. Its asset library contains 5,132 verified UI elements across 21 taxonomy categories, collected from 1,010 representative gameplay frames. Based on Game2World, we propose GameCleaner, a mask-free gameplay UI removal model that combines multimodal semantic understanding with video editing capabilities. Unlike mask-based methods, GameCleaner directly identifies and removes diverse HUD elements while preserving the underlying scene content and temporal dynamics. In a controlled pilot, world models trained on UI-free gameplay improve overall VideoReward by 6.83% over those trained on UI-overlaid data. On UI-removal evaluation, GameCleaner achieves an average AAR of 95.36 on synthetic videos, outperforming the strongest temporal mask baseline by 57.3%, and obtains the best in-the-wild AAR of 80.05 with 99.8 background preservation. These results demonstrate the scalable potential of transforming Internet gameplay videos into high-quality world-model training data. Code, dataset, and model will be available at https://github.com/Dongping-Chen/Game2World.",
+        "tags": [
+            "Video Editing"
+        ]
+    },
+    {
+        "id": 12,
+        "index": 8,
+        "title": "From Seeing to Acting: Smart Glasses as First-Person Intelligence Platforms",
+        "author": [
+            "Jiangning Zhang",
+            "Haojun Chen",
+            "Yong Liu"
+        ],
+        "pdf": "https://arxiv.org/pdf/2608.24877",
+        "abstract": "Smart glasses are evolving from capture and display accessories into first-person intelligence platforms that connect human perception, persistent context, and digital or physical action. Their on-body viewpoint aligns with the wearer's vision, audition, motion, and hand-object interaction, but must operate under tight energy, thermal, privacy, and feedback constraints. Despite rapid progress in augmented reality, egocentric vision, multimodal models, human-computer interaction, and embodied intelligence, the literature remains fragmented across devices, tasks, and benchmarks. \\textit{The key challenge is not whether a model can recognize, answer, remember, or act in isolation, but whether a complete system can sustain a reliable, temporally valid, correctable, and governable perception-state-interaction-action loop.} This survey is \\textit{the \\textbf{first} to systematically study smart glasses through such a unified framework}. We formalize first-person data flow and constrained task utility, characterize devices along eight verifiable hardware capability axes, organize the literature around seven interdependent foundational capabilities, and introduce an L0-L5 framework spanning capture, reactive perception, contextual assistance, persistent state, governed action, and embodied coupling. Across nine application scenes, we connect tasks with datasets, systems, products, stakeholders, failure consequences, and evidence gaps. We further present a nine-dimensional deployment framework, a claim-conditioned evaluation protocol, and an evidence ladder from controlled measurement to longitudinal field validation and audit. Together, these elements make smart glasses more comparable, deployable, and reproducibly evaluated, while outlining a roadmap toward trustworthy first-person intelligence.",
+        "tags": []
+    },
+    {
+        "id": 13,
+        "index": 7,
+        "title": "Meta$^n$: Recursive Self-Improvement through Emergent Depth",
+        "author": [
+            "Zae Myung Kim",
+            "Young-Jun Lee",
+            "Seungyeon Jwa",
+            "Dongyeop Kang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2608.24735",
+        "abstract": "Self-improving LLM agents refine answers, not the process that produces those answers. Systems that add a meta-level hold that level fixed, and those that edit themselves must leave part of their own editing machinery untouched to stay stable, capping the meta-depth they realize at roughly two. We present Meta$^n$, which keeps the meta-operation fixed and recurses on its input instead. That operation, $\\Omega$, is applied repeatedly to its own products, reading the traces of the solver stack below together with the code that produced them, then writing the next layer as a strategic pre-process and a library of callable helpers. Because $\\Omega$ never changes, it cannot destabilize the system, and because its input strictly grows, each layer reasons from a higher vantage than the last. Depth is set by convergence rather than fixed in advance, and an evolutionary archive searches over layer chains. Across two backbones, Meta$^n$ outperforms prior self-improving agents on all eight benchmark families. The sharpest case is ARC-AGI-2, built to resist skill memorization, where it alone scores above zero. Ablations indicate that most of the gain from recursion comes from the conditioning each layer passes to the next, and distinct layer roles emerge with depth although no prompt prescribes them. Code available at https://github.com/minnesotanlp/meta-n",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 14,
+        "index": 4,
+        "title": "LAION-BVD: A 10-Million-Hour Open Video Dataset for Multimodal Pre-training",
+        "author": [
+            "Andreas Hochlehnert",
+            "Marianna Nezhurina",
+            "Mehdi Cherti",
+            "Andrej Radonjic",
+            "ThaddÃ¤us Wiedemer",
+            "Christoph Schuhmann",
+            "Romain Beaumont",
+            "Wieland Brendel",
+            "Bernhard SchÃ¶lkopf",
+            "A. Sophia Koepke",
+            "Jenia Jitsev",
+            "Matthias Bethge"
+        ],
+        "pdf": "https://arxiv.org/pdf/2608.24845",
+        "abstract": "We present LAION-BVD, a large-scale open video dataset for multimodal learning, which contains 1.3B platform-specific video URLs collected from CommonCrawl. From these, we download 80M videos with a total duration of 10 million hours. The dataset is designed for multimodal pre-training across the video, audio, and image modalities. Using content-aware scene detection, we extract clips for which we synthetically generate video and audio captions. Models trained on these data achieve competitive performance on standard video-text and audio-text benchmarks, with consistent improvements as training or model scale increases. Additionally, we explore video frames as an alternative source of image-text data by extracting scene-changing frames. These frames exhibit a visual distribution distinct from standard web image corpora, and models trained on this dataset achieve strong image-text retrieval performance. We release LAION-BVD to the research community. It significantly expands open access to multimodal videos at an unprecedented scale.",
+        "tags": [
+            "Detection"
+        ]
+    },
+    {
+        "id": 15,
+        "index": 3,
+        "title": "CAFE: Self-Improving Search Agents Need Co-Evolving Feedback",
+        "author": [
+            "Boyang Liu",
+            "Senjie Jin",
+            "Peixin Wang",
+            "Zhangyue Yin",
+            "Yibo Wang",
+            "Yuhao Zhou",
+            "Xinbing Liang",
+            "Shizheng Zhu",
+            "Yuhui Wang",
+            "Jingqi Tong",
+            "Zhiheng Xi",
+            "Jiazheng Zhang",
+            "Clive Bai",
+            "Clarenceai",
+            "Blaze Chen",
+            "Tao Gui",
+            "Qi Zhang",
+            "Xuanjing Huang"
+        ],
+        "pdf": "https://arxiv.org/pdf/2608.24794",
+        "abstract": "Outcome-supervised search agents learn when and how to retrieve evidence, but terminal rewards neither localize intermediate errors nor redirect an ongoing trajectory before those errors compound. Treating corrective feedback as a learned in-trajectory intervention couples the two roles: the agent must decide when to request and use feedback, while the critic must infer useful corrections from outcome-confounded rollouts whose failure patterns shift as the agent improves. We introduce CAFE (Coupled Agent--Feedback Evolution), a framework in which a shared-parameter model alternates between search-agent and critic roles. CAFE initializes feedback-conditioned recovery from trajectories built around the base agent's own failures, then couples online and offline optimization. During online RL, a comparative feedback estimate uses a prompt-level call--skip success gap to shape request returns, while feedback-aware advantage shaping reweights token advantages before and after feedback. Offline, rollout-derived preference optimization learns feedback from matched successful and unsuccessful trajectories. On seven agentic search benchmarks, CAFE outperforms the evaluated RL-based search agents on average, retains its gains across all six out-of-domain benchmarks, and reduces answer-level hallucinations. One-sided ablations show that improving only the agent or only the critic eventually plateaus, whereas alternating the two updates continues to improve performance. These findings suggest that a self-improving search agent needs feedback that co-evolves with the policy it guides.",
+        "tags": [
+            "RL"
+        ]
+    },
+    {
+        "id": 16,
+        "index": 3,
+        "title": "AgentRoom: Concurrent Multi-Agent Coding in a CRDT-Backed Shared Workspace",
+        "author": [
+            "Seonglae Cho",
+            "Donghyun Lee"
+        ],
+        "pdf": "https://arxiv.org/pdf/2608.23740",
+        "abstract": "Concurrent multi-agent coding promises division of labor across modules, robustness through redundancy, and parallel exploration at the natural granularity of multi-file projects. Realtime collaborative editing protocols solve this coordination problem for human teams via Conflict-free Replicated Data Types (CRDTs), but the LLMs underneath generate one token at a time and existing multi-agent coding systems inherit this serial limit: they either sequence agents through phase handoffs or pool independent samples without coordination, and a single agent abandons up to half of hard tasks with a one-file stub-and-exit. AgentRoom is a realtime collaborative editing protocol for concurrent coding agents. Its runtime layer exposes file-level claim, status, and broadcast as MCP tools on a CRDT-merged shared filesystem. Five frontier coding-CLI models ran four backend coding tasks, with cross-language checks in Python DevBench and Rust+axum. For CLI-stable models, AgentRoom with 2 agents abandons fewer tasks than Solo and has less run-to-run variation. At matched-compute, one positive mean LLM-judge contrast puts AgentRoom over parallel-merge. The other contrast, a bundle probe, puts full AgentRoom above each partial case: an ordering rather than a percentage split. Coordination, not parallelism or CRDT-merge, bears the load.",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 17,
+        "index": 3,
+        "title": "Automata from Agent Traces: Failure and Next-Step Prediction",
+        "author": [
+            "Seonglae Cho",
+            "Franklin Cardenoso Fernandez",
+            "Umar Mohammed",
+            "Zekun Wu",
+            "Kleyton Da Costa",
+            "Ilham Wicaksono",
+            "Adriano Koshiyama"
+        ],
+        "pdf": "https://arxiv.org/pdf/2608.23670",
+        "abstract": "LLM-based agents execute multi-step tasks, but their behavioral structure remains opaque: long unstructured traces resist the safety auditing and runtime monitoring that deployment requires. Existing approaches operate per-trace or success-only, so they miss the cross-run topology that links next-step and failure prediction. To recover that shared structure, we collapse an entire trace corpus into a single, compact finite-state machine (FSM) that serves as a structural substrate for the otherwise unpredictable behavior of LLM agents. Across twelve public datasets, the FSMs are compact (7-43 states), replay held-out data at >=0.997 fitness with near-identical topology across splits, and build in milliseconds. This substrate addresses both prediction goals. For next-step prediction, FSM-state context outperforms Agent Workflow Memory on every ground-truth-matched dataset. For failure prediction, per-state behavioral features reach held-out AUROC up to 0.94, and an online monitor ranks failing runs above passing ones from a partial trace, triggering early stopping well before completion. Behavioral topology thus appears shaped more by the deployment harness than by the LLM, providing a model-agnostic structural primitive for safety auditing and runtime monitoring.",
+        "tags": [
+            "LLM"
+        ]
+    },
+    {
+        "id": 18,
+        "index": 3,
+        "title": "Length-Adaptive Decoding for Masked Diffusion Machine Translation",
+        "author": [
+            "Yan Zhan",
+            "Mengkai Hou",
+            "Wanting Zhang",
+            "Zhijun Gao"
+        ],
+        "pdf": "https://arxiv.org/pdf/2608.22274",
+        "abstract": "Machine translation tests masked diffusion language models (dLLMs) because every source token must be rendered faithfully, while fixed canvas decoding must choose target length before denoising. Existing masked diffusion decoding work mainly studies token unmasking order, leaving this length decision under-explored despite its direct effect on coverage and redundancy. We introduce Entropy-Valley (EV), a training-free length selector that scores candidate target canvases by mean predictive entropy from all-mask forward passes and selects the canvas the backbone is most prepared to fill. Relative to a baseline using training corpus length statistics, EV recovers 64.9%, 65.3%, and 33.0% of the COMET-22 gain from reference target lengths on En$\\to$Zh, Zh$\\to$En, and En$\\to$De. Our diagnostics show that denoising-friendly lengths need not match reference lengths. Evaluation by three translation experts supports the En$\\leftrightarrow$Zh adequacy gains, with stronger evidence on Zh$\\to$En. Compared with a LLaMA-3-8B autoregressive (AR) model trained on the same fine-tuning data, the EV system ties on En$\\to$Zh and leads on Zh$\\to$En; an oracle-length diagnostic further shows that, in this masked diffusion MT setting, deciding which tokens to reveal first matters less than how the target length is supplied.",
+        "tags": [
+            "Diffusion",
+            "LLaMA"
+        ]
+    },
+    {
+        "id": 19,
+        "index": 3,
+        "title": "DREAM Technical Report",
+        "author": [
+            "Bin Zhang",
+            "Bowen Zheng",
+            "Chao Yi",
+            "Chengyu Lai",
+            "Dian Chen",
+            "Dimin Wang",
+            "Gaoyang Guo",
+            "Jialin Zhu",
+            "Jian Wu",
+            "Jing Yu",
+            "Jiuning Lin",
+            "Lingqing Zhang",
+            "Lingyun Zheng",
+            "Mao Zhang",
+            "Mingming Pan",
+            "Ruiquan Lan",
+            "Shuai Zhong",
+            "Wen Chen",
+            "Wendong Zhang",
+            "Xiaodong Zhu",
+            "Xuan Chen",
+            "Xunke Xi",
+            "Yifan Lu",
+            "Yiheng Wang",
+            "Yue Zeng",
+            "Yujie Luo",
+            "Yuning Jiang",
+            "Zhe Hu",
+            "Zhibo Xiao",
+            "Zihong Huang",
+            "Binbin Cao",
+            "Bo Zheng",
+            "Danning Wang",
+            "Dixuan Wang",
+            "Ge Fan",
+            "Haixia Wu",
+            "Han Zhu",
+            "Hao Fang",
+            "Haoming Chen",
+            "Huiping Chu",
+            "Jian Wang",
+            "Jianjun Wu",
+            "Jiawei Wu",
+            "Jiaxin Yu",
+            "Jingwen Liu",
+            "Jinzhe Shan",
+            "Kai Meng",
+            "Kai Zhang",
+            "Keqin Xu",
+            "Kewei Zhu",
+            "Lang Tian",
+            "Leihui Chen",
+            "Li Chen",
+            "Licheng Xu",
+            "Lide Xiao",
+            "Ruitong Zhang",
+            "Shiyao Peng",
+            "Silu Zhou",
+            "Tao Wang",
+            "Wei Shi",
+            "Wenjun Yang",
+            "Xiang Chen",
+            "Xiang Gao",
+            "Xiao Ren",
+            "Xu Liu",
+            "Xuwen Wang",
+            "Yang Li",
+            "Yeqiu Yang",
+            "Yi Hu",
+            "Yichen Yuan",
+            "Yinnan Song",
+            "Yipeng Yu",
+            "Yuan Liu",
+            "Yunqi Gao",
+            "Zhiliang Huang",
+            "Zhujin Gao",
+            "Zongyuan Wu"
+        ],
+        "pdf": "https://arxiv.org/pdf/2608.09408",
+        "abstract": "Industrial recommender systems commonly use cascaded retrieval, ranking, and re-ranking pipelines. Although efficient, these pipelines fragment information and objectives across modules, rely on rigid rules, and have limited awareness of real-time intent, leaving session-level shifts among browsing, comparison, and purchase insufficiently addressed. We present DREAM (Developing Recommender Engine with Agentic Methods), an autonomous optimization control architecture that adds a perception-aware, orchestrable, and auditable policy layer atop existing pipelines without replacing them. DREAM has two core components. First, a three-tier Intent Engine fuses on-device signals into structured L0/L1/L2 intent representations; its edge-cloud trigger chain reduces reporting volume to approximately 8.7%. Second, a Meta Engine uses a MetaModel for layered M1-to-M2-to-M3 reasoning: intent summarization, strategy planning informed by Strategy Memory, and parameter translation. It dispatches the resulting parameters through a unified outlet with safety guardrails. A Reward Dual Loop continuously optimizes both components by combining offline simulation for strategy-space exploration with online feedback for outcome calibration, forming a cycle of generation, execution, evaluation, and experience accumulation. Large-scale A/B tests on Taobao's homepage feed show that re-ranking control alone improves IPV by 2.06%, Core IPV by 2.39%, and GMV by 0.88%. Extending control to fine ranking raises these gains to 2.71%, 3.06%, and 1.31%, respectively, while consistently improving PV by more than 1%. These gains require neither replacement of pipeline models nor compromise of serving stability, supporting agentic meta-control as a viable paradigm for industrial recommendation.",
+        "tags": []
+    },
+    {
+        "id": 20,
+        "index": 2,
+        "title": "MoTE: Mixture of Task Experts for Multi-Task Video Understanding",
+        "author": [
+            "Muhammad Asad Ali",
+            "Umar Khan",
+            "Nadia Robertini",
+            "Didier Stricker"
+        ],
+        "pdf": "https://arxiv.org/pdf/2608.24763",
+        "abstract": "Procedural video-language models must solve heterogeneous tasks from the same visual evidence, including action recognition, forecasting, and procedure prediction. Dense transformer decoders share the same feed-forward networks across tasks, which can entangle task behavior and make controlled capability expansion difficult. Sparse Mixture-of-Experts (MoE) decoders provide conditional computation, but token-level learned routing is not naturally aligned with task-level procedural objectives. We propose MoTE (Mixture of Task Experts), a decoder architecture that converts large language model feed-forward networks into task-specific experts while keeping the multimodal backbone shared. Each example follows one sample-level task route, so active task-expert computation remains independent of the number of stored task experts. We instantiate this design as VideoLLM-MoTE and evaluate it on five COIN benchmarks using explicit task routes. The five-expert model activates ~2B LLM parameters per sample and achieves higher average top-1 accuracy than recent VideoLLM baselines. Under the same expert topology, it improves over dense all-expert activation and learned sparse-routing controls. These results show that task-structured routing provides an interpretable and compute-efficient decoder alternative for multi-task video-language learning.",
+        "tags": [
+            "LLM",
+            "MoE",
+            "Transformer"
+        ]
+    },
+    {
+        "id": 21,
+        "index": 1,
+        "title": "TorchMorph: CUDA-accelerated Morphological Transforms",
+        "author": [
+            "Kai Zhao"
+        ],
+        "pdf": "https://arxiv.org/pdf/2608.24738",
+        "abstract": "Morphological transforms are long-standing tools for shape and mask processing, but the de facto reference implementation in the Python ecosystem, i.e. http://scipy.ndimage, is CPU-only, single-array, and therefore unusable inside a GPU training loop without an expensive device-to-host round trip. GPU vision libraries built on PyTorch cover a narrow subset of these operators, typically restricted to two spatial dimensions and flat structuring elements. We present TorchMorph, a lightweight PyTorch extension that closes this gap. TorchMorph exposes 22 public operators covering binary morphology, greyscale morphology, exact and approximate distance transforms, and entropy-regularised optimal transport, all implemented as fused CUDA kernels that operate directly on (B, C, Spatial...) CUDA tensors with up to eight spatial dimensions. The API deliberately mirrors http://scipy.ndimage argument-for-argument, including border modes, structuring-element origins and pre-allocated outputs, so that existing pipelines port with a change of import. We describe the layered architecture and the kernel designs behind each operator family. Against single-threaded CPU references, batched execution reaches up to 1.1e3 times the throughput of http://scipy.ndimage on greyscale morphology and up to 350x on exact Euclidean distance transforms, while the Sinkhorn solver runs up to 42x faster than POT. Binary and chamfer operators reproduce their SciPy counterparts exactly, and every float-valued operator agrees with the CPU reference to within 1.8e-6 absolute error. TorchMorph is released under the MIT licence at https://intcomp.github.io/tm.",
+        "tags": []
+    },
+    {
+        "id": 22,
+        "index": 0,
+        "title": "Latent Action as Intention Enables Efficient Future Imagination for World Action Models",
+        "author": [
+            "Xiang Li",
+            "Yupeng Zheng",
+            "Songen Gu",
+            "Huailiang Ma",
+            "Feng Yu",
+            "Xian Nie",
+            "Shanshuai Yuan",
+            "Yujie Zang",
+            "Weize Li",
+            "Shuai Tian",
+            "Moyang Liu",
+            "Ya-Qin Zhang",
+            "Wenchao Ding"
+        ],
+        "pdf": "https://arxiv.org/pdf/2608.24882",
+        "abstract": "World action models (WAMs) improve robot control by modeling how observations evolve, but generating future observations at test time incurs substantial latency. Fast-WAM removes this process for efficiency; however, our matched implementations show lower generalization for Fast-WAM than for future-aware alternatives, especially with scarce robot demonstrations and in out-of-distribution scenarios. To bridge this gap, we introduce **LAWA**, a WAM architecture that uses compact latent actions as an operational representation of future intentions, enabling efficient test-time future imagination without generating future observations. Specifically, a discrete tokenizer enhanced by action-free pre-training produces manipulation-centric codebook targets. LAWA jointly denoises a continuous latent state anchored to these targets with executable action chunks while omitting the future-video branch at inference. On RoboCasa, LAWA achieves state-of-the-art average success rates of 65.6% and 80.8% in the few-shot and full data settings, improving over the matched Fast-WAM baseline by 9.6 and 4.5 points, respectively. It also preserves the performance level of the matched Joint-WAM variant while requiring 42.9% lower inference latency. LAWA also demonstrates competitive zero-shot robustness on LIBERO-Plus and superior performance on real-world tasks. These results show that future imagination need not be discarded: retaining it with compact latent actions yields an effective trade-off among performance, generalization, and latency. Code and models will be released.",
+        "tags": [
+            "Robotics"
+        ]
+    }
+]
