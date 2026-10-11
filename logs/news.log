@@ -1,0 +1,61 @@
+[000327] 2026-10-11 01:11:43 - DEBUG - /home/runner/work/ghapi-action/ghapi-action/news/__init__.py:19 - 2026-10-11 09:11:43.504374+00:00
+[002289] 2026-10-11 01:11:45 - DEBUG - /home/runner/work/ghapi-action/ghapi-action/news/huanqiu.py:43 - huanqiu offset: 0, item size: 25
+[002289] 2026-10-11 01:11:45 - DEBUG - /home/runner/work/ghapi-action/ghapi-action/news/huanqiu.py:54 - huanqiu latest time: 2026-10-10 12:26:00.257000
+[031799] 2026-10-11 01:12:14 - ERROR - /home/runner/work/ghapi-action/ghapi-action/news/__init__.py:46 - running news.jiemian failed!
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/aiohttp/connector.py", line 1322, in _wrap_create_connection
+    sock = await aiohappyeyeballs.start_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/aiohappyeyeballs/impl.py", line 89, in start_connection
+    sock, _, _ = await _staggered.staggered_race(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/aiohappyeyeballs/_staggered.py", line 155, in staggered_race
+    done = await _wait_one(
+           ^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/aiohappyeyeballs/_staggered.py", line 36, in _wait_one
+    return await wait_next
+           ^^^^^^^^^^^^^^^
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/aiohttp/client.py", line 854, in _connect_and_send_request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/aiohttp/connector.py", line 665, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/aiohttp/connector.py", line 1263, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/aiohttp/connector.py", line 1641, in _create_direct_connection
+    raise last_exc
+  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/aiohttp/connector.py", line 1610, in _create_direct_connection
+    transp, proto = await self._wrap_create_connection(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/aiohttp/connector.py", line 1319, in _wrap_create_connection
+    async with ceil_timeout(
+               ^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/asyncio/timeouts.py", line 115, in __aexit__
+    raise TimeoutError from exc_val
+TimeoutError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/runner/work/ghapi-action/ghapi-action/news/__init__.py", line 44, in one
+    return await mod.fetch(session, datetime.fromisoformat(times[str(idx)]).replace(tzinfo=None), local_time)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/ghapi-action/ghapi-action/news/jiemian.py", line 22, in fetch
+    async with session.get(url) as resp:
+               ^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/aiohttp/client.py", line 1756, in __aenter__
+    self._resp: _RetType_co = await self._coro
+                              ^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/aiohttp/client.py", line 900, in _request
+    resp = await handler(req)
+           ^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/aiohttp/client.py", line 858, in _connect_and_send_request
+    raise ConnectionTimeoutError(
+aiohttp.client_exceptions.ConnectionTimeoutError: Connection timeout to host https://papi.jiemian.com/page/api/kuaixun/getlistmore?cid=48&start_time=1791709903&page=1&tagid=
